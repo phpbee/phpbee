@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MultiPowUpload_parameters>
+  <param name="browseButton.text">Browse ...</param>
+  <param name="browseButton.tooltip">เพิ่มไฟล์สำหรับอัปโหลด</param>
+  <param name="cancelButton.pauseText">หยุดชั่วคราว</param>
+  <param name="cancelButton.text">ยกเลิก</param>
+  <param name="cancelButton.tooltip">ยกเลิกการดำเนินการปัจจุบัน</param>
+  <param name="clearButton.text">ชัดเจน</param>
+  <param name="clearButton.tooltip">ลบไฟล์ทั้งหมด</param>
+  <param name="constant.bytes">ไบต์</param>
+  <param name="constant.decimalSeparator">,</param>
+  <param name="constant.gigaBytes">Gb</param>
+  <param name="constant.kiloBytes">กิโลไบต์</param>
+  <param name="constant.megaBytes">Mb</param>
+  <param name="contextMenu.sortByDate">เรียงตามวันที่</param>
+  <param name="contextMenu.sortByName">เรียงตามชื่อ</param>
+  <param name="contextMenu.sortBySize">จัดเรียงตามขนาด</param>
+  <param name="descriptionWindow.caption">สำหรับรายละเอียดไฟล์</param>
+  <param name="descriptionWindow.fileNavigation.fileName.label">&lt;FILENAME&gt;</param>
+  <param name="descriptionWindow.fileNavigation.nextButton.label"></param>
+  <param name="descriptionWindow.fileNavigation.previousButton.label"></param>
+  <param name="exifWindow.caption">&lt;FILENAME&gt; ข้อมูล EXIF</param>
+  <param name="exifWindow.list.nameHeader">ชื่อ</param>
+  <param name="exifWindow.list.valueHeader">มูลค่า</param>
+  <param name="fileInfoWindow.caption">รายละเอียดของภาพ</param>
+  <param name="fileInfoWindow.exifInfo">&lt;b&gt; ข้อมูล Exif &lt;/b&gt; : &lt;a&gt; คลิ๊กเพื่อดู &lt;/a&gt;</param>
+  <param name="fileInfoWindow.fileDate">&lt;b&gt; วันที่ &lt;/b&gt; : &lt;FILEDATE&gt;</param>
+  <param name="fileInfoWindow.fileName">&lt;b&gt; ชื่อ &lt;/b&gt; : &lt;FILENAME&gt;</param>
+  <param name="fileInfoWindow.fileSize">&lt;b&gt; ขนาด &lt;/b&gt; : &lt;FILESIZE&gt;</param>
+  <param name="fileInfoWindow.fileStatus">&lt;b&gt; สถานะ &lt;/b&gt; : &lt;FILESTATUS&gt;</param>
+  <param name="fileInfoWindow.imageHeight">&lt;b&gt; ความสูงของรูป &lt;/b&gt; : &lt;IMAGEHEIGHT&gt;</param>
+  <param name="fileInfoWindow.imageWidth">&lt;b&gt; ความกว้างของรูป &lt;/b&gt; : &lt;IMAGEWIDTH&gt;</param>
+  <param name="fileStatus.cancelled">ยกเลิก</param>
+  <param name="fileStatus.complete">เสร็จ</param>
+  <param name="fileStatus.encodeImage">ภาพการเข้ารหัส</param>
+  <param name="fileStatus.error">เกิดข้อผิดพลาด</param>
+  <param name="fileStatus.loadFile">โหลดไฟล์ลงในหน่วยความจำ</param>
+  <param name="fileStatus.loadImage">กำลังโหลดข้อมูลภาพ</param>
+  <param name="fileStatus.processing">อัปโหลด</param>
+  <param name="fileStatus.ready">พร้อมสำหรับการอัพโหลด</param>
+  <param name="labelUpload.text">เลือกไฟล์ที่จะอัปโหลด</param>
+  <param name="listView.description.defaultText">คลิกเพื่อแก้ไข ...</param>
+  <param name="listView.description.tooltip">แก้ไขแฟ้มรายละเอียด</param>
+  <param name="listView.fileNameLabel.pattern">&lt;FILENAME&gt;</param>
+  <param name="listView.label.disabledFileInfoTooltip">ขนาด : &lt;FILESIZE&gt;
+วันที่ : &lt;FILEDATE&gt;
+สถานะ : &lt;FILESTATUS&gt;</param>
+  <param name="listView.label.tooltip">ขนาด : &lt;FILESIZE&gt;
+วันที่ : &lt;FILEDATE&gt;
+สถานะ : &lt;FILESTATUS&gt;</param>
+  <param name="listView.removeButton.tooltip">ลบไฟล์</param>
+  <param name="listView.textInput.defaultString">เขียนไฟล์ความคิดเห็นที่นี่</param>
+  <param name="listViewButton.tooltip">ดูรายชื่อ</param>
+  <param name="loadingText">&lt;b&gt; กำลังเริ่มต้น :% &lt;PERCENT&gt; &lt;/b&gt;</param>
+  <param name="messages.disabledType">ไฟล์ที่มีชนิดดังต่อไปนี้ : &lt;FILETYPES&gt; ยังไม่ได้รับอนุญาตให้อัปโหลด! &lt;COUNTINVALIDFILES&gt; ไฟล์ที่ถูกละเลย!</param>
+  <param name="messages.filesCountExceeded">เท่านั้น &lt;MAXFILECOUNT&gt; ไฟล์ที่ได้รับอนุญาตให้อัปโหลด! &lt;COUNTINVALIDFILES&gt; ไฟล์ที่ถูกละเลย!</param>
+  <param name="messages.filesCountNotEnough">กรุณาเลือกแฟ้มที่มากขึ้น ต่ำสุดนับเป็นแฟ้ม &lt;MINFILECOUNT&gt;</param>
+  <param name="messages.httpError">&lt;center&gt; HTTP ข้อผิดพลาด,'&lt;ERRORCODE&gt;'ที่เกิดขึ้น &lt;DESCRIPTION&gt;&lt;br&gt; โปรดดู &lt;font color='#0000FF'&gt; &lt;a title='Error description' target='_blank' href='&lt;W3WLINK&gt;'&gt; &lt;W3WLINK&gt; &lt;/a&gt; &lt;/font&gt; คำจำกัดความของรหัสข้อผิดพลาดสำหรับข้อมูลเพิ่มเติม &lt;/center&gt;</param>
+  <param name="messages.httpError.400">คำขอไม่ถูกต้อง Server ไม่สามารถเข้าใจคำขอ! กรุณาติดต่อผู้ดูแลเซิร์ฟเวอร์ของคุณ</param>
+  <param name="messages.httpError.401">ไม่ได้รับอนุญาต ตรวจสอบผู้ใช้จำเป็นต้อง!</param>
+  <param name="messages.httpError.402">การชำระเงินที่ต้องการ รหัส Reserved!</param>
+  <param name="messages.httpError.403">หวงห้าม เซิร์ฟเวอร์เข้าใจขอ แต่ไม่ยอมปฏิบัติตามมัน&lt;br&gt;สำหรับเซิร์ฟเวอร์ Apache : นี้เกิดขึ้นเพราะคุณได้เปิดใช้งานโมดูล Apache mod_security ชื่อบนเซิร์ฟเวอร์ที่ส่วนหัวของบล็อกที่ส่งมาจาก Flash&lt;br&gt;สำหรับ IIS กับเซิร์ฟเวอร์ ASP : ปัญหานี้เกิดขึ้นถ้าส่วนหัว Content - ความยาวเป็นปัจจุบันและหากส่วนหัว Content - ความยาวระบุจำนวนของข้อมูลที่มีขนาดใหญ่กว่ามูลค่าของทรัพย์สิน AspMaxRequestEntityAllowed ใน IIS metabase&lt;br&gt;ค่าเริ่มต้นสำหรับคุณสมบัติ AspMaxRequestEntityAllowed เป็น 204,800 ไบต์</param>
+  <param name="messages.httpError.404">ไม่พบหน้า ไม่พบ'&lt;URL&gt;'หน้าบนเซิร์ฟเวอร์!</param>
+  <param name="messages.httpError.405">วิธีการโพสต์ไม่ได้รับอนุญาตสำหรับหน้า &lt;URL&gt; นี้! โปรดลองเปลี่ยนการตั้งค่าเซิร์ฟเวอร์เพื่อให้วิธีการโพสต์ในการรับสคริป</param>
+  <param name="messages.httpError.406">ไม่ยอมรับ นี้หมายถึงเซิร์ฟเวอร์ที่ไม่สามารถสร้างองค์กรการตอบสนองที่มีลักษณะเนื้อหาที่ไม่สามารถยอมรับได้ตามรับส่งในส่วนหัวคำขอ Flash รับหัวเป็น'ข้อความ * /'</param>
+  <param name="messages.httpError.407">การตรวจสอบสิทธิ์พร็อกซี่ที่ต้องการ</param>
+  <param name="messages.httpError.408">หมดเวลาของคำขอ</param>
+  <param name="messages.httpError.409">ความขัดแย้ง</param>
+  <param name="messages.httpError.410">Gone ทรัพยากรที่ต้องการไม่ได้อีกต่อไปที่เซิร์ฟเวอร์และไม่มีที่อยู่การส่งต่อเป็นที่รู้จักกัน</param>
+  <param name="messages.httpError.411">ที่ต้องการความยาว</param>
+  <param name="messages.httpError.412">สิ่งที่จำเป็นต้องมีก่อนล้มเหลว</param>
+  <param name="messages.httpError.413">Entity ขอมีขนาดใหญ่เกินไป&lt;br&gt;สำหรับเซิร์ฟเวอร์ IIS : 1 พยายามเพิ่มคุณสมบัติ metabase UploadReadAheadSize&lt;br&gt;2 พยายามที่จะเพิ่มมูลค่าทรัพย์สิน MaxRequestEntityAllowed ใน config IIS&lt;br&gt;สำหรับเซิร์ฟเวอร์ Apache : พยายามเพิ่มพารามิเตอร์ LimitRequestBody ใน httpd.conf</param>
+  <param name="messages.httpError.414">Request - URI ยาวเกินไป</param>
+  <param name="messages.httpError.415">ประเภทสื่อที่ไม่สนับสนุน</param>
+  <param name="messages.httpError.416">Range ร้องขอไม่พอใจ</param>
+  <param name="messages.httpError.417">ความคาดหวังล้มเหลว</param>
+  <param name="messages.httpError.500">เกิดข้อผิดพลาดภายในเซิร์ฟเวอร์ โดยปกติจะหมายถึงการที่สคริปที่ได้รับมีข้อผิดพลาด</param>
+  <param name="messages.httpError.501">ไม่ดำเนินการ Server ไม่สนับสนุนวิธีการโพสต์</param>
+  <param name="messages.httpError.502">Bad Gateway</param>
+  <param name="messages.httpError.503">503 ไม่สามารถใช้งานบริการ ขณะนี้เซิร์ฟเวอร์กำลังไม่สามารถจัดการกับการร้องขอจากมากไปชั่วคราวหรือการบำรุงรักษาเซิร์ฟเวอร์</param>
+  <param name="messages.httpError.504">Gateway Timeout</param>
+  <param name="messages.httpError.505">HTTP รูปแบบที่ไม่สนับสนุน Server ไม่สนับสนุน HTTP 1.1</param>
+  <param name="messages.wrongFileType">เฉพาะไฟล์ที่มีประเภทดังต่อไปนี้ : &lt;FILETYPES&gt; ได้รับอนุญาตให้อัปโหลด! &lt;COUNTINVALIDFILES&gt; ไฟล์ที่ถูกละเลย!</param>
+  <param name="messages.zeroSize">แฟ้ม &lt;COUNTINVALIDFILES&gt; มีขนาดเป็นศูนย์ถูกละเลย!</param>
+  <param name="removeButton.tooltip">ลบไฟล์ที่เลือก</param>
+  <param name="retryDialog.caption">ลองอัปโหลด?</param>
+  <param name="retryDialog.message">ไฟล์บางไฟล์ที่ไม่ได้อัปโหลด คุณต้องการที่จะลองอัปโหลดใหม่อีกครั้ง</param>
+  <param name="retryDialog.noLabel">ไม่มี</param>
+  <param name="retryDialog.yesLabel">ใช่</param>
+  <param name="sortButton.text"></param>
+  <param name="sortButton.tooltip">การจัดเรียงลำดับ</param>
+  <param name="sortMenu.byDate">โดยวันที่</param>
+  <param name="sortMenu.byName">โดยใช้ชื่อ</param>
+  <param name="sortMenu.bySize">ตามขนาด</param>
+  <param name="statusLabel.text.generateThumbnails">... การสร้างภาพขนาดเล็ก โปรดรอสักครู่</param>
+  <param name="statusLabel.text.loadFile "></param>
+  <param name="statusLabel.text.ready">จำนวนไฟล์ : &lt;FILESCOUNT&gt; (&lt;TOTALSIZE&gt;)</param>
+  <param name="statusLabel.text.uploadCancelled">ยกเลิกการอัปโหลดไฟล์ต่อไป รอ ...</param>
+  <param name="statusLabel.text.uploadComplete">อัปโหลดเสร็จสมบูรณ์ แฟ้ม &lt;UPLOADEDFILESCOUNT&gt; (&lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt;), เวลาที่ผ่านไป : &lt;ELAPSEDHOUR&gt; : &lt;ELAPSEDMIN&gt; : &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.uploadProgress">รวม : &lt;PERCENT&gt;% (&lt;FILESNUM&gt; / &lt;FILESTOUPLOADCOUNT&gt;) &lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt; (&lt;RATEVALUE&gt; / วินาที, เวลาที่เหลือ : &lt;LEFTHOUR&gt; : &lt;LEFTMIN&gt; : &lt;LEFTSEC&gt;)</param>
+  <param name="statusLabel.text.uploadStart">อัพโหลด ...</param>
+  <param name="statusLabel.text.uploadStopped">คลิปหยุด ไบต์ Uploaded : &lt;TOTALUPLOADEDSIZE&gt;, เวลาที่ผ่านไปนี้ &lt;ELAPSEDHOUR&gt; : &lt;ELAPSEDMIN&gt; : &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.waitForConnection">Server ไม่ตอบสนอง พยายามเชื่อมต่อใหม่โปรดรอสักครู่</param>
+  <param name="thumbViewButton.tooltip">ดูรูปขนาดย่อ</param>
+  <param name="thumbnail.watermark.text">Element - IT</param>
+  <param name="thumbnailView.bottomPanel.labelPattern">&lt;FILENAME&gt;</param>
+  <param name="thumbnailView.cancelCropIcon.tooltip">การเพาะปลูกเลิกทำภาพ</param>
+  <param name="thumbnailView.contextMenu.CropLabel">ครอบตัดภาพ</param>
+  <param name="thumbnailView.contextMenu.RemoveLabel">เอาออก</param>
+  <param name="thumbnailView.contextMenu.RotateLeftLabel">หมุนซ้าย</param>
+  <param name="thumbnailView.contextMenu.RotateRightLabel">หมุนขวา</param>
+  <param name="thumbnailView.contextMenu.UndoCropLabel">การเพาะปลูกเลิกทำภาพ</param>
+  <param name="thumbnailView.cropIcon.tooltip">ครอบตัดภาพ</param>
+  <param name="thumbnailView.editIcon.tooltip">แก้ไขแฟ้มรายละเอียด</param>
+  <param name="thumbnailView.infoIcon.disabledFileInfoTooltip">ขนาด : &lt;FILESIZE&gt;
+วันที่ : &lt;FILEDATE&gt;
+สถานะ : &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.infoIcon.tooltip">ขนาด : &lt;FILESIZE&gt;
+วันที่ : &lt;FILEDATE&gt;
+สถานะ : &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.removeIcon.tooltip">เอาออก</param>
+  <param name="thumbnailView.rotateLeftIcon.tooltip">หมุนซ้าย</param>
+  <param name="thumbnailView.rotateRightIcon.tooltip">หมุนขวา</param>
+  <param name="uploadButton.text">Upload</param>
+  <param name="uploadButton.tooltip">เริ่มต้นอัปโหลด</param>
+</MultiPowUpload_parameters>

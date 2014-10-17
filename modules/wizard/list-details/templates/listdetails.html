@@ -1,0 +1,15 @@
+{extends file="admin_page.html"}
+
+{block name="main"}
+{controller _class=wz_recordsets _assign=recordset _assign_type=first id=$_gsdata.gspgid_va.0}
+	<h3>
+	<a href="/admin/wizard/module/{$recordset.Module->first()->id}">{$recordset.Module->first()->name}</a>
+	=>
+	<a href="/admin/wizard/recordsets/{$recordset.Module->first()->id}/{$recordset.id}">{$recordset.name}</a>
+	</h3>
+
+	<h2>list-details for {$recordset}</h2>
+
+	{handler gspgid="/admin/wizard/listdetails/form" Recordset_id=$recordset.id Module_id=$recordset.Module_id}
+
+{/block}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{$smarty.server.HTTP_HOST} join page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="/i/favicon.png">
+
+    <!-- Bootstrap core CSS -->
+    <link href="/bootstrap3/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/bootstrap3/css/navbar-fixed-top.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="/bootstrap3/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.js"></script>
+
+    <link href="/bootstrap3/css/sticky-footer-navbar.css" rel="stylesheet">
+  </head>
+
+<body>
+<div id="wrap">
+
+
+{$manager=person('{%$rs%}')}
+
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+	  <div class="navbar-brand">
+          <a href="/">{%$smarty.server.HTTP_HOST%}</a> 
+		&raquo;
+	  <a href="/{%$module%}">{%$module%}</a>
+	  </div>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+		{if $manager}
+			{%controller _class=wz_recordsets _assign=rsets id=array_keys($recordset)%}
+			{%foreach $rsets as $r%}
+						<li><a href="/{%$module%}/{%$prefix%}/{%$r.name%}">{%$r.title|default:$r.name%}</a></li>
+				{%if $r.name!=$rs%}
+				{%/if%}		
+			{%/foreach%}
+		{/if}
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+		{if $manager}
+			<li><a class="btn btn-mini btn-inverse" href="/{%$module%}/profile/{%$rs%}">{$manager}</a></li>
+			<li><a class="btn btn-mini btn-inverse" href="/{%$module%}/logout/{%$rs%}">{ml('Logout')}</a></li>
+		{/if}
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+
+
+
+<div class="container">
+
+
+{block name="messages"}
+        {$msg.LIVE_REQUEST_SUBMITTED="Your activation request has been submitted. Our staff will proceed it shortly."}
+{/block}
+
+
+{$messages=gs_session::get_messages_keys(GS_DEFAULT_MESSAGE,true)}
+{foreach $messages as $m}
+    {if isset($msg[$m])}{$m=$msg[$m]}{/if}
+    {if $m}<div class="alert alert-warning">{$m}</div>{/if}
+{/foreach}
+
+{if $manager}
+
+<div class="container">
+{block name="main"}
+	 <div class="page-header">
+		{%$rs->title%}
+	</div>
+{/block}
+</div>
+
+
+{else}
+	  <div class="well span6 offset3">
+	  <legend>Please sign in</legend>
+
+	  {handler gspgid="{%$module.name%}/login/form/{%$rs->name%}" }
+
+		{*
+	  {if class_exists('oauth2_handler')} 
+	  {capture name="checklogin"}
+	  {handler gspgid="oauth2/checklogin/{%$rs->name%}"}	
+	  {/capture}
+
+
+	  {handler gspgid="oauth2/loginlinks"}	
+	  {/if}
+
+	  *}
+	
+	  <a  class="btn btn-primary btn-small" href="/{%$module.name%}/registration/{%$rs->name%}">registration</a>
+
+	</div><!-- span9 -->
+
+{/if}
+</div><!-- container -->
+</div>
+
+{if  isset($_gsdata.D)}
+{handler gspgid="/debug"}
+{/if}
+
+    <div id="footer">
+      <div class="container">
+
+			  <a href="/">{%$smarty.server.HTTP_HOST%}</a> &raquo;
+			   <a href="/{%$module%}">{%$module%}</a>
+    </div>
+   </div>
+
+</body>
+</html>

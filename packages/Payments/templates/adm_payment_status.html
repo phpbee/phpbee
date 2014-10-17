@@ -1,0 +1,69 @@
+{extends file="admin_page.html"}
+
+{block name="title"}
+	payment_status
+{/block}
+
+{block name="main"}
+
+
+	<h4>payment_status</h4>
+
+
+
+	
+		{handler gspgid="/filter/" class="like" name="search" fields="status, name" urltype=get }
+		{handler gspgid="/filter/" class="calendar" name="calendar" fields="_ctime,_mtime," urltype=get }
+		{handler gspgid="/filter/" class="sort" name="sort" fields="status, name" urltype=get }
+
+
+
+		{controller _class="payment_status" _assign="payment_status" _filters="search,calendar,sort," _fields="status,name" _paging="pagenums:20"}
+
+
+	<table class="tb">
+	<thead>
+	<tr class="filters"><td colspan="100">
+	<table>
+			<tr><td>Find:</td><td>
+			<form class="filterform" method="get">
+			{handler gspgid="/filter/show" name="search"  recordset=$payment_status tpl="like.html"  }
+			{handler gspgid="/filter/show" name="calendar"  recordset=$payment_status tpl="calendar.html" prelabel="date:"  }
+			{handler gspgid="/filter/show" name="sort"  recordset=$payment_status tpl="sort.html" prelabel="sort by:"  }
+			<div class="links_inline"><input type="submit" value=""></div>
+			</form>
+		</td></tr>
+	</table>
+	</td> </tr>
+	<tr class="pager"><td colspan="100">Страницы: {$payment_status_paging}</td></tr>
+	<tr><th>#</th>
+		<th>{field_name name="status" type="fSelect" key="status" id="149"}</th>
+		<th>{field_name name="name" type="fString" key="name" id="150"}</th>
+				<th></th>
+	<th></th>
+	<th></th>
+	</tr>
+	</thead>
+	
+	{foreach from=$payment_status item="e"}
+	<tr class="{cycle values='odd,even'}">
+			<td>{$e->get_id()}</td>
+						<td class="frm_fSelect">{field_formatter value=$e.status type="fSelect"}</td>
+						<td class="frm_fString">{field_formatter value=$e.name type="fString"}</td>
+												<td class="cnt"><a href="/admin/Payments/payment_status/modify/{$e->get_id()}#form"><img src="/i/admin/ico_edit.png" alt="Редактировать" title="Редактировать"></a></td>
+			<td class="cnt"><a href="/admin/Payments/payment_status/copy/{$e->get_id()}"><img src="/i/admin/ico_copy.png" alt="Копировать" title="Копировать"></a></td>
+			<td class="cnt"><a href="/admin/Payments/payment_status/delete/{$e->get_id()}" onclick="return confirm('Вы точно хотите удалить запись ?');"><img src="/i/admin/ico_delete.png" alt="Удалить" title="Удалить"></a></td>
+	</tr>
+	{/foreach}
+	<tr class="pager"><td colspan="100">
+	<a name="form"></a>
+	Страницы: {$payment_status_paging}</td></tr>
+	</table>
+
+	<h5>Редактировать/<a href="/admin/Payments/payment_status/modify/0#form">создать</a>:</h5>
+	{if $_gsdata.gspgid_va.0=='modify'}
+	<hr><br>
+	{handler gspgid="/admin/form/payment_status/edit/`$_gsdata.gspgid_va.1`"}
+	{/if}
+
+{/block}

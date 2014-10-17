@@ -1,0 +1,9 @@
+{include file="inc_header.php"}
+<ul class="img">
+{controller _class=$_gsdata.gspgid_va.0 _params=$params _assign="list"}
+
+               {foreach from=$list item="e"}
+               <li><a href="/img/show/{$_gsdata.gspgid_va.0}/0/{$e.id}.jpg" onclick="$('.rte-panel #url',parent.window.document.body).get(0).value=this.href;return false;"><img src="{$www_subdir}images/show/{$_gsdata.gspgid_va.0}/100/{$e.id}.jpg" alt="{$e.Name}" title="{$e.Name}" /></a></li>
+               {/foreach}
+               <div style="clear:both;"></div>
+</ul>

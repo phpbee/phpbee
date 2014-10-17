@@ -1,0 +1,27 @@
+{extends file="index.html"}
+
+{block name="title"}
+	{%$rs.title%}
+{/block}
+
+{block name="content"}
+
+	{$e=$_gsstack.last}
+
+	<h4><a href="/{%$module->name%}/{%$d.url%}/">{%$rs.title%}</a></h4>
+
+	<dl>
+			{%foreach from=$details_fields item=f%}
+            <dt>{%$f->verbose_name%}</dt>
+			<dd>{$e->{%$f.name%}}</dd>
+
+			{%/foreach%}
+			{%foreach from=$details_links item=f%}
+            <dt>{%$f->verbose_name%}</dt>
+			<dd>{$e->{%$f.name%}}</dd>
+
+			{%/foreach%}
+
+	</dl>
+
+{/block}

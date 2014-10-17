@@ -1,0 +1,34 @@
+	<form action="" method="post" enctype="multipart/form-data">
+	<input type=hidden name="dialog" value="{$_gsdata.dialog}">
+	<input type=hidden name="gspgid_form" value="{$gspgid_form}">
+	<input type=hidden name="form_id" value="form_login">
+
+
+		{include file="form_error_messages.html"}
+
+
+	{%foreach $fields as $f%}
+		{%if $f->widget%}{$form->set_option('{%$f->name%}','widget','{%$f->widget%}')}{%/if%}
+	{%/foreach%}
+	
+	{%foreach $fields as $f%}
+		{$form->set_option('{%$f->name%}','placeholder','{%$f->verbose_name%}')}
+	{%/foreach%}
+
+		{$form->set_error_template('<div class="form_error" id="err" style="display: block; "><i></i>%s</div>')}
+
+
+		{$form->set_option_allfields('cssclass','field3')}
+
+		{$form->_prepare_inputs()}
+
+	{$form->print_error('FORM_ERROR')}
+
+	{%foreach $fields as $f%}
+	<label>
+		{%$f->verbose_name%}
+		{$form->get_input('{%$f->name%}')} {$form->print_error('{%$f->name%}')}
+	</label>	
+	{%/foreach%}
+	<input type="submit" class="button" name="save_return" value="{'save'|gsdict}">
+	<input type="submit" class="button" name="save_cancel" value="{'cancel'|gsdict}">

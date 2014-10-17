@@ -1,0 +1,56 @@
+{handler gspgid="widgets/ImageWebSearch/action" recordset=$params.recordset hash=$params.hash foreign_field_name=$params.foreign_field_name rid=$params.rid }
+{foreach $params as $k=>$v}
+	<input type=hidden name="{$k}" value="{$v|htmlentities}">
+{/foreach}
+
+{*
+    <div class="photos_gall">
+    <div  class="ImageWebSearchGallery" id="gallery_{$params.hash}">
+	{foreach $g_images as $g_key=>$images}
+		{if $g_key && $g_key!="nogrp"}<div class=ImageWebSearchGalleryGroup>{/if}
+		{foreach $images as $i}
+		{include file="li_image_ImageWebSearch.html" i=$i}
+		{/foreach}
+		{if $g_key && $g_key!="nogrp"}</div>{/if}
+
+        <div class="clear"></div>
+	{/foreach}
+        </div>
+        </div>
+
+<div class="clear"></div>
+{if $images}
+<div class="images_manager">
+<label><input type=radio name="checked_items_action" value="delete">Delete</label>
+<label><input type=radio name="checked_items_action" value="group">Group</label>
+<input type=button id="ImageWebSearch_checked_items_submit" value="apply">
+</div>
+{/if}
+		*}		
+
+<link href="/libs/widgets/ImageWebSearch/widget.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+	{foreach $params as $k=>$v}
+	var {$k}={$v|json_encode};
+	{/foreach}
+
+	{*
+		google.load("search", "1");
+		var imageSearch;
+		*}
+
+</script>
+<script type="text/javascript" src="/libs/widgets/ImageWebSearch/widget.js"></script>
+
+
+<div class="images_uploader">
+	<input type="button" rel="/widgets/ImageWebSearch/upload/{$params.recordset}/{$params.foreign_field_name}/{$params.rid}/{$params.hash}/{$params.linkname}" onClick="ImageWebSearch_search(this); return false;" value="Find more images">
+    <input type="input" class="ImageWebSearch_string" style="width:70%;">
+	<div class="ImageWebSearchGallery">
+	</div>	
+
+</div>	
+
+
+
+

@@ -1,0 +1,121 @@
+<?php
+class sidx__install_module extends gs_base_module implements gs_module{
+
+	function __construct() {
+	}
+	static function get_handlers() {
+        return array();
+    }
+	function install() {
+        <*foreach $searches as $search_config*>
+            <*if $search_config->database_connector_id!='sphinx'*>
+			$rs=new sidx_<*$search_config->alias*>;
+			$rs->install();
+            <*/if*>
+            <*foreach $search_config->Filters as $k=>$f*>
+            gs_eventer::subscribe('<*$f->Recordset->first()->name*>_record_after_insert','sidx_index::index_record');
+            gs_eventer::subscribe('<*$f->Recordset->first()->name*>_record_after_update','sidx_index::index_record');
+            gs_eventer::subscribe('<*$f->Recordset->first()->name*>_record_before_delete','sidx_index::deindex_record');
+            <*/foreach*>    
+
+
+        <*/foreach*>    
+
+            gs_eventer::subscribe('refresh_rss','sidx_index::index_record');
+	}
+
+
+}
+
+<*foreach $searches as $search_config*>
+class sidx_<*$search_config->alias*> extends gs_recordset_short {
+	public $gs_connector_id='<*$search_config->database_connector_id*>';
+	public $no_urlkey=1;
+    public $recordset_modules=array();
+    public $no_ctime=1;
+    public $rs_uid=array(
+		<*foreach $search_config->Filters as $k=>$f*>
+            '<*$f->Recordset->first()->name*>'=><*$f->Recordset->first()->get_id()*>,
+        <*/foreach*>
+        );
+	function __construct($init_opts=false) { parent::__construct(array(
+		'recordset_name'=> "fString",
+		'recordset_uid'=> "fInt",
+		'record_id'=> "fInt",
+		<*foreach $search_config->search_fields as $k=>$f*>
+			'<*$k*>'=>'<*$f.type*> index=1',
+		<*/foreach*>
+		),$init_opts);
+		<*foreach $search_config->search_fields as $k=>$f*>
+            <*if $f.filter_classname=='gs_filter_fulltext'*>
+            $this->structure['indexes']['<*$k*>']=array('name'=>'<*$k*>','type'=>'fulltext');
+            <*/if*>
+		<*/foreach*>
+
+
+		<*foreach $search_config->Filters as $filter*>
+            $this->recordset_modules['<*$filter->Recordset->first()->name*>']='<*$filter->Recordset->first()->Module->first()->name*>';
+        <*/foreach*>
+
+
+	}
+}
+<*/foreach*>
+
+class sidx_index {
+
+    static function index_record($rec) {
+        $sidx=new sidx_index;
+        $sidx->sidx_update_index($rec);
+    }
+    static function deindex_record($rec) {
+        $sidx=new sidx_index;
+        $sidx->sidx_delete_index($rec);
+    }
+
+    function sidx_update_index($rec) {
+        $fname='sidx_update_index_'.$rec->get_recordset_name();
+        if (method_exists($this,$fname)) {
+            $this->$fname($rec);
+        }
+    }
+    function sidx_delete_index($rec) {
+        $fname='sidx_delete_index_'.$rec->get_recordset_name();
+        if (method_exists($this,$fname)) $this->$fname($rec);
+    }
+
+
+<*foreach $filters as $rs_name=>$searches*>
+
+    function sidx_update_index_<*$rs_name*>($rec) {
+        <*foreach $searches as $search_name=>$groups*>
+
+            $rs=new sidx_<*$search_name*>;
+            $index=$rs->find_records(array('recordset_uid'=>$rs->rs_uid['<*$rs_name*>'],'record_id'=>$rec->get_id()))->first(true);
+            $index->first()->recordset_name='<*$rs_name*>';
+
+                <*foreach $groups as $grp_name=>$filter*>
+
+                $index-><*$grp_name*> = implode(' ',array(
+                        <*foreach $filter->Fields as $field*>
+                        $rec-><*$field->name*>,
+                        <*/foreach*>
+                ));
+                <*/foreach*>
+
+            $index->commit();
+        <*/foreach*>
+
+    }
+    function sidx_delete_index_<*$rs_name*>($rec) {
+        <*foreach $searches as $search_name=>$groups*>
+        $rs=new sidx_<*$search_name*>;
+        $index=$rs->find_records(array('recordset_uid'=>$rs->rs_uid['<*$rs_name*>'],'record_id'=>$rec->get_id()))->first(true);
+        $index->delete();
+        $index->commit();
+        <*/foreach*>
+    }
+<*/foreach*>
+}
+
+

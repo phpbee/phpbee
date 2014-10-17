@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MultiPowUpload_parameters>
+  <param name="browseButton.text">Bläddra ...</param>
+  <param name="browseButton.tooltip">Lägg till filer för uppladdning</param>
+  <param name="cancelButton.pauseText">Paus</param>
+  <param name="cancelButton.text">Avbryt</param>
+  <param name="cancelButton.tooltip">Avbryt pågående operationen</param>
+  <param name="clearButton.text">Klart</param>
+  <param name="clearButton.tooltip">Ta bort alla filer</param>
+  <param name="constant.bytes">bytes</param>
+  <param name="constant.decimalSeparator">,</param>
+  <param name="constant.gigaBytes">Gb</param>
+  <param name="constant.kiloBytes">Kb</param>
+  <param name="constant.megaBytes">Mb</param>
+  <param name="contextMenu.sortByDate">Sortera efter datum</param>
+  <param name="contextMenu.sortByName">Sortera efter namn</param>
+  <param name="contextMenu.sortBySize">Sortera efter storlek</param>
+  <param name="descriptionWindow.caption">Beskrivning för fil</param>
+  <param name="descriptionWindow.fileNavigation.fileName.label">&lt;FILENAME&gt;</param>
+  <param name="descriptionWindow.fileNavigation.nextButton.label"></param>
+  <param name="descriptionWindow.fileNavigation.previousButton.label"></param>
+  <param name="exifWindow.caption">&lt;FILENAME&gt; EXIF-data</param>
+  <param name="exifWindow.list.nameHeader">Namn</param>
+  <param name="exifWindow.list.valueHeader">Värde</param>
+  <param name="fileInfoWindow.caption">Filinformation</param>
+  <param name="fileInfoWindow.exifInfo">&lt;b&gt; EXIF information &lt;/b&gt;: &lt;a&gt; Klicka för att visa &lt;/a&gt;</param>
+  <param name="fileInfoWindow.fileDate">&lt;b&gt; Datum &lt;/b&gt;: &lt;FILEDATE&gt;</param>
+  <param name="fileInfoWindow.fileName">&lt;b&gt; Namn &lt;/b&gt;: &lt;FILENAME&gt;</param>
+  <param name="fileInfoWindow.fileSize">&lt;b&gt; Storlek &lt;/b&gt;: &lt;FILESIZE&gt;</param>
+  <param name="fileInfoWindow.fileStatus">&lt;b&gt; Status &lt;/b&gt;: &lt;FILESTATUS&gt;</param>
+  <param name="fileInfoWindow.imageHeight">&lt;b&gt; Image höjd &lt;/b&gt;: &lt;IMAGEHEIGHT&gt;</param>
+  <param name="fileInfoWindow.imageWidth">&lt;b&gt; bildbredd &lt;/b&gt;: &lt;IMAGEWIDTH&gt;</param>
+  <param name="fileStatus.cancelled">Inställd</param>
+  <param name="fileStatus.complete">Avslutade</param>
+  <param name="fileStatus.encodeImage">Koda bild</param>
+  <param name="fileStatus.error">Fel uppstod</param>
+  <param name="fileStatus.loadFile">Laddar fil till minnet</param>
+  <param name="fileStatus.loadImage">Laddar bilddata</param>
+  <param name="fileStatus.processing">Ladda upp</param>
+  <param name="fileStatus.ready">Redo för uppladdning</param>
+  <param name="labelUpload.text">Välj filer att ladda upp</param>
+  <param name="listView.description.defaultText">Klicka för att redigera ...</param>
+  <param name="listView.description.tooltip">Redigera filen beskrivning</param>
+  <param name="listView.fileNameLabel.pattern">&lt;FILENAME&gt;</param>
+  <param name="listView.label.disabledFileInfoTooltip">Storlek: &lt;FILESIZE&gt;
+Datum: &lt;FILEDATE&gt;
+Status: &lt;FILESTATUS&gt;</param>
+  <param name="listView.label.tooltip">Storlek: &lt;FILESIZE&gt;
+Datum: &lt;FILEDATE&gt;
+Status: &lt;FILESTATUS&gt;</param>
+  <param name="listView.removeButton.tooltip">Ta bort fil</param>
+  <param name="listView.textInput.defaultString">Skriv fil kommentar här</param>
+  <param name="listViewButton.tooltip">Listvy</param>
+  <param name="loadingText">&lt;b&gt; INITIALISERAR: &lt;PERCENT&gt;% &lt;/b&gt;</param>
+  <param name="messages.disabledType">Fil med följande typer: &lt;FILETYPES&gt; är inte tillåtet att ladda upp! &lt;COUNTINVALIDFILES&gt; filer ignoreras!</param>
+  <param name="messages.filesCountExceeded">Endast &lt;MAXFILECOUNT&gt; filer tillåtet att ladda upp! &lt;COUNTINVALIDFILES&gt; filer ignoreras!</param>
+  <param name="messages.filesCountNotEnough">Vänligen markera fler filer. Minsta filer räkna är &lt;MINFILECOUNT&gt;</param>
+  <param name="messages.httpError">&lt;center&gt; HTTP Error, "&lt;ERRORCODE&gt;" inträffade. &lt;DESCRIPTION&gt;&lt;br&gt; Se &lt;font color='#0000FF'&gt; &lt;a title='Error description' target='_blank' href='&lt;W3WLINK&gt;'&gt; &lt;W3WLINK&gt; &lt;/a&gt; &lt;/font&gt; felkod definitioner för mer information. &lt;/center&gt;</param>
+  <param name="messages.httpError.400">Felaktig begäran. Server kan inte förstå begäran! Kontakta serveradministratören.</param>
+  <param name="messages.httpError.401">Obehörig. Användarverifiering krävs!</param>
+  <param name="messages.httpError.402">Betalning krävs. Reserverad kod!</param>
+  <param name="messages.httpError.403">Förbjudet. Servern förstod begäran men vägrar att uppfylla det!&lt;br&gt;För Apache-servrar: Detta händer eftersom du har aktiverat en Apache-modul som heter mod_security på servern som blockerar headers skickas med Flash.&lt;br&gt;För IIS med ASP-servrar: Det här problemet uppstår om en Content-Length header är närvarande och om Content-Length header anger en mängd data som är större än värdet av den AspMaxRequestEntityAllowed egendom i IIS-metabasen.&lt;br&gt;Standardvärdet för AspMaxRequestEntityAllowed fastigheten 204.800 byte.</param>
+  <param name="messages.httpError.404">Sidan kunde inte hittas. Kan inte hitta '&lt;URL&gt; "sida på servern!</param>
+  <param name="messages.httpError.405">POST-metoden inte tillåten för denna sida &lt;URL&gt;! Försök att ändra server inställningarna så POST-metoden för att ta emot manus.</param>
+  <param name="messages.httpError.406">Inte acceptabelt. Detta innebär att servern inte kan generera svar enheter som har innehåll egenskaper inte acceptabelt enligt Accept headers skickade i begäran. Flash acceptera rubriken är "text / *".</param>
+  <param name="messages.httpError.407">Proxyverifiering krävs.</param>
+  <param name="messages.httpError.408">Begär Timeout.</param>
+  <param name="messages.httpError.409">Konflikt.</param>
+  <param name="messages.httpError.410">Gone. Den begärda resursen är inte längre tillgänglig på servern och ingen vidarebefordran adress är känd.</param>
+  <param name="messages.httpError.411">Längd krävs.</param>
+  <param name="messages.httpError.412">Villkor misslyckades.</param>
+  <param name="messages.httpError.413">Förfrågan för stor.&lt;br&gt;För IIS-servrar: 1. Försök att öka UploadReadAheadSize metabasen egendom.&lt;br&gt;2. Försök att öka MaxRequestEntityAllowed fastighetsvärdet i IIS config.&lt;br&gt;För Apache-servrar: Försök att öka LimitRequestBody parameter i httpd.conf.</param>
+  <param name="messages.httpError.414">Begär-URI för lång.</param>
+  <param name="messages.httpError.415">Medietyper.</param>
+  <param name="messages.httpError.416">Efterfrågade intervallet går inte.</param>
+  <param name="messages.httpError.417">Förväntan misslyckades.</param>
+  <param name="messages.httpError.500">Internal Server Error. Vanligtvis innebär det att ta emot manus har fel.</param>
+  <param name="messages.httpError.501">Inte genomförts. Servern stöder inte metoden POST.</param>
+  <param name="messages.httpError.502">Bad Gateway.</param>
+  <param name="messages.httpError.503">503 Tjänsten är inte tillgänglig. Servern är för närvarande inte hantera förfrågan på grund av en tillfällig överbelastning eller underhåll av servern.</param>
+  <param name="messages.httpError.504">Gateway Timeout.</param>
+  <param name="messages.httpError.505">HTTP-versionen stöds. Servern stöder inte HTTP 1.1.</param>
+  <param name="messages.wrongFileType">Endast filer med följande typ: &lt;FILETYPES&gt; tillåtet att ladda upp! &lt;COUNTINVALIDFILES&gt; filer ignoreras!</param>
+  <param name="messages.zeroSize">&lt;COUNTINVALIDFILES&gt; filer med noll storlek ignoreras!</param>
+  <param name="removeButton.tooltip">Ta bort markerade filer</param>
+  <param name="retryDialog.caption">Försök igen ladda upp?</param>
+  <param name="retryDialog.message">Några av filerna inte laddas upp. Vill du försöka ladda upp igen?</param>
+  <param name="retryDialog.noLabel">Nr</param>
+  <param name="retryDialog.yesLabel">Ja</param>
+  <param name="sortButton.text"></param>
+  <param name="sortButton.tooltip">Sorteringsordning</param>
+  <param name="sortMenu.byDate">Efter datum</param>
+  <param name="sortMenu.byName">Efter namn</param>
+  <param name="sortMenu.bySize">Efter storlek</param>
+  <param name="statusLabel.text.generateThumbnails">Generera miniatyrbilder ... var god vänta.</param>
+  <param name="statusLabel.text.loadFile "></param>
+  <param name="statusLabel.text.ready">Greve av filer: &lt;FILESCOUNT&gt; (&lt;TOTALSIZE&gt;)</param>
+  <param name="statusLabel.text.uploadCancelled">Nästa filer ladda in. Vänta ...</param>
+  <param name="statusLabel.text.uploadComplete">Ladda upp! &lt;UPLOADEDFILESCOUNT&gt; filer (&lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt;), Förfluten tid: &lt;ELAPSEDHOUR&gt;: &lt;ELAPSEDMIN&gt;: &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.uploadProgress">Totalt: &lt;PERCENT&gt;% (&lt;FILESNUM&gt; / &lt;FILESTOUPLOADCOUNT&gt;) &lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt; (&lt;RATEVALUE&gt; / sek, tid kvar: &lt;LEFTHOUR&gt;: &lt;LEFTMIN&gt;: &lt;LEFTSEC&gt;)</param>
+  <param name="statusLabel.text.uploadStart">Laddar upp ...</param>
+  <param name="statusLabel.text.uploadStopped">Ladda upp stoppas. Uppladdat byte: &lt;TOTALUPLOADEDSIZE&gt;, Förfluten tid: &lt;ELAPSEDHOUR&gt;: &lt;ELAPSEDMIN&gt;: &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.waitForConnection">Server svarar inte. Försöker återansluta, vänta.</param>
+  <param name="thumbViewButton.tooltip">Vyn Miniatyrer</param>
+  <param name="thumbnail.watermark.text">Element-IT</param>
+  <param name="thumbnailView.bottomPanel.labelPattern">&lt;FILENAME&gt;</param>
+  <param name="thumbnailView.cancelCropIcon.tooltip">Ångra beskära bilden</param>
+  <param name="thumbnailView.contextMenu.CropLabel">Beskär bilden</param>
+  <param name="thumbnailView.contextMenu.RemoveLabel">Ta bort</param>
+  <param name="thumbnailView.contextMenu.RotateLeftLabel">Rotera vänster</param>
+  <param name="thumbnailView.contextMenu.RotateRightLabel">Rotera höger</param>
+  <param name="thumbnailView.contextMenu.UndoCropLabel">Ångra beskära bilden</param>
+  <param name="thumbnailView.cropIcon.tooltip">Beskär bilden</param>
+  <param name="thumbnailView.editIcon.tooltip">Redigera filen beskrivning</param>
+  <param name="thumbnailView.infoIcon.disabledFileInfoTooltip">Storlek: &lt;FILESIZE&gt;
+Datum: &lt;FILEDATE&gt;
+Status: &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.infoIcon.tooltip">Storlek: &lt;FILESIZE&gt;
+Datum: &lt;FILEDATE&gt;
+Status: &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.removeIcon.tooltip">Ta bort</param>
+  <param name="thumbnailView.rotateLeftIcon.tooltip">Rotera vänster</param>
+  <param name="thumbnailView.rotateRightIcon.tooltip">Rotera höger</param>
+  <param name="uploadButton.text">Ladda upp</param>
+  <param name="uploadButton.tooltip">Börja ladda upp</param>
+</MultiPowUpload_parameters>

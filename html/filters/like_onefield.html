@@ -1,0 +1,8 @@
+	<input type=text class="_search-query input-mini " name="{$keyname}" 
+ 	{if $current || !isset($params.default)}		
+	value="{$current}" 
+	{else}
+	value="{$params.default}"
+	{/if}
+	{if isset($params.placeholder)} placeholder="{$params.placeholder}"{/if}
+	{if isset($params.cssclass)}class="{$params.cssclass}"{/if}>

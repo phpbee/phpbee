@@ -1,0 +1,11 @@
+{extends file="index.html"}
+{block name="content"}
+<h1>Новости</h1>
+{assign var="year" value=$smarty.now|date_format:"%Y"}
+{assign var="year" value=$_gsdata.gspgid_va.0|default:$year}
+{assign var="month" value=$smarty.now|date_format:"%m"}
+{assign var="month" value=$_gsdata.gspgid_va.1|default:$month}
+
+{handler gspgid=$_gsdata.gspgid}
+{handler gspgid="/news/calendar/`$year`/`$month`"}
+{/block}

@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MultiPowUpload_parameters>
+  <param name="browseButton.text">Fittex ...</param>
+  <param name="browseButton.tooltip">Żid fajls għall-upload</param>
+  <param name="cancelButton.pauseText">Pause</param>
+  <param name="cancelButton.text">Ikkanċella</param>
+  <param name="cancelButton.tooltip">Ikkanċella operazzjoni kurrenti</param>
+  <param name="clearButton.text">Ċar</param>
+  <param name="clearButton.tooltip">Neħħi l-fajls kollha</param>
+  <param name="constant.bytes">bytes</param>
+  <param name="constant.decimalSeparator">,</param>
+  <param name="constant.gigaBytes">Gb</param>
+  <param name="constant.kiloBytes">Kb</param>
+  <param name="constant.megaBytes">Mb</param>
+  <param name="contextMenu.sortByDate">Sort skond id-data</param>
+  <param name="contextMenu.sortByName">Sort bl-isem</param>
+  <param name="contextMenu.sortBySize">Sort skond id-daqs</param>
+  <param name="descriptionWindow.caption">Deskrizzjoni għall-fajl</param>
+  <param name="descriptionWindow.fileNavigation.fileName.label">&lt;FILENAME&gt;</param>
+  <param name="descriptionWindow.fileNavigation.nextButton.label"></param>
+  <param name="descriptionWindow.fileNavigation.previousButton.label"></param>
+  <param name="exifWindow.caption">&lt;FILENAME&gt; EXIF data</param>
+  <param name="exifWindow.list.nameHeader">Isem</param>
+  <param name="exifWindow.list.valueHeader">Valur</param>
+  <param name="fileInfoWindow.caption">Fajl ta 'informazzjoni</param>
+  <param name="fileInfoWindow.exifInfo">&lt;b&gt; info Exif &lt;/b&gt;: &lt;a&gt; Click to view &lt;/a&gt;</param>
+  <param name="fileInfoWindow.fileDate">&lt;b&gt; Data &lt;/b&gt;: &lt;FILEDATE&gt;</param>
+  <param name="fileInfoWindow.fileName">&lt;b&gt; Isem &lt;/b&gt;: &lt;FILENAME&gt;</param>
+  <param name="fileInfoWindow.fileSize">&lt;b&gt; Daqs &lt;/b&gt;: &lt;FILESIZE&gt;</param>
+  <param name="fileInfoWindow.fileStatus">&lt;b&gt; Status &lt;/b&gt;: &lt;FILESTATUS&gt;</param>
+  <param name="fileInfoWindow.imageHeight">&lt;b&gt; għoli Image &lt;/b&gt;: &lt;IMAGEHEIGHT&gt;</param>
+  <param name="fileInfoWindow.imageWidth">&lt;b&gt; wisa 'Image &lt;/b&gt;: &lt;IMAGEWIDTH&gt;</param>
+  <param name="fileStatus.cancelled">Imħassra</param>
+  <param name="fileStatus.complete">Completed</param>
+  <param name="fileStatus.encodeImage">immaġni Encode</param>
+  <param name="fileStatus.error">Ġara żball</param>
+  <param name="fileStatus.loadFile">Loading fajl fil-memorja</param>
+  <param name="fileStatus.loadImage">Loading image data</param>
+  <param name="fileStatus.processing">Uploading</param>
+  <param name="fileStatus.ready">Lesti għall upload</param>
+  <param name="labelUpload.text">Agħżel Fajls biex ittella '</param>
+  <param name="listView.description.defaultText">Ikklikkja biex jeditjaw ...</param>
+  <param name="listView.description.tooltip">Edit fajl deskrizzjoni</param>
+  <param name="listView.fileNameLabel.pattern">&lt;FILENAME&gt;</param>
+  <param name="listView.label.disabledFileInfoTooltip">Daqs: &lt;FILESIZE&gt;
+Data: &lt;FILEDATE&gt;
+Status: &lt;FILESTATUS&gt;</param>
+  <param name="listView.label.tooltip">Daqs: &lt;FILESIZE&gt;
+Data: &lt;FILEDATE&gt;
+Status: &lt;FILESTATUS&gt;</param>
+  <param name="listView.removeButton.tooltip">Neħħi fajl</param>
+  <param name="listView.textInput.defaultString">Write-fajl kumment hawnhekk</param>
+  <param name="listViewButton.tooltip">ħsieb Lista</param>
+  <param name="loadingText">&lt;b&gt; initializing: &lt;PERCENT&gt;% &lt;/b&gt;</param>
+  <param name="messages.disabledType">Fajl ma tipi li ġejjin: &lt;FILETYPES&gt; mhumiex permessi biex ittella! &lt;COUNTINVALIDFILES&gt; fajls kienu ġew injorati!</param>
+  <param name="messages.filesCountExceeded">Biss &lt;MAXFILECOUNT&gt; fajls permess biex ittella! &lt;COUNTINVALIDFILES&gt; fajls kienu ġew injorati!</param>
+  <param name="messages.filesCountNotEnough">Jekk jogħġbok agħżel fajls aktar. Minimu fajls għadd huwa &lt;MINFILECOUNT&gt;</param>
+  <param name="messages.httpError">&lt;center&gt; HTTP Error, "&lt;ERRORCODE&gt;" seħħet. &lt;DESCRIPTION&gt;&lt;br&gt; Jekk jogħġbok ara &lt;font color='#0000FF'&gt; &lt;a title='Error description' target='_blank' href='&lt;W3WLINK&gt;'&gt; &lt;W3WLINK&gt; &lt;/a&gt; id-definizzjonijiet ta 'żball &lt;/font&gt; kodiċi għal aktar informazzjoni. &lt;/center&gt;</param>
+  <param name="messages.httpError.400">Bad Talba. Server ma tistax tifhem talba! Jekk jogħġbok ikkuntattja l-amministratur server tiegħek.</param>
+  <param name="messages.httpError.401">Mhux awtorizzat. awtentikazzjoni Utenti meħtieġa!</param>
+  <param name="messages.httpError.402">Ħlas Meħtieġa. kodiċi Riservat!</param>
+  <param name="messages.httpError.403">Projbit. Il-server mifhum it-talba, iżda qiegħed jirrifjuta li jwettaq dan!&lt;br&gt;Għal servers apache: Dan jiġri għaliex ikollok ppermettew modulu Apache jismu mod_security fuq server li jimblokka l-intestaturi mibgħuta minn Flash.&lt;br&gt;Għall IIS ma 'servers ASP: Din il-kwistjoni jekk iseħħ header Kontenut-tul huwa preżenti u jekk l-header Kontenut-Tul tispeċifika ammont ta' data li hija akbar mill-valur tal-proprjetà AspMaxRequestEntityAllowed fil-metabase IIS.&lt;br&gt;Il-valur awtomatiċi għall-proprjetà AspMaxRequestEntityAllowed hija 204,800 bytes.</param>
+  <param name="messages.httpError.404">Page mhux misjuba. Ma jistgħux isibu "&lt;URL&gt;" paġna fuq is-server!</param>
+  <param name="messages.httpError.405">metodu Post ma permess għal din il-paġna &lt;URL&gt;! Erġa għall-bidla settings server biex jippermettu metodu post biex jirċievi iskrittura.</param>
+  <param name="messages.httpError.406">Mhux Aċċettabbli. Dan ifisser li għal servers ma tistax tiġġenera entitajiet rispons li jkollhom karatteristiċi kontenut mhux aċċettabbli skond il-jaċċettaw headers mibgħuta fit-talba. Flash jaċċettaw header "test / *".</param>
+  <param name="messages.httpError.407">Awtentikazzjoni Proxy Meħtieġa.</param>
+  <param name="messages.httpError.408">Talba timeout.</param>
+  <param name="messages.httpError.409">Konflitt.</param>
+  <param name="messages.httpError.410">Għaddew. Ir-riżorsa mitluba ma tkunx disponibbli fil-server u l-ebda indirizz twassil tkun magħrufa.</param>
+  <param name="messages.httpError.411">Tul Meħtieġa.</param>
+  <param name="messages.httpError.412">Prekundizzjoni rnexxielhomx.</param>
+  <param name="messages.httpError.413">Entità Talba Wisq Kbir.&lt;br&gt;Għal servers IIS: 1. Jippruvaw iżidu proprjetà metabase UploadReadAheadSize.&lt;br&gt;2. Jippruvaw iżidu MaxRequestEntityAllowed proprjetà valur fil IIS konfigurazzjoni.&lt;br&gt;Għal servers apache: Ipprova biex tiżdied parametru LimitRequestBody fl httpd.conf.</param>
+  <param name="messages.httpError.414">Talba-URI twil wisq.</param>
+  <param name="messages.httpError.415">Mingħajr irfid Media Tip.</param>
+  <param name="messages.httpError.416">Medda Mitlub Mhux satisfiable.</param>
+  <param name="messages.httpError.417">Stennija rnexxielhomx.</param>
+  <param name="messages.httpError.500">Intern Error Server. Normalment dan ifisser li l-iskrittura li tirċievi jkollhom żbalji.</param>
+  <param name="messages.httpError.501">Mhux Implimentata. Server ma 'appoġġ metodu POST.</param>
+  <param name="messages.httpError.502">Bad Gateway.</param>
+  <param name="messages.httpError.503">Servizz 503 indisponibbli. Il-server huwa attwalment kapaċi li jimmaniġġjaw it-talba minħabba tagħbija żejda temporanja jew manutenzjoni tas-server.</param>
+  <param name="messages.httpError.504">Timeout Gateway.</param>
+  <param name="messages.httpError.505">Verżjoni HTTP Mhux Sostnuti. Server ma 'appoġġ HTTP 1.1.</param>
+  <param name="messages.wrongFileType">fajls biss ma 'tip li ġej: &lt;FILETYPES&gt; permess biex ittella! &lt;COUNTINVALIDFILES&gt; fajls kienu ġew injorati!</param>
+  <param name="messages.zeroSize">&lt;COUNTINVALIDFILES&gt; fajls b'żero daqs kienu ġew injorati!</param>
+  <param name="removeButton.tooltip">Neħħi fajls magħżula</param>
+  <param name="retryDialog.caption">Retry upload?</param>
+  <param name="retryDialog.message">Xi fajls ma kinux uploaded. Tixtieq tipprova biex ittella 'mill-ġdid?</param>
+  <param name="retryDialog.noLabel">Nru</param>
+  <param name="retryDialog.yesLabel">Iva</param>
+  <param name="sortButton.text"></param>
+  <param name="sortButton.tooltip">Issortjar sabiex</param>
+  <param name="sortMenu.byDate">Skond id-data</param>
+  <param name="sortMenu.byName">Bl-isem</param>
+  <param name="sortMenu.bySize">Skond id-daqs</param>
+  <param name="statusLabel.text.generateThumbnails">thumbnails image ġenerazzjoni ... jekk jogħġbok stenna.</param>
+  <param name="statusLabel.text.loadFile "></param>
+  <param name="statusLabel.text.ready">Count ta 'fajls: &lt;FILESCOUNT&gt; (&lt;TOTALSIZE&gt;)</param>
+  <param name="statusLabel.text.uploadCancelled">fajls jmiss upload kkanċellati. Stenna ...</param>
+  <param name="statusLabel.text.uploadComplete">Tella kompluta! &lt;UPLOADEDFILESCOUNT&gt; fajls (&lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt;), żmien li jkun għadda: &lt;ELAPSEDHOUR&gt;: &lt;ELAPSEDMIN&gt;: &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.uploadProgress">Total: &lt;PERCENT&gt;% (&lt;FILESNUM&gt; / &lt;FILESTOUPLOADCOUNT&gt;) &lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt; (&lt;RATEVALUE&gt; / sek, xellug ħin: &lt;LEFTHOUR&gt;: &lt;LEFTMIN&gt;: &lt;LEFTSEC&gt;)</param>
+  <param name="statusLabel.text.uploadStart">Uploading ...</param>
+  <param name="statusLabel.text.uploadStopped">Tella waqfet. Uploaded bytes: &lt;TOTALUPLOADEDSIZE&gt;, li jkun għadda żmien: &lt;ELAPSEDHOUR&gt;: &lt;ELAPSEDMIN&gt;: &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.waitForConnection">Server ma jirrispondix. Jippruvaw terġa 'tgħaqqad, jekk jogħġbok stenna.</param>
+  <param name="thumbViewButton.tooltip">Thumbnails ħsieb</param>
+  <param name="thumbnail.watermark.text">Element ta 'IT</param>
+  <param name="thumbnailView.bottomPanel.labelPattern">&lt;FILENAME&gt;</param>
+  <param name="thumbnailView.cancelCropIcon.tooltip">uċuħ tar-raba Jneħħu l-immaġni</param>
+  <param name="thumbnailView.contextMenu.CropLabel">Wiċċ l-immaġni</param>
+  <param name="thumbnailView.contextMenu.RemoveLabel">Neħħi</param>
+  <param name="thumbnailView.contextMenu.RotateLeftLabel">Dawwar xellug</param>
+  <param name="thumbnailView.contextMenu.RotateRightLabel">dritt Dawwar</param>
+  <param name="thumbnailView.contextMenu.UndoCropLabel">uċuħ tar-raba Jneħħu l-immaġni</param>
+  <param name="thumbnailView.cropIcon.tooltip">Wiċċ l-immaġni</param>
+  <param name="thumbnailView.editIcon.tooltip">Edit fajl deskrizzjoni</param>
+  <param name="thumbnailView.infoIcon.disabledFileInfoTooltip">Daqs: &lt;FILESIZE&gt;
+Data: &lt;FILEDATE&gt;
+Status: &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.infoIcon.tooltip">Daqs: &lt;FILESIZE&gt;
+Data: &lt;FILEDATE&gt;
+Status: &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.removeIcon.tooltip">Neħħi</param>
+  <param name="thumbnailView.rotateLeftIcon.tooltip">Dawwar xellug</param>
+  <param name="thumbnailView.rotateRightIcon.tooltip">dritt Dawwar</param>
+  <param name="uploadButton.text">Upload</param>
+  <param name="uploadButton.tooltip">Bidu upload</param>
+</MultiPowUpload_parameters>

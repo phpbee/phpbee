@@ -1,0 +1,34 @@
+{$d_id=$popup_params.popup_id}
+
+<div id="{$d_id}" title="{$popup_params.popup_title|default:"\$popup_title \$popup_id:$d_id"}" style="display:none;">
+{$popup_handler}
+</div>
+
+<script>
+$(function() {
+    $("#{$d_id}").dialog({
+        modal:false,
+        draggable: false,
+        title: null,
+        autoOpen: false
+    }).siblings('.ui-dialog-titlebar').remove();
+
+    {if isset($_gsdata.gspgid_form) && $_gsdata.gspgid_form==$popup_params.gspgid}
+        $("#{$d_id}").dialog("open");
+    {/if}    
+
+});
+
+
+function popup(name,src) {
+    $(name).dialog("open");
+    if(src) {
+         $(name).dialog("option","position", {
+              my: "left top", at: "left bottom", of: src
+         });
+    }
+
+    return false;
+}
+
+</script>

@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MultiPowUpload_parameters>
+  <param name="browseButton.text">Bladeren ...</param>
+  <param name="browseButton.tooltip">Bestanden toevoegen om te uploaden</param>
+  <param name="cancelButton.pauseText">Pauze</param>
+  <param name="cancelButton.text">Annuleren</param>
+  <param name="cancelButton.tooltip">Annuleer huidige taak</param>
+  <param name="clearButton.text">Verwijder</param>
+  <param name="clearButton.tooltip">Verwijder alle bestanden</param>
+  <param name="constant.bytes">bytes</param>
+  <param name="constant.decimalSeparator">,</param>
+  <param name="constant.gigaBytes">Gb</param>
+  <param name="constant.kiloBytes">Kb</param>
+  <param name="constant.megaBytes">Mb</param>
+  <param name="contextMenu.sortByDate">Sorteren op datum</param>
+  <param name="contextMenu.sortByName">Sorteren op naam</param>
+  <param name="contextMenu.sortBySize">Sorteren op grootte</param>
+  <param name="descriptionWindow.caption">Beschrijving van het bestand</param>
+  <param name="descriptionWindow.fileNavigation.fileName.label">&lt;FILENAME&gt;</param>
+  <param name="descriptionWindow.fileNavigation.nextButton.label"></param>
+  <param name="descriptionWindow.fileNavigation.previousButton.label"></param>
+  <param name="exifWindow.caption">&lt;FILENAME&gt; EXIF-gegevens</param>
+  <param name="exifWindow.list.nameHeader">Naam</param>
+  <param name="exifWindow.list.valueHeader">Waarde</param>
+  <param name="fileInfoWindow.caption">Bestandsinformatie</param>
+  <param name="fileInfoWindow.exifInfo">&lt;b&gt; Exif info &lt;/b&gt;: &lt;a&gt; Klik om te bekijken &lt;/a&gt;</param>
+  <param name="fileInfoWindow.fileDate">&lt;b&gt; Datum &lt;/b&gt;: &lt;FILEDATE&gt;</param>
+  <param name="fileInfoWindow.fileName">&lt;b&gt; Naam &lt;/b&gt;: &lt;FILENAME&gt;</param>
+  <param name="fileInfoWindow.fileSize">&lt;b&gt; Afmetingen &lt;/b&gt;: &lt;FILESIZE&gt;</param>
+  <param name="fileInfoWindow.fileStatus">&lt;b&gt; Status &lt;/b&gt;: &lt;FILESTATUS&gt;</param>
+  <param name="fileInfoWindow.imageHeight">&lt;b&gt; Hoogte van de afbeelding &lt;/b&gt;: &lt;IMAGEHEIGHT&gt;</param>
+  <param name="fileInfoWindow.imageWidth">&lt;b&gt; Beeldbreedte &lt;/b&gt;: &lt;IMAGEWIDTH&gt;</param>
+  <param name="fileStatus.cancelled">Afgelast</param>
+  <param name="fileStatus.complete">Afgerond</param>
+  <param name="fileStatus.encodeImage">Coderen beeld</param>
+  <param name="fileStatus.error">Fout opgetreden</param>
+  <param name="fileStatus.loadFile">Het laden van bestand in het geheugen</param>
+  <param name="fileStatus.loadImage">Het laden van beeldgegevens</param>
+  <param name="fileStatus.processing">Uploaden</param>
+  <param name="fileStatus.ready">Klaar voor uploaden</param>
+  <param name="labelUpload.text">Bestanden selecteren om te uploaden</param>
+  <param name="listView.description.defaultText">Klik om te bewerken ...</param>
+  <param name="listView.description.tooltip">Beschrijving aanpassen</param>
+  <param name="listView.fileNameLabel.pattern">&lt;FILENAME&gt;</param>
+  <param name="listView.label.disabledFileInfoTooltip">Grootte: &lt;FILESIZE&gt;
+Datum: &lt;FILEDATE&gt;
+Status: &lt;FILESTATUS&gt;</param>
+  <param name="listView.label.tooltip">Grootte: &lt;FILESIZE&gt;
+Datum: &lt;FILEDATE&gt;
+Status: &lt;FILESTATUS&gt;</param>
+  <param name="listView.removeButton.tooltip">Verwijder bestand</param>
+  <param name="listView.textInput.defaultString">Schrijf hier uw commentaar</param>
+  <param name="listViewButton.tooltip">Lijstweergave</param>
+  <param name="loadingText">&lt;b&gt; INITIALISATIE: &lt;PERCENT&gt;% &lt;/b&gt;</param>
+  <param name="messages.disabledType">Volgende types bestanden: &lt;FILETYPES&gt; zijn niet toegestaan om te uploaden! &lt;COUNTINVALIDFILES&gt; bestanden werden genegeerd!</param>
+  <param name="messages.filesCountExceeded">Er mogen maar &lt;MAXFILECOUNT&gt; worden geupload! &lt;COUNTINVALIDFILES&gt; bestanden werden genegeerd!</param>
+  <param name="messages.filesCountNotEnough">Selecteer meer bestanden. Minimum aantal bestanden: &lt;MINFILECOUNT&gt;</param>
+  <param name="messages.httpError">&lt;center&gt; HTTP-fout '&lt;ERRORCODE&gt; "heeft plaatsgevonden. &lt;DESCRIPTION&gt;&lt;br&gt; Zie &lt;font color='#0000FF'&gt; &lt;a title='Error description' target='_blank' href='&lt;W3WLINK&gt;'&gt; &lt;W3WLINK&gt; &lt;/a&gt; &lt;/font&gt; foutcode definities voor meer informatie. &lt;/center&gt;</param>
+  <param name="messages.httpError.400">Bad Request. De server kan de vraag niet verwerken! Neem contact op met uw serverbeheerder.</param>
+  <param name="messages.httpError.401">Onbevoegden. Authenticatie van de gebruiker vereist!</param>
+  <param name="messages.httpError.402">Betaling vereist. Gereserveerde code!</param>
+  <param name="messages.httpError.403">Verboden. De server begreep het verzoek, maar weigert het uit te voeren!&lt;br&gt;Voor Apache servers: Dit gebeurt omdat u een Apache module genaamd mod_security op de server hebt ingeschakeld hebt welke de headers verzonden door Flash blokkeert.&lt;br&gt;Voor IIS met ASP servers: Dit probleem doet zich voor als een Content-Length kop aanwezig is en als de header content-length een hoeveelheid gegevens bepaalt die groter is dan de waarde van de hoeveelheid bepaald in AspMaxRequestEntityAllowed in de IIS-metabase.&lt;br&gt;De standaard waarde voor het AspMaxRequestEntityAllowed pakket is 204.800 bytes.</param>
+  <param name="messages.httpError.404">Pagina niet gevonden. Kan de gevraagde pagina '&lt;URL&gt;' niet vinden op de server!</param>
+  <param name="messages.httpError.405">POST-methode niet toegestaan voor deze pagina &lt;URL&gt;! Probeer om de server instellingen te wijzigen voor het ontvangen van POST-methode scripts.</param>
+  <param name="messages.httpError.406">Niet aanvaardbaar. Dit betekent dat de server geen antwoord pakketten kan aanmaken die karakteristieke inhoud hebben die niet aanvaardbaar is met de accept header verzonden in de aanvraag. De Flash accept header is 'text / *'.</param>
+  <param name="messages.httpError.407">Proxy Authentication Required.</param>
+  <param name="messages.httpError.408">Time-out verzoek.</param>
+  <param name="messages.httpError.409">Conflict.</param>
+  <param name="messages.httpError.410">Verdwenen. De opgevraagde bron is niet langer beschikbaar op de server.</param>
+  <param name="messages.httpError.411">Lengte.</param>
+  <param name="messages.httpError.412">Voorwaarde is mislukt.</param>
+  <param name="messages.httpError.413">Verzoek te groot.&lt;br&gt;Voor IIS-servers: 1. Probeer UploadReadAheadSize metabase-eigenschap te verhogen.&lt;br&gt;2. Probeer MaxRequestEntityAllowed waarde van de eigenschap in IIS config te verhogen.&lt;br&gt;Voor Apache servers: Probeer LimitRequestBody parameter te verhogen in httpd.conf.</param>
+  <param name="messages.httpError.414">Aanvraag-URI te lang.</param>
+  <param name="messages.httpError.415">Niet-ondersteund mediatype.</param>
+  <param name="messages.httpError.416">Gevraagd bereik niet bekomen.</param>
+  <param name="messages.httpError.417">Verwachting is mislukt.</param>
+  <param name="messages.httpError.500">Internal Server Error. Meestal betekent het dat dit script fouten bevat.</param>
+  <param name="messages.httpError.501">Niet geïmplementeerd. Server ondersteunt geen POST-methode.</param>
+  <param name="messages.httpError.502">Bad Gateway.</param>
+  <param name="messages.httpError.503">503 Dienst niet beschikbaar. De server is momenteel niet in staat om het verzoek uit te voeren, te wijten aan een tijdelijke overbelasting of het onderhoud van de server.</param>
+  <param name="messages.httpError.504">Gateway Timeout.</param>
+  <param name="messages.httpError.505">HTTP versie niet ondersteund. -Server biedt geen ondersteuning voor HTTP 1.1.</param>
+  <param name="messages.wrongFileType">Alleen bestanden met de volgende type: &lt;FILETYPES&gt; zijn toegestaan om te uploaden! &lt;COUNTINVALIDFILES&gt; bestanden werden genegeerd!</param>
+  <param name="messages.zeroSize">&lt;COUNTINVALIDFILES&gt;-bestanden met een grootte van nul werden genegeerd!</param>
+  <param name="removeButton.tooltip">Verwijder geselecteerde bestanden</param>
+  <param name="retryDialog.caption">Opnieuw uploaden?</param>
+  <param name="retryDialog.message">Sommige bestanden werden niet geüpload. Wil je proberen om opnieuw te uploaden?</param>
+  <param name="retryDialog.noLabel">Geen</param>
+  <param name="retryDialog.yesLabel">Ja</param>
+  <param name="sortButton.text"></param>
+  <param name="sortButton.tooltip">Sorteervolgorde</param>
+  <param name="sortMenu.byDate">Op datum</param>
+  <param name="sortMenu.byName">Op naam</param>
+  <param name="sortMenu.bySize">Op maat</param>
+  <param name="statusLabel.text.generateThumbnails">Miniaturen worden aangemaakt ... even geduld aub.</param>
+  <param name="statusLabel.text.loadFile "></param>
+  <param name="statusLabel.text.ready">Aantal bestanden: &lt;FILESCOUNT&gt; (&lt;TOTALSIZE&gt;)</param>
+  <param name="statusLabel.text.uploadCancelled">Het uploaden van volgende bestanden te uploaden werd geannuleerd. Even geduld...</param>
+  <param name="statusLabel.text.uploadComplete">Upload compleet! &lt;UPLOADEDFILESCOUNT&gt; bestanden (&lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt;), de verstreken tijd: &lt;ELAPSEDHOUR&gt;: &lt;ELAPSEDMIN&gt;: &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.uploadProgress">Totaal: &lt;PERCENT&gt;% (&lt;FILESNUM&gt; / &lt;FILESTOUPLOADCOUNT&gt;) &lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt; (&lt;RATEVALUE&gt; / sec, tijd: &lt;LEFTHOUR&gt;: &lt;LEFTMIN&gt;: &lt;LEFTSEC&gt;)</param>
+  <param name="statusLabel.text.uploadStart">Uploaden ...</param>
+  <param name="statusLabel.text.uploadStopped">Upload gestopt. Geüpload bytes: &lt;TOTALUPLOADEDSIZE&gt;, Verstreken tijd: &lt;ELAPSEDHOUR&gt;: &lt;ELAPSEDMIN&gt;: &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.waitForConnection">Server reageert niet. Gelieve opnieuw te proberen, even geduld aub.</param>
+  <param name="thumbViewButton.tooltip">Bekijk miniaturen</param>
+  <param name="thumbnail.watermark.text">Element-IT</param>
+  <param name="thumbnailView.bottomPanel.labelPattern">&lt;FILENAME&gt;</param>
+  <param name="thumbnailView.cancelCropIcon.tooltip">Afbeelding bijsnijden ongedaan maken.</param>
+  <param name="thumbnailView.contextMenu.CropLabel">De afbeelding bijsnijden</param>
+  <param name="thumbnailView.contextMenu.RemoveLabel">Verwijder</param>
+  <param name="thumbnailView.contextMenu.RotateLeftLabel">Linksom draaien</param>
+  <param name="thumbnailView.contextMenu.RotateRightLabel">Draai rechts</param>
+  <param name="thumbnailView.contextMenu.UndoCropLabel">Afbeelding bijsnijden ongedaan maken.</param>
+  <param name="thumbnailView.cropIcon.tooltip">De afbeelding bijsnijden.</param>
+  <param name="thumbnailView.editIcon.tooltip">Bestandsbeschrijving aanpassen.</param>
+  <param name="thumbnailView.infoIcon.disabledFileInfoTooltip">Grootte: &lt;FILESIZE&gt;
+Datum: &lt;FILEDATE&gt;
+Status: &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.infoIcon.tooltip">Grootte: &lt;FILESIZE&gt;
+Datum: &lt;FILEDATE&gt;
+Status: &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.removeIcon.tooltip">Verwijder</param>
+  <param name="thumbnailView.rotateLeftIcon.tooltip">Linksom draaien</param>
+  <param name="thumbnailView.rotateRightIcon.tooltip">Draai rechts</param>
+  <param name="uploadButton.text">Upload</param>
+  <param name="uploadButton.tooltip">Uploaden starten</param>
+</MultiPowUpload_parameters>

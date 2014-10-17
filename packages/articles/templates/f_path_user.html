@@ -1,0 +1,8 @@
+{controller _class="tw_articles" id=$root.pid_id _assign="it" _assign_type=first _fields="id,pid_id,name"}
+{if $it && $pid!=$root.pid_id}
+{include file="f_path_user.html" root=$it pid=$pid}&nbsp;&raquo;&nbsp;
+{/if}
+{if $pid!=$root.id}
+<a href="{gl show=$root}">{$root.name}</a>
+{*else}{$root.name*}
+{/if}

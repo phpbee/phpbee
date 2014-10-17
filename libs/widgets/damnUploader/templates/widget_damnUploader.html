@@ -1,0 +1,52 @@
+<div>
+<script>
+	var params_str={$params_str}
+{foreach $params as $k=>$v}
+	var {$k}={$v|json_encode};
+{/foreach}
+</script>
+{foreach $params as $k=>$v}
+	<input class="damnUploader_input" type="hidden" name="{$k}" value="{$v|htmlentities}">
+{/foreach}
+
+
+<link href="/widgets/damnUploader/widget.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="/widgets/damnUploader/jquery.damnUploader.js"></script>
+<script type="text/javascript" src="/widgets/damnUploader/interafce.js"></script>
+<script type="text/javascript" src="/widgets/damnUploader/uploader-setup.js"></script>
+<script type="text/javascript" src="/widgets/damnUploader/widget.js"></script>
+
+
+
+{handler gspgid="widgets/damnUploader/action" recordset=$params.recordset hash=$params.hash foreign_field_name=$params.foreign_field_name rid=$params.rid }
+
+	<ul class="MultiPowUploadGallery photos inline " id="gallery_{$params.hash}">
+		{foreach $images as $i}
+		{include file="li_damnUploader.html" i=$i}
+		{/foreach}
+	</ul>
+
+<div id="images_manager_{$params.hash}" class="images_manager alert" style="display:none;">
+	<input type="hidden" name="checked_items_action" id="checked_items_action" value="">
+	<label class="radio inline"><a href="#" class="btn" id="checked_items_submit" onClick="$('#images_manager_{$params.hash} #checked_items_action').val('delete'); return false;" >Удалить</a></label>
+</div>
+
+
+
+
+<table class="table">
+	<tbody id="upload-rows"></tbody>
+</table>
+
+
+
+<input type="file" class="form-control auto-tip file-input" id="file-input" name="my-file" data-title="You can select one or more files by system menu" />
+ <div class="drop-box" id="drop-box">
+		{ml('Выберите файлы или перетащите их мышкой в это окно','Select files or drop into this area.')}
+		<p>
+		<button id="select-btn"  class="btn">{ml('Выбрать файлы','Select files')}</button>
+		<button id="send-btn"  class="btn">{ml('Загрузить','Upload')}</button>
+		</p>
+</div>
+
+</div>		

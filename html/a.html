@@ -1,0 +1,16 @@
+{extends file="index2.html"}
+
+{block name="content"}
+<h3>{handler gspgid="Articles/category/title"}</h3>
+<div>
+{handler gspgid="Articles/category/list/articles"}
+</div>
+
+{/block}
+{block name="page_middle_right"}
+<h3>Подразделы</h3>
+<div>
+{handler gspgid="Articles/category/list/subcategories"}
+</div>
+{/block}
+

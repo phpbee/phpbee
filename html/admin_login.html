@@ -1,0 +1,12 @@
+{extends file="admin_page.html"}
+{block name="admin_top"}
+<div class="div-border admin-login-form">
+<h3>Please login</h3>
+<form method=post>
+{handler gspgid="/admin/form/login" }
+<input type=submit value="login">
+</form>
+</div>
+{/block}
+{block name="content"}
+{/block}

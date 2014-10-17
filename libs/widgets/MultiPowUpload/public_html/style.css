@@ -1,0 +1,262 @@
+.tabs {
+	width:100%;
+	overflow:hidden;
+	font-size:0.9em;
+	margin:2em 0;
+	zoom:1;
+	padding:1px;
+	position:relative;
+}
+
+.tabs dt {
+	float:left;
+	line-height:2;
+	height:2em;
+	background:#e8f0f5;
+	border:1px solid #e8f0f5;
+	border-bottom:0;
+	padding:0 1em;
+	position:relative;
+	left:35px;
+	margin-right:1px;
+	cursor:pointer;
+
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	-webkit-border-top-left-radius:10px;
+	-webkit-border-top-right-radius:10px;
+	-moz-border-radius-topleft:10px;
+	-moz-border-radius-topright:10px;
+}
+
+.tabs dt:hover {
+	background-color:#bfdff4;
+}
+
+.tabs dt.selected {
+	border-color:#b0d0e9;
+	background:#fff;
+	z-index:3;
+	cursor:auto;
+}
+
+.tabs dd {
+	background:#fff;	
+	float:right;
+	overflow:hidden;	
+	width:1px;
+	height:1px;
+	margin:2em 0 0 -100%;
+	position:relative;
+	z-index:2;
+}
+
+.tabs dd.selected {
+	width:100%;
+	height:100%;
+}
+
+.tabs .tab-content {
+	border:1px solid #b0d0e9;
+	padding:10px;
+	
+	-webkit-border-radius:20px;
+	-moz-border-radius:20px;
+	 border-radius: 20px;
+}
+.fileList { 	
+	padding-top: 2px;
+	width: 100%;
+	min-height: 20px; 	
+}
+.dropTarget{
+	position: absolute;
+	display: none;
+	vertical-align: middle;
+	border: 0;
+	background: #B5EDBC;
+	border: 1px solid #74DD82;
+	border-radius: 10px;
+	opacity:.7;
+	text-align: center;
+	height: 100%;
+	width: 100%;
+}
+.fileList ul {
+	border:1px solid #b0d0e9;
+	height: 100%;
+	width: 100%; 
+	overflow-y: scroll;
+	margin: 0;
+    padding: 0;  
+    list-style: none;
+
+    -webkit-border-radius:5px;
+	-moz-border-radius:5px;
+}
+
+.fileList .listItemsHolder li{   
+  padding-top: 10px;
+  padding-bottom: 10px;
+ 
+  border-bottom-style:solid; 
+  border-bottom-width:1px; 
+  border-bottom-color:#CCCCCC; 
+  padding-left:2px;
+}
+.fileSpacer {
+	display: block;
+	font-size: 0;
+	line-height: 0;
+	clear: both; 
+}
+.fileName { 
+  float: left;
+  overflow-x: hidden;
+  /*width: 65%;*/  
+  min-width: 50px;
+  white-space: nowrap;
+}
+.fileState { 
+  float: left;
+  width: 16px;  
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.fileStatus, .fileSize {
+	float: right;
+	width: 10%;	
+}
+.fileStatus{	
+	width: 35px;
+	min-width: 30px;
+	max-width: 40px;
+}
+.fileSize {
+	width: 50px;	
+	min-width: 50px;
+	max-width: 60px;
+}
+.fileRemove{
+	float: right;
+	cursor: pointer;
+	width: 16px;
+}
+
+.uuFileInput  {
+	opacity:0;
+	filter:alpha(opacity:0);
+	font-size:199px;
+	width: 100%;
+	height: 100%;
+	cursor:pointer;	
+}
+
+.uuButton {
+	display: inline-block;
+	background: none;
+	margin: 0;
+	padding: 3px 0;
+	border-width: 0;
+	overflow: visible;
+	text-decoration: none;
+	color: #333;
+}
+
+.uuClearButton{
+	float: right;
+	display: inline;
+}
+
+.uuButtonDisabled{
+	color: #CCC;
+}
+
+.uuButton span {
+	background: #ddd url(images/bg-button.gif) repeat-x 0 0;
+	margin: 0;
+	padding: 3px 0;
+	border-left: 1px solid #bbb;
+	border-right: 1px solid #aaa;
+}
+
+* html .uuButton span {
+	padding-top: 0;
+}
+
+.uuButton span span {
+	position: relative;
+	padding: 3px .4em;
+	border-width: 0;
+	border-top: 1px solid #bbb;
+	border-bottom: 1px solid #aaa;
+	white-space: nowrap;
+}
+
+.uuButton span span img{
+	position: relative;
+	vertical-align: middle;
+	border-width: 0;
+	padding-right: 3px;
+	margin: 0;
+}
+
+.uuButton:hover span, 
+.uuButton:hover span span,
+.uuButtonHover span, 
+.uuButtonHover span span,  
+.uuButton:focus span, 
+.uuButton:focus span span {
+	cursor: pointer;
+	border-color: #9cf !important;
+	color: #000;
+}
+
+.uuButton:active span,
+.uuButtonActive span {
+	background-position: 0 -400px;
+	outline: none;
+}
+
+.uuButton:focus, 
+.uuButton:active,
+.uuButtonFocus, 
+.uuButtonActive  {
+	outline: none;
+}
+
+/* main button style */
+.primary {
+	font-weight: bold;
+	color: #000;
+}
+
+
+.uuControlsContainer{
+	/*height: 10%;*/
+	min-height: 25px;
+}
+.uuStatusContainer{
+	/*height: 15%;*/
+	min-height: 40px;
+}
+.uuStatusLabel{
+	padding: 3px;
+	width: 100%;
+	white-space: nowrap;
+	min-height: 10px;
+	max-height: 30px;
+	overflow:hidden;	
+}
+.uuProgressBar {	
+	border:1px solid #b0d0e9;
+	background: #FFFFFF;
+	margin-top: 2px;
+	padding: 1px;
+	min-height: 10px;
+}
+.uuProgressBarBody {
+	width: 0px;
+	height: 10px;
+	background: #bfdff4;
+}

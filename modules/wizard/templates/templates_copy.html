@@ -1,0 +1,7 @@
+{extends file="wizard_page.html"}
+
+{block name="main"}
+	<h3>Copy template</h3>
+		{handler gspgid="/admin/wizard/form/templates/copy" from_Module_id={$_gsdata.gspgid_va.0} from_name={$_gsdata.gspgid_va.1}  _default="Module_id={$_gsdata.gspgid_va.0} name={$_gsdata.gspgid_va.1}"}
+
+{/block}

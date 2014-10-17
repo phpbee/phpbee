@@ -1,0 +1,14 @@
+<div class="links_line">
+	{assign var="num" value=0}
+	<span><a href="/{$link_all.href}" {if empty($current)}class="filter_all filter_current"{else}class="filter_all"{/if}>Все</a>&nbsp;<i>[{$link_all.count}]</i></span>
+	{foreach from=$links item=i key=link}
+	{if $i.count}
+	<span><a {if $i.key==$current}class="filter_current"{/if} href="/{$i.href}">{$i.name}</a>&nbsp;<i>[{$i.count}]</i></span>
+	{else}
+	<span>{$i.name} [{$i.count}]</span>
+	{/if}
+	{/foreach}
+
+	<div class="clear"></div>
+</div>
+

@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MultiPowUpload_parameters>
+  <param name="browseButton.text">בלעטער ...</param>
+  <param name="browseButton.tooltip">לייג טעקעס פֿאַר צופֿעליקער</param>
+  <param name="cancelButton.pauseText">יבעררייַס</param>
+  <param name="cancelButton.text">באָטל מאַכן</param>
+  <param name="cancelButton.tooltip">באָטל מאַכן א אָפּעראַציע</param>
+  <param name="clearButton.text">קלאָר</param>
+  <param name="clearButton.tooltip">אַראָפּנעמען אַלע טעקעס</param>
+  <param name="constant.bytes">ביטעס</param>
+  <param name="constant.decimalSeparator">,</param>
+  <param name="constant.gigaBytes">גיגאבייט</param>
+  <param name="constant.kiloBytes">קב</param>
+  <param name="constant.megaBytes">מעגאבייטן</param>
+  <param name="contextMenu.sortByDate">סאָרט דורך טאָג</param>
+  <param name="contextMenu.sortByName">סאָרט דורך נאָמען</param>
+  <param name="contextMenu.sortBySize">סאָרט דורך גרייס</param>
+  <param name="descriptionWindow.caption">באַשרייַבונג פֿאַר טעקע</param>
+  <param name="descriptionWindow.fileNavigation.fileName.label">&lt;FILENAME&gt;</param>
+  <param name="descriptionWindow.fileNavigation.nextButton.label"></param>
+  <param name="descriptionWindow.fileNavigation.previousButton.label"></param>
+  <param name="exifWindow.caption">&lt;FILENAME&gt; עקסיף דאַטן</param>
+  <param name="exifWindow.list.nameHeader">נאָמען</param>
+  <param name="exifWindow.list.valueHeader">ווערט</param>
+  <param name="fileInfoWindow.caption">טעקע אינפֿאָרמאַציע</param>
+  <param name="fileInfoWindow.exifInfo">&lt;b&gt; עקסיף אינפֿאָרמאַציע &lt;/b&gt;: &lt;a&gt; גיט צו View &lt;/a&gt;</param>
+  <param name="fileInfoWindow.fileDate">&lt;b&gt; טאָג &lt;/b&gt;: &lt;FILEDATE&gt;</param>
+  <param name="fileInfoWindow.fileName">&lt;b&gt; נאמען &lt;/b&gt;: &lt;FILENAME&gt;</param>
+  <param name="fileInfoWindow.fileSize">&lt;b&gt; גרייס &lt;/b&gt;: &lt;FILESIZE&gt;</param>
+  <param name="fileInfoWindow.fileStatus">&lt;b&gt; סטאַטוס &lt;/b&gt;: &lt;FILESTATUS&gt;</param>
+  <param name="fileInfoWindow.imageHeight">&lt;b&gt; בילד הייך &lt;/b&gt;: &lt;IMAGEHEIGHT&gt;</param>
+  <param name="fileInfoWindow.imageWidth">&lt;b&gt; בילד ברייט &lt;/b&gt;: &lt;IMAGEWIDTH&gt;</param>
+  <param name="fileStatus.cancelled">קאַנסעללעד</param>
+  <param name="fileStatus.complete">געענדיקט</param>
+  <param name="fileStatus.encodeImage">קיין בילד</param>
+  <param name="fileStatus.error">טעות פארגעקומען</param>
+  <param name="fileStatus.loadFile">לאָודינג טעקע אין זכּרון</param>
+  <param name="fileStatus.loadImage">לאָודינג בילד דאַטן</param>
+  <param name="fileStatus.processing">ופּלאָאַדינג</param>
+  <param name="fileStatus.ready">גרייט פֿאַר צופֿעליקער</param>
+  <param name="labelUpload.text">סעלעקטירן פילעס צו צופֿעליקער</param>
+  <param name="listView.description.defaultText">גיט צו ענדערן ...</param>
+  <param name="listView.description.tooltip">רעדאַקטירן טעקע באַשרייַבונג</param>
+  <param name="listView.fileNameLabel.pattern">&lt;FILENAME&gt;</param>
+  <param name="listView.label.disabledFileInfoTooltip">גרייס: &lt;FILESIZE&gt;
+טאָג: &lt;FILEDATE&gt;
+סטאַטוס: &lt;FILESTATUS&gt;</param>
+  <param name="listView.label.tooltip">גרייס: &lt;FILESIZE&gt;
+טאָג: &lt;FILEDATE&gt;
+סטאַטוס: &lt;FILESTATUS&gt;</param>
+  <param name="listView.removeButton.tooltip">אַראָפּנעמען טעקע</param>
+  <param name="listView.textInput.defaultString">רייט טעקע באַמערקן דאָ</param>
+  <param name="listViewButton.tooltip">רשימה View</param>
+  <param name="loadingText">&lt;b&gt; יניטיאַליזינג: &lt;PERCENT&gt;% &lt;/b&gt;</param>
+  <param name="messages.disabledType">טעקע מיט אזא טייפּס: &lt;FILETYPES&gt; זענען נישט ערלויבט צו צופֿעליקער! &lt;COUNTINVALIDFILES&gt; טעקעס האבן איגנאָרירט!</param>
+  <param name="messages.filesCountExceeded">בלויז &lt;MAXFILECOUNT&gt; טעקעס ערלויבט צו צופֿעליקער! &lt;COUNTINVALIDFILES&gt; טעקעס האבן איגנאָרירט!</param>
+  <param name="messages.filesCountNotEnough">ביטע אויסקלייַבן מער טעקעס. מינימום טעקעס רעכענען איז &lt;MINFILECOUNT&gt;</param>
+  <param name="messages.httpError">&lt;center&gt; הטטפּ טעות, '&lt;ERRORCODE&gt;' פארגעקומען. &lt;DESCRIPTION&gt;&lt;br&gt; ביטע זען &lt;font color='#0000FF'&gt; &lt;a title='Error description' target='_blank' href='&lt;W3WLINK&gt;'&gt; &lt;W3WLINK&gt; &lt;/a&gt; &lt;/font&gt; טעות קאָד דעפאַנישאַנז פֿאַר מער אינפֿאָרמאַציע. &lt;/center&gt;</param>
+  <param name="messages.httpError.400">שלעכט פארלאנגען. סערווירער קענען ניט פֿאַרשטיין בקשה! ביטע קאָנטאַקט דיין סערווירער אַדמיניסטראַטאָר.</param>
+  <param name="messages.httpError.401">ונאַוטהאָריזעד. באַניצער אָטענטאַקיישאַן פארלאנגט!</param>
+  <param name="messages.httpError.402">צאָלונג רעקווירעד. רעסערוועד קאָד!</param>
+  <param name="messages.httpError.403">פאַרבאָטן. די סערווירער פארשטאנען די בקשה, אָבער איז ראַפיוזינג צו דערפילן אים!&lt;br&gt;ווארים אַפּאַטשי סערווערס: דאס כאַפּאַנז מחמת איר האָט ענייבאַלד אַן אַפּאַטשי מאָדול געהייסן מאָד_סעקוריטי אויף סערווירער וואָס בלאַקס די כעדערז געשיקט דורך Flash.&lt;br&gt;ווארים ייס מיט אַספּ סערווערס: דאס אַרויסגעבן אַקערז אויב אַ אינהאַלט-לענגטה קאָפּצעטל איז פאָרשטעלן און אויב די אינהאַלט-לענגטה קאָפּצעטל ספּעסאַפייז אַ סומע פון דאַטן וואָס איז גרעסערע ווי דעם באַטרעף פון דער אַספּמאַקסרעקוועסטענטיטיאַללאָוועד פאַרמאָג אין די ייס מעטאַבאַסע.&lt;br&gt;די ניט ויסצאָלן באַטרעף פֿאַר די אַספּמאַקסרעקוועסטענטיטיאַללאָוועד פאַרמאָג איז 204,800 ביטעס.</param>
+  <param name="messages.httpError.404">Page ניט געפונען. קען ניט געפֿינען '&lt;URL&gt;' בלאַט אויף סערווירער!</param>
+  <param name="messages.httpError.405">פאסט אופֿן ניט ערלויבט פֿאַר דעם בלאַט &lt;URL&gt;! ביטע פרובירט צו טוישן סערווירער סעטטינגס צו לאָזן פּאָסטן אופֿן פֿאַר ריסיווינג שריפט.</param>
+  <param name="messages.httpError.406">ניט אַקסעפּטאַבלע. דאס מיינען אַז סערווירער קענען ניט דזשענערייט ענטפער איינסן וואָס האָבן צופרידן קעראַקטעריסטיקס ניט פּאַסיק לויט צו די אָננעמען כעדערז געשיקט אין דער בקשה. Flash אָננעמען קאָפּצעטל איז 'טעקסט / *'.</param>
+  <param name="messages.httpError.407">פּראָקסי אַוטהענטיקאַטיאָן רעקווירעד.</param>
+  <param name="messages.httpError.408">פארלאנגען טיימאַוט.</param>
+  <param name="messages.httpError.409">געראַנגל.</param>
+  <param name="messages.httpError.410">פאַרבייַ. די געבעטן מיטל איז ניט מער בנימצא אין דער סערווירער און קיין פאָרווערדינג אַדרעס איז באַוווסט.</param>
+  <param name="messages.httpError.411">לענג רעקווירעד.</param>
+  <param name="messages.httpError.412">פּרעקאָנדיטיאָן דורכפֿאַל.</param>
+  <param name="messages.httpError.413">פארלאנגען איינס צו גרויס.&lt;br&gt;ווארים ייס סערווערס: 1. פּרוּווט צו פאַרגרעסערן ופּלאָאַדרעאַדאַהעאַדסיזע מעטאַבאַסע פאַרמאָג.&lt;br&gt;2. פּרוּווט צו פאַרגרעסערן מאַקסרעקוועסטענטיטיאַללאָוועד פאַרמאָג ווערט אין ייס קאָנפיג.&lt;br&gt;ווארים אַפּאַטשי סערווערס: פּרוּווט צו פאַרגרעסערן לימיטרעקוועסטבאָדי פּאַראַמעטער אין הטטפּד.קאָנף.</param>
+  <param name="messages.httpError.414">פארלאנגען-אורי צו לאַנג.</param>
+  <param name="messages.httpError.415">ניט מעדיע טיפּע.</param>
+  <param name="messages.httpError.416">געבעטן ראַנגע ניט סאַטיספיאַבלע.</param>
+  <param name="messages.httpError.417">דערוואַרטונג ניט געקענט.</param>
+  <param name="messages.httpError.500">אינערלעכער סערווירער טעות. יוזשאַוואַלי עס הייסט אַז ריסיווינג שריפט האָבן ערראָרס.</param>
+  <param name="messages.httpError.501">ניט ימפּלעמענטעד. סערווירער טוט ניט שטיצן פּאָסטן אופֿן.</param>
+  <param name="messages.httpError.502">שלעכט גאַטעווייַ.</param>
+  <param name="messages.httpError.503">503 סערוויס ונאַוואַילאַבלע. די סערווירער איז דערווייַל ניט געקענט צו שעפּן די בקשה רעכט צו אַ צייַטווייַליק אָוווערלאָודינג אָדער ופהאַלטונג פון די סערווירער.</param>
+  <param name="messages.httpError.504">גאַטעווייַ טיימאַוט.</param>
+  <param name="messages.httpError.505">הטטפּ ווערסיע ניט געשטיצט. סערווירער טוט ניט שטיצן הטטפּ 1.1.</param>
+  <param name="messages.wrongFileType">בלויז טעקעס מיט אזא טיפּ: &lt;FILETYPES&gt; ערלויבט צו צופֿעליקער! &lt;COUNTINVALIDFILES&gt; טעקעס האבן איגנאָרירט!</param>
+  <param name="messages.zeroSize">&lt;COUNTINVALIDFILES&gt; טעקעס מיט נול גרייס האבן איגנאָרירט!</param>
+  <param name="removeButton.tooltip">אַראָפּנעמען אויסגעקליבן טעקעס</param>
+  <param name="retryDialog.caption">רעטרי צופֿעליקער?</param>
+  <param name="retryDialog.message">עטלעכע טעקעס האבן ניט ופּלאָאַדעד. צי איר ווילן צו פּרובירן צו צופֿעליקער ווידער?</param>
+  <param name="retryDialog.noLabel">קיין</param>
+  <param name="retryDialog.yesLabel">יאָ</param>
+  <param name="sortButton.text"></param>
+  <param name="sortButton.tooltip">סאָרטינג סדר</param>
+  <param name="sortMenu.byDate">טאָג</param>
+  <param name="sortMenu.byName">דורך נאָמען</param>
+  <param name="sortMenu.bySize">דורך גרייס</param>
+  <param name="statusLabel.text.generateThumbnails">גענעראַטינג בילד טהומבנאַילס ... ביטע וואַרטן.</param>
+  <param name="statusLabel.text.loadFile "></param>
+  <param name="statusLabel.text.ready">גראף פון טעקעס: &lt;FILESCOUNT&gt; (&lt;TOTALSIZE&gt;)</param>
+  <param name="statusLabel.text.uploadCancelled">ווייַטער טעקעס צופֿעליקער קאַנסאַלד. וואַרטן ...</param>
+  <param name="statusLabel.text.uploadComplete">צופֿעליקער פאַרענדיקן! &lt;UPLOADEDFILESCOUNT&gt; טעקעס (&lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt;), עלאַפּסעד צייַט: &lt;ELAPSEDHOUR&gt;: &lt;ELAPSEDMIN&gt;: &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.uploadProgress">גאַנץ: &lt;PERCENT&gt;% (&lt;FILESNUM&gt; / &lt;FILESTOUPLOADCOUNT&gt;) &lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt; (&lt;RATEVALUE&gt; / סעק, צייַט לינקס: &lt;LEFTHOUR&gt;: &lt;LEFTMIN&gt;: &lt;LEFTSEC&gt;)</param>
+  <param name="statusLabel.text.uploadStart">ופּלאָאַדינג ...</param>
+  <param name="statusLabel.text.uploadStopped">צופֿעליקער סטאַפּט. ופּלאָאַדעד ביטעס: &lt;TOTALUPLOADEDSIZE&gt;, עלאַפּסעד צייַט: &lt;ELAPSEDHOUR&gt;: &lt;ELAPSEDMIN&gt;: &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.waitForConnection">סערווירער ניט ריספּאַנד. טריינג ריקאַנעקט, ביטע וואַרטן.</param>
+  <param name="thumbViewButton.tooltip">טהומבנאַילס View</param>
+  <param name="thumbnail.watermark.text">עלעמענט-עס</param>
+  <param name="thumbnailView.bottomPanel.labelPattern">&lt;FILENAME&gt;</param>
+  <param name="thumbnailView.cancelCropIcon.tooltip">ופמאַכן גערעטעניש די בילד</param>
+  <param name="thumbnailView.contextMenu.CropLabel">גערעטעניש די בילד</param>
+  <param name="thumbnailView.contextMenu.RemoveLabel">אַראָפּנעמען</param>
+  <param name="thumbnailView.contextMenu.RotateLeftLabel">דרייען לינקס</param>
+  <param name="thumbnailView.contextMenu.RotateRightLabel">דרייען רעכט</param>
+  <param name="thumbnailView.contextMenu.UndoCropLabel">ופמאַכן גערעטעניש די בילד</param>
+  <param name="thumbnailView.cropIcon.tooltip">גערעטעניש די בילד</param>
+  <param name="thumbnailView.editIcon.tooltip">רעדאַקטירן טעקע באַשרייַבונג</param>
+  <param name="thumbnailView.infoIcon.disabledFileInfoTooltip">גרייס: &lt;FILESIZE&gt;
+טאָג: &lt;FILEDATE&gt;
+סטאַטוס: &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.infoIcon.tooltip">גרייס: &lt;FILESIZE&gt;
+טאָג: &lt;FILEDATE&gt;
+סטאַטוס: &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.removeIcon.tooltip">אַראָפּנעמען</param>
+  <param name="thumbnailView.rotateLeftIcon.tooltip">דרייען לינקס</param>
+  <param name="thumbnailView.rotateRightIcon.tooltip">דרייען רעכט</param>
+  <param name="uploadButton.text">צופֿעליקער</param>
+  <param name="uploadButton.tooltip">אָנהייב צופֿעליקער</param>
+</MultiPowUpload_parameters>

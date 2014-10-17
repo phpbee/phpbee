@@ -1,0 +1,20 @@
+{*
+<div class="MultiPowUploadGalleryItem">
+<input type=checkbox name="checked_items[]" value="{$i.id}">
+<a href="{$i->src1('tumb')}" onClick="return false;" class="preview">
+<img src="{$i->src1('admin')}">
+</a>
+</div>
+*}
+
+<li class="MultiPowUploadGalleryItem">
+<input type=checkbox name="checked_items[]" value="{$i.id}">
+<a href="{$i->src1('tumb')}" onClick="return false;" class="preview "> 
+	<span href="" class="modal_close" onClick="return false;"></span>
+	<img src="{$i->src1('small')}"> 
+</a>
+{*
+<a href="{gl rec_edit=$i module=site}">{ml('Правка','Edit')}</a>
+*}
+<a href="{current_url()}/{$i->get_recordset_name()}/{$i->get_id()}">{ml('Правка','Edit')}</a>
+</li>

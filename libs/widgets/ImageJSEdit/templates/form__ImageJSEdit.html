@@ -1,0 +1,30 @@
+	<form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+	<input type=hidden name="gspgid_form" value="{$gspgid_form}">
+	<input type=hidden name="form_id" value="form_login">
+
+
+		{include file="form_error_messages.html"}
+
+
+	
+		{$form->set_error_template('<span class="help-inline">%s</span>')}
+
+
+		{$form->_prepare_inputs()}
+
+	{$form->print_error('FORM_ERROR')}
+
+	
+	
+		    <div class="control-group {$form->print_error('Image',1,'error')}">
+		    <label class="control-label" for="Images">
+							Image
+					    </label>
+			<div class="controls">
+			{$form->get_input('File')} {$form->print_error('File')}
+			</div>
+		    </div>
+		<div class="form-actions">
+	<input type="submit" class="btn btn-primary" name="save_return" value="{'Save image'|gsdict}">
+	</div>
+</form>	

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{block name="title"}Административная зона{/block}</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link href="/css/admin.css" rel="stylesheet" type="text/css" title="CSS for site" />
+<link href="/css/jquery-ui.css" rel="stylesheet" type="text/css" title="CSS for site" />
+<link href="/css/ui.daterangepicker.css" rel="stylesheet" type="text/css" title="CSS for site" />
+
+<link rel="stylesheet" href="/js/jquery.multiselect.css" type="text/css" />
+<link rel="stylesheet" href="/js/jquery.sel_filter.css" type="text/css" />
+<link rel="stylesheet" href="/js/chosen/chosen.css" type="text/css" />
+
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script type="text/javascript" src="/js/jquery-ui.js"></script>
+<script type="text/javascript" src="/js/daterangepicker.jQuery.js"></script>
+<script type="text/javascript" src="/js/jquery.form.js"></script>
+<script type="text/javascript" src="/js/jquery.rsv.js"></script>
+<script type="text/javascript" src="/js/jquery.multiselect.js"></script>
+<script type="text/javascript" src="/js/chosen/chosen.jquery.js"></script>
+<script type="text/javascript" src="/js/jquery.sel_filter.js"></script>
+<script type="text/javascript" src="/js/jquery.form.interaction.js"></script>
+<script type="text/javascript" src="/js/jquery.preview.js"></script>
+<script type="text/javascript" src="/js/functions.js"></script>
+{*<script src="http://api-maps.yandex.ru/1.1/index.xml?key=AOoKpVABAAAAhorUIgMAcXQx7PJEwtYlL5gHfge_lVmGSUoAAAAAAAAAAADHkCar-4Ff1TUfbd4oK5n5aOmHzA==" type="text/javascript"></script>*}
+<script src="http://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
+<script type="text/javascript" src="/js/common_admin.js"></script>
+{block head}
+{/block}
+</head>
+<body>
+
+	<div class="admin-top">
+		<div class="logo"><h1><a href="/">{$smarty.server.HTTP_HOST}</a></h1>
+			<a href="/admin/wizard">административная зона</a>
+		</div>
+		{block name="admin_top"}
+		<a href="/admin/logout">logout</a>
+		{/block}
+	</div>
+
+
+{block name="content"}
+
+<table class="main_tb">
+<tr>
+<td class="l_menu">
+	{handler gspgid="/admin/menu"}
+</td>
+<td class="r_block">
+<div class="minfo">
+	<span id="filter_date_picker"></span>
+{block name="main"}
+{/block}
+</div>
+</td>
+</tr>
+</table>
+
+{/block}
+
+{if  isset($_gsdata.D)}
+{handler gspgid="/debug"}
+{/if}
+</body>
+</html>

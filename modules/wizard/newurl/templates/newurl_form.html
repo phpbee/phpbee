@@ -1,0 +1,51 @@
+{extends file="admin_form_custom.html"}
+{block name="form_header"}
+<script>
+function putMe(txt,target) {
+	txt=jQuery.parseJSON(txt);
+
+	var fl=target.children('.widget_TextLines_line');
+	var p=fl.pa
+	var nl=fl.first().clone();
+
+	for(t in txt) {
+		l=nl.clone();
+		l.children('input').val(txt[t]);
+		l.insertAfter(fl.first());
+	}
+	fl.remove();
+	//$(target).val(txt);
+}
+$(document).ready(function(){
+	$(".dl_handlers").click(function(){
+		putMe($(this).attr('rel'),$('[name^=handlers]').closest('.widget_TextLines'));
+		});
+
+	toggle_complex(".div-border",".div-border");
+});
+</script>
+<div style="float:right; min-height:500px; width: 300px; overflow: auto;" class="div-border">
+	<dl>
+	{foreach gs_parser::get_handlers() as $k=>$h}
+		<dt >
+		<a class="toggle_head" id="type_{$k}" herf="">{$k}</a>
+		<dl class="toggle_item" id="toggle_type_{$k}">
+		{foreach $h as $kk=>$hh}
+			<dt>{$kk}</dt>
+			<dl class="dl_handlers" rel='{$hh|json_encode}'>{implode("<br>",$hh)}</dl>
+		{/foreach}
+		</dl>
+		</dt>
+
+	{/foreach}
+	</dl>
+</div>
+{/block}
+{block name="form_content"}
+	<div style="width:500px;">
+	{$smarty.block.parent}
+	</div>
+{/block}
+{block name="form_footer"}
+<div class="clear"></div>
+{/block}

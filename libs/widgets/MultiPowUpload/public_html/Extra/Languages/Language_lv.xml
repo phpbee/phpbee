@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MultiPowUpload_parameters>
+  <param name="browseButton.text">Pārlūkot ...</param>
+  <param name="browseButton.tooltip">Pievienot failus augšupielādes</param>
+  <param name="cancelButton.pauseText">Pauze</param>
+  <param name="cancelButton.text">Atcelt</param>
+  <param name="cancelButton.tooltip">Atcelt pašreizējo darbību</param>
+  <param name="clearButton.text">Skaidrs</param>
+  <param name="clearButton.tooltip">Noņemt visus failus</param>
+  <param name="constant.bytes">baiti</param>
+  <param name="constant.decimalSeparator">,</param>
+  <param name="constant.gigaBytes">Gb</param>
+  <param name="constant.kiloBytes">Kb</param>
+  <param name="constant.megaBytes">Mb</param>
+  <param name="contextMenu.sortByDate">Šķirot pēc datuma</param>
+  <param name="contextMenu.sortByName">Kārtot pēc nosaukuma</param>
+  <param name="contextMenu.sortBySize">Kārtot pēc lieluma</param>
+  <param name="descriptionWindow.caption">Apraksts failu</param>
+  <param name="descriptionWindow.fileNavigation.fileName.label">&lt;FILENAME&gt;</param>
+  <param name="descriptionWindow.fileNavigation.nextButton.label"></param>
+  <param name="descriptionWindow.fileNavigation.previousButton.label"></param>
+  <param name="exifWindow.caption">&lt;FILENAME&gt; EXIF datu</param>
+  <param name="exifWindow.list.nameHeader">Vārds</param>
+  <param name="exifWindow.list.valueHeader">Vērtības</param>
+  <param name="fileInfoWindow.caption">Faila informāciju</param>
+  <param name="fileInfoWindow.exifInfo">&lt;b&gt; Exif info &lt;/b&gt;: &lt;a&gt; Klikšķiniet, lai apskatītu &lt;/a&gt;</param>
+  <param name="fileInfoWindow.fileDate">&lt;b&gt; Datums &lt;/b&gt;: &lt;FILEDATE&gt;</param>
+  <param name="fileInfoWindow.fileName">&lt;b&gt; nosaukums &lt;/b&gt;: &lt;FILENAME&gt;</param>
+  <param name="fileInfoWindow.fileSize">&lt;b&gt; Izmērs &lt;/b&gt;: &lt;FILESIZE&gt;</param>
+  <param name="fileInfoWindow.fileStatus">&lt;b&gt; statuss &lt;/b&gt;: &lt;FILESTATUS&gt;</param>
+  <param name="fileInfoWindow.imageHeight">&lt;b&gt; Attēla augstums &lt;/b&gt;: &lt;IMAGEHEIGHT&gt;</param>
+  <param name="fileInfoWindow.imageWidth">&lt;b&gt; Attēla platums &lt;/b&gt;: &lt;IMAGEWIDTH&gt;</param>
+  <param name="fileStatus.cancelled">Anulēts</param>
+  <param name="fileStatus.complete">Pabeigta</param>
+  <param name="fileStatus.encodeImage">Kodēt attēlu</param>
+  <param name="fileStatus.error">Kļūda</param>
+  <param name="fileStatus.loadFile">Iekraušana failu atmiņā</param>
+  <param name="fileStatus.loadImage">Iekraušanas attēlu datu</param>
+  <param name="fileStatus.processing">Augšupielādē</param>
+  <param name="fileStatus.ready">Gatavs augšupielādei</param>
+  <param name="labelUpload.text">Atlasīt failus augšupielādēt</param>
+  <param name="listView.description.defaultText">Noklikšķiniet, lai rediģētu ...</param>
+  <param name="listView.description.tooltip">Rediģēt datnes apraksts</param>
+  <param name="listView.fileNameLabel.pattern">&lt;FILENAME&gt;</param>
+  <param name="listView.label.disabledFileInfoTooltip">Izmērs: &lt;FILESIZE&gt;
+Datums: &lt;FILEDATE&gt;
+Statuss: &lt;FILESTATUS&gt;</param>
+  <param name="listView.label.tooltip">Izmērs: &lt;FILESIZE&gt;
+Datums: &lt;FILEDATE&gt;
+Statuss: &lt;FILESTATUS&gt;</param>
+  <param name="listView.removeButton.tooltip">Izņemt failu</param>
+  <param name="listView.textInput.defaultString">Rakstīt failā komentāru šeit</param>
+  <param name="listViewButton.tooltip">Saraksta skats</param>
+  <param name="loadingText">&lt;b&gt; inicializēšana: &lt;PERCENT&gt;% &lt;/b&gt;</param>
+  <param name="messages.disabledType">Failu ar šādiem veidiem: &lt;FILETYPES&gt; nav atļauts augšupielādēt! &lt;COUNTINVALIDFILES&gt; faili tika ignorēts!</param>
+  <param name="messages.filesCountExceeded">Tikai &lt;MAXFILECOUNT&gt; failus atļauts augšupielādēt! &lt;COUNTINVALIDFILES&gt; faili tika ignorēts!</param>
+  <param name="messages.filesCountNotEnough">Lūdzu, izvēlieties vairākus failus. Minimālais failus skaits ir &lt;MINFILECOUNT&gt;</param>
+  <param name="messages.httpError">&lt;center&gt; HTTP Error "&lt;ERRORCODE&gt;" notika. &lt;DESCRIPTION&gt;&lt;br&gt; Lūdzu, skatiet &lt;font color='#0000FF'&gt; &lt;a title='Error description' target='_blank' href='&lt;W3WLINK&gt;'&gt; &lt;W3WLINK&gt; &lt;/a&gt; &lt;/font&gt; kļūdas kodu definīcijas iegūtu vairāk informācijas. &lt;/center&gt;</param>
+  <param name="messages.httpError.400">Bad pieprasījums. Serveris nevar saprast pieprasījumu! Lūdzu, sazinieties ar servera administratoru.</param>
+  <param name="messages.httpError.401">Neatļautu. Lietotāju autentifikāciju obligāti!</param>
+  <param name="messages.httpError.402">Nepieciešamo maksājumu. Rezervēti koda!</param>
+  <param name="messages.httpError.403">Aizliegta. Serveris saprata pieprasījumu, bet atsakās izpildīt to!&lt;br&gt;Apache serveriem: Tas notiek tāpēc, ka jums ir iespējota Apache modulis nosaukts mod_security uz servera, kas bloķē galvenes nosūtīto Flash.&lt;br&gt;IIS ar ASP serveri: Šī problēma rodas, ja Content-Length galvenes ir klāt, un, ja Content-Length galvenes nosaka datu apjomu, kas ir lielāka nekā vērtība AspMaxRequestEntityAllowed īpašuma IIS metabase.&lt;br&gt;Noklusējuma vērtība AspMaxRequestEntityAllowed īpašumu 204800 baiti.</param>
+  <param name="messages.httpError.404">Lapa nav atrasta. Nevar atrast "&lt;URL&gt;" lapā uz servera!</param>
+  <param name="messages.httpError.405">Post metode nav atļauta šo lapu &lt;URL&gt;! Lūdzu, mēģiniet mainīt servera iestatījumus, lai ļautu pēc metodes, kas saņem skriptu.</param>
+  <param name="messages.httpError.406">Nav pieņemams. Tas nozīmē, ka serveris nevar radīt atbildi subjekti, kas ir saturs īpašības nav pieņemami saskaņā ar akceptēt galvenes nosūtīts pieprasījums. Flash pieņemt galvene ir "text / * '.</param>
+  <param name="messages.httpError.407">Proxy autentifikācija Obligāts.</param>
+  <param name="messages.httpError.408">Pieprasīt Noildze.</param>
+  <param name="messages.httpError.409">Konfliktu.</param>
+  <param name="messages.httpError.410">Pagājis. Atrodas nepieciešamais resurss vairs nav pieejams uz servera, un nav nosūtīšanas adrese ir zināma.</param>
+  <param name="messages.httpError.411">Garums Obligāts.</param>
+  <param name="messages.httpError.412">Priekšnosacījums neizdevās.</param>
+  <param name="messages.httpError.413">Pieprasījuma vienība par lielu.&lt;br&gt;Par IIS serveriem: 1. Mēģināt palielināt UploadReadAheadSize metabase īpašums.&lt;br&gt;2. Mēģināt palielināt MaxRequestEntityAllowed īpašuma vērtību IIS config.&lt;br&gt;Apache serveriem: Centieties, lai palielinātu LimitRequestBody parametrs httpd.conf.</param>
+  <param name="messages.httpError.414">Pieprasījums-URI pārāk garš.</param>
+  <param name="messages.httpError.415">Neatbalstīts Media Type.</param>
+  <param name="messages.httpError.416">Nevar izpildīt pieprasījuma diapazonu.</param>
+  <param name="messages.httpError.417">Cerības neizdevās.</param>
+  <param name="messages.httpError.500">Iekšējā servera kļūda. Parasti tas nozīmē, ka saņem skripta ir kļūdas.</param>
+  <param name="messages.httpError.501">Nav ieviesta. Serveris neatbalsta POST metodi.</param>
+  <param name="messages.httpError.502">Bad Gateway.</param>
+  <param name="messages.httpError.503">503 Pakalpojums nav pieejams. Serveris šobrīd nevar apstrādāt pieprasījumu, jo pagaidu pārslodzes vai servera uzturēšanu.</param>
+  <param name="messages.httpError.504">Gateway laiks beidzies.</param>
+  <param name="messages.httpError.505">HTTP versija nav atbalstīta. Serveris neatbalsta HTTP 1.1.</param>
+  <param name="messages.wrongFileType">Tikai failus ar šāda veida: &lt;FILETYPES&gt; atļauts augšupielādēt! &lt;COUNTINVALIDFILES&gt; faili tika ignorēts!</param>
+  <param name="messages.zeroSize">&lt;COUNTINVALIDFILES&gt; failus ar nulles izmēru tika ignorēti!</param>
+  <param name="removeButton.tooltip">Noņemt izvēlēto failu</param>
+  <param name="retryDialog.caption">Mēģināt vēlreiz augšupielādēt?</param>
+  <param name="retryDialog.message">Daži faili netika augšupielādēti. Vai jūs vēlaties mēģināt augšupielādēt vēlreiz?</param>
+  <param name="retryDialog.noLabel">Nē</param>
+  <param name="retryDialog.yesLabel">Jā</param>
+  <param name="sortButton.text"></param>
+  <param name="sortButton.tooltip">Kārtošanas secību</param>
+  <param name="sortMenu.byDate">Pēc datuma</param>
+  <param name="sortMenu.byName">Pēc nosaukuma</param>
+  <param name="sortMenu.bySize">Pēc izmēra</param>
+  <param name="statusLabel.text.generateThumbnails">Radīt attēlu sīktēlus ... Lūdzu uzgaidiet.</param>
+  <param name="statusLabel.text.loadFile "></param>
+  <param name="statusLabel.text.ready">Skaits failus: &lt;FILESCOUNT&gt; (&lt;TOTALSIZE&gt;)</param>
+  <param name="statusLabel.text.uploadCancelled">Nākamās failus augšupielādēt atcelts. Uzgaidiet ...</param>
+  <param name="statusLabel.text.uploadComplete">Augšupielādēt pabeigta! &lt;UPLOADEDFILESCOUNT&gt; faili (&lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt;), Pagājis laiks: &lt;ELAPSEDHOUR&gt;: &lt;ELAPSEDMIN&gt;: &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.uploadProgress">Kopā: &lt;PERCENT&gt;% (&lt;FILESNUM&gt; / &lt;FILESTOUPLOADCOUNT&gt;) &lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt; (&lt;RATEVALUE&gt; / sek, laiks kreisās: &lt;LEFTHOUR&gt;: &lt;LEFTMIN&gt;: &lt;LEFTSEC&gt;)</param>
+  <param name="statusLabel.text.uploadStart">Augšupielādē ...</param>
+  <param name="statusLabel.text.uploadStopped">Augšupielādēt pārtraukta. Augšupielādēts bytes: &lt;TOTALUPLOADEDSIZE&gt; Aizritējis laiks: &lt;ELAPSEDHOUR&gt;: &lt;ELAPSEDMIN&gt;: &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.waitForConnection">Serveris nevar atbildēt. Cenšas atjaunot, lūdzu uzgaidiet.</param>
+  <param name="thumbViewButton.tooltip">Sīktēlu skata</param>
+  <param name="thumbnail.watermark.text">Element-IT</param>
+  <param name="thumbnailView.bottomPanel.labelPattern">&lt;FILENAME&gt;</param>
+  <param name="thumbnailView.cancelCropIcon.tooltip">Atsaukt apgrieztu attēlu</param>
+  <param name="thumbnailView.contextMenu.CropLabel">Apgrieztu attēlu</param>
+  <param name="thumbnailView.contextMenu.RemoveLabel">Noņemt</param>
+  <param name="thumbnailView.contextMenu.RotateLeftLabel">Pagriezt pa kreisi</param>
+  <param name="thumbnailView.contextMenu.RotateRightLabel">Pagriezt pa labi</param>
+  <param name="thumbnailView.contextMenu.UndoCropLabel">Atsaukt apgrieztu attēlu</param>
+  <param name="thumbnailView.cropIcon.tooltip">Apgrieztu attēlu</param>
+  <param name="thumbnailView.editIcon.tooltip">Rediģēt datnes apraksts</param>
+  <param name="thumbnailView.infoIcon.disabledFileInfoTooltip">Izmērs: &lt;FILESIZE&gt;
+Datums: &lt;FILEDATE&gt;
+Statuss: &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.infoIcon.tooltip">Izmērs: &lt;FILESIZE&gt;
+Datums: &lt;FILEDATE&gt;
+Statuss: &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.removeIcon.tooltip">Noņemt</param>
+  <param name="thumbnailView.rotateLeftIcon.tooltip">Pagriezt pa kreisi</param>
+  <param name="thumbnailView.rotateRightIcon.tooltip">Pagriezt pa labi</param>
+  <param name="uploadButton.text">Augšupielādēt</param>
+  <param name="uploadButton.tooltip">Sākt augšupielādi</param>
+</MultiPowUpload_parameters>

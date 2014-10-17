@@ -1,0 +1,5 @@
+<label {if $params.cssclass}class="{$params.cssclass}"{/if}>{$prelabel}
+<select name="{$keyname}" {if $params.cssclass}class="{$params.cssclass}"{/if}>
+{html_options options=$links selected=$current}
+</select>
+{$label}</label>

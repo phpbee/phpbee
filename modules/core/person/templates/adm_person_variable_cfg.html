@@ -1,0 +1,91 @@
+{extends file="admin_page.html"}
+
+{block name="title"}
+	person_variable_cfg
+{/block}
+
+{block name="main"}
+
+
+	<h4>person_variable_cfg</h4>
+
+
+
+			{handler gspgid="/filter/" class="select_by_links" link="person_variable_cfg.Role:id" name="Role" urltype=get }
+			
+		{handler gspgid="/filter/" class="like" name="search" fields="variable_name" urltype=get }
+		{handler gspgid="/filter/" class="calendar" name="calendar" fields="_ctime,_mtime," urltype=get }
+		{handler gspgid="/filter/" class="sort" name="sort" fields="sortkey,variable_name" urltype=get }
+		{handler gspgid="/filter/" class="limit" name="limit" urltype=session values='20,50,100,500' default_value=20}
+		{handler gspgid="/filter/" class="offset"  name="offset" urltype=get limit='limit'}
+
+
+
+		{controller _class="person_variable_cfg" _assign="person_variable_cfg" _filters="search,calendar,sort,limit,offset,Role,"}
+
+
+				{handler gspgid="/sortkey" sortkey_id="person_variable_cfg" recordset_name="person_variable_cfg"}
+		
+	<table class="tb sortkey-table" sortkey_id="person_variable_cfg">
+	<thead>
+	<tr class="filters"><td colspan="100">
+	<table>
+			<tr><td>Save var to:</td><td>{handler gspgid="/filter/show" name="Role"  recordset=$person_variable_cfg tpl="links_line.html"  }</td></tr>
+			<tr><td>Find:</td><td>
+			<form class="filterform" method="get">
+			{handler gspgid="/filter/show" name="search"  recordset=$person_variable_cfg tpl="like.html"  }
+			{handler gspgid="/filter/show" name="calendar"  recordset=$person_variable_cfg tpl="calendar.html" prelabel="date:"  }
+			{handler gspgid="/filter/show" name="sort"  recordset=$person_variable_cfg tpl="sort.html" prelabel="sort by:"  }
+			<div class="links_inline"><input type="submit" value=""></div>
+			</form>
+		</td></tr>
+	</table>
+	</td> </tr>
+	<tr class="pager"><td colspan="100">
+		{handler gspgid="/filter/show" name="offset" tpl="offset_pages.html" page_title='Page' page_prev='previous' page_next='next' page_between='from' pages_count=21 recordset=$person_variable_cfg}
+		{handler gspgid="/filter/show" name="limit" tpl="limit_select.html" prelabel='show by' label='records'}
+	</td></tr>
+	<tr><th>#</th>
+		<th>
+		{field_name name="variable_name" type="fString" key="variable_name" id="14"}
+	</th>
+			<th>Save var to</th>
+			<th></th>
+	<th></th>
+	<th></th>
+	</tr>
+	</thead>
+	
+	{foreach from=$person_variable_cfg item="e"}
+	<tr class="{cycle values='odd,even'}" record_id="{$e->get_id()}">
+			<td><span>{$e->get_id()}</span></td>
+						<td class="frm_fString">
+                <span>
+									<a href="{gl rec_edit=$e}">{field_formatter value=$e.variable_name type="fString"}</a>
+						
+                </span>
+			</td>
+									<td><span>{$e.Role}</span></td>
+									<td class="cnt"><a href="{gl rec_edit=$e}"><img src="/i/admin/ico_edit.png" alt="Редактировать" title="Редактировать"></a></td>
+			<td class="cnt"><a href="{gl rec_copy=$e}"><img src="/i/admin/ico_copy.png" alt="Копировать" title="Копировать"></a></td>
+			<td class="cnt"><a href="{gl rec_delete=$e}" onclick="return confirm('Вы точно хотите удалить запись ?');"><img src="/i/admin/ico_delete.png" alt="Удалить" title="Удалить"></a></td>
+	</tr>
+	{/foreach}
+	<tr class="pager"><td colspan="100">
+	<a name="form"></a>
+		{handler gspgid="/filter/show" name="offset" tpl="offset_pages.html" page_title='Page' page_prev='previous' page_next='next' page_between='from' pages_count=21 recordset=$person_variable_cfg}
+		{handler gspgid="/filter/show" name="limit" tpl="limit_select.html" prelabel='show by' label='records'}
+	</td></tr>
+	</table>
+
+	<h5>Редактировать/<a href="{gl rec_create=0}">создать</a>:</h5>
+	{if $_gsdata.gspgid_va.0=='modify'}
+	<hr><br>
+		{$default_value=""}
+			{if gs_filters_handler::value('Role')}
+			{$default_value="{$default_value},Role_id={gs_filters_handler::value('Role')}"}
+		{/if} 
+		{handler gspgid="/admin/form/person_variable_cfg/edit/`$_gsdata.gspgid_va.1`" _default=trim($default_value,',') }
+	{/if}
+
+{/block}

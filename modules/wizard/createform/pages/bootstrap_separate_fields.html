@@ -1,0 +1,41 @@
+	<form action="" method="post" enctype="multipart/form-data">
+	<input type=hidden name="dialog" value="{$_gsdata.dialog}">
+	<input type=hidden name="gspgid_form" value="{$gspgid_form}">
+	<input type=hidden name="form_id" value="form_login">
+
+
+		{include file="form_error_messages.html"}
+
+
+	{%foreach $fields as $f%}
+		{%if $f->widget%}{$form->set_option('{%$f->name%}','widget','{%$f->widget%}')}
+		{%/if%}
+	{%/foreach%}
+	
+	{%foreach $fields as $f%}
+		{$form->set_option('{%$f->name%}','placeholder','{%$f->verbose_name%}')}
+	{%/foreach%}
+
+		{$form->set_error_template('<span class="label label-warning">%s</span>')}
+
+
+		{$form->set_option_allfields('cssclass','span7')}
+
+		{$form->_prepare_inputs()}
+
+	{$form->print_error('FORM_ERROR')}
+
+	{%foreach $fields as $f%}
+		<label>
+			{%if $f->required%}
+				<strong>{%$f->verbose_name%}</strong>
+			{%else%}
+				{%$f->verbose_name%}
+			{%/if%}
+		</label>	
+		{$form->get_input('{%$f->name%}')} {$form->print_error('{%$f->name%}')}
+	{%/foreach%}
+	<div class="form-actions">
+	<input type="submit" class="btn btn-primary" name="save_return" value="{'Save'|gsdict}">
+	</div>
+</form>	

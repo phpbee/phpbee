@@ -1,0 +1,10 @@
+{if $pid!=$root.id}
+<a href="/admin/articles/?root={$root.id}">{$root.name}</a>
+{else}
+{$root.name}
+{/if}
+
+{controller _class="tw_articles" id=$root.pid_id _assign="it" _assign_type=first _fields="id,pid_id,name"}
+{if $root.pid_id>0}
+<div class="f_path">{include file="f_path.html" root=$it pid=$pid}&nbsp;&raquo;&nbsp;</div>
+{/if}

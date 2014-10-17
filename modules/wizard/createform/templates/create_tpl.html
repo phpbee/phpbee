@@ -1,0 +1,25 @@
+{extends file="admin_page.html"}
+
+{block name="main"}
+{controller _class=wz_recordsets _assign=recordset _assign_type=first id=$_gsdata.gspgid_va.0}
+{controller _class=wz_modules _assign=module _assign_type=first id=$_gsdata.gspgid_va.1}
+	<h3>
+	<a href="/admin/wizard/module/{$recordset.Module->first()->id}">{$recordset.Module->first()->name}</a>
+	=>
+	<a href="/admin/wizard/recordsets/{$recordset.Module->first()->id}/{$recordset.id}">{$recordset.name}</a>
+	</h3>
+
+	<h2>Create from template for {$recordset}</h2>
+
+	<div id="div_createform" style="display:none">
+	{handler gspgid="/admin/wizard/createform_tpl/form" Recordset_id=$recordset.id Module_id=$module.id}
+	</div>
+
+<script>
+$(document).ready (function (){
+	toggle_complex("#div_createform","#div_createform").show();
+	/*jQuery("#inputs").accordion();*/
+});
+</script>
+
+{/block}

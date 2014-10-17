@@ -1,0 +1,10 @@
+    {if $current==$field}
+        <i class="icon-arrow-down"></i>
+    {else}
+    <a href="{href_get_push("{$keyname}={$field}")}"><i class="icon-chevron-down"></i></a>
+    {/if}
+    {if $current=="{$field}:desc"}
+        <i class="icon-arrow-up"></i>
+    {else}    
+    <a href="{href_get_push("{$keyname}={$field}:desc")}"><i class="icon-chevron-up"></i></a>
+    {/if}

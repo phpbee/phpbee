@@ -1,0 +1,13 @@
+<ul class="nav nav-pills">
+	{foreach from=$links item=i}
+	{if $i.key==$current}
+		<li class="active">
+		<a href="{href_get_push("{$name}")}">{$i.name} ({$i.count})</a>
+		</li>
+	{else}
+		<li {if $i.key==$current}class="active"{/if}>
+		<a href="/{$i.href}">{$i.name} ({$i.count})</a>
+		</li>
+	{/if}
+	{/foreach}
+</ul>

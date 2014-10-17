@@ -1,0 +1,44 @@
+<div class="navi">
+{$half=floor(($pages_count-1)/2)}
+{$first_page=max(1,$current_page-$half)}
+{$last_page=min($pages,$first_page-1+$pages_count)}
+{$first_page=max(1,$last_page-$pages_count+1)}
+
+{$center_position=$first_page+$half}
+{if $current_page==$center_position}
+	{$position='center'}
+{else}
+	{if $current_page<$center_position}
+		{$position='left'}
+	{else}
+		{$position='right'}
+	{/if}
+{/if}	
+
+{if $pages>1}
+<ul class="filter_offset_pages filter_offset_pages_{$position}">
+{if $first_page>1}
+		<li>
+		<a href="{href_get_push("{$keyname}_page=1")}">1</a></li>	
+		{if $first_page>2}
+		...
+		{/if}
+{/if}
+{for $i=$first_page to $last_page}
+	{if $i==$current_page}
+		<li class="current">{$i}</li>	
+	{else}
+		<li>
+		<a href="{href_get_push("{$keyname}_page={$i}")}">{$i}</a></li>	
+	{/if}
+{/for}
+{if $last_page<$pages}
+		{if $pages-$last_page>1}
+		...
+		{/if}
+		<li><a href="{href_get_push("{$keyname}_page={$pages}")}">{$pages}</a></li>	
+{/if}
+</ul>
+{/if}
+</div>
+

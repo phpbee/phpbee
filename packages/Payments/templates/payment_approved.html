@@ -1,0 +1,18 @@
+{extends file="payment_return.html"}
+{block name=payment_info}
+
+<h3>
+Thank you for your payment!
+</h3>
+
+<p>
+Your account was succesefully credited for {$pmnt->amount} {$pmnt->Currency->first()->code}.
+</p>
+<p>
+Transaction ID: {$pmnt->transaction_number}<br>
+Transaction message: {$pmnt->status_message}<br>
+</p>
+
+<a class="button" href="/members_area">Process to download page</a>
+
+{/block}

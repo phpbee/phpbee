@@ -1,0 +1,14 @@
+<div class="amount">	
+	<span>{$prelabel}</span>
+	{foreach from=$values item=item}
+		{if  $current==$item}
+			<b>{$item}</b>
+		{else}
+			<a href="{href_get_push("`$keyname`=`$item`")}">{$item}</a>
+		{/if}	
+	{/foreach}
+
+	{$label}
+
+	<input type="checkbox" name="" class="checkbox2" id="view" checked="checked" /><label for="view">{$postlabel}</label>
+</div>

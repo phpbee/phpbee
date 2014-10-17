@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{block name="title"}{%$rs%} - {'Control Panel'|gsdict}{/block}</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link href="/css/manager.css" rel="stylesheet" type="text/css" title="CSS for site" />
+<link href="/css/jquery.rte.css" rel="stylesheet" type="text/css" title="CSS for site" />
+<link href="/css/jquery-ui.css" rel="stylesheet" type="text/css" title="CSS for site" />
+<link rel="stylesheet" href="/js/jquery.multiselect.css" type="text/css" />
+<link href="/css/ui.daterangepicker.css" rel="stylesheet" type="text/css" title="CSS for site" />
+<link rel="stylesheet" href="/js/jquery.multiselect.css" type="text/css" />
+<link rel="stylesheet" href="/js/jquery.sel_filter.css" type="text/css" />
+<link rel="stylesheet" href="/js/chosen/chosen.css" type="text/css" />
+
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script type="text/javascript" src="/js/jquery-ui.js"></script>
+<script type="text/javascript" src="/js/daterangepicker.jQuery.js"></script>
+<script type="text/javascript" src="/js/jquery.form.js"></script>
+<script type="text/javascript" src="/js/jquery.rsv.js"></script>
+<script type="text/javascript" src="/js/jquery.rte.js"></script>
+<script type="text/javascript" src="/js/jquery.rte.tb.js"></script>
+<script type="text/javascript" src="/js/jquery.multiselect.js"></script>
+<script type="text/javascript" src="/js/chosen/chosen.jquery.js"></script>
+<script type="text/javascript" src="/js/jquery.sel_filter.js"></script>
+{*<script type="text/javascript" src="/js/jquery.form.interaction.js"></script>*}
+<script type="text/javascript" src="/js/jquery.preview.js"></script>
+<script type="text/javascript" src="/js/functions.js"></script>
+<script type="text/javascript" src="/js/common_admin.js"></script>
+
+</head>
+<body>
+
+{%*
+{handler gspgid="/{%$module%}/login/{%$rs%}" assign=manager}
+
+{$manager=gs_var_storage::load('manager')}
+
+*%}
+
+{$manager=person('{%$rs%}')}
+
+
+{if $manager}
+	{%controller _class=wz_recordsets _assign=rsets id=array_keys($recordset)%}
+
+	{if class_exists('sys_languages')}
+	{handler gspgid="/filter/" class="select_records" recordset="sys_languages" name="Lang" urltype=session}
+	{/if}
+	{handler gspgid="/setlocale"}
+
+	{handler gspgid="/manager/menu"}
+<div class="header" id="header_column">
+	<ul>
+		{%foreach $rsets as $r%}
+		<li>
+			{%if $r.name==$rs%}
+			<a href="/{%$module%}/{%$prefix%}/{%$r.name%}">{'Profile'|gsdict}</a>
+			{%else%}
+			<a href="/{%$module%}/{%$prefix%}/{%$r.name%}">{%$r.title|default:$r.name%}</a>
+			{%/if%}
+		</li>
+		{%/foreach%}
+        <li><a href="/{%$module%}/logout/{%$rs%}">{'Logout'|gsdict}</a></li>
+	</ul>
+</div>
+<div class="minfo" id="minfo">
+
+{block name="main"}
+	<h3><img src="/i/admin/icon_control.png"/>{%$r.name%} - {'Control Panel'|gsdict}</h3>
+	<table class="sections">
+		{%foreach $rsets as $r%}
+        <tr>
+		<td>
+        <div>
+        <a href="/{%$module%}/{%$prefix%}/{%$r.name%}"><img src="/i/admin/icon_{%$r.name%}.png" alt=""></a>
+        <a href="/{%$module%}/{%$prefix%}/{%$r.name%}">{%$r.title|default:$r.name%}</a>
+        </div>
+        </td>
+        </tr>
+		{%/foreach%}
+        <tr>
+		<td>
+        <div>
+        <a href="/{%$module%}/logout/{%$rs%}"><img src="/i/admin/icon_logout.png" alt="Logout"></a>
+        <a href="/{%$module%}/logout/{%$rs%}">{'Logout'|gsdict}</a>
+        </div>
+        </td>
+        </tr>
+	</table>
+{/block}
+</div>
+{else}
+	  {handler gspgid="{%$module.name%}/login/form/{%$rs->name%}" }
+
+	  {*
+
+	  {capture name="checklogin"}
+	  {handler gspgid="oauth2/checklogin/{%$rs->name%}"}	
+	  {/capture}
+
+
+	  {handler gspgid="oauth2/loginlinks"}	
+
+	
+	  <a  class="btn btn-primary btn-small" href="/{%$module.name%}/registration/{%$rs->name%}">registration</a>
+	  *}
+{/if}
+
+{if  isset($_gsdata.D)}
+{handler gspgid="/debug"}
+{/if}
+</body>
+</html>

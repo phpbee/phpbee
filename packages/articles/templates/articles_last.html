@@ -1,0 +1,12 @@
+{controller _class=tw_articles _assign="root" text_id=$_gsdata.gspgid_va.0 _limit=1}
+{controller _class=tw_articles _assign="list" pid_id=$root->first()->id _fields="id,name"  _paging="pagenums:`$_gsdata.gspgid_va.1`" _orderby="_ctime desc"}
+	{foreach from=$list item="n"}
+	<h1><a href="{gl show=$n}">{$n.name}</a></h1>
+	<h2>Опубликовано {$n._ctime|date_format:"%d/%m/%y"}{* от <a href="/">Дмитрий Медведев</a>*}</h2>
+	{$n.Images->img('blog')|reset}
+	<p>{$n.description}</p>
+	<a href="/"><img src="i/like.jpg" align="left" alt="like"></a>
+	<br>
+	<br>
+	{/foreach}
+    {$list_paging}

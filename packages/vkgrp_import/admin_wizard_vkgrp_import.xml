@@ -1,0 +1,667 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xml>
+  <recordset name="wz_modules">
+    <record>
+      <links>
+        <recordsets>
+          <recordset name="wz_recordsets">
+            <record>
+              <links>
+                <Fields>
+                  <recordset name="wz_recordset_fields">
+                    <record>
+                      <links/>
+                      <values>
+                        <name>group_id</name>
+                        <verbose_name>group_id</verbose_name>
+                        <helper_text/>
+                        <type>fString</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value/>
+                        <make_index>0</make_index>
+                        <required>0</required>
+                        <is_unique>0</is_unique>
+                        <Recordset_id>20</Recordset_id>
+                        <_ctime>2012-06-05 19:34:51</_ctime>
+                        <_mtime>2012-06-05 19:35:43</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>name</name>
+                        <verbose_name>name</verbose_name>
+                        <helper_text/>
+                        <type>fString</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value/>
+                        <make_index>0</make_index>
+                        <required>0</required>
+                        <is_unique>0</is_unique>
+                        <Recordset_id>20</Recordset_id>
+                        <_ctime>2012-06-05 19:34:51</_ctime>
+                        <_mtime>2012-06-05 19:37:56</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>disabled</name>
+                        <verbose_name>disabled</verbose_name>
+                        <helper_text/>
+                        <type>fCheckbox</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value>0</default_value>
+                        <make_index>0</make_index>
+                        <required>0</required>
+                        <is_unique>0</is_unique>
+                        <Recordset_id>20</Recordset_id>
+                        <_ctime>2012-06-05 19:34:51</_ctime>
+                        <_mtime>2012-06-05 19:34:51</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>rec_default_values</name>
+                        <verbose_name>rec_default_values</verbose_name>
+                        <helper_text/>
+                        <type>fString</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value/>
+                        <make_index>0</make_index>
+                        <required>0</required>
+                        <is_unique>0</is_unique>
+                        <Recordset_id>20</Recordset_id>
+                        <_ctime>2012-06-05 19:34:51</_ctime>
+                        <_mtime>2012-06-05 19:34:51</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>APP_ID</name>
+                        <verbose_name>APP_ID</verbose_name>
+                        <helper_text/>
+                        <type>fString</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value/>
+                        <make_index>0</make_index>
+                        <required>0</required>
+                        <is_unique>0</is_unique>
+                        <Recordset_id>20</Recordset_id>
+                        <_ctime>2012-06-05 19:35:58</_ctime>
+                        <_mtime>2012-06-05 19:35:58</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>APP_SECRET</name>
+                        <verbose_name>APP_SECRET</verbose_name>
+                        <helper_text/>
+                        <type>fString</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value/>
+                        <make_index>0</make_index>
+                        <required>0</required>
+                        <is_unique>0</is_unique>
+                        <Recordset_id>20</Recordset_id>
+                        <_ctime>2012-06-05 19:36:07</_ctime>
+                        <_mtime>2012-06-05 19:36:07</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>SCOPE</name>
+                        <verbose_name>SCOPE</verbose_name>
+                        <helper_text/>
+                        <type>fString</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value>groups,offline</default_value>
+                        <make_index>0</make_index>
+                        <required>0</required>
+                        <is_unique>0</is_unique>
+                        <Recordset_id>20</Recordset_id>
+                        <_ctime>2012-06-05 19:36:26</_ctime>
+                        <_mtime>2012-06-05 19:52:12</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>TOKEN</name>
+                        <verbose_name/>
+                        <helper_text/>
+                        <type>fText</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value/>
+                        <make_index>0</make_index>
+                        <required>0</required>
+                        <is_unique>0</is_unique>
+                        <Recordset_id>20</Recordset_id>
+                        <_ctime>2012-06-05 19:56:39</_ctime>
+                        <_mtime>2012-06-05 19:56:39</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>only_with_body</name>
+                        <verbose_name>body not empty</verbose_name>
+                        <helper_text/>
+                        <type>fCheckbox</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value>0</default_value>
+                        <make_index>0</make_index>
+                        <required>1</required>
+                        <is_unique>0</is_unique>
+                        <Recordset_id>20</Recordset_id>
+                        <_ctime>2012-06-06 14:25:08</_ctime>
+                        <_mtime>2012-06-06 14:25:54</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>only_with_images</name>
+                        <verbose_name>only with images</verbose_name>
+                        <helper_text/>
+                        <type>fCheckbox</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value>0</default_value>
+                        <make_index>0</make_index>
+                        <required>1</required>
+                        <is_unique>0</is_unique>
+                        <Recordset_id>20</Recordset_id>
+                        <_ctime>2012-06-06 14:25:34</_ctime>
+                        <_mtime>2012-06-06 14:25:34</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>max_count</name>
+                        <verbose_name>max articles count</verbose_name>
+                        <helper_text/>
+                        <type>fInt</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value>25</default_value>
+                        <make_index>0</make_index>
+                        <required>1</required>
+                        <is_unique>0</is_unique>
+                        <Recordset_id>20</Recordset_id>
+                        <_ctime>2012-06-06 14:26:45</_ctime>
+                        <_mtime>2012-06-06 14:26:55</_mtime>
+                      </values>
+                    </record>
+                  </recordset>
+                </Fields>
+                <Resizes>
+                  <recordset name="wz_recordset_resizes"/>
+                </Resizes>
+                <Links>
+                  <recordset name="wz_recordset_links">
+                    <record>
+                      <links/>
+                      <values>
+                        <name>recordset</name>
+                        <verbose_name>recordset</verbose_name>
+                        <type>lOne2One</type>
+                        <classname>wz_recordsets</classname>
+                        <linkname/>
+                        <options/>
+                        <extra_options/>
+                        <widget>parent_list</widget>
+                        <required>1</required>
+                        <fkey_on_delete>NONE</fkey_on_delete>
+                        <fkey_on_update>NONE</fkey_on_update>
+                        <fkey_name/>
+                        <Recordset_id>20</Recordset_id>
+                        <_ctime>2012-06-05 19:34:51</_ctime>
+                        <_mtime>2012-06-05 19:34:51</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>title_fieldname</name>
+                        <verbose_name>title_fieldname</verbose_name>
+                        <type>lOne2One</type>
+                        <classname>wz_recordset_fields</classname>
+                        <linkname/>
+                        <options/>
+                        <extra_options/>
+                        <widget>parent_list</widget>
+                        <required>0</required>
+                        <fkey_on_delete>NONE</fkey_on_delete>
+                        <fkey_on_update>NONE</fkey_on_update>
+                        <fkey_name/>
+                        <Recordset_id>20</Recordset_id>
+                        <_ctime>2012-06-05 19:34:51</_ctime>
+                        <_mtime>2012-06-05 19:34:51</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>description_fieldname</name>
+                        <verbose_name>description_fieldname</verbose_name>
+                        <type>lOne2One</type>
+                        <classname>wz_recordset_fields</classname>
+                        <linkname/>
+                        <options/>
+                        <extra_options/>
+                        <widget>parent_list</widget>
+                        <required>0</required>
+                        <fkey_on_delete>NONE</fkey_on_delete>
+                        <fkey_on_update>NONE</fkey_on_update>
+                        <fkey_name/>
+                        <Recordset_id>20</Recordset_id>
+                        <_ctime>2012-06-05 19:34:51</_ctime>
+                        <_mtime>2012-06-05 19:34:51</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>images_linkname</name>
+                        <verbose_name>images_linkname</verbose_name>
+                        <type>lOne2One</type>
+                        <classname>wz_recordset_links</classname>
+                        <linkname/>
+                        <options/>
+                        <extra_options/>
+                        <widget>parent_list</widget>
+                        <required>0</required>
+                        <fkey_on_delete>NONE</fkey_on_delete>
+                        <fkey_on_update>NONE</fkey_on_update>
+                        <fkey_name/>
+                        <Recordset_id>20</Recordset_id>
+                        <_ctime>2012-06-05 19:34:51</_ctime>
+                        <_mtime>2012-06-05 19:34:51</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>link_fieldname</name>
+                        <verbose_name>link_fieldname</verbose_name>
+                        <type>lOne2One</type>
+                        <classname>wz_recordset_fields</classname>
+                        <linkname/>
+                        <options/>
+                        <extra_options/>
+                        <widget>parent_list</widget>
+                        <required>0</required>
+                        <fkey_on_delete>NONE</fkey_on_delete>
+                        <fkey_on_update>NONE</fkey_on_update>
+                        <fkey_name/>
+                        <Recordset_id>20</Recordset_id>
+                        <_ctime>2012-06-05 19:34:51</_ctime>
+                        <_mtime>2012-06-05 19:34:51</_mtime>
+                      </values>
+                    </record>
+                  </recordset>
+                </Links>
+                <Triggers>
+                  <recordset name="wz_recordset_triggers"/>
+                </Triggers>
+                <Submodules>
+                  <recordset name="wz_recordset_submodules"/>
+                </Submodules>
+              </links>
+              <values>
+                <name>vkgrp_import_cfg</name>
+                <title>vkgrp_import_cfg</title>
+                <extends/>
+                <Module_id>10</Module_id>
+                <_Fields_count>22</_Fields_count>
+                <_Resizes_count>22</_Resizes_count>
+                <_Links_count>22</_Links_count>
+                <_Triggers_count>22</_Triggers_count>
+                <_Submodules_count>22</_Submodules_count>
+                <showadmin>1</showadmin>
+                <no_urlkey>1</no_urlkey>
+                <no_ctime>1</no_ctime>
+                <install>1</install>
+                <orderby>id</orderby>
+                <id_field_name>id</id_field_name>
+                <_ctime>2012-06-05 19:34:51</_ctime>
+                <_mtime>2012-06-06 14:26:45</_mtime>
+              </values>
+            </record>
+          </recordset>
+        </recordsets>
+        <urls>
+          <recordset name="wz_urls">
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>4</cnt>
+                        <handler_keyname>3</handler_keyname>
+                        <handler_value>gs_base_handler.redirect_if:gl:save_return:return:true</handler_value>
+                        <Url_id>217</Url_id>
+                        <_ctime>2012-06-05 19:40:04</_ctime>
+                        <_mtime>2012-06-05 19:40:04</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>3</cnt>
+                        <handler_keyname>2</handler_keyname>
+                        <handler_value>gs_base_handler.redirect_if:gl:save_continue:return:true</handler_value>
+                        <Url_id>217</Url_id>
+                        <_ctime>2012-06-05 19:40:04</_ctime>
+                        <_mtime>2012-06-05 19:40:04</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>1</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_value>gs_base_handler.redirect_if:gl:save_cancel:return:true</handler_value>
+                        <Url_id>217</Url_id>
+                        <_ctime>2012-06-05 19:40:04</_ctime>
+                        <_mtime>2012-06-05 19:40:04</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>2</cnt>
+                        <handler_keyname>1</handler_keyname>
+                        <handler_value>gs_base_handler.post:{name:admin_form.html:classname:vkgrp_import_cfg:form_class:g_forms_table}</handler_value>
+                        <Url_id>217</Url_id>
+                        <_ctime>2012-06-05 19:40:04</_ctime>
+                        <_mtime>2012-06-05 19:40:04</_mtime>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/admin/form/vkgrp_import_cfg</gspgid_value>
+                <type>handler</type>
+                <Module_id>10</Module_id>
+                <_Handlers_count>0</_Handlers_count>
+                <_ctime>2012-06-05 19:40:04</_ctime>
+                <_mtime>2012-06-05 19:40:04</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>1</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_value>gs_base_handler.copy:{classname:vkgrp_import_cfg}</handler_value>
+                        <Url_id>216</Url_id>
+                        <_ctime>2012-06-05 19:40:04</_ctime>
+                        <_mtime>2012-06-05 19:40:04</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>2</cnt>
+                        <handler_keyname>1</handler_keyname>
+                        <handler_value>gs_base_handler.redirect</handler_value>
+                        <Url_id>216</Url_id>
+                        <_ctime>2012-06-05 19:40:04</_ctime>
+                        <_mtime>2012-06-05 19:40:04</_mtime>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/admin/vkgrp_import/vkgrp_import_cfg/copy</gspgid_value>
+                <type>get</type>
+                <Module_id>10</Module_id>
+                <_Handlers_count>0</_Handlers_count>
+                <_ctime>2012-06-05 19:40:04</_ctime>
+                <_mtime>2012-06-05 19:40:04</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>10</cnt>
+                        <handler_keyname/>
+                        <handler_value>vkgrp_import_handler.execute</handler_value>
+                        <Url_id>211</Url_id>
+                        <_ctime>2012-06-05 19:34:51</_ctime>
+                        <_mtime>2012-06-05 19:34:51</_mtime>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>execute</gspgid_value>
+                <type>get</type>
+                <Module_id>10</Module_id>
+                <_Handlers_count>1</_Handlers_count>
+                <_ctime>2012-06-05 19:34:51</_ctime>
+                <_mtime>2012-06-05 19:34:51</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>1</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_value>gs_base_handler.show:name:adm_vkgrp_import_cfg.html</handler_value>
+                        <Url_id>214</Url_id>
+                        <_ctime>2012-06-05 19:40:04</_ctime>
+                        <_mtime>2012-06-05 19:40:04</_mtime>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/admin/vkgrp_import/vkgrp_import_cfg</gspgid_value>
+                <type>get</type>
+                <Module_id>10</Module_id>
+                <_Handlers_count>0</_Handlers_count>
+                <_ctime>2012-06-05 19:40:04</_ctime>
+                <_mtime>2012-06-05 19:40:04</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>1</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_value>gs_base_handler.delete:{classname:vkgrp_import_cfg}</handler_value>
+                        <Url_id>215</Url_id>
+                        <_ctime>2012-06-05 19:40:04</_ctime>
+                        <_mtime>2012-06-05 19:40:04</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>2</cnt>
+                        <handler_keyname>1</handler_keyname>
+                        <handler_value>gs_base_handler.redirect</handler_value>
+                        <Url_id>215</Url_id>
+                        <_ctime>2012-06-05 19:40:04</_ctime>
+                        <_mtime>2012-06-05 19:40:04</_mtime>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/admin/vkgrp_import/vkgrp_import_cfg/delete</gspgid_value>
+                <type>get</type>
+                <Module_id>10</Module_id>
+                <_Handlers_count>0</_Handlers_count>
+                <_ctime>2012-06-05 19:40:04</_ctime>
+                <_mtime>2012-06-05 19:40:04</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>2</cnt>
+                        <handler_keyname>1</handler_keyname>
+                        <handler_value>gs_base_handler.post:{name:inline_form.html:classname:vkgrp_import_cfg}</handler_value>
+                        <Url_id>218</Url_id>
+                        <_ctime>2012-06-05 19:40:04</_ctime>
+                        <_mtime>2012-06-05 19:40:04</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>1</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_value>gs_base_handler.redirect_if:gl:save_cancel:return:true</handler_value>
+                        <Url_id>218</Url_id>
+                        <_ctime>2012-06-05 19:40:04</_ctime>
+                        <_mtime>2012-06-05 19:40:04</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>3</cnt>
+                        <handler_keyname>2</handler_keyname>
+                        <handler_value>gs_base_handler.redirect_if:gl:save_continue:return:true</handler_value>
+                        <Url_id>218</Url_id>
+                        <_ctime>2012-06-05 19:40:04</_ctime>
+                        <_mtime>2012-06-05 19:40:04</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>4</cnt>
+                        <handler_keyname>3</handler_keyname>
+                        <handler_value>gs_base_handler.redirect_if:gl:save_return:return:true</handler_value>
+                        <Url_id>218</Url_id>
+                        <_ctime>2012-06-05 19:40:04</_ctime>
+                        <_mtime>2012-06-05 19:40:04</_mtime>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/admin/inline_form/vkgrp_import_cfg</gspgid_value>
+                <type>handler</type>
+                <Module_id>10</Module_id>
+                <_Handlers_count>0</_Handlers_count>
+                <_ctime>2012-06-05 19:40:04</_ctime>
+                <_mtime>2012-06-05 19:40:04</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>10</cnt>
+                        <handler_keyname/>
+                        <handler_value>vkgrp_import_handler.get_token</handler_value>
+                        <Url_id>219</Url_id>
+                        <_ctime>2012-06-05 20:03:59</_ctime>
+                        <_mtime>2012-06-05 20:03:59</_mtime>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>execute/get_token</gspgid_value>
+                <type>get</type>
+                <Module_id>10</Module_id>
+                <_Handlers_count>0</_Handlers_count>
+                <_ctime>2012-06-05 20:03:59</_ctime>
+                <_mtime>2012-06-05 20:03:59</_mtime>
+              </values>
+            </record>
+          </recordset>
+        </urls>
+        <forms>
+          <recordset name="wz_forms"/>
+        </forms>
+      </links>
+      <values>
+        <name>vkgrp_import</name>
+        <title>vkgrp_import</title>
+        <_recordsets_count>8</_recordsets_count>
+        <_urls_count>8</_urls_count>
+        <_forms_count>8</_forms_count>
+        <_ctime>2012-06-05 19:34:51</_ctime>
+        <_mtime>2012-06-05 19:40:04</_mtime>
+      </values>
+    </record>
+  </recordset>
+</xml>
+

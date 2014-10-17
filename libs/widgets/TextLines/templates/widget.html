@@ -1,0 +1,26 @@
+<div class="widget_TextLines" id="widget_TextLines_{$params.fieldname}">
+
+{literal}
+<script>
+	$(".widget_TextLines").sortable();
+	$(".widget_TextLines" ).disableSelection();
+	$(".widget_TextLines_line input").live('keypress',function(e) {
+		    if(e.keyCode == 13) {
+			    var parentnode= $(this).closest(".widget_TextLines_line");
+			    var newnode=parentnode.clone();
+			    newnode.children('input').val('');
+
+			    return false;
+		    }
+	});
+</script>
+{/literal}
+
+
+{foreach $params.value as $v} 
+<div class="ui-state-default widget_TextLines_line">
+	<input class="fString" name="{$params.fieldname}[]" value="{$v}">
+</div>
+{/foreach}
+
+</div>

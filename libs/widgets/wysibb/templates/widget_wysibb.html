@@ -1,0 +1,14 @@
+<link href="/libs/widgets/wysibb/public_html/theme/default/wbbtheme.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/libs/widgets/wysibb/public_html/jquery.wysibb.js"></script>
+
+<textarea class="{$cssClass}" name="{$fieldname}" id="wysibb_{$fieldname}">{$value}</textarea>
+<script type="text/javascript">
+$(document).ready (function () {
+	
+	$('#wysibb_{$fieldname}').wysibb( {
+		buttons: 'bold,italic,underline,|,img,link,|,quote,smilebox',
+		imgupload: false,
+		traceTextarea:true
+	});
+});
+</script>

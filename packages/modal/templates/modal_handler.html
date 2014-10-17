@@ -1,0 +1,20 @@
+{$d_id=$modal_params.modal_id|default:"dialog"}
+
+<div id="{$d_id}" title="{$modal_params.modal_title}" style="display:none;">
+{$modal_handler}
+</div>
+
+<script>
+$(function() {
+    $("#{$d_id}").dialog({
+        modal:true,
+        autoOpen: false
+    });
+
+    {if $_gsdata.gspgid_form==$modal_params.gspgid}
+        $("#{$d_id}").dialog("open");
+    {/if}    
+
+});
+
+</script>

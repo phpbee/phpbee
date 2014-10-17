@@ -1,0 +1,108 @@
+{extends file="../../templates/wizard_page.html"}
+
+{block name="main"}
+<h3>Import recordset from mysql</h3>
+
+<form method="post" action="">
+<input type="hidden" name="gspgid" value="/admin/wizard/mysqlimport/process/{$_gsdata.gspgid_v}">
+<label>Module ID<input name="Module_id" value="{$_gsdata.gspgid_va.1}"></label><br>
+<label>Recordset<input name="name" value="{$_gsdata.gspgid_va.2}"></label><br>
+<label>Title<input name="title" value="{$_gsdata.gspgid_va.2}"></label><br>
+<label>table<input name="table_name" value="{$_gsdata.gspgid_va.2}"></label><br>
+<label>connection<input name="database" value="{$_gsdata.gspgid_va.0}"></label><br>
+<label>id field
+<select name=id_field_name>
+{html_options options=array_combine(array_keys($_gsstack.explain),array_keys($_gsstack.explain))}
+<option value=""></option>
+</select>
+</label><br>
+<label>no_urlkey<input type=hidden name=no_urlkey value=0><input name="no_urlkey"  type="checkbox" checked="checked" value=2></label></br>
+<label>no_ctime<input type=hidden name=no_ctime value=0><input name="no_ctime" type="checkbox" checked="checked" value=1></label></br>
+<label>use_sortkey<input type=hidden name=use_sortkey value=0><input name="use_sortkey" type="checkbox" value=1></label></br>
+<label>install<input type=hidden name=install value=0><input name="install" type="checkbox" value=1></label></br>
+<label>orderby
+<select name=orderby>
+{html_options options=array_combine(array_keys($_gsstack.explain),array_keys($_gsstack.explain))}
+<option value=""></option>
+</select>
+</label><br>
+
+<h3>fields</h3>
+<table>
+<thead><tr>
+	<th>import</th>
+	<th>name</th>
+	<th>verbose_name</th>
+	<th>type</th>
+	<th>required</th>
+	<th>index</th>
+	<th>unique</th>
+	<th>default</th>
+{foreach $_gsstack.explain as $k=>$f}
+
+	<tr><td>
+	<label>
+		<input type="checkbox" name="field[{$k}][import]" {if handler_wizard_mysqlimport::select($k,$f)}checked="checked"{/if}>
+		{$k}
+	</label>	
+	</td>
+		<td> <input type="input" name="field[{$k}][name]" value="{$f.Field}"> </td>
+		<td> <input type="input" name="field[{$k}][verbose_name]" value="{$f.Field}"> </td>
+		<td> <input type="input" name="field[{$k}][type]" value="{handler_wizard_mysqlimport::type($f.Type)}"> </td>
+		<td> <input type=hidden name="field[{$k}][make_index]" value=0><input type="checkbox" name="field[{$k}][make_index]" {if $f.Key}checked="checked"{/if}></td>
+		<td> <input type=hidden name="field[{$k}][required]" value=0><input type="checkbox" name="field[{$k}][required]" {if $f.Key}checked="checked"{/if}></td>
+		<td> <input type=hidden name="field[{$k}][is_unique]" value=0><input type="checkbox" name="field[{$k}][is_unique]" {if $f.Key=='PRI'}checked="checked"{/if}></td>
+		<td> <input type="input" name="field[{$k}][default_value]" value=""></td>
+	</tr>
+
+	
+
+{/foreach}
+</table>
+
+<h3>links</h3>
+<table>
+<thead><tr>
+	<th>import</th>
+	<th>name</th>
+	<th>verbose_name</th>
+	<th>type</th>
+	<th>required</th>
+	<th>index</th>
+	<th>unique</th>
+	<th>default</th>
+{foreach $_gsstack.explain as $k=>$f}
+{if $link=handler_wizard_mysqlimport::lOne2One($k,$f,$_gsstack.tables)}
+	<tr><td>
+	<label> <input type="checkbox" name="link[{$k}][import]"> {$k}
+	</label>	
+		<input type="hidden" name="link[{$k}][type]" value="lOne2One">
+		<input type="hidden" name="link[{$k}][fkey_on_delete]" value="NONE">
+		<input type="hidden" name="link[{$k}][fkey_on_update]" value="NONE">
+		<input type="hidden" name="link[{$k}][required]" value="0">
+	</td>
+		<td> <input type="input" name="link[{$k}][name]" value="{$link}"> </td>
+		<td> <input type="input" name="link[{$k}][verbose_name]" value="{$link}"> </td>
+		<td>
+			<select name="link[{$k}][classname]" class="fSelect">
+			<option value=""></option>
+			{html_options options=array_combine($_gsstack.tables,$_gsstack.tables) selected=$link}
+			</select>
+		</td>
+		<td> <input type="input" name="link[{$k}][extra_options]" value="local_field_name={$k}"> </td>
+		<td> <input type="input" name="link[{$k}][widget]" value="parent_list"> </td>
+
+
+	</tr>
+
+	
+{/if}
+{/foreach}
+</table>
+
+<input type="submit">
+</form>
+
+{$_gsstack.explain|md:1}
+
+{/block}

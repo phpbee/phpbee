@@ -1,0 +1,188 @@
+{extends file="wizard_page.html"}
+
+{block name="main"}
+	{controller _class=wz_modules id=$_gsdata.gspgid_va.0 _assign=module _assign_type=first}
+	<h3>
+		<a href="/admin/wizard/module/{$module.id}">{$module.name} / {$module.title}</a>
+
+		<a href="/admin/wizard/commit/{$module.id}">commit</a>
+	</h3>	
+
+
+	<table class="admin_wizard_module">
+	<tr>
+	<td class="admin_wizard_module_td">
+
+		
+
+
+		<strong style="cursor:pointer;" onclick="$('#wiz_templates').toggle();">templates</strong>
+		<div id="wiz_templates" style="display:none">
+		{handler gspgid="/admin/wizard/templates/{$module.id}"}
+		</div>
+
+		<h3><a href="/admin/wizard/urls/{$module.id}">urls</a> <input type="text" name="find_urls" id="urls-filter"> save <input type="checkbox" name="save_search" id="save-urls-filter"></h3>
+		<table class="wz_urls">
+			<col style="width: 5em;"></col>
+			<col></col>
+		{$urls=$module->urls->orderby('type desc')->orderby('gspgid_value')}
+		{$urls=array_group($urls,'type')}
+		{foreach $urls as $type=>$hurls}
+			<tr>
+			<th colspan=2>{$type}</th>
+			</tr>
+		  {foreach $hurls as $url}
+			<tr class="url_tr">
+			<td nowrap>
+				<a href="/admin/wizard/urls/{$module.id}/modify/{$url.id}" class="url_name">{$url.gspgid_value|default:"_DEFAULT_"}</a>
+				<a href="/admin/wizard/urls/delete/{$url.id}" onclick="return confirm('Вы точно хотите удалить запись ?');"><img src="/i/admin/ico_delete.png" alt="Удалить" title="Удалить"></a>
+				<a href="/admin/wizard/urls/clone/{$url.id}"><img src="/i/admin/ico_copy.png" alt="копировать" title="копировать" class="icon"></a>
+				<br>
+				{foreach from=$url.Handlers->orderby('sortkey') item=h}
+			<div class="owf_h" title="{$h.handler_keyname}:{$h.handler_value}" -data-href="/admin/wizard/handlers/{$url.id}/handlers/{$h.id}#form">
+						{if $h.handler_keyname!="" && !is_numeric($h.handler_keyname)}{$h.handler_keyname}:{/if}
+						{$h.handler_value}
+						{if isset($_gsdata.gspgid_va[1]) && $_gsdata.gspgid_va.1=='tpl' && $_gsdata.gspgid_va.2==$h.id}
+							{handler gspgid="/admin/wizard/choosetpl" Handler_id=$h.id Module_id=$module.id}
+						{/if}
+						<br>
+			</div>			
+				{/foreach}
+			</td>			
+			</tr>
+		  {/foreach}
+		{/foreach}
+		</table>
+
+
+
+	</td>
+	<td class="admin_wizard_module_td">
+		<h3>apply strategy:</h3>
+		<dd>{handler gspgid="/admin/form/strategy" Module_id=$module.id}</dd>
+
+		<h3><a href="/admin/wizard/recordsets/{$module.id}">recordsets</a>  
+		<a href="/admin/wizard/recordsets/{$module.id}/form1/0#form">add</a>
+		[ import 
+		{foreach cfg('gs_connectors') as $key=>$c}
+			{if $c['db_type']=='mysql'}
+			<a href="/admin/wizard/mysqlimport/{$key}/{$module.id}">{$key}</a>
+			{/if}
+		{/foreach}]
+		</h3>
+		<ul>
+		{foreach from=$module.recordsets->orderby('name') item=rs}
+			<li>
+				<a href="/admin/wizard/recordset_fields/{$rs.id}">{$rs.name}</a> 
+				{if $rs.extends=='tw_file_images'}
+				<a href="/admin/wizard/recordset_resizes/{$rs.id}"><img src="/i/admin/ico_resize.png"  class="icon" title="Manage resize options"></a> 
+				{/if}
+				<a href="/admin/wizard/createadmin/{$rs.id}"><img src="/i/admin/ico_gear.png"  class="icon" title="generate admin pages"></a>
+				<a href="/admin/wizard/recordsets/{$module.id}/form1/{$rs.id}#form"><img src="/i/admin/ico_edit.png" alt="Редактировать"  class="icon" title="Редактировать"></a>
+				<a href="/admin/wizard/recordsets/clone/{$rs.id}"><img src="/i/admin/ico_copy.png" alt="копировать" title="копировать" class="icon"></a>
+
+				{if $rs.Submodules->count()}({$rs.Submodules}){/if}
+
+
+				{*
+				<ul>
+				{foreach from=$rs.Fields item=field}
+					<li -data-href="/admin/wizard/recordset_fields/{$rs.id}/fields/{$field.id}">
+						{$field->text()} 
+						<a href="/admin/wizard/recordset_fields/{$rs.id}/fields/{$field.id}"><img src="/i/admin/ico_edit.png" alt="Редактировать"  class="icon" title="Редактировать"></a>
+					</li>
+				{/foreach}
+				{if $rs.Links->count()}<div style="border-top: 1px dotted #9BC6DE; margin-top:8px;"></div>{/if}
+				{foreach from=$rs.Links item=link}
+					<li -data-href="/admin/wizard/recordset_fields/{$rs.id}/links/{$link.id}">
+						{$link->text()}
+						<a href="/admin/wizard/recordset_fields/{$rs.id}/links/{$link.id}"><img src="/i/admin/ico_edit.png" alt="Редактировать"  class="icon" title="Редактировать"></a>
+					</li>
+				{/foreach}
+				</ul>
+				*}
+
+				<div>
+				{foreach $rs.Fields as $field}
+					<span -data-href="/admin/wizard/recordset_fields/{$rs.id}/fields/{$field.id}">{$field->name}</span> 
+				{/foreach}
+				</div>
+				<div>
+				{foreach $rs.Links as $link}
+					<span -data-href="/admin/wizard/recordset_fields/{$rs.id}/links/{$link.id}">{$link->name}</span> 
+				{/foreach}
+				</div>
+			</li>
+		{/foreach}
+		</ul>
+
+		<h3><a href="/admin/wizard/forms/{$module.id}">forms</a>  </h3>
+		<ul>
+		{foreach from=$module.forms->orderby('classname') item=rs}
+			<li>
+			<a href="/admin/wizard/form_fields/{$rs.id}">{$rs.classname}</a> 
+			<a href="/admin/wizard/forms/{$module.id}/form1/{$rs.id}"><img src="/i/admin/ico_edit.png" alt="Редактировать"  class="icon" title="Редактировать"></a>
+			</li>
+		{/foreach}
+		</ul>
+	</td>
+	</tr>
+	</table>
+	
+	<script>
+	
+	function find_urls() {
+		var save=get_cookie('save_url_filter');
+		if (this.value) {
+			if (save) {  set_cookie('url_filter',this.value); }
+			$(".wz_urls tr.url_tr").hide();
+			$(".wz_urls tr.url_tr :contains("+this.value+")").parent().show();
+		} else {
+			$(".wz_urls tr.url_tr").show();
+		}
+	}
+	
+	$("#urls-filter").keyup(find_urls);
+	
+	$('#save-urls-filter').click(function() {
+		set_cookie('save_url_filter',this.checked ? 1 : 0);
+	});
+	
+	$('#save-urls-filter').each(function() {
+		var save=get_cookie('save_url_filter');
+		var url_filter=get_cookie('url_filter');
+		if (save==1) {
+			this.checked=true;
+			$("#urls-filter").val(url_filter).each(find_urls);
+		} 
+		
+	});
+	
+	function set_cookie ( name, value, exp_y, exp_m, exp_d, path, domain, secure ) {
+		var cookie_string = name + "=" + escape ( value );
+		if ( exp_y ) {
+			var expires = new Date ( exp_y, exp_m, exp_d );
+			cookie_string += "; expires=" + expires.toGMTString();
+		}
+		if ( path ) cookie_string += "; path=" + escape ( path );
+		if ( domain ) cookie_string += "; domain=" + escape ( domain );
+		if ( secure ) cookie_string += "; secure";
+		document.cookie = cookie_string;
+	}
+	
+	function delete_cookie ( cookie_name ) {
+		var cookie_date = new Date ( );  // Текущая дата и время
+		cookie_date.setTime ( cookie_date.getTime() - 1 );
+		document.cookie = cookie_name += "=; expires=" + cookie_date.toGMTString();
+	}
+	
+	function get_cookie ( cookie_name ) {
+		var results = document.cookie.match ( '(^|;) ?' + cookie_name + '=([^;]*)(;|$)' );
+		if ( results )
+			return ( unescape ( results[2] ) );
+		else
+			return null;
+	}
+	
+	</script>
+{/block}

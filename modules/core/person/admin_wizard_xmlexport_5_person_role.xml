@@ -1,0 +1,738 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xml>
+  <recordset name="wz_modules">
+    <record>
+      <links>
+        <recordsets>
+          <recordset name="wz_recordsets">
+            <record>
+              <links>
+                <Fields>
+                  <recordset name="wz_recordset_fields">
+                    <record>
+                      <links/>
+                      <values>
+                        <name>name</name>
+                        <verbose_name>name</verbose_name>
+                        <helper_text/>
+                        <type>fString</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value/>
+                        <make_index>1</make_index>
+                        <required>1</required>
+                        <is_unique>1</is_unique>
+                        <Recordset_id>6</Recordset_id>
+                        <_ctime>2013-01-29 12:48:24</_ctime>
+                        <_mtime>2013-01-29 12:48:24</_mtime>
+                        <sortkey>12</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>login_options</name>
+                        <verbose_name>login_options</verbose_name>
+                        <helper_text/>
+                        <type>fString</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value/>
+                        <make_index>0</make_index>
+                        <required>0</required>
+                        <is_unique>0</is_unique>
+                        <Recordset_id>6</Recordset_id>
+                        <_ctime>2013-01-29 13:09:57</_ctime>
+                        <_mtime>2013-01-29 13:09:57</_mtime>
+                        <sortkey>15</sortkey>
+                      </values>
+                    </record>
+                  </recordset>
+                </Fields>
+                <Resizes>
+                  <recordset name="wz_recordset_resizes"/>
+                </Resizes>
+                <Links>
+                  <recordset name="wz_recordset_links">
+                    <record>
+                      <links/>
+                      <values>
+                        <name>login_recordset</name>
+                        <verbose_name>login_recordset</verbose_name>
+                        <type>lOne2One</type>
+                        <classname>wz_recordsets</classname>
+                        <linkname/>
+                        <options/>
+                        <extra_options/>
+                        <widget>parent_list</widget>
+                        <required>0</required>
+                        <fkey_on_delete>SET_NULL</fkey_on_delete>
+                        <fkey_on_update>SET_NULL</fkey_on_update>
+                        <fkey_name/>
+                        <Recordset_id>6</Recordset_id>
+                        <_ctime>2013-01-29 12:51:27</_ctime>
+                        <_mtime>2013-01-29 13:07:49</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>login_fields</name>
+                        <verbose_name>login_fields</verbose_name>
+                        <type>lMany2Many</type>
+                        <classname>wz_recordset_fields</classname>
+                        <linkname/>
+                        <options/>
+                        <extra_options/>
+                        <widget>lMany2Many_chosen</widget>
+                        <required>0</required>
+                        <fkey_on_delete>SET_NULL</fkey_on_delete>
+                        <fkey_on_update>SET_NULL</fkey_on_update>
+                        <fkey_name/>
+                        <Recordset_id>6</Recordset_id>
+                        <_ctime>2013-01-29 13:00:23</_ctime>
+                        <_mtime>2013-01-29 13:08:06</_mtime>
+                      </values>
+                    </record>
+                  </recordset>
+                </Links>
+                <Triggers>
+                  <recordset name="wz_recordset_triggers"/>
+                </Triggers>
+                <Submodules>
+                  <recordset name="wz_recordset_submodules"/>
+                </Submodules>
+              </links>
+              <values>
+                <name>person_role_cfg</name>
+                <title>person_role_cfg</title>
+                <table_name/>
+                <database>0</database>
+                <extends/>
+                <Module_id>5</Module_id>
+                <_Fields_count>6</_Fields_count>
+                <_Resizes_count>6</_Resizes_count>
+                <_Links_count>6</_Links_count>
+                <_Triggers_count>6</_Triggers_count>
+                <_Submodules_count>6</_Submodules_count>
+                <showadmin>1</showadmin>
+                <no_urlkey>1</no_urlkey>
+                <no_ctime>1</no_ctime>
+                <use_sortkey>1</use_sortkey>
+                <install>1</install>
+                <orderby>id</orderby>
+                <id_field_name>id</id_field_name>
+                <_ctime>2013-01-29 12:48:11</_ctime>
+                <_mtime>2013-01-29 13:10:14</_mtime>
+                <sortkey>6</sortkey>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Fields>
+                  <recordset name="wz_recordset_fields">
+                    <record>
+                      <links/>
+                      <values>
+                        <name>variable_name</name>
+                        <verbose_name>variable_name</verbose_name>
+                        <helper_text/>
+                        <type>fString</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value/>
+                        <make_index>1</make_index>
+                        <required>1</required>
+                        <is_unique>1</is_unique>
+                        <Recordset_id>7</Recordset_id>
+                        <_ctime>2013-01-29 12:55:17</_ctime>
+                        <_mtime>2013-01-29 12:55:17</_mtime>
+                        <sortkey>14</sortkey>
+                      </values>
+                    </record>
+                  </recordset>
+                </Fields>
+                <Resizes>
+                  <recordset name="wz_recordset_resizes"/>
+                </Resizes>
+                <Links>
+                  <recordset name="wz_recordset_links">
+                    <record>
+                      <links/>
+                      <values>
+                        <name>Role</name>
+                        <verbose_name>Save var to</verbose_name>
+                        <type>lMany2Many</type>
+                        <classname>person_role_cfg</classname>
+                        <linkname/>
+                        <options/>
+                        <extra_options/>
+                        <widget>lMany2Many_chosen</widget>
+                        <required>1</required>
+                        <fkey_on_delete>SET_NULL</fkey_on_delete>
+                        <fkey_on_update>SET_NULL</fkey_on_update>
+                        <fkey_name/>
+                        <Recordset_id>7</Recordset_id>
+                        <_ctime>2013-01-29 12:57:28</_ctime>
+                        <_mtime>2013-01-29 12:57:28</_mtime>
+                      </values>
+                    </record>
+                  </recordset>
+                </Links>
+                <Triggers>
+                  <recordset name="wz_recordset_triggers"/>
+                </Triggers>
+                <Submodules>
+                  <recordset name="wz_recordset_submodules"/>
+                </Submodules>
+              </links>
+              <values>
+                <name>person_variable_cfg</name>
+                <title>person_variable_cfg</title>
+                <table_name/>
+                <database>0</database>
+                <extends/>
+                <Module_id>5</Module_id>
+                <_Fields_count>2</_Fields_count>
+                <_Resizes_count>2</_Resizes_count>
+                <_Links_count>2</_Links_count>
+                <_Triggers_count>2</_Triggers_count>
+                <_Submodules_count>2</_Submodules_count>
+                <showadmin>1</showadmin>
+                <no_urlkey>1</no_urlkey>
+                <no_ctime>0</no_ctime>
+                <use_sortkey>0</use_sortkey>
+                <install>1</install>
+                <orderby>id</orderby>
+                <id_field_name>id</id_field_name>
+                <_ctime>2013-01-29 12:53:07</_ctime>
+                <_mtime>2013-01-29 13:03:18</_mtime>
+                <sortkey>7</sortkey>
+              </values>
+            </record>
+          </recordset>
+        </recordsets>
+        <urls>
+          <recordset name="wz_urls">
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>1</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.show:name:adm_person_role_cfg.html</handler_value>
+                        <Url_id>19</Url_id>
+                        <_ctime>2013-01-29 13:00:45</_ctime>
+                        <_mtime>2013-01-29 13:00:45</_mtime>
+                        <sortkey>41</sortkey>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/admin/person_role/person_role_cfg</gspgid_value>
+                <type>get</type>
+                <Module_id>5</Module_id>
+                <_Handlers_count>0</_Handlers_count>
+                <_ctime>2013-01-29 13:00:45</_ctime>
+                <_mtime>2013-01-29 13:00:45</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>1</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.delete:{classname:person_role_cfg}</handler_value>
+                        <Url_id>20</Url_id>
+                        <_ctime>2013-01-29 13:00:45</_ctime>
+                        <_mtime>2013-01-29 13:00:45</_mtime>
+                        <sortkey>42</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>2</cnt>
+                        <handler_keyname>1</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect</handler_value>
+                        <Url_id>20</Url_id>
+                        <_ctime>2013-01-29 13:00:45</_ctime>
+                        <_mtime>2013-01-29 13:00:45</_mtime>
+                        <sortkey>43</sortkey>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/admin/person_role/person_role_cfg/delete</gspgid_value>
+                <type>get</type>
+                <Module_id>5</Module_id>
+                <_Handlers_count>0</_Handlers_count>
+                <_ctime>2013-01-29 13:00:45</_ctime>
+                <_mtime>2013-01-29 13:00:45</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>1</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.copy:{classname:person_role_cfg}</handler_value>
+                        <Url_id>21</Url_id>
+                        <_ctime>2013-01-29 13:00:45</_ctime>
+                        <_mtime>2013-01-29 13:00:45</_mtime>
+                        <sortkey>44</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>2</cnt>
+                        <handler_keyname>1</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect</handler_value>
+                        <Url_id>21</Url_id>
+                        <_ctime>2013-01-29 13:00:45</_ctime>
+                        <_mtime>2013-01-29 13:00:45</_mtime>
+                        <sortkey>45</sortkey>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/admin/person_role/person_role_cfg/copy</gspgid_value>
+                <type>get</type>
+                <Module_id>5</Module_id>
+                <_Handlers_count>0</_Handlers_count>
+                <_ctime>2013-01-29 13:00:45</_ctime>
+                <_mtime>2013-01-29 13:00:45</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>1</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect_if:gl:save_cancel:return:true</handler_value>
+                        <Url_id>22</Url_id>
+                        <_ctime>2013-01-29 13:00:45</_ctime>
+                        <_mtime>2013-01-29 13:00:45</_mtime>
+                        <sortkey>46</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>2</cnt>
+                        <handler_keyname>1</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.post:{name:admin_form.html:classname:person_role_cfg:form_class:g_forms_table}</handler_value>
+                        <Url_id>22</Url_id>
+                        <_ctime>2013-01-29 13:00:45</_ctime>
+                        <_mtime>2013-01-29 13:00:45</_mtime>
+                        <sortkey>47</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>3</cnt>
+                        <handler_keyname>2</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect_if:gl:save_continue:return:true</handler_value>
+                        <Url_id>22</Url_id>
+                        <_ctime>2013-01-29 13:00:45</_ctime>
+                        <_mtime>2013-01-29 13:00:45</_mtime>
+                        <sortkey>48</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>4</cnt>
+                        <handler_keyname>3</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect_if:gl:save_return:return:true</handler_value>
+                        <Url_id>22</Url_id>
+                        <_ctime>2013-01-29 13:00:45</_ctime>
+                        <_mtime>2013-01-29 13:00:45</_mtime>
+                        <sortkey>49</sortkey>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/admin/form/person_role_cfg</gspgid_value>
+                <type>handler</type>
+                <Module_id>5</Module_id>
+                <_Handlers_count>0</_Handlers_count>
+                <_ctime>2013-01-29 13:00:45</_ctime>
+                <_mtime>2013-01-29 13:00:45</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>1</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect_if:gl:save_cancel:return:true</handler_value>
+                        <Url_id>23</Url_id>
+                        <_ctime>2013-01-29 13:00:45</_ctime>
+                        <_mtime>2013-01-29 13:00:45</_mtime>
+                        <sortkey>50</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>2</cnt>
+                        <handler_keyname>1</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.post:{name:inline_form.html:classname:person_role_cfg}</handler_value>
+                        <Url_id>23</Url_id>
+                        <_ctime>2013-01-29 13:00:45</_ctime>
+                        <_mtime>2013-01-29 13:00:45</_mtime>
+                        <sortkey>51</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>3</cnt>
+                        <handler_keyname>2</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect_if:gl:save_continue:return:true</handler_value>
+                        <Url_id>23</Url_id>
+                        <_ctime>2013-01-29 13:00:45</_ctime>
+                        <_mtime>2013-01-29 13:00:45</_mtime>
+                        <sortkey>52</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>4</cnt>
+                        <handler_keyname>3</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect_if:gl:save_return:return:true</handler_value>
+                        <Url_id>23</Url_id>
+                        <_ctime>2013-01-29 13:00:45</_ctime>
+                        <_mtime>2013-01-29 13:00:45</_mtime>
+                        <sortkey>53</sortkey>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/admin/inline_form/person_role_cfg</gspgid_value>
+                <type>handler</type>
+                <Module_id>5</Module_id>
+                <_Handlers_count>0</_Handlers_count>
+                <_ctime>2013-01-29 13:00:45</_ctime>
+                <_mtime>2013-01-29 13:00:45</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>1</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.show:name:adm_person_variable_cfg.html</handler_value>
+                        <Url_id>24</Url_id>
+                        <_ctime>2013-01-29 13:01:01</_ctime>
+                        <_mtime>2013-01-29 13:01:01</_mtime>
+                        <sortkey>54</sortkey>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/admin/person_role/person_variable_cfg</gspgid_value>
+                <type>get</type>
+                <Module_id>5</Module_id>
+                <_Handlers_count>0</_Handlers_count>
+                <_ctime>2013-01-29 13:01:01</_ctime>
+                <_mtime>2013-01-29 13:01:01</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>1</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.delete:{classname:person_variable_cfg}</handler_value>
+                        <Url_id>25</Url_id>
+                        <_ctime>2013-01-29 13:01:01</_ctime>
+                        <_mtime>2013-01-29 13:01:01</_mtime>
+                        <sortkey>55</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>2</cnt>
+                        <handler_keyname>1</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect</handler_value>
+                        <Url_id>25</Url_id>
+                        <_ctime>2013-01-29 13:01:01</_ctime>
+                        <_mtime>2013-01-29 13:01:01</_mtime>
+                        <sortkey>56</sortkey>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/admin/person_role/person_variable_cfg/delete</gspgid_value>
+                <type>get</type>
+                <Module_id>5</Module_id>
+                <_Handlers_count>0</_Handlers_count>
+                <_ctime>2013-01-29 13:01:01</_ctime>
+                <_mtime>2013-01-29 13:01:01</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>1</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.copy:{classname:person_variable_cfg}</handler_value>
+                        <Url_id>26</Url_id>
+                        <_ctime>2013-01-29 13:01:01</_ctime>
+                        <_mtime>2013-01-29 13:01:01</_mtime>
+                        <sortkey>57</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>2</cnt>
+                        <handler_keyname>1</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect</handler_value>
+                        <Url_id>26</Url_id>
+                        <_ctime>2013-01-29 13:01:01</_ctime>
+                        <_mtime>2013-01-29 13:01:01</_mtime>
+                        <sortkey>58</sortkey>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/admin/person_role/person_variable_cfg/copy</gspgid_value>
+                <type>get</type>
+                <Module_id>5</Module_id>
+                <_Handlers_count>0</_Handlers_count>
+                <_ctime>2013-01-29 13:01:01</_ctime>
+                <_mtime>2013-01-29 13:01:01</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>1</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect_if:gl:save_cancel:return:true</handler_value>
+                        <Url_id>27</Url_id>
+                        <_ctime>2013-01-29 13:01:01</_ctime>
+                        <_mtime>2013-01-29 13:01:01</_mtime>
+                        <sortkey>59</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>2</cnt>
+                        <handler_keyname>1</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.post:{name:admin_form.html:classname:person_variable_cfg:form_class:g_forms_table}</handler_value>
+                        <Url_id>27</Url_id>
+                        <_ctime>2013-01-29 13:01:01</_ctime>
+                        <_mtime>2013-01-29 13:01:01</_mtime>
+                        <sortkey>60</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>3</cnt>
+                        <handler_keyname>2</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect_if:gl:save_continue:return:true</handler_value>
+                        <Url_id>27</Url_id>
+                        <_ctime>2013-01-29 13:01:01</_ctime>
+                        <_mtime>2013-01-29 13:01:01</_mtime>
+                        <sortkey>61</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>4</cnt>
+                        <handler_keyname>3</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect_if:gl:save_return:return:true</handler_value>
+                        <Url_id>27</Url_id>
+                        <_ctime>2013-01-29 13:01:01</_ctime>
+                        <_mtime>2013-01-29 13:01:01</_mtime>
+                        <sortkey>62</sortkey>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/admin/form/person_variable_cfg</gspgid_value>
+                <type>handler</type>
+                <Module_id>5</Module_id>
+                <_Handlers_count>0</_Handlers_count>
+                <_ctime>2013-01-29 13:01:01</_ctime>
+                <_mtime>2013-01-29 13:01:01</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>1</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect_if:gl:save_cancel:return:true</handler_value>
+                        <Url_id>28</Url_id>
+                        <_ctime>2013-01-29 13:01:01</_ctime>
+                        <_mtime>2013-01-29 13:01:01</_mtime>
+                        <sortkey>63</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>2</cnt>
+                        <handler_keyname>1</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.post:{name:inline_form.html:classname:person_variable_cfg}</handler_value>
+                        <Url_id>28</Url_id>
+                        <_ctime>2013-01-29 13:01:01</_ctime>
+                        <_mtime>2013-01-29 13:01:01</_mtime>
+                        <sortkey>64</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>3</cnt>
+                        <handler_keyname>2</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect_if:gl:save_continue:return:true</handler_value>
+                        <Url_id>28</Url_id>
+                        <_ctime>2013-01-29 13:01:01</_ctime>
+                        <_mtime>2013-01-29 13:01:01</_mtime>
+                        <sortkey>65</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>4</cnt>
+                        <handler_keyname>3</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect_if:gl:save_return:return:true</handler_value>
+                        <Url_id>28</Url_id>
+                        <_ctime>2013-01-29 13:01:01</_ctime>
+                        <_mtime>2013-01-29 13:01:01</_mtime>
+                        <sortkey>66</sortkey>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/admin/inline_form/person_variable_cfg</gspgid_value>
+                <type>handler</type>
+                <Module_id>5</Module_id>
+                <_Handlers_count>0</_Handlers_count>
+                <_ctime>2013-01-29 13:01:01</_ctime>
+                <_mtime>2013-01-29 13:01:01</_mtime>
+              </values>
+            </record>
+          </recordset>
+        </urls>
+        <forms>
+          <recordset name="wz_forms"/>
+        </forms>
+      </links>
+      <values>
+        <name>person_role</name>
+        <title>person_role</title>
+        <_recordsets_count>2</_recordsets_count>
+        <_urls_count>2</_urls_count>
+        <_forms_count>2</_forms_count>
+        <_ctime>2013-01-29 12:47:20</_ctime>
+        <_mtime>2013-01-29 12:53:07</_mtime>
+      </values>
+    </record>
+  </recordset>
+</xml>

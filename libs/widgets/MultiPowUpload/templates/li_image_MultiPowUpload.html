@@ -1,0 +1,16 @@
+{*
+<div class="MultiPowUploadGalleryItem">
+<input type=checkbox name="checked_items[]" value="{$i.id}">
+<a href="{$i->src1('tumb')}" onClick="return false;" class="preview">
+<img src="{$i->src1('admin')}">
+</a>
+</div>
+*}
+
+<li class="MultiPowUploadGalleryItem">
+<input type=checkbox name="checked_items[]" value="{$i.id}">
+<a href="{$i->src1('tumb')}" onClick="return false;" class="preview "> 
+	<span href="" class="modal_close" onClick="return false;"></span>
+	<img src="{$i->src1('photo_block')}"> 
+</a>
+</li>

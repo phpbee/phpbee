@@ -1,0 +1,24 @@
+{extends file="index.html"}
+{block name="content"}
+{controller _class=tw_news _assign=n _assign_type=plain id=$_gsdata.gspgid_va.0|replace:".html":""}
+<h1>{$n.subject}</h1>
+<h2>Опубликовано {$n.date|date_format:"%d/%m/%y"}</h2>
+		<ul class="list">
+			<li>
+				{$n.Images->img('blog')|reset}
+				{$n.text}
+			</li>
+		</ul>
+
+		{%*foreach from=$SUBMODULES_DATA.MODULE item=a key=NAME%}
+			<div class="h_{%$MODULE%}_{%$NAME%}">{handler scope="module_{%$MODULE%}_{%$NAME%}" gspgid="{%$MODULE%}/{%$NAME%}/list/`$_gsdata.gspgid_v`"}</div>
+		{%/foreach*%}
+
+		{%*if $SUBMODULES_DATA.MODULE.comments%}
+			{handler scope="module_{%$MODULE%}_comments" gspgid="{%$MODULE%}/comments/form/add" Parent_id=$n->get_id()}
+		{%/if*%}
+
+		{%*
+		{%sm_handlers modules="images,comments" gspgid="list"%}
+		*%}
+{/block}

@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MultiPowUpload_parameters>
+  <param name="browseButton.text">Răsfoiţi ...</param>
+  <param name="browseButton.tooltip">Adăugaţi fişiere pentru upload</param>
+  <param name="cancelButton.pauseText">Pauză</param>
+  <param name="cancelButton.text">Anula</param>
+  <param name="cancelButton.tooltip">Anula curent operaţie</param>
+  <param name="clearButton.text">Clar</param>
+  <param name="clearButton.tooltip">Eliminaţi toate fişierele</param>
+  <param name="constant.bytes">octeţi</param>
+  <param name="constant.decimalSeparator">,</param>
+  <param name="constant.gigaBytes">Gb</param>
+  <param name="constant.kiloBytes">Kb</param>
+  <param name="constant.megaBytes">Mb</param>
+  <param name="contextMenu.sortByDate">Sortaţi după dată</param>
+  <param name="contextMenu.sortByName">Sortare după nume</param>
+  <param name="contextMenu.sortBySize">Sortare după mărime</param>
+  <param name="descriptionWindow.caption">Descriere fişier</param>
+  <param name="descriptionWindow.fileNavigation.fileName.label">&lt;FILENAME&gt;</param>
+  <param name="descriptionWindow.fileNavigation.nextButton.label"></param>
+  <param name="descriptionWindow.fileNavigation.previousButton.label"></param>
+  <param name="exifWindow.caption">&lt;FILENAME&gt; date EXIF</param>
+  <param name="exifWindow.list.nameHeader">Numele</param>
+  <param name="exifWindow.list.valueHeader">Valoarea</param>
+  <param name="fileInfoWindow.caption">Informaţii despre fişiere</param>
+  <param name="fileInfoWindow.exifInfo">&lt;b&gt; informatiile Exif &lt;/b&gt;: &lt;a&gt; Click pentru a vizualiza &lt;/a&gt;</param>
+  <param name="fileInfoWindow.fileDate">&lt;b&gt; Data &lt;/b&gt;: &lt;FILEDATE&gt;</param>
+  <param name="fileInfoWindow.fileName">&lt;b&gt; Denumire &lt;/b&gt;: &lt;FILENAME&gt;</param>
+  <param name="fileInfoWindow.fileSize">&lt;b&gt; Dimensiune &lt;/b&gt;: &lt;FILESIZE&gt;</param>
+  <param name="fileInfoWindow.fileStatus">&lt;b&gt; Status &lt;/b&gt;: &lt;FILESTATUS&gt;</param>
+  <param name="fileInfoWindow.imageHeight">&lt;b&gt; Image înălţime &lt;/b&gt;: &lt;IMAGEHEIGHT&gt;</param>
+  <param name="fileInfoWindow.imageWidth">&lt;b&gt; Image lăţime &lt;/b&gt;: &lt;IMAGEWIDTH&gt;</param>
+  <param name="fileStatus.cancelled">Anulate</param>
+  <param name="fileStatus.complete">Terminat</param>
+  <param name="fileStatus.encodeImage">Codifica imagine</param>
+  <param name="fileStatus.error">Eroare a avut loc</param>
+  <param name="fileStatus.loadFile">Încărcare fişier în memorie</param>
+  <param name="fileStatus.loadImage">Încărcarea datelor de imagine</param>
+  <param name="fileStatus.processing">Încărcarea</param>
+  <param name="fileStatus.ready">Pregătit pentru încărcare</param>
+  <param name="labelUpload.text">Selectaţi fişiere pentru a încărca</param>
+  <param name="listView.description.defaultText">Clic pentru a edita ...</param>
+  <param name="listView.description.tooltip">Editare fişier de descriere</param>
+  <param name="listView.fileNameLabel.pattern">&lt;FILENAME&gt;</param>
+  <param name="listView.label.disabledFileInfoTooltip">Dimensiune: &lt;FILESIZE&gt;
+Data: &lt;FILEDATE&gt;
+Status: &lt;FILESTATUS&gt;</param>
+  <param name="listView.label.tooltip">Dimensiune: &lt;FILESIZE&gt;
+Data: &lt;FILEDATE&gt;
+Status: &lt;FILESTATUS&gt;</param>
+  <param name="listView.removeButton.tooltip">Eliminaţi fişier</param>
+  <param name="listView.textInput.defaultString">Scrie fişier comentariu aici</param>
+  <param name="listViewButton.tooltip">Lista de vedere</param>
+  <param name="loadingText">&lt;b&gt; initializarea: &lt;PERCENT&gt;% &lt;/b&gt;</param>
+  <param name="messages.disabledType">Fişier cu următoarele tipuri: &lt;FILETYPES&gt; nu sunt permise pentru a încărca! &lt;COUNTINVALIDFILES&gt;, dosarele au fost ignorate!</param>
+  <param name="messages.filesCountExceeded">Doar &lt;MAXFILECOUNT&gt; fişiere permise pentru a încărca! &lt;COUNTINVALIDFILES&gt;, dosarele au fost ignorate!</param>
+  <param name="messages.filesCountNotEnough">Vă rugăm să selectaţi mai multe fişiere. numărul de fişiere este minimă &lt;MINFILECOUNT&gt;</param>
+  <param name="messages.httpError">&lt;center&gt; HTTP Error, "&lt;ERRORCODE&gt;" a avut loc. &lt;DESCRIPTION&gt;&lt;br&gt; Vă rugăm să consultaţi &lt;font color='#0000FF'&gt; &lt;a title='Error description' target='_blank' href='&lt;W3WLINK&gt;'&gt; &lt;W3WLINK&gt; &lt;/a&gt; &lt;/font&gt; definiţii cod de eroare pentru mai multe informaţii. &lt;/center&gt;</param>
+  <param name="messages.httpError.400">Bad Cerere. Serverul nu poate să înţeleagă cerere! Vă rugăm să contactaţi administratorul serverului.</param>
+  <param name="messages.httpError.401">Neautorizate. Autentificarea utilizatorului este necesar!</param>
+  <param name="messages.httpError.402">De plată necesare. Codul rezervate!</param>
+  <param name="messages.httpError.403">Interzis. Serverul de înţeles cererea, dar refuză să-l îndeplinească!&lt;br&gt;Pentru servere de Apache: Acest lucru se întâmplă pentru că aţi activat un modul de Apache numit mod_security pe server care blochează antetele trimise de către Flash.&lt;br&gt;Pentru serverele cu IIS ASP: Această problemă apare dacă un antet Content-Length este prezent şi dacă antetul Content-Length specifică o sumă de date care este mai mare decât valoarea proprietăţii AspMaxRequestEntityAllowed în metabaza IIS.&lt;br&gt;Valoarea implicită pentru proprietatea AspMaxRequestEntityAllowed este 204800 bytes.</param>
+  <param name="messages.httpError.404">Pagina nu a fost găsit. Nu se poate găsi "&lt;URL&gt;" pagină de pe server!</param>
+  <param name="messages.httpError.405">Post metodă nu este permisă pentru această pagină &lt;URL&gt;! Vă rugăm să încercaţi să schimbaţi setările de server pentru a permite metoda de post pentru primirea script.</param>
+  <param name="messages.httpError.406">Nu este acceptabil. Acest lucru înseamnă că serverul nu poate genera entităţile răspuns care nu au caracteristici de conţinut acceptabil în conformitate cu accepta antetele trimise în cerere. Flash accepta antet este "text / * '.</param>
+  <param name="messages.httpError.407">Autentificarea proxy necesare.</param>
+  <param name="messages.httpError.408">Cerere de Timeout.</param>
+  <param name="messages.httpError.409">Conflict.</param>
+  <param name="messages.httpError.410">Gone. Resursa solicitată nu mai este disponibil la server şi adresa de expediere nu este cunoscută.</param>
+  <param name="messages.httpError.411">Lungimea necesară.</param>
+  <param name="messages.httpError.412">Condiţie prealabilă a eşuat.</param>
+  <param name="messages.httpError.413">Entitate solicitare prea mare.&lt;br&gt;Pentru servere IIS: 1. Încercaţi să crească UploadReadAheadSize proprietate metabaza.&lt;br&gt;2. Încercaţi să crească valoarea proprietatii MaxRequestEntityAllowed în IIS de configurare.&lt;br&gt;Pentru servere de Apache: Încercaţi să crească LimitRequestBody parametru în httpd.conf.</param>
+  <param name="messages.httpError.414">Cerere-URI prea mult timp.</param>
+  <param name="messages.httpError.415">Tip media neacceptat.</param>
+  <param name="messages.httpError.416">Intervalul solicitat nu este satisfăcător.</param>
+  <param name="messages.httpError.417">Aşteptare nereuşită.</param>
+  <param name="messages.httpError.500">Eroare internă de server. De obicei, aceasta înseamnă că script-ul care primesc au erori.</param>
+  <param name="messages.httpError.501">Nu Pus în aplicare. Server nu acceptă metoda POST.</param>
+  <param name="messages.httpError.502">Bad Gateway.</param>
+  <param name="messages.httpError.503">503 Serviciu indisponibil. Serverul este în prezent nu poate să se ocupe de cererea din cauza unei supraíncărcări temporare sau de întreţinere a serverului.</param>
+  <param name="messages.httpError.504">Timeout Gateway.</param>
+  <param name="messages.httpError.505">Versiunea HTTP nu este acceptat. Server nu are suport pentru HTTP 1.1.</param>
+  <param name="messages.wrongFileType">Numai fişierele de tip text: &lt;FILETYPES&gt; permis pentru a încărca! &lt;COUNTINVALIDFILES&gt;, dosarele au fost ignorate!</param>
+  <param name="messages.zeroSize">&lt;COUNTINVALIDFILES&gt; fişiere cu dimensiunea zero au fost ignorate!</param>
+  <param name="removeButton.tooltip">Eliminaţi fişierele selectate</param>
+  <param name="retryDialog.caption">Reîncercaţi încărcaţi?</param>
+  <param name="retryDialog.message">Unele fişiere nu au fost încărcate. Vrei să încercaţi să încărcaţi din nou?</param>
+  <param name="retryDialog.noLabel">Nu</param>
+  <param name="retryDialog.yesLabel">Da</param>
+  <param name="sortButton.text"></param>
+  <param name="sortButton.tooltip">Ordinea de sortare</param>
+  <param name="sortMenu.byDate">Până la data de</param>
+  <param name="sortMenu.byName">De nume</param>
+  <param name="sortMenu.bySize">De dimensiunea</param>
+  <param name="statusLabel.text.generateThumbnails">Generatoare de imagine miniaturi ... vă rog, aşteptaţi.</param>
+  <param name="statusLabel.text.loadFile "></param>
+  <param name="statusLabel.text.ready">Contele de fişiere: &lt;FILESCOUNT&gt; (&lt;TOTALSIZE&gt;)</param>
+  <param name="statusLabel.text.uploadCancelled">fişierele următoare încărcaţi anulat. Aşteptaţi ...</param>
+  <param name="statusLabel.text.uploadComplete">Încărcaţi complet! &lt;UPLOADEDFILESCOUNT&gt; fisiere (&lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt;), timpul scurs: &lt;ELAPSEDHOUR&gt;: &lt;ELAPSEDMIN&gt;: &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.uploadProgress">Total: &lt;PERCENT&gt;% (&lt;FILESNUM&gt; / &lt;FILESTOUPLOADCOUNT&gt;) &lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt; (&lt;RATEVALUE&gt; / sec, timpul rămas: &lt;LEFTHOUR&gt;: &lt;LEFTMIN&gt;: &lt;LEFTSEC&gt;)</param>
+  <param name="statusLabel.text.uploadStart">Încărcarea ...</param>
+  <param name="statusLabel.text.uploadStopped">Încărcaţi oprit. octeţi Incarcat: &lt;TOTALUPLOADEDSIZE&gt;, Timpul scurs: &lt;ELAPSEDHOUR&gt;: &lt;ELAPSEDMIN&gt;: &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.waitForConnection">Serverul nu răspunde. Încercarea de reconectare, vă rugăm să aşteptaţi.</param>
+  <param name="thumbViewButton.tooltip">Miniaturi vedere</param>
+  <param name="thumbnail.watermark.text">Element-IT</param>
+  <param name="thumbnailView.bottomPanel.labelPattern">&lt;FILENAME&gt;</param>
+  <param name="thumbnailView.cancelCropIcon.tooltip">Anulare decupa imaginea</param>
+  <param name="thumbnailView.contextMenu.CropLabel">Decupa imaginea</param>
+  <param name="thumbnailView.contextMenu.RemoveLabel">Elimina</param>
+  <param name="thumbnailView.contextMenu.RotateLeftLabel">Rotiţi spre stânga</param>
+  <param name="thumbnailView.contextMenu.RotateRightLabel">Rotire dreapta</param>
+  <param name="thumbnailView.contextMenu.UndoCropLabel">Anulare decupa imaginea</param>
+  <param name="thumbnailView.cropIcon.tooltip">Decupa imaginea</param>
+  <param name="thumbnailView.editIcon.tooltip">Editare fişier de descriere</param>
+  <param name="thumbnailView.infoIcon.disabledFileInfoTooltip">Dimensiune: &lt;FILESIZE&gt;
+Data: &lt;FILEDATE&gt;
+Status: &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.infoIcon.tooltip">Dimensiune: &lt;FILESIZE&gt;
+Data: &lt;FILEDATE&gt;
+Status: &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.removeIcon.tooltip">Elimina</param>
+  <param name="thumbnailView.rotateLeftIcon.tooltip">Rotiţi spre stânga</param>
+  <param name="thumbnailView.rotateRightIcon.tooltip">Rotire dreapta</param>
+  <param name="uploadButton.text">Încărcaţi</param>
+  <param name="uploadButton.tooltip">Începeţi încărcarea</param>
+</MultiPowUpload_parameters>

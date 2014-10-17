@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MultiPowUpload_parameters>
+  <param name="browseButton.text">Tallózás ...</param>
+  <param name="browseButton.tooltip">Fájlok hozzáadása a feltöltési</param>
+  <param name="cancelButton.pauseText">Szünet</param>
+  <param name="cancelButton.text">Mégsem</param>
+  <param name="cancelButton.tooltip">Mégsem jelenlegi működését</param>
+  <param name="clearButton.text">Egyértelmű</param>
+  <param name="clearButton.tooltip">Vegye ki az összes fájlt</param>
+  <param name="constant.bytes">bájt</param>
+  <param name="constant.decimalSeparator">,</param>
+  <param name="constant.gigaBytes">Gb</param>
+  <param name="constant.kiloBytes">Kb</param>
+  <param name="constant.megaBytes">Mb</param>
+  <param name="contextMenu.sortByDate">Rendezés dátum</param>
+  <param name="contextMenu.sortByName">Rendezés név szerint</param>
+  <param name="contextMenu.sortBySize">Rendezés méret szerint</param>
+  <param name="descriptionWindow.caption">Leírás a fájlok</param>
+  <param name="descriptionWindow.fileNavigation.fileName.label">&lt;FILENAME&gt;</param>
+  <param name="descriptionWindow.fileNavigation.nextButton.label"></param>
+  <param name="descriptionWindow.fileNavigation.previousButton.label"></param>
+  <param name="exifWindow.caption">&lt;FILENAME&gt; EXIF adatok</param>
+  <param name="exifWindow.list.nameHeader">Név</param>
+  <param name="exifWindow.list.valueHeader">Érték</param>
+  <param name="fileInfoWindow.caption">Fájl információ</param>
+  <param name="fileInfoWindow.exifInfo">&lt;b&gt; Exif info &lt;/b&gt;: &lt;a&gt; Kattints ide a &lt;/a&gt;</param>
+  <param name="fileInfoWindow.fileDate">&lt;b&gt; nap &lt;/b&gt;: &lt;FILEDATE&gt;</param>
+  <param name="fileInfoWindow.fileName">&lt;b&gt; Név &lt;/b&gt;: &lt;FILENAME&gt;</param>
+  <param name="fileInfoWindow.fileSize">&lt;b&gt; méret &lt;/b&gt;: &lt;FILESIZE&gt;</param>
+  <param name="fileInfoWindow.fileStatus">&lt;b&gt; állapot &lt;/b&gt;: &lt;FILESTATUS&gt;</param>
+  <param name="fileInfoWindow.imageHeight">&lt;b&gt; Kép magassága &lt;/b&gt;: &lt;IMAGEHEIGHT&gt;</param>
+  <param name="fileInfoWindow.imageWidth">&lt;b&gt; kép szélessége &lt;/b&gt;: &lt;IMAGEWIDTH&gt;</param>
+  <param name="fileStatus.cancelled">Törölt</param>
+  <param name="fileStatus.complete">Befejezett</param>
+  <param name="fileStatus.encodeImage">Kódolás kép</param>
+  <param name="fileStatus.error">Hiba történt</param>
+  <param name="fileStatus.loadFile">A fájl betöltése a memóriába</param>
+  <param name="fileStatus.loadImage">Képfeltöltés adatok</param>
+  <param name="fileStatus.processing">Feltöltése</param>
+  <param name="fileStatus.ready">Készen áll a feltöltési</param>
+  <param name="labelUpload.text">Válassza ki a fájlok feltöltése</param>
+  <param name="listView.description.defaultText">Kattintson a szerkesztés ...</param>
+  <param name="listView.description.tooltip">Edit fájl leírása</param>
+  <param name="listView.fileNameLabel.pattern">&lt;FILENAME&gt;</param>
+  <param name="listView.label.disabledFileInfoTooltip">Méret: &lt;FILESIZE&gt;
+Dátum: &lt;FILEDATE&gt;
+Állapot: &lt;FILESTATUS&gt;</param>
+  <param name="listView.label.tooltip">Méret: &lt;FILESIZE&gt;
+Dátum: &lt;FILEDATE&gt;
+Állapot: &lt;FILESTATUS&gt;</param>
+  <param name="listView.removeButton.tooltip">Fájl eltávolítása</param>
+  <param name="listView.textInput.defaultString">Írj fájl magyarázat van</param>
+  <param name="listViewButton.tooltip">Lista nézet</param>
+  <param name="loadingText">&lt;b&gt; INICIALIZÁLÁS: &lt;PERCENT&gt;% &lt;/b&gt;</param>
+  <param name="messages.disabledType">Fájlt a következő típusú: &lt;FILETYPES&gt; nem tölthet fel! &lt;COUNTINVALIDFILES&gt; fájlok figyelmen kívül hagyni!</param>
+  <param name="messages.filesCountExceeded">Csak &lt;MAXFILECOUNT&gt; fájlokat tölthet fel! &lt;COUNTINVALIDFILES&gt; fájlok figyelmen kívül hagyni!</param>
+  <param name="messages.filesCountNotEnough">Kérjük, válasszon több fájlt. Minimális fájlok szám &lt;MINFILECOUNT&gt;</param>
+  <param name="messages.httpError">&lt;center&gt; HTTP Error "&lt;ERRORCODE&gt;" történt. &lt;DESCRIPTION&gt;&lt;br&gt; Kérjük, olvassa el &lt;font color='#0000FF'&gt; &lt;a title='Error description' target='_blank' href='&lt;W3WLINK&gt;'&gt; &lt;W3WLINK&gt; &lt;/a&gt; &lt;/font&gt; hibakód meghatározások további információkért. &lt;/center&gt;</param>
+  <param name="messages.httpError.400">Rossz kérés. Szerver nem értette a kérést! Kérjük, forduljon a kiszolgáló rendszergazdájához.</param>
+  <param name="messages.httpError.401">Jogosulatlan. Felhasználói hitelesítés szükséges!</param>
+  <param name="messages.httpError.402">Fizetés Kötelező. Fenntartva kódot!</param>
+  <param name="messages.httpError.403">Tilos. A szerver megértette a kérést, de nem hajlandó teljesíteni azt!&lt;br&gt;Az apache szerver: Ez azért történik, mert van engedélyezve Apache modulként nevű mod_security a szerver, amely blokkolja a fejlécek által küldött Flash.&lt;br&gt;Az IIS szerverek az ASP: Ez a probléma akkor jelentkezik, ha a Content-Length fejléc jelen van, és ha a Content-Length fejléc meghatározza az adatmennyiség, ami nagyobb, mint az értéke AspMaxRequestEntityAllowed ingatlan az IIS metabázis.&lt;br&gt;Az alapértelmezett értéke AspMaxRequestEntityAllowed ingatlan 204800 byte.</param>
+  <param name="messages.httpError.404">Az oldal nem található. Nem találja "&lt;URL&gt;" oldalon a szerveren!</param>
+  <param name="messages.httpError.405">Post módszer nem megengedett ezen az oldalon &lt;URL&gt;! Kérjük, próbálja megváltoztatni szerver beállításait, hogy tegye módszer fogadására forgatókönyvet.</param>
+  <param name="messages.httpError.406">Nem fogadható el. Ez azt jelenti, hogy a szerver nem tud generálni választ szervezetek, amelyek tartalmi jellemzőkkel nem fogadható el az Accept fejlécek küldte a kérést. Flash elfogadja a fejléc "text / * '.</param>
+  <param name="messages.httpError.407">Proxy hitelesítés szükséges.</param>
+  <param name="messages.httpError.408">Request Timeout.</param>
+  <param name="messages.httpError.409">Konfliktus.</param>
+  <param name="messages.httpError.410">Gone. A kért erőforrás már nem érhető el a szerveren, és nincs továbbítás címe ismert.</param>
+  <param name="messages.httpError.411">Hossz szükséges.</param>
+  <param name="messages.httpError.412">Nem teljesül az előfeltétel.</param>
+  <param name="messages.httpError.413">A kérelem túl nagy.&lt;br&gt;Az IIS szerverek: 1. Próbálja növelni UploadReadAheadSize metabázis tulajdon.&lt;br&gt;2. Próbálja növelni MaxRequestEntityAllowed ingatlan értéke az IIS konfigurációs.&lt;br&gt;A Apache szerver: Próbáld növelése LimitRequestBody paraméter a httpd.conf.</param>
+  <param name="messages.httpError.414">Kérelem-URI túl hosszú.</param>
+  <param name="messages.httpError.415">Nem támogatott médiatípus.</param>
+  <param name="messages.httpError.416">A kért tartomány nem teljesíthető.</param>
+  <param name="messages.httpError.417">Elvárásaimat sikerült.</param>
+  <param name="messages.httpError.500">Internal Server Error. Általában ez azt jelenti, hogy a fogadó script hibák.</param>
+  <param name="messages.httpError.501">Nem végrehajtotta. Kiszolgáló nem támogatja a POST módszert.</param>
+  <param name="messages.httpError.502">Bad Gateway.</param>
+  <param name="messages.httpError.503">503 A szolgáltatás nem érhető el. A szerver jelenleg nem tudja kezelni a kérés miatt átmeneti túlterheltség vagy karbantartás a szerveren.</param>
+  <param name="messages.httpError.504">Gateway Timeout.</param>
+  <param name="messages.httpError.505">Nem támogatott verziójú HTTP. Kiszolgáló nem támogatja a HTTP 1.1.</param>
+  <param name="messages.wrongFileType">Csak a fájlok a következő típusú: &lt;FILETYPES&gt; tölthet fel! &lt;COUNTINVALIDFILES&gt; fájlok figyelmen kívül hagyni!</param>
+  <param name="messages.zeroSize">&lt;COUNTINVALIDFILES&gt; fájlok mérete nulla volt figyelmen kívül hagyni!</param>
+  <param name="removeButton.tooltip">A kijelölt fájlok</param>
+  <param name="retryDialog.caption">Retry feltölteni?</param>
+  <param name="retryDialog.message">Néhány fájl nem voltak feltöltve. Szeretné, hogy megpróbálja újra feltölteni?</param>
+  <param name="retryDialog.noLabel">Nem</param>
+  <param name="retryDialog.yesLabel">Igen</param>
+  <param name="sortButton.text"></param>
+  <param name="sortButton.tooltip">Rendezés</param>
+  <param name="sortMenu.byDate">Dátum szerint</param>
+  <param name="sortMenu.byName">Név szerint</param>
+  <param name="sortMenu.bySize">Méret szerint</param>
+  <param name="statusLabel.text.generateThumbnails">Generálása image bélyegképek ... kérem várjon.</param>
+  <param name="statusLabel.text.loadFile "></param>
+  <param name="statusLabel.text.ready">Gróf fájlok: &lt;FILESCOUNT&gt; (&lt;TOTALSIZE&gt;)</param>
+  <param name="statusLabel.text.uploadCancelled">Következő kép feltöltése törölték. Várj ...</param>
+  <param name="statusLabel.text.uploadComplete">Feltöltés kész! &lt;UPLOADEDFILESCOUNT&gt; fájlok (&lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt; bekezdés), Eltelt idő: &lt;ELAPSEDHOUR&gt;: &lt;ELAPSEDMIN&gt;: &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.uploadProgress">Összesen: &lt;PERCENT&gt;% (&lt;FILESNUM&gt; / &lt;FILESTOUPLOADCOUNT&gt;) &lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt; (&lt;RATEVALUE&gt; / sec, hátralévő idő: &lt;LEFTHOUR&gt;: &lt;LEFTMIN&gt;: &lt;LEFTSEC&gt;)</param>
+  <param name="statusLabel.text.uploadStart">Feltöltés ...</param>
+  <param name="statusLabel.text.uploadStopped">Feltöltés megállt. Feltöltve bájt: &lt;TOTALUPLOADEDSIZE&gt;, Eltelt idő: &lt;ELAPSEDHOUR&gt;: &lt;ELAPSEDMIN&gt;: &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.waitForConnection">Szerver nem válaszol. Próbálok újra, kérem várjon.</param>
+  <param name="thumbViewButton.tooltip">Miniatűrök nézet</param>
+  <param name="thumbnail.watermark.text">Element-IT</param>
+  <param name="thumbnailView.bottomPanel.labelPattern">&lt;FILENAME&gt;</param>
+  <param name="thumbnailView.cancelCropIcon.tooltip">Visszavonás kivágni a képet</param>
+  <param name="thumbnailView.contextMenu.CropLabel">Kivágni a képet</param>
+  <param name="thumbnailView.contextMenu.RemoveLabel">Eltávolítás</param>
+  <param name="thumbnailView.contextMenu.RotateLeftLabel">Forgatás balra</param>
+  <param name="thumbnailView.contextMenu.RotateRightLabel">Forgatás jobbra</param>
+  <param name="thumbnailView.contextMenu.UndoCropLabel">Visszavonás kivágni a képet</param>
+  <param name="thumbnailView.cropIcon.tooltip">Kivágni a képet</param>
+  <param name="thumbnailView.editIcon.tooltip">Edit fájl leírása</param>
+  <param name="thumbnailView.infoIcon.disabledFileInfoTooltip">Méret: &lt;FILESIZE&gt;
+Dátum: &lt;FILEDATE&gt;
+Állapot: &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.infoIcon.tooltip">Méret: &lt;FILESIZE&gt;
+Dátum: &lt;FILEDATE&gt;
+Állapot: &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.removeIcon.tooltip">Eltávolítás</param>
+  <param name="thumbnailView.rotateLeftIcon.tooltip">Forgatás balra</param>
+  <param name="thumbnailView.rotateRightIcon.tooltip">Forgatás jobbra</param>
+  <param name="uploadButton.text">Feltöltése</param>
+  <param name="uploadButton.tooltip">Feltöltés megkezdése</param>
+</MultiPowUpload_parameters>

@@ -1,0 +1,34 @@
+{extends file="admin_page.html"}
+
+{block name="main"}
+
+		{controller _class="tw{%$MODULE_NAME%}"  _assign="list" _paging="pagenums:20"}
+		<table class="tb">
+		<thead>
+		<tr><th colspan="5" class="path">Страницы: {$list_paging}</th></tr>
+		<tr><th width="2%">#</th><th width="70%">Название</th>
+		{%if $SUBMODULES_DATA.MODULE.images%}<th>Картинки</th>{%/if%}
+		<th>&nbsp;</th><th>&nbsp;</th></tr>
+		</thead>
+		{foreach from=$list item="e"}
+		<tr class="{cycle values="odd,even"}">
+			<td>{$e.id}</td>
+			<td><a href="/admin/tags/?root={$e.id}">{$e.name}</a></td>
+			{%if $SUBMODULES_DATA.MODULE.images%}<td class="imgs_list">{assign var="imgs" value=$e.Images->img('admin')}
+			{if count($imgs)}{$imgs|array_slice:0:3|implode}<br>{/if}
+			Всего картинок:{$imgs|count}</td>{%/if%}
+			<td class="cnt"><a href="/admin/tags/{$e.id}/?root={$pid}#form"><img src="/i/admin/ico_edit.png" alt="Редактировать" title="Редактировать"></a></td>
+			<td class="cnt"><a href="/admin/tags/delete/{$e.id}/?root={$pid}" onclick="return confirm('Вы точно хотите удалить запись ?');"><img src="/i/admin/ico_delete.png" alt="Удалить" title="Удалить"></a></td>
+		</tr>
+		{/foreach}
+		<tfoot>
+		<tr><th colspan="5" class="path">{$list_paging}</th></tr>
+		</tfoot>
+		</table>
+		<h5>Редактирование/<a href="/admin/tags/modify#form">добавление</a> новой записи:</h5>
+		{if $_gsdata.gspgid_va.0=='modify'}
+        <hr><br>
+        <a name="form"></a>
+        {handler gspgid="/admin/form/tw{%$MODULE_NAME%}/edit/`$_gsdata.gspgid_va.1`"}
+        {/if}
+{/block}

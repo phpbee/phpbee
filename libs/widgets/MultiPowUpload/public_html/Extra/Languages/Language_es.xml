@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MultiPowUpload_parameters>
+  <param name="browseButton.text">Examinar ...</param>
+  <param name="browseButton.tooltip">Añadir archivos para subir</param>
+  <param name="cancelButton.pauseText">Pausa</param>
+  <param name="cancelButton.text">Cancelar</param>
+  <param name="cancelButton.tooltip">Cancelar la operación actual</param>
+  <param name="clearButton.text">Borrar</param>
+  <param name="clearButton.tooltip">Elimine todos los archivos</param>
+  <param name="constant.bytes">bytes</param>
+  <param name="constant.decimalSeparator">,</param>
+  <param name="constant.gigaBytes">Gb</param>
+  <param name="constant.kiloBytes">Kb</param>
+  <param name="constant.megaBytes">Mb</param>
+  <param name="contextMenu.sortByDate">Ordenar por fecha</param>
+  <param name="contextMenu.sortByName">Ordenar por nombre</param>
+  <param name="contextMenu.sortBySize">Ordenar por tamaño</param>
+  <param name="descriptionWindow.caption">Descripción del archivo</param>
+  <param name="descriptionWindow.fileNavigation.fileName.label">&lt;FILENAME&gt;</param>
+  <param name="descriptionWindow.fileNavigation.nextButton.label"></param>
+  <param name="descriptionWindow.fileNavigation.previousButton.label"></param>
+  <param name="exifWindow.caption">&lt;FILENAME&gt; datos EXIF</param>
+  <param name="exifWindow.list.nameHeader">Nombre</param>
+  <param name="exifWindow.list.valueHeader">Valor</param>
+  <param name="fileInfoWindow.caption">Información del fichero</param>
+  <param name="fileInfoWindow.exifInfo">&lt;b&gt; información Exif &lt;/b&gt;: &lt;a&gt; Haga clic para ver &lt;/a&gt;</param>
+  <param name="fileInfoWindow.fileDate">&lt;b&gt; Fecha &lt;/b&gt;: &lt;FILEDATE&gt;</param>
+  <param name="fileInfoWindow.fileName">&lt;b&gt; Nombre &lt;/b&gt;: &lt;FILENAME&gt;</param>
+  <param name="fileInfoWindow.fileSize">&lt;b&gt; Tamaño &lt;/b&gt;: &lt;FILESIZE&gt;</param>
+  <param name="fileInfoWindow.fileStatus">&lt;b&gt; estado &lt;/b&gt;: &lt;FILESTATUS&gt;</param>
+  <param name="fileInfoWindow.imageHeight">&lt;b&gt; la altura de la imagen &lt;/b&gt;: &lt;IMAGEHEIGHT&gt;</param>
+  <param name="fileInfoWindow.imageWidth">&lt;b&gt; Ancho de imagen &lt;/b&gt;: &lt;IMAGEWIDTH&gt;</param>
+  <param name="fileStatus.cancelled">Cancelado</param>
+  <param name="fileStatus.complete">Completado</param>
+  <param name="fileStatus.encodeImage">Codificación de imágenes</param>
+  <param name="fileStatus.error">Se produjo un error</param>
+  <param name="fileStatus.loadFile">Carga de archivos en la memoria</param>
+  <param name="fileStatus.loadImage">Carga de datos de la imagen</param>
+  <param name="fileStatus.processing">Subir</param>
+  <param name="fileStatus.ready">Listo para subir</param>
+  <param name="labelUpload.text">Seleccione los archivos a subir</param>
+  <param name="listView.description.defaultText">Haga clic para editar ...</param>
+  <param name="listView.description.tooltip">Editar archivo de descripción</param>
+  <param name="listView.fileNameLabel.pattern">&lt;FILENAME&gt;</param>
+  <param name="listView.label.disabledFileInfoTooltip">Tamaño: &lt;FILESIZE&gt;
+Fecha: &lt;FILEDATE&gt;
+Estado: &lt;FILESTATUS&gt;</param>
+  <param name="listView.label.tooltip">Tamaño: &lt;FILESIZE&gt;
+Fecha: &lt;FILEDATE&gt;
+Estado: &lt;FILESTATUS&gt;</param>
+  <param name="listView.removeButton.tooltip">Eliminar el archivo</param>
+  <param name="listView.textInput.defaultString">Escribir archivo comentario aquí</param>
+  <param name="listViewButton.tooltip">Vista de lista</param>
+  <param name="loadingText">&lt;b&gt; INICIALIZANDO: &lt;PERCENT&gt;% &lt;/b&gt;</param>
+  <param name="messages.disabledType">Archivo con los siguientes tipos: &lt;FILETYPES&gt; no están autorizados a subir! &lt;COUNTINVALIDFILES&gt; Los archivos fueron ignorados!</param>
+  <param name="messages.filesCountExceeded">Sólo &lt;MAXFILECOUNT&gt; pueden subir archivos! &lt;COUNTINVALIDFILES&gt; Los archivos fueron ignorados!</param>
+  <param name="messages.filesCountNotEnough">Por favor, seleccione más archivos. Mínimo contar con los archivos es &lt;MINFILECOUNT&gt;</param>
+  <param name="messages.httpError">&lt;center&gt; Error de HTTP ", &lt;ERRORCODE&gt; 'se ha producido. &lt;DESCRIPTION&gt;&lt;br&gt; Por favor, consulte &lt;font color='#0000FF'&gt; &lt;a title='Error description' target='_blank' href='&lt;W3WLINK&gt;'&gt; &lt;W3WLINK&gt; &lt;/a&gt; &lt;/font&gt; definiciones de los códigos de error para obtener más información. &lt;/center&gt;</param>
+  <param name="messages.httpError.400">Solicitud incorrecta. El servidor no puede entender petición! Póngase en contacto con el administrador del servidor.</param>
+  <param name="messages.httpError.401">No autorizado. La autenticación de usuarios requeridos!</param>
+  <param name="messages.httpError.402">El pago requerido. código reservados</param>
+  <param name="messages.httpError.403">Prohibida. El servidor entendió la solicitud, pero se niega a cumplirla!&lt;br&gt;Para los servidores Apache: Esto sucede porque se ha habilitado un módulo de Apache mod_security nombre en el servidor que bloquea las cabeceras enviadas por Flash.&lt;br&gt;Para servidores IIS con ASP: Este problema se produce si el encabezado Content-Length está presente y si el encabezado Content-Length especifica una cantidad de datos que es mayor que el valor de la propiedad AspMaxRequestEntityAllowed en la metabase de IIS.&lt;br&gt;El valor predeterminado de la propiedad AspMaxRequestEntityAllowed es 204800 bytes.</param>
+  <param name="messages.httpError.404">Página no encontrada. No se puede encontrar '&lt;URL&gt;' página en el servidor!</param>
+  <param name="messages.httpError.405">método de Correos no deseados de esta página &lt;URL&gt;! Por favor, intenta cambiar la configuración del servidor para permitir el método post para recibir secuencias de comandos.</param>
+  <param name="messages.httpError.406">No Aceptable. Esto significa que el servidor no puede generar entidades de respuesta que tienen características de contenido no aceptable de acuerdo a las cabeceras de aceptación enviada en la solicitud. Flash aceptar encabezado es "text / * '.</param>
+  <param name="messages.httpError.407">Requiere autenticación de proxy.</param>
+  <param name="messages.httpError.408">Solicitud de tiempo de espera.</param>
+  <param name="messages.httpError.409">Conflicto.</param>
+  <param name="messages.httpError.410">Desaparecido. El recurso solicitado ya no está disponible en el servidor y no se conoce la dirección de reenvío.</param>
+  <param name="messages.httpError.411">Longitud requerida.</param>
+  <param name="messages.httpError.412">Error de condición previa.</param>
+  <param name="messages.httpError.413">Entidad de solicitud demasiado grande.&lt;br&gt;Para los servidores IIS: 1. Trate de aumentar la propiedad UploadReadAheadSize metabase.&lt;br&gt;2. Trate de aumentar el valor de la propiedad MaxRequestEntityAllowed en IIS de configuración.&lt;br&gt;Para los servidores apache: Trate de aumentar el parámetro LimitRequestBody en httpd.conf.</param>
+  <param name="messages.httpError.414">Request-URI demasiado largo.</param>
+  <param name="messages.httpError.415">Tipo no compatible.</param>
+  <param name="messages.httpError.416">Rango solicitado no válido.</param>
+  <param name="messages.httpError.417">Expectativa Error.</param>
+  <param name="messages.httpError.500">Error interno del servidor. Por lo general, significa que el guión que reciben tienen errores.</param>
+  <param name="messages.httpError.501">No implementado. El servidor no admite el método POST.</param>
+  <param name="messages.httpError.502">Puerta de enlace incorrecta.</param>
+  <param name="messages.httpError.503">503 Servicio no disponible. El servidor es actualmente incapaz de manejar la solicitud debido a una sobrecarga temporal o el mantenimiento del servidor.</param>
+  <param name="messages.httpError.504">Tiempo de espera de puerta de enlace.</param>
+  <param name="messages.httpError.505">Versión de HTTP no compatible. El servidor no es compatible con HTTP 1.1.</param>
+  <param name="messages.wrongFileType">Sólo los archivos con los siguientes tipos: &lt;FILETYPES&gt; pueden subir! &lt;COUNTINVALIDFILES&gt; Los archivos fueron ignorados!</param>
+  <param name="messages.zeroSize">&lt;COUNTINVALIDFILES&gt; archivos con tamaño cero fueron ignorados!</param>
+  <param name="removeButton.tooltip">Eliminar los archivos seleccionados</param>
+  <param name="retryDialog.caption">Vuelva a intentar subir?</param>
+  <param name="retryDialog.message">Algunos archivos no se han subido. ¿Quieres tratar de subirlo de nuevo?</param>
+  <param name="retryDialog.noLabel">N</param>
+  <param name="retryDialog.yesLabel">Sí</param>
+  <param name="sortButton.text"></param>
+  <param name="sortButton.tooltip">Clasificación para</param>
+  <param name="sortMenu.byDate">Por fecha</param>
+  <param name="sortMenu.byName">Por nombre</param>
+  <param name="sortMenu.bySize">Por tamaño</param>
+  <param name="statusLabel.text.generateThumbnails">La generación de imágenes en miniatura ... por favor espere.</param>
+  <param name="statusLabel.text.loadFile "></param>
+  <param name="statusLabel.text.ready">Conde de archivos: &lt;FILESCOUNT&gt; (&lt;TOTALSIZE&gt;)</param>
+  <param name="statusLabel.text.uploadCancelled">Siguiente subir archivos cancelado. Espere ...</param>
+  <param name="statusLabel.text.uploadComplete">Subir completo! &lt;UPLOADEDFILESCOUNT&gt; archivos (&lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt;), el tiempo transcurrido: &lt;ELAPSEDHOUR&gt;: &lt;ELAPSEDMIN&gt;: &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.uploadProgress">Total: &lt;PERCENT&gt;% (&lt;FILESNUM&gt; / &lt;FILESTOUPLOADCOUNT&gt;) &lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt; (&lt;RATEVALUE&gt; / seg, a la izquierda del tiempo: &lt;LEFTHOUR&gt;: &lt;LEFTMIN&gt;: &lt;LEFTSEC&gt;)</param>
+  <param name="statusLabel.text.uploadStart">Subida de ...</param>
+  <param name="statusLabel.text.uploadStopped">Subir detenido. Subido bytes: &lt;TOTALUPLOADEDSIZE&gt;, Tiempo transcurrido: &lt;ELAPSEDHOUR&gt;: &lt;ELAPSEDMIN&gt;: &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.waitForConnection">El servidor no responde. Tratando de volver a conectar, por favor espere.</param>
+  <param name="thumbViewButton.tooltip">Fotos pequeñas</param>
+  <param name="thumbnail.watermark.text">Elemento de TI</param>
+  <param name="thumbnailView.bottomPanel.labelPattern">&lt;FILENAME&gt;</param>
+  <param name="thumbnailView.cancelCropIcon.tooltip">Deshacer recortar la imagen</param>
+  <param name="thumbnailView.contextMenu.CropLabel">Recortar la imagen</param>
+  <param name="thumbnailView.contextMenu.RemoveLabel">Quitar</param>
+  <param name="thumbnailView.contextMenu.RotateLeftLabel">Girar a la izquierda</param>
+  <param name="thumbnailView.contextMenu.RotateRightLabel">Rotar a la derecha</param>
+  <param name="thumbnailView.contextMenu.UndoCropLabel">Deshacer recortar la imagen</param>
+  <param name="thumbnailView.cropIcon.tooltip">Recortar la imagen</param>
+  <param name="thumbnailView.editIcon.tooltip">Editar archivo de descripción</param>
+  <param name="thumbnailView.infoIcon.disabledFileInfoTooltip">Tamaño: &lt;FILESIZE&gt;
+Fecha: &lt;FILEDATE&gt;
+Estado: &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.infoIcon.tooltip">Tamaño: &lt;FILESIZE&gt;
+Fecha: &lt;FILEDATE&gt;
+Estado: &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.removeIcon.tooltip">Quitar</param>
+  <param name="thumbnailView.rotateLeftIcon.tooltip">Girar a la izquierda</param>
+  <param name="thumbnailView.rotateRightIcon.tooltip">Rotar a la derecha</param>
+  <param name="uploadButton.text">Subir</param>
+  <param name="uploadButton.tooltip">Iniciar la carga</param>
+</MultiPowUpload_parameters>

@@ -1,0 +1,20 @@
+	{$data='.'|explode:$params.link}
+	{$coord_x=$data[1]|cat:'_x'}
+	{$coord_y=$data[1]|cat:'_y'}
+	{if isset($params.where)}
+		{if !is_array($params.where)}
+			{$where=$params.where|string_to_params}
+		{else}
+			{$where=$params.where}
+		{/if}
+	{else}
+		{$where=array()}
+	{/if}
+	{controller _class=$data[0] _assign='list' _params=$where _orderby=$params.orderby|default:''}
+	<select name="{$keyname}">
+		<option value="">не выбрано</option>
+		{foreach from=$list item="item"}
+			{$val="`$item.$coord_x`,`$item.$coord_y`"}
+			<option value="{$val}" {if $val==$current}selected{/if}>{$item|trim}</option>
+		{/foreach}
+	</select>

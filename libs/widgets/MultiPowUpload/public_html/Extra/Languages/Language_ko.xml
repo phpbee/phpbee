@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MultiPowUpload_parameters>
+  <param name="browseButton.text">찾아보기 ...</param>
+  <param name="browseButton.tooltip">업로드 파일 추가</param>
+  <param name="cancelButton.pauseText">중지</param>
+  <param name="cancelButton.text">취소</param>
+  <param name="cancelButton.tooltip">현재 작업 취소</param>
+  <param name="clearButton.text">맑은</param>
+  <param name="clearButton.tooltip">파일을 모두 제거</param>
+  <param name="constant.bytes">바이트</param>
+  <param name="constant.decimalSeparator">,</param>
+  <param name="constant.gigaBytes">잉글랜드</param>
+  <param name="constant.kiloBytes">이하</param>
+  <param name="constant.megaBytes">MB의</param>
+  <param name="contextMenu.sortByDate">날짜순 정렬</param>
+  <param name="contextMenu.sortByName">이름으로 정렬</param>
+  <param name="contextMenu.sortBySize">크기별로 정렬</param>
+  <param name="descriptionWindow.caption">파일에 대한 설명</param>
+  <param name="descriptionWindow.fileNavigation.fileName.label">&lt;FILENAME&gt;</param>
+  <param name="descriptionWindow.fileNavigation.nextButton.label"></param>
+  <param name="descriptionWindow.fileNavigation.previousButton.label"></param>
+  <param name="exifWindow.caption">&lt;FILENAME&gt; EXIF 데이터</param>
+  <param name="exifWindow.list.nameHeader">이름</param>
+  <param name="exifWindow.list.valueHeader">값</param>
+  <param name="fileInfoWindow.caption">파일 정보</param>
+  <param name="fileInfoWindow.exifInfo">&lt;b&gt;의 EXIF 정보 &lt;/b&gt; : &lt;a&gt;보기 클릭 &lt;/a&gt;</param>
+  <param name="fileInfoWindow.fileDate">&lt;b&gt; 날짜 &lt;/b&gt; : &lt;FILEDATE&gt;</param>
+  <param name="fileInfoWindow.fileName">&lt;b&gt; 명칭 &lt;/b&gt; : &lt;FILENAME&gt;</param>
+  <param name="fileInfoWindow.fileSize">&lt;b&gt; 크기 &lt;/b&gt; : &lt;FILESIZE&gt;</param>
+  <param name="fileInfoWindow.fileStatus">&lt;b&gt; 현황 &lt;/b&gt; : &lt;FILESTATUS&gt;</param>
+  <param name="fileInfoWindow.imageHeight">&lt;b&gt; 이미지 높이 &lt;/b&gt; : &lt;IMAGEHEIGHT&gt;</param>
+  <param name="fileInfoWindow.imageWidth">&lt;b&gt; 이미지 너비 &lt;/b&gt; : &lt;IMAGEWIDTH&gt;</param>
+  <param name="fileStatus.cancelled">취소됨</param>
+  <param name="fileStatus.complete">완료</param>
+  <param name="fileStatus.encodeImage">인코딩 이미지</param>
+  <param name="fileStatus.error">오류가 발생했습니다</param>
+  <param name="fileStatus.loadFile">메모리로 파일을로드</param>
+  <param name="fileStatus.loadImage">이미지 데이터를로드</param>
+  <param name="fileStatus.processing">업로드</param>
+  <param name="fileStatus.ready">업로드 준비 완료</param>
+  <param name="labelUpload.text">선택하고 파일 업로드</param>
+  <param name="listView.description.defaultText">편집하려면 클릭하십시오 ...</param>
+  <param name="listView.description.tooltip">설명 파일을 편집</param>
+  <param name="listView.fileNameLabel.pattern">&lt;FILENAME&gt;</param>
+  <param name="listView.label.disabledFileInfoTooltip">사이즈 : &lt;FILESIZE&gt;
+날짜 : &lt;FILEDATE&gt;
+상태 : &lt;FILESTATUS&gt;</param>
+  <param name="listView.label.tooltip">사이즈 : &lt;FILESIZE&gt;
+날짜 : &lt;FILEDATE&gt;
+상태 : &lt;FILESTATUS&gt;</param>
+  <param name="listView.removeButton.tooltip">파일 삭제</param>
+  <param name="listView.textInput.defaultString">여기에 의견을 파일에 쓰기</param>
+  <param name="listViewButton.tooltip">목록보기</param>
+  <param name="loadingText">&lt;b&gt; 초기화 : &lt;PERCENT&gt; % &lt;/b&gt;</param>
+  <param name="messages.disabledType">다음과 같은 유형의 파일이 : &lt;FILETYPES&gt; 업로드할 수 없습니다! &lt;COUNTINVALIDFILES&gt; 파일이 무시되었습니다!</param>
+  <param name="messages.filesCountExceeded">오직 &lt;MAXFILECOUNT&gt; 업로드 허용 파일! &lt;COUNTINVALIDFILES&gt; 파일이 무시되었습니다!</param>
+  <param name="messages.filesCountNotEnough">더 많은 파일을 선택하십시오. 최소 파일 개수 &lt;MINFILECOUNT&gt;입니다</param>
+  <param name="messages.httpError">&lt;center&gt; HTTP 오류 '&lt;ERRORCODE&gt;'가 발생했습니다. &lt;DESCRIPTION&gt;&lt;br&gt; &lt;font color='#0000FF'&gt; 더 자세한 정보 &lt;a title='Error description' target='_blank' href='&lt;W3WLINK&gt;'&gt; &lt;W3WLINK&gt; &lt;/a&gt; &lt;/font&gt; 오류 코드 정의 참조하시기 바랍니다. &lt;/center&gt;</param>
+  <param name="messages.httpError.400">잘못된 요청. 서버가 요청을 이해할 수 없어! 서버 관리자에게 문의하십시오.</param>
+  <param name="messages.httpError.401">무단. 사용자 인증이 필요합니다!</param>
+  <param name="messages.httpError.402">결제가 필요합니다. 소유 코드!</param>
+  <param name="messages.httpError.403">금지됨. 서버가 요청을 이해하고 그것을 수행하기 위해 거부하고 있습니다!&lt;br&gt;아파치 서버의 경우 : 당신이 블록 헤더 Flash 보내는 서버에서 mod_security라는 아파치 모듈을 사용했기 때문에 발생합니다.&lt;br&gt;ASP를 서버와 IIS 용 :이 문제는 Content - Length 헤더가있는 경우 Content - Length 헤더에서 IIS 메타베이스에있는 AspMaxRequestEntityAllowed 속성의 값보다 큰 데이터 양을 지정하는 경우 발생합니다.&lt;br&gt;AspMaxRequestEntityAllowed 속성에 대한 기본값은 204,800 바이트입니다.</param>
+  <param name="messages.httpError.404">페이지를 찾을 수 없습니다. 서버에 '&lt;URL&gt;'페이지를 찾을 수 없습니다!</param>
+  <param name="messages.httpError.405">POST 메서드는이 페이지 &lt;URL&gt;에 사용할 수 없습니다! 스크립트를 받기위한 POST 방식을 허용하도록 서버 설정을 변경하십시오.</param>
+  <param name="messages.httpError.406">허용되지 않음. 이것은 서버가 요청을 보낸 헤더를 수락에 따라 허용 가능한 콘텐츠와 특징을하지 않은 응답 엔터티를 생성할 수 없다는 거죠. Flash 헤더 '/ * 텍스트'이다 동의합니다.</param>
+  <param name="messages.httpError.407">프록시 인증이 필요합니다.</param>
+  <param name="messages.httpError.408">요청 시간 초과.</param>
+  <param name="messages.httpError.409">갈등.</param>
+  <param name="messages.httpError.410">사라짐. 요청한 리소스가 서버에서 더 이상 사용할 수 없음 전달 주소가 알려져있다.</param>
+  <param name="messages.httpError.411">길이가 필요합니다.</param>
+  <param name="messages.httpError.412">사전 조건 실패.</param>
+  <param name="messages.httpError.413">요청 엔티티가 너무 큽니다.&lt;br&gt;1 : IIS 서버에서. UploadReadAheadSize 메타베이스 속성을 증가하십시오.&lt;br&gt;2. 설정 IIS에서 MaxRequestEntityAllowed 속성 값을 증가 봅니다.&lt;br&gt;아파치 서버의 경우 : 값을 httpd.conf에서 LimitRequestBody 매개 변수를 증가하십시오.</param>
+  <param name="messages.httpError.414">- 요청 URI가 너무 깁니다.</param>
+  <param name="messages.httpError.415">지원되지 않는 미디어 유형입니다.</param>
+  <param name="messages.httpError.416">요청 범위.</param>
+  <param name="messages.httpError.417">예상 실패.</param>
+  <param name="messages.httpError.500">내부 서버 오류입니다. 보통 그렇게 수신 스크립트 오류가 의미합니다.</param>
+  <param name="messages.httpError.501">구현되지 않음. 서버가 POST 메서드를 지원하지 않습니다.</param>
+  <param name="messages.httpError.502">불량 게이트웨이.</param>
+  <param name="messages.httpError.503">503 서비스를 사용할 수 없습니다. 현재 서버가 요청을 일시적인 부하 또는 서버의 유지 보수로 인해 처리할 수 없습니다.</param>
+  <param name="messages.httpError.504">게이트웨이 시간 초과.</param>
+  <param name="messages.httpError.505">HTTP 버전이 지원되지 않습니다. 서버는 HTTP 1.1을 지원하지 않습니다.</param>
+  <param name="messages.wrongFileType">다음과 같은 형식의 파일만 사항 : &lt;FILETYPES&gt; 업로드 허용! &lt;COUNTINVALIDFILES&gt; 파일이 무시되었습니다!</param>
+  <param name="messages.zeroSize">크기가 0 &lt;COUNTINVALIDFILES&gt; 파일은 무시되었습니다!</param>
+  <param name="removeButton.tooltip">선택한 파일을 제거합니다</param>
+  <param name="retryDialog.caption">재시도 올릴 수 있습니까?</param>
+  <param name="retryDialog.message">일부 파일이 업로드되지 않았습니다. 다시 업로드하려고 하시겠습니까?</param>
+  <param name="retryDialog.noLabel">없음</param>
+  <param name="retryDialog.yesLabel">예</param>
+  <param name="sortButton.text"></param>
+  <param name="sortButton.tooltip">순서를 정렬</param>
+  <param name="sortMenu.byDate">날짜순</param>
+  <param name="sortMenu.byName">이름으로</param>
+  <param name="sortMenu.bySize">크기별로</param>
+  <param name="statusLabel.text.generateThumbnails">생성 이미지 미리보기 ... 기다려주십시오.</param>
+  <param name="statusLabel.text.loadFile "></param>
+  <param name="statusLabel.text.ready">파일의 개수 : &lt;FILESCOUNT&gt; (&lt;TOTALSIZE&gt;)</param>
+  <param name="statusLabel.text.uploadCancelled">다음 파일이 취소 업로드할 수 있습니다. 잠깐 만요 ...</param>
+  <param name="statusLabel.text.uploadComplete">업로드 완료! &lt;UPLOADEDFILESCOUNT&gt; 파일 (&lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt;), 경과 시간 : &lt;ELAPSEDHOUR&gt; : &lt;ELAPSEDMIN&gt; : &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.uploadProgress">총 : &lt;PERCENT&gt; % (&lt;FILESNUM&gt; / &lt;FILESTOUPLOADCOUNT&gt;) &lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt; (&lt;RATEVALUE&gt; / 초는 시간 떠났습니다 : &lt;LEFTHOUR&gt; : &lt;LEFTMIN&gt; : &lt;LEFTSEC&gt;)</param>
+  <param name="statusLabel.text.uploadStart">업로드 중 ...</param>
+  <param name="statusLabel.text.uploadStopped">업로드가 중단되었습니다. 업로드된 바이트 : &lt;TOTALUPLOADEDSIZE&gt;, 시간 경과 : &lt;ELAPSEDHOUR&gt; : &lt;ELAPSEDMIN&gt; : &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.waitForConnection">서버가 응답하지 않습니다. 재연결 시도, 기다려주십시오.</param>
+  <param name="thumbViewButton.tooltip">작은 이미지보기</param>
+  <param name="thumbnail.watermark.text">요소의 IT</param>
+  <param name="thumbnailView.bottomPanel.labelPattern">&lt;FILENAME&gt;</param>
+  <param name="thumbnailView.cancelCropIcon.tooltip">취소 작물 이미지</param>
+  <param name="thumbnailView.contextMenu.CropLabel">이미지 자르기</param>
+  <param name="thumbnailView.contextMenu.RemoveLabel">제거</param>
+  <param name="thumbnailView.contextMenu.RotateLeftLabel">회전 왼쪽으로</param>
+  <param name="thumbnailView.contextMenu.RotateRightLabel">회전 오른쪽</param>
+  <param name="thumbnailView.contextMenu.UndoCropLabel">취소 작물 이미지</param>
+  <param name="thumbnailView.cropIcon.tooltip">이미지 자르기</param>
+  <param name="thumbnailView.editIcon.tooltip">설명 파일을 편집</param>
+  <param name="thumbnailView.infoIcon.disabledFileInfoTooltip">사이즈 : &lt;FILESIZE&gt;
+날짜 : &lt;FILEDATE&gt;
+상태 : &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.infoIcon.tooltip">사이즈 : &lt;FILESIZE&gt;
+날짜 : &lt;FILEDATE&gt;
+상태 : &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.removeIcon.tooltip">제거</param>
+  <param name="thumbnailView.rotateLeftIcon.tooltip">회전 왼쪽으로</param>
+  <param name="thumbnailView.rotateRightIcon.tooltip">회전 오른쪽</param>
+  <param name="uploadButton.text">업로드</param>
+  <param name="uploadButton.tooltip">업로드 시작</param>
+</MultiPowUpload_parameters>

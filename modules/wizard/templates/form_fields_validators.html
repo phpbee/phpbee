@@ -1,0 +1,46 @@
+{extends file="wizard_page.html"}
+{block name="main"}
+
+	{controller _class=wz_form_fields _assign=field  _assign_type=first id=$_gsdata.gspgid_va.0}
+	{$form=$field->Form->first()}
+
+
+	<h3>
+	<a href="/admin/wizard/module/{$form.Module->first()->id}">{$form.Module->first()->name}</a>
+	=>
+	<a href="/admin/wizard/forms/{$form.Module->first()->id}">{$form.classname}</a>
+	=>
+	<a href="/admin/wizard/form_fields/{$form.id}">{$field.name}</a>
+
+	 <a href="/admin/wizard/commit/{$form.Module->first()->id}">commit</a>
+	</h3>
+
+
+	<h4>fields</h4>
+	<table class="tb">
+	<thead>
+	<tr><th>#</th>
+	<th>class</th>
+	<th>options</th>
+	<th></th>
+	<th></th>
+	</thead>
+	{foreach from=$field.Validators item="e"}
+	<tr class="{cycle values='odd,even'}">
+			<td>{$e.id}</td>
+			<td>{$e.class}</td>
+			<td>{$e.options}</td>
+			<td class="cnt"><a href="/admin/wizard/form_fields_validators/{$e.Field_id}/validators/{$e.id}#form"><img src="/i/admin/ico_edit.png" alt="Редактировать" title="Редактировать"></a></td>
+			<td class="cnt"><a href="/admin/wizard/form_fields_validators/delete/{$e.id}" onclick="return confirm('Вы точно хотите удалить запись ?');"><img src="/i/admin/ico_delete.png" alt="Удалить" title="Удалить"></a></td>
+	</tr>
+	{/foreach}
+	</table>
+	<h5>Редактировать/<a href="/admin/wizard/form_fields_validators/{$_gsdata.gspgid_va.0}/validators#form">создать</a>:</h5>
+	{if $_gsdata.gspgid_va.1=='validators'}
+	<hr><br>
+	<a name="form"></a>
+	{handler gspgid="/admin/form/wz_form_fields_validators/edit/`$_gsdata.gspgid_va.2`" Field_id=$field.id}
+	{/if}
+
+
+{/block}

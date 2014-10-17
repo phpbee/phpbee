@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MultiPowUpload_parameters>
+  <param name="browseButton.text">浏览...</param>
+  <param name="browseButton.tooltip">添加上传文件</param>
+  <param name="cancelButton.pauseText">暂停</param>
+  <param name="cancelButton.text">取消</param>
+  <param name="cancelButton.tooltip">取消当前操作</param>
+  <param name="clearButton.text">清除</param>
+  <param name="clearButton.tooltip">删除所有文件</param>
+  <param name="constant.bytes">字节</param>
+  <param name="constant.decimalSeparator">，</param>
+  <param name="constant.gigaBytes">千兆</param>
+  <param name="constant.kiloBytes">kb的</param>
+  <param name="constant.megaBytes">兆</param>
+  <param name="contextMenu.sortByDate">按日期排序</param>
+  <param name="contextMenu.sortByName">按姓名排序</param>
+  <param name="contextMenu.sortBySize">按大小排序</param>
+  <param name="descriptionWindow.caption">说明文件</param>
+  <param name="descriptionWindow.fileNavigation.fileName.label">&lt;FILENAME&gt;</param>
+  <param name="descriptionWindow.fileNavigation.nextButton.label"></param>
+  <param name="descriptionWindow.fileNavigation.previousButton.label"></param>
+  <param name="exifWindow.caption">&lt;FILENAME&gt;EXIF数据</param>
+  <param name="exifWindow.list.nameHeader">名称</param>
+  <param name="exifWindow.list.valueHeader">价值</param>
+  <param name="fileInfoWindow.caption">文件信息</param>
+  <param name="fileInfoWindow.exifInfo">&lt;b&gt;Exif信息&lt;/b&gt;：&lt;a&gt;点击查看&lt;/a&gt;</param>
+  <param name="fileInfoWindow.fileDate">&lt;b&gt;日期&lt;/b&gt;：&lt;FILEDATE&gt;</param>
+  <param name="fileInfoWindow.fileName">&lt;b&gt;名称&lt;/b&gt;：&lt;FILENAME&gt;</param>
+  <param name="fileInfoWindow.fileSize">&lt;b&gt;尺寸&lt;/b&gt;：&lt;FILESIZE&gt;</param>
+  <param name="fileInfoWindow.fileStatus">&lt;b&gt;状态&lt;/b&gt;：&lt;FILESTATUS&gt;</param>
+  <param name="fileInfoWindow.imageHeight">&lt;b&gt;图像高度&lt;/b&gt;：&lt;IMAGEHEIGHT&gt;</param>
+  <param name="fileInfoWindow.imageWidth">&lt;b&gt;图像宽度&lt;/b&gt;：&lt;IMAGEWIDTH&gt;</param>
+  <param name="fileStatus.cancelled">取消</param>
+  <param name="fileStatus.complete">完成</param>
+  <param name="fileStatus.encodeImage">图像编码</param>
+  <param name="fileStatus.error">发生错误</param>
+  <param name="fileStatus.loadFile">文件加载到内存</param>
+  <param name="fileStatus.loadImage">导入图像数据</param>
+  <param name="fileStatus.processing">上传</param>
+  <param name="fileStatus.ready">准备好上传</param>
+  <param name="labelUpload.text">选择要上传的文件</param>
+  <param name="listView.description.defaultText">点击编辑...</param>
+  <param name="listView.description.tooltip">编辑文件描述</param>
+  <param name="listView.fileNameLabel.pattern">&lt;FILENAME&gt;</param>
+  <param name="listView.label.disabledFileInfoTooltip">尺寸：&lt;FILESIZE&gt;
+日期：&lt;FILEDATE&gt;
+状态：&lt;FILESTATUS&gt;</param>
+  <param name="listView.label.tooltip">尺寸：&lt;FILESIZE&gt;
+日期：&lt;FILEDATE&gt;
+状态：&lt;FILESTATUS&gt;</param>
+  <param name="listView.removeButton.tooltip">删除文件</param>
+  <param name="listView.textInput.defaultString">把文件的描述在这里</param>
+  <param name="listViewButton.tooltip">列表视图</param>
+  <param name="loadingText">&lt;PERCENT&gt;初始化：&lt;PERCENT&gt;％&lt;/b&gt;</param>
+  <param name="messages.disabledType">文件与以下类型：&lt;COUNTINVALIDFILES&gt;不允许上传！ &lt;COUNTINVALIDFILES&gt;文件被忽略了！</param>
+  <param name="messages.filesCountExceeded">只有&lt;MAXFILECOUNT&gt;文件可以上传！ &lt;COUNTINVALIDFILES&gt;文件被忽略了！</param>
+  <param name="messages.filesCountNotEnough">请选择多个文件。最小的文件数是&lt;MINFILECOUNT&gt;</param>
+  <param name="messages.httpError">&lt;center&gt;HTTP错误，'&lt;ERRORCODE&gt;'发生。 &lt;DESCRIPTION&gt;&lt;br&gt; 请参阅&lt;font color='#0000FF'&gt;&lt;a title='Error description' target='_blank' href='&lt;W3WLINK&gt;'&gt;&lt;W3WLINK&gt;&lt;/a&gt;&lt;/font&gt;错误的更多信息的代码定义。 &lt;/center&gt;</param>
+  <param name="messages.httpError.400">错误请求。服务器无法理解的要求！请与您的服务器管理员。</param>
+  <param name="messages.httpError.401">未经授权。用户身份验证要求！</param>
+  <param name="messages.httpError.402">付款要求。保留代码！</param>
+  <param name="messages.httpError.403">故宫。服务器理解请求，但是拒绝履行它！&lt;br&gt;对于Apache服务器：这是因为你已经启用了一个Apache服务器上的mod_security模块名为标题的区块由Flash发送。&lt;br&gt;对于ASP的服务器的IIS：此问题发生在一个内容长度头存在，如果内容长度标头指定的数据量超过了AspMaxRequestEntityAllowed属性在IIS元数据库中的值。&lt;br&gt;为AspMaxRequestEntityAllowed属性的默认值是204,800字节。</param>
+  <param name="messages.httpError.404">找不到网页。找不到'&lt;URL&gt;'在服务器上页！</param>
+  <param name="messages.httpError.405">邮政法不允许此页面&lt;URL&gt;！请尝试更改服务器设置以允许接收脚本POST方法。</param>
+  <param name="messages.httpError.406">不能接受的。这意味着，服务器无法响应实体生成具有特色内容不能接受根据接受请求发送了头。 Flash接受头是'文字/ *'。</param>
+  <param name="messages.httpError.407">代理身份验证。</param>
+  <param name="messages.httpError.408">请求超时。</param>
+  <param name="messages.httpError.409">冲突。</param>
+  <param name="messages.httpError.410">走了。请求的资源不再可用在服务器上而且没有转发地址是已知的。</param>
+  <param name="messages.httpError.411">必要参数。</param>
+  <param name="messages.httpError.412">前提条件失败。</param>
+  <param name="messages.httpError.413">请求实体太大。&lt;br&gt;对于IIS服务器：1。努力增加UploadReadAheadSize Metabase属性。&lt;br&gt;2。努力增加MaxRequestEntityAllowed属性值在IIS配置。&lt;br&gt;对于Apache服务器：尽量增加在httpd.conf LimitRequestBody参数。</param>
+  <param name="messages.httpError.414">请求URI太长。</param>
+  <param name="messages.httpError.415">不支持的媒体类型。</param>
+  <param name="messages.httpError.416">请求的范围无法满足。</param>
+  <param name="messages.httpError.417">预期失败。</param>
+  <param name="messages.httpError.500">内部服务器错误。通常，这意味着接收脚本有错误。</param>
+  <param name="messages.httpError.501">没有落实。服务器不支持POST方法。</param>
+  <param name="messages.httpError.502">错误的网关。</param>
+  <param name="messages.httpError.503">503服务不可用。服务器目前无法处理请求由于暂时性的超载或服务器维护。</param>
+  <param name="messages.httpError.504">网关超时。</param>
+  <param name="messages.httpError.505">HTTP版本不受支持。服务器不支持HTTP 1.1。</param>
+  <param name="messages.wrongFileType">只有文件具有以下类型：&lt;FILETYPES&gt;允许上传！ &lt;COUNTINVALIDFILES&gt;文件被忽略了！</param>
+  <param name="messages.zeroSize">大小为零&lt;COUNTINVALIDFILES&gt;文件被忽略！</param>
+  <param name="removeButton.tooltip">删除选定的文件</param>
+  <param name="retryDialog.caption">重试上载？</param>
+  <param name="retryDialog.message">有些文件没有上传。你想尝试上传一次吗？</param>
+  <param name="retryDialog.noLabel">无</param>
+  <param name="retryDialog.yesLabel">是的</param>
+  <param name="sortButton.text"></param>
+  <param name="sortButton.tooltip">排列顺序</param>
+  <param name="sortMenu.byDate">按日期</param>
+  <param name="sortMenu.byName">按名称</param>
+  <param name="sortMenu.bySize">按大小</param>
+  <param name="statusLabel.text.generateThumbnails">生成缩略图...请等待。</param>
+  <param name="statusLabel.text.loadFile "></param>
+  <param name="statusLabel.text.ready">文件数：&lt;FILESCOUNT&gt;（&lt;TOTALSIZE&gt;）</param>
+  <param name="statusLabel.text.uploadCancelled">下一个文件上传取消。等等...</param>
+  <param name="statusLabel.text.uploadComplete">上传完成！ &lt;UPLOADEDFILESCOUNT&gt;文件（&lt;TOTALUPLOADEDSIZE&gt;/&lt;TOTALUPLOADSIZE&gt;），经过时间：&lt;ELAPSEDHOUR&gt;：&lt;ELAPSEDMIN&gt;：&lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.uploadProgress">总计：&lt;PERCENT&gt;％（&lt;FILESNUM&gt;/&lt;FILESTOUPLOADCOUNT&gt;）&lt;TOTALUPLOADEDSIZE&gt;/&lt;TOTALUPLOADSIZE&gt;（&lt;RATEVALUE&gt;/秒，剩余时间：&lt;LEFTHOUR&gt;：&lt;LEFTMIN&gt;：&lt;LEFTSEC&gt;条）</param>
+  <param name="statusLabel.text.uploadStart">上传...</param>
+  <param name="statusLabel.text.uploadStopped">上传停止。上传字节：&lt;TOTALUPLOADEDSIZE&gt;，经过时间：&lt;ELAPSEDHOUR&gt;：&lt;ELAPSEDMIN&gt;：&lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.waitForConnection">服务器未响应。试图重新连接，请等待。</param>
+  <param name="thumbViewButton.tooltip">缩略图视图</param>
+  <param name="thumbnail.watermark.text">元素的IT</param>
+  <param name="thumbnailView.bottomPanel.labelPattern">&lt;FILENAME&gt;</param>
+  <param name="thumbnailView.cancelCropIcon.tooltip">撤消作物操作</param>
+  <param name="thumbnailView.contextMenu.CropLabel">作物</param>
+  <param name="thumbnailView.contextMenu.RemoveLabel">删除</param>
+  <param name="thumbnailView.contextMenu.RotateLeftLabel">向左旋转</param>
+  <param name="thumbnailView.contextMenu.RotateRightLabel">向右旋转</param>
+  <param name="thumbnailView.contextMenu.UndoCropLabel">取消作物</param>
+  <param name="thumbnailView.cropIcon.tooltip">作物选择的区域</param>
+  <param name="thumbnailView.editIcon.tooltip">编辑文件描述</param>
+  <param name="thumbnailView.infoIcon.disabledFileInfoTooltip">尺寸：&lt;FILESIZE&gt;
+日期：&lt;FILEDATE&gt;
+状态：&lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.infoIcon.tooltip">尺寸：&lt;FILESIZE&gt;
+日期：&lt;FILEDATE&gt;
+状态：&lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.removeIcon.tooltip">删除</param>
+  <param name="thumbnailView.rotateLeftIcon.tooltip">向左旋转</param>
+  <param name="thumbnailView.rotateRightIcon.tooltip">向右旋转</param>
+  <param name="uploadButton.text">上传</param>
+  <param name="uploadButton.tooltip">开始上传</param>
+</MultiPowUpload_parameters>

@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MultiPowUpload_parameters>
+  <param name="browseButton.text">Browse ...</param>
+  <param name="browseButton.tooltip">Ajoute dosye pou upload</param>
+  <param name="cancelButton.pauseText">Pòz</param>
+  <param name="cancelButton.text">Anile</param>
+  <param name="cancelButton.tooltip">Anile aktyèl operasyon</param>
+  <param name="clearButton.text">Klè</param>
+  <param name="clearButton.tooltip">Retire tout dosye</param>
+  <param name="constant.bytes">bytes</param>
+  <param name="constant.decimalSeparator">,</param>
+  <param name="constant.gigaBytes">GB</param>
+  <param name="constant.kiloBytes">Kb</param>
+  <param name="constant.megaBytes">Mb</param>
+  <param name="contextMenu.sortByDate">Triye dapre dat</param>
+  <param name="contextMenu.sortByName">Triye pa non</param>
+  <param name="contextMenu.sortBySize">Triye pa gwosè</param>
+  <param name="descriptionWindow.caption">Deskripsyon pou dosye</param>
+  <param name="descriptionWindow.fileNavigation.fileName.label">&lt;FILENAME&gt;</param>
+  <param name="descriptionWindow.fileNavigation.nextButton.label"></param>
+  <param name="descriptionWindow.fileNavigation.previousButton.label"></param>
+  <param name="exifWindow.caption">&lt;FILENAME&gt; EXIF done</param>
+  <param name="exifWindow.list.nameHeader">Non</param>
+  <param name="exifWindow.list.valueHeader">Valè</param>
+  <param name="fileInfoWindow.caption">File enfòmasyon</param>
+  <param name="fileInfoWindow.exifInfo">&lt;b&gt; info Exif &lt;/b&gt;: &lt;a&gt; Klike sou "View &lt;/a&gt;</param>
+  <param name="fileInfoWindow.fileDate">&lt;b&gt; Dat &lt;/b&gt;: &lt;FILEDATE&gt;</param>
+  <param name="fileInfoWindow.fileName">&lt;b&gt; Non &lt;/b&gt;: &lt;FILENAME&gt;</param>
+  <param name="fileInfoWindow.fileSize">&lt;b&gt; Lajè &lt;/b&gt;: &lt;FILESIZE&gt;</param>
+  <param name="fileInfoWindow.fileStatus">&lt;b&gt; Status &lt;/b&gt;: &lt;FILESTATUS&gt;</param>
+  <param name="fileInfoWindow.imageHeight">&lt;b&gt; Imaj wotè &lt;/b&gt;: &lt;IMAGEHEIGHT&gt;</param>
+  <param name="fileInfoWindow.imageWidth">&lt;b&gt; Imaj lajè &lt;/b&gt;: &lt;IMAGEWIDTH&gt;</param>
+  <param name="fileStatus.cancelled">Anile</param>
+  <param name="fileStatus.complete">Konplete</param>
+  <param name="fileStatus.encodeImage">Pwograme image</param>
+  <param name="fileStatus.error">Erè ki te fèt</param>
+  <param name="fileStatus.loadFile">Loading fichye an memwa</param>
+  <param name="fileStatus.loadImage">Loading done image</param>
+  <param name="fileStatus.processing">Uploading</param>
+  <param name="fileStatus.ready">Pare pou upload</param>
+  <param name="labelUpload.text">Chwazi Files upload</param>
+  <param name="listView.description.defaultText">Klike sou edit ...</param>
+  <param name="listView.description.tooltip">Edit fichye deskripsyon</param>
+  <param name="listView.fileNameLabel.pattern">&lt;FILENAME&gt;</param>
+  <param name="listView.label.disabledFileInfoTooltip">Size: &lt;FILESIZE&gt;
+Dat: &lt;FILEDATE&gt;
+Status: &lt;FILESTATUS&gt;</param>
+  <param name="listView.label.tooltip">Size: &lt;FILESIZE&gt;
+Dat: &lt;FILEDATE&gt;
+Status: &lt;FILESTATUS&gt;</param>
+  <param name="listView.removeButton.tooltip">Retire tout dosye</param>
+  <param name="listView.textInput.defaultString">Ekri fichye comment isit la</param>
+  <param name="listViewButton.tooltip">View Lis</param>
+  <param name="loadingText">&lt;b&gt; inisyalizin: &lt;PERCENT&gt;% &lt;/b&gt;</param>
+  <param name="messages.disabledType">Imaj sa yo ak kalite: &lt;FILETYPES&gt; pa pèmèt upload! &lt;COUNTINVALIDFILES&gt; dosye yo te inyore!</param>
+  <param name="messages.filesCountExceeded">Sèlman &lt;MAXFILECOUNT&gt; dosye pèmèt yo upload! &lt;COUNTINVALIDFILES&gt; dosye yo te inyore!</param>
+  <param name="messages.filesCountNotEnough">Tanpri chwazi plis dosye. Minimòm dosye konte se &lt;MINFILECOUNT&gt;</param>
+  <param name="messages.httpError">&lt;center&gt; HTTP Erè, '&lt;ERRORCODE&gt;' te fèt. &lt;DESCRIPTION&gt;&lt;br&gt; Tanpri gade &lt;font color='#0000FF'&gt; &lt;a title='Error description' target='_blank' href='&lt;W3WLINK&gt;'&gt; &lt;W3WLINK&gt; &lt;/a&gt; definisyon &lt;/font&gt; kòd erè pou plis enfòmasyon. &lt;/center&gt;</param>
+  <param name="messages.httpError.400">Move demann. Sèvè pa ka konprann demand! Tanpri kontakte administratè sèvè ou.</param>
+  <param name="messages.httpError.401">San otorizasyon. Itilizatè validation obligatwa!</param>
+  <param name="messages.httpError.402">Peman obligatwa. Rezève kòd!</param>
+  <param name="messages.httpError.403">Entèdi. sèvè a konprann demann lan, men ki refize satisfè li!&lt;br&gt;Pou serveur Apache: Sa rive paske ou gen pèmèt yon modil Apache rele mod_security sou sèvè ki blòk tèt yo voye nan Flash.&lt;br&gt;Pou ii ak aspik serveur: Sa pwoblèm rive si yon header Content-Longè ki prezan epi si header a Content-Longè presize yon kantite done ki se pi gwo pase valè a pwopriyete a AspMaxRequestEntityAllowed nan metabaz an ii.&lt;br&gt;valè an default pou pwopriyete a se 204.800 AspMaxRequestEntityAllowed bytes.</param>
+  <param name="messages.httpError.404">Page pa jwenn. Pa ka jwenn '&lt;URL&gt;' paj sou sèvè!</param>
+  <param name="messages.httpError.405">Post metòd yo pa pèmèt pou paj sa &lt;URL&gt;! Tanpri, eseye chanje anviwònman sèvè pèmèt metòd post pou resevwa script.</param>
+  <param name="messages.httpError.406">Pa akseptab. Sa sa vle di ki sèvè pa ka jenere antite repons ki gen karakteristik kontni pa akseptab dapre aksepte nan tèt voye nan demann lan. Flash aksepte se header 'text / *'.</param>
+  <param name="messages.httpError.407">Proxy otantifikasyon obligatwa.</param>
+  <param name="messages.httpError.408">Mande pou arete.</param>
+  <param name="messages.httpError.409">Konfli.</param>
+  <param name="messages.httpError.410">Ale. resous la mande a pa disponib ankò nan sèvè an ak pa adrès redireksyon li te ye.</param>
+  <param name="messages.httpError.411">Longè obligatwa.</param>
+  <param name="messages.httpError.412">Préalable echwe.</param>
+  <param name="messages.httpError.413">Mande Antite twò gwo.&lt;br&gt;Pou ii serveur: 1. Eseye ogmante UploadReadAheadSize pwopriyete metabaz.&lt;br&gt;2. Eseye ogmante MaxRequestEntityAllowed valè pwopriyete nan ii config.&lt;br&gt;Pou serveur Apache: Eseye ogmante LimitRequestBody paramèt nan httpd.conf.</param>
+  <param name="messages.httpError.414">Demann-URI twò long.</param>
+  <param name="messages.httpError.415">Suporte Media Kalite.</param>
+  <param name="messages.httpError.416">Mande Range Pa Satisfiable.</param>
+  <param name="messages.httpError.417">Tann echwe.</param>
+  <param name="messages.httpError.500">Entèn Erè Server. Dabitid sa vle di ke script resevwa gen erè.</param>
+  <param name="messages.httpError.501">Pa Aplikasyon. Sèvè pa sipòte POST metòd.</param>
+  <param name="messages.httpError.502">Move Gateway.</param>
+  <param name="messages.httpError.503">503 Sèvis endisponibl. sèvè a se kounye a kapab okipe demann lan akòz yon Surcharge tanporè oswa antretyen nan sèvè an.</param>
+  <param name="messages.httpError.504">Gateway poz.</param>
+  <param name="messages.httpError.505">Creole HTTP Pa Sipò pou. Sèvè pa sipòte HTTP 1.1.</param>
+  <param name="messages.wrongFileType">Sèlman sa k gen dosye sa yo type: &lt;FILETYPES&gt; pèmèt yo upload! &lt;COUNTINVALIDFILES&gt; dosye yo te inyore!</param>
+  <param name="messages.zeroSize">&lt;COUNTINVALIDFILES&gt; dosye avèk zewo gwosè yo te inyore!</param>
+  <param name="removeButton.tooltip">Retire chwazi dosye</param>
+  <param name="retryDialog.caption">Tantativ upload?</param>
+  <param name="retryDialog.message">Kèk dosye pa te Uploaded. Èske ou vle pou yo eseye upload ankò?</param>
+  <param name="retryDialog.noLabel">Pa gen</param>
+  <param name="retryDialog.yesLabel">Wi</param>
+  <param name="sortButton.text"></param>
+  <param name="sortButton.tooltip">Sorting lòd</param>
+  <param name="sortMenu.byDate">Dapre dat</param>
+  <param name="sortMenu.byName">Pa non</param>
+  <param name="sortMenu.bySize">Selon gwosè</param>
+  <param name="statusLabel.text.generateThumbnails">Pwodui image imaj ... tanpri, tann.</param>
+  <param name="statusLabel.text.loadFile "></param>
+  <param name="statusLabel.text.ready">Konte nan dosye: &lt;FILESCOUNT&gt; (&lt;TOTALSIZE&gt;)</param>
+  <param name="statusLabel.text.uploadCancelled">dosye Next upload anile. Tann ...</param>
+  <param name="statusLabel.text.uploadComplete">Upload ranpli! &lt;UPLOADEDFILESCOUNT&gt; dosye (&lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt;), écoulée Time: &lt;ELAPSEDHOUR&gt;: &lt;ELAPSEDMIN&gt;: &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.uploadProgress">Total: &lt;PERCENT&gt;% (&lt;FILESNUM&gt; / &lt;FILESTOUPLOADCOUNT&gt;) &lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt; (&lt;RATEVALUE&gt; / sec, tan kite: &lt;LEFTHOUR&gt;: &lt;LEFTMIN&gt;: &lt;LEFTSEC&gt;)</param>
+  <param name="statusLabel.text.uploadStart">Uploading ...</param>
+  <param name="statusLabel.text.uploadStopped">Upload sispann. Uploaded bytes: &lt;TOTALUPLOADEDSIZE&gt;, écoulée tan: &lt;ELAPSEDHOUR&gt;: &lt;ELAPSEDMIN&gt;: &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.waitForConnection">Sèvè pa reponn. Eseye rekonekte, tanpri, tann.</param>
+  <param name="thumbViewButton.tooltip">Gade imaj</param>
+  <param name="thumbnail.watermark.text">Eleman-IT</param>
+  <param name="thumbnailView.bottomPanel.labelPattern">&lt;FILENAME&gt;</param>
+  <param name="thumbnailView.cancelCropIcon.tooltip">Defèt rekòt imaj la</param>
+  <param name="thumbnailView.contextMenu.CropLabel">Rekòt imaj la</param>
+  <param name="thumbnailView.contextMenu.RemoveLabel">Retire</param>
+  <param name="thumbnailView.contextMenu.RotateLeftLabel">Vire kite</param>
+  <param name="thumbnailView.contextMenu.RotateRightLabel">Vire adwat</param>
+  <param name="thumbnailView.contextMenu.UndoCropLabel">Defèt rekòt imaj la</param>
+  <param name="thumbnailView.cropIcon.tooltip">Rekòt imaj la</param>
+  <param name="thumbnailView.editIcon.tooltip">Edit fichye deskripsyon</param>
+  <param name="thumbnailView.infoIcon.disabledFileInfoTooltip">Size: &lt;FILESIZE&gt;
+Dat: &lt;FILEDATE&gt;
+Status: &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.infoIcon.tooltip">Size: &lt;FILESIZE&gt;
+Dat: &lt;FILEDATE&gt;
+Status: &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.removeIcon.tooltip">Retire</param>
+  <param name="thumbnailView.rotateLeftIcon.tooltip">Vire kite</param>
+  <param name="thumbnailView.rotateRightIcon.tooltip">Vire adwat</param>
+  <param name="uploadButton.text">Upload</param>
+  <param name="uploadButton.tooltip">Kòmanse upload</param>
+</MultiPowUpload_parameters>

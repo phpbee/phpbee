@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MultiPowUpload_parameters>
+  <param name="browseButton.text">参照...</param>
+  <param name="browseButton.tooltip">アップロード用のファイルを追加します。</param>
+  <param name="cancelButton.pauseText">一時停止</param>
+  <param name="cancelButton.text">キャンセル</param>
+  <param name="cancelButton.tooltip">現在の操作を中止</param>
+  <param name="clearButton.text">クリア</param>
+  <param name="clearButton.tooltip">すべてのファイルを削除します。</param>
+  <param name="constant.bytes">バイト</param>
+  <param name="constant.decimalSeparator">、</param>
+  <param name="constant.gigaBytes">ギガビット</param>
+  <param name="constant.kiloBytes">キロバイト</param>
+  <param name="constant.megaBytes">メガバイト</param>
+  <param name="contextMenu.sortByDate">日付順に並べ替え</param>
+  <param name="contextMenu.sortByName">名前順</param>
+  <param name="contextMenu.sortBySize">サイズで並べ替え</param>
+  <param name="descriptionWindow.caption">ファイルの概要</param>
+  <param name="descriptionWindow.fileNavigation.fileName.label">&lt;FILENAME&gt;</param>
+  <param name="descriptionWindow.fileNavigation.nextButton.label"></param>
+  <param name="descriptionWindow.fileNavigation.previousButton.label"></param>
+  <param name="exifWindow.caption">&lt;FILENAME&gt;EXIFデータ</param>
+  <param name="exifWindow.list.nameHeader">名</param>
+  <param name="exifWindow.list.valueHeader">値</param>
+  <param name="fileInfoWindow.caption">ファイル情報</param>
+  <param name="fileInfoWindow.exifInfo">&lt;b&gt;のExif情報をもっと見る&lt;/b&gt;：&lt;a&gt;を表示する]をクリック&lt;/a&gt;</param>
+  <param name="fileInfoWindow.fileDate">&lt;b&gt;日付&lt;/b&gt;：&lt;FILEDATE&gt;</param>
+  <param name="fileInfoWindow.fileName">&lt;b&gt;名&lt;/b&gt;：&lt;FILENAME&gt;</param>
+  <param name="fileInfoWindow.fileSize">&lt;b&gt;サイズ&lt;/b&gt;：&lt;FILESIZE&gt;</param>
+  <param name="fileInfoWindow.fileStatus">&lt;b&gt;ステータス&lt;/b&gt;：&lt;FILESTATUS&gt;</param>
+  <param name="fileInfoWindow.imageHeight">&lt;b&gt;画像の高さ&lt;/b&gt;：&lt;IMAGEHEIGHT&gt;</param>
+  <param name="fileInfoWindow.imageWidth">&lt;b&gt;画像の幅&lt;/b&gt;：&lt;IMAGEWIDTH&gt;</param>
+  <param name="fileStatus.cancelled">キャンセル</param>
+  <param name="fileStatus.complete">完了</param>
+  <param name="fileStatus.encodeImage">エンコードのイメージ</param>
+  <param name="fileStatus.error">エラーが発生しました</param>
+  <param name="fileStatus.loadFile">ファイルをメモリにロード</param>
+  <param name="fileStatus.loadImage">画像データを読み込んでいます</param>
+  <param name="fileStatus.processing">アップロード</param>
+  <param name="fileStatus.ready">アップロードのための準備</param>
+  <param name="labelUpload.text">ファイルを選択アップロードする</param>
+  <param name="listView.description.defaultText">編集するにはクリックしてください...</param>
+  <param name="listView.description.tooltip">説明ファイルを編集</param>
+  <param name="listView.fileNameLabel.pattern">&lt;FILENAME&gt;</param>
+  <param name="listView.label.disabledFileInfoTooltip">サイズ：&lt;FILESIZE&gt;
+日付：&lt;FILEDATE&gt;
+ステータス：&lt;FILESTATUS&gt;</param>
+  <param name="listView.label.tooltip">サイズ：&lt;FILESIZE&gt;
+日付：&lt;FILEDATE&gt;
+ステータス：&lt;FILESTATUS&gt;</param>
+  <param name="listView.removeButton.tooltip">ファイルを削除</param>
+  <param name="listView.textInput.defaultString">ここにコメントを提出お書きください。</param>
+  <param name="listViewButton.tooltip">リストビュー</param>
+  <param name="loadingText">&lt;b&gt;初期化：&lt;PERCENT&gt;％&lt;/b&gt;</param>
+  <param name="messages.disabledType">次の種類のファイルは：&lt;FILETYPES&gt;アップロードするには許可されていません！ &lt;COUNTINVALIDFILES&gt;ファイルは無視されていました！</param>
+  <param name="messages.filesCountExceeded">のみ&lt;MAXFILECOUNT&gt;アップロードを許可ファイル！ &lt;COUNTINVALIDFILES&gt;ファイルは無視されていました！</param>
+  <param name="messages.filesCountNotEnough">複数のファイルを選択してください。最小ファイル数が&lt;MINFILECOUNT&gt;</param>
+  <param name="messages.httpError">&lt;center&gt;HTTPエラー、'&lt;ERRORCODE&gt;'が発生しました。 &lt;DESCRIPTION&gt;&lt;br&gt; &lt;font color='#0000FF'&gt;詳細については、&lt;a title='Error description' target='_blank' href='&lt;W3WLINK&gt;'&gt;&lt;W3WLINK&gt;&lt;/a&gt;&lt;/font&gt;エラーコードの定義を参照してください。 &lt;/center&gt;</param>
+  <param name="messages.httpError.400">不正な要求。サーバーは要求を理解していないことができます！サーバー管理者に連絡してください。</param>
+  <param name="messages.httpError.401">許可されていない。ユーザ認証が必要です！</param>
+  <param name="messages.httpError.402">お支払いは必須です。予約コード！</param>
+  <param name="messages.httpError.403">紫禁城。サーバーは、要求を理解し、それを満たすために拒否しています！&lt;br&gt;apacheのサーバーの場合：あなたはブロックヘッダがFlashによって送信されたサーバー上でmod_securityをというApacheモジュールを有効にしているために発生します。&lt;br&gt;ASPのサーバーとIISの場合：この問題は、Content - Lengthヘッダーが存在している場合、Content - Lengthヘッダーは、IISメタベース内のAspMaxRequestEntityAllowedプロパティの値よりも大きいされるデータの量を指定されている場合に発生します。&lt;br&gt;AspMaxRequestEntityAllowedプロパティのデフォルト値は204,800バイトです。</param>
+  <param name="messages.httpError.404">ページが見つかりませんでした。サーバー上で'&lt;URL&gt;'ページを見つけることができません！</param>
+  <param name="messages.httpError.405">Postメソッドは、このページ&lt;URL&gt;許可されていません！スクリプトを受信するためのPOSTメソッドを許可するようにサーバーの設定を変更してみてください。</param>
+  <param name="messages.httpError.406">受理されない。これはサーバがリクエストで送信されたヘッダを受けつけないに応じて許可されるコンテンツの特性を持っていないレスポンスエンティティを生成できないことを意味する。 Flashはヘッダが'/ *テキスト'です受け入れます。</param>
+  <param name="messages.httpError.407">プロキシ認証が必要です。</param>
+  <param name="messages.httpError.408">リクエストのタイムアウト。</param>
+  <param name="messages.httpError.409">競合します。</param>
+  <param name="messages.httpError.410">ゴーン。要求されたリソースがサーバでもはや利用可能ですが、どんな転送先アドレスが知られている。</param>
+  <param name="messages.httpError.411">長さは必須です。</param>
+  <param name="messages.httpError.412">前提条件に失敗しました。</param>
+  <param name="messages.httpError.413">要求エンティティが大きすぎます。&lt;br&gt;1：IISサーバーしてください。 UploadReadAheadSizeメタベースプロパティを高めるためにしてみてください。&lt;br&gt;2。設定IISでMaxRequestEntityAllowedプロパティの値を大きくしてみてください。&lt;br&gt;apacheのサーバーの場合：httpd.confのLimitRequestBodyパラメータの値を増やすにしてください。</param>
+  <param name="messages.httpError.414">リクエストが長すぎますURIです。</param>
+  <param name="messages.httpError.415">サポートされていないメディアタイプ。</param>
+  <param name="messages.httpError.416">リクエストされた範囲にない。</param>
+  <param name="messages.httpError.417">期待に失敗しました。</param>
+  <param name="messages.httpError.500">内部サーバーエラーが発生しました。通常は、受信側のスクリプトにエラーがあることを意味します。</param>
+  <param name="messages.httpError.501">実装されていません。 Serverは、POSTメソッドをサポートしていません。</param>
+  <param name="messages.httpError.502">不正なゲートウェイ。</param>
+  <param name="messages.httpError.503">使用不可503サービス。サーバーは現在、要求を一時的な過負荷やサーバのメンテナンスのため、処理することができません。</param>
+  <param name="messages.httpError.504">ゲートウェイタイムアウト。</param>
+  <param name="messages.httpError.505">HTTPバージョンはサポートされていません。サーバーは、HTTP 1.1をサポートしていません。</param>
+  <param name="messages.wrongFileType">次のタイプのファイルのみ：&lt;FILETYPES&gt;アップロードを許可！ &lt;COUNTINVALIDFILES&gt;ファイルは無視されていました！</param>
+  <param name="messages.zeroSize">ゼロサイズ&lt;COUNTINVALIDFILES&gt;ファイルは無視されていました！</param>
+  <param name="removeButton.tooltip">選択したファイルを削除します。</param>
+  <param name="retryDialog.caption">再試行は、アップロードするか？</param>
+  <param name="retryDialog.message">いくつかのファイルがアップロードされませんでした。あなたが再度アップロードして試してみたいですか？</param>
+  <param name="retryDialog.noLabel">いいえ</param>
+  <param name="retryDialog.yesLabel">はい</param>
+  <param name="sortButton.text"></param>
+  <param name="sortButton.tooltip">ソート順序</param>
+  <param name="sortMenu.byDate">日付順</param>
+  <param name="sortMenu.byName">名前で</param>
+  <param name="sortMenu.bySize">規模別</param>
+  <param name="statusLabel.text.generateThumbnails">生成画像のサムネイル...しばらくお待ちください。</param>
+  <param name="statusLabel.text.loadFile "></param>
+  <param name="statusLabel.text.ready">ファイルの数：&lt;FILESCOUNT&gt;（&lt;TOTALSIZE&gt;）</param>
+  <param name="statusLabel.text.uploadCancelled">次のファイルが取り消さアップロードしてください。待って...</param>
+  <param name="statusLabel.text.uploadComplete">アップロードが完了しました。 &lt;UPLOADEDFILESCOUNT&gt;ファイル（&lt;TOTALUPLOADEDSIZE&gt;/&lt;TOTALUPLOADSIZE&gt;）、経過時間：&lt;ELAPSEDHOUR&gt;：&lt;ELAPSEDMIN&gt;：&lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.uploadProgress">合計：&lt;PERCENT&gt;％（&lt;FILESNUM&gt;/&lt;FILESTOUPLOADCOUNT&gt;）&lt;TOTALUPLOADEDSIZE&gt;/&lt;TOTALUPLOADSIZE&gt;（&lt;RATEVALUE&gt;/秒、残り時間：&lt;LEFTHOUR&gt;：&lt;LEFTMIN&gt;：&lt;LEFTSEC&gt;）</param>
+  <param name="statusLabel.text.uploadStart">アップロード中...</param>
+  <param name="statusLabel.text.uploadStopped">アップロードを中止しました。アップロードされたバイト：&lt;TOTALUPLOADEDSIZE&gt;、経過時間：&lt;ELAPSEDHOUR&gt;：&lt;ELAPSEDMIN&gt;：&lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.waitForConnection">サーバが応答しません。再接続しようとすると、しばらくお待ちください。</param>
+  <param name="thumbViewButton.tooltip">サムネールを表示</param>
+  <param name="thumbnail.watermark.text">要素のIT</param>
+  <param name="thumbnailView.bottomPanel.labelPattern">&lt;FILENAME&gt;</param>
+  <param name="thumbnailView.cancelCropIcon.tooltip">元に戻す作物画像</param>
+  <param name="thumbnailView.contextMenu.CropLabel">トリミング</param>
+  <param name="thumbnailView.contextMenu.RemoveLabel">削除</param>
+  <param name="thumbnailView.contextMenu.RotateLeftLabel">回転、左</param>
+  <param name="thumbnailView.contextMenu.RotateRightLabel">右に回転</param>
+  <param name="thumbnailView.contextMenu.UndoCropLabel">元に戻す作物画像</param>
+  <param name="thumbnailView.cropIcon.tooltip">トリミング</param>
+  <param name="thumbnailView.editIcon.tooltip">説明ファイルを編集</param>
+  <param name="thumbnailView.infoIcon.disabledFileInfoTooltip">サイズ：&lt;FILESIZE&gt;
+日付：&lt;FILEDATE&gt;
+ステータス：&lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.infoIcon.tooltip">サイズ：&lt;FILESIZE&gt;
+日付：&lt;FILEDATE&gt;
+ステータス：&lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.removeIcon.tooltip">削除</param>
+  <param name="thumbnailView.rotateLeftIcon.tooltip">回転、左</param>
+  <param name="thumbnailView.rotateRightIcon.tooltip">右に回転</param>
+  <param name="uploadButton.text">アップロード</param>
+  <param name="uploadButton.tooltip">アップロードを開始</param>
+</MultiPowUpload_parameters>

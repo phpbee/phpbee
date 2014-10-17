@@ -1,0 +1,8 @@
+{extends file="admin_lite_page.html"}
+{block name="main"}
+<ul style="display:block; margin:0px; list-style:none; padding:0px;">
+{foreach from=$list item="i"}
+<li style="float:left;"><a href="{$i->src1('content')}"  onclick="top.window.document.getElementById('url').value=this.href; return false;"><img src="{$i->src1('admin')}"></a></li>
+{/foreach}
+</ul>
+{/block}

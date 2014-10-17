@@ -1,0 +1,16 @@
+<table class="links_line">
+	{$cols=3}
+	{math equation="ceil((x+1)/y)" x=$links|count y=$cols assign="rows"}
+	{$c=1}
+	<tr>
+	<td><a href="/{$link_all.href}" {if empty($current)}class="filter_all filter_current"{else}class="filter_all"{/if}>Все</a>&nbsp;<i>[{$link_all.count}]</i></td>
+	{foreach $links as $link=>$i}
+	{if $i.count}
+	<td><a {if $i.key==$current}class="filter_current"{/if} href="/{$i.href}">{$i.name}</a>&nbsp;<i>[{$i.count}]</i></td>
+	{else}
+	<td>{$i.name} [{$i.count}]</td>
+	{/if}
+	{$c=$c+1}
+	{if $c%$cols==0}</tr>{if ceil($c/$cols)<$rows}<tr>{/if}{/if}
+	{/foreach}
+</table>

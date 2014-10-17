@@ -1,0 +1,17 @@
+{assign var="year" value=$smarty.now|date_format:"%Y"}
+{assign var="year" value=$_gsdata.gspgid_a.2|default:$year}
+
+{assign var="month" value=$smarty.now|date_format:"%m"}
+{assign var="month" value=$_gsdata.gspgid_a.3|default:$month}
+{assign var="stime" value=mktime(0,0,0,$month,1,$year)}
+{assign var="start_time" value=$stime|date_format:"%Y-%m-%d"}
+{assign var="end_time" value="`$start_time` +1 month -1 day"|@strtotime|date_format:"%Y-%m-%d"}
+<ul class="list">
+	{controller _class="tw_news" _assign=news date="<=`$end_time`,>=`$start_time`"}
+	{foreach from=$news item=n}
+	<li> <h3><a href="{gl show=$n}">{$n.subject}</a></h3>
+	<h5>Опубликовано {$n.date|date_format:"%d/%m/%y"}</h5>
+		<p>{$n->Images->img('list')|array_slice:0:1|implode:""}{$n.text|strip_tags|truncate:400}</p><div class="clear"></div>
+	</li>
+	{/foreach}
+</ul>

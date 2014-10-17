@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MultiPowUpload_parameters>
+  <param name="browseButton.text">Browse ...</param>
+  <param name="browseButton.tooltip">Kuongeza files kwa upload</param>
+  <param name="cancelButton.pauseText">Pause</param>
+  <param name="cancelButton.text">Kufuta</param>
+  <param name="cancelButton.tooltip">Kufuta sasa operesheni</param>
+  <param name="clearButton.text">Wazi</param>
+  <param name="clearButton.tooltip">Kuondoa mafaili yote</param>
+  <param name="constant.bytes">ka</param>
+  <param name="constant.decimalSeparator">,</param>
+  <param name="constant.gigaBytes">Gb</param>
+  <param name="constant.kiloBytes">Kb</param>
+  <param name="constant.megaBytes">Mb</param>
+  <param name="contextMenu.sortByDate">Aina kwa tarehe</param>
+  <param name="contextMenu.sortByName">Aina kwa jina</param>
+  <param name="contextMenu.sortBySize">Aina na ukubwa</param>
+  <param name="descriptionWindow.caption">Maelezo ya faili</param>
+  <param name="descriptionWindow.fileNavigation.fileName.label">&lt;FILENAME&gt;</param>
+  <param name="descriptionWindow.fileNavigation.nextButton.label"></param>
+  <param name="descriptionWindow.fileNavigation.previousButton.label"></param>
+  <param name="exifWindow.caption">&lt;FILENAME&gt; Exif data</param>
+  <param name="exifWindow.list.nameHeader">Jina</param>
+  <param name="exifWindow.list.valueHeader">Thamani</param>
+  <param name="fileInfoWindow.caption">Faili habari</param>
+  <param name="fileInfoWindow.exifInfo">&lt;b&gt; Exif info &lt;/b&gt;: &lt;a&gt; Click to view &lt;/a&gt;</param>
+  <param name="fileInfoWindow.fileDate">&lt;b&gt; Date &lt;/b&gt;: &lt;FILEDATE&gt;</param>
+  <param name="fileInfoWindow.fileName">&lt;b&gt; Jina &lt;/b&gt;: &lt;FILENAME&gt;</param>
+  <param name="fileInfoWindow.fileSize">&lt;b&gt; Ukubwa &lt;/b&gt;: &lt;FILESIZE&gt;</param>
+  <param name="fileInfoWindow.fileStatus">&lt;b&gt; Hali ya &lt;/b&gt;: &lt;FILESTATUS&gt;</param>
+  <param name="fileInfoWindow.imageHeight">&lt;b&gt; Image urefu &lt;/b&gt;: &lt;IMAGEHEIGHT&gt;</param>
+  <param name="fileInfoWindow.imageWidth">&lt;b&gt; Image upana &lt;/b&gt;: &lt;IMAGEWIDTH&gt;</param>
+  <param name="fileStatus.cancelled">Kufutwa</param>
+  <param name="fileStatus.complete">Kukamilika</param>
+  <param name="fileStatus.encodeImage">Encode image</param>
+  <param name="fileStatus.error">Kosa limetokea</param>
+  <param name="fileStatus.loadFile">Upakiaji faili katika kumbukumbu</param>
+  <param name="fileStatus.loadImage">Upakiaji data image</param>
+  <param name="fileStatus.processing">Kuweka</param>
+  <param name="fileStatus.ready">Tayari kwa ajili ya upload</param>
+  <param name="labelUpload.text">Kuchagua Files upload</param>
+  <param name="listView.description.defaultText">Click hariri ...</param>
+  <param name="listView.description.tooltip">Hariri faili maelezo</param>
+  <param name="listView.fileNameLabel.pattern">&lt;FILENAME&gt;</param>
+  <param name="listView.label.disabledFileInfoTooltip">Faili: &lt;FILESIZE&gt;
+Tarehe: &lt;FILEDATE&gt;
+Sasa: &lt;FILESTATUS&gt;</param>
+  <param name="listView.label.tooltip">Faili: &lt;FILESIZE&gt;
+Tarehe: &lt;FILEDATE&gt;
+Sasa: &lt;FILESTATUS&gt;</param>
+  <param name="listView.removeButton.tooltip">Kuondoa faili</param>
+  <param name="listView.textInput.defaultString">Kuandika faili maoni hapa</param>
+  <param name="listViewButton.tooltip">Orodha ya maoni</param>
+  <param name="loadingText">&lt;b&gt; initializing: &lt;PERCENT&gt;% &lt;/b&gt;</param>
+  <param name="messages.disabledType">Picha na aina zifuatazo: &lt;FILETYPES&gt; hawaruhusiwi upload! &lt;COUNTINVALIDFILES&gt; files walikuwa kupuuzwa!</param>
+  <param name="messages.filesCountExceeded">Tu &lt;MAXFILECOUNT&gt; files kuruhusiwa upload! &lt;COUNTINVALIDFILES&gt; files walikuwa kupuuzwa!</param>
+  <param name="messages.filesCountNotEnough">Tafadhali chagua files zaidi. Kima cha chini cha files kuhesabu ni &lt;MINFILECOUNT&gt;</param>
+  <param name="messages.httpError">&lt;center&gt; HTTP Error, '&lt;ERRORCODE&gt;' ilitokea. &lt;DESCRIPTION&gt;&lt;br&gt; Tafadhali angalia &lt;font color='#0000FF'&gt; &lt;a title='Error description' target='_blank' href='&lt;W3WLINK&gt;'&gt; &lt;W3WLINK&gt; &lt;/a&gt; &lt;/font&gt; kosa code ufafanuzi kwa taarifa zaidi. &lt;/center&gt;</param>
+  <param name="messages.httpError.400">Ombi mbaya. Server hawawezi kuelewa ombi! Tafadhali wasiliana na msimamizi wa seva.</param>
+  <param name="messages.httpError.401">Ruhusa. User uthibitishaji required!</param>
+  <param name="messages.httpError.402">Required malipo. Zimehifadhiwa kificho!</param>
+  <param name="messages.httpError.403">Haramu. server kueleweka ombi hilo, lakini ni kukataa kutimiza hilo!&lt;br&gt;Kwa servrar Apache: Hii hutokea kwa kuwa kuwezeshwa ya moduli Apache aitwaye mod_security server ambayo husaidia headers kutumwa na Flash.&lt;br&gt;Kwa IIS ASP na servrar: Suala hili hutokea kama header Content-Length ni sasa na kama header Content-Length anges kiasi cha takwimu ambazo ni kubwa kuliko thamani ya mali ya AspMaxRequestEntityAllowed katika metabase IIS.&lt;br&gt;Thamani default kwa mali ya AspMaxRequestEntityAllowed ni 204,800 bytes.</param>
+  <param name="messages.httpError.404">Ukurasa halikupatikana. Hawawezi kupata '&lt;URL&gt;' ukurasa server!</param>
+  <param name="messages.httpError.405">mbinu Post hawaruhusiwi kwa ukurasa huu &lt;URL&gt;! Tafadhali jaribu kubadili mazingira server kuruhusu utaratibu wa mwisho kwa ajili ya kupokea script.</param>
+  <param name="messages.httpError.406">Haikubaliki. Hii ina maana server kwamba hawezi kuzalisha vyombo majibu ambayo si tabia ya bidhaa kukubalika kulingana na kukubali headers alimtuma katika kuomba. Flash kukubali header ni 'text / *'.</param>
+  <param name="messages.httpError.407">Mbadala ya Uthibitishaji Required.</param>
+  <param name="messages.httpError.408">Ombi umeisha.</param>
+  <param name="messages.httpError.409">Migogoro.</param>
+  <param name="messages.httpError.410">Gone. Rasilimali ya ombi tena inapatikana katika kompyuta na hakuna anwani ya usambazaji inajulikana.</param>
+  <param name="messages.httpError.411">Urefu Required.</param>
+  <param name="messages.httpError.412">Sharti umeshindikana.</param>
+  <param name="messages.httpError.413">ENTITY maombi kubwa mno.&lt;br&gt;Kwa IIS server: 1. Kujaribu kuongeza UploadReadAheadSize metabase mali.&lt;br&gt;2. Kujaribu kuongeza thamani ya mali MaxRequestEntityAllowed katika IIS Config.&lt;br&gt;Kwa servrar Apache: Jaribu kuongeza LimitRequestBody parameter katika httpd.conf.</param>
+  <param name="messages.httpError.414">Ombi-URI muda mrefu sana.</param>
+  <param name="messages.httpError.415">Unsupported Media Type.</param>
+  <param name="messages.httpError.416">Tafsiri Range Si Satisfiable.</param>
+  <param name="messages.httpError.417">Matumaini umeshindikana.</param>
+  <param name="messages.httpError.500">Seva ya ndani. Kawaida ina maana kwamba script kupokea na makosa.</param>
+  <param name="messages.httpError.501">Si kutekelezwa. Server haina msaada POST mbinu.</param>
+  <param name="messages.httpError.502">Mbaya Gateway.</param>
+  <param name="messages.httpError.503">503 Utumishi hazipatikani. server sasa haiwezi kushughulikia ombi kutokana na overloading ya muda au matengenezo ya server.</param>
+  <param name="messages.httpError.504">Gateway umeisha.</param>
+  <param name="messages.httpError.505">Toleo HTTP si mkono. Server haina msaada HTTP 1.1.</param>
+  <param name="messages.wrongFileType">files tu na aina zifuatazo: &lt;FILETYPES&gt; kuruhusiwa upload! &lt;COUNTINVALIDFILES&gt; files walikuwa kupuuzwa!</param>
+  <param name="messages.zeroSize">files &lt;COUNTINVALIDFILES&gt; na kawaida sifuri walikuwa kupuuzwa!</param>
+  <param name="removeButton.tooltip">Kuondoa files kuchaguliwa</param>
+  <param name="retryDialog.caption">Retry upload?</param>
+  <param name="retryDialog.message">Baadhi files si uploaded. Je, unataka kujaribu upload tena?</param>
+  <param name="retryDialog.noLabel">Hakuna</param>
+  <param name="retryDialog.yesLabel">Ndiyo</param>
+  <param name="sortButton.text"></param>
+  <param name="sortButton.tooltip">Ili kuchagua</param>
+  <param name="sortMenu.byDate">Kwa tarehe</param>
+  <param name="sortMenu.byName">Kwa jina</param>
+  <param name="sortMenu.bySize">Kwa kawaida</param>
+  <param name="statusLabel.text.generateThumbnails">Kuzalisha image thumbnails ... tafadhali kusubiri.</param>
+  <param name="statusLabel.text.loadFile "></param>
+  <param name="statusLabel.text.ready">Hesabu ya files: &lt;FILESCOUNT&gt; (&lt;TOTALSIZE&gt;)</param>
+  <param name="statusLabel.text.uploadCancelled">Next upload files kufutwa. Kusubiri ...</param>
+  <param name="statusLabel.text.uploadComplete">Upload kamili! &lt;UPLOADEDFILESCOUNT&gt; files (&lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt;), elapsed muda: &lt;ELAPSEDHOUR&gt;: &lt;ELAPSEDMIN&gt;: &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.uploadProgress">Jumla: &lt;PERCENT&gt;% (&lt;FILESNUM&gt; / &lt;FILESTOUPLOADCOUNT&gt;) &lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt; (&lt;RATEVALUE&gt; / sec, wakati wa kushoto: &lt;LEFTHOUR&gt;: &lt;LEFTMIN&gt;: &lt;LEFTSEC&gt;)</param>
+  <param name="statusLabel.text.uploadStart">Kuweka ...</param>
+  <param name="statusLabel.text.uploadStopped">Upload kusimamishwa. Uploaded te: &lt;TOTALUPLOADEDSIZE&gt;, elapsed muda: &lt;ELAPSEDHOUR&gt;: &lt;ELAPSEDMIN&gt;: &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.waitForConnection">Server kujibu. Kujaribu kuunganisha, tafadhali ngoja.</param>
+  <param name="thumbViewButton.tooltip">Thumbnails mtazamo</param>
+  <param name="thumbnail.watermark.text">Kipengele-IT</param>
+  <param name="thumbnailView.bottomPanel.labelPattern">&lt;FILENAME&gt;</param>
+  <param name="thumbnailView.cancelCropIcon.tooltip">Tengua mazao ya picha</param>
+  <param name="thumbnailView.contextMenu.CropLabel">Mazao ya picha</param>
+  <param name="thumbnailView.contextMenu.RemoveLabel">Kuondoa</param>
+  <param name="thumbnailView.contextMenu.RotateLeftLabel">Mzunguko wa kushoto</param>
+  <param name="thumbnailView.contextMenu.RotateRightLabel">Mzunguko wa kulia</param>
+  <param name="thumbnailView.contextMenu.UndoCropLabel">Tengua mazao ya picha</param>
+  <param name="thumbnailView.cropIcon.tooltip">Mazao ya picha</param>
+  <param name="thumbnailView.editIcon.tooltip">Hariri faili maelezo</param>
+  <param name="thumbnailView.infoIcon.disabledFileInfoTooltip">Faili: &lt;FILESIZE&gt;
+Tarehe: &lt;FILEDATE&gt;
+Sasa: &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.infoIcon.tooltip">Faili: &lt;FILESIZE&gt;
+Tarehe: &lt;FILEDATE&gt;
+Sasa: &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.removeIcon.tooltip">Kuondoa</param>
+  <param name="thumbnailView.rotateLeftIcon.tooltip">Mzunguko wa kushoto</param>
+  <param name="thumbnailView.rotateRightIcon.tooltip">Mzunguko wa kulia</param>
+  <param name="uploadButton.text">Upload</param>
+  <param name="uploadButton.tooltip">Kuanza upload</param>
+</MultiPowUpload_parameters>

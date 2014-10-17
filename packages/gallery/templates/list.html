@@ -1,0 +1,22 @@
+{extends file="index_small.html"}
+{block name="content"}
+{controller _class="gallery" _assign=gallery}
+			<ul class="gallery">
+			{foreach from=$gallery item=i_gallery}
+
+			<li>
+			<h2>{$i_gallery.name}</h2>
+				<div class="gallery_list">
+					{foreach from=$i_gallery.Images->limit(5) item="img" key="key"}
+					<a href="{gl show=$img}" {if $key}rel="nofollow"{/if} _src="{$img->File->src('tumb')|reset}">{$img->File->img('small')|reset}</a>
+					{/foreach}
+				</div>
+			</li>
+
+			{/foreach}
+			</ul>
+{/block}
+
+
+
+

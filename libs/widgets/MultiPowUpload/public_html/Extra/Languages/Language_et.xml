@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MultiPowUpload_parameters>
+  <param name="browseButton.text">Sirvi ...</param>
+  <param name="browseButton.tooltip">Lisa faile üles laadida</param>
+  <param name="cancelButton.pauseText">Paus</param>
+  <param name="cancelButton.text">Tühista</param>
+  <param name="cancelButton.tooltip">Loobu praeguse tegevuse</param>
+  <param name="clearButton.text">Selge</param>
+  <param name="clearButton.tooltip">Eemalda kõik failid</param>
+  <param name="constant.bytes">bytes</param>
+  <param name="constant.decimalSeparator">,</param>
+  <param name="constant.gigaBytes">Gb</param>
+  <param name="constant.kiloBytes">Kb</param>
+  <param name="constant.megaBytes">Mb</param>
+  <param name="contextMenu.sortByDate">Sordi kuupäeva järgi</param>
+  <param name="contextMenu.sortByName">Sorteeri nime järgi</param>
+  <param name="contextMenu.sortBySize">Sorteeri suurus</param>
+  <param name="descriptionWindow.caption">Kirjeldus faili jaoks</param>
+  <param name="descriptionWindow.fileNavigation.fileName.label">&lt;FILENAME&gt;</param>
+  <param name="descriptionWindow.fileNavigation.nextButton.label"></param>
+  <param name="descriptionWindow.fileNavigation.previousButton.label"></param>
+  <param name="exifWindow.caption">&lt;FILENAME&gt; EXIF andmed</param>
+  <param name="exifWindow.list.nameHeader">Nimi</param>
+  <param name="exifWindow.list.valueHeader">Väärtus</param>
+  <param name="fileInfoWindow.caption">Pildi andmed</param>
+  <param name="fileInfoWindow.exifInfo">&lt;b&gt; Exif info: &lt;/b&gt; &lt;a&gt; Click to view &lt;/a&gt;</param>
+  <param name="fileInfoWindow.fileDate">&lt;b&gt; kuupäev: &lt;/b&gt; &lt;FILEDATE&gt;</param>
+  <param name="fileInfoWindow.fileName">&lt;b&gt; Nimi: &lt;/b&gt; &lt;FILENAME&gt;</param>
+  <param name="fileInfoWindow.fileSize">&lt;b&gt; Size: &lt;/b&gt; &lt;FILESIZE&gt;</param>
+  <param name="fileInfoWindow.fileStatus">&lt;b&gt; Staatus: &lt;/b&gt; &lt;FILESTATUS&gt;</param>
+  <param name="fileInfoWindow.imageHeight">&lt;b&gt; Pildi kõrgus: &lt;/b&gt; &lt;IMAGEHEIGHT&gt;</param>
+  <param name="fileInfoWindow.imageWidth">&lt;b&gt; Pildi laius: &lt;/b&gt; &lt;IMAGEWIDTH&gt;</param>
+  <param name="fileStatus.cancelled">Tühistatud</param>
+  <param name="fileStatus.complete">Lõpetanud</param>
+  <param name="fileStatus.encodeImage">Encode pilt</param>
+  <param name="fileStatus.error">Viga tekkis</param>
+  <param name="fileStatus.loadFile">Loading faili mällu</param>
+  <param name="fileStatus.loadImage">Loading kujutise andmeid</param>
+  <param name="fileStatus.processing">Edastada</param>
+  <param name="fileStatus.ready">Valmis upload</param>
+  <param name="labelUpload.text">Vali failid üles laadida</param>
+  <param name="listView.description.defaultText">Klõpsa Muuda ...</param>
+  <param name="listView.description.tooltip">Edit faili kirjeldus</param>
+  <param name="listView.fileNameLabel.pattern">&lt;FILENAME&gt;</param>
+  <param name="listView.label.disabledFileInfoTooltip">Suurus: &lt;FILESIZE&gt;
+Date: &lt;FILEDATE&gt;
+Staatus: &lt;FILESTATUS&gt;</param>
+  <param name="listView.label.tooltip">Suurus: &lt;FILESIZE&gt;
+Date: &lt;FILEDATE&gt;
+Staatus: &lt;FILESTATUS&gt;</param>
+  <param name="listView.removeButton.tooltip">Eemalda fail</param>
+  <param name="listView.textInput.defaultString">Kirjutage faili siia kommentaar</param>
+  <param name="listViewButton.tooltip">Nimekirja vaade</param>
+  <param name="loadingText">&lt;b&gt; Käivitamine: &lt;PERCENT&gt;% &lt;/b&gt;</param>
+  <param name="messages.disabledType">Pilt koos järgmist tüüpi: &lt;FILETYPES&gt; ei ole lubatud üles laadida! &lt;COUNTINVALIDFILES&gt; failid eirati!</param>
+  <param name="messages.filesCountExceeded">Ainult &lt;MAXFILECOUNT&gt; failid lubatud üles laadida! &lt;COUNTINVALIDFILES&gt; failid eirati!</param>
+  <param name="messages.filesCountNotEnough">Palun valige veel faile. Minimaalne faile arv on &lt;MINFILECOUNT&gt;</param>
+  <param name="messages.httpError">&lt;center&gt; HTTP Error "&lt;ERRORCODE&gt;" on toimunud. &lt;DESCRIPTION&gt;&lt;br&gt; Palun vaadake &lt;font color='#0000FF'&gt; &lt;a title='Error description' target='_blank' href='&lt;W3WLINK&gt;'&gt; &lt;W3WLINK&gt; &lt;/a&gt; &lt;/font&gt; veakood mõisteid rohkem teavet. &lt;/center&gt;</param>
+  <param name="messages.httpError.400">Bad Request. Server ei saa aru taotlus! Palun pöörduge oma serveri administraatori poole.</param>
+  <param name="messages.httpError.401">Loata. Kasutaja autentimine vaja!</param>
+  <param name="messages.httpError.402">Tasu nõutakse. Reserved kood!</param>
+  <param name="messages.httpError.403">Keelatud. Server mõista soovi, kuid keeldub seda täita!&lt;br&gt;Apache serverid: See juhtub, sest olete lubanud Apache moodul nimega mod_security serveris mis blokeerib päised saata Flash.&lt;br&gt;Sest IIS koos ASP serverid: See probleem ilmneb juhul Content-Length päis on olemas ja kui Content-Length päis täpsustatakse andmete hulk, mis on suurem kui väärtus AspMaxRequestEntityAllowed vara IIS meta.&lt;br&gt;Vaikeväärtust AspMaxRequestEntityAllowed kinnisvara 204800 bytes.</param>
+  <param name="messages.httpError.404">Lehekülge ei leitud. Ei leia "&lt;URL&gt;" lehe server!</param>
+  <param name="messages.httpError.405">Post meetodi ole lubatud selle lehe kohta &lt;URL&gt;! Palun proovige muuta serveri seadeid, et võimaldada post meetod saava skripti.</param>
+  <param name="messages.httpError.406">Ei ole vastuvõetav. See tähendab, et server ei saa genereerida vastus üksused, mis on sisu tundemärgid kohaselt vastuvõetav nõustuda päised saadetud taotluses. Flash aktsepteerima päis on "text / *".</param>
+  <param name="messages.httpError.407">Proxy Vajalik autentimine.</param>
+  <param name="messages.httpError.408">Request Timeout.</param>
+  <param name="messages.httpError.409">Konfliktide.</param>
+  <param name="messages.httpError.410">Gone. Nõutud ressurss ei ole enam kättesaadav server ja ükski ekspedeerimine aadress on teada.</param>
+  <param name="messages.httpError.411">Pikkus Nõutav.</param>
+  <param name="messages.httpError.412">Eeltingimus ebaõnnestus.</param>
+  <param name="messages.httpError.413">Request Entity Too Large.&lt;br&gt;Sest IIS servereid: 1. Püüa suurendada UploadReadAheadSize meta vara.&lt;br&gt;2. Püüa suurendada MaxRequestEntityAllowed vara väärtust IIS config.&lt;br&gt;Apache serverid: Proovi suurendada LimitRequestBody parameeter httpd.conf.</param>
+  <param name="messages.httpError.414">Request-URI liiga pikk.</param>
+  <param name="messages.httpError.415">Media tüüpi ei toetata.</param>
+  <param name="messages.httpError.416">Soovitud Range Ei satisfiable.</param>
+  <param name="messages.httpError.417">Ootus ebaõnnestus.</param>
+  <param name="messages.httpError.500">Internal Server Error. Tavaliselt tähendab see, et vastuvõttev script vigu.</param>
+  <param name="messages.httpError.501">Ei rakendata. Server ei toeta POST meetodit.</param>
+  <param name="messages.httpError.502">Bad Gateway.</param>
+  <param name="messages.httpError.503">503 Service Unavailable. Server ei suuda praegu käsitseda taotlust tõttu ajutine ülekoormus või hoolduse server.</param>
+  <param name="messages.httpError.504">Gateway Timeout.</param>
+  <param name="messages.httpError.505">HTTP versioon ei toeta. Server ei toeta HTTP 1.1.</param>
+  <param name="messages.wrongFileType">Ainult faile järgmist tüüpi: &lt;FILETYPES&gt; lubatud üles laadida! &lt;COUNTINVALIDFILES&gt; failid eirati!</param>
+  <param name="messages.zeroSize">&lt;COUNTINVALIDFILES&gt; faile null suurus eirati!</param>
+  <param name="removeButton.tooltip">Eemalda valitud failid</param>
+  <param name="retryDialog.caption">Uuesti üles laadida?</param>
+  <param name="retryDialog.message">Mõned failid ei saatnud. Kas soovid proovida üleslaadimiseks jälle?</param>
+  <param name="retryDialog.noLabel">Nr</param>
+  <param name="retryDialog.yesLabel">Jah</param>
+  <param name="sortButton.text"></param>
+  <param name="sortButton.tooltip">Sortimisjärjestus</param>
+  <param name="sortMenu.byDate">Kuupäevade järgi</param>
+  <param name="sortMenu.byName">Nime järgi</param>
+  <param name="sortMenu.bySize">Autor suurus</param>
+  <param name="statusLabel.text.generateThumbnails">Generating pildi pisipilte ... palun oota.</param>
+  <param name="statusLabel.text.loadFile "></param>
+  <param name="statusLabel.text.ready">Krahv faile: &lt;FILESCOUNT&gt; (&lt;TOTALSIZE&gt;)</param>
+  <param name="statusLabel.text.uploadCancelled">Järgmine faili upload tühistatakse. Oota ...</param>
+  <param name="statusLabel.text.uploadComplete">Laadi valmis! &lt;UPLOADEDFILESCOUNT&gt; failid (&lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt;), Kulunud aeg &lt;ELAPSEDHOUR&gt;: &lt;ELAPSEDMIN&gt;: &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.uploadProgress">Kõik: &lt;PERCENT&gt;% (&lt;FILESNUM&gt; / &lt;FILESTOUPLOADCOUNT&gt;) &lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt; (&lt;RATEVALUE&gt; / s, aega jäänud: &lt;LEFTHOUR&gt;: &lt;LEFTMIN&gt;: &lt;LEFTSEC&gt;)</param>
+  <param name="statusLabel.text.uploadStart">Saatmine ...</param>
+  <param name="statusLabel.text.uploadStopped">Laadi peatunud. Uploaded bytes: &lt;TOTALUPLOADEDSIZE&gt;, Kulunud aeg: &lt;ELAPSEDHOUR&gt;:: &lt;ELAPSEDMIN&gt; &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.waitForConnection">Server ei reageeri. Proovin uuesti, palun oodake.</param>
+  <param name="thumbViewButton.tooltip">Pisipildivaade</param>
+  <param name="thumbnail.watermark.text">Element-IT</param>
+  <param name="thumbnailView.bottomPanel.labelPattern">&lt;FILENAME&gt;</param>
+  <param name="thumbnailView.cancelCropIcon.tooltip">Undo kärpimiseks</param>
+  <param name="thumbnailView.contextMenu.CropLabel">Crop pilt</param>
+  <param name="thumbnailView.contextMenu.RemoveLabel">Eemalda</param>
+  <param name="thumbnailView.contextMenu.RotateLeftLabel">Pööra vasakule</param>
+  <param name="thumbnailView.contextMenu.RotateRightLabel">Pööra paremale</param>
+  <param name="thumbnailView.contextMenu.UndoCropLabel">Undo kärpimiseks</param>
+  <param name="thumbnailView.cropIcon.tooltip">Crop pilt</param>
+  <param name="thumbnailView.editIcon.tooltip">Edit faili kirjeldus</param>
+  <param name="thumbnailView.infoIcon.disabledFileInfoTooltip">Suurus: &lt;FILESIZE&gt;
+Date: &lt;FILEDATE&gt;
+Staatus: &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.infoIcon.tooltip">Suurus: &lt;FILESIZE&gt;
+Date: &lt;FILEDATE&gt;
+Staatus: &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.removeIcon.tooltip">Eemalda</param>
+  <param name="thumbnailView.rotateLeftIcon.tooltip">Pööra vasakule</param>
+  <param name="thumbnailView.rotateRightIcon.tooltip">Pööra paremale</param>
+  <param name="uploadButton.text">Lae üles</param>
+  <param name="uploadButton.tooltip">Start upload</param>
+</MultiPowUpload_parameters>

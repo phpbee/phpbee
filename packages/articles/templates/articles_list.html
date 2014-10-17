@@ -1,0 +1,7 @@
+{controller _class=tw_articles _assign="root" text_id=$_gsdata.gspgid_va.0 _limit=1}
+{controller _class=tw_articles _assign="list" pid_id=$root->first()->id _fields="id,name"}
+<ul>
+	{foreach from=$list item="n"}
+	<li><a href="{gl show=$n}">{$n.name}</a></li>
+	{/foreach}
+</ul>

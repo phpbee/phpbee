@@ -1,0 +1,10 @@
+{extends file="index2.html"}
+{block content}
+Registration completed
+{if $_gsdata.gspgid_va.1=='sent'}
+	We have sent you verification mail now.
+{/else}
+<p>
+If you want to resend verification email please <a href="/{%$module->name%}/resend_mail/{%$rs->name%}/{$_gsdata.gspgid_va.0}">click here</a>.
+</p>
+{/block}

@@ -1,0 +1,19 @@
+{extends file="index.html"}
+{block name="content"}
+{controller _class=tw{%$MODULE_NAME%} _assign="tag" id=$_gsdata.gspgid_va.0|replace:".html":""}
+<h1>Все статьи с тегом <b>{$tag->first()->name}</b></h1>
+
+
+{controller _object=$tag->Parent _assign="list" _paging="pagenums:30"}
+{foreach from=$list item="n"}
+<h1><a href="{gl show=$n module_name="module_articles"}">{$n.name}</a></h1>
+<h2>Опубликовано {$n._ctime|date_format:"%d/%m/%y"}</h2>
+{$n.Images->img('blog')|reset}
+<p>{$n.description}</p>
+<div id="vk_like_{$n->get_id()}"></div>
+<script type="text/javascript">VK.Widgets.Like("vk_like_{$n->get_id()}", {ldelim}type: "full",pageUrl:'http://{$smarty.server.HTTP_HOST}{gl show=$n module_name="module_articles"}'{rdelim});</script>
+<br>
+<br>
+{/foreach}
+<div class="pager"><span>Страницы:</span>{$list_paging}</div>
+{/block}

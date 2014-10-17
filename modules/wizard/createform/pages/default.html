@@ -1,0 +1,15 @@
+<div>
+
+{${%$assign%}=$_gsstack.last}
+{if ${%$assign%}}
+	Welcome
+	{%foreach $profile_fields as $f%}
+		{${%$assign%}.{%$f%}}
+	{%/foreach%}
+	<a href="/{%$module.name%}/logout/{%$rs->name%}">logout</a>
+{else}
+	  {handler gspgid="{%$module.name%}/login/form/{%$rs->name%}" }
+
+{/if}
+
+</div>

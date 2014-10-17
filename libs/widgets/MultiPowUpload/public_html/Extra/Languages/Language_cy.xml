@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MultiPowUpload_parameters>
+  <param name="browseButton.text">Pori ...</param>
+  <param name="browseButton.tooltip">Ychwanegu uwchlwytho ffeiliau ar gyfer</param>
+  <param name="cancelButton.pauseText">Saib</param>
+  <param name="cancelButton.text">Canslo</param>
+  <param name="cancelButton.tooltip">Canslo gweithrediad presennol</param>
+  <param name="clearButton.text">Clir</param>
+  <param name="clearButton.tooltip">Tynnwch yr holl ffeiliau</param>
+  <param name="constant.bytes">bytes</param>
+  <param name="constant.decimalSeparator">,</param>
+  <param name="constant.gigaBytes">Gb</param>
+  <param name="constant.kiloBytes">Kb</param>
+  <param name="constant.megaBytes">Mb</param>
+  <param name="contextMenu.sortByDate">Trefnu yn ôl dyddiad</param>
+  <param name="contextMenu.sortByName">Trefnu yn ôl enw</param>
+  <param name="contextMenu.sortBySize">Trefnu yn ôl maint</param>
+  <param name="descriptionWindow.caption">Disgrifiad gyfer ffeil</param>
+  <param name="descriptionWindow.fileNavigation.fileName.label">&lt;FILENAME&gt;</param>
+  <param name="descriptionWindow.fileNavigation.nextButton.label"></param>
+  <param name="descriptionWindow.fileNavigation.previousButton.label"></param>
+  <param name="exifWindow.caption">&lt;FILENAME&gt; EXIF data</param>
+  <param name="exifWindow.list.nameHeader">Enw</param>
+  <param name="exifWindow.list.valueHeader">Gwerth</param>
+  <param name="fileInfoWindow.caption">Delwedd gwybodaeth</param>
+  <param name="fileInfoWindow.exifInfo">&lt;b&gt; info Exif &lt;/b&gt;: &lt;a&gt; Cliciwch i weld y &lt;/a&gt;</param>
+  <param name="fileInfoWindow.fileDate">&lt;b&gt; Dyddiad &lt;/b&gt;: &lt;FILEDATE&gt;</param>
+  <param name="fileInfoWindow.fileName">&lt;b&gt; Enw &lt;/b&gt;: &lt;FILENAME&gt;</param>
+  <param name="fileInfoWindow.fileSize">&lt;b&gt; Maint &lt;/b&gt;: &lt;FILESIZE&gt;</param>
+  <param name="fileInfoWindow.fileStatus">&lt;b&gt; Statws &lt;/b&gt;: &lt;FILESTATUS&gt;</param>
+  <param name="fileInfoWindow.imageHeight">&lt;b&gt; Image uchder &lt;/b&gt;: &lt;IMAGEHEIGHT&gt;</param>
+  <param name="fileInfoWindow.imageWidth">&lt;b&gt; Image led &lt;/b&gt;: &lt;IMAGEWIDTH&gt;</param>
+  <param name="fileStatus.cancelled">Canslo</param>
+  <param name="fileStatus.complete">Cwblhawyd</param>
+  <param name="fileStatus.encodeImage">Amgodio image</param>
+  <param name="fileStatus.error">Digwyddodd Gwall</param>
+  <param name="fileStatus.loadFile">Llwytho ffeil i mewn cof</param>
+  <param name="fileStatus.loadImage">Llwytho data image</param>
+  <param name="fileStatus.processing">Llwytho i fyny</param>
+  <param name="fileStatus.ready">Yn barod am lanlwytho</param>
+  <param name="labelUpload.text">Dewiswch Ffeiliau i'w llwytho i fyny</param>
+  <param name="listView.description.defaultText">Cliciwch i olygu ...</param>
+  <param name="listView.description.tooltip">Golygu ffeil disgrifiad</param>
+  <param name="listView.fileNameLabel.pattern">&lt;FILENAME&gt;</param>
+  <param name="listView.label.disabledFileInfoTooltip">Maint: &lt;FILESIZE&gt;
+Dyddiad: &lt;FILEDATE&gt;
+Statws: &lt;FILESTATUS&gt;</param>
+  <param name="listView.label.tooltip">Maint: &lt;FILESIZE&gt;
+Dyddiad: &lt;FILEDATE&gt;
+Statws: &lt;FILESTATUS&gt;</param>
+  <param name="listView.removeButton.tooltip">Tynnu'r ffeil</param>
+  <param name="listView.textInput.defaultString">Ysgrifennwch sylw yma ffeil</param>
+  <param name="listViewButton.tooltip">Rhestr barn</param>
+  <param name="loadingText">&lt;b&gt; ymgychwyn: &lt;PERCENT&gt;% &lt;/b&gt;</param>
+  <param name="messages.disabledType">Delwedd gyda mathau canlynol: Nid yw &lt;FILETYPES&gt; Caniateir i lwytho! &lt;COUNTINVALIDFILES&gt; ffeiliau eu hanwybyddu!</param>
+  <param name="messages.filesCountExceeded">Yn unig &lt;MAXFILECOUNT&gt; ffeiliau caniatáu i lwytho! &lt;COUNTINVALIDFILES&gt; ffeiliau eu hanwybyddu!</param>
+  <param name="messages.filesCountNotEnough">Dewiswch ffeiliau mwy. Isafswm ffeiliau cyfrif yn &lt;MINFILECOUNT&gt;</param>
+  <param name="messages.httpError">&lt;center&gt; HTTP Gwall, '&lt;ERRORCODE&gt;' digwydd. &lt;DESCRIPTION&gt;&lt;br&gt; Gweler &lt;font color='#0000FF'&gt; &lt;a title='Error description' target='_blank' href='&lt;W3WLINK&gt;'&gt; &lt;W3WLINK&gt; &lt;/a&gt; &lt;/font&gt; diffiniadau côd gwall am fwy o wybodaeth. &lt;/center&gt;</param>
+  <param name="messages.httpError.400">Cais Gwael. Ni all Gweinydd ddeall cais! Cysylltwch â'ch gweinyddwr gweinydd.</param>
+  <param name="messages.httpError.401">Heb awdurdod. Defnyddiwr dilysiad gofynnol!</param>
+  <param name="messages.httpError.402">Talu Angen. Cedwir cod!</param>
+  <param name="messages.httpError.403">Forbidden. Mae'r gweinydd deall y cais, ond yn gwrthod i gyflawni hynny!&lt;br&gt;Ar gyfer gweinyddwyr apache: Mae hyn yn digwydd oherwydd eich bod wedi galluogi modiwl Apache mod_security a enwir ar y gweinydd sy'n flociau y penawdau a anfonwyd gan Flash.&lt;br&gt;Ar gyfer IIS gyda gweinyddwyr ASP: Mae'r mater hwn yn digwydd os bydd pennawd Content-Hyd yn bresennol, ac os bydd y pennawd Content-Length yn pennu swm o ddata sy'n fwy na gwerth yr eiddo AspMaxRequestEntityAllowed yn y metabase IIS.&lt;br&gt;Y gwerth diofyn ar gyfer yr eiddo AspMaxRequestEntityAllowed yn 204,800 bytes.</param>
+  <param name="messages.httpError.404">Tudalen heb ei darganfod. Methu dod o hyd '&lt;URL&gt;' tudalen ar y gweinydd!</param>
+  <param name="messages.httpError.405">Nid yw dull Post a ganiateir ar gyfer y dudalen hon &lt;URL&gt;! Os gwelwch yn dda ceisio newid gosodiadau gweinydd er mwyn caniatáu dull swydd ar gyfer derbyn script.</param>
+  <param name="messages.httpError.406">Heb Derbyniol. Mae hyn yn golygu na all y gweinydd cynhyrchu endidau ymateb sydd heb nodweddion cynnwys yn dderbyniol yn ôl y penawdau derbyn a anfonwyd yn y cais. Flash derbyn pennyn yw 'testun / *'.</param>
+  <param name="messages.httpError.407">Proxy Angen Dilysu.</param>
+  <param name="messages.httpError.408">Goramser Cais.</param>
+  <param name="messages.httpError.409">Gwrthdaro.</param>
+  <param name="messages.httpError.410">Wedi mynd. Mae'r adnodd Gofynnodd ar gael bellach ar y gweinydd ac nid oes cyfeiriad newydd yn hysbys.</param>
+  <param name="messages.httpError.411">Hyd Angen.</param>
+  <param name="messages.httpError.412">Methu rhagamod.</param>
+  <param name="messages.httpError.413">Endid Cais Rhy fawr.&lt;br&gt;Ar gyfer gweinyddwyr IIS: 1. Ceisiwch gynyddu eiddo metabase UploadReadAheadSize.&lt;br&gt;2. Ceisiwch gynyddu gwerth eiddo MaxRequestEntityAllowed yn IIS config.&lt;br&gt;Ar gyfer gweinyddwyr apache: Ceisiwch gynyddu LimitRequestBody paramedr yn httpd.conf.</param>
+  <param name="messages.httpError.414">Cais-URI Rhy hir.</param>
+  <param name="messages.httpError.415">Math Cyfryngau ni chynhelir.</param>
+  <param name="messages.httpError.416">Ystod Gofynnwyd am Ddim Satisfiable.</param>
+  <param name="messages.httpError.417">Disgwyliadau Methu.</param>
+  <param name="messages.httpError.500">Gwall mewnol Gweinydd. Fel arfer mae'n golygu y sgript wedi derbyn gwallau.</param>
+  <param name="messages.httpError.501">Gweithredwyd Ddim. Nid Gweinyddwr yn cefnogi dull SWYDD.</param>
+  <param name="messages.httpError.502">Porth Gwael.</param>
+  <param name="messages.httpError.503">503 Gwasanaeth ddim ar gael. Mae'r gweinydd yn hyn o bryd yn gallu trafod y cais oherwydd gorlwytho dros dro neu gynnal a chadw y gweinydd.</param>
+  <param name="messages.httpError.504">Porth Goramser.</param>
+  <param name="messages.httpError.505">Fersiwn HTTP Heb ei chefnogaeth. Nid Gweinyddwr yn cefnogi HTTP 1.1.</param>
+  <param name="messages.wrongFileType">Dim ond gyda ffeiliau math canlynol: &lt;FILETYPES&gt; caniateir i lwytho! &lt;COUNTINVALIDFILES&gt; ffeiliau eu hanwybyddu!</param>
+  <param name="messages.zeroSize">&lt;COUNTINVALIDFILES&gt; ffeiliau gyda sero maint eu hanwybyddu!</param>
+  <param name="removeButton.tooltip">Tynnu'r ffeil a ddewiswyd</param>
+  <param name="retryDialog.caption">Ceisio eto llwytho i fyny?</param>
+  <param name="retryDialog.message">Nid yw rhai ffeiliau yn llwytho i fyny. Ydych chi eisiau ceisio lwytho eto?</param>
+  <param name="retryDialog.noLabel">Dim</param>
+  <param name="retryDialog.yesLabel">Ydw</param>
+  <param name="sortButton.text"></param>
+  <param name="sortButton.tooltip">Didoli gorchymyn</param>
+  <param name="sortMenu.byDate">Yn ôl dyddiad</param>
+  <param name="sortMenu.byName">Yn ôl enw</param>
+  <param name="sortMenu.bySize">Yn ôl maint</param>
+  <param name="statusLabel.text.generateThumbnails">thumbnails image Cynhyrchu ... arhoswch os gwelwch yn dda.</param>
+  <param name="statusLabel.text.loadFile "></param>
+  <param name="statusLabel.text.ready">Cyfrif o ffeiliau: &lt;FILESCOUNT&gt; (&lt;TOTALSIZE&gt;)</param>
+  <param name="statusLabel.text.uploadCancelled">Nesaf lanlwytho ffeiliau ganslo. Wait ...</param>
+  <param name="statusLabel.text.uploadComplete">Upload cwblhau! &lt;UPLOADEDFILESCOUNT&gt; Ffeiliau (&lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt;), amser Aeth Heibio: &lt;ELAPSEDHOUR&gt;: &lt;ELAPSEDMIN&gt;: &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.uploadProgress">Cyfanswm: &lt;PERCENT&gt;% (&lt;FILESNUM&gt; / &lt;FILESTOUPLOADCOUNT&gt;) &lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt; (&lt;RATEVALUE&gt; / sec, gadawodd amser: &lt;LEFTHOUR&gt;: &lt;LEFTMIN&gt;: &lt;LEFTSEC&gt;)</param>
+  <param name="statusLabel.text.uploadStart">Llwytho i fyny ...</param>
+  <param name="statusLabel.text.uploadStopped">Llwytho i fyny i ben. Llwythwyd i fyny beit: &lt;TOTALUPLOADEDSIZE&gt;, Aeth Heibio amser: &lt;ELAPSEDHOUR&gt;: &lt;ELAPSEDMIN&gt;: &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.waitForConnection">Gweinydd Nid yw ymateb. Yn ceisio ailgysylltu, arhoswch.</param>
+  <param name="thumbViewButton.tooltip">Thumbnails barn</param>
+  <param name="thumbnail.watermark.text">Elfen-IT</param>
+  <param name="thumbnailView.bottomPanel.labelPattern">&lt;FILENAME&gt;</param>
+  <param name="thumbnailView.cancelCropIcon.tooltip">Dadwneud cnwd y ddelwedd</param>
+  <param name="thumbnailView.contextMenu.CropLabel">Cnydau y ddelwedd</param>
+  <param name="thumbnailView.contextMenu.RemoveLabel">Dileu</param>
+  <param name="thumbnailView.contextMenu.RotateLeftLabel">Cylchdroi chwith</param>
+  <param name="thumbnailView.contextMenu.RotateRightLabel">Cylchdroi hawl</param>
+  <param name="thumbnailView.contextMenu.UndoCropLabel">Dadwneud cnwd y ddelwedd</param>
+  <param name="thumbnailView.cropIcon.tooltip">Cnydau y ddelwedd</param>
+  <param name="thumbnailView.editIcon.tooltip">Golygu ffeil disgrifiad</param>
+  <param name="thumbnailView.infoIcon.disabledFileInfoTooltip">Maint: &lt;FILESIZE&gt;
+Dyddiad: &lt;FILEDATE&gt;
+Statws: &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.infoIcon.tooltip">Maint: &lt;FILESIZE&gt;
+Dyddiad: &lt;FILEDATE&gt;
+Statws: &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.removeIcon.tooltip">Dileu</param>
+  <param name="thumbnailView.rotateLeftIcon.tooltip">Cylchdroi chwith</param>
+  <param name="thumbnailView.rotateRightIcon.tooltip">Cylchdroi hawl</param>
+  <param name="uploadButton.text">Upload</param>
+  <param name="uploadButton.tooltip">Dechrau llwytho i fyny</param>
+</MultiPowUpload_parameters>

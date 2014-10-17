@@ -1,0 +1,122 @@
+{handler gspgid="widgets/MultiPowUpload/action" recordset=$params.recordset hash=$params.hash foreign_field_name=$params.foreign_field_name rid=$params.rid }
+{foreach $params as $k=>$v}
+	<input type=hidden name="{$k}" value="{$v|htmlentities}">
+{/foreach}
+
+
+<div id="images_manager_{$params.hash}" class="images_manager alert" style="display:none;">
+	<input type="hidden" name="checked_items_action" id="checked_items_action" value="">
+	<label class="radio inline"><a href="#" class="btn" id="checked_items_submit" onClick="$('#images_manager_{$params.hash} #checked_items_action').val('delete'); return false;" >Удалить</a></label>
+</div>
+
+	{*
+    <div class="photos_gall">
+    <div  class="MultiPowUploadGallery" id="gallery_{$params.hash}">
+	{foreach $g_images as $g_key=>$images}
+		{if $g_key && $g_key!="nogrp"}<div class=MultiPowUploadGalleryGroup>{/if}
+		{foreach $images as $i}
+		{include file="li_image_MultiPowUpload.html" i=$i}
+		{/foreach}
+		{if $g_key && $g_key!="nogrp"}</div>{/if}
+
+	{/foreach}
+        </div>
+        </div>
+	*}	
+
+	<ul class="MultiPowUploadGallery photos inline " id="gallery_{$params.hash}">
+		{foreach $images as $i}
+		{include file="li_image_MultiPowUpload.html" i=$i}
+		{/foreach}
+	</ul>
+
+
+
+
+<div id="MultiPowUpload_holder">
+<a href="#" type="button" id="MultiPowUploadStartButton" class="vote_btn" onClick="left_heightWid(); MultiPowUpload_Start(); return false;" value="Добавить фотографии">{ml('Добавить фотографии','Upload images')}</a>
+</div>
+
+
+<script>
+	var params_str={$params_str}
+{foreach $params as $k=>$v}
+	var {$k}={$v|json_encode};
+{/foreach}
+</script>
+<script type="text/javascript">
+
+
+	function MultiPowUpload_onAddFiles() {
+		var submit=$("input[type=submit]");
+		submit.each(function(){
+			var t=$(this);
+			t.attr('MultiPowUpload_val',t.val());
+			t.hide();
+		});
+	}
+	function MultiPowUpload_onComplete() {
+		var submit=$("input[type=submit]");
+		submit.each(function(){
+			var t=$(this);
+			t.show();
+		});
+	}
+
+	var widget_MultiPowUpload_license='{cfg('widget_MultiPowUpload_license')}';
+	var widget_MultiPowUpload_watermark='{cfg('widget_MultiPowUpload_watermark')}';
+	var widget_MultiPowUpload_upload_thubnail='{cfg('widget_MultiPowUpload_upload_thubnail')}';
+	var widget_MultiPowUpload_thubnail_size='{cfg('widget_MultiPowUpload_thubnail_size')}';
+
+	  //"language.source" : "Extra/Languages/language_<LANGUAGE_CODE>.xml",
+	var flashvars = {ldelim}
+	  "language.autoDetect": "false",
+	  "language.source" : "/libs/widgets/MultiPowUpload/Extra/Languages/Language_{ml('ru','en')}.xml",
+	  "useExternalInterface":"true",
+	  "eventHandler.onCancel":"_onComplete",
+	  "eventHandler.onClearList":"_onComplete",
+	  "eventHandler.onResponse":"_onComplete",
+	  "eventHandler.onRemoveFiles":"_onComplete",
+	  "serialNumber": "{cfg('widget_MultiPowUpload_license')}",
+	  "uploadUrl": "{gs_var_storage::load('urlprefix')}/widgets/MultiPowUpload/upload/original",
+	  "customPostFields":params_str,
+	  "removeUploadedFilesFromList": "true",
+	  "fileFilter.types":"Images|*.jpg:*.jpeg:*.gif:*.png:*.bmp",
+	  "autoStart": {if cfg('widget_MultiPowUpload_autoStart')}"true"{else}"false"{/if},
+	  "sendThumbnails": {if cfg('widget_MultiPowUpload_upload_thubnail')}"true"{else}"false"{/if},
+	  "sendOriginalImages": {if cfg('widget_MultiPowUpload_upload_thubnail') && !cfg('widget_MultiPowUpload_upload_original')}"false"{else}"true"{/if},
+	  "useExternalInterface": "true",
+	  "fileView.defaultView":"thumbnails",
+	  "thumbnail.uploadUrl": "{gs_var_storage::load('urlprefix')}/widgets/MultiPowUpload/upload/thubnail",
+	  "thumbnail.width": "{cfg('widget_MultiPowUpload_thubnail_size')|default:1600}",
+	  "thumbnail.height": "{cfg('widget_MultiPowUpload_thubnail_size')|default:1600}",
+	  "thumbnail.resizeMode": "fit",
+	  "thumbnail.format": "AUTO",
+	  "thumbnail.jpgQuality": "{cfg('widget_MultiPowUpload_thubnail_quality')|default:85}",
+	  "thumbnail.resizeSmallImages":"false",
+	  "thumbnail.backgroundColor": "#000000",
+	  "thumbnail.transparentBackground": "true",
+	  "thumbnail.autoRotate": "true",
+	  "readImageMetadata": "true",
+	  "thumbnailView.allowCrop": "true",
+	  "thumbnailView.allowRotate": "true",
+	  "thumbnailView.cropRectKeepAspectRatio": "NO",
+	  "thumbnailView.showCropRectDimensions": "true",
+	  "thumbnailView.thumbnailWidth": "180",
+	  "thumbnailView.thumbnailHeight": "180",
+	  /*
+	  "thumbnail.watermark.enabled": {if cfg('widget_MultiPowUpload_watermark')}"true"{else}"false"{/if},
+	  "thumbnail.watermark.position": "bottom.center",
+	  "thumbnail.watermark.text" : "",
+	  "thumbnail.watermark.imageUrl": "{cfg('widget_MultiPowUpload_watermark')}"
+	  */
+	{rdelim};
+
+
+</script>
+<script type="text/javascript" src="/libs/widgets/MultiPowUpload/Extra/swfobject.js"></script>
+<script type="text/javascript" src="/libs/widgets/MultiPowUpload/widget.js"></script>
+<link href="/libs/widgets/MultiPowUpload/widget.css" rel="stylesheet" type="text/css">
+
+
+

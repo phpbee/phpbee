@@ -1,0 +1,7 @@
+<ul>
+{controller _class="tw_news" _assign=news _orderby="date desc" _limit=$_gsdata.gspgid_va.0}
+{foreach from=$news item=n}
+<li>
+<i>{$n.date}</i><br><a href="{gl show=$n}">{$n.subject}</a>
+{/foreach}
+</ul>

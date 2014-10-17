@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MultiPowUpload_parameters>
+  <param name="browseButton.text">Selaa ...</param>
+  <param name="browseButton.tooltip">Lisää tiedostojen latausta</param>
+  <param name="cancelButton.pauseText">Tauko</param>
+  <param name="cancelButton.text">Peruuta</param>
+  <param name="cancelButton.tooltip">Peruuta nykyinen toiminta</param>
+  <param name="clearButton.text">Tyhjennä</param>
+  <param name="clearButton.tooltip">Poista kaikki tiedostot</param>
+  <param name="constant.bytes">tavua</param>
+  <param name="constant.decimalSeparator">,</param>
+  <param name="constant.gigaBytes">Gb</param>
+  <param name="constant.kiloBytes">Kb</param>
+  <param name="constant.megaBytes">Mb</param>
+  <param name="contextMenu.sortByDate">Lajittele päiväyksen</param>
+  <param name="contextMenu.sortByName">Lajittele nimen</param>
+  <param name="contextMenu.sortBySize">Järjestä koon</param>
+  <param name="descriptionWindow.caption">Kuvaus tiedoston</param>
+  <param name="descriptionWindow.fileNavigation.fileName.label">&lt;FILENAME&gt;</param>
+  <param name="descriptionWindow.fileNavigation.nextButton.label"></param>
+  <param name="descriptionWindow.fileNavigation.previousButton.label"></param>
+  <param name="exifWindow.caption">&lt;FILENAME&gt; EXIF</param>
+  <param name="exifWindow.list.nameHeader">Nimi</param>
+  <param name="exifWindow.list.valueHeader">Value</param>
+  <param name="fileInfoWindow.caption">Tiedoston tiedot</param>
+  <param name="fileInfoWindow.exifInfo">&lt;b&gt; Exif info &lt;/b&gt;: &lt;a&gt; Klikkaa nähdäksesi &lt;/a&gt;</param>
+  <param name="fileInfoWindow.fileDate">&lt;b&gt; Päivämäärä &lt;/b&gt;: &lt;FILEDATE&gt;</param>
+  <param name="fileInfoWindow.fileName">&lt;b&gt; Name &lt;/b&gt;: &lt;FILENAME&gt;</param>
+  <param name="fileInfoWindow.fileSize">&lt;b&gt; Koko &lt;/b&gt;: &lt;FILESIZE&gt;</param>
+  <param name="fileInfoWindow.fileStatus">&lt;b&gt; Status &lt;/b&gt;: &lt;FILESTATUS&gt;</param>
+  <param name="fileInfoWindow.imageHeight">&lt;b&gt; Kuvan korkeus &lt;/b&gt;: &lt;IMAGEHEIGHT&gt;</param>
+  <param name="fileInfoWindow.imageWidth">&lt;b&gt; Kuvan leveys &lt;/b&gt;: &lt;IMAGEWIDTH&gt;</param>
+  <param name="fileStatus.cancelled">Peruutettu</param>
+  <param name="fileStatus.complete">Päätökseen</param>
+  <param name="fileStatus.encodeImage">Pakkaa kuva</param>
+  <param name="fileStatus.error">Virhe</param>
+  <param name="fileStatus.loadFile">Ladataan tiedosto muistiin</param>
+  <param name="fileStatus.loadImage">Lataa kuva tietoja</param>
+  <param name="fileStatus.processing">Lataaminen</param>
+  <param name="fileStatus.ready">Valmis lähetettäväksi</param>
+  <param name="labelUpload.text">Valitse lähetettävät tiedostot</param>
+  <param name="listView.description.defaultText">Muokkaa napsauttamalla ...</param>
+  <param name="listView.description.tooltip">Muokkaa tiedoston kuvaus</param>
+  <param name="listView.fileNameLabel.pattern">&lt;FILENAME&gt;</param>
+  <param name="listView.label.disabledFileInfoTooltip">Koko: &lt;FILESIZE&gt;
+Päivämäärä: &lt;FILEDATE&gt;
+Status: &lt;FILESTATUS&gt;</param>
+  <param name="listView.label.tooltip">Koko: &lt;FILESIZE&gt;
+Päivämäärä: &lt;FILEDATE&gt;
+Status: &lt;FILESTATUS&gt;</param>
+  <param name="listView.removeButton.tooltip">Poista tiedosto</param>
+  <param name="listView.textInput.defaultString">Kirjoita tiedosto kommentti tässä</param>
+  <param name="listViewButton.tooltip">Luettelonäkymä</param>
+  <param name="loadingText">&lt;b&gt; ALUSTETAAN: &lt;PERCENT&gt;% &lt;/b&gt;</param>
+  <param name="messages.disabledType">Tiedosto seuraavat: &lt;FILETYPES&gt; ei saa ladata! &lt;COUNTINVALIDFILES&gt; tiedostot huomiotta!</param>
+  <param name="messages.filesCountExceeded">Vain &lt;MAXFILECOUNT&gt; tiedostoja saa ladata! &lt;COUNTINVALIDFILES&gt; tiedostot huomiotta!</param>
+  <param name="messages.filesCountNotEnough">Ole hyvä ja valitse lisää tiedostoja. Pienin tiedostot määrä on &lt;MINFILECOUNT&gt;</param>
+  <param name="messages.httpError">&lt;center&gt; HTTP Error "&lt;ERRORCODE&gt;" tapahtui. &lt;DESCRIPTION&gt;&lt;br&gt; Katso &lt;font color='#0000FF'&gt; &lt;a title='Error description' target='_blank' href='&lt;W3WLINK&gt;'&gt; &lt;W3WLINK&gt; &lt;/a&gt; &lt;/font&gt; virhekoodi määritelmät lisätietoja. &lt;/center&gt;</param>
+  <param name="messages.httpError.400">Bad Request. Palvelin ei ymmärtänyt! Ota yhteyttä palvelimen järjestelmänvalvojaan.</param>
+  <param name="messages.httpError.401">Luvaton. Käyttäjien autentikointi vaaditaan!</param>
+  <param name="messages.httpError.402">Maksu vaaditaan. Varattu koodi!</param>
+  <param name="messages.httpError.403">Kielletty. Palvelin ymmärtää pyynnön, mutta kieltäytyy täyttämään se!&lt;br&gt;Apache-palvelimet: Näin tapahtuu, koska olet ottanut Apachen moduuli nimeltä mod_security palvelimelle, joka estää otsikot lähetetään Flash.&lt;br&gt;IIS ja ASP-palvelimet: Tämä ongelma ilmenee, jos Content-Length otsikko on läsnä ja jos Content-Length header määrittelee miten paljon tietoa on suurempi kuin arvo AspMaxRequestEntityAllowed omaisuuden IIS metakannan.&lt;br&gt;Oletusarvo AspMaxRequestEntityAllowed omaisuuden 204800 tavua.</param>
+  <param name="messages.httpError.404">Sivua ei löydy. Ei löydy "&lt;URL&gt;" sivulla palvelimelle!</param>
+  <param name="messages.httpError.405">Post-menetelmä ei salli tätä sivua &lt;URL&gt;! Yritä muuttaa palvelimen asetuksia, jotta viesti menetelmä vastaanottaa script.</param>
+  <param name="messages.httpError.406">Ei voida hyväksyä. Tämä tarkoittaa, että palvelin ei voi tuottaa vastausta yhteisöjä, joilla on sisällön ominaisuuksia ei voi hyväksyä mukaan hyväksyä otsikot lähetetään pyynnöstä. Flash hyväksyä otsikko on "text / *".</param>
+  <param name="messages.httpError.407">Välityspalvelinvahvistus vaaditaan.</param>
+  <param name="messages.httpError.408">Pyynnön aikakatkaisu.</param>
+  <param name="messages.httpError.409">Conflict.</param>
+  <param name="messages.httpError.410">Gone. Aineisto ei ole enää saatavilla palvelimeen ja huolinta osoite on tiedossa.</param>
+  <param name="messages.httpError.411">Pituus vaaditaan.</param>
+  <param name="messages.httpError.412">Edellytys epäonnistui.</param>
+  <param name="messages.httpError.413">Pyyntökokonaisuus liian suuri.&lt;br&gt;IIS-palvelimet: 1. Yritä lisätä UploadReadAheadSize metakantaan omaisuutta.&lt;br&gt;2. Yritä lisätä MaxRequestEntityAllowed omaisuuden arvo IIS config.&lt;br&gt;Apache-palvelimet: Yritä lisätä LimitRequestBody parametri httpd.conf.</param>
+  <param name="messages.httpError.414">Pyyntö-URI on liian pitkä.</param>
+  <param name="messages.httpError.415">Tueta Mediatyyppi.</param>
+  <param name="messages.httpError.416">Pyydetty alue ei kelpaa.</param>
+  <param name="messages.httpError.417">Odotus epäonnistui.</param>
+  <param name="messages.httpError.500">Internal Server Error. Yleensä se tarkoittaa, että vastaanottava skripti on virheitä.</param>
+  <param name="messages.httpError.501">Ei toteutettu. Palvelin ei tue POST-menetelmää.</param>
+  <param name="messages.httpError.502">Bad Gateway.</param>
+  <param name="messages.httpError.503">503 Palvelu ei ole käytettävissä. Palvelin ei tällä hetkellä pysty käsittelemään pyyntöä, koska tilapäisen ylikuormituksen tai ylläpito palvelimella.</param>
+  <param name="messages.httpError.504">Valitysaikakatkaisu.</param>
+  <param name="messages.httpError.505">HTTP versio ei tuettu. Palvelin ei tue HTTP 1.1.</param>
+  <param name="messages.wrongFileType">Vain tiedostoja seuraava tyyppi: &lt;FILETYPES&gt; saa ladata! &lt;COUNTINVALIDFILES&gt; tiedostot huomiotta!</param>
+  <param name="messages.zeroSize">&lt;COUNTINVALIDFILES&gt; tiedostoja nolla koko jätettiin huomiotta!</param>
+  <param name="removeButton.tooltip">Poista valitut tiedostot</param>
+  <param name="retryDialog.caption">Yritä uudelleen ladata?</param>
+  <param name="retryDialog.message">Joitakin tiedostoja ei ladata. Haluatko yrittää ladata uudelleen?</param>
+  <param name="retryDialog.noLabel">Ei</param>
+  <param name="retryDialog.yesLabel">Kyllä</param>
+  <param name="sortButton.text"></param>
+  <param name="sortButton.tooltip">Lajittelujärjestys</param>
+  <param name="sortMenu.byDate">Päivämäärän</param>
+  <param name="sortMenu.byName">Nimen mukaan</param>
+  <param name="sortMenu.bySize">Koon</param>
+  <param name="statusLabel.text.generateThumbnails">Luodaan kuvan pikkukuvia ... odota.</param>
+  <param name="statusLabel.text.loadFile "></param>
+  <param name="statusLabel.text.ready">Kreivi tiedostot: &lt;FILESCOUNT&gt; (&lt;TOTALSIZE&gt;)</param>
+  <param name="statusLabel.text.uploadCancelled">Seuraava tiedostojen lataaminen peruttu. Odota ...</param>
+  <param name="statusLabel.text.uploadComplete">Lataa täydellinen! &lt;UPLOADEDFILESCOUNT&gt; kuvaa (&lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt;), kulunut aika: &lt;ELAPSEDHOUR&gt;: &lt;ELAPSEDMIN&gt;: &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.uploadProgress">Yhteensä: &lt;PERCENT&gt;% (&lt;FILESNUM&gt; / &lt;FILESTOUPLOADCOUNT&gt;) &lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt; (&lt;RATEVALUE&gt; / s, jäljellä: &lt;LEFTHOUR&gt;: &lt;LEFTMIN&gt;: &lt;LEFTSEC&gt;)</param>
+  <param name="statusLabel.text.uploadStart">Lähetetään ...</param>
+  <param name="statusLabel.text.uploadStopped">Lähetä pysähtyi. Kommentteja tavua: &lt;TOTALUPLOADEDSIZE&gt;, kulunut aika: &lt;ELAPSEDHOUR&gt;: &lt;ELAPSEDMIN&gt;: &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.waitForConnection">Palvelin ei vastannut. Yritetään uudelleen, odota.</param>
+  <param name="thumbViewButton.tooltip">Pikkukuvat mieltä</param>
+  <param name="thumbnail.watermark.text">Element-IT</param>
+  <param name="thumbnailView.bottomPanel.labelPattern">&lt;FILENAME&gt;</param>
+  <param name="thumbnailView.cancelCropIcon.tooltip">Kumoa rajata kuvaa</param>
+  <param name="thumbnailView.contextMenu.CropLabel">Rajaa kuva</param>
+  <param name="thumbnailView.contextMenu.RemoveLabel">Poista</param>
+  <param name="thumbnailView.contextMenu.RotateLeftLabel">Kierrä vasemmalle</param>
+  <param name="thumbnailView.contextMenu.RotateRightLabel">Kierrä oikealle</param>
+  <param name="thumbnailView.contextMenu.UndoCropLabel">Kumoa rajata kuvaa</param>
+  <param name="thumbnailView.cropIcon.tooltip">Rajaa kuva</param>
+  <param name="thumbnailView.editIcon.tooltip">Muokkaa tiedoston kuvaus</param>
+  <param name="thumbnailView.infoIcon.disabledFileInfoTooltip">Koko: &lt;FILESIZE&gt;
+Päivämäärä: &lt;FILEDATE&gt;
+Status: &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.infoIcon.tooltip">Koko: &lt;FILESIZE&gt;
+Päivämäärä: &lt;FILEDATE&gt;
+Status: &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.removeIcon.tooltip">Poista</param>
+  <param name="thumbnailView.rotateLeftIcon.tooltip">Kierrä vasemmalle</param>
+  <param name="thumbnailView.rotateRightIcon.tooltip">Kierrä oikealle</param>
+  <param name="uploadButton.text">Lähetä</param>
+  <param name="uploadButton.tooltip">Aloita lähetys</param>
+</MultiPowUpload_parameters>

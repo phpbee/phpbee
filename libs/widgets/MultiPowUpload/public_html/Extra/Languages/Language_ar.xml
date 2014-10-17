@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MultiPowUpload_parameters>
+  <param name="browseButton.text">تصفح...</param>
+  <param name="browseButton.tooltip">إضافة ملفات للتحميل</param>
+  <param name="cancelButton.pauseText">وقفة</param>
+  <param name="cancelButton.text">إلغاء</param>
+  <param name="cancelButton.tooltip">إلغاء العملية الحالية</param>
+  <param name="clearButton.text">واضح</param>
+  <param name="clearButton.tooltip">إزالة كافة الملفات</param>
+  <param name="constant.bytes">بايت</param>
+  <param name="constant.decimalSeparator">،</param>
+  <param name="constant.gigaBytes">غيغابايت</param>
+  <param name="constant.kiloBytes">كيلو بايت</param>
+  <param name="constant.megaBytes">ميغابايت</param>
+  <param name="contextMenu.sortByDate">الترتيب حسب التاريخ</param>
+  <param name="contextMenu.sortByName">فرز حسب الاسم</param>
+  <param name="contextMenu.sortBySize">حسب حجم</param>
+  <param name="descriptionWindow.caption">وصف للملف</param>
+  <param name="descriptionWindow.fileNavigation.fileName.label">&lt;FILENAME&gt;</param>
+  <param name="descriptionWindow.fileNavigation.nextButton.label"></param>
+  <param name="descriptionWindow.fileNavigation.previousButton.label"></param>
+  <param name="exifWindow.caption">&lt;FILENAME&gt; كسيف البيانات</param>
+  <param name="exifWindow.list.nameHeader">اسم</param>
+  <param name="exifWindow.list.valueHeader">القيمة</param>
+  <param name="fileInfoWindow.caption">ملف معلومات</param>
+  <param name="fileInfoWindow.exifInfo">&lt;b&gt; معلومات كسيف &lt;/b&gt; : &lt;a&gt; اضغط لمشاهدة &lt;/a&gt;</param>
+  <param name="fileInfoWindow.fileDate">&lt;b&gt; تاريخ &lt;/b&gt; : &lt;FILEDATE&gt;</param>
+  <param name="fileInfoWindow.fileName">&lt;b&gt; اسم &lt;/b&gt; : &lt;FILENAME&gt;</param>
+  <param name="fileInfoWindow.fileSize">&lt;b&gt; الحجم &lt;/b&gt; : &lt;FILESIZE&gt;</param>
+  <param name="fileInfoWindow.fileStatus">&lt;b&gt; مركز &lt;/b&gt; : &lt;FILESTATUS&gt;</param>
+  <param name="fileInfoWindow.imageHeight">&lt;b&gt; صورة ارتفاع &lt;/b&gt; : &lt;IMAGEHEIGHT&gt;</param>
+  <param name="fileInfoWindow.imageWidth">&lt;b&gt; عرض للصورة &lt;/b&gt; : &lt;IMAGEWIDTH&gt;</param>
+  <param name="fileStatus.cancelled">ألغي</param>
+  <param name="fileStatus.complete">الانتهاء</param>
+  <param name="fileStatus.encodeImage">ترميز الصور</param>
+  <param name="fileStatus.error">حدث خطأ</param>
+  <param name="fileStatus.loadFile">تحميل الملف في الذاكرة</param>
+  <param name="fileStatus.loadImage">تحميل بيانات الصور</param>
+  <param name="fileStatus.processing">تحميل</param>
+  <param name="fileStatus.ready">جاهزة للتحميل</param>
+  <param name="labelUpload.text">حدد لتحميل الملفات</param>
+  <param name="listView.description.defaultText">انقر لتحرير...</param>
+  <param name="listView.description.tooltip">تحرير ملف الوصف</param>
+  <param name="listView.fileNameLabel.pattern">&lt;FILENAME&gt;</param>
+  <param name="listView.label.disabledFileInfoTooltip">الحجم : &lt;FILESIZE&gt;
+التاريخ : &lt;FILEDATE&gt;
+الحالة : &lt;FILESTATUS&gt;</param>
+  <param name="listView.label.tooltip">الحجم : &lt;FILESIZE&gt;
+التاريخ : &lt;FILEDATE&gt;
+الحالة : &lt;FILESTATUS&gt;</param>
+  <param name="listView.removeButton.tooltip">إزالة ملف</param>
+  <param name="listView.textInput.defaultString">كتابة ملف تعليق هنا</param>
+  <param name="listViewButton.tooltip">عرض قائمة</param>
+  <param name="loadingText">&lt;b&gt; تهيئة : &lt;PERCENT&gt; ٪ &lt;/b&gt;</param>
+  <param name="messages.disabledType">لا يسمح &lt;FILETYPES&gt; للتحميل : ملف مع الأنواع التالية! تم تجاهل &lt;COUNTINVALIDFILES&gt; الملفات!</param>
+  <param name="messages.filesCountExceeded">الملفات يسمح فقط &lt;MAXFILECOUNT&gt; لتحميل! تم تجاهل &lt;COUNTINVALIDFILES&gt; الملفات!</param>
+  <param name="messages.filesCountNotEnough">الرجاء اختيار أكثر من الملفات. الحد الأدنى الملفات العد &lt;MINFILECOUNT&gt;</param>
+  <param name="messages.httpError">&lt;center&gt; المتشعب خطأ ، '&lt;ERRORCODE&gt;' حدث. &lt;DESCRIPTION&gt;&lt;br&gt; الرجاء مراجعة &lt;font color='#0000FF'&gt; &lt;a title='Error description' target='_blank' href='&lt;W3WLINK&gt;'&gt; &lt;W3WLINK&gt; &lt;/a&gt; رمز الخطأ &lt;/font&gt; التعاريف لمزيد من المعلومات. &lt;/center&gt;</param>
+  <param name="messages.httpError.400">طلب غير صالح. يمكن طلب خادم لا يفهم! الرجاء الاتصال بمسؤول الخادم.</param>
+  <param name="messages.httpError.401">غير المصرح به. مطلوب مصادقة المستخدم!</param>
+  <param name="messages.httpError.402">الدفع المطلوبة. محفوظة رمز!</param>
+  <param name="messages.httpError.403">ممنوع. فهم الخادم الطلب ، ولكنه رفض الوفاء به!&lt;br&gt;لملقمات اباتشي : يحدث هذا لأن لديك تمكين وحدة اباتشي اسمه mod_security على الخادم الذي يمنع الرؤوس المرسلة من قبل Flash.&lt;br&gt;عن معهد الدراسات الإسماعيلية مع ملقمات آسيا والمحيط الهادئ : تحدث هذه المشكلة إذا كان رأس المحتوى المدة موجودا وإذا كان رأس المحتوى المدة يحدد مبلغ من البيانات التي هي أكبر من قيمة الخاصية AspMaxRequestEntityAllowed في قاعدة تعريف معهد الدراسات الإسماعيلية.&lt;br&gt;القيمة الافتراضية للخاصية AspMaxRequestEntityAllowed هو 204800 بايت.</param>
+  <param name="messages.httpError.404">لم يتم العثور على الصفحة. لا يمكن العثور على '&lt;URL&gt;' صفحة على الخادم!</param>
+  <param name="messages.httpError.405">آخر الأسلوب لا يسمح لهذه الصفحة &lt;URL&gt;! يرجى محاولة تغيير إعدادات الملقم للسماح الأسلوب آخر لتلقي النصي.</param>
+  <param name="messages.httpError.406">غير مقبول. هذا يعني أن الخادم لا يمكن أن يولد استجابة الكيانات التي لها خصائص المحتوى غير مقبول وفقا لقبول رؤوس ارسلت في الطلب. Flash يقبل رأس هو 'النص / *'.</param>
+  <param name="messages.httpError.407">مطلوب مصادقة الوكيل.</param>
+  <param name="messages.httpError.408">طلب المهلة.</param>
+  <param name="messages.httpError.409">الصراع.</param>
+  <param name="messages.httpError.410">ذهب. المطلوب لم يعد متوفرا على الملقم وكما هو معروف لا شحن عنوان.</param>
+  <param name="messages.httpError.411">المدة المطلوبة.</param>
+  <param name="messages.httpError.412">فشل مسبق.</param>
+  <param name="messages.httpError.413">طلب الوحدة كبير جدا.&lt;br&gt;لخدمة الانترنت : 1. في محاولة لزيادة UploadReadAheadSize الخاصية قاعدة التعريف.&lt;br&gt;2. في محاولة لزيادة قيمة الخاصية MaxRequestEntityAllowed في معهد الدراسات الإسماعيلية التكوين.&lt;br&gt;لملقمات اباتشي : في محاولة لزيادة LimitRequestBody المعلمة في httpd.conf.</param>
+  <param name="messages.httpError.414">طلب أوري ، طويل جدا.</param>
+  <param name="messages.httpError.415">نوع الوسائط غير مدعوم.</param>
+  <param name="messages.httpError.416">النطاق المطلوب غير كاف.</param>
+  <param name="messages.httpError.417">فشل التوقع.</param>
+  <param name="messages.httpError.500">خطأ خادم داخلي. وعادة ما يعني أن السيناريو قد تلقي أخطاء.</param>
+  <param name="messages.httpError.501">لم تنفذ. الملقم لا دعم ما بعد الأسلوب.</param>
+  <param name="messages.httpError.502">عبارة سيئة.</param>
+  <param name="messages.httpError.503">503 الخدمة غير متوفرة. الملقم غير قادر حاليا على التعامل مع الطلب بسبب الحمولة الزائدة مؤقت أو صيانة الملقم.</param>
+  <param name="messages.httpError.504">مهلة العبارة.</param>
+  <param name="messages.httpError.505">نسخة النص المتشعب غير معتمدة. لا يعتمد الملقم المتشعب 1،1.</param>
+  <param name="messages.wrongFileType">ملفات فقط مع الأنواع التالية : &lt;FILETYPES&gt; يسمح لتحميل! تم تجاهل &lt;COUNTINVALIDFILES&gt; الملفات!</param>
+  <param name="messages.zeroSize">تم تجاهل &lt;COUNTINVALIDFILES&gt; الملفات مع حجم صفر!</param>
+  <param name="removeButton.tooltip">إزالة الملفات المحددة</param>
+  <param name="retryDialog.caption">محاولة تحميل؟</param>
+  <param name="retryDialog.message">لم تحميل بعض الملفات. هل تريد محاولة تحميل مرة أخرى؟</param>
+  <param name="retryDialog.noLabel">لا</param>
+  <param name="retryDialog.yesLabel">نعم</param>
+  <param name="sortButton.text"></param>
+  <param name="sortButton.tooltip">ترتيب الفرز</param>
+  <param name="sortMenu.byDate">حسب التاريخ</param>
+  <param name="sortMenu.byName">حسب الاسم</param>
+  <param name="sortMenu.bySize">حسب الحجم</param>
+  <param name="statusLabel.text.generateThumbnails">توليد الصور المصغرة... يرجى الانتظار.</param>
+  <param name="statusLabel.text.loadFile "></param>
+  <param name="statusLabel.text.ready">عدد من الملفات : &lt;FILESCOUNT&gt; (&lt;TOTALSIZE&gt;)</param>
+  <param name="statusLabel.text.uploadCancelled">إلغاء تحميل الملفات التالي. الانتظار...</param>
+  <param name="statusLabel.text.uploadComplete">تحميل كاملة! &lt;UPLOADEDFILESCOUNT&gt; ملفات (&lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt;) ، والوقت المنقضي : &lt;ELAPSEDHOUR&gt; : &lt;ELAPSEDMIN&gt; : &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.uploadProgress">المجموع : &lt;PERCENT&gt; ٪ (&lt;FILESNUM&gt; / &lt;FILESTOUPLOADCOUNT&gt;) &lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt; (&lt;RATEVALUE&gt; / ثانية ، وبقي من الزمن : &lt;LEFTHOUR&gt; : &lt;LEFTMIN&gt; : &lt;LEFTSEC&gt;)</param>
+  <param name="statusLabel.text.uploadStart">تحميل...</param>
+  <param name="statusLabel.text.uploadStopped">توقف تحميل. بايت حملت : &lt;TOTALUPLOADEDSIZE&gt; ، الوقت المنقضي : &lt;ELAPSEDHOUR&gt; : &lt;ELAPSEDMIN&gt; : &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.waitForConnection">الملقم لا يستجيب. محاولة إعادة الاتصال ، يرجى الانتظار.</param>
+  <param name="thumbViewButton.tooltip">عرض الصور المصغرة</param>
+  <param name="thumbnail.watermark.text">عنصر تكنولوجيا المعلومات</param>
+  <param name="thumbnailView.bottomPanel.labelPattern">&lt;FILENAME&gt;</param>
+  <param name="thumbnailView.cancelCropIcon.tooltip">التراجع عن اقتصاص الصورة</param>
+  <param name="thumbnailView.contextMenu.CropLabel">اقتصاص الصورة</param>
+  <param name="thumbnailView.contextMenu.RemoveLabel">إزالة</param>
+  <param name="thumbnailView.contextMenu.RotateLeftLabel">بقي استدارة</param>
+  <param name="thumbnailView.contextMenu.RotateRightLabel">دوران لليمين</param>
+  <param name="thumbnailView.contextMenu.UndoCropLabel">التراجع عن اقتصاص الصورة</param>
+  <param name="thumbnailView.cropIcon.tooltip">اقتصاص الصورة</param>
+  <param name="thumbnailView.editIcon.tooltip">تحرير ملف الوصف</param>
+  <param name="thumbnailView.infoIcon.disabledFileInfoTooltip">الحجم : &lt;FILESIZE&gt;
+التاريخ : &lt;FILEDATE&gt;
+الحالة : &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.infoIcon.tooltip">الحجم : &lt;FILESIZE&gt;
+التاريخ : &lt;FILEDATE&gt;
+الحالة : &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.removeIcon.tooltip">إزالة</param>
+  <param name="thumbnailView.rotateLeftIcon.tooltip">بقي استدارة</param>
+  <param name="thumbnailView.rotateRightIcon.tooltip">دوران لليمين</param>
+  <param name="uploadButton.text">تحميل</param>
+  <param name="uploadButton.tooltip">بدء تحميل</param>
+</MultiPowUpload_parameters>

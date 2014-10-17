@@ -1,0 +1,18 @@
+{$dtime="`$params.value.Date_Year`-`$params.value.Date_Month`-`$params.value.Date_Day`"}
+{html_select_date
+	prefix=Date_
+	field_array=$params.fieldname
+	time=$dtime
+	start_year=-80
+	end_year=-9
+	field_order=DMY
+	reverse_years=TRUE
+	all_empty=""
+	month_empty=$params.placeholder|default:''
+	field_separator='&nbsp;'
+}
+{*
+{$params.fieldname|md:1}
+{$params.value|md:1}
+{$data[$params.fieldname]|md:1}
+*}

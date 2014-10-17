@@ -1,0 +1,3 @@
+{foreach $macros_list as $m}
+<a target="_macros" href="/admin/wizard/macros/{$_gsdata.gspgid_va.0}/{$m}" onClick="window.open(this.href,this.target,'width=600,height=600'); return false;">{$m|replace:'wz_macros_':''}</a>&nbsp;&nbsp;
+{/foreach}

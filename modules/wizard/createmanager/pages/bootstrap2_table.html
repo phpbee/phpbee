@@ -1,0 +1,159 @@
+{extends file="manager_page.html"}
+
+{block name="title"}
+	{%$rs.title%}
+{/block}
+
+{block name="main"}
+
+	{%foreach from=$filters item=f%}
+		{handler gspgid="/filter/" class="select_by_links" link="{%$rs.name%}.{%$f.name%}:id" name="{%$f.name%}" urltype=get }
+		{%$s_filters=$s_filters|cat:$f.name|cat:","%}
+		{%$default_values=$default_values|cat:"{%$f.name%}_id={gs_filters_handler::value({%$f.name%})} "%}
+	{%/foreach%}
+
+		{handler gspgid="/filter/" class="like" name="search" fields="{%$fields%}" urltype=get }
+		{handler gspgid="/filter/" class="calendar" name="calendar" fields="_ctime,_mtime,{%$datefields%}" urltype=get }
+		{handler gspgid="/filter/" class="sort" name="sort" fields="{%if $rs->sortkey%}sortkey,{%/if%}{%$fields%}" urltype=get }
+		{handler gspgid="/filter/" class="limit" name="limit" urltype=session values='2,20,50,100,500' default_value=20}
+		{handler gspgid="/filter/" class="offset"  name="offset" urltype=get limit='limit'}
+
+		{controller _class="{%$rs.name%}" _assign="{%$rs.name%}" _filters="search,calendar,sort,limit,offset,{%$s_filters%}" {%$manager_link%}}
+
+	<legend>
+		<a href="/{%$module%}/{%$prefix%}/{%$rs.name%}">{%$rs.title%}</a>
+
+
+		<a class="btn btn-mini" href="{gl rec_create=0}#form">Add new</a>
+
+	<form class="form-search pull-right" method="get">
+			{*
+			{handler gspgid="/filter/show" name="calendar"  recordset=${%$rs.name%} tpl="calendar.html" prelabel="date:"  }
+			{handler gspgid="/filter/show" name="sort"  recordset=${%$rs.name%} tpl="sort.html" prelabel="sort by:"  }
+			*}
+			{%foreach from=$filters item=f%}
+			   {handler gspgid="/filter/show" name="{%$f.name%}"  recordset=${%$rs.name%} tpl="links_dropdown.html" cssclass="btn-sm btn-default" }
+			{%/foreach%}
+			<div class="input-append">
+			{handler gspgid="/filter/show" name="search" cssclass="search-query"  recordset=${%$rs.name%} tpl="like.html"  }
+			<input type="submit" class="btn" value="{'Find'|gsdict}">
+			</div>
+	</form>
+	</legend>
+
+
+
+
+	{if $_gsdata.gspgid_va.0=='modify' &&  $_gsdata.gspgid_va.1==0}
+		<a name="form"></a>
+		<div class="well">
+		{*handler gspgid="/{%$module%}/{%$prefix%}/form/{%$rs.name%}/edit/`$_gsdata.gspgid_va.1`" {%$manager_link%}  _default="{%$default_values%}"*}
+        {handler gspgid="form/record/redirect/up" 
+            record=${%$rs.name%}->new_record()
+            template="modules/{%$module%}/{%$formtplname%}" 
+            values="{%$manager_link%}"
+            default_values="{%$default_values%}"
+			fields="{%$field_names%}"
+            }
+		</div>
+	{else}
+
+
+
+
+		{%if $rs->sortkey%}
+		{handler gspgid="/sortkey" sortkey_id="{%$rs->name%}" recordset_name="{%$rs->name%}"}
+		{%/if%}
+
+	<div class="row" style="text-align:right">
+		{handler gspgid="/filter/show" name="offset" tpl="offset_bootstrap.html" page_title='Page' page_prev='previous' page_next='next' page_between='from' pages_count=21 recordset=${%$rs.name%}}
+	</div>	
+
+	<table {%if $rs->sortkey%}class="table table-hover sortkey-table" sortkey_id="{%$rs->name%}"{%else%}class="tb"{%/if%}>
+	<thead>
+		<tr><th>#</th>
+		{%foreach from=$fields item=f%}
+		<th>{field_name name="{%$f.verbose_name%}" type="{%$f.type%}" key="{%$f.name%}" id="{%$f.id%}"}</th>
+		{%/foreach%}
+		{%foreach from=$links item=f%}
+		<th>{%$f.verbose_name%}</th>
+		{%/foreach%}
+		{%foreach from=$extlinks item=f%}
+		<th>{%$f.verbose_name%}</th>
+		{%/foreach%}
+		<th>
+		<a class="btn btn-mini" href="{gl rec_create=0}#form">Add new</a>
+		</th>
+		</tr>
+	</thead>
+	
+	{foreach from=${%$rs.name%} item="e"}
+	<tr record_id="{$e->get_id()}">
+			<td>{$e->get_id()}</td>
+			{%foreach from=$fields item=f%}
+				<td class="frm_{%$f.type%}">
+				{%if $f@first%}
+					<a href="{gl rec_edit=$e}">{field_formatter value=$e->{%$f.name%} type="{%$f.type%}"}</a>
+				{%else%}
+					{field_formatter value=$e->{%$f.name%} type="{%$f.type%}"}
+				{%/if%}
+				</td>
+			{%/foreach%}
+			{%foreach from=$links item=f%}
+			<td>{$e->{%$f.name%}}</td>
+			{%/foreach%}
+			{%foreach from=$extlinks item=f%}
+			<td><a href="/{%$module%}/{%$prefix%}/{%$f.classname%}?{%$f->linkname%}={$e->get_id()}">{%$f.verbose_name%} ({$e->{%$f.name%}->count()})</a></td>
+			{%/foreach%}
+			<td class="cnt">
+			<a href="{gl rec_edit=$e}#form"><i class="icon-edit"></i></a>
+			<a href="{gl rec_copy=$e}" onclick="return confirm('{'Clone record'|gsdict}?');"><i class="icon-repeat"></i></a>
+			<a href="{gl rec_delete=$e}" onclick="return confirm('{'Delete record'|gsdict}?');"><i class="icon-remove"></i></a>
+			</td>
+	</tr>
+	{if $_gsdata.gspgid_va.0=='modify' &&  $_gsdata.gspgid_va.1==$e->get_id()}
+	<tr>
+		<td colspan=100>
+			<a name="form"></a>
+			<div class="well">
+			{*handler gspgid="/{%$module%}/{%$prefix%}/form/{%$rs.name%}/edit/{$e->get_id()}"*}
+            {handler gspgid="form/record/redirect/up/{$e->get_id()}" 
+                record=$e
+                template="modules/{%$module%}/{%$formtplname%}" 
+                values="{%$manager_link%}"
+                default_values="{%$default_values%}"
+				fields="{%$field_names%}"
+                }
+			</div>
+		</td>
+	</tr>	
+	{/if}
+	{/foreach}
+	<tfoot>
+		<tr><th></th>
+		{%foreach from=$fields item=f%}
+		<th></th>
+		{%/foreach%}
+		{%foreach from=$links item=f%}
+		<th></th>
+		{%/foreach%}
+		{%foreach from=$extlinks item=f%}
+		<th></th>
+		{%/foreach%}
+		<th>
+		<a class="btn btn-mini" href="{gl rec_create=0}#form">Add new</a>
+		</th>
+		</tr>
+	</tfoot>
+	</table>
+
+	<div class="row" style="text-align:right">
+		{handler gspgid="/filter/show" name="offset" tpl="offset_bootstrap.html" page_title='Page' page_prev='previous' page_next='next' page_between='from' pages_count=21 recordset=${%$rs.name%}}
+		{handler gspgid="/filter/show" name="limit" tpl="limit_bootstrap.html" prelabel='show by' label='records'}
+	</div>	
+
+
+	{/if}
+	
+
+{/block}

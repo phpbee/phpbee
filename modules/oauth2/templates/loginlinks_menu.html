@@ -1,0 +1,6 @@
+	{controller _class=oauth2_config enabled=1 _assign=oauth2}
+	{foreach $oauth2 as $oa}
+		<a href="/oauth2/{$oa->class}?url={current_url()}">
+		<img src="{$oa->Logo->src1('orig')}" alt="{$oa->title}">
+		</a> 
+	{/foreach}

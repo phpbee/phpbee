@@ -1,0 +1,24 @@
+<html>
+<head>
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script src="/js/inserttag.js"></script>
+</head>
+<body>
+
+<script>
+
+	var target=window.opener.document.getElementById("block_content");
+	if(window.opener.window['tpl_codemirror']) {
+		var o=window.opener.window['tpl_codemirror'];
+		o.replaceSelection({$macros});
+	} else {
+		insertTag(target,{$macros}," ");
+	}
+	
+	window.close();
+
+</script>
+
+</body>
+
+</html>

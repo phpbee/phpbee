@@ -1,0 +1,65 @@
+
+<table>
+	<tr>
+		<td>
+			Use image file as watermark:<br>
+			<input type="text" id="watermark_url" value="images/element-it.jpg" READONLY/>
+			<input type="Button" value="apply" onClick="javascript: setWatermark();" /><br>
+			<br>Or type "watermark" text here:<br>
+			<input type="text" id="watermark_text" value="www.bandw.ru" />
+			<input type="Button" value="apply" onClick="javascript: setWatermarkText();" /></br>
+			<br>Select position for watermark:
+			<table>
+				<tr>
+					<td>
+						<input type="radio" name="watermark_position" value="Top.Left" onClick="javascript: setWatermarkPosition(this);"> Top.Left
+					</td>
+					<td>
+						<input type="radio" name="watermark_position" value="Top.Center" onClick="javascript: setWatermarkPosition(this);"> Top.Center
+					</td>
+					<td>
+						<input type="radio" name="watermark_position" value="Top.Right" onClick="javascript: setWatermarkPosition(this);"> Top.Right
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="radio" name="watermark_position" value="Center.Left" onClick="javascript: setWatermarkPosition(this);"> Center.Left
+					</td>
+					<td>
+						<input type="radio" name="watermark_position" value="Center.Center" onClick="javascript: setWatermarkPosition(this);"> Center.Center
+					</td>
+					<td>
+						<input type="radio" name="watermark_position" value="Center.Right" onClick="javascript: setWatermarkPosition(this);"> Center.Right
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="radio" name="watermark_position" value="Bottom.Left" onClick="javascript: setWatermarkPosition(this);"> Bottom.Left
+					</td>
+					<td>
+						<input type="radio" name="watermark_position" value="Bottom.Center" onClick="javascript: setWatermarkPosition(this);"> Bottom.Center
+					</td>
+					<td>
+						<input type="radio" name="watermark_position" value="Bottom.Right" onClick="javascript: setWatermarkPosition(this);" checked> Bottom.Right
+					</td>
+				</tr>
+			</table>
+		</td>
+		<td valign="bottom">
+			<br><br>Text color:<br>
+			<input type="text" id="watermark_color" value="#000000" />
+			<input type="Button" value="apply" onClick="javascript: setWatermarkColor();" />
+			<br>Text size in pixels:<br>
+			<input type="text" id="watermark_size" value="18" />
+			<input type="Button" value="apply" onClick="javascript: setWatermarkSize();" />
+			<br>Text style :<br>			
+			<select id="watermark_style"onChange="javascript: setWatermarkStyle(this);"/>
+				<option value="">Normal</option>
+				<option value="bold" selected>Bold</option>
+				<option value="italic">Cursive</option>
+			</select>
+		</td>
+	</tr>
+</table>
+
+

@@ -1,0 +1,19 @@
+<h3>templates <a href="/admin/wizard/module/{$module.id}/addtpl">add</a>
+</h3>
+
+
+{if isset($_gsdata.gspgid_handler_va) && $_gsdata.gspgid_handler_va.1=='addtpl'}
+	{handler gspgid="/admin/form/templates" Module_id=$module.id}
+{/if}
+
+<ul>
+{foreach from=$templates item=t}
+	<li> 
+		<a href="/admin/wizard/iddqd/{$module.id}/{$t}">{$t}</a> 
+		<a href="/admin/wizard/iddqdblock/{$module.id}/{$t}/"><img src="/i/admin/ico_edit.png" alt="edit" title="edit"></a>
+		<a href="/admin/wizard/templates/delete/{$module.id}/{$t}" onclick="return confirm('Вы точно хотите удалить запись ?');"><img src="/i/admin/ico_delete.png" alt="Удалить" title="Удалить"></a>
+		<a href="/admin/wizard/templates/copy/{$module.id}/{$t}" ><img src="/i/admin/ico_copy.png" alt="Копировать" title="Копировать"></a>
+	</li>
+{/foreach}
+</ul>
+

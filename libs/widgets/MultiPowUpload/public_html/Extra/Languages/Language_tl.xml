@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MultiPowUpload_parameters>
+  <param name="browseButton.text">Mag-browse ...</param>
+  <param name="browseButton.tooltip">Idagdag ang mga file para i-upload</param>
+  <param name="cancelButton.pauseText">I-pause</param>
+  <param name="cancelButton.text">Kanselahin</param>
+  <param name="cancelButton.tooltip">Cancel ang kasalukuyang operasyon</param>
+  <param name="clearButton.text">Malinaw</param>
+  <param name="clearButton.tooltip">Alisin ang lahat ng mga file</param>
+  <param name="constant.bytes">bytes</param>
+  <param name="constant.decimalSeparator">,</param>
+  <param name="constant.gigaBytes">Gb</param>
+  <param name="constant.kiloBytes">Kb</param>
+  <param name="constant.megaBytes">Mb</param>
+  <param name="contextMenu.sortByDate">Ayusin ayon sa petsa</param>
+  <param name="contextMenu.sortByName">Ayusin ayon sa pangalan</param>
+  <param name="contextMenu.sortBySize">Ayusin ayon sa laki</param>
+  <param name="descriptionWindow.caption">Description para sa mga file</param>
+  <param name="descriptionWindow.fileNavigation.fileName.label">&lt;FILENAME&gt;</param>
+  <param name="descriptionWindow.fileNavigation.nextButton.label"></param>
+  <param name="descriptionWindow.fileNavigation.previousButton.label"></param>
+  <param name="exifWindow.caption">&lt;FILENAME&gt; EXIF data</param>
+  <param name="exifWindow.list.nameHeader">Pangalan</param>
+  <param name="exifWindow.list.valueHeader">Halaga</param>
+  <param name="fileInfoWindow.caption">File na impormasyon</param>
+  <param name="fileInfoWindow.exifInfo">&lt;b&gt; Exif info &lt;/b&gt;: &lt;a&gt; I-click upang tingnan ang &lt;/a&gt;</param>
+  <param name="fileInfoWindow.fileDate">&lt;b&gt; Date &lt;/b&gt;: &lt;FILEDATE&gt;</param>
+  <param name="fileInfoWindow.fileName">&lt;b&gt; Pangalan ng &lt;/b&gt;: &lt;FILENAME&gt;</param>
+  <param name="fileInfoWindow.fileSize">&lt;b&gt; Size &lt;/b&gt;: &lt;FILESIZE&gt;</param>
+  <param name="fileInfoWindow.fileStatus">&lt;b&gt; Status &lt;/b&gt;: &lt;FILESTATUS&gt;</param>
+  <param name="fileInfoWindow.imageHeight">&lt;b&gt; Image taas &lt;/b&gt;: &lt;IMAGEHEIGHT&gt;</param>
+  <param name="fileInfoWindow.imageWidth">&lt;b&gt; Image width &lt;/b&gt;: &lt;IMAGEWIDTH&gt;</param>
+  <param name="fileStatus.cancelled">Tinigil</param>
+  <param name="fileStatus.complete">Natapos</param>
+  <param name="fileStatus.encodeImage">Gawing kowd image</param>
+  <param name="fileStatus.error">May naganap na error</param>
+  <param name="fileStatus.loadFile">Loading file sa memory</param>
+  <param name="fileStatus.loadImage">Load ng data ng imahe</param>
+  <param name="fileStatus.processing">Ina-upload</param>
+  <param name="fileStatus.ready">Handa para mag-upload</param>
+  <param name="labelUpload.text">Pumili ng mga File na ia-upload</param>
+  <param name="listView.description.defaultText">I-click upang i-edit ...</param>
+  <param name="listView.description.tooltip">I-edit ang file na paglalarawan</param>
+  <param name="listView.fileNameLabel.pattern">&lt;FILENAME&gt;</param>
+  <param name="listView.label.disabledFileInfoTooltip">Size: &lt;FILESIZE&gt;
+Date: &lt;FILEDATE&gt;
+Status: &lt;FILESTATUS&gt;</param>
+  <param name="listView.label.tooltip">Size: &lt;FILESIZE&gt;
+Date: &lt;FILEDATE&gt;
+Status: &lt;FILESTATUS&gt;</param>
+  <param name="listView.removeButton.tooltip">Alisin ang file</param>
+  <param name="listView.textInput.defaultString">Sumulat ng file comment dito</param>
+  <param name="listViewButton.tooltip">View ng listahan</param>
+  <param name="loadingText">&lt;b&gt; Sinisimulan ang: &lt;PERCENT&gt;% &lt;/b&gt;</param>
+  <param name="messages.disabledType">Na file na may mga sumusunod na uri: &lt;FILETYPES&gt; ay hindi pinahihintulutan na i-upload! &lt;COUNTINVALIDFILES&gt; file ay hindi pinansin!</param>
+  <param name="messages.filesCountExceeded">Lamang &lt;MAXFILECOUNT&gt; na file pinapayagang mag-upload! &lt;COUNTINVALIDFILES&gt; file ay hindi pinansin!</param>
+  <param name="messages.filesCountNotEnough">Mangyaring pumili ng higit pang mga file. count Minimum mga file ay &lt;MINFILECOUNT&gt;</param>
+  <param name="messages.httpError">&lt;center&gt; HTTP Error, '&lt;ERRORCODE&gt;' na naganap. &lt;DESCRIPTION&gt;&lt;br&gt; Mangyaring tingnan ang &lt;font color='#0000FF'&gt; &lt;a title='Error description' target='_blank' href='&lt;W3WLINK&gt;'&gt; &lt;W3WLINK&gt; &lt;/a&gt; &lt;/font&gt; error code kahulugan para sa karagdagang impormasyon. &lt;/center&gt;</param>
+  <param name="messages.httpError.400">Bad Request. Server ay hindi maaaring maunawaan kahilingan! Mangyaring kontakin ang iyong server administrator.</param>
+  <param name="messages.httpError.401">Di-awtorisadong. User authentication hingin!</param>
+  <param name="messages.httpError.402">Pagbabayad Kinakailangan. Nakareserba ang code!</param>
+  <param name="messages.httpError.403">Ipinagbabawal. Ang server ay naiintindihan ang kahilingan, ngunit ay refusing upang matupad ito!&lt;br&gt;Para sa apache servers: Ito ang mangyayari dahil pinagana mo ang isang Apache module na nagngangalang mod_security sa server na kung saan ang mga bloke header na ipinadala sa pamamagitan ng Flash.&lt;br&gt;Para sa IIS sa ASP server: isyu na ito ay nangyayari kung ang isang Content-Length header ay naroroon at kung ang Content-Length header tinutukoy ng isang halaga ng data na ay mas malaki kaysa sa halaga ng AspMaxRequestEntityAllowed ari-arian sa metabase IIS.&lt;br&gt;Ang default na halaga para sa AspMaxRequestEntityAllowed ari-arian ay 204,800 bytes.</param>
+  <param name="messages.httpError.404">Page hindi natagpuan. Hindi mahanap '&lt;URL&gt;' na pahina sa server!</param>
+  <param name="messages.httpError.405">Post paraan ay hindi pinahihintulutan para sa pahinang ito &lt;URL&gt;! Mangyaring subukan upang baguhin ang mga setting ng server upang payagan ang mga post na pamamaraan para sa pagtanggap ng script.</param>
+  <param name="messages.httpError.406">Hindi katanggap-tanggap. Ang ibig sabihin nito na ang server ay hindi maaaring makabuo ng mga nilalang na tugon na may nilalaman na mga katangian ay hindi tinatanggap ayon sa tanggapin ang mga header na ipinadala sa mga kahilingan. Flash tanggapin header ay 'text / *'.</param>
+  <param name="messages.httpError.407">Proxy Authentication Kinakailangan.</param>
+  <param name="messages.httpError.408">Request Timeout.</param>
+  <param name="messages.httpError.409">Conflict.</param>
+  <param name="messages.httpError.410">Nawala. Ang hiniling na resource ay hindi na magagamit sa server at walang bisang address ay kilala.</param>
+  <param name="messages.httpError.411">Length Kinakailangan.</param>
+  <param name="messages.httpError.412">Kundisyon bago Bigo.</param>
+  <param name="messages.httpError.413">Request Entity Masyadong Large.&lt;br&gt;Para sa IIS server: 1. Subukan upang madagdagan UploadReadAheadSize metabase ari-arian.&lt;br&gt;2. Subukan upang madagdagan MaxRequestEntityAllowed ari-arian na halaga sa IIS config.&lt;br&gt;Para sa apache servers: Subukan upang madagdagan LimitRequestBody parameter sa httpd.conf.</param>
+  <param name="messages.httpError.414">Humiling ng URI-Masyadong Long.</param>
+  <param name="messages.httpError.415">Hindi suportadong Uri ng Media.</param>
+  <param name="messages.httpError.416">Hiniling na Saklaw Hindi Satisfiable.</param>
+  <param name="messages.httpError.417">Asa Bigo.</param>
+  <param name="messages.httpError.500">Internal Server Error. Karaniwang ito ay nangangahulugan na ang pagtanggap ng script ay may mga error.</param>
+  <param name="messages.httpError.501">Hindi isinasagawa. Server ay hindi sumusuporta sa POST method.</param>
+  <param name="messages.httpError.502">Bad Gateway.</param>
+  <param name="messages.httpError.503">503 Service Hindi magagamit. Ang server ay kasalukuyang hindi kayang pangasiwaan ang hiling dahil sa isang pansamantalang labis na pasanin o pagpapanatili ng server.</param>
+  <param name="messages.httpError.504">Gateway Timeout.</param>
+  <param name="messages.httpError.505">HTTP Version Not Supported. Server ay hindi sumusuporta HTTP 1.1.</param>
+  <param name="messages.wrongFileType">Tanging ang mga file na may mga sumusunod na uri: &lt;FILETYPES&gt; pinapayagang mag-upload! &lt;COUNTINVALIDFILES&gt; file ay hindi pinansin!</param>
+  <param name="messages.zeroSize">&lt;COUNTINVALIDFILES&gt; na file na may mga zero sukat ay hindi pinansin!</param>
+  <param name="removeButton.tooltip">Alisin ang mga napiling file</param>
+  <param name="retryDialog.caption">Subukan muli ang mag-upload?</param>
+  <param name="retryDialog.message">Ang ilang mga file ay hindi na-upload. Gusto ba ninyong subukan na i-upload ulit?</param>
+  <param name="retryDialog.noLabel">Hindi</param>
+  <param name="retryDialog.yesLabel">Oo</param>
+  <param name="sortButton.text"></param>
+  <param name="sortButton.tooltip">Pag-uuri order</param>
+  <param name="sortMenu.byDate">Sa pamamagitan ng petsa</param>
+  <param name="sortMenu.byName">Sa pamamagitan ng pangalan</param>
+  <param name="sortMenu.bySize">Sa pamamagitan ng sukat</param>
+  <param name="statusLabel.text.generateThumbnails">Bumubuo ng imahe thumbnail ... mangyaring maghintay.</param>
+  <param name="statusLabel.text.loadFile "></param>
+  <param name="statusLabel.text.ready">Bilang ng mga file: &lt;FILESCOUNT&gt; (&lt;TOTALSIZE&gt;)</param>
+  <param name="statusLabel.text.uploadCancelled">Susunod na mga file upload kinansela. Maghintay ...</param>
+  <param name="statusLabel.text.uploadComplete">I-upload ang complete! &lt;UPLOADEDFILESCOUNT&gt; na file (&lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt;), lumipas na oras: &lt;ELAPSEDHOUR&gt;: &lt;ELAPSEDMIN&gt;: &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.uploadProgress">Total: &lt;PERCENT&gt;% (&lt;FILESNUM&gt; / &lt;FILESTOUPLOADCOUNT&gt;) &lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt; (&lt;RATEVALUE&gt; / sec, oras kaliwa: &lt;LEFTHOUR&gt;: &lt;LEFTMIN&gt;: &lt;LEFTSEC&gt;)</param>
+  <param name="statusLabel.text.uploadStart">A-upload ...</param>
+  <param name="statusLabel.text.uploadStopped">I-upload ang tumigil. Uploaded bytes: &lt;TOTALUPLOADEDSIZE&gt;, lumipas na oras: &lt;ELAPSEDHOUR&gt;: &lt;ELAPSEDMIN&gt;: &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.waitForConnection">Server ay hindi sumagot. Sinusubukang makipagkonek muli, mangyaring maghintay.</param>
+  <param name="thumbViewButton.tooltip">Thumbnail tingnan</param>
+  <param name="thumbnail.watermark.text">Element-IT</param>
+  <param name="thumbnailView.bottomPanel.labelPattern">&lt;FILENAME&gt;</param>
+  <param name="thumbnailView.cancelCropIcon.tooltip">I-undo crop ang imahe</param>
+  <param name="thumbnailView.contextMenu.CropLabel">I-crop ang imahe</param>
+  <param name="thumbnailView.contextMenu.RemoveLabel">Alisin</param>
+  <param name="thumbnailView.contextMenu.RotateLeftLabel">Pihitin pakaliwa</param>
+  <param name="thumbnailView.contextMenu.RotateRightLabel">Pihitin pakanan</param>
+  <param name="thumbnailView.contextMenu.UndoCropLabel">I-undo crop ang imahe</param>
+  <param name="thumbnailView.cropIcon.tooltip">I-crop ang imahe</param>
+  <param name="thumbnailView.editIcon.tooltip">I-edit ang file na paglalarawan</param>
+  <param name="thumbnailView.infoIcon.disabledFileInfoTooltip">Size: &lt;FILESIZE&gt;
+Date: &lt;FILEDATE&gt;
+Status: &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.infoIcon.tooltip">Size: &lt;FILESIZE&gt;
+Date: &lt;FILEDATE&gt;
+Status: &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.removeIcon.tooltip">Alisin</param>
+  <param name="thumbnailView.rotateLeftIcon.tooltip">Pihitin pakaliwa</param>
+  <param name="thumbnailView.rotateRightIcon.tooltip">Pihitin pakanan</param>
+  <param name="uploadButton.text">I-upload</param>
+  <param name="uploadButton.tooltip">Start-upload</param>
+</MultiPowUpload_parameters>

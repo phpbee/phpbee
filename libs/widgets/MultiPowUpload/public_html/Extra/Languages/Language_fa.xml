@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MultiPowUpload_parameters>
+  <param name="browseButton.text">مرور...</param>
+  <param name="browseButton.tooltip">اضافه کردن فایل برای آپلود</param>
+  <param name="cancelButton.pauseText">وقفه</param>
+  <param name="cancelButton.text">انصراف</param>
+  <param name="cancelButton.tooltip">عملیات لغو فعلی</param>
+  <param name="clearButton.text">واضح</param>
+  <param name="clearButton.tooltip">حذف تمام فایل های</param>
+  <param name="constant.bytes">کلمه در ادامه متن</param>
+  <param name="constant.decimalSeparator">،</param>
+  <param name="constant.gigaBytes">گیگابایت</param>
+  <param name="constant.kiloBytes">کیلو</param>
+  <param name="constant.megaBytes">مگابایت</param>
+  <param name="contextMenu.sortByDate">مرتب کردن بر اساس تاریخ</param>
+  <param name="contextMenu.sortByName">مرتب کردن بر اساس نام</param>
+  <param name="contextMenu.sortBySize">مرتب کردن بر اساس اندازه</param>
+  <param name="descriptionWindow.caption">توضیحات فایل</param>
+  <param name="descriptionWindow.fileNavigation.fileName.label">&lt;FILENAME&gt;</param>
+  <param name="descriptionWindow.fileNavigation.nextButton.label"></param>
+  <param name="descriptionWindow.fileNavigation.previousButton.label"></param>
+  <param name="exifWindow.caption">&lt;FILENAME&gt; EXIF داده</param>
+  <param name="exifWindow.list.nameHeader">نام</param>
+  <param name="exifWindow.list.valueHeader">ارزش</param>
+  <param name="fileInfoWindow.caption">اطلاعات تصویر</param>
+  <param name="fileInfoWindow.exifInfo">&lt;b&gt; اطلاعات Exif &lt;/b&gt; : &lt;a&gt; برای مشاهده کلیک کنید &lt;/a&gt;</param>
+  <param name="fileInfoWindow.fileDate">&lt;b&gt; تاریخ &lt;/b&gt; : &lt;FILEDATE&gt;</param>
+  <param name="fileInfoWindow.fileName">&lt;b&gt; نام &lt;/b&gt; : &lt;FILENAME&gt;</param>
+  <param name="fileInfoWindow.fileSize">&lt;b&gt; حجم &lt;/b&gt; : &lt;FILESIZE&gt;</param>
+  <param name="fileInfoWindow.fileStatus">&lt;b&gt; وضعیت &lt;/b&gt; : &lt;FILESTATUS&gt;</param>
+  <param name="fileInfoWindow.imageHeight">&lt;b&gt; ارتفاع تصویر &lt;/b&gt; : &lt;IMAGEHEIGHT&gt;</param>
+  <param name="fileInfoWindow.imageWidth">&lt;b&gt; عرض تصویر &lt;/b&gt; : &lt;IMAGEWIDTH&gt;</param>
+  <param name="fileStatus.cancelled">لغو</param>
+  <param name="fileStatus.complete">تکمیل شده</param>
+  <param name="fileStatus.encodeImage">تصویر کدگذاری</param>
+  <param name="fileStatus.error">خطایی رخ داده است</param>
+  <param name="fileStatus.loadFile">بارگذاری فایل در حافظه</param>
+  <param name="fileStatus.loadImage">بارگذاری اطلاعات تصویر</param>
+  <param name="fileStatus.processing">آپلود</param>
+  <param name="fileStatus.ready">آماده برای آپلود</param>
+  <param name="labelUpload.text">انتخاب فایلها برای آپلود</param>
+  <param name="listView.description.defaultText">کلیک کنید برای ویرایش...</param>
+  <param name="listView.description.tooltip">ویرایش فایل توضیحات</param>
+  <param name="listView.fileNameLabel.pattern">&lt;FILENAME&gt;</param>
+  <param name="listView.label.disabledFileInfoTooltip">حجم : &lt;FILESIZE&gt;
+تاریخ : &lt;FILEDATE&gt;
+وضعیت : &lt;FILESTATUS&gt;</param>
+  <param name="listView.label.tooltip">حجم : &lt;FILESIZE&gt;
+تاریخ : &lt;FILEDATE&gt;
+وضعیت : &lt;FILESTATUS&gt;</param>
+  <param name="listView.removeButton.tooltip">گزارش فایل</param>
+  <param name="listView.textInput.defaultString">نوشتن فایل توضیحات اینجا</param>
+  <param name="listViewButton.tooltip">مشاهده لیست</param>
+  <param name="loadingText">&lt;b&gt; مقدار دهی اولیه : &lt;PERCENT&gt; ٪ &lt;/b&gt;</param>
+  <param name="messages.disabledType">فایل را با انواع زیر می باشد : &lt;FILETYPES&gt; مجاز به آپلود! &lt;COUNTINVALIDFILES&gt; فایل های نادیده گرفته شد!</param>
+  <param name="messages.filesCountExceeded">تنها &lt;MAXFILECOUNT&gt; اجازه به آپلود فایل! &lt;COUNTINVALIDFILES&gt; فایل های نادیده گرفته شد!</param>
+  <param name="messages.filesCountNotEnough">لطفا انتخاب کنید فایل های بیشتر. حداقل تعداد فایل ها می باشد &lt;MINFILECOUNT&gt;</param>
+  <param name="messages.httpError">&lt;center&gt; خطای HTTP ، '&lt;ERRORCODE&gt;' رخ داده است. &lt;DESCRIPTION&gt;&lt;br&gt; لطفا &lt;font color='#0000FF'&gt; &lt;a title='Error description' target='_blank' href='&lt;W3WLINK&gt;'&gt; &lt;W3WLINK&gt; &lt;/a&gt; &lt;/font&gt; تعاریف خطا کد برای اطلاعات بیشتر. &lt;/center&gt;</param>
+  <param name="messages.httpError.400">درخواست بد. سرور می تواند درخواست را متوجه نمی شوید! لطفا با مدیر سرور شما.</param>
+  <param name="messages.httpError.401">غیر مجاز. تأیید هویت کاربر مورد نیاز است!</param>
+  <param name="messages.httpError.402">پرداخت مورد نیاز است. این سایت متعلق به کد!</param>
+  <param name="messages.httpError.403">ممنوع است. سرور درخواست را درک است ، اما به دلیل خودداری از انجام آن!&lt;br&gt;برای سرور های آپاچی : این علت رخ میدهد که شما را قادر ماژول آپاچی نام mod_security بر روی سرور است که مانع هدر ارسال شده توسط Flash.&lt;br&gt;برای مؤسسه با سرور های آ : این مسئله اتفاق می افتد اگر هدر محتوا طول وجود دارد و اگر هدر محتوا با طول مشخص مقدار داده است که بزرگتر از ارزش اموال AspMaxRequestEntityAllowed در فراویکی مؤسسه.&lt;br&gt;مقدار پیش فرض برای اموال AspMaxRequestEntityAllowed 204،800 بایت است.</param>
+  <param name="messages.httpError.404">صفحه یافت نشد. می توانید پیدا کنید '&lt;URL&gt;' صفحه بر روی سرور نیست!</param>
+  <param name="messages.httpError.405">روش پست برای این صفحه &lt;URL&gt; مجاز نیست! لطفا برای تغییر تنظیمات سرور پست به یک روش برای دریافت اسکریپت را داده باشد.</param>
+  <param name="messages.httpError.406">نه قابل قبول است. این معنی است که سرور می توانید پاسخ نهادها که ویژگی های محتوای قابل قبول با توجه به قبول سرصفحه ارسال در درخواست نمی تولید کند. Flash هدر قبول است 'متن / *'.</param>
+  <param name="messages.httpError.407">تایید پروکسی مورد نیاز است.</param>
+  <param name="messages.httpError.408">درخواست تاخیر.</param>
+  <param name="messages.httpError.409">تضاد.</param>
+  <param name="messages.httpError.410">رفته. منبع درخواست دیگر در دسترس نیست در سرور و هیچ آدرسی شناخته شده است.</param>
+  <param name="messages.httpError.411">مدت زمان مورد نیاز است.</param>
+  <param name="messages.httpError.412">پیش شرط شکست خورد.</param>
+  <param name="messages.httpError.413">درخواست نهاد بسیار بزرگ است.&lt;br&gt;برای سرور های مؤسسه : 1. سعی کنید UploadReadAheadSize فراویکی مالکیت را افزایش دهد.&lt;br&gt;2. سعی کنید ارزش ملک MaxRequestEntityAllowed در مؤسسه برای افزایش پیکربندی.&lt;br&gt;برای سرور های آپاچی : سعی کنید پارامتر LimitRequestBody در httpd.conf را افزایش دهد.</param>
+  <param name="messages.httpError.414">درخواست بیش از حد طولانی - URI.</param>
+  <param name="messages.httpError.415">نوع رسانه ها پشتیبانی نشده.</param>
+  <param name="messages.httpError.416">محدوده های درخواست شده راضی شدنی نه.</param>
+  <param name="messages.httpError.417">انتظار شکست خورد.</param>
+  <param name="messages.httpError.500">داخلی خطای سرور. معمولا به این معنی که اسکریپت دریافت کرده اند خطا است.</param>
+  <param name="messages.httpError.501">اجرا نمی شود. سرور نشانی پست شده روش پشتیبانی نمی کند.</param>
+  <param name="messages.httpError.502">دروازه بد.</param>
+  <param name="messages.httpError.503">503 سرویس در دسترس نیست. سرور در حال حاضر قادر به رسیدگی به درخواست با توجه به سربار موقت یا تعمیر و نگهداری از سرور.</param>
+  <param name="messages.httpError.504">دروازه تاخیر.</param>
+  <param name="messages.httpError.505">نسخه HTTP پشتیبانی نمی شود. سرور پشتیبانی نمی کند HTTP 1.1.</param>
+  <param name="messages.wrongFileType">فایل ها فقط با نوع زیر می باشد : &lt;FILETYPES&gt; اجازه به آپلود! &lt;COUNTINVALIDFILES&gt; فایل های نادیده گرفته شد!</param>
+  <param name="messages.zeroSize">&lt;COUNTINVALIDFILES&gt; فایل های با اندازه صفر نادیده گرفته شد!</param>
+  <param name="removeButton.tooltip">حذف فایل های انتخاب شده</param>
+  <param name="retryDialog.caption">دوباره سعی ارسال کنم؟</param>
+  <param name="retryDialog.message">برخی از فایل های آپلود شده بود است. آیا می خواهید به تلاش برای آپلود دوباره؟</param>
+  <param name="retryDialog.noLabel">بدون</param>
+  <param name="retryDialog.yesLabel">بله</param>
+  <param name="sortButton.text"></param>
+  <param name="sortButton.tooltip">مرتب سازی بر اساس سفارش</param>
+  <param name="sortMenu.byDate">بر اساس تاریخ</param>
+  <param name="sortMenu.byName">با نام</param>
+  <param name="sortMenu.bySize">با اندازه</param>
+  <param name="statusLabel.text.generateThumbnails">ریز عکسها به تولید تصویر... لطفا صبر کنید.</param>
+  <param name="statusLabel.text.loadFile "></param>
+  <param name="statusLabel.text.ready">تعداد فایل ها : &lt;FILESCOUNT&gt; (&lt;TOTALSIZE&gt;)</param>
+  <param name="statusLabel.text.uploadCancelled">فایل بعدی آپلود لغو شد. صبر کنید...</param>
+  <param name="statusLabel.text.uploadComplete">ارسال کامل! &lt;UPLOADEDFILESCOUNT&gt; فایل های (&lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt;) ، زمان سپری شده : &lt;ELAPSEDHOUR&gt; : &lt;ELAPSEDMIN&gt; : &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.uploadProgress">تعداد : &lt;PERCENT&gt; ٪ (&lt;FILESNUM&gt; / &lt;FILESTOUPLOADCOUNT&gt;) &lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt; (&lt;RATEVALUE&gt; در ثانیه ، زمان باقی مانده : &lt;LEFTHOUR&gt; : &lt;LEFTMIN&gt; : &lt;LEFTSEC&gt;</param>
+  <param name="statusLabel.text.uploadStart">آپلود...</param>
+  <param name="statusLabel.text.uploadStopped">ارسال متوقف شده است. کلمه در ادامه متن ارسال شده : &lt;TOTALUPLOADEDSIZE&gt; ، زمان سپری شده : &lt;ELAPSEDHOUR&gt; : &lt;ELAPSEDMIN&gt; : &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.waitForConnection">سرور پاسخ نمی دهند. تلاش مجدد ، لطفا صبر کنید.</param>
+  <param name="thumbViewButton.tooltip">ریز عکسها به نمایش</param>
+  <param name="thumbnail.watermark.text">عنصر آن را</param>
+  <param name="thumbnailView.bottomPanel.labelPattern">&lt;FILENAME&gt;</param>
+  <param name="thumbnailView.cancelCropIcon.tooltip">محصول واگرد تصویر</param>
+  <param name="thumbnailView.contextMenu.CropLabel">گندم تصویر</param>
+  <param name="thumbnailView.contextMenu.RemoveLabel">گزارش</param>
+  <param name="thumbnailView.contextMenu.RotateLeftLabel">چرخش چپ</param>
+  <param name="thumbnailView.contextMenu.RotateRightLabel">حق چرخش</param>
+  <param name="thumbnailView.contextMenu.UndoCropLabel">محصول واگرد تصویر</param>
+  <param name="thumbnailView.cropIcon.tooltip">گندم تصویر</param>
+  <param name="thumbnailView.editIcon.tooltip">ویرایش فایل توضیحات</param>
+  <param name="thumbnailView.infoIcon.disabledFileInfoTooltip">حجم : &lt;FILESIZE&gt;
+تاریخ : &lt;FILEDATE&gt;
+وضعیت : &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.infoIcon.tooltip">حجم : &lt;FILESIZE&gt;
+تاریخ : &lt;FILEDATE&gt;
+وضعیت : &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.removeIcon.tooltip">گزارش</param>
+  <param name="thumbnailView.rotateLeftIcon.tooltip">چرخش چپ</param>
+  <param name="thumbnailView.rotateRightIcon.tooltip">حق چرخش</param>
+  <param name="uploadButton.text">ارسال</param>
+  <param name="uploadButton.tooltip">شروع آپلود</param>
+</MultiPowUpload_parameters>

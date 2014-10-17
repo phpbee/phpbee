@@ -1,0 +1,11 @@
+<form action="" method="post" class="form">
+	<input type=hidden name="root" value="{$pid_id}">
+	<input type=hidden name="gspgid_form" value="{$gspgid_form}">
+
+
+	{$form->print_error('FORM_ERROR')}
+
+	{$formfields}
+
+	<input class="btn btn-success btn-small" type="submit" name="save_continue" value="{gsdict('Продолжить')} &raquo;">
+</form>

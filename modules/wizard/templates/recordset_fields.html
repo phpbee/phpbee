@@ -1,0 +1,173 @@
+{extends file="wizard_page.html"}
+{block name="main"}
+
+	{controller _class=wz_recordsets _assign=recordset _assign_type=first id=$_gsdata.gspgid_va.0}
+
+
+	<h3>
+	<a href="/admin/wizard/module/{$recordset.Module->first()->id}">{$recordset.Module->first()->name}</a>
+	=>
+	<a href="/admin/wizard/recordsets/{$recordset.Module->first()->id}/{$recordset.id}">{$recordset.name}</a>
+
+	 <a href="/admin/wizard/commit/{$recordset.Module->first()->id}">commit</a>
+	</h3>
+
+	{handler gspgid="/sortkey" sortkey_id=table1 recordset_name=wz_recordset_fields}
+	<h4>fields 
+        <a href="/admin/wizard/recordset_fields/{$_gsdata.gspgid_va.0}/fields/0#form">создать</a>
+    </h4>
+	<table class="tb sortkey-table" sortkey_id='table1'>
+	<thead>
+	<tr><th>#</th>
+	<th>name</th>
+	<th>verbose_name</th>
+	<th>multilang</th>
+	<th>type</th>
+	<th>widget</th>
+	<th>default_value</th>
+	<th>index</th>
+	<th>options</th>
+	<th>required</th>
+	<th></th>
+	<th></th>
+	<th></th>
+	</thead>
+	{foreach from=$recordset->Fields->orderby('sortkey') item="e"}
+	<tr class="{cycle values='odd,even'}" record_id="{$e.id}">
+			<td>{$e.id}</td>
+			<td><a href="/admin/wizard/recordset_fields/{$e.Recordset_id}/fields/{$e.id}#form">{$e.name}</a></td>
+			<td>{$e.verbose_name}</td>
+			<td>{$e.multilang}</td>
+			<td>{$e.type}</td>
+			<td>{$e.widget}</td>
+			<td>{$e.default_value}</td>
+			<td>{$e.make_index}</td>
+			<td>{$e.options}</td>
+			<td>{$e.required}</td>
+			<td class="cnt"><a href="/admin/wizard/recordset_fields/{$e.Recordset_id}/fields/{$e.id}#form"><img src="/i/admin/ico_edit.png" alt="Редактировать" title="Редактировать"></a></td>
+			<td class="cnt"><a href="/admin/wizard/recordset_fields/copy/{$e.id}"><img src="/i/admin/ico_copy.png"></a></td>
+			<td class="cnt"><a href="/admin/wizard/recordset_fields/delete/{$e.id}" onclick="return confirm('Вы точно хотите удалить запись ?');"><img src="/i/admin/ico_delete.png" alt="Удалить" title="Удалить"></a></td>
+	</tr>
+	{/foreach}
+	</table>
+	{if isset($_gsdata.gspgid_va.1) && $_gsdata.gspgid_va.1=='fields' && isset($_gsdata.gspgid_va.2)}
+	<a name="form"></a>
+	{handler gspgid="/admin/form/wz_recordset_fields/edit/`$_gsdata.gspgid_va.2`" Recordset_id=$recordset.id}
+	{/if}
+
+
+	<hr>
+
+	<h4>links
+        <a href="/admin/wizard/recordset_fields/{$_gsdata.gspgid_va.0}/links/0#form">создать</a>
+    </h4>
+
+	<table class="tb">
+	<thead>
+	<tr><th>#</th>
+	<th>name</th>
+	<th>type</th>
+	<th>classname</th>
+	<th>linkname</th>
+	<th>verbose_name</th>
+	<th>widget</th>
+	<th>options</th>
+	<th></th>
+	<th></th>
+	<th></th>
+	</thead>
+	{foreach from=$recordset.Links item="e"}
+	<tr class="{cycle values='odd,even'}">
+			<td>{$e.id}</td>
+			<td>{$e.name}</td>
+			<td>{$e.type}</td>
+			<td>{$e.classname}</td>
+			<td>{$e.linkname}</td>
+			<td>{$e.verbose_name}</td>
+			<td>{$e.widget}</td>
+			<td>{$e.options}</td>
+			<td class="cnt"><a href="/admin/wizard/recordset_fields/{$e.Recordset_id}/links/{$e.id}#form"><img src="/i/admin/ico_edit.png" alt="Редактировать" title="Редактировать"></a></td>
+			<td class="cnt"><a href="/admin/wizard/recordset_links/copy/{$e.id}"><img src="/i/admin/ico_copy.png"></a></td>
+			<td class="cnt"><a href="/admin/wizard/recordset_links/delete/{$e.id}" onclick="return confirm('Вы точно хотите удалить запись ?');"><img src="/i/admin/ico_delete.png" alt="Удалить" title="Удалить"></a></td>
+	</tr>
+	{/foreach}
+	</table>
+	{if isset($_gsdata.gspgid_va.1) &&  $_gsdata.gspgid_va.1=='links' && isset($_gsdata.gspgid_va.2)}
+	<a name="form"></a>
+	{handler gspgid="/admin/form/wz_recordset_links/edit/`$_gsdata.gspgid_va.2`" Recordset_id=$recordset.id}
+	{/if}
+
+	<hr>
+	<h4>triggers
+        <a href="/admin/wizard/recordset_fields/{$_gsdata.gspgid_va.0}/triggers/0#form">создать</a>
+    </h4>
+
+	<table class="tb">
+	<thead>
+	<tr><th>#</th>
+	<th>field</th>
+	<th>on_insert</th>
+	<th>on_update</th>
+	<th>on_delete</th>
+	<th></th>
+	<th></th>
+	<th></th>
+	</thead>
+	{foreach from=$recordset.Triggers item="e"}
+	<tr class="{cycle values='odd,even'}">
+			<td>{$e.id}</td>
+			<td>{$e.Field}</td>
+			<td>{$e.on_insert}</td>
+			<td>{$e.on_update}</td>
+			<td>{$e.on_delete}</td>
+			<td class="cnt"><a href="/admin/wizard/recordset_fields/{$e.Recordset_id}/triggers/{$e.id}#form"><img src="/i/admin/ico_edit.png" alt="Редактировать" title="Редактировать"></a></td>
+			<td class="cnt"><a href="/admin/wizard/recordset_triggers/copy/{$e.id}"><img src="/i/admin/ico_copy.png"></a></td>
+			<td class="cnt"><a href="/admin/wizard/recordset_triggers/delete/{$e.id}" onclick="return confirm('Вы точно хотите удалить запись ?');"><img src="/i/admin/ico_delete.png" alt="Удалить" title="Удалить"></a></td>
+	</tr>
+	{/foreach}
+	</table>
+	{if isset($_gsdata.gspgid_va.1) && $_gsdata.gspgid_va.1=='triggers' && isset($_gsdata.gspgid_va.2)}
+	<hr>
+	<pre>
+	   function before_delete($rec,$type) {
+			$rs=new wz_recordset_links;
+			$rs->find_records(array('classname'=>$rec->name))->delete();
+			$rs->commit();
+		}
+
+
+	</pre>
+	<hr><br>
+	<a name="form"></a>
+	{handler gspgid="/admin/form/wz_recordset_triggers/edit/`$_gsdata.gspgid_va.2`" Recordset_id=$recordset.id}
+	{/if}
+
+
+    {*
+	<h4>submodules
+        <a href="/admin/wizard/recordset_fields/{$_gsdata.gspgid_va.0}/submodules/0#form">создать</a>
+    </h4>
+
+	<table class="tb">
+	<thead>
+	<tr><th>#</th>
+	<th>name</th>
+	<th></th>
+	<th></th>
+	</thead>
+	{foreach from=$recordset.Submodules item="e"}
+	<tr class="{cycle values='odd,even'}">
+			<td>{$e.id}</td>
+			<td>{$e.name}</td>
+			<td class="cnt"><a href="/admin/wizard/recordset_fields/{$e.Recordset_id}/submodules/{$e.id}#form"><img src="/i/admin/ico_edit.png" alt="Редактировать" title="Редактировать"></a></td>
+			<td class="cnt"><a href="/admin/wizard/recordset_submodules/delete/{$e.id}" onclick="return confirm('Вы точно хотите удалить запись ?');"><img src="/i/admin/ico_delete.png" alt="Удалить" title="Удалить"></a></td>
+	</tr>
+	{/foreach}
+	</table>
+	{if isset($_gsdata.gspgid_va.1) && $_gsdata.gspgid_va.1=='submodules'}
+	<hr><br>
+	<a name="form"></a>
+	{handler gspgid="/admin/form/wz_recordset_submodules/edit/`$_gsdata.gspgid_va.2`" Recordset_id=$recordset.id}
+	{/if}
+    *}
+{/block}

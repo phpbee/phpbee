@@ -1,0 +1,15 @@
+<link href="/libs/widgets/wysiwyg/public_html/jquery.rte.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/libs/widgets/wysiwyg/public_html/jquery.rte.js"></script>
+<script type="text/javascript" src="/libs/widgets/wysiwyg/public_html/jquery.rte.tb.js"></script>
+
+<textarea class="{$cssClass} fWysiwyg" name="{$fieldname}" id="wysiwyg_{$fieldname}" _images="/widgets/wysiwyg/gallery/{$rs}/{$link}/{$rid}">{$value}</textarea>
+<script type="text/javascript">
+$(document).ready (function () {
+	
+	$('#wysiwyg_{$fieldname}').rte( {
+		//css: ['default.css'],
+		controls_rte: rte_toolbar,
+		controls_html: html_toolbar
+	});
+});
+</script>

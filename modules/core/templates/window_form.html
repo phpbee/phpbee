@@ -1,0 +1,29 @@
+{extends file="admin_lite_page.html"}
+{block name="main"}
+<table class="tb">
+		<thead>
+		<tr><th>#</th><th>Название</th><th>&nbsp;</th><th>&nbsp;</th></tr>
+		</thead>
+		{controller _class=$_gsdata.gspgid_va.0 _params=$params _assign="list"}
+		{foreach from=$list item="e"}
+		<tr>
+			<td>{$e.id}</td>
+			<td>{$e|@trim}</td>
+			<td class="cnt"><a href="/admin/many2one/{$url}/{$e.id}"><img src="/i/admin/ico_edit.png" alt="Редактировать" title="Редактировать"></a></td>
+			<td class="cnt"><a href="/admin/many2one/{$url}/delete/{$e.id}" onclick="return confirm('Вы точно хотите удалить запись ?');"><img src="/i/admin/ico_delete.png" alt="Удалить" title="Удалить"></a></td>
+		</tr>
+		{/foreach}
+		</table>
+		{handler gspgid="/admin/form/`$_gsdata.gspgid_va.0`/edit/`$_gsdata.gspgid_va.4|default:''`" _params=$params}
+<script type="text/javascript">
+var o=opener.window.document.getElementById('gallery_{$_gsdata.gspgid_va[3]}');
+var s='';
+{if count($list)}
+{foreach from=$list item="im"}
+s+='<li><img src="/img/h/{$_gsdata.gspgid_va.0}/100/{$im.id}.jpg" title="{$im.name}"></li>';
+{/foreach}
+s+='<div class="clear"></div>';
+{/if}
+if (typeof o=='object') o.innerHTML=s;
+</script>
+{/block}

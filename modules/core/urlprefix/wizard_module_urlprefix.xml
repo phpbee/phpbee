@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xml>
+  <recordset name="wz_modules">
+    <record>
+      <links>
+        <recordsets>
+          <recordset name="wz_recordsets">
+            <record>
+              <links>
+                <Fields>
+                  <recordset name="wz_recordset_fields">
+                    <record>
+                      <links/>
+                      <values>
+                        <name>prefix</name>
+                        <verbose_name>prefix</verbose_name>
+                        <helper_text/>
+                        <type>fString</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value/>
+                        <make_index>1</make_index>
+                        <required>1</required>
+                        <is_unique>1</is_unique>
+                        <Recordset_id>1</Recordset_id>
+                        <_ctime>2013-03-01 17:23:17</_ctime>
+                        <_mtime>2013-03-01 17:25:18</_mtime>
+                        <sortkey>1</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>variable_name</name>
+                        <verbose_name>variable_name</verbose_name>
+                        <helper_text/>
+                        <type>fString</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value/>
+                        <make_index>1</make_index>
+                        <required>1</required>
+                        <is_unique>0</is_unique>
+                        <Recordset_id>1</Recordset_id>
+                        <_ctime>2013-03-01 17:23:30</_ctime>
+                        <_mtime>2013-03-01 17:23:30</_mtime>
+                        <sortkey>2</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>value</name>
+                        <verbose_name>value</verbose_name>
+                        <helper_text/>
+                        <type>fString</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value/>
+                        <make_index>0</make_index>
+                        <required>1</required>
+                        <is_unique>0</is_unique>
+                        <Recordset_id>1</Recordset_id>
+                        <_ctime>2013-03-01 17:23:47</_ctime>
+                        <_mtime>2013-03-01 17:23:47</_mtime>
+                        <sortkey>3</sortkey>
+                      </values>
+                    </record>
+                  </recordset>
+                </Fields>
+                <Resizes>
+                  <recordset name="wz_recordset_resizes"/>
+                </Resizes>
+                <Links>
+                  <recordset name="wz_recordset_links"/>
+                </Links>
+                <Triggers>
+                  <recordset name="wz_recordset_triggers"/>
+                </Triggers>
+                <Submodules>
+                  <recordset name="wz_recordset_submodules"/>
+                </Submodules>
+              </links>
+              <values>
+                <name>urlprefix_cfg</name>
+                <title>config</title>
+                <table_name/>
+                <database>0</database>
+                <extends/>
+                <Module_id>1</Module_id>
+                <_Fields_count>3</_Fields_count>
+                <_Resizes_count>3</_Resizes_count>
+                <_Links_count>3</_Links_count>
+                <_Triggers_count>3</_Triggers_count>
+                <_Submodules_count>3</_Submodules_count>
+                <showadmin>1</showadmin>
+                <no_urlkey>1</no_urlkey>
+                <no_ctime>1</no_ctime>
+                <use_sortkey>1</use_sortkey>
+                <install>1</install>
+                <orderby>sortkey</orderby>
+                <id_field_name>id</id_field_name>
+                <_ctime>2013-03-01 17:22:48</_ctime>
+                <_mtime>2013-03-01 17:36:19</_mtime>
+                <sortkey>1</sortkey>
+              </values>
+            </record>
+          </recordset>
+        </recordsets>
+        <urls>
+          <recordset name="wz_urls">
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>1</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.show:name:adm_urlprefix_cfg.html</handler_value>
+                        <Url_id>1</Url_id>
+                        <_ctime>2013-03-01 17:24:56</_ctime>
+                        <_mtime>2013-03-01 17:24:56</_mtime>
+                        <sortkey>1</sortkey>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/admin/urlprefix/urlprefix_cfg</gspgid_value>
+                <type>get</type>
+                <Module_id>1</Module_id>
+                <_Handlers_count>0</_Handlers_count>
+                <_ctime>2013-03-01 17:24:56</_ctime>
+                <_mtime>2013-03-01 17:24:56</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>1</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.delete:{classname:urlprefix_cfg}</handler_value>
+                        <Url_id>2</Url_id>
+                        <_ctime>2013-03-01 17:24:56</_ctime>
+                        <_mtime>2013-03-01 17:24:56</_mtime>
+                        <sortkey>2</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>2</cnt>
+                        <handler_keyname>1</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect</handler_value>
+                        <Url_id>2</Url_id>
+                        <_ctime>2013-03-01 17:24:56</_ctime>
+                        <_mtime>2013-03-01 17:24:56</_mtime>
+                        <sortkey>3</sortkey>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/admin/urlprefix/urlprefix_cfg/delete</gspgid_value>
+                <type>get</type>
+                <Module_id>1</Module_id>
+                <_Handlers_count>0</_Handlers_count>
+                <_ctime>2013-03-01 17:24:56</_ctime>
+                <_mtime>2013-03-01 17:24:56</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>1</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.copy:{classname:urlprefix_cfg}</handler_value>
+                        <Url_id>3</Url_id>
+                        <_ctime>2013-03-01 17:24:56</_ctime>
+                        <_mtime>2013-03-01 17:24:56</_mtime>
+                        <sortkey>4</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>2</cnt>
+                        <handler_keyname>1</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect</handler_value>
+                        <Url_id>3</Url_id>
+                        <_ctime>2013-03-01 17:24:56</_ctime>
+                        <_mtime>2013-03-01 17:24:56</_mtime>
+                        <sortkey>5</sortkey>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/admin/urlprefix/urlprefix_cfg/copy</gspgid_value>
+                <type>get</type>
+                <Module_id>1</Module_id>
+                <_Handlers_count>0</_Handlers_count>
+                <_ctime>2013-03-01 17:24:56</_ctime>
+                <_mtime>2013-03-01 17:24:56</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>1</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect_if:gl:save_cancel:return:true</handler_value>
+                        <Url_id>4</Url_id>
+                        <_ctime>2013-03-01 17:24:56</_ctime>
+                        <_mtime>2013-03-01 17:24:56</_mtime>
+                        <sortkey>6</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>2</cnt>
+                        <handler_keyname>1</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.post:{name:admin_form.html:classname:urlprefix_cfg:form_class:g_forms_table}</handler_value>
+                        <Url_id>4</Url_id>
+                        <_ctime>2013-03-01 17:24:56</_ctime>
+                        <_mtime>2013-03-01 17:24:56</_mtime>
+                        <sortkey>7</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>3</cnt>
+                        <handler_keyname>2</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect_if:gl:save_continue:return:true</handler_value>
+                        <Url_id>4</Url_id>
+                        <_ctime>2013-03-01 17:24:56</_ctime>
+                        <_mtime>2013-03-01 17:24:56</_mtime>
+                        <sortkey>8</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>4</cnt>
+                        <handler_keyname>3</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect_if:gl:save_return:return:true</handler_value>
+                        <Url_id>4</Url_id>
+                        <_ctime>2013-03-01 17:24:56</_ctime>
+                        <_mtime>2013-03-01 17:24:56</_mtime>
+                        <sortkey>9</sortkey>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/admin/form/urlprefix_cfg</gspgid_value>
+                <type>handler</type>
+                <Module_id>1</Module_id>
+                <_Handlers_count>0</_Handlers_count>
+                <_ctime>2013-03-01 17:24:56</_ctime>
+                <_mtime>2013-03-01 17:24:56</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>1</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect_if:gl:save_cancel:return:true</handler_value>
+                        <Url_id>5</Url_id>
+                        <_ctime>2013-03-01 17:24:56</_ctime>
+                        <_mtime>2013-03-01 17:24:56</_mtime>
+                        <sortkey>10</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>2</cnt>
+                        <handler_keyname>1</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.post:{name:inline_form.html:classname:urlprefix_cfg}</handler_value>
+                        <Url_id>5</Url_id>
+                        <_ctime>2013-03-01 17:24:56</_ctime>
+                        <_mtime>2013-03-01 17:24:56</_mtime>
+                        <sortkey>11</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>3</cnt>
+                        <handler_keyname>2</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect_if:gl:save_continue:return:true</handler_value>
+                        <Url_id>5</Url_id>
+                        <_ctime>2013-03-01 17:24:56</_ctime>
+                        <_mtime>2013-03-01 17:24:56</_mtime>
+                        <sortkey>12</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>4</cnt>
+                        <handler_keyname>3</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect_if:gl:save_return:return:true</handler_value>
+                        <Url_id>5</Url_id>
+                        <_ctime>2013-03-01 17:24:56</_ctime>
+                        <_mtime>2013-03-01 17:24:56</_mtime>
+                        <sortkey>13</sortkey>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/admin/inline_form/urlprefix_cfg</gspgid_value>
+                <type>handler</type>
+                <Module_id>1</Module_id>
+                <_Handlers_count>0</_Handlers_count>
+                <_ctime>2013-03-01 17:24:56</_ctime>
+                <_mtime>2013-03-01 17:24:56</_mtime>
+              </values>
+            </record>
+          </recordset>
+        </urls>
+        <forms>
+          <recordset name="wz_forms"/>
+        </forms>
+      </links>
+      <values>
+        <name>urlprefix</name>
+        <title>urlprefix</title>
+        <_recordsets_count>1</_recordsets_count>
+        <_urls_count>1</_urls_count>
+        <_forms_count>1</_forms_count>
+        <_ctime>2013-03-01 17:12:26</_ctime>
+        <_mtime>2013-03-01 17:22:48</_mtime>
+      </values>
+    </record>
+  </recordset>
+</xml>

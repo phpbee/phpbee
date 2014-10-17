@@ -1,0 +1,7 @@
+<div class="links_line">	
+	{foreach from=$links item=i}
+	<label><input type=checkbox name="{$i.keyname}[]" value="{$i.key}"
+	{if $current|is_array && $i.key|in_array:$current}checked="checked"{/if} >{$i.name} ({$i.count}) </label>
+	{/foreach}
+</div>
+

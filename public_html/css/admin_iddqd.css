@@ -1,0 +1,6 @@
+.bee_block {
+	border: 1px dashed #F00; 
+	display:block;
+	min-height:15px;
+	min-width:50px;
+}

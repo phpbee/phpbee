@@ -1,0 +1,8 @@
+{extends file="index.html"}
+{block base}<base href="/Payments/">{/block}
+{block body}
+
+<h4>Card details</h4>
+{handler gspgid="Payments/payment_form/{$_gsdata.gspgid_va.0}" template="Payments/form_cardinfo.html"}
+
+{/block}

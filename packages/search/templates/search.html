@@ -1,0 +1,35 @@
+{extends file="index.html"}
+{block name="content"}
+	<legend>
+		 Поиск 
+	</legend>
+
+
+		{handler gspgid="/filter/" class="limit" name="limit" urltype=session values='20,50,100,500' default_value=20}
+		{handler gspgid="/filter/" class="offset"  name="offset" urltype=get limit='limit'}
+    
+
+{controller _class="sidx_{$_gsdata.gspgid_va.0}" _options=$_gsstack.last _assign=rs _filters="limit,offset"}
+
+{handler gspgid="/filter/show" name="offset" tpl="offset_bootstrap.html" page_title='Page' page_prev='previous' page_next='next' page_between='from' pages_count=21 recordset=$rs}
+{handler gspgid="/filter/show" name="limit" tpl="limit_select.html" prelabel='show by' label='records'}
+
+{foreach $rs as $r}
+    {$rec=record_by_id($r->record_id,$r->recordset_name)}
+    <div class="well well-small">
+		<p class="pull-right">
+		{$rec->_ctime}
+		</p>
+        <p class="lead">
+            <a href="{gl rec_search=$rec module=$rs->recordset_modules[$r->recordset_name]}">{$rec|trim}</a></legend>
+        </p>    
+        <p>
+        {$rec->content|truncate:200}
+        </p>
+   </div>
+{/foreach}
+
+{handler gspgid="/filter/show" name="offset" tpl="offset_bootstrap.html" page_title='Page' page_prev='previous' page_next='next' page_between='from' pages_count=21 recordset=$rs}
+{handler gspgid="/filter/show" name="limit" tpl="limit_select.html" prelabel='show by' label='records'}
+
+{/block}

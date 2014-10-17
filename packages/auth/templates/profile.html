@@ -1,0 +1,13 @@
+{extends file="index_page.html"}
+{block name="content"}
+<h3>Профиль пользователя<h3>
+<a href="/auth/profile/update/">редактировать</a>
+<ul>
+{foreach from=$_gssession.user->get_values($_gssession.user->get_recordset()->html_fields()) key=k item=v}
+<li><b>{$k}:</b> {$v}</li>
+{/foreach}
+{foreach from=$_gssession.user.Profile->first()->get_values($_gssession.user.Profile->html_fields()) key=k item=v}
+<li><b>{$k}:</b> {$v}</li>
+{/foreach}
+</ul>
+{/block}

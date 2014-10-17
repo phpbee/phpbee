@@ -1,0 +1,13 @@
+<div class="filter_limit_select">	
+	<span>{$prelabel}</span>
+	{foreach from=$values item=item}
+		{if  $current==$item}
+			<b>{$item}</b>
+		{else}
+			<a href="{href_get_push("`$keyname`=`$item`")}">{$item}</a>
+		{/if}	
+	{/foreach}
+
+	{$label}
+
+</div>

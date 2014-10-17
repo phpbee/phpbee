@@ -1,0 +1,125 @@
+.MultiPowUploadStartButton {
+	border: 2px;
+}
+.MultiPowUploadGallery input{
+	display:none;
+}
+
+
+.MultiPowUploadGalleryGroup{
+	float: left;
+	background: #DDf;
+	margin-right: 12px;
+	margin-bottom: 6px;
+	/*border: 1px solid #666;*/
+}
+.MultiPowUploadGalleryItem{
+	float: left;
+	padding: 6px;
+	margin:0px;
+}
+.MultiPowUploadCheckedElement {
+	/*border: 5px solid #FF0;*/
+	background: #900000;
+}
+
+
+#preview{
+	position:absolute;
+	border:1px solid #ccc;
+	background:#333;
+	padding:5px;
+	display:none;
+	color:#fff;
+	}
+
+.MultiPowUploadStartButton{
+font-weight:bold;
+text-align:center;
+font-size:12px;
+border-radius:10px;
+padding:3px 15px;
+cursor:pointer;
+background-image:none;
+margin-top:2px;
+}
+.MultiPowUploadStartButton:hover{
+background-color:#E0E0E0;
+background-image:none;
+}
+
+
+.MultiPowUploadCheckedElement{
+background-color:#DBEBF0 !important;
+	/*
+border:1px solid #64AFE1 !important;
+box-shadow:0 0 1px white;
+	*/
+}
+.MultiPowUploadCheckedElement img{
+box-shadow:0 0 3px black !important;
+}
+
+
+.MultiPowUploadGalleryItem{
+float: none !important;
+display:inline-block;
+border-radius:3px;
+margin-right:0px !important;
+margin-bottom:2px !important;
+margin-top:2px !important;
+border:1px solid white;
+} 
+/*
+.MultiPowUploadGalleryItem img{
+border:1px solid white;
+box-shadow:0 0 1px #707076;
+} 
+*/
+
+
+
+
+.MultiPowUploadStartButton{
+font-weight:bold;
+text-align:center;
+font-size:16px;
+border-radius:20px;
+padding:5px 22px 3px;
+cursor:pointer;
+background-image:none;
+margin-left:0;
+background-color:#A5B533;
+background:-moz-linear-gradient(#B4C457, #99A72F) repeat scroll 0 0 transparent !important;
+background: -webkit-linear-gradient(#B4C457, #99A72F) repeat scroll 0 0 transparent !important;
+background: -o-linear-gradient(#B4C457, #99A72F) repeat scroll 0 0 transparent !important;
+border:1px solid #95A42F !important;
+text-shadow:1px 1px 1px  #7E8B27;
+color:white;
+margin-top:2px;
+margin-bottom:10px;
+}
+.MultiPowUploadStartButton:hover{
+background-color:#99A72F !important;
+background-image:none !important;
+background-image:none;
+}
+.MultiPowUploadGalleryGroup{
+background:  #EAEAEA !important;
+border:1px solid #D4D4D4;
+display:block;
+border-radius:3px;
+clear:both;
+padding:0 2px !important;
+margin-bottom:0 !important;
+}
+.MultiPowUploadGalleryGroup .MultiPowUploadGalleryItem{
+border:1px solid #EAEAEA;
+}
+
+
+
+.MultiPowUpload{
+margin-top:10px;
+}
+

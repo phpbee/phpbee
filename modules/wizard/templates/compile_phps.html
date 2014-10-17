@@ -1,0 +1,203 @@
+<?php
+gs_dict::append(array(
+	));
+
+class module{%$MODULE_NAME%} extends gs_base_module implements gs_module {
+	function __construct() {
+	}
+	function install() {
+		foreach(array(
+		<*foreach from=$module->recordsets item=rs*>
+			<*if $rs->install*>'<*$rs->name*>',<*/if*>
+		<*/foreach*>
+		) as $r){
+			$this->$r=new $r;
+			$this->$r->install();
+		}
+	}
+	
+	function get_menu() {
+		$ret=array();
+		$item=array();
+		$item[]='<a href="/admin/<*$module->name*>/"><*$module->title*></a>';
+		<*foreach from=$module->recordsets item=rs*>
+			<*if $rs->showadmin*>$item[]='<a href="/admin/<*$module->name*>/<*$rs->name*>"><*$rs->title*></a>';<*/if*>
+		<*/foreach*>
+		$ret[]=$item;
+		return $ret;
+	}
+	
+	static function get_handlers() {
+		$data=array(
+<*foreach from=$urls key=type item=handler*>
+'<*$type*>'=>array(
+<*foreach from=$handler key=type item=url*>
+'<*$url->gspgid_value*>'=>array(
+<*foreach from=$url->Handlers->orderby('sortkey') item=h*> <*if $h->handler_keyname && !$h->handler_keyname|is_numeric *>'<*$h->handler_keyname*>'=><*/if*> '<*if $h->handler_template*>template.<*$h->handler_template*>:<*/if*><*$h->handler_value*>', 
+<*/foreach*>
+),
+<*/foreach*>
+),
+<*/foreach*>
+		);
+		return self::add_subdir($data,dirname(__file__));
+	}
+
+	static function gl($alias,$rec,$data) {
+		$fname=dirname(__FILE__).DIRECTORY_SEPARATOR.'gl.php';
+		if (file_exists($fname)) {
+			$x=include($fname);
+			return $x;
+		}
+		return parent::gl($alias,$rec,$data);
+	}
+
+	/*
+	static function gl($alias,$rec) {
+		if(!is_object($rec)) {
+			$obj=new tw{%$MODULE_NAME%};
+			$rec=$obj->get_by_id(intval($rec));
+		}
+		switch ($alias) {
+			case '___show____':
+				return sprintf('/{%$MODULE%}/show/%s/%d.html',
+						date('Y/m',strtotime($rec->date)),
+						$rec->get_id());
+			break;
+		}
+	}
+	*/
+}
+/*
+class handler{%$MODULE_NAME%} extends gs_base_handler {
+}
+*/
+
+<*foreach from=$module->recordsets item=rs*>
+
+class <*$rs->name*> extends <*$rs->extends|default:"gs_recordset_short"*> {
+	<*if $rs->table_name && $rs->table_name!=$rs->name *>public $db_tablename='<*$rs->table_name*>'; <*/if*>
+	<*if $rs->id_field_name && $rs->id_field_name!='id'*>public $id_field_name='<*$rs->id_field_name*>'; <*/if*>
+	public $no_urlkey=<*intval($rs->no_urlkey)*>;
+	<*if $rs->use_sortkey*>public $sortkey=true; <*/if*>
+	<*if $rs->no_ctime*>public $no_ctime=true; <*/if*>
+	<*if $rs->orderby*>public $orderby="<*$rs->orderby*>";<*/if*> 
+	<*if $rs->database*>public $gs_connector_id="<*$rs->database*>";<*/if*>
+	<*if $rs->table_name*>public $table_name="<*$rs->table_name*>";<*/if*>
+	function __construct($init_opts=false) { parent::__construct(array(
+
+		<*foreach from=$rs->Fields->orderby('sortkey') item=f*>
+
+			'<*$f->name*>'=>'<*$f->type*> <*if $f->verbose_name*>verbose_name="<*$f->verbose_name*>" <*/if*> <*if $f->widget*>widget="<*$f->widget*>" <*/if*> <*if strlen($f->default_value)*>default="<*$f->default_value*>" <*/if*> <*if $f->options*>options="<*$f->options|escape:quotes*>" <*/if*> required=<*if $f->required*>true<*else*>false<*/if*> <*if $f->is_unique*>unique=true<*/if*> <*if $f->make_index*>index=true<*/if*> <*$f->extra_options|escape:quotes*> <*if $f->multilang*>multilang=true<*/if*> <*if $f->helper_text*>helper_text="<*$f->helper_text*>" <*/if*> <*if $f->cssclass*>cssclass="<*$f->cssclass*>" <*/if*>  ',
+
+		<*/foreach*>
+		<*foreach from=$rs->Links item=f*>
+
+			'<*$f->name*>'=>'<*$f->type*> <*$f->classname*><*if $f->linkname*>:<*$f->linkname*><*/if*> <*if $f->verbose_name*>verbose_name="<*$f->verbose_name*>" <*/if*> <*if $f->options*>options="<*$f->options*>" <*/if*> <*if $f->widget*>widget="<*$f->widget*>" <*/if*> required=<*if $f->required*>true<*else*>false<*/if*>  <*$f->extra_options*>  ',
+
+		<*/foreach*>
+		<*if $rs->Submodules->count()*>
+		{%foreach from=$SUBMODULES_DATA.LINKS key=K item=L%}
+			'{%$K%}'=>"{%$L%}",
+		{%/foreach%}
+		<*/if*>
+		),$init_opts);
+
+		<*$fkeys=$rs->Links->find('type=lOne2One') *>
+		<*if $fkeys->count()>0*>
+		$this->structure['fkeys']=array(
+		<*foreach from=$fkeys item=f*>
+		<*if $f->fkey_on_delete!='NONE' && $f->fkey_on_update!='NONE'*>
+				array('link'=>'<*$f->fkey_name|default:$f->name*>','on_delete'=>'<*$f->fkey_on_delete*>','on_update'=>'<*$f->fkey_on_update*>'),
+		<*/if*>		
+		<*/foreach*>
+		     );
+		<*/if*>
+
+		<*foreach $rs->Triggers as $t*>
+			<*if $t->on_insert*>
+				$this->structure['triggers']['<*$t->on_insert*>_insert'][]='trigger_<*$t->get_id()*>';
+			<*/if*>	
+			<*if $t->on_update*>
+				$this->structure['triggers']['<*$t->on_update*>_update'][]='trigger_<*$t->get_id()*>';
+			<*/if*>	
+			<*if $t->on_delete*>
+				$this->structure['triggers']['<*$t->on_delete*>_delete'][]='trigger_<*$t->get_id()*>';
+			<*/if*>	
+		<*/foreach*>	
+		
+	}
+		<*foreach $rs->Triggers as $t*>
+			function trigger_<*$t->get_id()*>($rec,$type,$options=array()) {
+				<*$t->code*>
+			}
+		<*/foreach*>	
+	
+	<*if $rs->Resizes->count()*>
+	function config_previews() {
+		parent::config_previews();
+		$this->config=array_merge($this->config,array(
+		<*foreach from=$rs->Resizes item=r*>
+			'<*$r.name*>'=>array('width'=><*$r.width*>,'height'=><*$r.height*>,'method'=>'<*$r.method*>','bgcolor'=>array(<*$r.bgcolor*>)<*if $r.modifier*>, 'modifier'=>'<*$r.modifier*>'<*/if*>),
+		<*/foreach*>
+		));
+	}
+	<*/if*>
+
+}
+
+<*/foreach*>
+
+
+<*foreach from=$module->forms item=form*>
+
+class <*$form->classname*> extends <*$form->extends*>{
+	function __construct($hh,$params=array(),$data=array()) {
+		$hh=array(
+
+		    <*foreach $form->Fields->orderby('sortkey') as $f*>
+		    '<*$f->name*>' => Array
+			(
+			    'widget' => '<*$f->widget*>',
+			    <*if $f->verbose_name*>     'verbose_name'=>'<*$f->verbose_name*>',<*/if*>
+			    <*if $f->helper_text*>     'helper_text'=>'<*$f->helper_text*>',<*/if*>
+			    <*if $f->cssclass*>     'cssclass'=>'<*$f->cssclass*>',<*/if*>
+			    <*if $f->default_value*>    'default'=>'<*$f->default_value*>',<*/if*>
+			    <*if $f->readonly_field*>     'readonly'=>'<*$f->readonly_field*>',<*/if*>
+			    <*if $f->options*>     'options'=>'<*$f->options|escape:quotes*>',<*/if*>
+			    <*if $f->extra_options*>     <*$f->extra_options*>,<*/if*>
+			    'validate' => Array 
+			    	(
+				<*foreach $f->Validators as $v*>
+					'<*$v->class*>',
+				<*/foreach*>
+				),	
+			    'validate_params' => Array 
+			    	(
+				<*foreach $f->Validators as $v*>
+				<*foreach $v->options|string_to_params as $k=>$p*>
+					'<*$k*>'=>'<*$p*>',
+				<*/foreach*>
+				<*/foreach*>
+				),	
+			),
+			<*/foreach*>
+		);
+
+
+		    <*foreach $form->Fields->orderby('cnt') as $f*>
+			    <*if $f->interact*>
+			    $this->interact["<*$f->name*>"]='<*$f->interact|escape:quotes*>';
+			    <*/if*>
+		    <*/foreach*>
+		return parent::__construct($hh,$params,$data);
+	}
+
+}
+
+
+<*/foreach*>
+
+
+
+?>

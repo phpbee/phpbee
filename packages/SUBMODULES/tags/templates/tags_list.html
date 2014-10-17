@@ -1,0 +1,5 @@
+{controller _class=tw{%$MODULE_NAME%} _assign="tags" _limit=$_gsdata.gspgid_va.0 _fields="id,name,_Parent_count" _orderby="_Parent_count desc"}
+{$norm=$tags->norm()}
+{foreach $tags as $t}
+<a class="tag t{$norm[$t->get_id()]}" href="{gl show=$t}">{$t->name}</a>
+{/foreach}

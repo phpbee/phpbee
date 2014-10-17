@@ -1,0 +1,85 @@
+
+<script>
+</script>	
+
+	<form enctype="multipart/form-data" id="div_createform" action="" class="form_login form_wide" method="post">
+		<input type=hidden name="root" value="{$pid_id}">
+		<input type=hidden name="gspgid_form" value="{$gspgid_form}">
+		{if $_gsdata.dialog}<input type=hidden name="dialog" value="{$_gsdata.dialog}">{/if}
+
+		{include file="form_error_messages.html"}
+		{$form->set_error_template('<div class="form_error" id="err" style="display: block; "><i></i>%s</div>')}
+
+		{block name="prepare_form"}
+		{/block}
+
+
+		{foreach $form->get_fields() as $field=>$op} 
+			{$form->set_option($field,'placeholder',$form->get_option($field,'verbose_name'))}
+		{/foreach}
+		{$form->set_option_allfields('cssclass','field3')}
+		
+
+
+		{$form->_prepare_inputs()}
+
+		{$form->get_error_template('FORM_ERROR')}
+
+		{foreach $form->get_fields() as $field=>$op } 
+
+				{$s=explode(':',$field)}
+			
+				{block name="field"}
+					
+					
+					{if $s[3]=='template'}
+						<fieldset><legend>form</legend>
+					{/if}
+					{if $s[3]=='enabled'}
+						{$form->get_input($field)}
+						<span class="toggle_head"  id="field_{$s.1}_{$s.4}">
+						{$form->get_data($field|replace:'enabled':'name')}
+						</span>
+					{elseif $s[2]=='recordset'}
+					{if !$field@first}
+						</fieldset>
+					</fieldset>
+					{/if}
+					<fieldset class="" style="border:1px solid #000;">
+						<legend>
+						{$op.verbose_name}
+						</legend>
+					{else}
+					{$op.verbose_name|default:$field}
+					<span class="sortable">
+					{$form->get_input($field)}
+					</span>
+					{$form->get_error_template($field)}
+					<br>
+					{/if}
+					{if $s[3]=='enabled'}
+					<div class="toggle_item" id="toggle_field_{$s.1}_{$s.4}">
+					{/if}
+					{if $s[3]=='validate_params'}
+					</div>
+					<br>
+					{/if}
+				{/block}
+		{foreachelse}
+		</div>
+		{/foreach}
+	
+
+         <br /> <br />
+	 	{block name="submit_button"}
+		<input type="submit" class="button" value="{$submit_title|default:"продолжить"}" />
+		{/block}
+	</form>
+{literal}
+	<script>
+	$(document).ready (function (){
+			toggle_complex("#div_createform","#div_createform").show();
+				/*jQuery("#inputs").accordion();*/
+	});
+	</script>
+{/literal}

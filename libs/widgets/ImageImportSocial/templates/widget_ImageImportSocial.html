@@ -1,0 +1,36 @@
+{*
+{handler gspgid="widgets/ImageImportSocial/action" recordset=$params.recordset hash=$params.hash foreign_field_name=$params.foreign_field_name rid=$params.rid}
+{foreach $params as $k=>$v}
+	<input type=hidden name="{$k}" value="{$v|htmlentities}">
+{/foreach}
+<script type="text/javascript">
+	{foreach $params as $k=>$v}
+	var {$k}={$v|json_encode};
+	{/foreach}
+</script>
+*}
+
+<p>
+<div>
+<button class="btn" onClick="return ImageImportSocial($(this).siblings('.ImageImportSocial').show());">{ml('Импортировать из VK','Import from VK')}</button>
+
+<div class="ImageImportSocial" style="display:none;">
+	<script type="text/javascript" src="/libs/widgets/ImageImportSocial/widget.js"></script>
+	<link href="/libs/widgets/ImageImportSocial/widget.css" rel="stylesheet" type="text/css">
+
+	<div class="ImageImportSocialGallery" rel="/widgets/ImageImportSocial/upload/{$params.recordset}/{$params.foreign_field_name}/{$params.rid}/{$params.hash}/{$params.linkname}">
+	</div>	
+
+	<div>
+	<button id="ImageImportSocialGalleryBtnPrev" onClick="ImageImportSocial_search(this,-1);return false;" class="btn float-left">&laquo;</button>
+	<button id="ImageImportSocialGalleryBtnNext"  onClick="ImageImportSocial_search(this,1);return false;" class="btn float-right">&raquo;</button>
+	<button id="ImageImportSocialGalleryBtnUpload" onClick="ImageImportSocial_upload(this);return false;" class="btn">{ml('Загрузить','Upload')}</button>
+	</div>
+
+</div>
+</div>
+</p>
+
+
+
+

@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MultiPowUpload_parameters>
+  <param name="browseButton.text">Gennemse ...</param>
+  <param name="browseButton.tooltip">Tilføj filer til upload</param>
+  <param name="cancelButton.pauseText">Pause</param>
+  <param name="cancelButton.text">Annuller</param>
+  <param name="cancelButton.tooltip">Afbryd nuværende aktivitet</param>
+  <param name="clearButton.text">Ryd</param>
+  <param name="clearButton.tooltip">Fjern alle filer</param>
+  <param name="constant.bytes">bytes</param>
+  <param name="constant.decimalSeparator">,</param>
+  <param name="constant.gigaBytes">Gb</param>
+  <param name="constant.kiloBytes">Kb</param>
+  <param name="constant.megaBytes">Mb</param>
+  <param name="contextMenu.sortByDate">Sorter efter dato</param>
+  <param name="contextMenu.sortByName">Sorter efter navn</param>
+  <param name="contextMenu.sortBySize">Sorter efter størrelse</param>
+  <param name="descriptionWindow.caption">Beskrivelse til fil</param>
+  <param name="descriptionWindow.fileNavigation.fileName.label">&lt;FILENAME&gt;</param>
+  <param name="descriptionWindow.fileNavigation.nextButton.label"></param>
+  <param name="descriptionWindow.fileNavigation.previousButton.label"></param>
+  <param name="exifWindow.caption">&lt;FILENAME&gt; EXIF data</param>
+  <param name="exifWindow.list.nameHeader">Navn</param>
+  <param name="exifWindow.list.valueHeader">Værdi</param>
+  <param name="fileInfoWindow.caption">Filoplysninger</param>
+  <param name="fileInfoWindow.exifInfo">&lt;b&gt; Exif info &lt;/b&gt;: &lt;a&gt; Klik for at se &lt;/a&gt;</param>
+  <param name="fileInfoWindow.fileDate">&lt;b&gt; Dato &lt;/b&gt;: &lt;FILEDATE&gt;</param>
+  <param name="fileInfoWindow.fileName">&lt;b&gt; Navn &lt;/b&gt;: &lt;FILENAME&gt;</param>
+  <param name="fileInfoWindow.fileSize">&lt;b&gt; Størrelse &lt;/b&gt;: &lt;FILESIZE&gt;</param>
+  <param name="fileInfoWindow.fileStatus">&lt;b&gt; Status &lt;/b&gt;: &lt;FILESTATUS&gt;</param>
+  <param name="fileInfoWindow.imageHeight">&lt;b&gt; Billede højde &lt;/b&gt;: &lt;IMAGEHEIGHT&gt;</param>
+  <param name="fileInfoWindow.imageWidth">&lt;b&gt; Billede bredde &lt;/b&gt;: &lt;IMAGEWIDTH&gt;</param>
+  <param name="fileStatus.cancelled">Aflyste</param>
+  <param name="fileStatus.complete">Afsluttet</param>
+  <param name="fileStatus.encodeImage">Encode billede</param>
+  <param name="fileStatus.error">Der opstod en fejl</param>
+  <param name="fileStatus.loadFile">Indlæsning af filen ind i hukommelsen</param>
+  <param name="fileStatus.loadImage">Lastning billeddata</param>
+  <param name="fileStatus.processing">Upload</param>
+  <param name="fileStatus.ready">Klar til upload</param>
+  <param name="labelUpload.text">Vælg filer til upload</param>
+  <param name="listView.description.defaultText">Klik for at redigere ...</param>
+  <param name="listView.description.tooltip">Rediger filbeskrivelsen</param>
+  <param name="listView.fileNameLabel.pattern">&lt;FILENAME&gt;</param>
+  <param name="listView.label.disabledFileInfoTooltip">Størrelse: &lt;FILESIZE&gt;
+Dato: &lt;FILEDATE&gt;
+Status: &lt;FILESTATUS&gt;</param>
+  <param name="listView.label.tooltip">Størrelse: &lt;FILESIZE&gt;
+Dato: &lt;FILEDATE&gt;
+Status: &lt;FILESTATUS&gt;</param>
+  <param name="listView.removeButton.tooltip">Fjern fil</param>
+  <param name="listView.textInput.defaultString">Skriv fil kommentar her</param>
+  <param name="listViewButton.tooltip">Listevisning</param>
+  <param name="loadingText">&lt;b&gt; initialisering: &lt;PERCENT&gt;% &lt;/b&gt;</param>
+  <param name="messages.disabledType">Fil med følgende typer: &lt;FILETYPES&gt; er ikke tilladt at uploade! &lt;COUNTINVALIDFILES&gt; filer blev ignoreret!</param>
+  <param name="messages.filesCountExceeded">Kun &lt;MAXFILECOUNT&gt; filer tilladelse til at uploade! &lt;COUNTINVALIDFILES&gt; filer blev ignoreret!</param>
+  <param name="messages.filesCountNotEnough">Vælg venligst flere filer. Minimum filer count er &lt;MINFILECOUNT&gt;</param>
+  <param name="messages.httpError">&lt;center&gt; HTTP-fejl, «&lt;ERRORCODE&gt; 'fandt sted. &lt;DESCRIPTION&gt;&lt;br&gt; Se &lt;font color='#0000FF'&gt; &lt;a title='Error description' target='_blank' href='&lt;W3WLINK&gt;'&gt; &lt;W3WLINK&gt; &lt;/a&gt; &lt;/font&gt; fejlkode definitioner for mere information. &lt;/center&gt;</param>
+  <param name="messages.httpError.400">Bad Request. Server kan ikke forstå anmodning! Kontakt venligst din server administrator.</param>
+  <param name="messages.httpError.401">Uautoriseret. Brugergodkendelse kræves!</param>
+  <param name="messages.httpError.402">Betaling Påkrævet. Reserveret kode!</param>
+  <param name="messages.httpError.403">Forbudt. Serveren forstod anmodningen, men nægter at opfylde det!&lt;br&gt;For apache servere: Dette sker, fordi du har aktiveret en Apache-modul ved navn mod_security på server, som blokerer for headers sendes med Flash.&lt;br&gt;Til IIS med ASP-servere: Dette problem opstår, hvis en Content-Length headeren er til stede, og hvis Content-Length headeren angiver en mængde data, der er større end værdien af den AspMaxRequestEntityAllowed ejendom i IIS-metabasen.&lt;br&gt;Standardværdien for AspMaxRequestEntityAllowed ejendommen er 204.800 bytes.</param>
+  <param name="messages.httpError.404">Siden blev ikke fundet. Kan ikke finde '&lt;URL&gt;' side på server!</param>
+  <param name="messages.httpError.405">POST-metoden ikke tilladt for denne side &lt;URL&gt;! Prøv at ændre serverindstillinger for at tillade indlæg metode til modtagelse af script.</param>
+  <param name="messages.httpError.406">Ikke accepteres. Dette betyder, at serveren ikke kan generere svar enheder, der har indhold egenskaber ikke acceptabel i henhold til den acceptere headers, der sendes i anmodningen. Flash acceptere header er 'text / *'.</param>
+  <param name="messages.httpError.407">Proxygodkendelse kræves.</param>
+  <param name="messages.httpError.408">Anmodning Timeout.</param>
+  <param name="messages.httpError.409">Konflikt.</param>
+  <param name="messages.httpError.410">Væk. Den anmodede ressource er ikke længere tilgængelig på serveren, og ingen videresendelse adresse er kendt.</param>
+  <param name="messages.httpError.411">Længde Nødvendige.</param>
+  <param name="messages.httpError.412">Forudsætning mislykkedes.</param>
+  <param name="messages.httpError.413">Anmodning Entity Too Large.&lt;br&gt;For IIS servere: 1. Prøv at øge UploadReadAheadSize metabasen ejendom.&lt;br&gt;2. Prøv at øge MaxRequestEntityAllowed ejendomsværdi i IIS config.&lt;br&gt;For apache servere: Prøv at øge LimitRequestBody parameter i httpd.conf.</param>
+  <param name="messages.httpError.414">Anmod om-URI Too Long.</param>
+  <param name="messages.httpError.415">Ikke-understøttet Medietype.</param>
+  <param name="messages.httpError.416">Anmodede interval er ikke tilfredsstillende.</param>
+  <param name="messages.httpError.417">Forventning mislykkedes.</param>
+  <param name="messages.httpError.500">Internal Server Error. Normalt betyder det, at modtagende script har fejl.</param>
+  <param name="messages.httpError.501">Ikke gennemført. Server understøtter ikke POST-metoden.</param>
+  <param name="messages.httpError.502">Bad Gateway.</param>
+  <param name="messages.httpError.503">503 Tjenesten er ikke tilgængelig. Serveren er i øjeblikket ikke til at håndtere anmodningen på grund af en midlertidig overbelastning eller vedligeholdelse af serveren.</param>
+  <param name="messages.httpError.504">Gateway Timeout.</param>
+  <param name="messages.httpError.505">HTTP version understøttes ikke. Serveren understøtter ikke HTTP 1,1.</param>
+  <param name="messages.wrongFileType">Kun filer med følgende type: &lt;FILETYPES&gt; tilladelse til at uploade! &lt;COUNTINVALIDFILES&gt; filer blev ignoreret!</param>
+  <param name="messages.zeroSize">&lt;COUNTINVALIDFILES&gt; filer med størrelsen nul blev ignoreret!</param>
+  <param name="removeButton.tooltip">Fjern markerede filer</param>
+  <param name="retryDialog.caption">Prøv igen uploade?</param>
+  <param name="retryDialog.message">Nogle filer blev ikke uploadet. Ønsker du at prøve at uploade igen?</param>
+  <param name="retryDialog.noLabel">Ingen</param>
+  <param name="retryDialog.yesLabel">Ja</param>
+  <param name="sortButton.text"></param>
+  <param name="sortButton.tooltip">Sorteringsrækkefølge</param>
+  <param name="sortMenu.byDate">Efter dato</param>
+  <param name="sortMenu.byName">Efter navn</param>
+  <param name="sortMenu.bySize">Efter størrelse</param>
+  <param name="statusLabel.text.generateThumbnails">Generering miniaturebilleder ... vent venligst.</param>
+  <param name="statusLabel.text.loadFile "></param>
+  <param name="statusLabel.text.ready">Optælling af filer: &lt;FILESCOUNT&gt; (&lt;TOTALSIZE&gt;)</param>
+  <param name="statusLabel.text.uploadCancelled">Næste filer upload aflyst. Vent ...</param>
+  <param name="statusLabel.text.uploadComplete">Upload fuldført! &lt;UPLOADEDFILESCOUNT&gt; filer (&lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt;), Forløbet tid: &lt;ELAPSEDHOUR&gt;: &lt;ELAPSEDMIN&gt;: &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.uploadProgress">Total: &lt;PERCENT&gt;% (&lt;FILESNUM&gt; / &lt;FILESTOUPLOADCOUNT&gt;) &lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt; (&lt;RATEVALUE&gt; / sek, tid tilbage: &lt;LEFTHOUR&gt;: &lt;LEFTMIN&gt;: &lt;LEFTSEC&gt;)</param>
+  <param name="statusLabel.text.uploadStart">Upload ...</param>
+  <param name="statusLabel.text.uploadStopped">Upload stoppet. Uploaded bytes: &lt;TOTALUPLOADEDSIZE&gt;, Forløbet tid: &lt;ELAPSEDHOUR&gt;: &lt;ELAPSEDMIN&gt;: &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.waitForConnection">Server ikke reagere. Forsøger igen, vent venligst.</param>
+  <param name="thumbViewButton.tooltip">Miniaturevisning</param>
+  <param name="thumbnail.watermark.text">Element-IT</param>
+  <param name="thumbnailView.bottomPanel.labelPattern">&lt;FILENAME&gt;</param>
+  <param name="thumbnailView.cancelCropIcon.tooltip">Fortryd beskære billedet</param>
+  <param name="thumbnailView.contextMenu.CropLabel">Beskære billedet</param>
+  <param name="thumbnailView.contextMenu.RemoveLabel">Fjern</param>
+  <param name="thumbnailView.contextMenu.RotateLeftLabel">Roter til venstre</param>
+  <param name="thumbnailView.contextMenu.RotateRightLabel">Roter til højre</param>
+  <param name="thumbnailView.contextMenu.UndoCropLabel">Fortryd beskære billedet</param>
+  <param name="thumbnailView.cropIcon.tooltip">Beskære billedet</param>
+  <param name="thumbnailView.editIcon.tooltip">Rediger filbeskrivelsen</param>
+  <param name="thumbnailView.infoIcon.disabledFileInfoTooltip">Størrelse: &lt;FILESIZE&gt;
+Dato: &lt;FILEDATE&gt;
+Status: &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.infoIcon.tooltip">Størrelse: &lt;FILESIZE&gt;
+Dato: &lt;FILEDATE&gt;
+Status: &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.removeIcon.tooltip">Fjern</param>
+  <param name="thumbnailView.rotateLeftIcon.tooltip">Roter til venstre</param>
+  <param name="thumbnailView.rotateRightIcon.tooltip">Roter til højre</param>
+  <param name="uploadButton.text">Upload</param>
+  <param name="uploadButton.tooltip">Start upload</param>
+</MultiPowUpload_parameters>

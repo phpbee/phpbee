@@ -1,0 +1,26 @@
+{extends file="../../templates/wizard_page.html"}
+
+{block name="main"}
+<h3>Import recordset from mysql</h3>
+
+{handler gspgid="/admin/wizard/mysqlimport/form"}
+
+
+<table>
+<thead>
+	<tr>
+		<th>status</th>
+		<th>table</th>
+	</tr>
+</thead>
+{foreach $_gsstack.last as $t}
+	{$rs=record_by_field('table_name',$t,'wz_recordsets')}
+	{if !$rs}{$rs=record_by_field('name',$t,'wz_recordsets')}{/if}
+	<tr>
+	<td>{if $rs}IMPORTED{/if}</td>
+	<td><a href="/admin/wizard/mysqlimport/import/{$_gsdata.gspgid_v}/{$t}">{$t}</a></td>
+	</tr>
+{/foreach}
+</table>
+
+{/block}

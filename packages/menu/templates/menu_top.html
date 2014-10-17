@@ -1,0 +1,20 @@
+{controller _class=tw_menu _assign="list" position='menu_top' pid_id=0 _orderby="sort" _fields='id,pid_id,name'}
+{foreach from=$list item=n}
+<li class="tm_on">
+	<a href="{$n.url}">{$n.name}</a>
+	{controller _class=tw_menu _assign="sublist" position='menu_top' pid_id=$n.id _orderby="sort" _fields='id,pid_id,name'}
+	{assign var="sublist" value=$sublist->get_values()}
+	{if !empty($sublist)}
+	{if count($sublist)>4}
+		{assign var="class" value="cols_2"}
+	{else}
+		{assign var="class" value="cols_1"}
+	{/if}
+	<ul class="{$class}">
+		{foreach from=$sublist item=n}
+		<li><a href="{$n.url}" class="tm_" _id="{$n.id}">{$n.name}</a></li>
+		{/foreach}
+	</ul>
+	{/if}
+</li>
+{/foreach}

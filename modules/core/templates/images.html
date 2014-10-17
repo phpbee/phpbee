@@ -1,0 +1,15 @@
+{extends file="admin_empty_page.html"}
+{block name="main"}
+<ul class="img">
+{controller _class=$_gsdata.gspgid_va.0 _params=$params _assign="list"}
+		
+		{foreach from=$list item="e"}
+		{assign var="img" value="`$_gsdata.gspgid_va.0`/w/0/0/`$e.id`"|@base64_encode}
+		{assign var="img_small" value="`$_gsdata.gspgid_va.0`/f/90/90/`$e.id`"|@base64_encode}
+		<li><a href="/img/show/{$img}.jpg" onclick="$('.rte-panel #url',parent.window.document.body).get(0).value=this.href;return false;"><img src="/img/show/{$img_small}.jpg" alt="{$e.Name}" title="{$e.Name}" /></a></li>
+		{/foreach}
+		<div style="clear:both;"></div>
+</ul>
+<hr>
+{handler gspgid="/admin/form/`$_gsdata.gspgid_va.0`/edit/`$_gsdata.gspgid_va.5|default:''`" _params=$params form_class='form_table'}
+{/block}

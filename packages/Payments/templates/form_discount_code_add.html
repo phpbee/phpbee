@@ -1,0 +1,22 @@
+	<form action="" method="post">
+	<input type=hidden name="gspgid_form" value="{$gspgid_form}">
+
+		{include file="form_error_messages.html"}
+
+        {$form->add_field('code','type=input')}
+				
+		{$form->set_error_template('<span class="label label-warning">%s</span>')}
+		{$form->set_error_message('REC_NOTFOUND','Code not found')}
+		{$form->set_error_message('DISCOUNT_CODE_EXPIRED','Code already expired')}
+
+		{$form->_prepare_inputs()}
+
+        {$form->print_error('FORM_ERROR')}
+
+          <div>
+          <label>Dscount code:</label>
+			{$form->get_input('code')} 
+            {$form->print_error('code')}
+          <input type="submit" value="Apply code" class="button9">
+          </div>
+</form>	

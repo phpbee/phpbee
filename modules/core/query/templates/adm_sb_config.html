@@ -1,0 +1,116 @@
+{extends file="admin_page.html"}
+
+{block name="title"}
+	Подписки
+{/block}
+
+{block name="main"}
+
+
+	<h4>Подписки</h4>
+
+
+
+	
+		{handler gspgid="/filter/" class="like" name="search" fields="name, schedule, repeat, handler" urltype=get }
+		{handler gspgid="/filter/" class="calendar" name="calendar" fields="_ctime,_mtime," urltype=get }
+		{handler gspgid="/filter/" class="sort" name="sort" fields="sortkey,name, schedule, repeat, handler" urltype=get }
+		{handler gspgid="/filter/" class="limit" name="limit" urltype=session values='20,50,100,500' default_value=20}
+		{handler gspgid="/filter/" class="offset"  name="offset" urltype=get limit='limit'}
+
+
+
+		{controller _class="sb_config" _assign="sb_config" _filters="search,calendar,sort,limit,offset,"}
+
+
+				{handler gspgid="/sortkey" sortkey_id="sb_config" recordset_name="sb_config"}
+		
+	<table class="tb sortkey-table" sortkey_id="sb_config">
+	<thead>
+	<tr class="filters"><td colspan="100">
+	<table>
+			<tr><td>Find:</td><td>
+			<form class="filterform" method="get">
+			{handler gspgid="/filter/show" name="search"  recordset=$sb_config tpl="like.html"  }
+			{handler gspgid="/filter/show" name="calendar"  recordset=$sb_config tpl="calendar.html" prelabel="date:"  }
+			{handler gspgid="/filter/show" name="sort"  recordset=$sb_config tpl="sort.html" prelabel="sort by:"  }
+			<input type="submit" value="search">
+			</form>
+		</td></tr>
+	</table>
+	</td> </tr>
+	<tr class="pager"><td colspan="100">
+		{handler gspgid="/filter/show" name="offset" tpl="offset_pages.html" page_title='Page' page_prev='previous' page_next='next' page_between='from' pages_count=21 recordset=$sb_config}
+		{handler gspgid="/filter/show" name="limit" tpl="limit_select.html" prelabel='show by' label='records'}
+	</td></tr>
+	<tr><th>#</th>
+		<th>
+		{field_name name="name" type="fString" key="name" id="39"}
+	</th>
+		<th>
+		{field_name name="" type="fString" key="schedule" id="40"}
+	</th>
+		<th>
+		{field_name name="repeat" type="fCheckbox" key="repeat" id="47"}
+	</th>
+		<th>
+		{field_name name="handler" type="fString" key="handler" id="41"}
+	</th>
+			<th>Recordset</th>
+			<th></th>
+	<th></th>
+	<th></th>
+	</tr>
+	</thead>
+	
+	{foreach from=$sb_config item="e"}
+	<tr class="{cycle values='odd,even'}" record_id="{$e->get_id()}">
+			<td><span>{$e->get_id()}</span></td>
+						<td class="frm_fString">
+                <span>
+									<a href="{gl rec_edit=$e}">{field_formatter value=$e.name type="fString"}</a>
+						
+                </span>
+			</td>
+						<td class="frm_fString">
+                <span>
+						
+					{field_formatter value=$e.schedule type="fString"}
+						
+                </span>
+			</td>
+						<td class="frm_fCheckbox">
+                <span>
+						
+					{field_formatter value=$e.repeat type="fCheckbox"}
+						
+                </span>
+			</td>
+						<td class="frm_fString">
+                <span>
+						
+					{field_formatter value=$e.handler type="fString"}
+						
+                </span>
+			</td>
+									<td><span>{$e.Recordset}</span></td>
+									<td class="cnt"><a href="{gl rec_edit=$e}"><img src="/i/admin/ico_edit.png" alt="Редактировать" title="Редактировать"></a></td>
+			<td class="cnt"><a href="{gl rec_copy=$e}"><img src="/i/admin/ico_copy.png" alt="Копировать" title="Копировать"></a></td>
+			<td class="cnt"><a href="{gl rec_delete=$e}" onclick="return confirm('Вы точно хотите удалить запись ?');"><img src="/i/admin/ico_delete.png" alt="Удалить" title="Удалить"></a></td>
+	</tr>
+	{/foreach}
+	<tr class="pager"><td colspan="100">
+	<a name="form"></a>
+		{handler gspgid="/filter/show" name="offset" tpl="offset_pages.html" page_title='Page' page_prev='previous' page_next='next' page_between='from' pages_count=21 recordset=$sb_config}
+		{handler gspgid="/filter/show" name="limit" tpl="limit_select.html" prelabel='show by' label='records'}
+	</td></tr>
+	</table>
+
+	<h5>Редактировать/<a href="{gl rec_create=0}">создать</a>:</h5>
+	{if $_gsdata.gspgid_va.0=='modify'}
+	<hr><br>
+		{$default_value=""}
+		{handler gspgid="/admin/form/sb_config/edit/`$_gsdata.gspgid_va.1`" _default=trim($default_value,',') }
+	{/if}
+
+{/block}

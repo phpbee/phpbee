@@ -1,0 +1,129 @@
+	<form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+	<input type=hidden name="gspgid_form" value="{$gspgid_form}">
+	<input type=hidden name="form_id" value="form_cardinfo">
+
+
+		{include file="form_error_messages.html"}
+				
+	
+        {$form->add_field('cardholder','type=input')}
+        {$form->add_validator('cardholder','notEmpty')}
+
+        {$form->add_field('cardnumber','type=input')}
+        {$form->add_validator('cardnumber','isInt')}
+        {$form->add_validator('cardnumber','isLength','min=16 max=16')}
+
+        {$form->add_field('expmonth','type=input')}
+        {$form->add_validator('expmonth','isInt')}
+        {$form->add_validator('expmonth','isRange','min=1 max=12')}
+
+        {$form->add_field('expyear','type=input')}
+        {$form->add_validator('expyear','isInt')}
+        {$form->add_validator('expyear','isRange',"min={date('Y')} max={date('Y',strtotime('+10 years'))}")}
+
+        {$form->add_field('cvv','type=input')}
+        {$form->add_validator('cvv','isInt')}
+        {$form->add_validator('cvv','isLength','min=3 max=3')}
+
+
+        {$form->add_field('street','type=input')}
+        {$form->add_validator('street','notEmpty')}
+
+        {$form->add_field('zip','type=input')}
+        {$form->add_validator('zip','notEmpty')}
+
+        {$form->add_field('city','type=input')}
+        {$form->add_validator('city','notEmpty')}
+
+        {$form->add_field('country','type=input')}
+        {$form->add_validator('country','notEmpty')}
+        {$form->add_validator('country','isLength','min=2 max=2')}
+
+        {$form->add_field('state','type=input')}
+        {$form->add_validator('state','notEmpty')}
+        {$form->add_validator('state','isLength','min=2 max=3')}
+
+        {$form->add_field('email','type=input')}
+        {$form->add_validator('email','notEmpty')}
+        {$form->add_validator('email','isEmail')}
+
+        {$form->add_field('phone','type=input')}
+        {$form->add_validator('phone','notEmpty')}
+
+
+
+
+		{$form->set_error_template('<span class="label label-warning">%s</span>')}
+
+
+
+		{$form->_prepare_inputs()}
+
+	{$form->print_error('FORM_ERROR')}
+
+	
+		    <div class="control-group">
+		    <label class="control-label" for="cardholder">
+						Card Holder	Name
+					    </label>
+			<div class="controls">
+			{$form->get_input('cardholder')} {$form->print_error('cardholder')}
+			</div>
+		    </div>
+
+		    <div class="control-group">
+		    <label class="control-label" for="cardnumber">
+						Card Number
+					    </label>
+			<div class="controls">
+			{$form->get_input('cardnumber')} {$form->print_error('cardnumber')}
+			</div>
+		    </div>
+
+		    <div class="control-group">
+		    <label class="control-label" for="expdate">
+						Exp Date
+					    </label>
+			<div class="controls">
+			{$form->get_input('expmonth')} 
+			{$form->get_input('expyear')} 
+            {$form->print_error('expmonth')}
+            {$form->print_error('expyear')}
+			</div>
+		    </div>
+
+		    <div class="control-group">
+		    <label class="control-label" for="cvv">
+						CVV code
+					    </label>
+			<div class="controls">
+                {$form->get_input('cvv')} {$form->print_error('cvv')}
+			</div>
+		    </div>
+
+		    <div class="control-group"> <label class="control-label" for="street"> street </label> <div class="controls"> 
+                {$form->get_input('street')} {$form->print_error('street')} </div> </div>
+
+		    <div class="control-group"> <label class="control-label" for="zip"> zip </label> <div class="controls"> 
+                {$form->get_input('zip')} {$form->print_error('zip')} </div> </div>
+
+		    <div class="control-group"> <label class="control-label" for="city"> city </label> <div class="controls"> 
+                {$form->get_input('city')} {$form->print_error('city')} </div> </div>
+
+		    <div class="control-group"> <label class="control-label" for="country"> country </label> <div class="controls"> 
+                {$form->get_input('country')} {$form->print_error('country')} </div> </div>
+
+		    <div class="control-group"> <label class="control-label" for="state"> state </label> <div class="controls"> 
+                {$form->get_input('state')} {$form->print_error('state')} </div> </div>
+
+		    <div class="control-group"> <label class="control-label" for="email"> email </label> <div class="controls"> 
+                {$form->get_input('email')} {$form->print_error('email')} </div> </div>
+
+		    <div class="control-group"> <label class="control-label" for="phone"> phone </label> <div class="controls"> 
+                {$form->get_input('phone')} {$form->print_error('phone')} </div> </div>
+
+
+		<div class="form-actions">
+	<input type="submit" class="btn btn-primary" name="save_return" value="{ml('Submit')}">
+	</div>
+</form>	

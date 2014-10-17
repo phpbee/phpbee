@@ -1,0 +1,25 @@
+{${%$assign%}=$_gsstack.last}
+{if ${%$assign%}}
+	<div class="login_admin">
+	Welcome 
+	{%foreach $profile_fields as $f%}
+		{${%$assign%}.{%$f%}}
+	{%foreachelse%}	
+		{${%$assign%}.{%reset($login_fields)%}}
+	{%/foreach%}
+	<a href="/{%$module.name%}/logout/{%$rs->name%}">logout</a>
+	</div>
+{else}
+	  {handler gspgid="{%$module.name%}/login/form/{%$rs->name%}" }
+
+	  {capture name="checklogin"}
+	  {handler gspgid="oauth2/checklogin/{%$rs->name%}"}	
+	  {/capture}
+
+
+	  {handler gspgid="oauth2/loginlinks"}	
+
+	
+		<a  class="btn btn-primary btn-small" href="/{%$module.name%}/registration/{%$rs->name%}">registration</a>
+
+{/if}

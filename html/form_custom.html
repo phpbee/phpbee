@@ -1,0 +1,40 @@
+	<form enctype="multipart/form-data" action="" class="form form-horisontal" method="post">
+		<input type=hidden name="root" value="{$pid_id}">
+		<input type=hidden name="gspgid_form" value="{$gspgid_form}">
+		{if isset($_gsdata.dialog)}<input type=hidden name="dialog" value="{$_gsdata.dialog}">{/if}
+
+
+		{include file="form_error_messages.html"}
+		{$form->set_error_template('<span class="label label-warning">%s</s>')}
+
+		{block name="prepare_form"}
+		{/block}
+
+
+		{foreach $form->get_fields() as $field=>$op} 
+			{$form->set_option($field,'placeholder',$form->get_option($field,'verbose_name'))}
+		{/foreach}
+		{$form->set_option_allfields('cssclass','field3')}
+		
+
+
+		{$form->_prepare_inputs()}
+
+		{$form->print_error('FORM_ERROR')}
+
+		{foreach $form->get_fields() as $field=>$op} 
+			{if $op.verbose_name}
+				{block name="field"}
+					<label>{$op.verbose_name}
+					{$form->get_input($field)}
+					{$form->print_error($field)}
+                    </label>
+				{/block}
+			{/if}
+		{/foreach}
+	
+
+	 	{block name="submit_button"}
+		<input type="submit" class="btn btn-small btn-success" value="{$submit_title|default:gsdict("Продолжить")} &raquo;" />
+		{/block}
+	</form>

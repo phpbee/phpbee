@@ -1,0 +1,30 @@
+{$co=$form->record->resize_options['crop']}
+<script type="text/javascript">
+		var fieldname="{$name}";
+		var crop_x1={$co.x1|default:0};
+		var crop_y1={$co.y1|default:0};
+		var crop_x2={$co.x2|default:0};
+		var crop_y2={$co.y2|default:0};
+</script>
+
+<link href="/widgets/ImageJSEdit/imgareaselect-animated.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="/widgets/ImageJSEdit/jquery.imgareaselect.dev.js"></script>
+<script type="text/javascript" src="/widgets/ImageJSEdit/widget.js"></script>
+
+
+<img src="{$form->record->src1('ImageJSEdit')}" __style="max-width:300px; max-height:300px;" srcbig="{$form->record->src1('ImageJSEdit')}" id="imgAreaSelect">
+
+
+<div class="jsedit_crop" id="{$name}" style="display:none;">
+<input type="input" name="{$name}[crop][x1]" id="x1" value="0">
+<input type="input" name="{$name}[crop][y1]" id="y1" value="0">
+<input type="input" name="{$name}[crop][x2]" id="x2" value="100">
+<input type="input" name="{$name}[crop][y2]" id="y2" value="100">
+<input type="input" name="{$name}[crop][width]" id="width" value="100">
+<input type="input" name="{$name}[crop][height]" id="height" value="100">
+</div>
+
+
+<table class="table">
+	<tbody id="upload-rows"></tbody>
+</table>

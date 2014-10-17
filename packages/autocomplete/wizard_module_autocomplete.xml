@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xml>
+  <recordset name="wz_modules">
+    <record>
+      <links>
+        <recordsets>
+          <recordset name="wz_recordsets">
+            <record>
+              <links>
+                <Fields>
+                  <recordset name="wz_recordset_fields">
+                    <record>
+                      <links/>
+                      <values>
+                        <name>name</name>
+                        <verbose_name>name</verbose_name>
+                        <helper_text/>
+                        <type>fString</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value/>
+                        <make_index>1</make_index>
+                        <required>1</required>
+                        <is_unique>1</is_unique>
+                        <Recordset_id>17</Recordset_id>
+                        <_ctime>2013-07-17 16:22:09</_ctime>
+                        <_mtime>2013-07-17 16:22:09</_mtime>
+                        <sortkey>10</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>params</name>
+                        <verbose_name>params</verbose_name>
+                        <helper_text/>
+                        <type>fText</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value/>
+                        <make_index>0</make_index>
+                        <required>0</required>
+                        <is_unique>0</is_unique>
+                        <Recordset_id>17</Recordset_id>
+                        <_ctime>2013-07-17 16:22:09</_ctime>
+                        <_mtime>2013-07-17 16:22:09</_mtime>
+                        <sortkey>11</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>limit</name>
+                        <verbose_name>limit</verbose_name>
+                        <helper_text/>
+                        <type>fInt</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value>0</default_value>
+                        <make_index>0</make_index>
+                        <required>0</required>
+                        <is_unique>0</is_unique>
+                        <Recordset_id>17</Recordset_id>
+                        <_ctime>2013-07-17 16:22:09</_ctime>
+                        <_mtime>2013-07-17 16:22:09</_mtime>
+                        <sortkey>13</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>searchtype</name>
+                        <verbose_name>Search type</verbose_name>
+                        <helper_text/>
+                        <type>fSelect</type>
+                        <multilang>0</multilang>
+                        <options>STARTS,FULLTEXT,LIKE</options>
+                        <extra_options/>
+                        <widget/>
+                        <default_value/>
+                        <make_index>1</make_index>
+                        <required>1</required>
+                        <is_unique>0</is_unique>
+                        <Recordset_id>17</Recordset_id>
+                        <_ctime>2013-07-17 16:23:02</_ctime>
+                        <_mtime>2013-07-17 16:24:20</_mtime>
+                        <sortkey>53</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>fields</name>
+                        <verbose_name>fields</verbose_name>
+                        <helper_text/>
+                        <type>fString</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value/>
+                        <make_index>0</make_index>
+                        <required>0</required>
+                        <is_unique>0</is_unique>
+                        <Recordset_id>17</Recordset_id>
+                        <_ctime>2014-03-20 15:23:22</_ctime>
+                        <_mtime>2014-03-20 15:23:22</_mtime>
+                        <sortkey>203</sortkey>
+                      </values>
+                    </record>
+                  </recordset>
+                </Fields>
+                <Resizes>
+                  <recordset name="wz_recordset_resizes"/>
+                </Resizes>
+                <Links>
+                  <recordset name="wz_recordset_links">
+                    <record>
+                      <links/>
+                      <values>
+                        <name>Recordset</name>
+                        <verbose_name>Recordset</verbose_name>
+                        <type>lOne2One</type>
+                        <classname>wz_recordsets</classname>
+                        <linkname/>
+                        <options/>
+                        <extra_options/>
+                        <widget>parent_list</widget>
+                        <required>1</required>
+                        <fkey_on_delete>SET_NULL</fkey_on_delete>
+                        <fkey_on_update>CASCADE</fkey_on_update>
+                        <fkey_name/>
+                        <Recordset_id>17</Recordset_id>
+                        <_ctime>2013-07-17 16:22:09</_ctime>
+                        <_mtime>2013-07-17 16:22:09</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>Fields</name>
+                        <verbose_name>Fields</verbose_name>
+                        <type>lMany2Many</type>
+                        <classname>wz_recordset_fields</classname>
+                        <linkname/>
+                        <options/>
+                        <extra_options/>
+                        <widget>multiselect_chosen</widget>
+                        <required>0</required>
+                        <fkey_on_delete>NONE</fkey_on_delete>
+                        <fkey_on_update>NONE</fkey_on_update>
+                        <fkey_name/>
+                        <Recordset_id>17</Recordset_id>
+                        <_ctime>2013-07-17 16:22:09</_ctime>
+                        <_mtime>2013-07-17 16:22:09</_mtime>
+                      </values>
+                    </record>
+                  </recordset>
+                </Links>
+                <Triggers>
+                  <recordset name="wz_recordset_triggers"/>
+                </Triggers>
+                <Submodules>
+                  <recordset name="wz_recordset_submodules"/>
+                </Submodules>
+              </links>
+              <values>
+                <name>autocomplete_cfg</name>
+                <title>autocomplete_cfg</title>
+                <table_name/>
+                <database>0</database>
+                <extends/>
+                <Module_id>7</Module_id>
+                <_Fields_count>8</_Fields_count>
+                <_Resizes_count>8</_Resizes_count>
+                <_Links_count>8</_Links_count>
+                <_Triggers_count>8</_Triggers_count>
+                <_Submodules_count>8</_Submodules_count>
+                <showadmin>1</showadmin>
+                <no_urlkey>1</no_urlkey>
+                <no_ctime>0</no_ctime>
+                <use_sortkey>0</use_sortkey>
+                <install>1</install>
+                <orderby>id</orderby>
+                <id_field_name>id</id_field_name>
+                <_ctime>2013-07-17 16:22:09</_ctime>
+                <_mtime>2014-03-20 15:23:46</_mtime>
+                <sortkey>3</sortkey>
+              </values>
+            </record>
+          </recordset>
+        </recordsets>
+        <urls>
+          <recordset name="wz_urls">
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>1</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.show:name:adm_autocomplete_cfg.html</handler_value>
+                        <Url_id>97</Url_id>
+                        <_ctime>2013-07-17 16:22:09</_ctime>
+                        <_mtime>2013-07-17 16:22:09</_mtime>
+                        <sortkey>29</sortkey>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/admin/autocomplete/autocomplete_cfg</gspgid_value>
+                <type>get</type>
+                <Module_id>7</Module_id>
+                <_Handlers_count>0</_Handlers_count>
+                <_ctime>2013-07-17 16:22:09</_ctime>
+                <_mtime>2013-07-17 16:22:09</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>1</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.delete:{classname:autocomplete_cfg}</handler_value>
+                        <Url_id>98</Url_id>
+                        <_ctime>2013-07-17 16:22:09</_ctime>
+                        <_mtime>2013-07-17 16:22:09</_mtime>
+                        <sortkey>30</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>2</cnt>
+                        <handler_keyname>1</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect</handler_value>
+                        <Url_id>98</Url_id>
+                        <_ctime>2013-07-17 16:22:09</_ctime>
+                        <_mtime>2013-07-17 16:22:09</_mtime>
+                        <sortkey>31</sortkey>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/admin/autocomplete/autocomplete_cfg/delete</gspgid_value>
+                <type>get</type>
+                <Module_id>7</Module_id>
+                <_Handlers_count>0</_Handlers_count>
+                <_ctime>2013-07-17 16:22:09</_ctime>
+                <_mtime>2013-07-17 16:22:09</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>1</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.copy:{classname:autocomplete_cfg}</handler_value>
+                        <Url_id>99</Url_id>
+                        <_ctime>2013-07-17 16:22:09</_ctime>
+                        <_mtime>2013-07-17 16:22:09</_mtime>
+                        <sortkey>32</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>2</cnt>
+                        <handler_keyname>1</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect</handler_value>
+                        <Url_id>99</Url_id>
+                        <_ctime>2013-07-17 16:22:09</_ctime>
+                        <_mtime>2013-07-17 16:22:09</_mtime>
+                        <sortkey>33</sortkey>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/admin/autocomplete/autocomplete_cfg/copy</gspgid_value>
+                <type>get</type>
+                <Module_id>7</Module_id>
+                <_Handlers_count>0</_Handlers_count>
+                <_ctime>2013-07-17 16:22:09</_ctime>
+                <_mtime>2013-07-17 16:22:09</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>1</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect_if:gl:save_cancel:return:true</handler_value>
+                        <Url_id>100</Url_id>
+                        <_ctime>2013-07-17 16:22:09</_ctime>
+                        <_mtime>2013-07-17 16:22:09</_mtime>
+                        <sortkey>34</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>2</cnt>
+                        <handler_keyname>1</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.post:{name:admin_form.html:classname:autocomplete_cfg:form_class:g_forms_table}</handler_value>
+                        <Url_id>100</Url_id>
+                        <_ctime>2013-07-17 16:22:09</_ctime>
+                        <_mtime>2013-07-17 16:22:09</_mtime>
+                        <sortkey>35</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>3</cnt>
+                        <handler_keyname>2</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect_if:gl:save_continue:return:true</handler_value>
+                        <Url_id>100</Url_id>
+                        <_ctime>2013-07-17 16:22:09</_ctime>
+                        <_mtime>2013-07-17 16:22:09</_mtime>
+                        <sortkey>36</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>4</cnt>
+                        <handler_keyname>3</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect_if:gl:save_return:return:true</handler_value>
+                        <Url_id>100</Url_id>
+                        <_ctime>2013-07-17 16:22:09</_ctime>
+                        <_mtime>2013-07-17 16:22:09</_mtime>
+                        <sortkey>37</sortkey>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/admin/form/autocomplete_cfg</gspgid_value>
+                <type>handler</type>
+                <Module_id>7</Module_id>
+                <_Handlers_count>0</_Handlers_count>
+                <_ctime>2013-07-17 16:22:09</_ctime>
+                <_mtime>2013-07-17 16:22:09</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>1</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect_if:gl:save_cancel:return:true</handler_value>
+                        <Url_id>101</Url_id>
+                        <_ctime>2013-07-17 16:22:09</_ctime>
+                        <_mtime>2013-07-17 16:22:09</_mtime>
+                        <sortkey>38</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>2</cnt>
+                        <handler_keyname>1</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.post:{name:inline_form.html:classname:autocomplete_cfg}</handler_value>
+                        <Url_id>101</Url_id>
+                        <_ctime>2013-07-17 16:22:09</_ctime>
+                        <_mtime>2013-07-17 16:22:09</_mtime>
+                        <sortkey>39</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>3</cnt>
+                        <handler_keyname>2</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect_if:gl:save_continue:return:true</handler_value>
+                        <Url_id>101</Url_id>
+                        <_ctime>2013-07-17 16:22:09</_ctime>
+                        <_mtime>2013-07-17 16:22:09</_mtime>
+                        <sortkey>40</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>4</cnt>
+                        <handler_keyname>3</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect_if:gl:save_return:return:true</handler_value>
+                        <Url_id>101</Url_id>
+                        <_ctime>2013-07-17 16:22:09</_ctime>
+                        <_mtime>2013-07-17 16:22:09</_mtime>
+                        <sortkey>41</sortkey>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/admin/inline_form/autocomplete_cfg</gspgid_value>
+                <type>handler</type>
+                <Module_id>7</Module_id>
+                <_Handlers_count>0</_Handlers_count>
+                <_ctime>2013-07-17 16:22:09</_ctime>
+                <_mtime>2013-07-17 16:22:09</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>10</cnt>
+                        <handler_keyname>input</handler_keyname>
+                        <handler_template/>
+                        <handler_value>autocomplete_handler.input_jquery:return:array</handler_value>
+                        <Url_id>102</Url_id>
+                        <_ctime>2013-07-17 16:22:09</_ctime>
+                        <_mtime>2013-07-17 16:22:09</_mtime>
+                        <sortkey>42</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>0</cnt>
+                        <handler_keyname>cfg</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.rec_by_fieldname:classname:autocomplete_cfg:fieldname:name</handler_value>
+                        <Url_id>102</Url_id>
+                        <_ctime>2013-07-17 16:22:09</_ctime>
+                        <_mtime>2013-07-17 16:22:09</_mtime>
+                        <sortkey>41.5</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>0</cnt>
+                        <handler_keyname>result</handler_keyname>
+                        <handler_template/>
+                        <handler_value>autocomplete_handler.process:return:array</handler_value>
+                        <Url_id>102</Url_id>
+                        <_ctime>2013-07-17 16:22:09</_ctime>
+                        <_mtime>2013-07-17 16:22:09</_mtime>
+                        <sortkey>44</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>0</cnt>
+                        <handler_keyname/>
+                        <handler_template/>
+                        <handler_value>autocomplete_handler.output_json:return:true</handler_value>
+                        <Url_id>102</Url_id>
+                        <_ctime>2013-07-17 16:22:09</_ctime>
+                        <_mtime>2014-03-19 19:11:27</_mtime>
+                        <sortkey>45</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt/>
+                        <handler_keyname/>
+                        <handler_template/>
+                        <handler_value>autocomplete_handler.array_values:return:array</handler_value>
+                        <Url_id>102</Url_id>
+                        <_ctime>2014-03-19 19:11:43</_ctime>
+                        <_mtime>2014-03-19 19:11:46</_mtime>
+                        <sortkey>44.5</sortkey>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/autocomplete/plain</gspgid_value>
+                <type>get</type>
+                <Module_id>7</Module_id>
+                <_Handlers_count>12</_Handlers_count>
+                <_ctime>2013-07-17 16:22:09</_ctime>
+                <_mtime>2014-03-20 15:56:16</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>10</cnt>
+                        <handler_keyname>input</handler_keyname>
+                        <handler_template/>
+                        <handler_value>autocomplete_handler.input_jquery:return:array</handler_value>
+                        <Url_id>352</Url_id>
+                        <_ctime>2014-03-19 19:09:01</_ctime>
+                        <_mtime>2014-03-19 19:09:01</_mtime>
+                        <sortkey>42</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>0</cnt>
+                        <handler_keyname>cfg</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.rec_by_fieldname:classname:autocomplete_cfg:fieldname:name</handler_value>
+                        <Url_id>352</Url_id>
+                        <_ctime>2014-03-19 19:09:01</_ctime>
+                        <_mtime>2014-03-19 19:09:01</_mtime>
+                        <sortkey>41.5</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>0</cnt>
+                        <handler_keyname>result</handler_keyname>
+                        <handler_template/>
+                        <handler_value>autocomplete_handler.process:return:array</handler_value>
+                        <Url_id>352</Url_id>
+                        <_ctime>2014-03-19 19:09:01</_ctime>
+                        <_mtime>2014-03-19 19:09:01</_mtime>
+                        <sortkey>44</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>0</cnt>
+                        <handler_keyname/>
+                        <handler_template/>
+                        <handler_value>autocomplete_handler.output_json:return:true</handler_value>
+                        <Url_id>352</Url_id>
+                        <_ctime>2014-03-19 19:09:01</_ctime>
+                        <_mtime>2014-03-19 19:10:48</_mtime>
+                        <sortkey>45</sortkey>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/autocomplete</gspgid_value>
+                <type>get</type>
+                <Module_id>7</Module_id>
+                <_Handlers_count>7</_Handlers_count>
+                <_ctime>2014-03-19 19:09:01</_ctime>
+                <_mtime>2014-03-20 15:56:28</_mtime>
+              </values>
+            </record>
+          </recordset>
+        </urls>
+        <forms>
+          <recordset name="wz_forms"/>
+        </forms>
+      </links>
+      <values>
+        <name>autocomplete</name>
+        <title>autocomplete</title>
+        <_recordsets_count>2</_recordsets_count>
+        <_urls_count>2</_urls_count>
+        <_forms_count>2</_forms_count>
+        <_ctime>2013-07-17 16:22:09</_ctime>
+        <_mtime>2014-03-19 19:09:01</_mtime>
+      </values>
+    </record>
+  </recordset>
+</xml>

@@ -1,0 +1,5 @@
+{extends file="index_page.html"}
+{block name="content"}
+<h3>Профиль пользователя</h3>
+{handler gspgid="auth/form/profile/edit/`$user->get_id()`" fields="-active"}
+{/block}

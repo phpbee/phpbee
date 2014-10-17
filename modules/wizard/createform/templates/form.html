@@ -1,0 +1,67 @@
+	<form enctype="multipart/form-data" action="" name="edit" method="post">
+		<input type=hidden name="root" value="{$pid_id}">
+		<input type=hidden name="gspgid_form" value="{$gspgid_form}">
+
+		<table>
+		{$form->get_tr('classname')}
+		{$form->get_tr('extends')}
+		{$form->get_tr('template')}
+		{$form->get_tr('template_name')}
+		{$form->get_tr('template_path')}
+		{$form->get_tr('gspgid_name')}
+		</table>
+
+
+
+		{$id=0}
+		{foreach $form->get_inputs() as $name=>$f}
+			{$ids=explode(':',$name)}
+			{if count($ids)>1}
+			{$id=$ids[1]}
+			{if $id && $ids[0]!='enabled'}
+			{$fields[$id][$name]=$f}
+			{/if}
+			{/if}
+		{/foreach}
+		<table>
+		<tr>
+		<td><input type=checkbox checked onChange="$('[name^=enabled]',$(this).parents('form')).attr('checked',this.checked);"></td>
+		<td></td>
+		<td></td>
+		</tr>
+		{foreach $fields as $i=>$field}
+			<tr >
+			<td>
+				{$form->get_input("enabled:`$i`")}
+			</td>
+			<td class="toggle_head" id="field_{$i}">
+			<a href="#">{$form->get_data(key($field))}</a>
+			</td>
+			<td class="toggle_head" id="field_{$i}">
+			{foreach $field as $name=>$f}
+				{$d=$form->get_data($name)}
+				{if is_array($d)}{implode(',',$d)}{else}{$d}{/if}
+
+			{/foreach}
+			</td>
+			</tr>
+			<tr class="toggle_item" id="toggle_field_{$i}"><td colspan=10>
+			<table>
+			{foreach $field as $name=>$f}
+			<tr>
+				<td>
+				<label for="$name">{$f.label}</label>
+				</td><td>	
+				{$f.input}
+				{if $form->get_error($name)}<br><span class="error">{$form->get_error($name)|implode}</span>{/if}
+				</td>
+			</tr>
+			{/foreach}
+			</table>
+			</td></tr>
+		{/foreach}
+		</table>
+
+		</div>
+		<input type="submit">
+	</form>

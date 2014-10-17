@@ -1,0 +1,1581 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xml>
+  <recordset name="wz_modules">
+    <record>
+      <links>
+        <recordsets>
+          <recordset name="wz_recordsets">
+            <record>
+              <links>
+                <Fields>
+                  <recordset name="wz_recordset_fields">
+                    <record>
+                      <links/>
+                      <values>
+                        <name>name</name>
+                        <verbose_name>name</verbose_name>
+                        <helper_text/>
+                        <type>fString</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value/>
+                        <make_index>1</make_index>
+                        <required>1</required>
+                        <is_unique>1</is_unique>
+                        <Recordset_id>19</Recordset_id>
+                        <_ctime>2013-07-19 14:50:08</_ctime>
+                        <_mtime>2013-07-19 14:56:32</_mtime>
+                        <sortkey>59</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>event_name</name>
+                        <verbose_name>event_name</verbose_name>
+                        <helper_text/>
+                        <type>fString</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value/>
+                        <make_index>1</make_index>
+                        <required>1</required>
+                        <is_unique>0</is_unique>
+                        <Recordset_id>19</Recordset_id>
+                        <_ctime>2013-07-19 14:50:24</_ctime>
+                        <_mtime>2013-07-19 14:50:24</_mtime>
+                        <sortkey>60</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>timeslot</name>
+                        <verbose_name>timeslot</verbose_name>
+                        <helper_text/>
+                        <type>fString</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value/>
+                        <make_index>0</make_index>
+                        <required>1</required>
+                        <is_unique>0</is_unique>
+                        <Recordset_id>19</Recordset_id>
+                        <_ctime>2013-07-19 14:50:54</_ctime>
+                        <_mtime>2013-07-19 14:50:54</_mtime>
+                        <sortkey>61</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>slotcount</name>
+                        <verbose_name>slotcount</verbose_name>
+                        <helper_text/>
+                        <type>fInt</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value>1</default_value>
+                        <make_index>1</make_index>
+                        <required>1</required>
+                        <is_unique>0</is_unique>
+                        <Recordset_id>19</Recordset_id>
+                        <_ctime>2013-07-19 14:51:26</_ctime>
+                        <_mtime>2013-07-19 14:51:26</_mtime>
+                        <sortkey>62</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>rs_intvalue_field</name>
+                        <verbose_name>rs_intvalue_field</verbose_name>
+                        <helper_text/>
+                        <type>fString</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value/>
+                        <make_index>0</make_index>
+                        <required>0</required>
+                        <is_unique>0</is_unique>
+                        <Recordset_id>19</Recordset_id>
+                        <_ctime>2013-08-05 14:04:23</_ctime>
+                        <_mtime>2013-08-05 14:04:48</_mtime>
+                        <sortkey>80</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>rs_stringvalue_field</name>
+                        <verbose_name>rs_stringvalue_field</verbose_name>
+                        <helper_text/>
+                        <type>fString</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value/>
+                        <make_index>0</make_index>
+                        <required>0</required>
+                        <is_unique>0</is_unique>
+                        <Recordset_id>19</Recordset_id>
+                        <_ctime>2013-08-05 14:04:35</_ctime>
+                        <_mtime>2013-08-05 14:04:56</_mtime>
+                        <sortkey>81</sortkey>
+                      </values>
+                    </record>
+                  </recordset>
+                </Fields>
+                <Resizes>
+                  <recordset name="wz_recordset_resizes"/>
+                </Resizes>
+                <Links>
+                  <recordset name="wz_recordset_links">
+                    <record>
+                      <links/>
+                      <values>
+                        <name>Recordset</name>
+                        <verbose_name>Recordset</verbose_name>
+                        <type>lOne2One</type>
+                        <classname>wz_recordsets</classname>
+                        <linkname/>
+                        <options/>
+                        <extra_options/>
+                        <widget>parent_list</widget>
+                        <required>1</required>
+                        <fkey_on_delete>CASCADE</fkey_on_delete>
+                        <fkey_on_update>CASCADE</fkey_on_update>
+                        <fkey_name/>
+                        <Recordset_id>19</Recordset_id>
+                        <_ctime>2013-07-19 14:56:18</_ctime>
+                        <_mtime>2013-07-19 14:56:18</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>Stack</name>
+                        <verbose_name>Stack</verbose_name>
+                        <type>lMany2One</type>
+                        <classname>roundrobin_cfg_stack</classname>
+                        <linkname>Parent</linkname>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <required>0</required>
+                        <fkey_on_delete>CASCADE</fkey_on_delete>
+                        <fkey_on_update>CASCADE</fkey_on_update>
+                        <fkey_name/>
+                        <Recordset_id>19</Recordset_id>
+                        <_ctime>2013-07-19 16:20:21</_ctime>
+                        <_mtime>2013-07-19 16:20:21</_mtime>
+                      </values>
+                    </record>
+                  </recordset>
+                </Links>
+                <Triggers>
+                  <recordset name="wz_recordset_triggers"/>
+                </Triggers>
+                <Submodules>
+                  <recordset name="wz_recordset_submodules"/>
+                </Submodules>
+              </links>
+              <values>
+                <name>roundrobin_cfg</name>
+                <title>roundrobin_cfg</title>
+                <table_name/>
+                <database>0</database>
+                <extends/>
+                <Module_id>8</Module_id>
+                <_Fields_count>8</_Fields_count>
+                <_Resizes_count>8</_Resizes_count>
+                <_Links_count>8</_Links_count>
+                <_Triggers_count>8</_Triggers_count>
+                <_Submodules_count>8</_Submodules_count>
+                <showadmin>1</showadmin>
+                <no_urlkey>1</no_urlkey>
+                <no_ctime>0</no_ctime>
+                <use_sortkey>0</use_sortkey>
+                <install>1</install>
+                <orderby>id</orderby>
+                <id_field_name>id</id_field_name>
+                <_ctime>2013-07-19 14:49:53</_ctime>
+                <_mtime>2013-08-05 14:04:35</_mtime>
+                <sortkey>19</sortkey>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Fields>
+                  <recordset name="wz_recordset_fields">
+                    <record>
+                      <links/>
+                      <values>
+                        <name>name</name>
+                        <verbose_name/>
+                        <helper_text/>
+                        <type>fString</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value/>
+                        <make_index>1</make_index>
+                        <required>1</required>
+                        <is_unique>0</is_unique>
+                        <Recordset_id>20</Recordset_id>
+                        <_ctime>2013-07-19 15:18:48</_ctime>
+                        <_mtime>2013-07-19 15:18:51</_mtime>
+                        <sortkey>62.5</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>slot</name>
+                        <verbose_name/>
+                        <helper_text/>
+                        <type>fInt</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value>0</default_value>
+                        <make_index>1</make_index>
+                        <required>1</required>
+                        <is_unique>0</is_unique>
+                        <Recordset_id>20</Recordset_id>
+                        <_ctime>2013-07-19 15:17:02</_ctime>
+                        <_mtime>2013-07-19 15:17:02</_mtime>
+                        <sortkey>63</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>counter</name>
+                        <verbose_name/>
+                        <helper_text/>
+                        <type>fFloat</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value>0</default_value>
+                        <make_index>1</make_index>
+                        <required>1</required>
+                        <is_unique>0</is_unique>
+                        <Recordset_id>20</Recordset_id>
+                        <_ctime>2013-07-19 15:17:35</_ctime>
+                        <_mtime>2013-07-19 15:17:35</_mtime>
+                        <sortkey>64</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>record_id</name>
+                        <verbose_name/>
+                        <helper_text/>
+                        <type>fInt</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value/>
+                        <make_index>1</make_index>
+                        <required>1</required>
+                        <is_unique>0</is_unique>
+                        <Recordset_id>20</Recordset_id>
+                        <_ctime>2013-07-19 15:18:15</_ctime>
+                        <_mtime>2013-07-19 15:18:15</_mtime>
+                        <sortkey>65</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>recordset_name</name>
+                        <verbose_name/>
+                        <helper_text/>
+                        <type>fString</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value/>
+                        <make_index>1</make_index>
+                        <required>1</required>
+                        <is_unique>0</is_unique>
+                        <Recordset_id>20</Recordset_id>
+                        <_ctime>2013-07-19 15:18:31</_ctime>
+                        <_mtime>2013-07-19 15:18:31</_mtime>
+                        <sortkey>66</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>add_intvalue</name>
+                        <verbose_name/>
+                        <helper_text/>
+                        <type>fInt</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value/>
+                        <make_index>1</make_index>
+                        <required>0</required>
+                        <is_unique>0</is_unique>
+                        <Recordset_id>20</Recordset_id>
+                        <_ctime>2013-08-05 14:01:18</_ctime>
+                        <_mtime>2013-08-05 14:01:18</_mtime>
+                        <sortkey>76</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>add_stringvalue</name>
+                        <verbose_name/>
+                        <helper_text/>
+                        <type>fString</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value/>
+                        <make_index>1</make_index>
+                        <required>0</required>
+                        <is_unique>0</is_unique>
+                        <Recordset_id>20</Recordset_id>
+                        <_ctime>2013-08-05 14:01:39</_ctime>
+                        <_mtime>2013-08-05 14:01:39</_mtime>
+                        <sortkey>77</sortkey>
+                      </values>
+                    </record>
+                  </recordset>
+                </Fields>
+                <Resizes>
+                  <recordset name="wz_recordset_resizes"/>
+                </Resizes>
+                <Links>
+                  <recordset name="wz_recordset_links">
+                    <record>
+                      <links/>
+                      <values>
+                        <name>Config</name>
+                        <verbose_name>Config</verbose_name>
+                        <type>lOne2One</type>
+                        <classname>roundrobin_cfg</classname>
+                        <linkname/>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <required>1</required>
+                        <fkey_on_delete>CASCADE</fkey_on_delete>
+                        <fkey_on_update>CASCADE</fkey_on_update>
+                        <fkey_name/>
+                        <Recordset_id>20</Recordset_id>
+                        <_ctime>2013-07-19 15:17:56</_ctime>
+                        <_mtime>2013-07-19 15:17:56</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>Stack</name>
+                        <verbose_name/>
+                        <type>lMany2One</type>
+                        <classname>roundrobin_stack</classname>
+                        <linkname>Parent</linkname>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <required>0</required>
+                        <fkey_on_delete>NONE</fkey_on_delete>
+                        <fkey_on_update>NONE</fkey_on_update>
+                        <fkey_name/>
+                        <Recordset_id>20</Recordset_id>
+                        <_ctime>2013-07-19 16:22:25</_ctime>
+                        <_mtime>2013-07-19 16:22:25</_mtime>
+                      </values>
+                    </record>
+                  </recordset>
+                </Links>
+                <Triggers>
+                  <recordset name="wz_recordset_triggers"/>
+                </Triggers>
+                <Submodules>
+                  <recordset name="wz_recordset_submodules"/>
+                </Submodules>
+              </links>
+              <values>
+                <name>roundrobin</name>
+                <title>roundrobin</title>
+                <table_name/>
+                <database>0</database>
+                <extends/>
+                <Module_id>8</Module_id>
+                <_Fields_count>9</_Fields_count>
+                <_Resizes_count>9</_Resizes_count>
+                <_Links_count>9</_Links_count>
+                <_Triggers_count>9</_Triggers_count>
+                <_Submodules_count>9</_Submodules_count>
+                <showadmin>0</showadmin>
+                <no_urlkey>1</no_urlkey>
+                <no_ctime>0</no_ctime>
+                <use_sortkey>0</use_sortkey>
+                <install>1</install>
+                <orderby>id</orderby>
+                <id_field_name>id</id_field_name>
+                <_ctime>2013-07-19 15:16:27</_ctime>
+                <_mtime>2013-08-05 14:01:39</_mtime>
+                <sortkey>20</sortkey>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Fields>
+                  <recordset name="wz_recordset_fields">
+                    <record>
+                      <links/>
+                      <values>
+                        <name>name</name>
+                        <verbose_name>name</verbose_name>
+                        <helper_text/>
+                        <type>fString</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value/>
+                        <make_index>0</make_index>
+                        <required>0</required>
+                        <is_unique>0</is_unique>
+                        <Recordset_id>21</Recordset_id>
+                        <_ctime>2013-07-19 16:20:21</_ctime>
+                        <_mtime>2013-07-19 16:20:21</_mtime>
+                        <sortkey>68</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>slotcount</name>
+                        <verbose_name>slotcount</verbose_name>
+                        <helper_text/>
+                        <type>fInt</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value>1</default_value>
+                        <make_index>1</make_index>
+                        <required>1</required>
+                        <is_unique>0</is_unique>
+                        <Recordset_id>21</Recordset_id>
+                        <_ctime>2013-07-19 16:21:12</_ctime>
+                        <_mtime>2013-07-19 16:21:12</_mtime>
+                        <sortkey>69</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>startslot</name>
+                        <verbose_name>startslot</verbose_name>
+                        <helper_text/>
+                        <type>fInt</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value>0</default_value>
+                        <make_index>0</make_index>
+                        <required>1</required>
+                        <is_unique>0</is_unique>
+                        <Recordset_id>21</Recordset_id>
+                        <_ctime>2013-07-19 16:21:41</_ctime>
+                        <_mtime>2013-07-19 16:21:41</_mtime>
+                        <sortkey>70</sortkey>
+                      </values>
+                    </record>
+                  </recordset>
+                </Fields>
+                <Resizes>
+                  <recordset name="wz_recordset_resizes"/>
+                </Resizes>
+                <Links>
+                  <recordset name="wz_recordset_links">
+                    <record>
+                      <links/>
+                      <values>
+                        <name>Parent</name>
+                        <verbose_name/>
+                        <type>lOne2One</type>
+                        <classname>roundrobin_cfg</classname>
+                        <linkname/>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <required>0</required>
+                        <fkey_on_delete>CASCADE</fkey_on_delete>
+                        <fkey_on_update>CASCADE</fkey_on_update>
+                        <fkey_name>roundrobin_cfg.Stack</fkey_name>
+                        <Recordset_id>21</Recordset_id>
+                        <_ctime>2013-07-19 16:20:21</_ctime>
+                        <_mtime>2013-07-19 16:20:21</_mtime>
+                      </values>
+                    </record>
+                  </recordset>
+                </Links>
+                <Triggers>
+                  <recordset name="wz_recordset_triggers"/>
+                </Triggers>
+                <Submodules>
+                  <recordset name="wz_recordset_submodules"/>
+                </Submodules>
+              </links>
+              <values>
+                <name>roundrobin_cfg_stack</name>
+                <title>Stack</title>
+                <table_name/>
+                <database>0</database>
+                <extends/>
+                <Module_id>8</Module_id>
+                <_Fields_count>2</_Fields_count>
+                <_Resizes_count>2</_Resizes_count>
+                <_Links_count>2</_Links_count>
+                <_Triggers_count>2</_Triggers_count>
+                <_Submodules_count>2</_Submodules_count>
+                <showadmin>0</showadmin>
+                <no_urlkey>1</no_urlkey>
+                <no_ctime>0</no_ctime>
+                <use_sortkey>0</use_sortkey>
+                <install>1</install>
+                <orderby>id</orderby>
+                <id_field_name>id</id_field_name>
+                <_ctime>2013-07-19 16:20:21</_ctime>
+                <_mtime>2013-07-19 16:23:52</_mtime>
+                <sortkey>21</sortkey>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Fields>
+                  <recordset name="wz_recordset_fields">
+                    <record>
+                      <links/>
+                      <values>
+                        <name>name</name>
+                        <verbose_name>name</verbose_name>
+                        <helper_text/>
+                        <type>fString</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value/>
+                        <make_index>0</make_index>
+                        <required>0</required>
+                        <is_unique>0</is_unique>
+                        <Recordset_id>22</Recordset_id>
+                        <_ctime>2013-07-19 16:22:25</_ctime>
+                        <_mtime>2013-07-19 16:22:25</_mtime>
+                        <sortkey>71</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>counter</name>
+                        <verbose_name/>
+                        <helper_text/>
+                        <type>fFloat</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value>0</default_value>
+                        <make_index>1</make_index>
+                        <required>1</required>
+                        <is_unique>0</is_unique>
+                        <Recordset_id>22</Recordset_id>
+                        <_ctime>2013-07-19 16:26:27</_ctime>
+                        <_mtime>2013-07-19 16:26:27</_mtime>
+                        <sortkey>72</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>slot</name>
+                        <verbose_name/>
+                        <helper_text/>
+                        <type>fInt</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value>0</default_value>
+                        <make_index>1</make_index>
+                        <required>0</required>
+                        <is_unique>0</is_unique>
+                        <Recordset_id>22</Recordset_id>
+                        <_ctime>2013-07-31 18:53:50</_ctime>
+                        <_mtime>2013-07-31 18:53:58</_mtime>
+                        <sortkey>72.5</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>record_id</name>
+                        <verbose_name/>
+                        <helper_text/>
+                        <type>fInt</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value/>
+                        <make_index>1</make_index>
+                        <required>1</required>
+                        <is_unique>0</is_unique>
+                        <Recordset_id>22</Recordset_id>
+                        <_ctime>2013-07-19 16:26:41</_ctime>
+                        <_mtime>2013-07-19 16:26:41</_mtime>
+                        <sortkey>73</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>recordset_name</name>
+                        <verbose_name/>
+                        <helper_text/>
+                        <type>fString</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value/>
+                        <make_index>1</make_index>
+                        <required>1</required>
+                        <is_unique>0</is_unique>
+                        <Recordset_id>22</Recordset_id>
+                        <_ctime>2013-07-19 16:26:59</_ctime>
+                        <_mtime>2013-07-19 16:26:59</_mtime>
+                        <sortkey>74</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>add_intvalue</name>
+                        <verbose_name/>
+                        <helper_text/>
+                        <type>fInt</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value/>
+                        <make_index>1</make_index>
+                        <required>0</required>
+                        <is_unique>0</is_unique>
+                        <Recordset_id>22</Recordset_id>
+                        <_ctime>2013-08-05 14:02:34</_ctime>
+                        <_mtime>2013-08-05 14:02:34</_mtime>
+                        <sortkey>78</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>add_stringvalue</name>
+                        <verbose_name/>
+                        <helper_text/>
+                        <type>fString</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value/>
+                        <make_index>1</make_index>
+                        <required>0</required>
+                        <is_unique>0</is_unique>
+                        <Recordset_id>22</Recordset_id>
+                        <_ctime>2013-08-05 14:03:03</_ctime>
+                        <_mtime>2013-08-05 14:03:04</_mtime>
+                        <sortkey>79</sortkey>
+                      </values>
+                    </record>
+                  </recordset>
+                </Fields>
+                <Resizes>
+                  <recordset name="wz_recordset_resizes"/>
+                </Resizes>
+                <Links>
+                  <recordset name="wz_recordset_links">
+                    <record>
+                      <links/>
+                      <values>
+                        <name>Config</name>
+                        <verbose_name/>
+                        <type>lOne2One</type>
+                        <classname>roundrobin_cfg</classname>
+                        <linkname/>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <required>0</required>
+                        <fkey_on_delete>CASCADE</fkey_on_delete>
+                        <fkey_on_update>CASCADE</fkey_on_update>
+                        <fkey_name>roundrobin.Stack</fkey_name>
+                        <Recordset_id>22</Recordset_id>
+                        <_ctime>2013-07-19 16:22:25</_ctime>
+                        <_mtime>2013-07-31 18:32:47</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>Stack</name>
+                        <verbose_name/>
+                        <type>lOne2One</type>
+                        <classname>roundrobin_cfg_stack</classname>
+                        <linkname/>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <required>0</required>
+                        <fkey_on_delete>CASCADE</fkey_on_delete>
+                        <fkey_on_update>CASCADE</fkey_on_update>
+                        <fkey_name/>
+                        <Recordset_id>22</Recordset_id>
+                        <_ctime>2013-08-05 13:46:07</_ctime>
+                        <_mtime>2013-08-05 13:46:07</_mtime>
+                      </values>
+                    </record>
+                  </recordset>
+                </Links>
+                <Triggers>
+                  <recordset name="wz_recordset_triggers"/>
+                </Triggers>
+                <Submodules>
+                  <recordset name="wz_recordset_submodules"/>
+                </Submodules>
+              </links>
+              <values>
+                <name>roundrobin_stack</name>
+                <title>roundrobin_stack</title>
+                <table_name/>
+                <database>0</database>
+                <extends/>
+                <Module_id>8</Module_id>
+                <_Fields_count>7</_Fields_count>
+                <_Resizes_count>7</_Resizes_count>
+                <_Links_count>7</_Links_count>
+                <_Triggers_count>7</_Triggers_count>
+                <_Submodules_count>7</_Submodules_count>
+                <showadmin>0</showadmin>
+                <no_urlkey>1</no_urlkey>
+                <no_ctime>0</no_ctime>
+                <use_sortkey>0</use_sortkey>
+                <install>1</install>
+                <orderby>id</orderby>
+                <id_field_name>id</id_field_name>
+                <_ctime>2013-07-19 16:22:25</_ctime>
+                <_mtime>2013-08-05 14:03:03</_mtime>
+                <sortkey>22</sortkey>
+              </values>
+            </record>
+          </recordset>
+        </recordsets>
+        <urls>
+          <recordset name="wz_urls">
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>1</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.show:name:adm_roundrobin_cfg.html</handler_value>
+                        <Url_id>103</Url_id>
+                        <_ctime>2013-07-19 14:56:54</_ctime>
+                        <_mtime>2013-07-19 14:56:54</_mtime>
+                        <sortkey>246</sortkey>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/admin/roundrobin/roundrobin_cfg</gspgid_value>
+                <type>get</type>
+                <Module_id>8</Module_id>
+                <_Handlers_count>0</_Handlers_count>
+                <_ctime>2013-07-19 14:56:54</_ctime>
+                <_mtime>2013-07-19 14:56:54</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>1</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.delete:{classname:roundrobin_cfg}</handler_value>
+                        <Url_id>104</Url_id>
+                        <_ctime>2013-07-19 14:56:54</_ctime>
+                        <_mtime>2013-07-19 14:56:54</_mtime>
+                        <sortkey>247</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>2</cnt>
+                        <handler_keyname>1</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect</handler_value>
+                        <Url_id>104</Url_id>
+                        <_ctime>2013-07-19 14:56:54</_ctime>
+                        <_mtime>2013-07-19 14:56:54</_mtime>
+                        <sortkey>248</sortkey>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/admin/roundrobin/roundrobin_cfg/delete</gspgid_value>
+                <type>get</type>
+                <Module_id>8</Module_id>
+                <_Handlers_count>0</_Handlers_count>
+                <_ctime>2013-07-19 14:56:54</_ctime>
+                <_mtime>2013-07-19 14:56:54</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>1</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.copy:{classname:roundrobin_cfg}</handler_value>
+                        <Url_id>105</Url_id>
+                        <_ctime>2013-07-19 14:56:54</_ctime>
+                        <_mtime>2013-07-19 14:56:54</_mtime>
+                        <sortkey>249</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>2</cnt>
+                        <handler_keyname>1</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect</handler_value>
+                        <Url_id>105</Url_id>
+                        <_ctime>2013-07-19 14:56:54</_ctime>
+                        <_mtime>2013-07-19 14:56:54</_mtime>
+                        <sortkey>250</sortkey>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/admin/roundrobin/roundrobin_cfg/copy</gspgid_value>
+                <type>get</type>
+                <Module_id>8</Module_id>
+                <_Handlers_count>0</_Handlers_count>
+                <_ctime>2013-07-19 14:56:54</_ctime>
+                <_mtime>2013-07-19 14:56:54</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>1</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect_if:gl:save_cancel:return:true</handler_value>
+                        <Url_id>106</Url_id>
+                        <_ctime>2013-07-19 14:56:54</_ctime>
+                        <_mtime>2013-07-19 14:56:54</_mtime>
+                        <sortkey>251</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>2</cnt>
+                        <handler_keyname>1</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.post:{name:admin_form.html:classname:roundrobin_cfg:form_class:g_forms_table}</handler_value>
+                        <Url_id>106</Url_id>
+                        <_ctime>2013-07-19 14:56:54</_ctime>
+                        <_mtime>2013-07-19 14:56:54</_mtime>
+                        <sortkey>252</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>3</cnt>
+                        <handler_keyname>2</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect_if:gl:save_continue:return:true</handler_value>
+                        <Url_id>106</Url_id>
+                        <_ctime>2013-07-19 14:56:54</_ctime>
+                        <_mtime>2013-07-19 14:56:54</_mtime>
+                        <sortkey>253</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>4</cnt>
+                        <handler_keyname>3</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect_if:gl:save_return:return:true</handler_value>
+                        <Url_id>106</Url_id>
+                        <_ctime>2013-07-19 14:56:54</_ctime>
+                        <_mtime>2013-07-19 14:56:54</_mtime>
+                        <sortkey>254</sortkey>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/admin/form/roundrobin_cfg</gspgid_value>
+                <type>handler</type>
+                <Module_id>8</Module_id>
+                <_Handlers_count>0</_Handlers_count>
+                <_ctime>2013-07-19 14:56:54</_ctime>
+                <_mtime>2013-07-19 14:56:54</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>1</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect_if:gl:save_cancel:return:true</handler_value>
+                        <Url_id>107</Url_id>
+                        <_ctime>2013-07-19 14:56:54</_ctime>
+                        <_mtime>2013-07-19 14:56:54</_mtime>
+                        <sortkey>255</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>2</cnt>
+                        <handler_keyname>1</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.post:{name:inline_form.html:classname:roundrobin_cfg}</handler_value>
+                        <Url_id>107</Url_id>
+                        <_ctime>2013-07-19 14:56:54</_ctime>
+                        <_mtime>2013-07-19 14:56:54</_mtime>
+                        <sortkey>256</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>3</cnt>
+                        <handler_keyname>2</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect_if:gl:save_continue:return:true</handler_value>
+                        <Url_id>107</Url_id>
+                        <_ctime>2013-07-19 14:56:54</_ctime>
+                        <_mtime>2013-07-19 14:56:54</_mtime>
+                        <sortkey>257</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>4</cnt>
+                        <handler_keyname>3</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect_if:gl:save_return:return:true</handler_value>
+                        <Url_id>107</Url_id>
+                        <_ctime>2013-07-19 14:56:54</_ctime>
+                        <_mtime>2013-07-19 14:56:54</_mtime>
+                        <sortkey>258</sortkey>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/admin/inline_form/roundrobin_cfg</gspgid_value>
+                <type>handler</type>
+                <Module_id>8</Module_id>
+                <_Handlers_count>0</_Handlers_count>
+                <_ctime>2013-07-19 14:56:54</_ctime>
+                <_mtime>2013-07-19 14:56:54</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>10</cnt>
+                        <handler_keyname/>
+                        <handler_template/>
+                        <handler_value>roundrobin_handler.rotate</handler_value>
+                        <Url_id>108</Url_id>
+                        <_ctime>2013-07-19 15:52:30</_ctime>
+                        <_mtime>2013-07-19 15:52:30</_mtime>
+                        <sortkey>259</sortkey>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>rotate</gspgid_value>
+                <type>get</type>
+                <Module_id>8</Module_id>
+                <_Handlers_count>1</_Handlers_count>
+                <_ctime>2013-07-19 15:52:30</_ctime>
+                <_mtime>2013-07-31 18:39:41</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>1</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.post:{name:admin_form.html:classname:roundrobin_cfg_stack:form_class:g_forms_table:return:gs_record}</handler_value>
+                        <Url_id>109</Url_id>
+                        <_ctime>2013-07-19 16:20:21</_ctime>
+                        <_mtime>2013-07-19 16:20:21</_mtime>
+                        <sortkey>260</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>2</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect</handler_value>
+                        <Url_id>109</Url_id>
+                        <_ctime>2013-07-19 16:20:21</_ctime>
+                        <_mtime>2013-07-19 16:20:21</_mtime>
+                        <sortkey>261</sortkey>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/admin/form/roundrobin_cfg_stack</gspgid_value>
+                <type>handler</type>
+                <Module_id>8</Module_id>
+                <_Handlers_count>0</_Handlers_count>
+                <_ctime>2013-07-19 16:20:21</_ctime>
+                <_mtime>2013-07-19 16:20:21</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>1</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.post:{name:admin_form.html:classname:roundrobin_stack:form_class:g_forms_table:return:gs_record}</handler_value>
+                        <Url_id>110</Url_id>
+                        <_ctime>2013-07-19 16:22:25</_ctime>
+                        <_mtime>2013-07-19 16:22:25</_mtime>
+                        <sortkey>262</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>2</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect</handler_value>
+                        <Url_id>110</Url_id>
+                        <_ctime>2013-07-19 16:22:25</_ctime>
+                        <_mtime>2013-07-19 16:22:25</_mtime>
+                        <sortkey>263</sortkey>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/admin/form/roundrobin_stack</gspgid_value>
+                <type>handler</type>
+                <Module_id>8</Module_id>
+                <_Handlers_count>0</_Handlers_count>
+                <_ctime>2013-07-19 16:22:25</_ctime>
+                <_mtime>2013-07-19 16:22:25</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>1</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.show:name:adm_roundrobin_stack.html</handler_value>
+                        <Url_id>111</Url_id>
+                        <_ctime>2013-07-19 16:23:00</_ctime>
+                        <_mtime>2013-07-19 16:23:00</_mtime>
+                        <sortkey>264</sortkey>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/admin/roundrobin/roundrobin_stack</gspgid_value>
+                <type>get</type>
+                <Module_id>8</Module_id>
+                <_Handlers_count>0</_Handlers_count>
+                <_ctime>2013-07-19 16:23:00</_ctime>
+                <_mtime>2013-07-19 16:23:00</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>1</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.delete:{classname:roundrobin_stack}</handler_value>
+                        <Url_id>112</Url_id>
+                        <_ctime>2013-07-19 16:23:00</_ctime>
+                        <_mtime>2013-07-19 16:23:00</_mtime>
+                        <sortkey>265</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>2</cnt>
+                        <handler_keyname>1</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect</handler_value>
+                        <Url_id>112</Url_id>
+                        <_ctime>2013-07-19 16:23:00</_ctime>
+                        <_mtime>2013-07-19 16:23:00</_mtime>
+                        <sortkey>266</sortkey>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/admin/roundrobin/roundrobin_stack/delete</gspgid_value>
+                <type>get</type>
+                <Module_id>8</Module_id>
+                <_Handlers_count>0</_Handlers_count>
+                <_ctime>2013-07-19 16:23:00</_ctime>
+                <_mtime>2013-07-19 16:23:00</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>1</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.copy:{classname:roundrobin_stack}</handler_value>
+                        <Url_id>113</Url_id>
+                        <_ctime>2013-07-19 16:23:00</_ctime>
+                        <_mtime>2013-07-19 16:23:00</_mtime>
+                        <sortkey>267</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>2</cnt>
+                        <handler_keyname>1</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect</handler_value>
+                        <Url_id>113</Url_id>
+                        <_ctime>2013-07-19 16:23:00</_ctime>
+                        <_mtime>2013-07-19 16:23:00</_mtime>
+                        <sortkey>268</sortkey>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/admin/roundrobin/roundrobin_stack/copy</gspgid_value>
+                <type>get</type>
+                <Module_id>8</Module_id>
+                <_Handlers_count>0</_Handlers_count>
+                <_ctime>2013-07-19 16:23:00</_ctime>
+                <_mtime>2013-07-19 16:23:00</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>1</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect_if:gl:save_cancel:return:true</handler_value>
+                        <Url_id>114</Url_id>
+                        <_ctime>2013-07-19 16:23:00</_ctime>
+                        <_mtime>2013-07-19 16:23:00</_mtime>
+                        <sortkey>269</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>2</cnt>
+                        <handler_keyname>1</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.post:{name:inline_form.html:classname:roundrobin_stack}</handler_value>
+                        <Url_id>114</Url_id>
+                        <_ctime>2013-07-19 16:23:00</_ctime>
+                        <_mtime>2013-07-19 16:23:00</_mtime>
+                        <sortkey>270</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>3</cnt>
+                        <handler_keyname>2</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect_if:gl:save_continue:return:true</handler_value>
+                        <Url_id>114</Url_id>
+                        <_ctime>2013-07-19 16:23:00</_ctime>
+                        <_mtime>2013-07-19 16:23:00</_mtime>
+                        <sortkey>271</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>4</cnt>
+                        <handler_keyname>3</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect_if:gl:save_return:return:true</handler_value>
+                        <Url_id>114</Url_id>
+                        <_ctime>2013-07-19 16:23:00</_ctime>
+                        <_mtime>2013-07-19 16:23:00</_mtime>
+                        <sortkey>272</sortkey>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/admin/inline_form/roundrobin_stack</gspgid_value>
+                <type>handler</type>
+                <Module_id>8</Module_id>
+                <_Handlers_count>0</_Handlers_count>
+                <_ctime>2013-07-19 16:23:00</_ctime>
+                <_mtime>2013-07-19 16:23:00</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>1</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.show:name:adm_roundrobin_cfg_stack.html</handler_value>
+                        <Url_id>115</Url_id>
+                        <_ctime>2013-07-19 16:23:13</_ctime>
+                        <_mtime>2013-07-19 16:23:13</_mtime>
+                        <sortkey>273</sortkey>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/admin/roundrobin/roundrobin_cfg_stack</gspgid_value>
+                <type>get</type>
+                <Module_id>8</Module_id>
+                <_Handlers_count>0</_Handlers_count>
+                <_ctime>2013-07-19 16:23:13</_ctime>
+                <_mtime>2013-07-19 16:23:13</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>1</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.delete:{classname:roundrobin_cfg_stack}</handler_value>
+                        <Url_id>116</Url_id>
+                        <_ctime>2013-07-19 16:23:13</_ctime>
+                        <_mtime>2013-07-19 16:23:13</_mtime>
+                        <sortkey>274</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>2</cnt>
+                        <handler_keyname>1</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect</handler_value>
+                        <Url_id>116</Url_id>
+                        <_ctime>2013-07-19 16:23:13</_ctime>
+                        <_mtime>2013-07-19 16:23:13</_mtime>
+                        <sortkey>275</sortkey>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/admin/roundrobin/roundrobin_cfg_stack/delete</gspgid_value>
+                <type>get</type>
+                <Module_id>8</Module_id>
+                <_Handlers_count>0</_Handlers_count>
+                <_ctime>2013-07-19 16:23:13</_ctime>
+                <_mtime>2013-07-19 16:23:13</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>1</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.copy:{classname:roundrobin_cfg_stack}</handler_value>
+                        <Url_id>117</Url_id>
+                        <_ctime>2013-07-19 16:23:13</_ctime>
+                        <_mtime>2013-07-19 16:23:13</_mtime>
+                        <sortkey>276</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>2</cnt>
+                        <handler_keyname>1</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect</handler_value>
+                        <Url_id>117</Url_id>
+                        <_ctime>2013-07-19 16:23:13</_ctime>
+                        <_mtime>2013-07-19 16:23:13</_mtime>
+                        <sortkey>277</sortkey>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/admin/roundrobin/roundrobin_cfg_stack/copy</gspgid_value>
+                <type>get</type>
+                <Module_id>8</Module_id>
+                <_Handlers_count>0</_Handlers_count>
+                <_ctime>2013-07-19 16:23:13</_ctime>
+                <_mtime>2013-07-19 16:23:13</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>1</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect_if:gl:save_cancel:return:true</handler_value>
+                        <Url_id>118</Url_id>
+                        <_ctime>2013-07-19 16:23:13</_ctime>
+                        <_mtime>2013-07-19 16:23:13</_mtime>
+                        <sortkey>278</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>2</cnt>
+                        <handler_keyname>1</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.post:{name:inline_form.html:classname:roundrobin_cfg_stack}</handler_value>
+                        <Url_id>118</Url_id>
+                        <_ctime>2013-07-19 16:23:13</_ctime>
+                        <_mtime>2013-07-19 16:23:13</_mtime>
+                        <sortkey>279</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>3</cnt>
+                        <handler_keyname>2</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect_if:gl:save_continue:return:true</handler_value>
+                        <Url_id>118</Url_id>
+                        <_ctime>2013-07-19 16:23:13</_ctime>
+                        <_mtime>2013-07-19 16:23:13</_mtime>
+                        <sortkey>280</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>4</cnt>
+                        <handler_keyname>3</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect_if:gl:save_return:return:true</handler_value>
+                        <Url_id>118</Url_id>
+                        <_ctime>2013-07-19 16:23:13</_ctime>
+                        <_mtime>2013-07-19 16:23:13</_mtime>
+                        <sortkey>281</sortkey>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/admin/inline_form/roundrobin_cfg_stack</gspgid_value>
+                <type>handler</type>
+                <Module_id>8</Module_id>
+                <_Handlers_count>0</_Handlers_count>
+                <_ctime>2013-07-19 16:23:13</_ctime>
+                <_mtime>2013-07-19 16:23:13</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>10</cnt>
+                        <handler_keyname/>
+                        <handler_template/>
+                        <handler_value>roundrobin_handler.stack</handler_value>
+                        <Url_id>119</Url_id>
+                        <_ctime>2013-07-31 18:39:41</_ctime>
+                        <_mtime>2013-07-31 18:40:12</_mtime>
+                        <sortkey>259</sortkey>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>stack</gspgid_value>
+                <type>get</type>
+                <Module_id>8</Module_id>
+                <_Handlers_count>0</_Handlers_count>
+                <_ctime>2013-07-31 18:39:41</_ctime>
+                <_mtime>2013-07-31 18:39:56</_mtime>
+              </values>
+            </record>
+          </recordset>
+        </urls>
+        <forms>
+          <recordset name="wz_forms"/>
+        </forms>
+      </links>
+      <values>
+        <name>roundrobin</name>
+        <title>roundrobin</title>
+        <_recordsets_count>3</_recordsets_count>
+        <_urls_count>3</_urls_count>
+        <_forms_count>3</_forms_count>
+        <_ctime>2013-07-19 14:49:37</_ctime>
+        <_mtime>2013-07-31 18:39:41</_mtime>
+      </values>
+    </record>
+  </recordset>
+</xml>

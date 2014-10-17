@@ -1,0 +1,98 @@
+{extends file="admin_page.html"}
+
+{block name="title"}
+	person_role_cfg
+{/block}
+
+{block name="main"}
+
+
+	<h4>person_role_cfg</h4>
+
+
+
+	
+		{handler gspgid="/filter/" class="like" name="search" fields="name, login_options" urltype=get }
+		{handler gspgid="/filter/" class="calendar" name="calendar" fields="_ctime,_mtime," urltype=get }
+		{handler gspgid="/filter/" class="sort" name="sort" fields="sortkey,name, login_options" urltype=get }
+		{handler gspgid="/filter/" class="limit" name="limit" urltype=session values='20,50,100,500' default_value=20}
+		{handler gspgid="/filter/" class="offset"  name="offset" urltype=get limit='limit'}
+
+
+
+		{controller _class="person_role_cfg" _assign="person_role_cfg" _filters="search,calendar,sort,limit,offset,"}
+
+
+				{handler gspgid="/sortkey" sortkey_id="person_role_cfg" recordset_name="person_role_cfg"}
+		
+	<table class="tb sortkey-table" sortkey_id="person_role_cfg">
+	<thead>
+	<tr class="filters"><td colspan="100">
+	<table>
+			<tr><td>Find:</td><td>
+			<form class="filterform" method="get">
+			{handler gspgid="/filter/show" name="search"  recordset=$person_role_cfg tpl="like.html"  }
+			{handler gspgid="/filter/show" name="calendar"  recordset=$person_role_cfg tpl="calendar.html" prelabel="date:"  }
+			{handler gspgid="/filter/show" name="sort"  recordset=$person_role_cfg tpl="sort.html" prelabel="sort by:"  }
+			<div class="links_inline"><input type="submit" value=""></div>
+			</form>
+		</td></tr>
+	</table>
+	</td> </tr>
+	<tr class="pager"><td colspan="100">
+		{handler gspgid="/filter/show" name="offset" tpl="offset_pages.html" page_title='Page' page_prev='previous' page_next='next' page_between='from' pages_count=21 recordset=$person_role_cfg}
+		{handler gspgid="/filter/show" name="limit" tpl="limit_select.html" prelabel='show by' label='records'}
+	</td></tr>
+	<tr><th>#</th>
+		<th>
+		{field_name name="name" type="fString" key="name" id="12"}
+	</th>
+		<th>
+		{field_name name="login_options" type="fString" key="login_options" id="15"}
+	</th>
+			<th>login_recordset</th>
+		<th>login_fields</th>
+			<th></th>
+	<th></th>
+	<th></th>
+	</tr>
+	</thead>
+	
+	{foreach from=$person_role_cfg item="e"}
+	<tr class="{cycle values='odd,even'}" record_id="{$e->get_id()}">
+			<td><span>{$e->get_id()}</span></td>
+						<td class="frm_fString">
+                <span>
+									<a href="{gl rec_edit=$e}">{field_formatter value=$e.name type="fString"}</a>
+						
+                </span>
+			</td>
+						<td class="frm_fString">
+                <span>
+						
+					{field_formatter value=$e.login_options type="fString"}
+						
+                </span>
+			</td>
+									<td><span>{$e.login_recordset}</span></td>
+						<td><span>{$e.login_fields}</span></td>
+									<td class="cnt"><a href="{gl rec_edit=$e}"><img src="/i/admin/ico_edit.png" alt="Редактировать" title="Редактировать"></a></td>
+			<td class="cnt"><a href="{gl rec_copy=$e}"><img src="/i/admin/ico_copy.png" alt="Копировать" title="Копировать"></a></td>
+			<td class="cnt"><a href="{gl rec_delete=$e}" onclick="return confirm('Вы точно хотите удалить запись ?');"><img src="/i/admin/ico_delete.png" alt="Удалить" title="Удалить"></a></td>
+	</tr>
+	{/foreach}
+	<tr class="pager"><td colspan="100">
+	<a name="form"></a>
+		{handler gspgid="/filter/show" name="offset" tpl="offset_pages.html" page_title='Page' page_prev='previous' page_next='next' page_between='from' pages_count=21 recordset=$person_role_cfg}
+		{handler gspgid="/filter/show" name="limit" tpl="limit_select.html" prelabel='show by' label='records'}
+	</td></tr>
+	</table>
+
+	<h5>Редактировать/<a href="{gl rec_create=0}">создать</a>:</h5>
+	{if $_gsdata.gspgid_va.0=='modify'}
+	<hr><br>
+		{$default_value=""}
+		{handler gspgid="/admin/form/person_role_cfg/edit/`$_gsdata.gspgid_va.1`" _default=trim($default_value,',') }
+	{/if}
+
+{/block}

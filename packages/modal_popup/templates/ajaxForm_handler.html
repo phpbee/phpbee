@@ -1,0 +1,21 @@
+{$d_id=$popup_params.popup_id}
+<span class="ajaxForm" id="{$d_id}" >
+{$popup_handler}
+</span>
+
+
+<script src="http://malsup.github.com/jquery.form.js"></script> 
+<script>
+$(function() {
+	$(".ajaxForm#{$d_id}").ajaxForm(
+		{
+				success: function(ret,st, xhr, $form) {
+					//$(".ajaxForm#{$d_id}").html(ret);
+					$form.closest('.ajaxForm').html(ret);
+				},
+				url:"ajaxForm/{$popup_params.gspgid}"
+		});
+	
+});
+</script>
+

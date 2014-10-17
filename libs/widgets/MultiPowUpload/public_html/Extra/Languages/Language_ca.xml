@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MultiPowUpload_parameters>
+  <param name="browseButton.text">Examinar ...</param>
+  <param name="browseButton.tooltip">Afegir arxius per pujar</param>
+  <param name="cancelButton.pauseText">Pausa</param>
+  <param name="cancelButton.text">Cancel</param>
+  <param name="cancelButton.tooltip">Cancel lar l'operació actual</param>
+  <param name="clearButton.text">Esborrar</param>
+  <param name="clearButton.tooltip">Elimineu tots els fitxers</param>
+  <param name="constant.bytes">bytes</param>
+  <param name="constant.decimalSeparator">,</param>
+  <param name="constant.gigaBytes">Gb</param>
+  <param name="constant.kiloBytes">Kb</param>
+  <param name="constant.megaBytes">Mb</param>
+  <param name="contextMenu.sortByDate">Ordenar per data</param>
+  <param name="contextMenu.sortByName">Ordenar per nom</param>
+  <param name="contextMenu.sortBySize">Ordenar per grandària</param>
+  <param name="descriptionWindow.caption">Descripció de l'arxiu</param>
+  <param name="descriptionWindow.fileNavigation.fileName.label">&lt;FILENAME&gt;</param>
+  <param name="descriptionWindow.fileNavigation.nextButton.label"></param>
+  <param name="descriptionWindow.fileNavigation.previousButton.label"></param>
+  <param name="exifWindow.caption">&lt;FILENAME&gt; dades EXIF</param>
+  <param name="exifWindow.list.nameHeader">Nom</param>
+  <param name="exifWindow.list.valueHeader">Valor</param>
+  <param name="fileInfoWindow.caption">Informació del fitxer</param>
+  <param name="fileInfoWindow.exifInfo">&lt;b&gt; informació Exif &lt;/b&gt;: &lt;a&gt; Feu clic per veure &lt;/a&gt;</param>
+  <param name="fileInfoWindow.fileDate">&lt;b&gt; Data &lt;/b&gt;: &lt;FILEDATE&gt;</param>
+  <param name="fileInfoWindow.fileName">&lt;b&gt; Nom &lt;/b&gt;: &lt;FILENAME&gt;</param>
+  <param name="fileInfoWindow.fileSize">&lt;b&gt; Mida &lt;/b&gt;: &lt;FILESIZE&gt;</param>
+  <param name="fileInfoWindow.fileStatus">&lt;b&gt; estat &lt;/b&gt;: &lt;FILESTATUS&gt;</param>
+  <param name="fileInfoWindow.imageHeight">&lt;b&gt; l'altura de la imatge &lt;/b&gt;: &lt;IMAGEHEIGHT&gt;</param>
+  <param name="fileInfoWindow.imageWidth">&lt;b&gt; Ample d'imatge &lt;/b&gt;: &lt;IMAGEWIDTH&gt;</param>
+  <param name="fileStatus.cancelled">Cancel lat</param>
+  <param name="fileStatus.complete">Completat</param>
+  <param name="fileStatus.encodeImage">Codificació d'imatges</param>
+  <param name="fileStatus.error">S'ha produït un error</param>
+  <param name="fileStatus.loadFile">Càrrega d'arxius en la memòria</param>
+  <param name="fileStatus.loadImage">Càrrega de dades de la imatge</param>
+  <param name="fileStatus.processing">Pujar</param>
+  <param name="fileStatus.ready">Llest per pujar</param>
+  <param name="labelUpload.text">Seleccioneu els arxius a pujar</param>
+  <param name="listView.description.defaultText">Feu clic per editar ...</param>
+  <param name="listView.description.tooltip">Edita fitxer de descripció</param>
+  <param name="listView.fileNameLabel.pattern">&lt;FILENAME&gt;</param>
+  <param name="listView.label.disabledFileInfoTooltip">Mida: &lt;FILESIZE&gt;
+Data: &lt;FILEDATE&gt;
+Estat: &lt;FILESTATUS&gt;</param>
+  <param name="listView.label.tooltip">Mida: &lt;FILESIZE&gt;
+Data: &lt;FILEDATE&gt;
+Estat: &lt;FILESTATUS&gt;</param>
+  <param name="listView.removeButton.tooltip">Eliminar l'arxiu</param>
+  <param name="listView.textInput.defaultString">Escriu arxiu comentari aquí</param>
+  <param name="listViewButton.tooltip">Vista de llista</param>
+  <param name="loadingText">&lt;b&gt; inicialitzant: &lt;PERCENT&gt;% &lt;/b&gt;</param>
+  <param name="messages.disabledType">Arxiu amb els següents tipus: &lt;FILETYPES&gt; no estan autoritzats a pujar! &lt;COUNTINVALIDFILES&gt; Els arxius van ser ignorats!</param>
+  <param name="messages.filesCountExceeded">Només &lt;MAXFILECOUNT&gt; poden carregar fitxers! &lt;COUNTINVALIDFILES&gt; Els arxius van ser ignorats!</param>
+  <param name="messages.filesCountNotEnough">Si us plau, seleccioneu més arxius. Mínim comptar amb els arxius és &lt;MINFILECOUNT&gt;</param>
+  <param name="messages.httpError">&lt;center&gt; Error de HTTP ", &lt;ERRORCODE&gt; 's'ha produït. &lt;DESCRIPTION&gt;&lt;br&gt; Si us plau, vegeu &lt;font color='#0000FF'&gt; &lt;a title='Error description' target='_blank' href='&lt;W3WLINK&gt;'&gt; &lt;W3WLINK&gt; &lt;/a&gt; &lt;/font&gt; definicions dels codis d'error per obtenir més informació. &lt;/center&gt;</param>
+  <param name="messages.httpError.400">Sol.licitud incorrecta. El servidor no pot entendre petició! Poseu-vos en contacte amb l'administrador del servidor.</param>
+  <param name="messages.httpError.401">No autoritzat. L'autenticació d'usuaris requerits!</param>
+  <param name="messages.httpError.402">El pagament requerit. codi reservats</param>
+  <param name="messages.httpError.403">Prohibida. El servidor va entendre la sol.licitud, però es nega a complir!&lt;br&gt;Per als servidors Apache: Això passa perquè s'ha habilitat un mòdul d'Apache mod_security nom al servidor que bloqueja les capçaleres enviades per Flash.&lt;br&gt;Per servidors IIS amb ASP: Aquest problema es produeix si la capçalera Content-Length és present i si la capçalera Content-Length especifica una quantitat de dades que és major que el valor de la propietat AspMaxRequestEntityAllowed en la metaBase de IIS.&lt;br&gt;El valor per defecte de la propietat AspMaxRequestEntityAllowed és 204800 bytes.</param>
+  <param name="messages.httpError.404">Pàgina no trobada. No es pot trobar '&lt;URL&gt;' pàgina al servidor!</param>
+  <param name="messages.httpError.405">mètode de Correus no desitjats d'aquesta pàgina &lt;URL&gt;! Si us plau, intenta canviar la configuració del servidor per permetre el mètode post per rebre seqüències d'ordres.</param>
+  <param name="messages.httpError.406">No Acceptable. Això significa que el servidor no pot generar entitats de resposta que tenen característiques de contingut no acceptable d'acord amb les capçaleres d'acceptació enviada a la sol licitud. Flash acceptar encapçalat és "text / * '.</param>
+  <param name="messages.httpError.407">Requereix autenticació de proxy.</param>
+  <param name="messages.httpError.408">Sol.licitud de temps d'espera.</param>
+  <param name="messages.httpError.409">Conflicte.</param>
+  <param name="messages.httpError.410">Desaparegut. El recurs demanat ja no està disponible en el servidor i no es coneix l'adreça de reenviament.</param>
+  <param name="messages.httpError.411">Longitud requerida.</param>
+  <param name="messages.httpError.412">Error de condició prèvia.</param>
+  <param name="messages.httpError.413">Entitat de sol licitud massa gran.&lt;br&gt;Per als servidors IIS: 1. Intenta augmentar la propietat UploadReadAheadSize metaBase.&lt;br&gt;2. Intenta augmentar el valor de la propietat MaxRequestEntityAllowed en IIS de configuració.&lt;br&gt;Per als servidors apache: Intenta augmentar el paràmetre LimitRequestBody en httpd.conf.</param>
+  <param name="messages.httpError.414">Request-URI massa llarg.</param>
+  <param name="messages.httpError.415">Tipus no compatible.</param>
+  <param name="messages.httpError.416">Rang demanat no vàlid.</param>
+  <param name="messages.httpError.417">Expectativa Error.</param>
+  <param name="messages.httpError.500">Error intern del servidor. En general, significa que el guió que reben tenen errors.</param>
+  <param name="messages.httpError.501">No implementat. El servidor no admet el mètode POST.</param>
+  <param name="messages.httpError.502">Porta d'enllaç incorrecta.</param>
+  <param name="messages.httpError.503">503 Servei no disponible. El servidor és actualment incapaç de gestionar la sol.licitud a causa d'una sobrecàrrega temporal o el manteniment del servidor.</param>
+  <param name="messages.httpError.504">Temps d'espera de porta d'enllaç.</param>
+  <param name="messages.httpError.505">Versió d'HTTP no compatible. El servidor no és compatible amb HTTP 1.1.</param>
+  <param name="messages.wrongFileType">Només els arxius amb els següents tipus: &lt;FILETYPES&gt; poden pujar! &lt;COUNTINVALIDFILES&gt; Els arxius van ser ignorats!</param>
+  <param name="messages.zeroSize">&lt;COUNTINVALIDFILES&gt; arxius amb mida zero van ser ignorats!</param>
+  <param name="removeButton.tooltip">Eliminar els arxius seleccionats</param>
+  <param name="retryDialog.caption">Torneu a intentar pujar?</param>
+  <param name="retryDialog.message">Alguns fitxers no s'han pujat. Vols intentar pujar-ho de nou?</param>
+  <param name="retryDialog.noLabel">N</param>
+  <param name="retryDialog.yesLabel">Sí</param>
+  <param name="sortButton.text"></param>
+  <param name="sortButton.tooltip">Classificació per</param>
+  <param name="sortMenu.byDate">Per data</param>
+  <param name="sortMenu.byName">Per nom</param>
+  <param name="sortMenu.bySize">Per mida</param>
+  <param name="statusLabel.text.generateThumbnails">La generació d'imatges en miniatura ... si us plau esperi.</param>
+  <param name="statusLabel.text.loadFile "></param>
+  <param name="statusLabel.text.ready">Comte d'arxius: &lt;FILESCOUNT&gt; (&lt;TOTALSIZE&gt;)</param>
+  <param name="statusLabel.text.uploadCancelled">Següent càrrega cancel.lat. Espereu ...</param>
+  <param name="statusLabel.text.uploadComplete">Pujar complet! &lt;UPLOADEDFILESCOUNT&gt; arxius (&lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt;), el temps transcorregut: &lt;ELAPSEDHOUR&gt;: &lt;ELAPSEDMIN&gt;: &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.uploadProgress">Total: &lt;PERCENT&gt;% (&lt;FILESNUM&gt; / &lt;FILESTOUPLOADCOUNT&gt;) &lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt; (&lt;RATEVALUE&gt; / s, a l'esquerra del temps: &lt;LEFTHOUR&gt;: &lt;LEFTMIN&gt;: &lt;LEFTSEC&gt;)</param>
+  <param name="statusLabel.text.uploadStart">Pujada de ...</param>
+  <param name="statusLabel.text.uploadStopped">Pujar detingut. Penjat bytes: &lt;TOTALUPLOADEDSIZE&gt;, Temps transcorregut: &lt;ELAPSEDHOUR&gt;: &lt;ELAPSEDMIN&gt;: &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.waitForConnection">El servidor no respon. Tractant de tornar a connectar, si us plau esperi.</param>
+  <param name="thumbViewButton.tooltip">Fotos petites</param>
+  <param name="thumbnail.watermark.text">Element de TI</param>
+  <param name="thumbnailView.bottomPanel.labelPattern">&lt;FILENAME&gt;</param>
+  <param name="thumbnailView.cancelCropIcon.tooltip">Desfer retallar la imatge</param>
+  <param name="thumbnailView.contextMenu.CropLabel">Retallar la imatge</param>
+  <param name="thumbnailView.contextMenu.RemoveLabel">Treure</param>
+  <param name="thumbnailView.contextMenu.RotateLeftLabel">Girar a l'esquerra</param>
+  <param name="thumbnailView.contextMenu.RotateRightLabel">Rotar a la dreta</param>
+  <param name="thumbnailView.contextMenu.UndoCropLabel">Desfer retallar la imatge</param>
+  <param name="thumbnailView.cropIcon.tooltip">Retallar la imatge</param>
+  <param name="thumbnailView.editIcon.tooltip">Edita fitxer de descripció</param>
+  <param name="thumbnailView.infoIcon.disabledFileInfoTooltip">Mida: &lt;FILESIZE&gt;
+Data: &lt;FILEDATE&gt;
+Estat: &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.infoIcon.tooltip">Mida: &lt;FILESIZE&gt;
+Data: &lt;FILEDATE&gt;
+Estat: &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.removeIcon.tooltip">Treure</param>
+  <param name="thumbnailView.rotateLeftIcon.tooltip">Girar a l'esquerra</param>
+  <param name="thumbnailView.rotateRightIcon.tooltip">Rotar a la dreta</param>
+  <param name="uploadButton.text">Pujar</param>
+  <param name="uploadButton.tooltip">Iniciar la càrrega</param>
+</MultiPowUpload_parameters>

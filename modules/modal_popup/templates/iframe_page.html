@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+{block baseurl}{if 'en'==gs_var_storage::load('multilanguage_lang')}<base href="{base_domain()}/en/" />{else}<base href="{base_domain()}/ru/" />{/if}{/block}
+	<meta charset="utf-8"/>
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta viewport="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+	<title>{ml('Libriana - новый способ поиска и поддержки девушек, которые хотят стать фото моделями.','Libriana - a new way to search and support the girls who want to become a photo model.')}</title>
+	<link rel="icon" type="image/png" href="/images/favicon.png" />
+	<link rel="stylesheet" href="/css/font-awesome.min.css">
+	<link href="/css/jquery-ui.css" rel="stylesheet"/>
+	<link href='/css/jquery.bxslider.css' rel='stylesheet' type='text/css'/>
+	<link href='/css/style.css' rel='stylesheet' type='text/css'/>
+	<script type="text/javascript" src="/js/jquery.min.js"></script>
+	<script type="text/javascript" src="/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/js/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.bxslider.min.js"></script>
+	<script type="text/javascript" src="/js/modal_popup.js"></script>
+	<script type="text/javascript" src="/js/jquery.jqtransform.js"></script>
+	<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/js/scripts.js"></script>
+	<script type="text/javascript" src="/js/common.js"></script>
+
+	<script type="text/javascript" src="http://vkontakte.ru/js/api/share.js?10" charset="utf-8"></script>
+	<script type="text/javascript" src="http://vkontakte.ru/js/api/openapi.js?v3"></script>
+	<script type="text/javascript" src="http://userapi.com/js/api/openapi.js?34"></script>
+
+	<script type="text/javascript" src="/js/vk.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'/>
+
+
+</head>
+<body style="width:480px; min-width:480px !important; background-color:transparent;">
+{block iframe_content}{/block}
+</body>
+</html>

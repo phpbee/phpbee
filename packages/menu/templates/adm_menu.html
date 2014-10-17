@@ -1,0 +1,54 @@
+{extends file="admin_page.html"}
+
+{block name="main"}
+		{if isset($_gsdata.root)}
+			{assign var="pid" value=$_gsdata.root}
+			{controller _class="tw_menu" id=$pid _assign="root" _fields="id,pid_id,name"}
+			{assign var="root" value=$root->first()->get_values()}
+		{else}
+			{assign var="pid" value=0}
+			{assign var="root" value=null}
+		{/if}
+
+		{controller _class="tw_menu" pid_id=$pid _assign="list" _orderby="position,sort" _paging="pagenums:20"}
+		<table class="tb">
+		<thead>
+		<tr><th colspan="8" class="path">Страницы: {$list_paging}</th></tr>
+		<tr><th colspan="8" class="path">
+		{if $root}
+			<div  class="f_path"><a href="/admin/menu/?root=0">Корень</a>&nbsp;&raquo;&nbsp;</div>
+			{include file="f_path.html" root=$root pid=$pid}
+		{else}
+		<a href="/admin/menu/?root=0">Корень</a>
+		{/if}
+		</th></tr>
+		<tr>
+		<th>#</th>
+		<th width="50"></th>
+		<th width="20%">Название файла</th>
+		<th width="30%">Название</th>
+		<th width="10%">Положение</th>
+		<th width="10%">Сортировка</th>
+		<th>&nbsp;</th><th>&nbsp;</th></tr>
+		</thead>
+		{foreach from=$list item="e"}
+		<tr class="{cycle values='odd,even'}">
+			<td>{$e.id}</td>
+			<td>{$e.File->img('small')|implode}</td>
+			<td>{$e.File->first()->File_filename}</td>
+			<td><a href="/admin/menu/?root={$e.id}">{$e.name}</a></td>
+			<td>{$e.position|dict}</td>
+			<td>{$e.sort}</td>
+			<td class="cnt"><a href="/admin/menu/{$e.id}/?root={$pid}#form"><img src="/i/admin/ico_edit.png" alt="Редактировать" title="Редактировать"></a></td>
+			<td class="cnt"><a href="/admin/menu/delete/{$e.id}/?root={$pid}" onclick="return confirm('Вы точно хотите удалить запись ?');"><img src="/i/admin/ico_delete.png" alt="Удалить" title="Удалить"></a></td>
+		</tr>
+		{/foreach}
+		<tfoot>
+		<tr><th colspan="5" class="path">{$list_paging}</th></tr>
+		</tfoot>
+		</table>
+		<h5>Редактирование/<a href="/admin/menu/?root={$pid}#form">добавление</a> новой записи:</h5>
+		<hr><br>
+		<a name="form"></a>
+		{handler gspgid="admin/form/tw_menu/edit/`$_gsdata.gspgid_va.0|default:''`" pid_id=$pid}
+{/block}

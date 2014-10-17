@@ -1,0 +1,2 @@
+{controller _class="tw_menu" _assign="list" position='menu_bottom' pid_id=0 _orderby="sort" _fields='id,pid_id,name'}
+{foreach from=$list item=n}<li><a href="{$n.url}">{$n.name}</a></li>{/foreach}

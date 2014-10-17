@@ -1,0 +1,49 @@
+{extends file="wizard_page.html"}
+
+{block name="main"}
+
+
+	{controller _class=wz_urls _assign=url _assign_type=first id=$_gsdata.gspgid_va.0}
+
+	<h3>
+	<a href="/admin/wizard/module/{$url.Module->first()->id}">{$url.Module->first()->name}</a>
+	=>
+	<a href="/admin/wizard/urls/{$url.Module->first()->id}/{$url.id}">{$url.gspgid_value}</a>
+
+	<a href="/admin/wizard/commit/{$url.Module->first()->id}">commit</a>
+
+    <a href="/admin/wizard/urls/clone/{$url.id}"><img src="/i/admin/ico_copy.png" alt="копировать" title="копировать" class="icon"></a>
+	</h3>
+	{handler gspgid="/sortkey" sortkey_id=table1 recordset_name=wz_handlers}
+
+	<h4>handlers</h4>
+
+		{handler gspgid="/admin/form/wz_urls_inline/edit/{$url.id}"}
+
+	<table class="tb sortkey-table" sortkey_id="table1">
+	<thead>
+	<tr><th>#</th>
+	<th>handler_key</th>
+	<th>handler_value</th>
+	<th></th>
+	<th></th>
+	</thead>
+	{foreach from=$url->Handlers->orderby('sortkey') item="e"}
+	<tr class="{cycle values='odd,even'}" record_id="{$e.id}">
+			<td>{$e.id}</td>
+			<td>{$e.handler_keyname}</td>
+			<td><a href="/admin/wizard/handlers/{$e.Url_id}/handlers/{$e.id}">{$e.handler_value}</a></td>
+			<td class="cnt"><a href="/admin/wizard/handlers/{$e.Url_id}/handlers/{$e.id}"><img src="/i/admin/ico_edit.png" alt="Редактировать" title="Редактировать"></a></td>
+			<td class="cnt"><a href="/admin/wizard/handlers/delete/{$e.id}" onclick="return confirm('Вы точно хотите удалить запись ?');"><img src="/i/admin/ico_delete.png" alt="Удалить" title="Удалить"></a></td>
+	</tr>
+	{/foreach}
+	</table>
+
+	<h5>Редактировать/<a href="/admin/wizard/handlers/{$_gsdata.gspgid_va.0}/handlers/0">создать</a>:</h5>
+	{if isset($_gsdata.gspgid_va.1) && $_gsdata.gspgid_va.1=='handlers' && isset($_gsdata.gspgid_va.2)}
+	<hr><br>
+	<a name="form"></a>
+	{handler gspgid="/admin/form/wz_handlers/edit/`$_gsdata.gspgid_va.2`" Url_id=$url.id}
+	{/if}
+
+{/block}

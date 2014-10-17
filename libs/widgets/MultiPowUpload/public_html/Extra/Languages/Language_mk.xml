@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MultiPowUpload_parameters>
+  <param name="browseButton.text">Разгледај ...</param>
+  <param name="browseButton.tooltip">Додади датотека за качување</param>
+  <param name="cancelButton.pauseText">Пауза</param>
+  <param name="cancelButton.text">Откажи</param>
+  <param name="cancelButton.tooltip">Откажи ја тековната операција</param>
+  <param name="clearButton.text">Јасно</param>
+  <param name="clearButton.tooltip">Избриши ги сите датотеки</param>
+  <param name="constant.bytes">bytes</param>
+  <param name="constant.decimalSeparator">,</param>
+  <param name="constant.gigaBytes">Gb</param>
+  <param name="constant.kiloBytes">Kb</param>
+  <param name="constant.megaBytes">MB</param>
+  <param name="contextMenu.sortByDate">Подреди по дата</param>
+  <param name="contextMenu.sortByName">Подреди по име</param>
+  <param name="contextMenu.sortBySize">Подреди по големина</param>
+  <param name="descriptionWindow.caption">Опис на датотеката</param>
+  <param name="descriptionWindow.fileNavigation.fileName.label">&lt;FILENAME&gt;</param>
+  <param name="descriptionWindow.fileNavigation.nextButton.label"></param>
+  <param name="descriptionWindow.fileNavigation.previousButton.label"></param>
+  <param name="exifWindow.caption">&lt;FILENAME&gt; EXIF податоци</param>
+  <param name="exifWindow.list.nameHeader">Името</param>
+  <param name="exifWindow.list.valueHeader">Вредност</param>
+  <param name="fileInfoWindow.caption">Информации за датотеката</param>
+  <param name="fileInfoWindow.exifInfo">&lt;b&gt; Exif информации &lt;/b&gt;: &lt;a&gt; Кликнете за да ја погледнете &lt;/a&gt;</param>
+  <param name="fileInfoWindow.fileDate">&lt;b&gt; Датум &lt;/b&gt;: &lt;FILEDATE&gt;</param>
+  <param name="fileInfoWindow.fileName">&lt;b&gt; име &lt;/b&gt;: &lt;FILENAME&gt;</param>
+  <param name="fileInfoWindow.fileSize">&lt;b&gt; Големина &lt;/b&gt;: &lt;FILESIZE&gt;</param>
+  <param name="fileInfoWindow.fileStatus">&lt;b&gt; Статус &lt;/b&gt;: &lt;FILESTATUS&gt;</param>
+  <param name="fileInfoWindow.imageHeight">&lt;b&gt; Слика височина &lt;/b&gt;: &lt;IMAGEHEIGHT&gt;</param>
+  <param name="fileInfoWindow.imageWidth">&lt;b&gt; ширина на сликата &lt;/b&gt;: &lt;IMAGEWIDTH&gt;</param>
+  <param name="fileStatus.cancelled">Откажано</param>
+  <param name="fileStatus.complete">Завршено</param>
+  <param name="fileStatus.encodeImage">Кодираат сликата</param>
+  <param name="fileStatus.error">Се случи грешка</param>
+  <param name="fileStatus.loadFile">Вчитување фајлови во меморијата</param>
+  <param name="fileStatus.loadImage">Вчитување на сликата податоци</param>
+  <param name="fileStatus.processing">Подигни датотека</param>
+  <param name="fileStatus.ready">Подготвен за преснимување</param>
+  <param name="labelUpload.text">Изберете датотеки за да испратите</param>
+  <param name="listView.description.defaultText">Кликнете копчето за промена ...</param>
+  <param name="listView.description.tooltip">Уреди датотека опис</param>
+  <param name="listView.fileNameLabel.pattern">&lt;FILENAME&gt;</param>
+  <param name="listView.label.disabledFileInfoTooltip">Големина: &lt;FILESIZE&gt;
+Дата: &lt;FILEDATE&gt;
+Статус: &lt;FILESTATUS&gt;</param>
+  <param name="listView.label.tooltip">Големина: &lt;FILESIZE&gt;
+Дата: &lt;FILEDATE&gt;
+Статус: &lt;FILESTATUS&gt;</param>
+  <param name="listView.removeButton.tooltip">Избриши датотека</param>
+  <param name="listView.textInput.defaultString">Да запишам во датотеката коментар овде</param>
+  <param name="listViewButton.tooltip">Листа видите</param>
+  <param name="loadingText">&lt;b&gt; иницијализирање на: &lt;PERCENT&gt;% &lt;/b&gt;</param>
+  <param name="messages.disabledType">Датотека со следниве видови: &lt;FILETYPES&gt; не се дозволени за качување! &lt;COUNTINVALIDFILES&gt; слики беа игнорирани!</param>
+  <param name="messages.filesCountExceeded">Само &lt;MAXFILECOUNT&gt; фајлови им е дозволено да испратите! &lt;COUNTINVALIDFILES&gt; слики беа игнорирани!</param>
+  <param name="messages.filesCountNotEnough">Ве молиме изберете повеќе фајлови. Минимален е датотеки брои &lt;MINFILECOUNT&gt;</param>
+  <param name="messages.httpError">&lt;center&gt; HTTP грешка, "&lt;ERRORCODE&gt;" се случила. &lt;DESCRIPTION&gt;&lt;br&gt; Ве молиме погледнете &lt;font color='#0000FF'&gt; &lt;a title='Error description' target='_blank' href='&lt;W3WLINK&gt;'&gt; &lt;W3WLINK&gt; &lt;/a&gt; &lt;/font&gt; код за грешка дефиниции за повеќе информации. &lt;/center&gt;</param>
+  <param name="messages.httpError.400">Лоша е. Серверот не може да се разбере барање! Ве молам контактирајте го администраторот на серверот.</param>
+  <param name="messages.httpError.401">Неовластено. Идентификација на корисникот задолжителни!</param>
+  <param name="messages.httpError.402">Потребно е плаќање. Задржани код!</param>
+  <param name="messages.httpError.403">Забрането. Серверот го разбра барањето, но одбива да го исполни!&lt;br&gt;За Apache сервер: Ова се случува поради тоа што го овозможија модул Apache-то по име mod_security на серверот кој го блокира заглавја испратено од Flash.&lt;br&gt;За IIS со ASP сервери: Ова прашање се случува ако во содржина-Должина заглавието е присутен и ако Content-Должина насловот го одредува количината на податоци што е поголем од вредноста на имотот AspMaxRequestEntityAllowed во метабази IIS.&lt;br&gt;Вообичаената вредност за AspMaxRequestEntityAllowed имотот е 204.800 бајти.</param>
+  <param name="messages.httpError.404">Страницата не е пронајдена. Не можам да најдам '&lt;URL&gt;' страница за серверот!</param>
+  <param name="messages.httpError.405">Постави метод не е дозволено за оваа страница &lt;URL&gt;! Ве молиме обидете да го смените подесувањата на серверот за да се овозможи пост методот за добивање на сценариото.</param>
+  <param name="messages.httpError.406">Не е прифатливо. Ова значи дека серверот не може да генерира одговор субјекти кои не содржината карактеристики прифатливо според прифати заглавја испратен во барањето. Flash прифати насловот е "текст" * ".</param>
+  <param name="messages.httpError.407">Одберете папка задолжителни.</param>
+  <param name="messages.httpError.408">Барам Истек на време.</param>
+  <param name="messages.httpError.409">Конфликт.</param>
+  <param name="messages.httpError.410">Нема. Бараниот податок не е на располагање кај серверот а не товар адреса е позната.</param>
+  <param name="messages.httpError.411">Должина задолжителни.</param>
+  <param name="messages.httpError.412">Предусловот не успеа.</param>
+  <param name="messages.httpError.413">Барањето на ентитетот е преголемо.&lt;br&gt;За IIS сервери: 1. Обидете се да се зголеми UploadReadAheadSize метабази сопственост.&lt;br&gt;2. Обидете се да се зголеми MaxRequestEntityAllowed вредноста на имотот во IIS конфиг.&lt;br&gt;За Apache сервер: Обидете се да се зголеми LimitRequestBody параметар во httpd.conf.</param>
+  <param name="messages.httpError.414">Барање-адреса која премногу долго.</param>
+  <param name="messages.httpError.415">Неподдржан тип на медиум.</param>
+  <param name="messages.httpError.416">Бараниот опсег не задоволува.</param>
+  <param name="messages.httpError.417">Очекувањето е неуспешно.</param>
+  <param name="messages.httpError.500">Внатрешна грешка на серверот. Обично тоа значи дека примањето скрипта да има грешки.</param>
+  <param name="messages.httpError.501">Не е имплементирано. Серверот не ја поддржува POST методот.</param>
+  <param name="messages.httpError.502">Лош портал.</param>
+  <param name="messages.httpError.503">503 Сервисот не е достапен. Серверот е во моментов не може да се справи со барањето поради привремена преоптоварување или одржување на серверот.</param>
+  <param name="messages.httpError.504">Портал Истек на време.</param>
+  <param name="messages.httpError.505">HTTP-верзијата не е поддржана. Серверот не ја поддржува HTTP 1.1.</param>
+  <param name="messages.wrongFileType">Само датотеките со следниот вид: &lt;FILETYPES&gt; им е дозволено да испратите! &lt;COUNTINVALIDFILES&gt; слики беа игнорирани!</param>
+  <param name="messages.zeroSize">&lt;COUNTINVALIDFILES&gt; датотеки со големина нула беа игнорирани!</param>
+  <param name="removeButton.tooltip">Избриши ги избраните датотеки</param>
+  <param name="retryDialog.caption">Пробај повторно испратите?</param>
+  <param name="retryDialog.message">Некои датотеки не беа подигнати. Дали сакате да се обидете повторно да испратите?</param>
+  <param name="retryDialog.noLabel">Нема</param>
+  <param name="retryDialog.yesLabel">Да</param>
+  <param name="sortButton.text"></param>
+  <param name="sortButton.tooltip">Сортирање цел</param>
+  <param name="sortMenu.byDate">По датум</param>
+  <param name="sortMenu.byName">Со името</param>
+  <param name="sortMenu.bySize">По големина</param>
+  <param name="statusLabel.text.generateThumbnails">Генерирање на сликички ... Ве молиме почекајте.</param>
+  <param name="statusLabel.text.loadFile "></param>
+  <param name="statusLabel.text.ready">Гроф на датотеки: &lt;FILESCOUNT&gt; (&lt;TOTALSIZE&gt;)</param>
+  <param name="statusLabel.text.uploadCancelled">Следна датотеки испраќате откажани. Чекај ...</param>
+  <param name="statusLabel.text.uploadComplete">Додавање заврши! &lt;UPLOADEDFILESCOUNT&gt; додадени фајлови: (&lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt;), изминатото време: &lt;ELAPSEDHOUR&gt;: &lt;ELAPSEDMIN&gt;: &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.uploadProgress">Вкупно: &lt;PERCENT&gt;% (&lt;FILESNUM&gt; / &lt;FILESTOUPLOADCOUNT&gt;) &lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt; (&lt;RATEVALUE&gt; / сек, време: &lt;LEFTHOUR&gt;: &lt;LEFTMIN&gt;: &lt;LEFTSEC&gt;)</param>
+  <param name="statusLabel.text.uploadStart">Неуспешно ...</param>
+  <param name="statusLabel.text.uploadStopped">Качувањето е запрено. Прикачено бајти: &lt;TOTALUPLOADEDSIZE&gt;, изминатото време: &lt;ELAPSEDHOUR&gt;: &lt;ELAPSEDMIN&gt;: &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.waitForConnection">Серверот не одговори. Обидувајќи се повторно, ве молиме почекајте.</param>
+  <param name="thumbViewButton.tooltip">Сликички видите</param>
+  <param name="thumbnail.watermark.text">Елемент-IT</param>
+  <param name="thumbnailView.bottomPanel.labelPattern">&lt;FILENAME&gt;</param>
+  <param name="thumbnailView.cancelCropIcon.tooltip">Врати ја исечете сликата</param>
+  <param name="thumbnailView.contextMenu.CropLabel">Ја исечете сликата</param>
+  <param name="thumbnailView.contextMenu.RemoveLabel">Избриши</param>
+  <param name="thumbnailView.contextMenu.RotateLeftLabel">Ротирајте лево</param>
+  <param name="thumbnailView.contextMenu.RotateRightLabel">Ротирај десно</param>
+  <param name="thumbnailView.contextMenu.UndoCropLabel">Врати ја исечете сликата</param>
+  <param name="thumbnailView.cropIcon.tooltip">Ја исечете сликата</param>
+  <param name="thumbnailView.editIcon.tooltip">Уреди датотека опис</param>
+  <param name="thumbnailView.infoIcon.disabledFileInfoTooltip">Големина: &lt;FILESIZE&gt;
+Дата: &lt;FILEDATE&gt;
+Статус: &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.infoIcon.tooltip">Големина: &lt;FILESIZE&gt;
+Дата: &lt;FILEDATE&gt;
+Статус: &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.removeIcon.tooltip">Избриши</param>
+  <param name="thumbnailView.rotateLeftIcon.tooltip">Ротирајте лево</param>
+  <param name="thumbnailView.rotateRightIcon.tooltip">Ротирај десно</param>
+  <param name="uploadButton.text">Додадени</param>
+  <param name="uploadButton.tooltip">Започнете испратите</param>
+</MultiPowUpload_parameters>

@@ -1,0 +1,24 @@
+table.wz_urls {
+	width:100%;
+}
+table.wz_urls th{
+	text-align:left;
+}
+table.wz_urls .owf_h {
+	width: 100%;
+	max-width: 400px;
+}
+
+table.admin_wizard_module {
+	width: 100%;
+}
+
+table.admin_wizard_module td.admin_wizard_module_td {
+	width: 50%;
+	min-width: 300px;
+	vertical-align: top;
+}
+
+.owf_h {
+	overflow: hidden;
+}

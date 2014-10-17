@@ -1,0 +1,4 @@
+	{controller _class=oauth2_config enabled=1 _assign=oauth2}
+	{foreach $oauth2 as $oa}
+		<a class="btn btn-small btn-primary" href="/oauth2/{$oa->class}?url={current_url()}">{$oa->title}</a> 
+	{/foreach}

@@ -1,0 +1,1466 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xml>
+  <recordset name="wz_modules">
+    <record>
+      <links>
+        <recordsets>
+          <recordset name="wz_recordsets">
+            <record>
+              <links>
+                <Fields>
+                  <recordset name="wz_recordset_fields">
+                    <record>
+                      <links/>
+                      <values>
+                        <name>name</name>
+                        <verbose_name>название</verbose_name>
+                        <helper_text/>
+                        <type>fString</type>
+                        <multilang>1</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value/>
+                        <make_index/>
+                        <required>1</required>
+                        <Recordset_id>51</Recordset_id>
+                        <_ctime>2011-11-03 14:30:20</_ctime>
+                        <_mtime>2012-02-27 13:43:52</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>type</name>
+                        <verbose_name>type</verbose_name>
+                        <helper_text/>
+                        <type>fString</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value/>
+                        <make_index/>
+                        <required>1</required>
+                        <Recordset_id>51</Recordset_id>
+                        <_ctime>2011-11-03 14:30:20</_ctime>
+                        <_mtime>2012-02-27 13:43:52</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>parameter1</name>
+                        <verbose_name>parameter1</verbose_name>
+                        <helper_text/>
+                        <type>fString</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value/>
+                        <make_index>0</make_index>
+                        <required>0</required>
+                        <Recordset_id>51</Recordset_id>
+                        <_ctime>2012-02-27 16:21:20</_ctime>
+                        <_mtime>2012-02-27 16:21:20</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>parameter2</name>
+                        <verbose_name>parameter2</verbose_name>
+                        <helper_text/>
+                        <type>fString</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value/>
+                        <make_index>0</make_index>
+                        <required>0</required>
+                        <Recordset_id>51</Recordset_id>
+                        <_ctime>2012-02-27 16:21:25</_ctime>
+                        <_mtime>2012-02-27 16:21:36</_mtime>
+                      </values>
+                    </record>
+                  </recordset>
+                </Fields>
+                <Resizes>
+                  <recordset name="wz_recordset_resizes"/>
+                </Resizes>
+                <Links>
+                  <recordset name="wz_recordset_links">
+                    <record>
+                      <links/>
+                      <values>
+                        <name>shipping_method</name>
+                        <verbose_name>shipping_method</verbose_name>
+                        <type>lMany2Many</type>
+                        <classname>shipping_method</classname>
+                        <linkname>shipping_method_payment_method</linkname>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <required>0</required>
+                        <fkey_on_delete>NONE</fkey_on_delete>
+                        <fkey_on_update>NONE</fkey_on_update>
+                        <fkey_name/>
+                        <Recordset_id>51</Recordset_id>
+                        <_ctime>2011-11-03 14:41:42</_ctime>
+                        <_mtime>2012-02-27 13:43:52</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>Currency</name>
+                        <verbose_name>Currency</verbose_name>
+                        <type>lOne2One</type>
+                        <classname>currency</classname>
+                        <linkname/>
+                        <options/>
+                        <extra_options/>
+                        <widget>parent_list</widget>
+                        <required>0</required>
+                        <fkey_on_delete>NONE</fkey_on_delete>
+                        <fkey_on_update>NONE</fkey_on_update>
+                        <fkey_name/>
+                        <Recordset_id>51</Recordset_id>
+                        <_ctime>2012-02-27 16:46:19</_ctime>
+                        <_mtime>2012-02-27 16:46:19</_mtime>
+                      </values>
+                    </record>
+                  </recordset>
+                </Links>
+                <Triggers>
+                  <recordset name="wz_recordset_triggers"/>
+                </Triggers>
+                <Submodules>
+                  <recordset name="wz_recordset_submodules"/>
+                </Submodules>
+              </links>
+              <values>
+                <name>payment_method</name>
+                <title>payment_method</title>
+                <extends/>
+                <Module_id>13</Module_id>
+                <_Fields_count>7</_Fields_count>
+                <_Resizes_count>2</_Resizes_count>
+                <_Links_count>7</_Links_count>
+                <_Triggers_count>0</_Triggers_count>
+                <_Submodules_count>7</_Submodules_count>
+                <showadmin>1</showadmin>
+                <no_urlkey>0</no_urlkey>
+                <no_ctime>0</no_ctime>
+                <install>1</install>
+                <orderby>id</orderby>
+                <id_field_name>id</id_field_name>
+                <_ctime>2011-11-03 14:30:20</_ctime>
+                <_mtime>2012-02-27 16:46:19</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Fields>
+                  <recordset name="wz_recordset_fields">
+                    <record>
+                      <links/>
+                      <values>
+                        <name>amount</name>
+                        <verbose_name>amount</verbose_name>
+                        <helper_text/>
+                        <type>fFloat</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value/>
+                        <make_index>0</make_index>
+                        <required>1</required>
+                        <Recordset_id>59</Recordset_id>
+                        <_ctime>2012-02-27 13:55:41</_ctime>
+                        <_mtime>2012-02-27 18:12:59</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>invoiceID</name>
+                        <verbose_name>invoiceID</verbose_name>
+                        <helper_text/>
+                        <type>fString</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value/>
+                        <make_index>0</make_index>
+                        <required>0</required>
+                        <Recordset_id>59</Recordset_id>
+                        <_ctime>2012-02-27 13:56:12</_ctime>
+                        <_mtime>2012-02-27 18:12:59</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>status_message</name>
+                        <verbose_name>message</verbose_name>
+                        <helper_text/>
+                        <type>fText</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value/>
+                        <make_index>0</make_index>
+                        <required>0</required>
+                        <Recordset_id>59</Recordset_id>
+                        <_ctime>2012-02-27 13:56:50</_ctime>
+                        <_mtime>2012-02-27 18:12:59</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>type</name>
+                        <verbose_name/>
+                        <helper_text/>
+                        <type>fSelect</type>
+                        <multilang>0</multilang>
+                        <options>sale,refund,chargeback</options>
+                        <extra_options/>
+                        <widget/>
+                        <default_value/>
+                        <make_index>0</make_index>
+                        <required>0</required>
+                        <Recordset_id>59</Recordset_id>
+                        <_ctime>2012-02-27 15:23:17</_ctime>
+                        <_mtime>2012-02-27 18:14:31</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>description</name>
+                        <verbose_name>description</verbose_name>
+                        <helper_text/>
+                        <type>fString</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value/>
+                        <make_index>0</make_index>
+                        <required>0</required>
+                        <Recordset_id>59</Recordset_id>
+                        <_ctime>2012-02-27 15:43:05</_ctime>
+                        <_mtime>2012-02-27 18:12:59</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>status</name>
+                        <verbose_name>status</verbose_name>
+                        <helper_text/>
+                        <type>fSelect</type>
+                        <multilang>0</multilang>
+                        <options>new,pending,approved,declined,fraud,error</options>
+                        <extra_options/>
+                        <widget>select</widget>
+                        <default_value>new</default_value>
+                        <make_index>1</make_index>
+                        <required>1</required>
+                        <Recordset_id>59</Recordset_id>
+                        <_ctime>2012-02-29 11:30:40</_ctime>
+                        <_mtime>2012-02-29 11:34:02</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>profits_created</name>
+                        <verbose_name/>
+                        <helper_text/>
+                        <type>fCheckbox</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value>0</default_value>
+                        <make_index>1</make_index>
+                        <required>1</required>
+                        <Recordset_id>59</Recordset_id>
+                        <_ctime>2012-02-29 12:58:28</_ctime>
+                        <_mtime>2012-02-29 12:58:28</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>profits_info</name>
+                        <verbose_name/>
+                        <helper_text/>
+                        <type>fText</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value/>
+                        <make_index>0</make_index>
+                        <required>0</required>
+                        <Recordset_id>59</Recordset_id>
+                        <_ctime>2012-03-01 16:27:08</_ctime>
+                        <_mtime>2012-03-01 16:27:08</_mtime>
+                      </values>
+                    </record>
+                  </recordset>
+                </Fields>
+                <Resizes>
+                  <recordset name="wz_recordset_resizes"/>
+                </Resizes>
+                <Links>
+                  <recordset name="wz_recordset_links">
+                    <record>
+                      <links/>
+                      <values>
+                        <name>Payment_method</name>
+                        <verbose_name/>
+                        <type>lOne2One</type>
+                        <classname>payment_method</classname>
+                        <linkname/>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <required>0</required>
+                        <fkey_on_delete>NONE</fkey_on_delete>
+                        <fkey_on_update>NONE</fkey_on_update>
+                        <fkey_name/>
+                        <Recordset_id>59</Recordset_id>
+                        <_ctime>2012-02-27 13:50:37</_ctime>
+                        <_mtime>2012-02-27 18:12:59</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>Order</name>
+                        <verbose_name>Order</verbose_name>
+                        <type>lOne2One</type>
+                        <classname>orders</classname>
+                        <linkname/>
+                        <options/>
+                        <extra_options/>
+                        <widget>input</widget>
+                        <required>0</required>
+                        <fkey_on_delete>NONE</fkey_on_delete>
+                        <fkey_on_update>NONE</fkey_on_update>
+                        <fkey_name/>
+                        <Recordset_id>59</Recordset_id>
+                        <_ctime>2012-02-27 13:50:58</_ctime>
+                        <_mtime>2012-02-27 18:29:31</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>Currency</name>
+                        <verbose_name/>
+                        <type>lOne2One</type>
+                        <classname>currency</classname>
+                        <linkname/>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <required>0</required>
+                        <fkey_on_delete>NONE</fkey_on_delete>
+                        <fkey_on_update>NONE</fkey_on_update>
+                        <fkey_name/>
+                        <Recordset_id>59</Recordset_id>
+                        <_ctime>2012-02-27 13:57:16</_ctime>
+                        <_mtime>2012-02-27 18:12:59</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>Profits</name>
+                        <verbose_name/>
+                        <type>lMany2One</type>
+                        <classname>profits</classname>
+                        <linkname>Payment</linkname>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <required>0</required>
+                        <fkey_on_delete>NONE</fkey_on_delete>
+                        <fkey_on_update>NONE</fkey_on_update>
+                        <fkey_name/>
+                        <Recordset_id>59</Recordset_id>
+                        <_ctime>2012-02-29 13:05:29</_ctime>
+                        <_mtime>2012-02-29 13:05:29</_mtime>
+                      </values>
+                    </record>
+                  </recordset>
+                </Links>
+                <Triggers>
+                  <recordset name="wz_recordset_triggers">
+                    <record>
+                      <links/>
+                      <values>
+                        <on_insert/>
+                        <on_update>before</on_update>
+                        <on_delete/>
+                        <code>$o_h=new payments_handler();&#13;
+$o_h-&gt;trigger_payment_changed($rec);&#13;
+ </code>
+                        <Recordset_id>59</Recordset_id>
+                        <_ctime>2012-02-29 16:52:57</_ctime>
+                        <_mtime>2012-03-01 09:54:06</_mtime>
+                      </values>
+                    </record>
+                  </recordset>
+                </Triggers>
+                <Submodules>
+                  <recordset name="wz_recordset_submodules"/>
+                </Submodules>
+              </links>
+              <values>
+                <name>payments</name>
+                <title>payments</title>
+                <extends/>
+                <Module_id>13</Module_id>
+                <_Fields_count>15</_Fields_count>
+                <_Resizes_count>15</_Resizes_count>
+                <_Links_count>15</_Links_count>
+                <_Triggers_count>2</_Triggers_count>
+                <_Submodules_count>15</_Submodules_count>
+                <showadmin>1</showadmin>
+                <no_urlkey>1</no_urlkey>
+                <no_ctime>0</no_ctime>
+                <install>1</install>
+                <orderby>id desc</orderby>
+                <id_field_name>id</id_field_name>
+                <_ctime>2012-02-27 13:50:01</_ctime>
+                <_mtime>2012-03-01 16:27:08</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Fields>
+                  <recordset name="wz_recordset_fields">
+                    <record>
+                      <links/>
+                      <values>
+                        <name>order_amount</name>
+                        <verbose_name/>
+                        <helper_text/>
+                        <type>fFloat</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value>0</default_value>
+                        <make_index>0</make_index>
+                        <required>0</required>
+                        <Recordset_id>64</Recordset_id>
+                        <_ctime>2012-02-29 13:03:18</_ctime>
+                        <_mtime>2012-02-29 13:03:18</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>amount</name>
+                        <verbose_name/>
+                        <helper_text/>
+                        <type>fFloat</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value>0</default_value>
+                        <make_index>0</make_index>
+                        <required>1</required>
+                        <Recordset_id>64</Recordset_id>
+                        <_ctime>2012-02-29 13:02:56</_ctime>
+                        <_mtime>2012-02-29 13:02:56</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>order_type</name>
+                        <verbose_name/>
+                        <helper_text/>
+                        <type>fString</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value/>
+                        <make_index>0</make_index>
+                        <required>1</required>
+                        <Recordset_id>64</Recordset_id>
+                        <_ctime>2012-02-29 13:03:30</_ctime>
+                        <_mtime>2012-02-29 13:03:30</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>payed</name>
+                        <verbose_name/>
+                        <helper_text/>
+                        <type>fCheckbox</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value>0</default_value>
+                        <make_index>0</make_index>
+                        <required>1</required>
+                        <Recordset_id>64</Recordset_id>
+                        <_ctime>2012-02-29 13:03:50</_ctime>
+                        <_mtime>2012-02-29 13:03:50</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>payed_date</name>
+                        <verbose_name/>
+                        <helper_text/>
+                        <type>fDateTime</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value/>
+                        <make_index>0</make_index>
+                        <required>0</required>
+                        <Recordset_id>64</Recordset_id>
+                        <_ctime>2012-02-29 13:04:05</_ctime>
+                        <_mtime>2012-02-29 13:04:05</_mtime>
+                      </values>
+                    </record>
+                  </recordset>
+                </Fields>
+                <Resizes>
+                  <recordset name="wz_recordset_resizes"/>
+                </Resizes>
+                <Links>
+                  <recordset name="wz_recordset_links">
+                    <record>
+                      <links/>
+                      <values>
+                        <name>Manager</name>
+                        <verbose_name/>
+                        <type>lOne2One</type>
+                        <classname>managers</classname>
+                        <linkname/>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <required>0</required>
+                        <fkey_on_delete>NONE</fkey_on_delete>
+                        <fkey_on_update>NONE</fkey_on_update>
+                        <fkey_name/>
+                        <Recordset_id>64</Recordset_id>
+                        <_ctime>2012-02-29 13:00:58</_ctime>
+                        <_mtime>2012-02-29 13:00:58</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>Order</name>
+                        <verbose_name/>
+                        <type>lOne2One</type>
+                        <classname>orders</classname>
+                        <linkname/>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <required>1</required>
+                        <fkey_on_delete>NONE</fkey_on_delete>
+                        <fkey_on_update>NONE</fkey_on_update>
+                        <fkey_name/>
+                        <Recordset_id>64</Recordset_id>
+                        <_ctime>2012-02-29 13:00:12</_ctime>
+                        <_mtime>2012-02-29 13:00:22</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>Payment</name>
+                        <verbose_name/>
+                        <type>lOne2One</type>
+                        <classname>payments</classname>
+                        <linkname/>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <required>1</required>
+                        <fkey_on_delete>NONE</fkey_on_delete>
+                        <fkey_on_update>NONE</fkey_on_update>
+                        <fkey_name/>
+                        <Recordset_id>64</Recordset_id>
+                        <_ctime>2012-02-29 12:59:55</_ctime>
+                        <_mtime>2012-02-29 13:00:28</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>Photograph</name>
+                        <verbose_name/>
+                        <type>lOne2One</type>
+                        <classname>photographers</classname>
+                        <linkname/>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <required>0</required>
+                        <fkey_on_delete>NONE</fkey_on_delete>
+                        <fkey_on_update>NONE</fkey_on_update>
+                        <fkey_name/>
+                        <Recordset_id>64</Recordset_id>
+                        <_ctime>2012-02-29 13:01:28</_ctime>
+                        <_mtime>2012-02-29 13:01:28</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>Place</name>
+                        <verbose_name/>
+                        <type>lOne2One</type>
+                        <classname>places</classname>
+                        <linkname/>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <required>0</required>
+                        <fkey_on_delete>NONE</fkey_on_delete>
+                        <fkey_on_update>NONE</fkey_on_update>
+                        <fkey_name/>
+                        <Recordset_id>64</Recordset_id>
+                        <_ctime>2012-02-29 13:02:26</_ctime>
+                        <_mtime>2012-02-29 13:02:26</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>Currency</name>
+                        <verbose_name/>
+                        <type>lOne2One</type>
+                        <classname>currency</classname>
+                        <linkname/>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <required>1</required>
+                        <fkey_on_delete>NONE</fkey_on_delete>
+                        <fkey_on_update>NONE</fkey_on_update>
+                        <fkey_name/>
+                        <Recordset_id>64</Recordset_id>
+                        <_ctime>2012-02-29 13:02:41</_ctime>
+                        <_mtime>2012-02-29 13:02:41</_mtime>
+                      </values>
+                    </record>
+                  </recordset>
+                </Links>
+                <Triggers>
+                  <recordset name="wz_recordset_triggers"/>
+                </Triggers>
+                <Submodules>
+                  <recordset name="wz_recordset_submodules"/>
+                </Submodules>
+              </links>
+              <values>
+                <name>profits</name>
+                <title>profits</title>
+                <extends/>
+                <Module_id>13</Module_id>
+                <_Fields_count>11</_Fields_count>
+                <_Resizes_count>11</_Resizes_count>
+                <_Links_count>11</_Links_count>
+                <_Triggers_count>0</_Triggers_count>
+                <_Submodules_count>11</_Submodules_count>
+                <showadmin>0</showadmin>
+                <no_urlkey>1</no_urlkey>
+                <no_ctime>0</no_ctime>
+                <install>1</install>
+                <orderby>id</orderby>
+                <id_field_name>id</id_field_name>
+                <_ctime>2012-02-29 12:59:01</_ctime>
+                <_mtime>2012-02-29 13:04:05</_mtime>
+              </values>
+            </record>
+          </recordset>
+        </recordsets>
+        <urls>
+          <recordset name="wz_urls">
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>1</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_value>gs_base_handler.show:name:adm_payment_method.html</handler_value>
+                        <Url_id>313</Url_id>
+                        <_ctime>2012-02-27 13:46:12</_ctime>
+                        <_mtime>2012-02-27 13:46:12</_mtime>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/admin/Payments/payment_method</gspgid_value>
+                <type>get</type>
+                <Module_id>13</Module_id>
+                <_Handlers_count>0</_Handlers_count>
+                <_ctime>2012-02-27 13:46:12</_ctime>
+                <_mtime>2012-02-27 13:46:12</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>1</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_value>gs_base_handler.delete:{classname:payment_method}</handler_value>
+                        <Url_id>314</Url_id>
+                        <_ctime>2012-02-27 13:46:12</_ctime>
+                        <_mtime>2012-02-27 13:46:12</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>2</cnt>
+                        <handler_keyname>1</handler_keyname>
+                        <handler_value>gs_base_handler.redirect</handler_value>
+                        <Url_id>314</Url_id>
+                        <_ctime>2012-02-27 13:46:12</_ctime>
+                        <_mtime>2012-02-27 13:46:12</_mtime>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/admin/Payments/payment_method/delete</gspgid_value>
+                <type>get</type>
+                <Module_id>13</Module_id>
+                <_Handlers_count>0</_Handlers_count>
+                <_ctime>2012-02-27 13:46:12</_ctime>
+                <_mtime>2012-02-27 13:46:12</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>1</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_value>gs_base_handler.copy:{classname:payment_method}</handler_value>
+                        <Url_id>315</Url_id>
+                        <_ctime>2012-02-27 13:46:12</_ctime>
+                        <_mtime>2012-02-27 13:46:12</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>2</cnt>
+                        <handler_keyname>1</handler_keyname>
+                        <handler_value>gs_base_handler.redirect</handler_value>
+                        <Url_id>315</Url_id>
+                        <_ctime>2012-02-27 13:46:12</_ctime>
+                        <_mtime>2012-02-27 13:46:12</_mtime>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/admin/Payments/payment_method/copy</gspgid_value>
+                <type>get</type>
+                <Module_id>13</Module_id>
+                <_Handlers_count>0</_Handlers_count>
+                <_ctime>2012-02-27 13:46:12</_ctime>
+                <_mtime>2012-02-27 13:46:12</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>3</cnt>
+                        <handler_keyname>2</handler_keyname>
+                        <handler_value>gs_base_handler.redirect_if:gl:save_continue:return:true</handler_value>
+                        <Url_id>316</Url_id>
+                        <_ctime>2012-02-27 13:46:12</_ctime>
+                        <_mtime>2012-02-27 13:46:12</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>1</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_value>gs_base_handler.redirect_if:gl:save_cancel:return:true</handler_value>
+                        <Url_id>316</Url_id>
+                        <_ctime>2012-02-27 13:46:12</_ctime>
+                        <_mtime>2012-02-27 13:46:12</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>2</cnt>
+                        <handler_keyname>1</handler_keyname>
+                        <handler_value>gs_base_handler.post:{name:admin_form.html:classname:payment_method:form_class:g_forms_table}</handler_value>
+                        <Url_id>316</Url_id>
+                        <_ctime>2012-02-27 13:46:12</_ctime>
+                        <_mtime>2012-02-27 13:46:12</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>4</cnt>
+                        <handler_keyname>3</handler_keyname>
+                        <handler_value>gs_base_handler.redirect_if:gl:save_return:return:true</handler_value>
+                        <Url_id>316</Url_id>
+                        <_ctime>2012-02-27 13:46:12</_ctime>
+                        <_mtime>2012-02-27 13:46:12</_mtime>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/admin/form/payment_method</gspgid_value>
+                <type>handler</type>
+                <Module_id>13</Module_id>
+                <_Handlers_count>0</_Handlers_count>
+                <_ctime>2012-02-27 13:46:12</_ctime>
+                <_mtime>2012-02-27 13:46:12</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>10</cnt>
+                        <handler_keyname>10</handler_keyname>
+                        <handler_value>gs_base_handler.show:name:pay.html</handler_value>
+                        <Url_id>307</Url_id>
+                        <_ctime>2012-02-27 13:34:53</_ctime>
+                        <_mtime>2012-02-27 13:34:53</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>5</cnt>
+                        <handler_keyname>5</handler_keyname>
+                        <handler_value>gs_base_handler.check_login:classname:Users:return:gs_record^e404</handler_value>
+                        <Url_id>307</Url_id>
+                        <_ctime>2012-02-27 13:34:53</_ctime>
+                        <_mtime>2012-02-27 13:34:53</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>20</cnt>
+                        <handler_keyname>end</handler_keyname>
+                        <handler_value>end</handler_value>
+                        <Url_id>307</Url_id>
+                        <_ctime>2012-02-27 13:34:53</_ctime>
+                        <_mtime>2012-02-27 13:34:53</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>100</cnt>
+                        <handler_keyname>e404</handler_keyname>
+                        <handler_value>gs_base_handler.redirect:href:/login</handler_value>
+                        <Url_id>307</Url_id>
+                        <_ctime>2012-02-27 13:34:53</_ctime>
+                        <_mtime>2012-02-27 13:34:53</_mtime>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/pay</gspgid_value>
+                <type>get</type>
+                <Module_id>13</Module_id>
+                <_Handlers_count>7</_Handlers_count>
+                <_ctime>2012-02-27 13:34:53</_ctime>
+                <_mtime>2012-02-27 13:34:53</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>10</cnt>
+                        <handler_keyname>10</handler_keyname>
+                        <handler_value>payments_handler.payment_completed:return:true&amp;approved^declined</handler_value>
+                        <Url_id>308</Url_id>
+                        <_ctime>2012-02-27 13:34:53</_ctime>
+                        <_mtime>2012-02-27 13:34:53</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>20</cnt>
+                        <handler_keyname>approved</handler_keyname>
+                        <handler_value>gs_base_handler.redirect_gl:gl:payment_approved</handler_value>
+                        <Url_id>308</Url_id>
+                        <_ctime>2012-02-27 13:34:53</_ctime>
+                        <_mtime>2012-02-27 17:52:02</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>30</cnt>
+                        <handler_keyname>end</handler_keyname>
+                        <handler_value>end</handler_value>
+                        <Url_id>308</Url_id>
+                        <_ctime>2012-02-27 13:34:53</_ctime>
+                        <_mtime>2012-02-27 13:34:53</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>40</cnt>
+                        <handler_keyname>declined</handler_keyname>
+                        <handler_value>gs_base_handler.redirect_gl:gl:payment_declined</handler_value>
+                        <Url_id>308</Url_id>
+                        <_ctime>2012-02-27 13:34:53</_ctime>
+                        <_mtime>2012-02-27 13:34:53</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>50</cnt>
+                        <handler_keyname>end</handler_keyname>
+                        <handler_value>end</handler_value>
+                        <Url_id>308</Url_id>
+                        <_ctime>2012-02-27 13:34:53</_ctime>
+                        <_mtime>2012-02-27 13:34:53</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>100</cnt>
+                        <handler_keyname>error</handler_keyname>
+                        <handler_value>gs_base_handler.redirect_gl:gl:payment_error</handler_value>
+                        <Url_id>308</Url_id>
+                        <_ctime>2012-02-27 13:34:53</_ctime>
+                        <_mtime>2012-02-27 13:34:53</_mtime>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>return</gspgid_value>
+                <type>get</type>
+                <Module_id>13</Module_id>
+                <_Handlers_count>15</_Handlers_count>
+                <_ctime>2012-02-27 13:34:53</_ctime>
+                <_mtime>2012-02-27 13:34:53</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>10</cnt>
+                        <handler_keyname/>
+                        <handler_value>gs_base_handler.show:name:payment_approved.html</handler_value>
+                        <Url_id>309</Url_id>
+                        <_ctime>2012-02-27 13:34:53</_ctime>
+                        <_mtime>2012-02-27 13:34:53</_mtime>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>approved</gspgid_value>
+                <type>get</type>
+                <Module_id>13</Module_id>
+                <_Handlers_count>2</_Handlers_count>
+                <_ctime>2012-02-27 13:34:53</_ctime>
+                <_mtime>2012-02-27 13:34:53</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>10</cnt>
+                        <handler_keyname>10</handler_keyname>
+                        <handler_value>gs_base_handler.show:name:payment_declined.html</handler_value>
+                        <Url_id>310</Url_id>
+                        <_ctime>2012-02-27 13:34:53</_ctime>
+                        <_mtime>2012-02-27 13:34:53</_mtime>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>declined</gspgid_value>
+                <type>get</type>
+                <Module_id>13</Module_id>
+                <_Handlers_count>3</_Handlers_count>
+                <_ctime>2012-02-27 13:34:53</_ctime>
+                <_mtime>2012-02-27 13:34:53</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>10</cnt>
+                        <handler_keyname>10</handler_keyname>
+                        <handler_value>gs_base_handler.show:name:payment_error.html</handler_value>
+                        <Url_id>311</Url_id>
+                        <_ctime>2012-02-27 13:34:53</_ctime>
+                        <_mtime>2012-02-27 13:34:53</_mtime>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>error</gspgid_value>
+                <type>get</type>
+                <Module_id>13</Module_id>
+                <_Handlers_count>1</_Handlers_count>
+                <_ctime>2012-02-27 13:34:53</_ctime>
+                <_mtime>2012-02-27 13:34:53</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>10</cnt>
+                        <handler_keyname/>
+                        <handler_value>payments_handler.start_payment</handler_value>
+                        <Url_id>312</Url_id>
+                        <_ctime>2012-02-27 13:39:12</_ctime>
+                        <_mtime>2012-02-27 13:39:12</_mtime>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>pay</gspgid_value>
+                <type>get</type>
+                <Module_id>13</Module_id>
+                <_Handlers_count>0</_Handlers_count>
+                <_ctime>2012-02-27 13:39:12</_ctime>
+                <_mtime>2012-02-27 13:39:12</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>1</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_value>gs_base_handler.show:name:adm_payments.html</handler_value>
+                        <Url_id>321</Url_id>
+                        <_ctime>2012-02-27 13:58:02</_ctime>
+                        <_mtime>2012-02-27 13:58:02</_mtime>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/admin/Payments/payments</gspgid_value>
+                <type>get</type>
+                <Module_id>13</Module_id>
+                <_Handlers_count>0</_Handlers_count>
+                <_ctime>2012-02-27 13:58:02</_ctime>
+                <_mtime>2012-02-27 13:58:02</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>1</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_value>gs_base_handler.delete:{classname:payments}</handler_value>
+                        <Url_id>322</Url_id>
+                        <_ctime>2012-02-27 13:58:02</_ctime>
+                        <_mtime>2012-02-27 13:58:02</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>2</cnt>
+                        <handler_keyname>1</handler_keyname>
+                        <handler_value>gs_base_handler.redirect</handler_value>
+                        <Url_id>322</Url_id>
+                        <_ctime>2012-02-27 13:58:02</_ctime>
+                        <_mtime>2012-02-27 13:58:02</_mtime>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/admin/Payments/payments/delete</gspgid_value>
+                <type>get</type>
+                <Module_id>13</Module_id>
+                <_Handlers_count>0</_Handlers_count>
+                <_ctime>2012-02-27 13:58:02</_ctime>
+                <_mtime>2012-02-27 13:58:02</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>1</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_value>gs_base_handler.copy:{classname:payments}</handler_value>
+                        <Url_id>323</Url_id>
+                        <_ctime>2012-02-27 13:58:02</_ctime>
+                        <_mtime>2012-02-27 13:58:02</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>2</cnt>
+                        <handler_keyname>1</handler_keyname>
+                        <handler_value>gs_base_handler.redirect</handler_value>
+                        <Url_id>323</Url_id>
+                        <_ctime>2012-02-27 13:58:02</_ctime>
+                        <_mtime>2012-02-27 13:58:02</_mtime>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/admin/Payments/payments/copy</gspgid_value>
+                <type>get</type>
+                <Module_id>13</Module_id>
+                <_Handlers_count>0</_Handlers_count>
+                <_ctime>2012-02-27 13:58:02</_ctime>
+                <_mtime>2012-02-27 13:58:02</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>1</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_value>gs_base_handler.redirect_if:gl:save_cancel:return:true</handler_value>
+                        <Url_id>324</Url_id>
+                        <_ctime>2012-02-27 13:58:02</_ctime>
+                        <_mtime>2012-02-27 13:58:02</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>2</cnt>
+                        <handler_keyname>1</handler_keyname>
+                        <handler_value>gs_base_handler.post:{name:admin_form.html:classname:payments:form_class:g_forms_table}</handler_value>
+                        <Url_id>324</Url_id>
+                        <_ctime>2012-02-27 13:58:02</_ctime>
+                        <_mtime>2012-02-27 13:58:02</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>3</cnt>
+                        <handler_keyname>2</handler_keyname>
+                        <handler_value>gs_base_handler.redirect_if:gl:save_continue:return:true</handler_value>
+                        <Url_id>324</Url_id>
+                        <_ctime>2012-02-27 13:58:02</_ctime>
+                        <_mtime>2012-02-27 13:58:02</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>4</cnt>
+                        <handler_keyname>3</handler_keyname>
+                        <handler_value>gs_base_handler.redirect_if:gl:save_return:return:true</handler_value>
+                        <Url_id>324</Url_id>
+                        <_ctime>2012-02-27 13:58:02</_ctime>
+                        <_mtime>2012-02-27 13:58:02</_mtime>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/admin/form/payments</gspgid_value>
+                <type>handler</type>
+                <Module_id>13</Module_id>
+                <_Handlers_count>0</_Handlers_count>
+                <_ctime>2012-02-27 13:58:02</_ctime>
+                <_mtime>2012-02-27 13:58:02</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>1</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_value>gs_base_handler.show:name:adm_payment_status.html</handler_value>
+                        <Url_id>333</Url_id>
+                        <_ctime>2012-02-29 11:06:23</_ctime>
+                        <_mtime>2012-02-29 11:06:23</_mtime>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/admin/Payments/payment_status</gspgid_value>
+                <type>get</type>
+                <Module_id>13</Module_id>
+                <_Handlers_count>0</_Handlers_count>
+                <_ctime>2012-02-29 11:06:23</_ctime>
+                <_mtime>2012-02-29 11:06:23</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>1</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_value>gs_base_handler.delete:{classname:payment_status}</handler_value>
+                        <Url_id>334</Url_id>
+                        <_ctime>2012-02-29 11:06:23</_ctime>
+                        <_mtime>2012-02-29 11:06:23</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>2</cnt>
+                        <handler_keyname>1</handler_keyname>
+                        <handler_value>gs_base_handler.redirect</handler_value>
+                        <Url_id>334</Url_id>
+                        <_ctime>2012-02-29 11:06:23</_ctime>
+                        <_mtime>2012-02-29 11:06:23</_mtime>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/admin/Payments/payment_status/delete</gspgid_value>
+                <type>get</type>
+                <Module_id>13</Module_id>
+                <_Handlers_count>0</_Handlers_count>
+                <_ctime>2012-02-29 11:06:23</_ctime>
+                <_mtime>2012-02-29 11:06:23</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>1</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_value>gs_base_handler.copy:{classname:payment_status}</handler_value>
+                        <Url_id>335</Url_id>
+                        <_ctime>2012-02-29 11:06:23</_ctime>
+                        <_mtime>2012-02-29 11:06:23</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>2</cnt>
+                        <handler_keyname>1</handler_keyname>
+                        <handler_value>gs_base_handler.redirect</handler_value>
+                        <Url_id>335</Url_id>
+                        <_ctime>2012-02-29 11:06:23</_ctime>
+                        <_mtime>2012-02-29 11:06:23</_mtime>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/admin/Payments/payment_status/copy</gspgid_value>
+                <type>get</type>
+                <Module_id>13</Module_id>
+                <_Handlers_count>0</_Handlers_count>
+                <_ctime>2012-02-29 11:06:23</_ctime>
+                <_mtime>2012-02-29 11:06:23</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>1</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_value>gs_base_handler.redirect_if:gl:save_cancel:return:true</handler_value>
+                        <Url_id>336</Url_id>
+                        <_ctime>2012-02-29 11:06:23</_ctime>
+                        <_mtime>2012-02-29 11:06:23</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>2</cnt>
+                        <handler_keyname>1</handler_keyname>
+                        <handler_value>gs_base_handler.post:{name:admin_form.html:classname:payment_status:form_class:g_forms_table}</handler_value>
+                        <Url_id>336</Url_id>
+                        <_ctime>2012-02-29 11:06:23</_ctime>
+                        <_mtime>2012-02-29 11:06:23</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>3</cnt>
+                        <handler_keyname>2</handler_keyname>
+                        <handler_value>gs_base_handler.redirect_if:gl:save_continue:return:true</handler_value>
+                        <Url_id>336</Url_id>
+                        <_ctime>2012-02-29 11:06:23</_ctime>
+                        <_mtime>2012-02-29 11:06:23</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>4</cnt>
+                        <handler_keyname>3</handler_keyname>
+                        <handler_value>gs_base_handler.redirect_if:gl:save_return:return:true</handler_value>
+                        <Url_id>336</Url_id>
+                        <_ctime>2012-02-29 11:06:23</_ctime>
+                        <_mtime>2012-02-29 11:06:23</_mtime>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/admin/form/payment_status</gspgid_value>
+                <type>handler</type>
+                <Module_id>13</Module_id>
+                <_Handlers_count>0</_Handlers_count>
+                <_ctime>2012-02-29 11:06:23</_ctime>
+                <_mtime>2012-02-29 11:06:23</_mtime>
+              </values>
+            </record>
+          </recordset>
+        </urls>
+        <forms>
+          <recordset name="wz_forms"/>
+        </forms>
+      </links>
+      <values>
+        <name>Payments</name>
+        <title>Payments</title>
+        <_recordsets_count>14</_recordsets_count>
+        <_urls_count>14</_urls_count>
+        <_forms_count>14</_forms_count>
+        <_ctime>2012-02-27 13:34:53</_ctime>
+        <_mtime>2012-02-29 12:59:01</_mtime>
+      </values>
+    </record>
+  </recordset>
+</xml>

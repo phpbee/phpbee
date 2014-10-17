@@ -1,0 +1,18 @@
+{$d_id=$popup_params.popup_id}
+
+<div id="{$d_id}" title="{$popup_params.popup_title|default:"\$popup_title \$popup_id:$d_id"}" style="display:none;" class="modal">
+<a href="" class="modal_close action_modal_close"></a>
+<div class="modal_header"><h3>{$popup_params.popup_title|default:"\$popup_title \$popup_id:$d_id"}</h3></div>
+{$popup_handler}
+</div>
+
+
+{if isset($_gsdata.gspgid_form) && $_gsdata.gspgid_form==$popup_params.gspgid}
+<script>
+$(function() {
+        modal_popup("#{$d_id}");
+
+});
+</script>
+{/if}    
+

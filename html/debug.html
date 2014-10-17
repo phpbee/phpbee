@@ -1,0 +1,58 @@
+{*
+<div id="debug">
+{foreach $gmessages as $class=>$method}
+{foreach $method as $m=>$debug}
+<div class="head toggle_head"><a href="">{$class}.{$m}</a></div>
+<div>	
+	<pre>
+	{foreach $debug as $d}
+		{$d}
+	{/foreach}
+	</pre>
+</div>
+{/foreach}
+{/foreach}
+</div>
+<script>
+$(document).ready(function() {
+	toggle("#debug");
+});
+</script>
+*}
+
+<div class="accordion small" id="accordion_debug_top">
+	<div class="accordion-group">
+		<div class="accordion-heading">
+			<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion_debug_top" href="#debug_top">DEBUG</a>
+		</div>
+		<div id="debug_top" class="accordion-body collapse">
+			<div class="accordion-inner">
+
+
+<div class="accordion" id="accordion_debug">
+{foreach $gmessages as $class=>$method}
+{foreach $method as $m=>$debug}
+	{$i=$i+1}
+	<div class="accordion-group">
+		<div class="accordion-heading">
+			<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion_debug" href="#debug_{$i}">{$class}.{$m}</a>
+		</div>
+		<div id="debug_{$i}" class="accordion-body collapse">
+			<div class="accordion-inner">
+				<pre>
+				{foreach $debug as $d}
+					{$d}
+				{/foreach}
+				</pre>
+			</div>
+		</div>
+	</div>
+{/foreach}
+{/foreach}
+</div>
+
+
+			</div>
+		</div>
+	</div>
+</div>

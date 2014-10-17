@@ -1,0 +1,12 @@
+<div class="btn-group">
+<a href="#" class="btn btn-mini dropdown-toggle" data-toggle="dropdown">
+{$prelabel} {$current} {$label}
+<span class="caret"></span> 
+</a>
+    <ul class="dropdown-menu">
+        {foreach from=$values item=item}
+        <li><a href="{href_get_push("`$keyname`=`$item`")}">{$item}</a></li>
+        {/foreach}
+    </ul>
+</div>
+

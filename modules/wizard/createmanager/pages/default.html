@@ -1,0 +1,110 @@
+{extends file="manager_page.html"}
+
+{block name="title"}
+	{%$rs.title%}
+{/block}
+
+{block name="main"}
+
+
+	<h4>{%$rs.title%}</h4>
+
+
+
+	{%foreach from=$filters item=f%}
+		{handler gspgid="/filter/" class="select_by_links" link="{%$rs.name%}.{%$f.name%}:id" name="{%$f.name%}" urltype=get }
+		{%$s_filters=$s_filters|cat:$f.name|cat:","%}
+	{%/foreach%}
+
+		{handler gspgid="/filter/" class="like" name="search" fields="{%$fields%}" urltype=get }
+		{handler gspgid="/filter/" class="calendar" name="calendar" fields="_ctime,_mtime,{%$datefields%}" urltype=get }
+		{handler gspgid="/filter/" class="sort" name="sort" fields="{%if $rs->sortkey%}sortkey,{%/if%}{%$fields%}" urltype=get }
+		{handler gspgid="/filter/" class="limit" name="limit" urltype=session values='20,50,100,500' default_value=20}
+		{handler gspgid="/filter/" class="offset"  name="offset" urltype=get limit='limit'}
+
+
+
+		{controller _class="{%$rs.name%}" _assign="{%$rs.name%}" _filters="search,calendar,sort,limit,offset,{%$s_filters%}" {%$manager_link%}}
+
+
+		{%if $rs->sortkey%}
+		{handler gspgid="/sortkey" sortkey_id="{%$rs->name%}" recordset_name="{%$rs->name%}"}
+		{%/if%}
+	<table {%if $rs->sortkey%}class="tb sortkey-table" sortkey_id="{%$rs->name%}"{%else%}class="tb"{%/if%}>
+	<thead>
+	<tr class="filters"><td colspan="100">
+	<table>
+	{%foreach from=$filters item=f%}
+		<tr><td>{%$f.verbose_name%}:</td><td>{handler gspgid="/filter/show" name="{%$f.name%}"  recordset=${%$rs.name%} tpl="links_line.html"  }</td></tr>
+	{%/foreach%}
+		<tr><td>Find:</td><td>
+			<form class="filterform" method="get">
+			<div class="links_inline">	
+			{handler gspgid="/filter/show" name="search"  recordset=${%$rs.name%} tpl="like.html"  }
+			</div>
+			<div class="links_inline">	
+			{handler gspgid="/filter/show" name="calendar"  recordset=${%$rs.name%} tpl="calendar.html" prelabel="date:"  }
+			</div>
+			<div class="links_inline">	
+			{handler gspgid="/filter/show" name="sort"  recordset=${%$rs.name%} tpl="sort.html" prelabel="sort by:"  }
+			</div>
+			<div class="links_inline">
+				<input type="submit" class="button" value="{'find'|gsdict}"></div>
+			</form>
+		</td></tr>
+	</table>
+	</td> </tr>
+	<tr class="pager"><td colspan="100">
+		{handler gspgid="/filter/show" name="offset" tpl="offset_pages.html" page_title='Page' page_prev='previous' page_next='next' page_between='from' pages_count=21 recordset=${%$rs.name%}}
+		{handler gspgid="/filter/show" name="limit" tpl="limit_select.html" prelabel='show by' label='records'}
+	</td></tr>
+	<tr><th>#</th>
+	{%foreach from=$fields item=f%}
+	<th>{field_name name="{%$f.verbose_name%}" type="{%$f.type%}" key="{%$f.name%}" id="{%$f.id%}"}</th>
+	{%/foreach%}
+	{%foreach from=$links item=f%}
+	<th>{%$f.verbose_name%}</th>
+	{%/foreach%}
+	{%foreach from=$extlinks item=f%}
+	<th>{%$f.verbose_name%}</th>
+	{%/foreach%}
+	<th></th>
+	<th></th>
+	<th></th>
+	</tr>
+	</thead>
+	
+	{foreach from=${%$rs.name%} item="e"}
+	<tr class="{cycle values='odd,even'}" record_id="{$e->get_id()}">
+			<td>{$e->get_id()}</td>
+			{%foreach from=$fields item=f%}
+			<td class="frm_{%$f.type%}">{field_formatter value=$e.{%$f.name%} type="{%$f.type%}"}</td>
+			{%/foreach%}
+			{%foreach from=$links item=f%}
+			<td>{$e.{%$f.name%}}</td>
+			{%/foreach%}
+			{%foreach from=$extlinks item=f%}
+			<td><a href="/{%$module%}/{%$prefix%}/{%$f.classname%}?{%$f->linkname%}={$e->get_id()}">{%$f.verbose_name%} ({$e._{%$f.name%}_count})</a></td>
+			{%/foreach%}
+			<td class="cnt"><a href="{gl rec_edit=$e}#form"><img src="/i/admin/ico_edit.png" alt="Edit" title="Edit"></a></td>
+			<td class="cnt"><a href="{gl rec_copy=$e}"><img src="/i/admin/ico_copy.png" alt="Copy" title="Copy"></a></td>
+			<td class="cnt"><a href="{gl rec_delete=$e}" onclick="return confirm('{'Delete record'|gsdict}?');"><img src="/i/admin/ico_delete.png" alt="Delete" title="Delete"></a></td>
+	</tr>
+	{/foreach}
+	<tr class="pager"><td colspan="100">
+	<a name="form"></a>
+		{handler gspgid="/filter/show" name="offset" tpl="offset_pages.html" page_title='Page' page_prev='previous' page_next='next' page_between='from' pages_count=21 recordset=${%$rs.name%}}
+		{handler gspgid="/filter/show" name="limit" tpl="limit_select.html" prelabel='show by' label='records'}
+	</td></tr>
+	</table>
+
+	<div>
+	{if $_gsdata.gspgid_va.0=='modify'}
+		{handler gspgid="/{%$module%}/{%$prefix%}/form/{%$rs.name%}/edit/`$_gsdata.gspgid_va.1`" {%$manager_link%}}
+	{else}
+		<a class="button" href="{gl rec_create=0}#form">{'Create'|gsdict}</a>
+	{/if}
+	</div>
+	
+
+{/block}

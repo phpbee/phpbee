@@ -1,0 +1,14 @@
+{extends file="index.html"}
+{block main}
+
+    {if $smarty.server.HTTP_X_FORWARDED_HOST && $smarty.server.HTTP_X_FORWARDED_HOST!=cfg('active_domain')}
+    <meta http-equiv="refresh" content="0; url=http://{cfg('active_domain')}{$smarty.server.REQUEST_URI}">
+    {/if}
+
+    {$pmnt=record_by_id($_gsdata.gspgid_va.0,'payments')}
+    {if $pmnt && $pmnt->Order->first()->Customer_id != $customer->get_id()}{$pmnt=null}{/if}
+
+    {block payment_info}
+    {/block}
+
+{/block}

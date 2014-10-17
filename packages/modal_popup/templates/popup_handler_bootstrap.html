@@ -1,0 +1,15 @@
+{$d_id=$popup_params.popup_id}
+
+<div class="modal fade" id="{$d_id}" tabindex="-1" role="dialog" aria-labelledby="{$d_id}">
+	<div class="modal-dialog {$popup_params.cssclass}">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button class="close" type="button" data-dismiss="modal" aria-hidden="true"></button>
+				<h4 class="modal-title"><b>{$popup_title}</b></h4>
+			</div>
+			<div class="modal-body">
+				{$popup_handler}
+			</div>
+		</div>
+	</div>
+</div>

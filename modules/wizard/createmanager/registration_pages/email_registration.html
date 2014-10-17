@@ -1,0 +1,16 @@
+Hello {$rec->fullName}!
+<p>
+Thank you for registration!
+</p>
+<p>
+Login: {$rec->login}<br>
+password: {$rec->password}<br>
+</p>
+<p>
+Verification link:<br><br>
+<a href="{$smarty.server.HTTP_HOST}/{%$module->name%}/verify_mail/{%$rs->name%}/{$rec->get_id()}a{$rec->get_id()|@md5}">http://{$smarty.server.HTTP_HOST}/{%$module->name%}/verify_mail/{%$rs->name%}/{$rec->get_id()}a{$rec->get_id()|@md5}</a><br><br>
+</p>
+
+<p>
+Thank you!
+</p>

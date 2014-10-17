@@ -1,0 +1,14 @@
+{extends file="admin_empty_page.html"}
+{block name="main"}
+<ul class="img">
+{controller _class=$_gsdata.gspgid_va.0 _params=$params _assign="list"}
+		
+		{foreach from=$list item="e"}
+		{assign var="img" value="`$_gsdata.gspgid_va.0`/`$e.id`"|@base64_encode}
+		<li><a href="/file/save/{$img}" onclick="$('.rte-panel #url',parent.window.document.body).get(0).value=this.href;return false;">{$e->File->first()->File_filename}</a></li>
+		{/foreach}
+		<div style="clear:both;"></div>
+</ul>
+<hr>
+{handler gspgid="/admin/form/`$_gsdata.gspgid_va.0`/edit/`$_gsdata.gspgid_va.5|default:''`" _params=$params form_class='form_table'}
+{/block}

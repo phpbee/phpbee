@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MultiPowUpload_parameters>
+  <param name="browseButton.text">ब्राउज़ करें ...</param>
+  <param name="browseButton.tooltip">अपलोड करने के लिए फ़ाइलें जोड़ें</param>
+  <param name="cancelButton.pauseText">ठहराव</param>
+  <param name="cancelButton.text">रद्द</param>
+  <param name="cancelButton.tooltip">रद्द मौजूदा अभियान</param>
+  <param name="clearButton.text">स्पष्ट</param>
+  <param name="clearButton.tooltip">सभी फ़ाइलों को हटाएँ</param>
+  <param name="constant.bytes">बाइट्स</param>
+  <param name="constant.decimalSeparator">,</param>
+  <param name="constant.gigaBytes">Gb</param>
+  <param name="constant.kiloBytes">केबी</param>
+  <param name="constant.megaBytes">एमबी</param>
+  <param name="contextMenu.sortByDate">तिथि के अनुसार छाँटें</param>
+  <param name="contextMenu.sortByName">नाम के आधार पर छाँटें</param>
+  <param name="contextMenu.sortBySize">आकार के आधार पर छाँटें</param>
+  <param name="descriptionWindow.caption">फ़ाइल के लिए विवरण</param>
+  <param name="descriptionWindow.fileNavigation.fileName.label">&lt;FILENAME&gt;</param>
+  <param name="descriptionWindow.fileNavigation.nextButton.label"></param>
+  <param name="descriptionWindow.fileNavigation.previousButton.label"></param>
+  <param name="exifWindow.caption">&lt;FILENAME&gt; EXIF डेटा</param>
+  <param name="exifWindow.list.nameHeader">नाम</param>
+  <param name="exifWindow.list.valueHeader">मूल्य</param>
+  <param name="fileInfoWindow.caption">फ़ाइल जानकारी</param>
+  <param name="fileInfoWindow.exifInfo">&lt;b&gt; Exif जानकारी &lt;/b&gt;: &lt;a&gt; को देखने के लिए क्लिक &lt;/a&gt;</param>
+  <param name="fileInfoWindow.fileDate">&lt;b&gt; दिनांक &lt;/b&gt;: &lt;FILEDATE&gt;</param>
+  <param name="fileInfoWindow.fileName">&lt;b&gt; नाम &lt;/b&gt;: &lt;FILENAME&gt;</param>
+  <param name="fileInfoWindow.fileSize">&lt;b&gt; आकार &lt;/b&gt;: &lt;FILESIZE&gt;</param>
+  <param name="fileInfoWindow.fileStatus">&lt;b&gt; की स्थिति &lt;/b&gt;: &lt;FILESTATUS&gt;</param>
+  <param name="fileInfoWindow.imageHeight">&lt;b&gt; छवि ऊंचाई &lt;/b&gt;: &lt;IMAGEHEIGHT&gt;</param>
+  <param name="fileInfoWindow.imageWidth">&lt;b&gt; छवि चौड़ाई &lt;/b&gt;: &lt;IMAGEWIDTH&gt;</param>
+  <param name="fileStatus.cancelled">रद्द</param>
+  <param name="fileStatus.complete">पूरा</param>
+  <param name="fileStatus.encodeImage">सांकेतिक शब्दों में बदलना छवि</param>
+  <param name="fileStatus.error">त्रुटि हुई</param>
+  <param name="fileStatus.loadFile">स्मृति में फाइल लोड</param>
+  <param name="fileStatus.loadImage">छवि डेटा लोड हो रहा है</param>
+  <param name="fileStatus.processing">अपलोड</param>
+  <param name="fileStatus.ready">अपलोड करने के लिए तैयार</param>
+  <param name="labelUpload.text">चयन फ़ाइलें अपलोड करने के लिए</param>
+  <param name="listView.description.defaultText">संपादित करने के लिए क्लिक करें ...</param>
+  <param name="listView.description.tooltip">विवरण फ़ाइल को संपादित करें</param>
+  <param name="listView.fileNameLabel.pattern">&lt;FILENAME&gt;</param>
+  <param name="listView.label.disabledFileInfoTooltip">आकार: &lt;FILESIZE&gt;
+दिनांक: &lt;FILEDATE&gt;
+स्थिति: &lt;FILESTATUS&gt;</param>
+  <param name="listView.label.tooltip">आकार: &lt;FILESIZE&gt;
+दिनांक: &lt;FILEDATE&gt;
+स्थिति: &lt;FILESTATUS&gt;</param>
+  <param name="listView.removeButton.tooltip">फ़ाइल हटाएँ</param>
+  <param name="listView.textInput.defaultString">टिप्पणी यहाँ फ़ाइल लिखें</param>
+  <param name="listViewButton.tooltip">सूची दृश्य</param>
+  <param name="loadingText">&lt;b&gt; शुरू कर रहा हैं: &lt;PERCENT&gt;% &lt;/b&gt;</param>
+  <param name="messages.disabledType">निम्नलिखित प्रकार के साथ फ़ाइल: &lt;FILETYPES&gt; को अपलोड करने की अनुमति नहीं है! &lt;COUNTINVALIDFILES&gt; फ़ाइलों की अनदेखी कर रहे थे!</param>
+  <param name="messages.filesCountExceeded">केवल &lt;MAXFILECOUNT&gt; को अपलोड करने की अनुमति दी फाइलें! &lt;COUNTINVALIDFILES&gt; फ़ाइलों की अनदेखी कर रहे थे!</param>
+  <param name="messages.filesCountNotEnough">अधिक फ़ाइलों का चयन करें. न्यूनतम फाइलें गिनती है &lt;MINFILECOUNT&gt;</param>
+  <param name="messages.httpError">&lt;center&gt; HTTP त्रुटि, '&lt;ERRORCODE&gt;' हुआ. &lt;DESCRIPTION&gt;&lt;br&gt; कृपया देखें &lt;font color='#0000FF'&gt; &lt;a title='Error description' target='_blank' href='&lt;W3WLINK&gt;'&gt; &lt;W3WLINK&gt; &lt;/a&gt; अधिक जानकारी के लिए &lt;/font&gt; त्रुटि कोड परिभाषा. &lt;/center&gt;</param>
+  <param name="messages.httpError.400">बुरा अनुरोध. सर्वर अनुरोध को समझ सकता हूँ! कृपया अपने सर्वर व्यवस्थापक से संपर्क करें.</param>
+  <param name="messages.httpError.401">अनधिकृत. प्रयोक्ता प्रमाणीकरण की आवश्यकता!</param>
+  <param name="messages.httpError.402">भुगतान आवश्यक. कोड सुरक्षित!</param>
+  <param name="messages.httpError.403">मना किया है. सर्वर अनुरोध को समझा है, लेकिन इसे पूरा इनकार!&lt;br&gt;अपेक सर्वरों के लिए: यह इसलिए होता है क्योंकि आप एक Apache सर्वर पर mod_security ब्लॉक जो शीर्ष लेख द्वारा Flash भेजा नाम मॉड्यूल सक्षम है.&lt;br&gt;एएसपी आईआईएस सर्वर के साथ के लिए: यह मुद्दा होता है यदि एक सामग्री, लंबाई हेडर मौजूद है और यदि सामग्री, लंबाई हेडर के डेटा का एक राशि है कि आईआईएस metabase में AspMaxRequestEntityAllowed संपत्ति के मूल्य से भी बड़ा है निर्दिष्ट करता है.&lt;br&gt;AspMaxRequestEntityAllowed संपत्ति के लिए डिफ़ॉल्ट मान 204800 बाइट्स है.</param>
+  <param name="messages.httpError.404">पृष्ठ नहीं मिला. खोज '&lt;URL&gt; सर्वर पृष्ठ पर नहीं कर सकते!</param>
+  <param name="messages.httpError.405">इस पृष्ठ &lt;URL&gt; के लिए पोस्ट विधि की अनुमति नहीं! सर्वर सेटिंग्स को बदलने के लिए स्क्रिप्ट प्राप्त करने के लिए पोस्ट विधि की अनुमति का प्रयास करें.</param>
+  <param name="messages.httpError.406">नहीं स्वीकार्य. इसका मतलब यह है कि सर्वर प्रतिक्रिया संस्थाओं जो सामग्री विशेषताओं के लिए अनुरोध में भेजा हेडर स्वीकार अनुसार स्वीकार्य नहीं है उत्पन्न नहीं कर सकते हैं. Flash को स्वीकार शीर्षक '/ * पाठ' है.</param>
+  <param name="messages.httpError.407">प्रॉक्सी प्रमाणीकरण आवश्यक है.</param>
+  <param name="messages.httpError.408">अनुरोध समयबाह्य.</param>
+  <param name="messages.httpError.409">संघर्ष.</param>
+  <param name="messages.httpError.410">चला गया है. अनुरोधित संसाधन नहीं रह सर्वर पर उपलब्ध है और कोई अग्रेषण पता जाना जाता है.</param>
+  <param name="messages.httpError.411">लंबाई आवश्यक.</param>
+  <param name="messages.httpError.412">पूर्व शर्त में असफल.</param>
+  <param name="messages.httpError.413">अनुरोध इकाई बहुत बड़ी है.&lt;br&gt;1: आईआईएस सर्वर के लिए. को UploadReadAheadSize metabase संपत्ति में वृद्धि की कोशिश करो.&lt;br&gt;2. करने के लिए आईआईएस में MaxRequestEntityAllowed संपत्ति मूल्य वृद्धि विन्यास की कोशिश करें.&lt;br&gt;अपेक सर्वरों के लिए: के लिए httpd.conf में LimitRequestBody पैरामीटर बढ़ाने की कोशिश करें.</param>
+  <param name="messages.httpError.414">अनुरोध-URI बहुत लंबा.</param>
+  <param name="messages.httpError.415">असमर्थित मीडिया प्रकार.</param>
+  <param name="messages.httpError.416">संतुष्टि योग्य नहीं है अनुरोधित रेंज.</param>
+  <param name="messages.httpError.417">उम्मीद असफल.</param>
+  <param name="messages.httpError.500">आंतरिक सर्वर त्रुटि. आमतौर पर इसका मतलब है कि प्राप्त स्क्रिप्ट त्रुटियाँ हैं.</param>
+  <param name="messages.httpError.501">लागू नहीं किया. सर्वर पोस्ट विधि का समर्थन नहीं करता.</param>
+  <param name="messages.httpError.502">खराब गेटवे.</param>
+  <param name="messages.httpError.503">503 अनुपलब्ध सेवा. सर्वर वर्तमान में एक अस्थायी ओवरलोडिंग या सर्वर के रखरखाव के कारण अनुरोध को संभालने में असमर्थ है.</param>
+  <param name="messages.httpError.504">मध्यांतर गेटवे.</param>
+  <param name="messages.httpError.505">समर्थित नहीं HTTP संस्करण. सर्वर एचटीटीपी 1.1 का समर्थन नहीं करता.</param>
+  <param name="messages.wrongFileType">निम्नलिखित प्रकार के साथ केवल फ़ाइलें: &lt;FILETYPES&gt; को अपलोड करने की अनुमति दी! &lt;COUNTINVALIDFILES&gt; फ़ाइलों की अनदेखी कर रहे थे!</param>
+  <param name="messages.zeroSize">शून्य के आकार के साथ &lt;COUNTINVALIDFILES&gt; फ़ाइलों की अनदेखी कर रहे थे!</param>
+  <param name="removeButton.tooltip">चयनित फ़ाइलों को हटाएँ</param>
+  <param name="retryDialog.caption">पुनःप्रयास अपलोड करना चाहिये?</param>
+  <param name="retryDialog.message">कुछ फ़ाइलों को अपलोड नहीं किया गया. क्या आप फिर से अपलोड करने की कोशिश करना चाहते हैं?</param>
+  <param name="retryDialog.noLabel">नहीं</param>
+  <param name="retryDialog.yesLabel">हां</param>
+  <param name="sortButton.text"></param>
+  <param name="sortButton.tooltip">क्रम में छंटनी</param>
+  <param name="sortMenu.byDate">दिनांक से</param>
+  <param name="sortMenu.byName">नाम से</param>
+  <param name="sortMenu.bySize">आकार से</param>
+  <param name="statusLabel.text.generateThumbnails">सृजन छवि थंबनेल ... कृपया प्रतीक्षा करें.</param>
+  <param name="statusLabel.text.loadFile "></param>
+  <param name="statusLabel.text.ready">फाइलों की गणना: &lt;FILESCOUNT&gt; () &lt;TOTALSIZE&gt;</param>
+  <param name="statusLabel.text.uploadCancelled">अगले फाइलें रद्द अपलोड करें. प्रतीक्षा करें ...</param>
+  <param name="statusLabel.text.uploadComplete">अपलोड पूरा! फ़ाइलें &lt;UPLOADEDFILESCOUNT&gt; ((1 / &lt;TOTALUPLOADSIZE&gt;)), बीतासमय: &lt;ELAPSEDHOUR&gt;: &lt;ELAPSEDMIN&gt;: &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.uploadProgress">कुल: &lt;PERCENT&gt;% (&lt;FILESNUM&gt; / &lt;FILESTOUPLOADCOUNT&gt;) &lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt; (&lt;RATEVALUE&gt; / सेक, समय छोड़ दिया: &lt;LEFTHOUR&gt;: &lt;LEFTMIN&gt;: &lt;LEFTSEC&gt;)</param>
+  <param name="statusLabel.text.uploadStart">अपलोड करने के ...</param>
+  <param name="statusLabel.text.uploadStopped">अपलोड बंद कर दिया. अपलोड बाइट्स: &lt;TOTALUPLOADEDSIZE&gt;, समय बीतासमय: &lt;ELAPSEDHOUR&gt; &lt;ELAPSEDMIN&gt;: &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.waitForConnection">जवाब नहीं सर्वर. जोड़ने की कोशिश कर रहा, कृपया प्रतीक्षा करें.</param>
+  <param name="thumbViewButton.tooltip">थंबनेल दृश्य</param>
+  <param name="thumbnail.watermark.text">तत्व आईटी</param>
+  <param name="thumbnailView.bottomPanel.labelPattern">&lt;FILENAME&gt;</param>
+  <param name="thumbnailView.cancelCropIcon.tooltip">पूर्ववत फसल छवि</param>
+  <param name="thumbnailView.contextMenu.CropLabel">फसल छवि</param>
+  <param name="thumbnailView.contextMenu.RemoveLabel">हटायें</param>
+  <param name="thumbnailView.contextMenu.RotateLeftLabel">बाएं घुमाएं</param>
+  <param name="thumbnailView.contextMenu.RotateRightLabel">बारी बारी से ठीक</param>
+  <param name="thumbnailView.contextMenu.UndoCropLabel">पूर्ववत फसल छवि</param>
+  <param name="thumbnailView.cropIcon.tooltip">फसल छवि</param>
+  <param name="thumbnailView.editIcon.tooltip">विवरण फ़ाइल को संपादित करें</param>
+  <param name="thumbnailView.infoIcon.disabledFileInfoTooltip">आकार: &lt;FILESIZE&gt;
+दिनांक: &lt;FILEDATE&gt;
+स्थिति: &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.infoIcon.tooltip">आकार: &lt;FILESIZE&gt;
+दिनांक: &lt;FILEDATE&gt;
+स्थिति: &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.removeIcon.tooltip">हटायें</param>
+  <param name="thumbnailView.rotateLeftIcon.tooltip">बाएं घुमाएं</param>
+  <param name="thumbnailView.rotateRightIcon.tooltip">बारी बारी से ठीक</param>
+  <param name="uploadButton.text">अपलोड</param>
+  <param name="uploadButton.tooltip">अपलोड शुरू करें</param>
+</MultiPowUpload_parameters>

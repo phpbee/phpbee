@@ -1,0 +1,18 @@
+<iframe class="modal_popup_iframe" style="width:100%;" onLoad="autoResize(this);" src="{href_get_push("parent_url={current_url()}",$popup_params.gspgid)}" scrolling="no" frameBorder="0">
+</iframe>
+
+<script language="JavaScript">
+<!--
+function autoResize(frame){
+var newheight;
+var newwidth;
+
+newheight=frame.contentWindow.document.body.scrollHeight;
+newwidth=frame.contentWindow.document.body.scrollWidth;
+
+frame.height= (newheight) + "px";
+frame.width= (newwidth) + "px";
+
+}
+//-->
+</script>

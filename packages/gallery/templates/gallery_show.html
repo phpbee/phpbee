@@ -1,0 +1,29 @@
+{extends file="index_small.html"}
+
+{block name="content"}
+<div class="top_menu_line"><a href="/gallery">Галерея</a></div>
+{controller _class="gallery_images" _assign=image id=$_gsdata.gspgid_va.1|replace:".html":"" _assign_type="plain"}
+<h1>{$image->Parent->first()->name}</h1>
+<img src="{$image->src('full')|reset}" class="gallery_full_img">
+<ul class="gallery_show_images">
+	{foreach from=$image->Parent->first()->Images item="i"}
+	<li><a href="{gl show=$i}">{$i->img('small')|reset}</a></li>
+	{/foreach}
+</ul>
+{/block}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

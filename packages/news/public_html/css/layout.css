@@ -1,0 +1,39 @@
+.date_pager {
+    border-top: 1px solid #CCCCCC;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 10px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+.date_pager .years, .date_pager .months {
+    display: block;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+.date_pager .years li, .date_pager .months li {
+    background: none repeat scroll 0 0 transparent;
+    display: block;
+    float: left;
+    font-size: 12px;
+    height: 20px;
+    margin: 0;
+    padding: 0 10px 0 0;
+}
+
+.date_pager .years {
+	clear:both;
+}
+
+.date_pager .years a {
+	font-size:18px;
+}
+
+.date_pager .years a.current, .date_pager .months a.current {
+    font-weight: bold;
+}
+.date_pager .years a.current {
+    font-size: 18px;
+    font-weight: bold;
+}

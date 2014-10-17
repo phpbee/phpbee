@@ -1,0 +1,637 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xml>
+  <recordset name="wz_modules">
+    <record>
+      <links>
+        <recordsets>
+          <recordset name="wz_recordsets">
+            <record>
+              <links>
+                <Fields>
+                  <recordset name="wz_recordset_fields">
+                    <record>
+                      <links/>
+                      <values>
+                        <name>title</name>
+                        <verbose_name>title</verbose_name>
+                        <helper_text/>
+                        <type>fString</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value/>
+                        <make_index>0</make_index>
+                        <required>0</required>
+                        <is_unique>0</is_unique>
+                        <Recordset_id>38</Recordset_id>
+                        <_ctime>2013-04-10 18:08:56</_ctime>
+                        <_mtime>2013-04-15 18:51:16</_mtime>
+                        <sortkey>89.5</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>event</name>
+                        <verbose_name>event</verbose_name>
+                        <helper_text/>
+                        <type>fString</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value/>
+                        <make_index>1</make_index>
+                        <required>0</required>
+                        <is_unique>0</is_unique>
+                        <Recordset_id>38</Recordset_id>
+                        <_ctime>2013-04-12 13:54:19</_ctime>
+                        <_mtime>2013-04-12 13:54:42</_mtime>
+                        <sortkey>90</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>role</name>
+                        <verbose_name>role</verbose_name>
+                        <helper_text/>
+                        <type>fString</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value/>
+                        <make_index>1</make_index>
+                        <required>0</required>
+                        <is_unique>0</is_unique>
+                        <Recordset_id>38</Recordset_id>
+                        <_ctime>2013-04-10 14:04:36</_ctime>
+                        <_mtime>2013-04-12 13:54:39</_mtime>
+                        <sortkey>91</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>class</name>
+                        <verbose_name>class</verbose_name>
+                        <helper_text/>
+                        <type>fString</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value/>
+                        <make_index>1</make_index>
+                        <required>0</required>
+                        <is_unique>0</is_unique>
+                        <Recordset_id>38</Recordset_id>
+                        <_ctime>2013-04-12 13:37:43</_ctime>
+                        <_mtime>2013-04-12 13:54:46</_mtime>
+                        <sortkey>92</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>active</name>
+                        <verbose_name>active</verbose_name>
+                        <helper_text/>
+                        <type>fCheckbox</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value>0</default_value>
+                        <make_index>1</make_index>
+                        <required>1</required>
+                        <is_unique>0</is_unique>
+                        <Recordset_id>38</Recordset_id>
+                        <_ctime>2013-04-10 18:08:35</_ctime>
+                        <_mtime>2013-04-10 18:08:35</_mtime>
+                        <sortkey>95</sortkey>
+                      </values>
+                    </record>
+                  </recordset>
+                </Fields>
+                <Resizes>
+                  <recordset name="wz_recordset_resizes"/>
+                </Resizes>
+                <Links>
+                  <recordset name="wz_recordset_links"/>
+                </Links>
+                <Triggers>
+                  <recordset name="wz_recordset_triggers"/>
+                </Triggers>
+                <Submodules>
+                  <recordset name="wz_recordset_submodules"/>
+                </Submodules>
+              </links>
+              <values>
+                <name>eventlogs_events</name>
+                <title>eventlogs_events</title>
+                <table_name/>
+                <database>0</database>
+                <extends/>
+                <Module_id>13</Module_id>
+                <_Fields_count>11</_Fields_count>
+                <_Resizes_count>9</_Resizes_count>
+                <_Links_count>9</_Links_count>
+                <_Triggers_count>9</_Triggers_count>
+                <_Submodules_count>9</_Submodules_count>
+                <showadmin>1</showadmin>
+                <no_urlkey>1</no_urlkey>
+                <no_ctime>0</no_ctime>
+                <use_sortkey>0</use_sortkey>
+                <install>1</install>
+                <orderby>id</orderby>
+                <id_field_name>id</id_field_name>
+                <_ctime>2013-04-10 14:01:32</_ctime>
+                <_mtime>2013-04-12 13:54:19</_mtime>
+                <sortkey>38</sortkey>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Fields>
+                  <recordset name="wz_recordset_fields">
+                    <record>
+                      <links/>
+                      <values>
+                        <name>event</name>
+                        <verbose_name>event</verbose_name>
+                        <helper_text/>
+                        <type>fString</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value/>
+                        <make_index>1</make_index>
+                        <required>0</required>
+                        <is_unique>0</is_unique>
+                        <Recordset_id>39</Recordset_id>
+                        <_ctime>2013-04-12 15:24:28</_ctime>
+                        <_mtime>2013-04-12 15:27:04</_mtime>
+                        <sortkey>100</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>role</name>
+                        <verbose_name>role</verbose_name>
+                        <helper_text/>
+                        <type>fString</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value/>
+                        <make_index>1</make_index>
+                        <required>0</required>
+                        <is_unique>0</is_unique>
+                        <Recordset_id>39</Recordset_id>
+                        <_ctime>2013-04-12 15:24:55</_ctime>
+                        <_mtime>2013-04-12 15:24:55</_mtime>
+                        <sortkey>101</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>person_id</name>
+                        <verbose_name/>
+                        <helper_text/>
+                        <type>fInt</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value/>
+                        <make_index>1</make_index>
+                        <required>0</required>
+                        <is_unique>0</is_unique>
+                        <Recordset_id>39</Recordset_id>
+                        <_ctime>2013-04-12 15:25:12</_ctime>
+                        <_mtime>2013-04-12 15:25:12</_mtime>
+                        <sortkey>102</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>class</name>
+                        <verbose_name/>
+                        <helper_text/>
+                        <type>fString</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value/>
+                        <make_index>1</make_index>
+                        <required>0</required>
+                        <is_unique>0</is_unique>
+                        <Recordset_id>39</Recordset_id>
+                        <_ctime>2013-04-12 15:26:10</_ctime>
+                        <_mtime>2013-04-12 15:26:10</_mtime>
+                        <sortkey>103</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>record_id</name>
+                        <verbose_name/>
+                        <helper_text/>
+                        <type>fInt</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value/>
+                        <make_index>1</make_index>
+                        <required>0</required>
+                        <is_unique>0</is_unique>
+                        <Recordset_id>39</Recordset_id>
+                        <_ctime>2013-04-12 15:26:27</_ctime>
+                        <_mtime>2013-04-12 15:26:27</_mtime>
+                        <sortkey>104</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>url</name>
+                        <verbose_name/>
+                        <helper_text/>
+                        <type>fString</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value/>
+                        <make_index>1</make_index>
+                        <required>0</required>
+                        <is_unique>0</is_unique>
+                        <Recordset_id>39</Recordset_id>
+                        <_ctime>2013-04-12 15:26:40</_ctime>
+                        <_mtime>2013-04-12 15:26:40</_mtime>
+                        <sortkey>105</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>info</name>
+                        <verbose_name/>
+                        <helper_text/>
+                        <type>fText</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value/>
+                        <make_index>0</make_index>
+                        <required>0</required>
+                        <is_unique>0</is_unique>
+                        <Recordset_id>39</Recordset_id>
+                        <_ctime>2013-04-12 15:27:36</_ctime>
+                        <_mtime>2013-04-15 18:47:28</_mtime>
+                        <sortkey>106</sortkey>
+                      </values>
+                    </record>
+                  </recordset>
+                </Fields>
+                <Resizes>
+                  <recordset name="wz_recordset_resizes"/>
+                </Resizes>
+                <Links>
+                  <recordset name="wz_recordset_links">
+                    <record>
+                      <links/>
+                      <values>
+                        <name>Config</name>
+                        <verbose_name>Config</verbose_name>
+                        <type>lOne2One</type>
+                        <classname>eventlogs_events</classname>
+                        <linkname/>
+                        <options/>
+                        <extra_options/>
+                        <widget>parent_list</widget>
+                        <required>0</required>
+                        <fkey_on_delete>SET_NULL</fkey_on_delete>
+                        <fkey_on_update>SET_NULL</fkey_on_update>
+                        <fkey_name/>
+                        <Recordset_id>39</Recordset_id>
+                        <_ctime>2013-04-15 18:46:46</_ctime>
+                        <_mtime>2013-04-15 18:46:46</_mtime>
+                      </values>
+                    </record>
+                  </recordset>
+                </Links>
+                <Triggers>
+                  <recordset name="wz_recordset_triggers"/>
+                </Triggers>
+                <Submodules>
+                  <recordset name="wz_recordset_submodules"/>
+                </Submodules>
+              </links>
+              <values>
+                <name>eventlogs</name>
+                <title>eventlogs</title>
+                <table_name/>
+                <database>0</database>
+                <extends/>
+                <Module_id>13</Module_id>
+                <_Fields_count>8</_Fields_count>
+                <_Resizes_count>8</_Resizes_count>
+                <_Links_count>8</_Links_count>
+                <_Triggers_count>8</_Triggers_count>
+                <_Submodules_count>8</_Submodules_count>
+                <showadmin>0</showadmin>
+                <no_urlkey>1</no_urlkey>
+                <no_ctime>0</no_ctime>
+                <use_sortkey>0</use_sortkey>
+                <install>1</install>
+                <orderby>id</orderby>
+                <id_field_name>id</id_field_name>
+                <_ctime>2013-04-12 15:23:57</_ctime>
+                <_mtime>2013-04-15 18:46:46</_mtime>
+                <sortkey>39</sortkey>
+              </values>
+            </record>
+          </recordset>
+        </recordsets>
+        <urls>
+          <recordset name="wz_urls">
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>1</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.show:name:adm_eventlogs_events.html</handler_value>
+                        <Url_id>185</Url_id>
+                        <_ctime>2013-04-12 12:38:14</_ctime>
+                        <_mtime>2013-04-12 12:38:14</_mtime>
+                        <sortkey>449</sortkey>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/admin/eventlogs/eventlogs_events</gspgid_value>
+                <type>get</type>
+                <Module_id>13</Module_id>
+                <_Handlers_count>0</_Handlers_count>
+                <_ctime>2013-04-12 12:38:14</_ctime>
+                <_mtime>2013-04-12 12:38:14</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>1</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.delete:{classname:eventlogs_events}</handler_value>
+                        <Url_id>186</Url_id>
+                        <_ctime>2013-04-12 12:38:14</_ctime>
+                        <_mtime>2013-04-12 12:38:14</_mtime>
+                        <sortkey>450</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>2</cnt>
+                        <handler_keyname>1</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect</handler_value>
+                        <Url_id>186</Url_id>
+                        <_ctime>2013-04-12 12:38:14</_ctime>
+                        <_mtime>2013-04-12 12:38:14</_mtime>
+                        <sortkey>451</sortkey>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/admin/eventlogs/eventlogs_events/delete</gspgid_value>
+                <type>get</type>
+                <Module_id>13</Module_id>
+                <_Handlers_count>0</_Handlers_count>
+                <_ctime>2013-04-12 12:38:14</_ctime>
+                <_mtime>2013-04-12 12:38:14</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>1</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.copy:{classname:eventlogs_events}</handler_value>
+                        <Url_id>187</Url_id>
+                        <_ctime>2013-04-12 12:38:14</_ctime>
+                        <_mtime>2013-04-12 12:38:14</_mtime>
+                        <sortkey>452</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>2</cnt>
+                        <handler_keyname>1</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect</handler_value>
+                        <Url_id>187</Url_id>
+                        <_ctime>2013-04-12 12:38:14</_ctime>
+                        <_mtime>2013-04-12 12:38:14</_mtime>
+                        <sortkey>453</sortkey>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/admin/eventlogs/eventlogs_events/copy</gspgid_value>
+                <type>get</type>
+                <Module_id>13</Module_id>
+                <_Handlers_count>0</_Handlers_count>
+                <_ctime>2013-04-12 12:38:14</_ctime>
+                <_mtime>2013-04-12 12:38:14</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>1</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect_if:gl:save_cancel:return:true</handler_value>
+                        <Url_id>188</Url_id>
+                        <_ctime>2013-04-12 12:38:14</_ctime>
+                        <_mtime>2013-04-12 12:38:14</_mtime>
+                        <sortkey>454</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>2</cnt>
+                        <handler_keyname>1</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.post:{name:admin_form.html:classname:eventlogs_events:form_class:g_forms_table}</handler_value>
+                        <Url_id>188</Url_id>
+                        <_ctime>2013-04-12 12:38:14</_ctime>
+                        <_mtime>2013-04-12 12:38:14</_mtime>
+                        <sortkey>455</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>3</cnt>
+                        <handler_keyname>2</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect_if:gl:save_continue:return:true</handler_value>
+                        <Url_id>188</Url_id>
+                        <_ctime>2013-04-12 12:38:14</_ctime>
+                        <_mtime>2013-04-12 12:38:14</_mtime>
+                        <sortkey>456</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>4</cnt>
+                        <handler_keyname>3</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect_if:gl:save_return:return:true</handler_value>
+                        <Url_id>188</Url_id>
+                        <_ctime>2013-04-12 12:38:14</_ctime>
+                        <_mtime>2013-04-12 12:38:14</_mtime>
+                        <sortkey>457</sortkey>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/admin/form/eventlogs_events</gspgid_value>
+                <type>handler</type>
+                <Module_id>13</Module_id>
+                <_Handlers_count>0</_Handlers_count>
+                <_ctime>2013-04-12 12:38:14</_ctime>
+                <_mtime>2013-04-12 12:38:14</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>1</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect_if:gl:save_cancel:return:true</handler_value>
+                        <Url_id>189</Url_id>
+                        <_ctime>2013-04-12 12:38:14</_ctime>
+                        <_mtime>2013-04-12 12:38:14</_mtime>
+                        <sortkey>458</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>2</cnt>
+                        <handler_keyname>1</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.post:{name:inline_form.html:classname:eventlogs_events}</handler_value>
+                        <Url_id>189</Url_id>
+                        <_ctime>2013-04-12 12:38:14</_ctime>
+                        <_mtime>2013-04-12 12:38:14</_mtime>
+                        <sortkey>459</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>3</cnt>
+                        <handler_keyname>2</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect_if:gl:save_continue:return:true</handler_value>
+                        <Url_id>189</Url_id>
+                        <_ctime>2013-04-12 12:38:14</_ctime>
+                        <_mtime>2013-04-12 12:38:14</_mtime>
+                        <sortkey>460</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>4</cnt>
+                        <handler_keyname>3</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect_if:gl:save_return:return:true</handler_value>
+                        <Url_id>189</Url_id>
+                        <_ctime>2013-04-12 12:38:14</_ctime>
+                        <_mtime>2013-04-12 12:38:14</_mtime>
+                        <sortkey>461</sortkey>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/admin/inline_form/eventlogs_events</gspgid_value>
+                <type>handler</type>
+                <Module_id>13</Module_id>
+                <_Handlers_count>0</_Handlers_count>
+                <_ctime>2013-04-12 12:38:14</_ctime>
+                <_mtime>2013-04-12 12:38:14</_mtime>
+              </values>
+            </record>
+          </recordset>
+        </urls>
+        <forms>
+          <recordset name="wz_forms"/>
+        </forms>
+      </links>
+      <values>
+        <name>eventlogs</name>
+        <title>eventlogs</title>
+        <_recordsets_count>2</_recordsets_count>
+        <_urls_count>2</_urls_count>
+        <_forms_count>2</_forms_count>
+        <_ctime>2013-04-10 14:01:13</_ctime>
+        <_mtime>2013-04-12 15:23:57</_mtime>
+      </values>
+    </record>
+  </recordset>
+</xml>

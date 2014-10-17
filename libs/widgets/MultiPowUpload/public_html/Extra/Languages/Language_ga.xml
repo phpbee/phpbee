@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MultiPowUpload_parameters>
+  <param name="browseButton.text">Brabhsáil ...</param>
+  <param name="browseButton.tooltip">Cuir d'uaslódáil comhad</param>
+  <param name="cancelButton.pauseText">Sos</param>
+  <param name="cancelButton.text">Cealaigh</param>
+  <param name="cancelButton.tooltip">Cealaigh oibríocht reatha</param>
+  <param name="clearButton.text">Glan</param>
+  <param name="clearButton.tooltip">Bain gach comhad</param>
+  <param name="constant.bytes">bytes</param>
+  <param name="constant.decimalSeparator">,</param>
+  <param name="constant.gigaBytes">GB</param>
+  <param name="constant.kiloBytes">Kb</param>
+  <param name="constant.megaBytes">Mb</param>
+  <param name="contextMenu.sortByDate">Sórtáil de réir dáta</param>
+  <param name="contextMenu.sortByName">Sórtáil de réir ainm</param>
+  <param name="contextMenu.sortBySize">Sórtáil de réir méid</param>
+  <param name="descriptionWindow.caption">Cur síos ar do chomhad</param>
+  <param name="descriptionWindow.fileNavigation.fileName.label">&lt;FILENAME&gt;</param>
+  <param name="descriptionWindow.fileNavigation.nextButton.label"></param>
+  <param name="descriptionWindow.fileNavigation.previousButton.label"></param>
+  <param name="exifWindow.caption">&lt;FILENAME&gt; EXIF sonraí</param>
+  <param name="exifWindow.list.nameHeader">Ainm</param>
+  <param name="exifWindow.list.valueHeader">Luach</param>
+  <param name="fileInfoWindow.caption">Comhad faisnéise</param>
+  <param name="fileInfoWindow.exifInfo">&lt;b&gt; info Exif &lt;/b&gt;: &lt;a&gt; Cliceáil chun amharc &lt;/a&gt;</param>
+  <param name="fileInfoWindow.fileDate">&lt;b&gt; Dáta &lt;/b&gt;: &lt;FILEDATE&gt;</param>
+  <param name="fileInfoWindow.fileName">&lt;b&gt; Ainm &lt;/b&gt;: &lt;FILENAME&gt;</param>
+  <param name="fileInfoWindow.fileSize">&lt;b&gt; Méid &lt;/b&gt;: &lt;FILESIZE&gt;</param>
+  <param name="fileInfoWindow.fileStatus">&lt;b&gt; Stádas &lt;/b&gt;: &lt;FILESTATUS&gt;</param>
+  <param name="fileInfoWindow.imageHeight">&lt;b&gt; Íomhá airde &lt;/b&gt;: &lt;IMAGEHEIGHT&gt;</param>
+  <param name="fileInfoWindow.imageWidth">&lt;b&gt; Íomhá leithead &lt;/b&gt;: &lt;IMAGEWIDTH&gt;</param>
+  <param name="fileStatus.cancelled">Ceal</param>
+  <param name="fileStatus.complete">Críochnaithe</param>
+  <param name="fileStatus.encodeImage">Ionchódaigh íomhá</param>
+  <param name="fileStatus.error">Tharla earráid</param>
+  <param name="fileStatus.loadFile">Lódáil comhad i gcuimhne</param>
+  <param name="fileStatus.loadImage">Loading sonraí íomhá</param>
+  <param name="fileStatus.processing">Uasluchtú</param>
+  <param name="fileStatus.ready">Ready for upload</param>
+  <param name="labelUpload.text">Roghnaigh Comhaid a uaslódáil</param>
+  <param name="listView.description.defaultText">Cliceáil a chur in eagar ...</param>
+  <param name="listView.description.tooltip">Cuir síos comhad</param>
+  <param name="listView.fileNameLabel.pattern">&lt;FILENAME&gt;</param>
+  <param name="listView.label.disabledFileInfoTooltip">Méid: &lt;FILESIZE&gt;
+Dáta: &lt;FILEDATE&gt;
+Stádas: &lt;FILESTATUS&gt;</param>
+  <param name="listView.label.tooltip">Méid: &lt;FILESIZE&gt;
+Dáta: &lt;FILEDATE&gt;
+Stádas: &lt;FILESTATUS&gt;</param>
+  <param name="listView.removeButton.tooltip">Bain comhad</param>
+  <param name="listView.textInput.defaultString">Scríobh comhad a comment here</param>
+  <param name="listViewButton.tooltip">Liosta d'fhonn</param>
+  <param name="loadingText">&lt;b&gt; initializing: &lt;PERCENT&gt;% &lt;/b&gt;</param>
+  <param name="messages.disabledType">Comhad le cineálacha seo a leanas: nach &lt;FILETYPES&gt; Tá cead a uaslódáil! Tugadh neamhaird &lt;COUNTINVALIDFILES&gt; comhaid!</param>
+  <param name="messages.filesCountExceeded">Amháin &lt;MAXFILECOUNT&gt; comhaid a cheadaítear a uaslódáil! Tugadh neamhaird &lt;COUNTINVALIDFILES&gt; comhaid!</param>
+  <param name="messages.filesCountNotEnough">Roghnaigh comhad níos mó. Tá comhaid Íosta count &lt;MINFILECOUNT&gt;</param>
+  <param name="messages.httpError">&lt;center&gt; HTTP Earráid, '&lt;ERRORCODE&gt;' tharla. &lt;DESCRIPTION&gt;&lt;br&gt; Féach le do thoil &lt;font color='#0000FF'&gt; &lt;a title='Error description' target='_blank' href='&lt;W3WLINK&gt;'&gt; &lt;W3WLINK&gt; &lt;/a&gt; &lt;/font&gt; sainmhínithe Cód Earráid haghaidh tuilleadh eolais. &lt;/center&gt;</param>
+  <param name="messages.httpError.400">Iarratas Bad. Ní féidir a thuiscint Freastalaí iarraidh! Déan teagmháil le do riarthóir fhreastalaí.</param>
+  <param name="messages.httpError.401">Neamhúdaraithe. Úsáideoir fíordheimhnithe de dhíth!</param>
+  <param name="messages.httpError.402">Íocaíocht Riachtanach. Cód Reserved!</param>
+  <param name="messages.httpError.403">Forbidden. Thuig an freastalaí an t-iarratas, ach tá ag diúltú a chomhlíonadh é!&lt;br&gt;Do freastalaithe Apache: Tarlaíonn sé seo toisc go bhfuil tú ar chumas an modúl Apache mod_security ainmnithe ar an bhfreastalaí a bloic chuir an ceanntásc ag Flash.&lt;br&gt;Do Neachtain le freastalaithe asp: Tarlaíonn an cheist seo más rud é go header Content-Fad faoi láthair agus má shonraíonn an header Content-Fad méid na sonraí go bhfuil níos mó ná an luach na maoine AspMaxRequestEntityAllowed sa metabase Neachtain.&lt;br&gt;Is é an luach réamhshocraithe do na maoine AspMaxRequestEntityAllowed 204,800 bytes.</param>
+  <param name="messages.httpError.404">Ní bhfuarthas an leathanach. Ní féidir teacht ar '&lt;URL&gt;' leathanach ar an bhfreastalaí!</param>
+  <param name="messages.httpError.405">Post modh Ní cheadaítear don leathanach seo &lt;URL&gt;! Déan iarracht a athrú socruithe freastalaí a cheadú modh an bpost chun glactha script.</param>
+  <param name="messages.httpError.406">Níl sé inghlactha. Ciallaíonn sé seo nach féidir a ghiniúint aonáin freastalaí freagartha a saintréithe ábhar nach bhfuil inghlactha i gcomhréir leis an glacadh ceanntásca sheoladh san iarraidh. Flash glacadh header é 'text / *'.</param>
+  <param name="messages.httpError.407">Fíordheimhniú Seachfhreastalaí Riachtanach.</param>
+  <param name="messages.httpError.408">Teorainn ama Iarratas.</param>
+  <param name="messages.httpError.409">Coimhlint.</param>
+  <param name="messages.httpError.410">Imithe. Tá an acmhainn d'iarr tú ar fáil a thuilleadh ar an bhfreastalaí, agus níl aon seoladh ar aghaidh ar eolas.</param>
+  <param name="messages.httpError.411">Fad Riachtanach.</param>
+  <param name="messages.httpError.412">Theip réamhchoinníoll.</param>
+  <param name="messages.httpError.413">Aonán Iarratas Too Large.&lt;br&gt;Do freastalaithe Neachtain: 1. Bain triail as maoin a mhéadú metabase UploadReadAheadSize.&lt;br&gt;2. Bain triail as a mhéadú ar luach maoine MaxRequestEntityAllowed in IIS cumraíochta.&lt;br&gt;Do freastalaithe Apache: Déan iarracht a mhéadú LimitRequestBody paraiméadar i httpd.conf.</param>
+  <param name="messages.httpError.414">Iarratas-URI Too Long.</param>
+  <param name="messages.httpError.415">Cineál gan tacaíocht Meáin.</param>
+  <param name="messages.httpError.416">Raon Iarrtha Gan Satisfiable.</param>
+  <param name="messages.httpError.417">Theip ar súil.</param>
+  <param name="messages.httpError.500">Earráid inmheánach Server. De ghnáth, ciallaíonn sé go bhfuil earráidí script fháil.</param>
+  <param name="messages.httpError.501">Gan a chur chun feidhme. Ní Freastalaí tacaíocht POST modh.</param>
+  <param name="messages.httpError.502">Geata Bad.</param>
+  <param name="messages.httpError.503">503 Seirbhíse Fáil. Is é an freastalaí faoi láthair in ann déileáil leis an iarratas mar gheall ar ró-ualú go sealadach nó a choinneáil ar an fhreastalaí.</param>
+  <param name="messages.httpError.504">Teorainn ama Geata.</param>
+  <param name="messages.httpError.505">Leagan HTTP Gan Tacaithe. Ní Freastalaí tacaíocht HTTP 1.1.</param>
+  <param name="messages.wrongFileType">Ach le cineál comhaid seo a leanas: &lt;FILETYPES&gt; cead a uaslódáil! Tugadh neamhaird &lt;COUNTINVALIDFILES&gt; comhaid!</param>
+  <param name="messages.zeroSize">Tugadh neamhaird &lt;COUNTINVALIDFILES&gt; Comhaid le nialas méid!</param>
+  <param name="removeButton.tooltip">Bain comhaid roghnaithe</param>
+  <param name="retryDialog.caption">Atriail upload?</param>
+  <param name="retryDialog.message">Ní raibh roinnt de na comhaid uaslódáilte. Ar mhaith leat chun iarracht a uaslódáil arís?</param>
+  <param name="retryDialog.noLabel">Uimh</param>
+  <param name="retryDialog.yesLabel">Is ea</param>
+  <param name="sortButton.text"></param>
+  <param name="sortButton.tooltip">Sórtáil ordú</param>
+  <param name="sortMenu.byDate">De réir dáta</param>
+  <param name="sortMenu.byName">De réir ainm</param>
+  <param name="sortMenu.bySize">De réir méid</param>
+  <param name="statusLabel.text.generateThumbnails">mionsamhlacha íomhá Giniúna ... fanacht le do thoil.</param>
+  <param name="statusLabel.text.loadFile "></param>
+  <param name="statusLabel.text.ready">Líon na comhaid: &lt;FILESCOUNT&gt; (&lt;TOTALSIZE&gt;)</param>
+  <param name="statusLabel.text.uploadCancelled">Next comhaid a uaslódáil ar ceal. Fan ...</param>
+  <param name="statusLabel.text.uploadComplete">Upload críochnaithe! &lt;UPLOADEDFILESCOUNT&gt; comhaid (&lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt;), am imithe: &lt;ELAPSEDHOUR&gt;: &lt;ELAPSEDMIN&gt;: &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.uploadProgress">Iomlán: &lt;PERCENT&gt;% (&lt;FILESNUM&gt; / &lt;FILESTOUPLOADCOUNT&gt;) &lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt; (&lt;RATEVALUE&gt; / s, d'fhág am: &lt;LEFTHOUR&gt;: &lt;LEFTMIN&gt;: &lt;LEFTSEC&gt;)</param>
+  <param name="statusLabel.text.uploadStart">Uasluchtú ...</param>
+  <param name="statusLabel.text.uploadStopped">Upload stopadh. beart uaslódáilte: &lt;TOTALUPLOADEDSIZE&gt;, Am imithe: &lt;ELAPSEDHOUR&gt;: &lt;ELAPSEDMIN&gt;: &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.waitForConnection">Freastalaí gan freagra a thabhairt. Ag iarraidh Reconnect, le do thoil go fóill.</param>
+  <param name="thumbViewButton.tooltip">Mionsamhail fhonn</param>
+  <param name="thumbnail.watermark.text">Eilimint-IT</param>
+  <param name="thumbnailView.bottomPanel.labelPattern">&lt;FILENAME&gt;</param>
+  <param name="thumbnailView.cancelCropIcon.tooltip">Cealaigh barr an íomhá</param>
+  <param name="thumbnailView.contextMenu.CropLabel">Bearr an íomhá</param>
+  <param name="thumbnailView.contextMenu.RemoveLabel">Bain</param>
+  <param name="thumbnailView.contextMenu.RotateLeftLabel">Rothlaigh fhág</param>
+  <param name="thumbnailView.contextMenu.RotateRightLabel">Rothlaigh ceart</param>
+  <param name="thumbnailView.contextMenu.UndoCropLabel">Cealaigh barr an íomhá</param>
+  <param name="thumbnailView.cropIcon.tooltip">Bearr an íomhá</param>
+  <param name="thumbnailView.editIcon.tooltip">Cuir síos comhad</param>
+  <param name="thumbnailView.infoIcon.disabledFileInfoTooltip">Méid: &lt;FILESIZE&gt;
+Dáta: &lt;FILEDATE&gt;
+Stádas: &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.infoIcon.tooltip">Méid: &lt;FILESIZE&gt;
+Dáta: &lt;FILEDATE&gt;
+Stádas: &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.removeIcon.tooltip">Bain</param>
+  <param name="thumbnailView.rotateLeftIcon.tooltip">Rothlaigh fhág</param>
+  <param name="thumbnailView.rotateRightIcon.tooltip">Rothlaigh ceart</param>
+  <param name="uploadButton.text">Upload</param>
+  <param name="uploadButton.tooltip">Start upload</param>
+</MultiPowUpload_parameters>

@@ -1,0 +1,70 @@
+{extends file="manager_page.html"}
+
+{block name="title"}
+	{%$rs.title%}
+{/block}
+
+{block name="main"}
+
+
+	<legend>{%$rs.title%} - {'Profile'|gsdict}</legend>
+
+
+
+	{$e=record_by_id($manager->get_id(),'{%$rs.name%}')}
+
+	{if $_gsdata.gspgid_va.0=='modify'}
+		{handler gspgid="/{%$module%}/{%$prefix%}/form/{%$rs.name%}/edit/{$manager->get_id()}" {%$manager_link%}}
+	{else}
+
+		<dl class="dl-horizontal">
+			{%foreach from=$fields item=f%}
+			<dt>{%$f.verbose_name%}</dt>
+			<dd>
+				{$e.{%$f.name%}}
+			</dd>
+			{%/foreach%}
+			{%foreach from=$links item=f%}
+			<dt>{%$f.verbose_name%}</dt>
+			<dd>
+				{$e.{%$f.name%}}
+			</dd>
+			{%/foreach%}
+			{%foreach from=$extlinks item=f%}
+			<dt>{%$f.verbose_name%}</dt>
+			<dd>
+			<a href="/{%$module%}/{%$prefix%}/{%$f.classname%}?{%$f->linkname%}={$e->get_id()}">{%$f.verbose_name%} ({$e._{%$f.name%}_count})</a>
+			</dd>
+			{%/foreach%}
+
+		</dl>	
+
+		<table class="table table-bordered table-condensed">
+			{%foreach from=$fields item=f%}
+	<tr>
+				<td>{%$f.verbose_name%}</td>
+				<td> {$e.{%$f.name%}} </td>
+				</tr>
+			{%/foreach%}
+			{%foreach from=$links item=f%}
+		<tr>
+				<td>{%$f.verbose_name%}</td>
+				<td> {$e.{%$f.name%}} </td>
+				</tr>
+			{%/foreach%}
+			{%foreach from=$extlinks item=f%}
+		<tr>
+				<td>{%$f.verbose_name%}</td>
+				<td>
+					<a href="/{%$module%}/{%$prefix%}/{%$f.classname%}?{%$f->linkname%}={$e->get_id()}">{%$f.verbose_name%} ({$e._{%$f.name%}_count})</a>
+				</td>
+				</tr>
+			{%/foreach%}
+
+		</table>	
+
+
+		<a class="btn" href="{gl rec_create=0}#form">{'Update'|gsdict}</a>
+	{/if}
+
+{/block}

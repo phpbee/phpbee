@@ -1,0 +1,49 @@
+{block name="form_header"}
+{/block}
+{block name="form_content"}
+	<form enctype="multipart/form-data" action="" class="admin_form_custom div-border" method="post">
+		<input type=hidden name="root" value="{$pid_id}">
+		<input type=hidden name="gspgid_form" value="{$gspgid_form}">
+		{if isset($_gsdata['dialog'])}<input type=hidden name="dialog" value="{$_gsdata.dialog}">{/if}
+
+		{include file="admin_form_custom_error_messages.html"}
+		{$form->set_error_template('<div class="form_error" id="err" style="display: block; "><i></i>%s</div>')}
+
+		{block name="prepare_form"}
+		{/block}
+
+
+		{foreach $form->get_fields() as $field=>$op} 
+			{$form->set_option($field,'placeholder',$form->get_option($field,'verbose_name'))}
+		{/foreach}
+		
+
+
+		{$form->_prepare_inputs()}
+
+		{$form->get_error_template('FORM_ERROR')}
+		<table>
+		{foreach $form->get_fields() as $field=>$op} 
+			{block name="field"}
+			<tr class="interact_box">
+				<td class="field_title">
+				{$op.verbose_name|default:$field}
+				</td>
+				<td>
+				{$form->get_input($field)}
+				{$form->get_error_template($field)}
+				</td>
+			</tr>
+			{/block}
+		{/foreach}
+		</table>
+	
+
+         <br /> <br />
+	 	{block name="submit_button"}
+		<input type="submit" class="button" value="{$submit_title|default:"продолжить"}" />
+		{/block}
+	</form>
+{/block}	
+{block name="form_footer"}
+{/block}

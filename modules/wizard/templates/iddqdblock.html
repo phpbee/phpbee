@@ -1,0 +1,24 @@
+{extends file="admin_lite_page.html"}
+{block name="main"}
+
+<hr>
+
+{handler gspgid="/admin/wizard/macros/list/`$_gsdata.gspgid_va.0`"}
+
+<hr>
+
+<form action="" method="post">
+<input type=hidden name="gspgid" value="/admin/wizard/iddqdblocksubmit/{$_gsdata.gspgid_v}">
+<div class="tpl_editor">
+<textarea id="tpl_content" name="block_content" class="fText big_text">
+{$block_content}
+</textarea>
+</div>
+<br> 
+<br>
+<input name="save" value="save" type="submit">
+<input name="save_return" value="save & return" type="submit">
+<input name="save_view" value="save & view" type="submit">
+</form>
+
+{/block}

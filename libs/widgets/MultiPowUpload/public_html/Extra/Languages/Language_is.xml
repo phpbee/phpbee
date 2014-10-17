@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MultiPowUpload_parameters>
+  <param name="browseButton.text">Browse ...</param>
+  <param name="browseButton.tooltip">Bæta við skrám á senda</param>
+  <param name="cancelButton.pauseText">Pause</param>
+  <param name="cancelButton.text">Hætta við</param>
+  <param name="cancelButton.tooltip">Hætta við núverandi starfsemi</param>
+  <param name="clearButton.text">Hreinsa</param>
+  <param name="clearButton.tooltip">Fjarlægja allar skrár</param>
+  <param name="constant.bytes">bytes</param>
+  <param name="constant.decimalSeparator">,</param>
+  <param name="constant.gigaBytes">GB</param>
+  <param name="constant.kiloBytes">Kb</param>
+  <param name="constant.megaBytes">MB</param>
+  <param name="contextMenu.sortByDate">Raða eftir dagsetningu</param>
+  <param name="contextMenu.sortByName">Raða eftir nafni</param>
+  <param name="contextMenu.sortBySize">Raða eftir stærð</param>
+  <param name="descriptionWindow.caption">Lýsing á skrá</param>
+  <param name="descriptionWindow.fileNavigation.fileName.label">&lt;FILENAME&gt;</param>
+  <param name="descriptionWindow.fileNavigation.nextButton.label"></param>
+  <param name="descriptionWindow.fileNavigation.previousButton.label"></param>
+  <param name="exifWindow.caption">&lt;FILENAME&gt; EXIF gögn</param>
+  <param name="exifWindow.list.nameHeader">Nafn</param>
+  <param name="exifWindow.list.valueHeader">Value</param>
+  <param name="fileInfoWindow.caption">Upplýsingar um skrá</param>
+  <param name="fileInfoWindow.exifInfo">&lt;b&gt; exif upplýsingar &lt;/b&gt;: &lt;a&gt; Smelltu til að sjá &lt;/a&gt;</param>
+  <param name="fileInfoWindow.fileDate">&lt;b&gt; Date &lt;/b&gt;: &lt;FILEDATE&gt;</param>
+  <param name="fileInfoWindow.fileName">&lt;b&gt; Nafn &lt;/b&gt;: &lt;FILENAME&gt;</param>
+  <param name="fileInfoWindow.fileSize">&lt;b&gt; Stærð &lt;/b&gt;: &lt;FILESIZE&gt;</param>
+  <param name="fileInfoWindow.fileStatus">&lt;b&gt; Status &lt;/b&gt;: &lt;FILESTATUS&gt;</param>
+  <param name="fileInfoWindow.imageHeight">&lt;b&gt; Image hæð &lt;/b&gt;: &lt;IMAGEHEIGHT&gt;</param>
+  <param name="fileInfoWindow.imageWidth">&lt;b&gt; Image breidd &lt;/b&gt;: &lt;IMAGEWIDTH&gt;</param>
+  <param name="fileStatus.cancelled">Frestað</param>
+  <param name="fileStatus.complete">Lokið</param>
+  <param name="fileStatus.encodeImage">Umrita mynd</param>
+  <param name="fileStatus.error">Villa kom upp</param>
+  <param name="fileStatus.loadFile">Hleð inn skrá í minni</param>
+  <param name="fileStatus.loadImage">Loading mynd gögn</param>
+  <param name="fileStatus.processing">Sendi</param>
+  <param name="fileStatus.ready">Tilbúið til senda</param>
+  <param name="labelUpload.text">Veldu skrár til að hlaða</param>
+  <param name="listView.description.defaultText">Smelltu til að breyta ...</param>
+  <param name="listView.description.tooltip">Breyta skrá lýsing</param>
+  <param name="listView.fileNameLabel.pattern">&lt;FILENAME&gt;</param>
+  <param name="listView.label.disabledFileInfoTooltip">Stærð: &lt;FILESIZE&gt;
+Date: &lt;FILEDATE&gt;
+Status: &lt;FILESTATUS&gt;</param>
+  <param name="listView.label.tooltip">Stærð: &lt;FILESIZE&gt;
+Date: &lt;FILEDATE&gt;
+Status: &lt;FILESTATUS&gt;</param>
+  <param name="listView.removeButton.tooltip">Fjarlægja skrá</param>
+  <param name="listView.textInput.defaultString">Skrifa skrá athugasemd hér</param>
+  <param name="listViewButton.tooltip">Listi</param>
+  <param name="loadingText">&lt;b&gt; Frumstilli: &lt;PERCENT&gt;% &lt;/b&gt;</param>
+  <param name="messages.disabledType">Mynd með eftirfarandi gerðum: &lt;FILETYPES&gt; Ekki er leyfilegt að senda inn! &lt;COUNTINVALIDFILES&gt; skrár voru hunsuð!</param>
+  <param name="messages.filesCountExceeded">Aðeins &lt;MAXFILECOUNT&gt; skrár leyft að senda inn! &lt;COUNTINVALIDFILES&gt; skrár voru hunsuð!</param>
+  <param name="messages.filesCountNotEnough">Vinsamlegast veldu fleiri skrár. Lágmark skrá count &lt;MINFILECOUNT&gt;</param>
+  <param name="messages.httpError">&lt;center&gt; HTTP Villa, '&lt;ERRORCODE&gt; "átti sér stað. &lt;DESCRIPTION&gt;&lt;br&gt; Skoðið &lt;font color='#0000FF'&gt; &lt;a title='Error description' target='_blank' href='&lt;W3WLINK&gt;'&gt; &lt;W3WLINK&gt; &lt;/a&gt; &lt;/font&gt; villa merkjamál skilgreiningar til að fá meiri upplýsingar. &lt;/center&gt;</param>
+  <param name="messages.httpError.400">Bad Request. Server getur ekki skilið beiðni! Vinsamlegast hafðu samband við kerfisstjóra þinn.</param>
+  <param name="messages.httpError.401">Leyfisleysi. Notandakennsl þurfa!</param>
+  <param name="messages.httpError.402">Greiðsla Required. Reserved kóða!</param>
+  <param name="messages.httpError.403">Bannað. Þjónninn skildi beiðnina en er að neita að uppfylla það!&lt;br&gt;Fyrir Apache netþjóna: Þetta gerist vegna þess að þú hefur gert að Apache mát heitir mod_security á vélinni sem hindrar haus sent Flash.&lt;br&gt;Fyrir IIS með ASP netþjóna: Þetta mál verður ef Content-Length haus er til staðar og ef Content-Length haus skilgreinir magn gagna sem er stærri en verðmæti AspMaxRequestEntityAllowed eign í IIS metabase.&lt;br&gt;Sjálfgefið gildi fyrir AspMaxRequestEntityAllowed eign er 204.800 bæti.</param>
+  <param name="messages.httpError.404">Síða fannst ekki. Get ekki fundið '&lt;URL&gt;' síðu á miðlarann!</param>
+  <param name="messages.httpError.405">Post aðferðin ekki leyfð fyrir þessa síðu &lt;URL&gt;! Vinsamlegast reyndu að breyta stillingar til að leyfa færslu aðferð til að fá handrit.</param>
+  <param name="messages.httpError.406">Ekki ásættanlegt. Þetta þýðir að þjónn getur ekki búið til að bregðast aðilar sem hafa innihald einkenni ekki viðurkennd í samræmi við samþykkt haus sendur í beiðninni. Flash taka haus er "text / * '.</param>
+  <param name="messages.httpError.407">Proxy Authentication Required.</param>
+  <param name="messages.httpError.408">Request Tími.</param>
+  <param name="messages.httpError.409">Átök.</param>
+  <param name="messages.httpError.410">Farin. Sem umbeðin gögn er ekki lengur í boði á þjóninum og ekkert áframsendingarnetfang er þekkt.</param>
+  <param name="messages.httpError.411">Lengd Required.</param>
+  <param name="messages.httpError.412">Forsenda mistókst.</param>
+  <param name="messages.httpError.413">Request Entity of stór.&lt;br&gt;Fyrir IIS netþjóna: 1. Prófaðu að auka UploadReadAheadSize metabase eign.&lt;br&gt;2. Prófaðu að auka MaxRequestEntityAllowed eignarskattur í IIS config.&lt;br&gt;Fyrir Apache netþjóna: Reyndu að auka LimitRequestBody breytu í httpd.conf.</param>
+  <param name="messages.httpError.414">Request-URI Too Long.</param>
+  <param name="messages.httpError.415">Óstudd Media Type.</param>
+  <param name="messages.httpError.416">Umbeðin Range Ekki Satisfiable.</param>
+  <param name="messages.httpError.417">Eftirvænting mistókst.</param>
+  <param name="messages.httpError.500">Internal Server Error. Venjulega þýðir það að fá handrit hafa villur.</param>
+  <param name="messages.httpError.501">Ekki útfært. Server styður ekki POST aðferð.</param>
+  <param name="messages.httpError.502">Bad Gateway.</param>
+  <param name="messages.httpError.503">503 Service Ótiltækt. Miðlarinn er nú ekki að takast á við beiðni vegna tímabundinnar villu eða viðhalds á miðlara.</param>
+  <param name="messages.httpError.504">Gateway Tími.</param>
+  <param name="messages.httpError.505">HTTP útgáfa er ekki studd. Server styður ekki HTTP 1.1.</param>
+  <param name="messages.wrongFileType">Einungis skrár með eftirfarandi tegund: &lt;FILETYPES&gt; heimild til að senda inn! &lt;COUNTINVALIDFILES&gt; skrár voru hunsuð!</param>
+  <param name="messages.zeroSize">&lt;COUNTINVALIDFILES&gt; skrár með núll stærð voru hunsuð!</param>
+  <param name="removeButton.tooltip">Fjarlægja valið skrá</param>
+  <param name="retryDialog.caption">Reyna aftur inn?</param>
+  <param name="retryDialog.message">Sumar skrár voru ekki hlaðið. Viltu reyna að senda inn aftur?</param>
+  <param name="retryDialog.noLabel">Nei</param>
+  <param name="retryDialog.yesLabel">Já</param>
+  <param name="sortButton.text"></param>
+  <param name="sortButton.tooltip">Uppröðun</param>
+  <param name="sortMenu.byDate">Eftir dagsetningu</param>
+  <param name="sortMenu.byName">Eftir nafni</param>
+  <param name="sortMenu.bySize">Eftir stærð</param>
+  <param name="statusLabel.text.generateThumbnails">Búa til smámyndir ... vinsamlegast bíðið.</param>
+  <param name="statusLabel.text.loadFile "></param>
+  <param name="statusLabel.text.ready">Telja skrár: &lt;FILESCOUNT&gt; (&lt;TOTALSIZE&gt;)</param>
+  <param name="statusLabel.text.uploadCancelled">Next skrá hlaða niður. Bíddu ...</param>
+  <param name="statusLabel.text.uploadComplete">Upload lokið! &lt;UPLOADEDFILESCOUNT&gt; skrár (&lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt;), Liðinn tími: &lt;ELAPSEDHOUR&gt;: &lt;ELAPSEDMIN&gt;: &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.uploadProgress">Samtals: &lt;PERCENT&gt;% (&lt;FILESNUM&gt; / &lt;FILESTOUPLOADCOUNT&gt;) &lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt; (&lt;RATEVALUE&gt; / sek, tími til vinstri: &lt;LEFTHOUR&gt;: &lt;LEFTMIN&gt;: &lt;LEFTSEC&gt;)</param>
+  <param name="statusLabel.text.uploadStart">Sendi ...</param>
+  <param name="statusLabel.text.uploadStopped">Upload hætt. Uploaded bytes: &lt;TOTALUPLOADEDSIZE&gt;, Liðinn tími: &lt;ELAPSEDHOUR&gt;: &lt;ELAPSEDMIN&gt;: &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.waitForConnection">Server svara ekki. Reyni aftur, vinsamlegast bíðið.</param>
+  <param name="thumbViewButton.tooltip">Smámyndir Skoða</param>
+  <param name="thumbnail.watermark.text">Element-IT</param>
+  <param name="thumbnailView.bottomPanel.labelPattern">&lt;FILENAME&gt;</param>
+  <param name="thumbnailView.cancelCropIcon.tooltip">Losa klippa</param>
+  <param name="thumbnailView.contextMenu.CropLabel">Skera mynd</param>
+  <param name="thumbnailView.contextMenu.RemoveLabel">Fjarlægja</param>
+  <param name="thumbnailView.contextMenu.RotateLeftLabel">Snúa til vinstri</param>
+  <param name="thumbnailView.contextMenu.RotateRightLabel">Snúa til hægri</param>
+  <param name="thumbnailView.contextMenu.UndoCropLabel">Losa klippa</param>
+  <param name="thumbnailView.cropIcon.tooltip">Skera mynd</param>
+  <param name="thumbnailView.editIcon.tooltip">Breyta skrá lýsing</param>
+  <param name="thumbnailView.infoIcon.disabledFileInfoTooltip">Stærð: &lt;FILESIZE&gt;
+Date: &lt;FILEDATE&gt;
+Status: &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.infoIcon.tooltip">Stærð: &lt;FILESIZE&gt;
+Date: &lt;FILEDATE&gt;
+Status: &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.removeIcon.tooltip">Fjarlægja</param>
+  <param name="thumbnailView.rotateLeftIcon.tooltip">Snúa til vinstri</param>
+  <param name="thumbnailView.rotateRightIcon.tooltip">Snúa til hægri</param>
+  <param name="uploadButton.text">Hlaða inn</param>
+  <param name="uploadButton.tooltip">Start hlaða</param>
+</MultiPowUpload_parameters>

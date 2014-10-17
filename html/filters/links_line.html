@@ -1,0 +1,7 @@
+<div class="links_line">	
+	<a href="/{$link_all.href}">Все ({$link_all.count})</a>
+	{foreach from=$links item=i}
+	<a {if $i.key==$current}class="filter_current"{/if}   href="/{$i.href}">{$i.name} ({$i.count})</a>
+	{/foreach}
+</div>
+

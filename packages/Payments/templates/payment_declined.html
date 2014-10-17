@@ -1,0 +1,14 @@
+{extends file="payment_return.html"}
+{block name=payment_info}
+
+<h3>
+Your payment was declined.
+</h3>
+
+
+<p>
+Transaction ID: {$pmnt->transaction_number}<br>
+Transaction message: {$pmnt->status_message}<br>
+</p>
+
+{/block}

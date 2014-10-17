@@ -1,0 +1,93 @@
+{extends file="admin_page.html"}
+
+{block name="title"}
+	Items
+{/block}
+
+{block name="main"}
+
+
+	<h4>Items</h4>
+
+
+
+			{handler gspgid="/filter/" class="select_by_links" link="search_config_items.Parent:id" name="Parent" urltype=get }
+			
+		{handler gspgid="/filter/" class="like" name="search" fields="search_type" urltype=get }
+		{handler gspgid="/filter/" class="calendar" name="calendar" fields="_ctime,_mtime," urltype=get }
+		{handler gspgid="/filter/" class="sort" name="sort" fields="sortkey,search_type" urltype=get }
+		{handler gspgid="/filter/" class="limit" name="limit" urltype=session values='20,50,100,500' default_value=20}
+		{handler gspgid="/filter/" class="offset"  name="offset" urltype=get limit='limit'}
+
+
+
+		{controller _class="search_config_items" _assign="search_config_items" _filters="search,calendar,sort,limit,offset,Parent,"}
+
+
+				{handler gspgid="/sortkey" sortkey_id="search_config_items" recordset_name="search_config_items"}
+		
+	<table class="tb sortkey-table" sortkey_id="search_config_items">
+	<thead>
+	<tr class="filters"><td colspan="100">
+	<table>
+			<tr><td>:</td><td>{handler gspgid="/filter/show" name="Parent"  recordset=$search_config_items tpl="links_line.html"  }</td></tr>
+			<tr><td>Find:</td><td>
+			<form class="filterform" method="get">
+			{handler gspgid="/filter/show" name="search"  recordset=$search_config_items tpl="like.html"  }
+			{handler gspgid="/filter/show" name="calendar"  recordset=$search_config_items tpl="calendar.html" prelabel="date:"  }
+			{handler gspgid="/filter/show" name="sort"  recordset=$search_config_items tpl="sort.html" prelabel="sort by:"  }
+			<div class="links_inline"><input type="submit" value=""></div>
+			</form>
+		</td></tr>
+	</table>
+	</td> </tr>
+	<tr class="pager"><td colspan="100">
+		{handler gspgid="/filter/show" name="offset" tpl="offset_pages.html" page_title='Page' page_prev='previous' page_next='next' page_between='from' pages_count=21 recordset=$search_config_items}
+		{handler gspgid="/filter/show" name="limit" tpl="limit_select.html" prelabel='show by' label='records'}
+	</td></tr>
+	<tr><th>#</th>
+		<th>
+		{field_name name="search_type" type="fSelect" key="search_type" id="20"}
+	</th>
+			<th></th>
+		<th>recordset</th>
+		<th>fieldname</th>
+			<th></th>
+	<th></th>
+	<th></th>
+	</tr>
+	</thead>
+	
+	{foreach from=$search_config_items item="e"}
+	<tr class="{cycle values='odd,even'}" record_id="{$e->get_id()}">
+			<td>{$e->get_id()}</td>
+						<td class="frm_fSelect">
+									<a href="{gl rec_edit=$e}">{field_formatter value=$e.search_type type="fSelect"}</a>
+						
+			</td>
+									<td>{$e.Parent}</td>
+						<td>{$e.recordset}</td>
+						<td>{$e.fieldname}</td>
+									<td class="cnt"><a href="{gl rec_edit=$e}"><img src="/i/admin/ico_edit.png" alt="Редактировать" title="Редактировать"></a></td>
+			<td class="cnt"><a href="{gl rec_copy=$e}"><img src="/i/admin/ico_copy.png" alt="Копировать" title="Копировать"></a></td>
+			<td class="cnt"><a href="{gl rec_delete=$e}" onclick="return confirm('Вы точно хотите удалить запись ?');"><img src="/i/admin/ico_delete.png" alt="Удалить" title="Удалить"></a></td>
+	</tr>
+	{/foreach}
+	<tr class="pager"><td colspan="100">
+	<a name="form"></a>
+		{handler gspgid="/filter/show" name="offset" tpl="offset_pages.html" page_title='Page' page_prev='previous' page_next='next' page_between='from' pages_count=21 recordset=$search_config_items}
+		{handler gspgid="/filter/show" name="limit" tpl="limit_select.html" prelabel='show by' label='records'}
+	</td></tr>
+	</table>
+
+	<h5>Редактировать/<a href="{gl rec_create=0}">создать</a>:</h5>
+	{if $_gsdata.gspgid_va.0=='modify'}
+	<hr><br>
+		{$default_value=""}
+			{if gs_filters_handler::value('Parent')}
+			{$default_value="{$default_value},Parent_id={gs_filters_handler::value('Parent')}"}
+		{/if} 
+		{handler gspgid="/admin/form/search_config_items/edit/`$_gsdata.gspgid_va.1`" _default=trim($default_value,',') }
+	{/if}
+
+{/block}

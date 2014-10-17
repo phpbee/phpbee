@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MultiPowUpload_parameters>
+  <param name="browseButton.text">Αναζήτηση ...</param>
+  <param name="browseButton.tooltip">Προσθέστε τα αρχεία για μεταφόρτωση</param>
+  <param name="cancelButton.pauseText">Παύση</param>
+  <param name="cancelButton.text">Ακύρωση</param>
+  <param name="cancelButton.tooltip">Ακύρωση τρέχουσα λειτουργία</param>
+  <param name="clearButton.text">Σαφή</param>
+  <param name="clearButton.tooltip">Κατάργηση όλων των αρχείων</param>
+  <param name="constant.bytes">bytes</param>
+  <param name="constant.decimalSeparator">,</param>
+  <param name="constant.gigaBytes">Gb</param>
+  <param name="constant.kiloBytes">Kb</param>
+  <param name="constant.megaBytes">Mb</param>
+  <param name="contextMenu.sortByDate">Ταξινόμηση κατά ημερομηνία</param>
+  <param name="contextMenu.sortByName">Ταξινόμηση κατά όνομα</param>
+  <param name="contextMenu.sortBySize">Ταξινόμηση κατά μέγεθος</param>
+  <param name="descriptionWindow.caption">Περιγραφή για αυτό το αρχείο</param>
+  <param name="descriptionWindow.fileNavigation.fileName.label">&lt;FILENAME&gt;</param>
+  <param name="descriptionWindow.fileNavigation.nextButton.label"></param>
+  <param name="descriptionWindow.fileNavigation.previousButton.label"></param>
+  <param name="exifWindow.caption">&lt;FILENAME&gt; στοιχεία EXIF</param>
+  <param name="exifWindow.list.nameHeader">Όνομα</param>
+  <param name="exifWindow.list.valueHeader">Αξία</param>
+  <param name="fileInfoWindow.caption">Πληροφορίες αρχείου</param>
+  <param name="fileInfoWindow.exifInfo">&lt;b&gt; info Exif &lt;/b&gt;: &lt;a&gt; Κάντε κλικ για να δείτε &lt;/a&gt;</param>
+  <param name="fileInfoWindow.fileDate">&lt;b&gt; Ημερομηνία &lt;/b&gt;: &lt;FILEDATE&gt;</param>
+  <param name="fileInfoWindow.fileName">&lt;b&gt; Όνομα &lt;/b&gt;: &lt;FILENAME&gt;</param>
+  <param name="fileInfoWindow.fileSize">&lt;b&gt; Μέγεθος &lt;/b&gt;: &lt;FILESIZE&gt;</param>
+  <param name="fileInfoWindow.fileStatus">&lt;b&gt; Κατάσταση &lt;/b&gt;: &lt;FILESTATUS&gt;</param>
+  <param name="fileInfoWindow.imageHeight">&lt;b&gt; Εικόνα ύψος &lt;/b&gt;: &lt;IMAGEHEIGHT&gt;</param>
+  <param name="fileInfoWindow.imageWidth">&lt;b&gt; Εικόνα πλάτος &lt;/b&gt;: &lt;IMAGEWIDTH&gt;</param>
+  <param name="fileStatus.cancelled">Ακυρώθηκε</param>
+  <param name="fileStatus.complete">Ολοκληρώθηκε</param>
+  <param name="fileStatus.encodeImage">Encode εικόνα</param>
+  <param name="fileStatus.error">Παρουσιάστηκε σφάλμα</param>
+  <param name="fileStatus.loadFile">Φόρτωση αρχείο στη μνήμη</param>
+  <param name="fileStatus.loadImage">Τοποθέτηση δεδομένων εικόνας</param>
+  <param name="fileStatus.processing">Μεταφόρτωση</param>
+  <param name="fileStatus.ready">Έτοιμοι για upload</param>
+  <param name="labelUpload.text">Επιλογή αρχείων για upload</param>
+  <param name="listView.description.defaultText">Κάντε κλικ για επεξεργασία ...</param>
+  <param name="listView.description.tooltip">Επεξεργασία αρχείου περιγραφή</param>
+  <param name="listView.fileNameLabel.pattern">&lt;FILENAME&gt;</param>
+  <param name="listView.label.disabledFileInfoTooltip">Μέγεθος: &lt;FILESIZE&gt;
+Ημερομηνία: &lt;FILEDATE&gt;
+Κατάσταση: &lt;FILESTATUS&gt;</param>
+  <param name="listView.label.tooltip">Μέγεθος: &lt;FILESIZE&gt;
+Ημερομηνία: &lt;FILEDATE&gt;
+Κατάσταση: &lt;FILESTATUS&gt;</param>
+  <param name="listView.removeButton.tooltip">Αφαίρεση αρχείου</param>
+  <param name="listView.textInput.defaultString">Γράψτε το αρχείο σχόλιο εδώ</param>
+  <param name="listViewButton.tooltip">Προβολή λίστας</param>
+  <param name="loadingText">&lt;b&gt; Αρχικοποίηση: &lt;PERCENT&gt;% &lt;/b&gt;</param>
+  <param name="messages.disabledType">Φάκελος με τους ακόλουθους τύπους: &lt;FILETYPES&gt; δεν επιτρέπεται να ανεβάσετε! &lt;COUNTINVALIDFILES&gt; αρχεία αγνοήθηκαν!</param>
+  <param name="messages.filesCountExceeded">Μόνο &lt;MAXFILECOUNT&gt; αρχεία που επιτρέπεται να ανεβάσετε! &lt;COUNTINVALIDFILES&gt; αρχεία αγνοήθηκαν!</param>
+  <param name="messages.filesCountNotEnough">Παρακαλώ επιλέξτε περισσότερα αρχεία. Ελάχιστος αριθμός αρχείων &lt;MINFILECOUNT&gt;</param>
+  <param name="messages.httpError">&lt;center&gt; Σφάλμα HTTP, «&lt;ERRORCODE&gt;» συνέβη. &lt;DESCRIPTION&gt;&lt;br&gt; Παρακαλώ δείτε &lt;font color='#0000FF'&gt; &lt;a title='Error description' target='_blank' href='&lt;W3WLINK&gt;'&gt; &lt;W3WLINK&gt; &lt;/a&gt; &lt;/font&gt; ορισμούς κωδικός σφάλματος για περισσότερες πληροφορίες. &lt;/center&gt;</param>
+  <param name="messages.httpError.400">Bad Request. Server δεν μπορεί να καταλάβει αιτήματος! Παρακαλούμε επικοινωνήστε με το διαχειριστή του διακομιστή σας.</param>
+  <param name="messages.httpError.401">Αναρμόδια. Έλεγχος ταυτότητας χρήστη που απαιτείται!</param>
+  <param name="messages.httpError.402">Πληρωμών που είναι αναγκαίες. Προορίζεται κωδικό!</param>
+  <param name="messages.httpError.403">Απαγορευμένη. Ο server κατανοητό το αίτημα, αλλά αρνείται να εκπληρώσει!&lt;br&gt;Για apache servers: Αυτό συμβαίνει επειδή έχετε ενεργοποιήσει ένα Apache module που ονομάζεται mod_security στον server που μπλοκάρει τις κεφαλίδες που απέστειλε Flash.&lt;br&gt;Για IIS με ASP servers: Αυτό το ζήτημα παρουσιάζεται, αν το περιεχόμενο-μήκος κεφαλίδας είναι παρούσα και εάν το περιεχόμενο-Μήκος επικεφαλίδας καθορίζει το ποσό των δεδομένων που είναι μεγαλύτερο από την αξία του AspMaxRequestEntityAllowed ιδιοκτησίας στην μετα-βάση IIS.&lt;br&gt;Η προεπιλεγμένη τιμή για το AspMaxRequestEntityAllowed ακίνητο 204.800 bytes.</param>
+  <param name="messages.httpError.404">Η σελίδα δεν βρέθηκε. Δεν μπορείτε να βρείτε "&lt;URL&gt;« σελίδα στον server!</param>
+  <param name="messages.httpError.405">Δημοσίευση μέθοδος δεν επιτρέπεται για αυτή τη σελίδα &lt;URL&gt;! Παρακαλούμε προσπαθήστε να αλλάξετε τις ρυθμίσεις του διακομιστή για να καταστεί δυνατή η μέθοδος θέση για τη λήψη δέσμης ενεργειών.</param>
+  <param name="messages.httpError.406">Δεν γίνεται δεκτή. Αυτό σημαίνει ότι οι server δεν μπορούν να δημιουργήσουν φορείς απάντηση που δεν έχουν περιεχόμενο χαρακτηριστικά αποδεκτή σύμφωνα με την αποδεχθεί κεφαλίδες σταλεί το αίτημα. Flash δέχονται κεφαλίδα είναι "text / *».</param>
+  <param name="messages.httpError.407">Proxy Authentication Required.</param>
+  <param name="messages.httpError.408">Αίτηση Timeout.</param>
+  <param name="messages.httpError.409">Σύγκρουση.</param>
+  <param name="messages.httpError.410">Gone. Η πηγή που ζητήθηκε δεν είναι πλέον διαθέσιμα στο διακομιστή και δεν διεύθυνση προώθησης είναι γνωστή.</param>
+  <param name="messages.httpError.411">Μήκος Απαιτείται.</param>
+  <param name="messages.httpError.412">Προϋπόθεση απέτυχε.</param>
+  <param name="messages.httpError.413">Αίτηση οντοτήτων είναι πολύ μεγάλος.&lt;br&gt;Για διακομιστές IIS: 1. Προσπαθήστε να αυξήσει UploadReadAheadSize ιδιότητα μετα-βάσης.&lt;br&gt;2. Προσπαθήστε να αυξήσει MaxRequestEntityAllowed αξίας του ακινήτου στο IIS config.&lt;br&gt;Για apache servers: Προσπαθήστε να αυξήσει LimitRequestBody παράμετρο σε httpd.conf.</param>
+  <param name="messages.httpError.414">Αίτηση-URI Too Long.</param>
+  <param name="messages.httpError.415">Unsupported Type Media.</param>
+  <param name="messages.httpError.416">Ζήτησε εμβέλειας δεν ικανοποιήσιμος.</param>
+  <param name="messages.httpError.417">Προσδοκία απέτυχε.</param>
+  <param name="messages.httpError.500">Εσωτερικό σφάλμα διακομιστή. Συνήθως αυτό σημαίνει ότι η λήψη γραφής έχουν λάθη.</param>
+  <param name="messages.httpError.501">Δεν έχει εφαρμογή. Server δεν υποστηρίζει μέθοδο POST.</param>
+  <param name="messages.httpError.502">Bad Gateway.</param>
+  <param name="messages.httpError.503">503 Service Unavailable. Ο server είναι σήμερα σε θέση να ικανοποιήσει το αίτημα λόγω προσωρινής υπερφόρτωσης ή εργασιών συντήρησης του server.</param>
+  <param name="messages.httpError.504">Gateway Timeout.</param>
+  <param name="messages.httpError.505">HTTP έκδοση δεν υποστηρίζεται. Server δεν υποστηρίζει HTTP 1.1.</param>
+  <param name="messages.wrongFileType">Μόνο τα αρχεία με τις εξής τύπου: &lt;FILETYPES&gt; επιτρέπεται να ανεβάσετε! &lt;COUNTINVALIDFILES&gt; αρχεία αγνοήθηκαν!</param>
+  <param name="messages.zeroSize">&lt;COUNTINVALIDFILES&gt; αρχεία με μηδενικό μέγεθος αγνοήθηκαν!</param>
+  <param name="removeButton.tooltip">Κατάργηση επιλεγμένων αρχείων</param>
+  <param name="retryDialog.caption">Επανάληψη προσθέσω;</param>
+  <param name="retryDialog.message">Μερικά αρχεία δεν μεταφορτώθηκαν. Θέλετε να προσπαθήσετε να φορτώσετε ξανά;</param>
+  <param name="retryDialog.noLabel">Δεν</param>
+  <param name="retryDialog.yesLabel">Ναι</param>
+  <param name="sortButton.text"></param>
+  <param name="sortButton.tooltip">Σειρά ταξινόμησης</param>
+  <param name="sortMenu.byDate">Με ημερομηνία</param>
+  <param name="sortMenu.byName">Με το όνομα</param>
+  <param name="sortMenu.bySize">Με μέγεθος</param>
+  <param name="statusLabel.text.generateThumbnails">Δημιουργία μικρογραφίες εικόνων ... παρακαλώ περιμένετε.</param>
+  <param name="statusLabel.text.loadFile "></param>
+  <param name="statusLabel.text.ready">Καταμέτρηση των αρχείων: &lt;FILESCOUNT&gt; (&lt;TOTALSIZE&gt;)</param>
+  <param name="statusLabel.text.uploadCancelled">Στη συνέχεια τα αρχεία upload ακυρωθεί. Περιμένετε ...</param>
+  <param name="statusLabel.text.uploadComplete">Ανεβάστε ολοκληρώθηκε! &lt;UPLOADEDFILESCOUNT&gt; αρχεία (&lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt;), Χρόνος που πέρασε: &lt;ELAPSEDHOUR&gt;: &lt;ELAPSEDMIN&gt;: &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.uploadProgress">Σύνολο: &lt;PERCENT&gt;% (&lt;FILESNUM&gt; / &lt;FILESTOUPLOADCOUNT&gt;) &lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt; (&lt;RATEVALUE&gt; / sec, χρόνος που έχει απομείνει: &lt;LEFTHOUR&gt;: &lt;LEFTMIN&gt;: &lt;LEFTSEC&gt;)</param>
+  <param name="statusLabel.text.uploadStart">Μεταφόρτωση ...</param>
+  <param name="statusLabel.text.uploadStopped">Ανεβάστε σταμάτησε. Ανέβηκε bytes: &lt;TOTALUPLOADEDSIZE&gt;, Χρόνος που πέρασε: &lt;ELAPSEDHOUR&gt;: &lt;ELAPSEDMIN&gt;: &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.waitForConnection">Server δεν απάντησε. Προσπαθώντας επανασυνδεθείτε, παρακαλώ περιμένετε.</param>
+  <param name="thumbViewButton.tooltip">Μικρογραφίες άποψη</param>
+  <param name="thumbnail.watermark.text">Στοιχείο-IT</param>
+  <param name="thumbnailView.bottomPanel.labelPattern">&lt;FILENAME&gt;</param>
+  <param name="thumbnailView.cancelCropIcon.tooltip">Αναίρεση περικόψετε την εικόνα</param>
+  <param name="thumbnailView.contextMenu.CropLabel">Περικοπή της εικόνας</param>
+  <param name="thumbnailView.contextMenu.RemoveLabel">Κατάργηση</param>
+  <param name="thumbnailView.contextMenu.RotateLeftLabel">Περιστροφή αριστερά</param>
+  <param name="thumbnailView.contextMenu.RotateRightLabel">Περιστροφή δεξιά</param>
+  <param name="thumbnailView.contextMenu.UndoCropLabel">Αναίρεση περικόψετε την εικόνα</param>
+  <param name="thumbnailView.cropIcon.tooltip">Περικοπή της εικόνας</param>
+  <param name="thumbnailView.editIcon.tooltip">Επεξεργασία αρχείου περιγραφή</param>
+  <param name="thumbnailView.infoIcon.disabledFileInfoTooltip">Μέγεθος: &lt;FILESIZE&gt;
+Ημερομηνία: &lt;FILEDATE&gt;
+Κατάσταση: &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.infoIcon.tooltip">Μέγεθος: &lt;FILESIZE&gt;
+Ημερομηνία: &lt;FILEDATE&gt;
+Κατάσταση: &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.removeIcon.tooltip">Κατάργηση</param>
+  <param name="thumbnailView.rotateLeftIcon.tooltip">Περιστροφή αριστερά</param>
+  <param name="thumbnailView.rotateRightIcon.tooltip">Περιστροφή δεξιά</param>
+  <param name="uploadButton.text">Ανεβάστε</param>
+  <param name="uploadButton.tooltip">Έναρξη μεταφόρτωσης</param>
+</MultiPowUpload_parameters>

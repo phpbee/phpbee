@@ -1,0 +1,137 @@
+{extends file="index.html"}
+
+{block name="title"}
+	{%$rs.title%}
+{/block}
+
+{block name="content"}
+
+
+	<h4>{%$rs.title%}</h4>
+
+
+
+	{%foreach from=$filters item=f%}
+		{handler gspgid="/filter/" class="select_by_links" link="{%$rs.name%}.{%$f.name%}:id" name="{%$f.name%}" urltype=get }
+		{%$s_filters="`$s_filters``$f.name`,"%}
+	{%/foreach%}
+
+    {%foreach $filter_like as $f%}    
+		{handler gspgid="/filter/" class="like" name="like_{%$f->name%}" fields="{%$f->name%}" urltype=get }
+		{%$s_filters="`$s_filters`like_`$f.name`,"%}
+    {%/foreach%}    
+    {%foreach $filter_sort as $f%}    
+        {%$sort_fields="`$sort_fields``$f.name`,"%}
+    {%/foreach%}    
+
+    {%if $filter_sort->count()%}
+		{handler gspgid="/filter/" class="sort" name="sort_{%$rs.name%}" fields="{%$sort_fields%}" urltype=get }
+		{%$s_filters="`$s_filters`sort_`$rs.name`,"%}
+    {%/if%}
+
+    {%if $d.filter_limit_offset%}    
+		{handler gspgid="/filter/" class="limit" name="limit" urltype=session values='10,20,50,500' default_value=20}
+		{handler gspgid="/filter/" class="offset"  name="offset" urltype=get limit='limit'}
+		{%$s_filters="`$s_filters`limit,offset," %}
+    {%/if%}    
+
+
+
+		{controller _class="{%$rs.name%}" _assign="{%$rs.name%}" _filters="{%$s_filters%}"}
+
+
+	{%foreach from=$filters item=f%}
+		{%$f.verbose_name%}
+        {handler gspgid="/filter/show" name="{%$f.name%}"  recordset=${%$rs.name%} tpl="links_line.html"  }
+	{%/foreach%}
+
+    {%if $d.filter_limit_offset%}    
+		{handler gspgid="/filter/show" name="offset" tpl="offset_bootstrap.html" page_title='Page' page_prev='previous' page_next='next' page_between='from' pages_count=21 recordset=${%$rs.name%}}
+		{handler gspgid="/filter/show" name="limit" tpl="limit_dropdown.html" prelabel='show by' label='records'}
+    {%/if%}    
+
+
+	<table class="table">
+	<thead>
+	<tr>
+	{%foreach from=$fields item=f%}
+	<th>
+            {%if isset($d['filter_like'][$f->id])%}
+                <form class="form-inline" method="get">
+            {%/if%}    
+
+
+            {%$f.verbose_name%}
+
+            {%if isset($d['filter_sort'][$f->get_id()])%}
+                {handler gspgid="/filter/show" name="sort_{%$rs.name%}" field="{%$f.name%}" recordset=${%$rs.name%} tpl="sort_arrows.html"}
+            {%/if%}
+
+            {%if isset($d['filter_like'][$f->id])%}
+                <div class="input-append">
+                    {handler gspgid="/filter/show" name="like_{%$f->name%}" recordset=${%$rs.name%} tpl="like_onefield.html"}
+                        {%* <button class="btn" type="submit">?</button> *%}
+                  </div>
+                  </div>
+                </form>
+            {%/if%}
+	</th>
+	{%/foreach%}
+
+	{%foreach from=$links item=f%}
+	<th>{%$f.verbose_name%}</th>
+	{%/foreach%}
+	</tr>
+
+    {%*
+
+    {%if $filter_like->count()%}
+	<tr class="filter_like">
+        {%foreach from=$fields item=f%}
+        <th>
+            {%if isset($d['filter_like'][$f->id])%}
+                <form class="form-search" method="get">
+                <div class="input-append">
+                    {handler gspgid="/filter/show" name="like_{%$f->name%}" recordset=${%$rs.name%} tpl="like_onefield.html"}
+                      <button class="btn" type="submit">?</button>
+                  </div>
+                  </div>
+                </form>
+            {%/if%}
+        </th>
+        {%/foreach%}
+
+        {%foreach from=$links item=f%}
+        <th></th>
+        {%/foreach%}
+	</tr>
+    {%/if%}
+    *%}
+
+	</thead>
+	
+	{foreach from=${%$rs.name%} item="e"}
+	<tr>
+			{%foreach from=$fields item=f%}
+			<td >
+				{%if $f@first%}
+					<a href="/{current_handler()}/show/{$e->get_id()}">{$e->{%$f.name%}}</a>
+				{%else%}		
+					{$e->{%$f.name%}}
+                {%/if%}    
+			</td>
+			{%/foreach%}
+			{%foreach from=$links item=f%}
+			<td>{$e->{%$f.name%}}</td>
+			{%/foreach%}
+
+	</tr>
+	{/foreach}
+	</table>
+
+    {%if $d.filter_limit_offset%}    
+		{handler gspgid="/filter/show" name="offset" tpl="offset_bootstrap.html" page_title='Page' page_prev='previous' page_next='next' page_between='from' pages_count=21 recordset=${%$rs.name%}}
+		{handler gspgid="/filter/show" name="limit" tpl="limit_dropdown.html" prelabel='show by' label='records'}
+    {%/if%}    
+
+{/block}

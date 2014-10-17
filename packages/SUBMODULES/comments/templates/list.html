@@ -1,0 +1,5 @@
+
+COMMENTS
+{assign var=id value=$_gsdata.gspgid_va.0|intval}
+{controller _class=tw{%$MODULE_NAME%} Parent_id=$id _assign=list}
+{$list}

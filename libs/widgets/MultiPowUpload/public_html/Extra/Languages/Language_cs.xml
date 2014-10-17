@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MultiPowUpload_parameters>
+  <param name="browseButton.text">Procházet ...</param>
+  <param name="browseButton.tooltip">Přidat soubory pro upload</param>
+  <param name="cancelButton.pauseText">Pauza</param>
+  <param name="cancelButton.text">Zrušit</param>
+  <param name="cancelButton.tooltip">Zrušit současný provoz</param>
+  <param name="clearButton.text">Jasný</param>
+  <param name="clearButton.tooltip">Odstraňte všechny soubory</param>
+  <param name="constant.bytes">bytů</param>
+  <param name="constant.decimalSeparator">,</param>
+  <param name="constant.gigaBytes">Cz</param>
+  <param name="constant.kiloBytes">Kb</param>
+  <param name="constant.megaBytes">Mb</param>
+  <param name="contextMenu.sortByDate">Řadit podle data</param>
+  <param name="contextMenu.sortByName">Seřadit podle názvu</param>
+  <param name="contextMenu.sortBySize">Řadit podle velikosti</param>
+  <param name="descriptionWindow.caption">Popis pro soubor</param>
+  <param name="descriptionWindow.fileNavigation.fileName.label">&lt;FILENAME&gt;</param>
+  <param name="descriptionWindow.fileNavigation.nextButton.label"></param>
+  <param name="descriptionWindow.fileNavigation.previousButton.label"></param>
+  <param name="exifWindow.caption">&lt;FILENAME&gt; EXIF data</param>
+  <param name="exifWindow.list.nameHeader">Jméno</param>
+  <param name="exifWindow.list.valueHeader">Hodnota</param>
+  <param name="fileInfoWindow.caption">Informace o souboru</param>
+  <param name="fileInfoWindow.exifInfo">&lt;b&gt; Exif informace &lt;/b&gt;: &lt;a&gt; Klikněte pro zobrazení &lt;/a&gt;</param>
+  <param name="fileInfoWindow.fileDate">&lt;b&gt; Datum &lt;/b&gt;: &lt;FILEDATE&gt;</param>
+  <param name="fileInfoWindow.fileName">&lt;b&gt; Název &lt;/b&gt;: &lt;FILENAME&gt;</param>
+  <param name="fileInfoWindow.fileSize">&lt;b&gt; velikost &lt;/b&gt;: &lt;FILESIZE&gt;</param>
+  <param name="fileInfoWindow.fileStatus">&lt;b&gt; Stav &lt;/b&gt;: &lt;FILESTATUS&gt;</param>
+  <param name="fileInfoWindow.imageHeight">&lt;b&gt; Výška obrázku &lt;/b&gt;: &lt;IMAGEHEIGHT&gt;</param>
+  <param name="fileInfoWindow.imageWidth">&lt;b&gt; Šířka obrázku &lt;/b&gt;: &lt;IMAGEWIDTH&gt;</param>
+  <param name="fileStatus.cancelled">Zrušeno</param>
+  <param name="fileStatus.complete">Dokončeno</param>
+  <param name="fileStatus.encodeImage">Zakódovat obraz</param>
+  <param name="fileStatus.error">Došlo k chybě</param>
+  <param name="fileStatus.loadFile">Načítání souboru do paměti</param>
+  <param name="fileStatus.loadImage">Načítání obrazových dat</param>
+  <param name="fileStatus.processing">Nahrávání</param>
+  <param name="fileStatus.ready">Připraveno pro upload</param>
+  <param name="labelUpload.text">Vyberte soubory k nahrání</param>
+  <param name="listView.description.defaultText">Klepněte na tlačítko upravit ...</param>
+  <param name="listView.description.tooltip">Editovat popis souboru</param>
+  <param name="listView.fileNameLabel.pattern">&lt;FILENAME&gt;</param>
+  <param name="listView.label.disabledFileInfoTooltip">Velikost: &lt;FILESIZE&gt;
+Datum: &lt;FILEDATE&gt;
+Stav: &lt;FILESTATUS&gt;</param>
+  <param name="listView.label.tooltip">Velikost: &lt;FILESIZE&gt;
+Datum: &lt;FILEDATE&gt;
+Stav: &lt;FILESTATUS&gt;</param>
+  <param name="listView.removeButton.tooltip">Odstranit soubor</param>
+  <param name="listView.textInput.defaultString">Zapsat soubor komentář zde</param>
+  <param name="listViewButton.tooltip">Zobrazení seznamu</param>
+  <param name="loadingText">&lt;b&gt; INITIALIZING: &lt;PERCENT&gt;% &lt;/b&gt;</param>
+  <param name="messages.disabledType">Soubor s následujícími typy: &lt;FILETYPES&gt; se nesmí vkládat! &lt;COUNTINVALIDFILES&gt; soubory byly ignorovány!</param>
+  <param name="messages.filesCountExceeded">Pouze &lt;MAXFILECOUNT&gt; soubory závěrečné! &lt;COUNTINVALIDFILES&gt; soubory byly ignorovány!</param>
+  <param name="messages.filesCountNotEnough">Prosím, vyberte více souborů. Minimální počet je soubory &lt;MINFILECOUNT&gt;</param>
+  <param name="messages.httpError">&lt;center&gt; Chyba HTTP, '&lt;ERRORCODE&gt;' došlo. &lt;DESCRIPTION&gt;&lt;br&gt; Viz &lt;font color='#0000FF'&gt; &lt;a title='Error description' target='_blank' href='&lt;W3WLINK&gt;'&gt; &lt;W3WLINK&gt; &lt;/a&gt; &lt;/font&gt; definice chybový kód pro více informací. &lt;/center&gt;</param>
+  <param name="messages.httpError.400">Bad Request. Server nemůže pochopit přání! Obraťte se na správce serveru.</param>
+  <param name="messages.httpError.401">Neoprávněné. Ověření uživatele povinná!</param>
+  <param name="messages.httpError.402">Platba Povinné. Vyhrazené kódové!</param>
+  <param name="messages.httpError.403">Zakázáno. Server rozuměl požadavku, ale odmítá splnit to!&lt;br&gt;Pro apache servery: To se děje proto, že jste aktivovali modul Apache s názvem mod_security na serveru, který blokuje hlavičky odeslané Flash.&lt;br&gt;U IIS s ASP servery: K tomuto problému dochází, pokud záhlaví Content-Length je přítomen, a pokud záhlaví Content-Length specifikuje množství dat, která je větší než hodnota majetku v AspMaxRequestEntityAllowed metabáze IIS.&lt;br&gt;Výchozí hodnota pro AspMaxRequestEntityAllowed vlastnost je 204.800 bytů.</param>
+  <param name="messages.httpError.404">Stránka nebyla nalezena. Nemůže najít '&lt;URL&gt;' stránky na serveru!</param>
+  <param name="messages.httpError.405">Příspěvek metoda není povolena k této stránce &lt;URL&gt;! Prosím, zkuste změnit nastavení serveru, aby po způsobu přijímání skript.</param>
+  <param name="messages.httpError.406">Není přijatelné. Toto znamená, že server nemůže generovat odpověď osoby, které mají vlastnosti obsahu není přijatelná podle přijímat hlavičky odeslané v žádosti. Flash přijmout záhlaví je 'text / *'.</param>
+  <param name="messages.httpError.407">Proxy Authentication Required.</param>
+  <param name="messages.httpError.408">Request Timeout.</param>
+  <param name="messages.httpError.409">Konfliktu.</param>
+  <param name="messages.httpError.410">Pryč. Požadovaný zdroj je již k dispozici na serveru a žádné přesměrování adresa známa.</param>
+  <param name="messages.httpError.411">Povinné délka.</param>
+  <param name="messages.httpError.412">Předpoklad se nezdařilo.</param>
+  <param name="messages.httpError.413">Požadavek je příliš rozsáhlý.&lt;br&gt;U serverů IIS: 1. Snažte se zvýšit UploadReadAheadSize Vlastnost metabáze.&lt;br&gt;2. Snažte se zvýšit MaxRequestEntityAllowed hodnoty majetku v IIS config.&lt;br&gt;Pro apache server: Snažte se zvýšit LimitRequestBody parametr v httpd.conf.</param>
+  <param name="messages.httpError.414">Request-URI příliš dlouho.</param>
+  <param name="messages.httpError.415">Nepodporovaný typ média.</param>
+  <param name="messages.httpError.416">Požadovaný rozsah nelze uspokojit.</param>
+  <param name="messages.httpError.417">Očekávání se nezdařilo.</param>
+  <param name="messages.httpError.500">Internal Server Error. Obvykle to znamená, že příjem skript chyby.</param>
+  <param name="messages.httpError.501">Není implementováno. Server nepodporuje metodu POST.</param>
+  <param name="messages.httpError.502">Bad Gateway.</param>
+  <param name="messages.httpError.503">503 Služba není k dispozici. Tento server je v současné době schopen zpracovat požadavek kvůli dočasnému přetížení nebo údržby serveru.</param>
+  <param name="messages.httpError.504">Gateway Timeout.</param>
+  <param name="messages.httpError.505">Nepodporovaná verze protokolu HTTP. Server nepodporuje HTTP 1.1.</param>
+  <param name="messages.wrongFileType">Pouze soubory s následujícími typu: &lt;FILETYPES&gt; mapu! &lt;COUNTINVALIDFILES&gt; soubory byly ignorovány!</param>
+  <param name="messages.zeroSize">&lt;COUNTINVALIDFILES&gt; soubory s nulovou velikostí byly ignorovány!</param>
+  <param name="removeButton.tooltip">Odstranit vybrané soubory</param>
+  <param name="retryDialog.caption">Opakovat upload?</param>
+  <param name="retryDialog.message">Některé soubory nebyly nahrány. Chcete zkusit nahrát znovu?</param>
+  <param name="retryDialog.noLabel">Ne</param>
+  <param name="retryDialog.yesLabel">Ano</param>
+  <param name="sortButton.text"></param>
+  <param name="sortButton.tooltip">Uspořádejte</param>
+  <param name="sortMenu.byDate">Podle data</param>
+  <param name="sortMenu.byName">Podle názvu</param>
+  <param name="sortMenu.bySize">Podle velikosti</param>
+  <param name="statusLabel.text.generateThumbnails">Generování náhledů obrázků ... čekejte prosím.</param>
+  <param name="statusLabel.text.loadFile "></param>
+  <param name="statusLabel.text.ready">Počet souborů: &lt;FILESCOUNT&gt; (&lt;TOTALSIZE&gt;)</param>
+  <param name="statusLabel.text.uploadCancelled">Další soubory nahrát zrušena. Počkejte ...</param>
+  <param name="statusLabel.text.uploadComplete">Upload dokončen! &lt;UPLOADEDFILESCOUNT&gt; soubory (&lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt;), doba trvání: &lt;ELAPSEDHOUR&gt;: &lt;ELAPSEDMIN&gt;: &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.uploadProgress">Celkem: &lt;PERCENT&gt;% (&lt;FILESNUM&gt; / &lt;FILESTOUPLOADCOUNT&gt;) &lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt; (&lt;RATEVALUE&gt; / sec, čas odešel: &lt;LEFTHOUR&gt;: &lt;LEFTMIN&gt;: &lt;LEFTSEC&gt;)</param>
+  <param name="statusLabel.text.uploadStart">Nahrávání ...</param>
+  <param name="statusLabel.text.uploadStopped">Upload zastavil. Nahráno bajtů: &lt;TOTALUPLOADEDSIZE&gt;, doba trvání: &lt;ELAPSEDHOUR&gt;: &lt;ELAPSEDMIN&gt;: &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.waitForConnection">Server nebude reagovat. Se snaží znovu, čekejte prosím.</param>
+  <param name="thumbViewButton.tooltip">Zobrazení Miniatury</param>
+  <param name="thumbnail.watermark.text">Element-IT</param>
+  <param name="thumbnailView.bottomPanel.labelPattern">&lt;FILENAME&gt;</param>
+  <param name="thumbnailView.cancelCropIcon.tooltip">Zpět oříznutí obrázku</param>
+  <param name="thumbnailView.contextMenu.CropLabel">Oříznutí obrázku</param>
+  <param name="thumbnailView.contextMenu.RemoveLabel">Odstranit</param>
+  <param name="thumbnailView.contextMenu.RotateLeftLabel">Otočit doleva</param>
+  <param name="thumbnailView.contextMenu.RotateRightLabel">Otočit doprava</param>
+  <param name="thumbnailView.contextMenu.UndoCropLabel">Zpět oříznutí obrázku</param>
+  <param name="thumbnailView.cropIcon.tooltip">Oříznutí obrázku</param>
+  <param name="thumbnailView.editIcon.tooltip">Editovat popis souboru</param>
+  <param name="thumbnailView.infoIcon.disabledFileInfoTooltip">Velikost: &lt;FILESIZE&gt;
+Datum: &lt;FILEDATE&gt;
+Stav: &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.infoIcon.tooltip">Velikost: &lt;FILESIZE&gt;
+Datum: &lt;FILEDATE&gt;
+Stav: &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.removeIcon.tooltip">Odstranit</param>
+  <param name="thumbnailView.rotateLeftIcon.tooltip">Otočit doleva</param>
+  <param name="thumbnailView.rotateRightIcon.tooltip">Otočit doprava</param>
+  <param name="uploadButton.text">Upload</param>
+  <param name="uploadButton.tooltip">Start upload</param>
+</MultiPowUpload_parameters>

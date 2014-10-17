@@ -1,0 +1,41 @@
+	<form enctype="multipart/form-data" action="" class="form" method="post">
+		<input type=hidden name="root" value="{$pid_id}">
+		<input type=hidden name="gspgid_form" value="{$gspgid_form}">
+		{if isset($_gsdata.dialog)}<input type=hidden name="dialog" value="{$_gsdata.dialog}">{/if}
+
+		{include file="form_error_messages.html"}
+		{$form->set_error_template('<div class="form_error" id="err" style="display: block; "><i></i>%s</div>')}
+
+		{block name="prepare_form"}
+		{/block}
+
+
+		{foreach $form->get_fields() as $field=>$op} 
+			{$form->set_option($field,'placeholder',$form->get_option($field,'verbose_name'))}
+		{/foreach}
+		
+
+
+		{$form->_prepare_inputs()}
+
+		{$form->get_error_template('FORM_ERROR')}
+
+		{foreach $form->get_fields() as $field=>$op} 
+			{if $op.verbose_name}
+				{block name="field"}
+					<span class="inline interact_box">
+					<label>
+					{$op.verbose_name}
+					{$form->get_input($field)}
+					{$form->get_error_template($field)}
+					</label>
+					</span>
+				{/block}
+			{/if}
+		{/foreach}
+	
+
+	 	{block name="submit_button"}
+		<input type="submit" class="button" value="{$submit_title|default:"login"}" />
+		{/block}
+	</form>

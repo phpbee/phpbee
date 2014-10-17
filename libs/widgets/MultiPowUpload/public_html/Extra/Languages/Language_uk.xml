@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MultiPowUpload_parameters>
+  <param name="browseButton.text">Огляд ...</param>
+  <param name="browseButton.tooltip">Додати файли для завантаження</param>
+  <param name="cancelButton.pauseText">Пауза</param>
+  <param name="cancelButton.text">Скасувати</param>
+  <param name="cancelButton.tooltip">Скасування поточної операції</param>
+  <param name="clearButton.text">Очистити</param>
+  <param name="clearButton.tooltip">Видалити всі файли</param>
+  <param name="constant.bytes">байт</param>
+  <param name="constant.decimalSeparator">,</param>
+  <param name="constant.gigaBytes">Gb</param>
+  <param name="constant.kiloBytes">Kb</param>
+  <param name="constant.megaBytes">Mb</param>
+  <param name="contextMenu.sortByDate">Сортування за датою</param>
+  <param name="contextMenu.sortByName">Сортувати за назвою</param>
+  <param name="contextMenu.sortBySize">Сортування за розміром</param>
+  <param name="descriptionWindow.caption">Опис для файлу</param>
+  <param name="descriptionWindow.fileNavigation.fileName.label">&lt;FILENAME&gt;</param>
+  <param name="descriptionWindow.fileNavigation.nextButton.label"></param>
+  <param name="descriptionWindow.fileNavigation.previousButton.label"></param>
+  <param name="exifWindow.caption">&lt;FILENAME&gt; EXIF даних</param>
+  <param name="exifWindow.list.nameHeader">Назва</param>
+  <param name="exifWindow.list.valueHeader">Співвідношення</param>
+  <param name="fileInfoWindow.caption">Інформація про фото</param>
+  <param name="fileInfoWindow.exifInfo">&lt;b&gt; інформацію EXIF &lt;/b&gt;: &lt;a&gt; Виберіть, щоб подивитися &lt;/a&gt;</param>
+  <param name="fileInfoWindow.fileDate">&lt;b&gt; Дата &lt;/b&gt;: &lt;FILEDATE&gt;</param>
+  <param name="fileInfoWindow.fileName">&lt;b&gt; Назва &lt;/b&gt;: &lt;FILENAME&gt;</param>
+  <param name="fileInfoWindow.fileSize">&lt;b&gt; Розмір &lt;/b&gt;: &lt;FILESIZE&gt;</param>
+  <param name="fileInfoWindow.fileStatus">&lt;b&gt; Статус &lt;/b&gt;: &lt;FILESTATUS&gt;</param>
+  <param name="fileInfoWindow.imageHeight">&lt;b&gt; Висота зображення &lt;/b&gt;: &lt;IMAGEHEIGHT&gt;</param>
+  <param name="fileInfoWindow.imageWidth">&lt;b&gt; Ширина зображення &lt;/b&gt;: &lt;IMAGEWIDTH&gt;</param>
+  <param name="fileStatus.cancelled">Скасовано</param>
+  <param name="fileStatus.complete">Завершено</param>
+  <param name="fileStatus.encodeImage">Кодування зображень</param>
+  <param name="fileStatus.error">Сталася помилка</param>
+  <param name="fileStatus.loadFile">Завантаження файлів на згадку</param>
+  <param name="fileStatus.loadImage">Завантаження зображень даних</param>
+  <param name="fileStatus.processing">Завантажую</param>
+  <param name="fileStatus.ready">Чи готові для завантаження</param>
+  <param name="labelUpload.text">Вибрати файли для завантаження</param>
+  <param name="listView.description.defaultText">Натисніть, щоб змінити ...</param>
+  <param name="listView.description.tooltip">Змінити опис файлу</param>
+  <param name="listView.fileNameLabel.pattern">&lt;FILENAME&gt;</param>
+  <param name="listView.label.disabledFileInfoTooltip">Розмір: &lt;FILESIZE&gt;
+Дата: &lt;FILEDATE&gt;
+Статус: &lt;FILESTATUS&gt;</param>
+  <param name="listView.label.tooltip">Розмір: &lt;FILESIZE&gt;
+Дата: &lt;FILEDATE&gt;
+Статус: &lt;FILESTATUS&gt;</param>
+  <param name="listView.removeButton.tooltip">Видалити файл</param>
+  <param name="listView.textInput.defaultString">Створити файл коментар тут</param>
+  <param name="listViewButton.tooltip">Список "</param>
+  <param name="loadingText">&lt;b&gt; Ініціалізація: &lt;PERCENT&gt;% &lt;/b&gt;</param>
+  <param name="messages.disabledType">Файл з наступних типів: &lt;FILETYPES&gt; не допускаються для завантаження! &lt;COUNTINVALIDFILES&gt; файли були проігноровані!</param>
+  <param name="messages.filesCountExceeded">Тільки &lt;MAXFILECOUNT&gt; файлів дозволено завантажувати! &lt;COUNTINVALIDFILES&gt; файли були проігноровані!</param>
+  <param name="messages.filesCountNotEnough">Будь ласка, виберіть декілька файлів. Мінімальна файли лічильник &lt;MINFILECOUNT&gt;</param>
+  <param name="messages.httpError">&lt;center&gt; Помилка HTTP, '&lt;ERRORCODE&gt;' відбулося. &lt;DESCRIPTION&gt;&lt;br&gt; Будь ласка, см. &lt;font color='#0000FF'&gt; &lt;a title='Error description' target='_blank' href='&lt;W3WLINK&gt;'&gt; &lt;W3WLINK&gt; &lt;/a&gt; &lt;/font&gt; код помилки визначення для отримання додаткової інформації. &lt;/center&gt;</param>
+  <param name="messages.httpError.400">Bad Request. Сервер не може зрозуміти вимоги! Будь ласка, зверніться до адміністратора сервера.</param>
+  <param name="messages.httpError.401">Несанкціоноване. Перевірка автентичності користувача потрібно!</param>
+  <param name="messages.httpError.402">Потрібна оплата. Зарезервовано код!</param>
+  <param name="messages.httpError.403">Заборонене. Сервер зрозумів запит, але відмовляється виконувати його!&lt;br&gt;Для Apache сервера: Це відбувається тому, що у вас включений модуль Apache імені mod_security на сервері, який блокує заголовки надіслав Flash.&lt;br&gt;Для IIS з серверами ASP: Ця проблема виникає, якщо Content-Length заголовок присутній і якщо Content-Length заголовок визначає кількість даних, що більше, ніж значення AspMaxRequestEntityAllowed власності в метабази IIS.&lt;br&gt;Значення за замовчуванням для AspMaxRequestEntityAllowed властивість 204800 байт.</param>
+  <param name="messages.httpError.404">Сторінка не знайдена. Не вдається знайти '&lt;URL&gt; "сторінки на сервері!</param>
+  <param name="messages.httpError.405">Повідомлення метод не дозволено для цієї сторінки &lt;URL&gt;! Будь ласка, спробуйте змінити налаштування сервера, щоб після метод для отримання сценарію.</param>
+  <param name="messages.httpError.406">Не приймаються. Це означає, що сервер не може генерувати відповіді, які мають характеристики вмісту, не припустиме відповідно до прийнятих заголовками, були відправлені у запиті. Flash прийняти заголовок "текст / * '.</param>
+  <param name="messages.httpError.407">Необхідна перевірка справжності проксі.</param>
+  <param name="messages.httpError.408">Запит вийшло.</param>
+  <param name="messages.httpError.409">Конфлікт.</param>
+  <param name="messages.httpError.410">Gone. Запитаний ресурс більше не доступний на сервері і адреса переадресації не відомо.</param>
+  <param name="messages.httpError.411">Потрібно довжина.</param>
+  <param name="messages.httpError.412">Помилка попереднього умови.</param>
+  <param name="messages.httpError.413">Занадто великий об'єкт запиту.&lt;br&gt;Для IIS серверів: 1. Спробуйте збільшити UploadReadAheadSize метабази власності.&lt;br&gt;2. Спробуйте збільшити MaxRequestEntityAllowed значення властивості в конфігурації IIS.&lt;br&gt;Для Apache сервера: Спробуйте збільшити LimitRequestBody параметрів в httpd.conf.</param>
+  <param name="messages.httpError.414">Request-URI Too Long.</param>
+  <param name="messages.httpError.415">Непідтримуваний тип носія.</param>
+  <param name="messages.httpError.416">Діапазон запиту.</param>
+  <param name="messages.httpError.417">Результат не відповідає очікуваному.</param>
+  <param name="messages.httpError.500">Internal Server Error. Зазвичай це означає, що отримання сценарій помилки.</param>
+  <param name="messages.httpError.501">Не реалізовано. Сервер не підтримує метод POST.</param>
+  <param name="messages.httpError.502">Bad Gateway.</param>
+  <param name="messages.httpError.503">503 Service Unavailable. Сервер в даний час не в змозі обробити запит через тимчасову перевантаження або обслуговування сервера.</param>
+  <param name="messages.httpError.504">Gateway Timeout.</param>
+  <param name="messages.httpError.505">Цю версію HTTP не підтримується. Сервер не підтримує HTTP 1.1.</param>
+  <param name="messages.wrongFileType">Тільки файли наступних типів: &lt;FILETYPES&gt; дозволені для завантаження! &lt;COUNTINVALIDFILES&gt; файли були проігноровані!</param>
+  <param name="messages.zeroSize">&lt;COUNTINVALIDFILES&gt; Файли з нульовим розміром були проігноровані!</param>
+  <param name="removeButton.tooltip">Видалити вибрані файли</param>
+  <param name="retryDialog.caption">Повторити завантажити?</param>
+  <param name="retryDialog.message">Деякі файли не були завантажені. Ви хочете, щоб спробувати завантажити ще раз?</param>
+  <param name="retryDialog.noLabel">Ні</param>
+  <param name="retryDialog.yesLabel">Так</param>
+  <param name="sortButton.text"></param>
+  <param name="sortButton.tooltip">Сортування</param>
+  <param name="sortMenu.byDate">За датою</param>
+  <param name="sortMenu.byName">За назвою</param>
+  <param name="sortMenu.bySize">За розміром</param>
+  <param name="statusLabel.text.generateThumbnails">Створення ескізів зображень ... Будь ласка, почекайте.</param>
+  <param name="statusLabel.text.loadFile "></param>
+  <param name="statusLabel.text.ready">Кількість файлів: &lt;FILESCOUNT&gt; (&lt;TOTALSIZE&gt;)</param>
+  <param name="statusLabel.text.uploadCancelled">Наступна файлів Завантаження скасовано. Почекайте ...</param>
+  <param name="statusLabel.text.uploadComplete">Завантаження завершено! &lt;UPLOADEDFILESCOUNT&gt; файли (&lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt;), минулий час: &lt;ELAPSEDHOUR&gt;: &lt;ELAPSEDMIN&gt;: &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.uploadProgress">Усього: &lt;PERCENT&gt;% (&lt;FILESNUM&gt; / &lt;FILESTOUPLOADCOUNT&gt;) &lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt; (&lt;RATEVALUE&gt; / сек, часу залишилося: &lt;LEFTHOUR&gt;: &lt;LEFTMIN&gt;: &lt;LEFTSEC&gt;)</param>
+  <param name="statusLabel.text.uploadStart">Завантаження ...</param>
+  <param name="statusLabel.text.uploadStopped">Завантаження зупинилася. Завантажено байт: &lt;TOTALUPLOADEDSIZE&gt;, минулий час: &lt;ELAPSEDHOUR&gt;: &lt;ELAPSEDMIN&gt;: &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.waitForConnection">Сервер не відповідає. Спроба відновити, будь ласка, почекайте.</param>
+  <param name="thumbViewButton.tooltip">Ескізи сторінок</param>
+  <param name="thumbnail.watermark.text">Елемент-IT</param>
+  <param name="thumbnailView.bottomPanel.labelPattern">&lt;FILENAME&gt;</param>
+  <param name="thumbnailView.cancelCropIcon.tooltip">Скасувати обрізати зображення</param>
+  <param name="thumbnailView.contextMenu.CropLabel">Обрізати зображення</param>
+  <param name="thumbnailView.contextMenu.RemoveLabel">Видалити</param>
+  <param name="thumbnailView.contextMenu.RotateLeftLabel">Повернути наліво</param>
+  <param name="thumbnailView.contextMenu.RotateRightLabel">Повернути вправо</param>
+  <param name="thumbnailView.contextMenu.UndoCropLabel">Скасувати обрізати зображення</param>
+  <param name="thumbnailView.cropIcon.tooltip">Обрізати зображення</param>
+  <param name="thumbnailView.editIcon.tooltip">Змінити опис файлу</param>
+  <param name="thumbnailView.infoIcon.disabledFileInfoTooltip">Розмір: &lt;FILESIZE&gt;
+Дата: &lt;FILEDATE&gt;
+Статус: &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.infoIcon.tooltip">Розмір: &lt;FILESIZE&gt;
+Дата: &lt;FILEDATE&gt;
+Статус: &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.removeIcon.tooltip">Видалити</param>
+  <param name="thumbnailView.rotateLeftIcon.tooltip">Повернути наліво</param>
+  <param name="thumbnailView.rotateRightIcon.tooltip">Повернути вправо</param>
+  <param name="uploadButton.text">Завантажити</param>
+  <param name="uploadButton.tooltip">Почати завантаження</param>
+</MultiPowUpload_parameters>

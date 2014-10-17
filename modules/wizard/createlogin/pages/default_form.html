@@ -1,0 +1,17 @@
+	<form action="" name="edit" method="post" class="content form">
+		<input type=hidden name="gspgid_form" value="{$gspgid_form}">
+		{%if $form_fields=='detailed'%}
+			{$inputs=$form->get_inputs()}
+			{%foreach $login_fields  as $f%}
+				{%$f%}: {$inputs.{%$f%}.label}  {$inputs.{%$f%}.input} error:{$inputs.{%$f%}.errors|md:1}<br>
+			{%/foreach%}
+		{%else%}
+			{$formfields}
+		{%/if%}	
+		<input type=submit>
+	</form>
+
+
+
+						                
+

@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MultiPowUpload_parameters>
+  <param name="browseButton.text">Naršyti ...</param>
+  <param name="browseButton.tooltip">Pridėti failai įkelti</param>
+  <param name="cancelButton.pauseText">Pauzė</param>
+  <param name="cancelButton.text">Atšaukti</param>
+  <param name="cancelButton.tooltip">Atšaukti dabartinį operacijos</param>
+  <param name="clearButton.text">Aiškiai</param>
+  <param name="clearButton.tooltip">Pašalinti visus failus</param>
+  <param name="constant.bytes">baitų</param>
+  <param name="constant.decimalSeparator">,</param>
+  <param name="constant.gigaBytes">GB</param>
+  <param name="constant.kiloBytes">Kb</param>
+  <param name="constant.megaBytes">Mb</param>
+  <param name="contextMenu.sortByDate">Rūšiuoti pagal datą</param>
+  <param name="contextMenu.sortByName">Rūšiuoti pagal pavadinimą</param>
+  <param name="contextMenu.sortBySize">Rūšiuoti pagal dydžio</param>
+  <param name="descriptionWindow.caption">Aprašymas failui</param>
+  <param name="descriptionWindow.fileNavigation.fileName.label">&lt;FILENAME&gt;</param>
+  <param name="descriptionWindow.fileNavigation.nextButton.label"></param>
+  <param name="descriptionWindow.fileNavigation.previousButton.label"></param>
+  <param name="exifWindow.caption">&lt;FILENAME&gt; EXIF duomenis</param>
+  <param name="exifWindow.list.nameHeader">Vardas</param>
+  <param name="exifWindow.list.valueHeader">Vertė</param>
+  <param name="fileInfoWindow.caption">Failo informacija</param>
+  <param name="fileInfoWindow.exifInfo">&lt;b&gt; EXIF Info &lt;/b&gt;: &lt;a&gt; Paspauskite, kad pamatyti &lt;/a&gt;</param>
+  <param name="fileInfoWindow.fileDate">&lt;b&gt; data &lt;/b&gt;: &lt;FILEDATE&gt;</param>
+  <param name="fileInfoWindow.fileName">&lt;b&gt; Vardas &lt;/b&gt;: &lt;FILENAME&gt;</param>
+  <param name="fileInfoWindow.fileSize">&lt;b&gt; Failo dydis &lt;/b&gt;: &lt;FILESIZE&gt;</param>
+  <param name="fileInfoWindow.fileStatus">&lt;b&gt; Statusas &lt;/b&gt;: &lt;FILESTATUS&gt;</param>
+  <param name="fileInfoWindow.imageHeight">&lt;b&gt; Vaizdo aukštis &lt;/b&gt;: &lt;IMAGEHEIGHT&gt;</param>
+  <param name="fileInfoWindow.imageWidth">&lt;b&gt; Vaizdo plotis &lt;/b&gt;: &lt;IMAGEWIDTH&gt;</param>
+  <param name="fileStatus.cancelled">Atšauktas</param>
+  <param name="fileStatus.complete">Užbaigtas</param>
+  <param name="fileStatus.encodeImage">Koduoti vaizdas</param>
+  <param name="fileStatus.error">Įvyko klaida</param>
+  <param name="fileStatus.loadFile">Kraunasi failą į atminties</param>
+  <param name="fileStatus.loadImage">Kraunasi vaizdo duomenų</param>
+  <param name="fileStatus.processing">Siuntimas</param>
+  <param name="fileStatus.ready">Paruošta siuntimui</param>
+  <param name="labelUpload.text">Pasirinkite norimus įkelti failus</param>
+  <param name="listView.description.defaultText">Spustelėkite redaguoti ...</param>
+  <param name="listView.description.tooltip">Redaguoti Failo aprašymas</param>
+  <param name="listView.fileNameLabel.pattern">&lt;FILENAME&gt;</param>
+  <param name="listView.label.disabledFileInfoTooltip">Dydis: &lt;FILESIZE&gt;
+Data: &lt;FILEDATE&gt;
+Statusas: &lt;FILESTATUS&gt;</param>
+  <param name="listView.label.tooltip">Dydis: &lt;FILESIZE&gt;
+Data: &lt;FILEDATE&gt;
+Statusas: &lt;FILESTATUS&gt;</param>
+  <param name="listView.removeButton.tooltip">Ištrinti failą</param>
+  <param name="listView.textInput.defaultString">Rašyti failą komentarą čia</param>
+  <param name="listViewButton.tooltip">Rodyti sąrašą</param>
+  <param name="loadingText">&lt;b&gt; Inicijuojama: &lt;PERCENT&gt;% &lt;/b&gt;</param>
+  <param name="messages.disabledType">Failas su šių tipų: &lt;FILETYPES&gt; neleidžiama įkelti! &lt;COUNTINVALIDFILES&gt; bylos buvo ignoruojami!</param>
+  <param name="messages.filesCountExceeded">Tik &lt;MAXFILECOUNT&gt; failus leidžiama įkelti! &lt;COUNTINVALIDFILES&gt; bylos buvo ignoruojami!</param>
+  <param name="messages.filesCountNotEnough">Prašome pasirinkti kelis failus. Minimalus failų skaičius yra &lt;MINFILECOUNT&gt;</param>
+  <param name="messages.httpError">&lt;center&gt; HTTP klaida "&lt;ERRORCODE&gt;" įvyko. &lt;DESCRIPTION&gt;&lt;br&gt; Prašome žiūrėti &lt;font color='#0000FF'&gt; &lt;a title='Error description' target='_blank' href='&lt;W3WLINK&gt;'&gt; &lt;W3WLINK&gt; &lt;/a&gt; &lt;/font&gt; klaidų kodų apibrėžtys daugiau informacijos. &lt;/center&gt;</param>
+  <param name="messages.httpError.400">Bad Request. Serveris negali suprasti prašymą! Prašome susisiekti su savo serverio administratoriumi.</param>
+  <param name="messages.httpError.401">Neleistinai. Vartotojo autentifikavimas reikia!</param>
+  <param name="messages.httpError.402">Reikia mokėti. Rezervuota kodas!</param>
+  <param name="messages.httpError.403">Draudžiama. Serveris suprato užklausą, tačiau atsisako ją įvykdyti!&lt;br&gt;Apache serveriai: Tai atsitinka todėl, turite įjungti Apache modulis pavadintas mod_security serveryje, kuris blokuoja antraščių siųsti Flash.&lt;br&gt;IIS su ASP serveriai: Ši problema atsiranda, jei Content-Length antraštėje yra ir tada, Content-Length antraštėje nurodoma duomenų kiekį, kuris didesnis nei AspMaxRequestEntityAllowed turto vertės IIS metabazy.&lt;br&gt;Numatytoji vertė AspMaxRequestEntityAllowed turtas yra 204.800 baitų.</param>
+  <param name="messages.httpError.404">Puslapis nerastas. Nepavyko rasti "&lt;URL&gt;" puslapio serveryje!</param>
+  <param name="messages.httpError.405">Rašyti metodas negali šio puslapio &lt;URL&gt;! Bandykite pakeisti serverio nustatymus, kad po būdas gauti scenarijų.</param>
+  <param name="messages.httpError.406">Nėra priimtinas. Tai reiškia, kad serveris negali generuoti atsako asmenys, kurie turinio charakteristikos nėra priimtinas atsižvelgiant į pritarti headerius prašyme. Flash pripažinti antraštė yra "text / *".</param>
+  <param name="messages.httpError.407">Proxy Authentication Required.</param>
+  <param name="messages.httpError.408">Prašymas timeout.</param>
+  <param name="messages.httpError.409">Konfliktų.</param>
+  <param name="messages.httpError.410">Gone. Paprašė išteklių nebėra prieinama serveryje ir jokio siuntimo adresas yra žinomi.</param>
+  <param name="messages.httpError.411">Reikia ilgis.</param>
+  <param name="messages.httpError.412">Klaida išankstinio.</param>
+  <param name="messages.httpError.413">Per didelis objektas užklausos.&lt;br&gt;IIS serveriai: 1. Pabandykite padidinti UploadReadAheadSize metabazy nuosavybė.&lt;br&gt;2. Pabandykite padidinti MaxRequestEntityAllowed turto vertė IIS konfigūracijos.&lt;br&gt;Apache serveriai: pabandykite padidinti LimitRequestBody parametras į httpd.conf.</param>
+  <param name="messages.httpError.414">Prašymas-URI per ilgas.</param>
+  <param name="messages.httpError.415">Nepalaikomas Laikmenos tipas.</param>
+  <param name="messages.httpError.416">Prašomo netaikomas kad aptarnautų.</param>
+  <param name="messages.httpError.417">Laukimas nepavyko.</param>
+  <param name="messages.httpError.500">Internal Server Error. Paprastai tai reiškia, kad gaunančioji scenarijaus klaidas.</param>
+  <param name="messages.httpError.501">Neįgyvendinta. Serveris nepalaiko POST metodu.</param>
+  <param name="messages.httpError.502">Bad Gateway.</param>
+  <param name="messages.httpError.503">503 Paslauga neteikiama. Serveris šiuo metu negali atsiliepti į užklausimą dėl laikino arba priežiūros darbų serverio.</param>
+  <param name="messages.httpError.504">Vartai timeout.</param>
+  <param name="messages.httpError.505">HTTP versija nepalaikoma. Serveris nepalaiko HTTP 1.1.</param>
+  <param name="messages.wrongFileType">Tik failus su tokio tipo: &lt;FILETYPES&gt; leidžiama įkelti! &lt;COUNTINVALIDFILES&gt; bylos buvo ignoruojami!</param>
+  <param name="messages.zeroSize">&lt;COUNTINVALIDFILES&gt; failus su nulinio dydžio buvo ignoruojami!</param>
+  <param name="removeButton.tooltip">Pašalinti pasirinktus failus</param>
+  <param name="retryDialog.caption">Bandykite dar kartą įkelti?</param>
+  <param name="retryDialog.message">Kai kurie failai nebuvo įkelti. Ar norite pabandyti įkelti dar kartą?</param>
+  <param name="retryDialog.noLabel">Nr</param>
+  <param name="retryDialog.yesLabel">Taip</param>
+  <param name="sortButton.text"></param>
+  <param name="sortButton.tooltip">Rikiavimo tvarka</param>
+  <param name="sortMenu.byDate">Pagal datą</param>
+  <param name="sortMenu.byName">Pagal pavadinimą</param>
+  <param name="sortMenu.bySize">Pagal dydį</param>
+  <param name="statusLabel.text.generateThumbnails">Generatoriniai vaizdų miniatiūras ... Prašome palaukti.</param>
+  <param name="statusLabel.text.loadFile "></param>
+  <param name="statusLabel.text.ready">Grafas failai: &lt;FILESCOUNT&gt; (&lt;TOTALSIZE&gt;)</param>
+  <param name="statusLabel.text.uploadCancelled">Kitas failus įkelti atšauktas. Palaukite ...</param>
+  <param name="statusLabel.text.uploadComplete">Siuntimas baigtas! &lt;UPLOADEDFILESCOUNT&gt; failus (&lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt;), Praėjęs laikas: &lt;ELAPSEDHOUR&gt;: &lt;ELAPSEDMIN&gt;: &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.uploadProgress">Iš viso: &lt;PERCENT&gt;% (&lt;FILESNUM&gt; / &lt;FILESTOUPLOADCOUNT&gt;) &lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt; (&lt;RATEVALUE&gt; / sek Liko laiko: &lt;LEFTHOUR&gt;: &lt;LEFTMIN&gt;: &lt;LEFTSEC&gt;)</param>
+  <param name="statusLabel.text.uploadStart">Siuntimas ...</param>
+  <param name="statusLabel.text.uploadStopped">Įkelti sustojo. Sudėjo baitų: &lt;TOTALUPLOADEDSIZE&gt;, Praėjęs laikas: &lt;ELAPSEDHOUR&gt;: &lt;ELAPSEDMIN&gt;: &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.waitForConnection">Serveris neatsako. Bandoma iš naujo prisijungti, prašome palaukti.</param>
+  <param name="thumbViewButton.tooltip">Miniatiūros peržiūrėti</param>
+  <param name="thumbnail.watermark.text">Elementas IT</param>
+  <param name="thumbnailView.bottomPanel.labelPattern">&lt;FILENAME&gt;</param>
+  <param name="thumbnailView.cancelCropIcon.tooltip">Atšaukti apkarpyti vaizdą</param>
+  <param name="thumbnailView.contextMenu.CropLabel">Apkarpyti paveikslėlį</param>
+  <param name="thumbnailView.contextMenu.RemoveLabel">Pašalinti</param>
+  <param name="thumbnailView.contextMenu.RotateLeftLabel">Pasukti į kairę</param>
+  <param name="thumbnailView.contextMenu.RotateRightLabel">Pasukti į dešinę</param>
+  <param name="thumbnailView.contextMenu.UndoCropLabel">Atšaukti apkarpyti vaizdą</param>
+  <param name="thumbnailView.cropIcon.tooltip">Apkarpyti paveikslėlį</param>
+  <param name="thumbnailView.editIcon.tooltip">Redaguoti Failo aprašymas</param>
+  <param name="thumbnailView.infoIcon.disabledFileInfoTooltip">Dydis: &lt;FILESIZE&gt;
+Data: &lt;FILEDATE&gt;
+Statusas: &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.infoIcon.tooltip">Dydis: &lt;FILESIZE&gt;
+Data: &lt;FILEDATE&gt;
+Statusas: &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.removeIcon.tooltip">Pašalinti</param>
+  <param name="thumbnailView.rotateLeftIcon.tooltip">Pasukti į kairę</param>
+  <param name="thumbnailView.rotateRightIcon.tooltip">Pasukti į dešinę</param>
+  <param name="uploadButton.text">Įkelti</param>
+  <param name="uploadButton.tooltip">Pradėti siuntimą</param>
+</MultiPowUpload_parameters>

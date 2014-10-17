@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MultiPowUpload_parameters>
+  <param name="browseButton.text">Browse ...</param>
+  <param name="browseButton.tooltip">Tambah fail untuk meng-upload</param>
+  <param name="cancelButton.pauseText">Berhenti sebentar</param>
+  <param name="cancelButton.text">Membatalkan</param>
+  <param name="cancelButton.tooltip">Batal operasi saat ini</param>
+  <param name="clearButton.text">Jelas</param>
+  <param name="clearButton.tooltip">Padam semua fail</param>
+  <param name="constant.bytes">bait</param>
+  <param name="constant.decimalSeparator">,</param>
+  <param name="constant.gigaBytes">Gb</param>
+  <param name="constant.kiloBytes">Kb</param>
+  <param name="constant.megaBytes">Mb</param>
+  <param name="contextMenu.sortByDate">Susun mengikut tarikh</param>
+  <param name="contextMenu.sortByName">Susun mengikut nama</param>
+  <param name="contextMenu.sortBySize">Susun berdasarkan saiz</param>
+  <param name="descriptionWindow.caption">Keterangan gambar</param>
+  <param name="descriptionWindow.fileNavigation.fileName.label">&lt;FILENAME&gt;</param>
+  <param name="descriptionWindow.fileNavigation.nextButton.label"></param>
+  <param name="descriptionWindow.fileNavigation.previousButton.label"></param>
+  <param name="exifWindow.caption">&lt;FILENAME&gt; EXIF data</param>
+  <param name="exifWindow.list.nameHeader">Nama</param>
+  <param name="exifWindow.list.valueHeader">Nilai</param>
+  <param name="fileInfoWindow.caption">Informasi fail</param>
+  <param name="fileInfoWindow.exifInfo">&lt;b&gt; Exif info &lt;/b&gt;: &lt;a&gt; Klik untuk melihat &lt;/a&gt;</param>
+  <param name="fileInfoWindow.fileDate">&lt;b&gt; Tarikh &lt;/b&gt;: &lt;FILEDATE&gt;</param>
+  <param name="fileInfoWindow.fileName">&lt;b&gt; Nama &lt;/b&gt;: &lt;FILENAME&gt;</param>
+  <param name="fileInfoWindow.fileSize">&lt;b&gt; Saiz &lt;/b&gt;: &lt;FILESIZE&gt;</param>
+  <param name="fileInfoWindow.fileStatus">&lt;b&gt; Status &lt;/b&gt;: &lt;FILESTATUS&gt;</param>
+  <param name="fileInfoWindow.imageHeight">&lt;b&gt; Gambar quality &lt;/b&gt;: &lt;IMAGEHEIGHT&gt;</param>
+  <param name="fileInfoWindow.imageWidth">&lt;b&gt; Gambar lebar &lt;/b&gt;: &lt;IMAGEWIDTH&gt;</param>
+  <param name="fileStatus.cancelled">Dibatalkan</param>
+  <param name="fileStatus.complete">Selesai</param>
+  <param name="fileStatus.encodeImage">Pengekodan</param>
+  <param name="fileStatus.error">Kesalahan terjadi</param>
+  <param name="fileStatus.loadFile">Loading fail ke memori</param>
+  <param name="fileStatus.loadImage">Loading data citra</param>
+  <param name="fileStatus.processing">Memuat naik</param>
+  <param name="fileStatus.ready">Siap untuk upload</param>
+  <param name="labelUpload.text">Pilih Fail untuk meng-upload</param>
+  <param name="listView.description.defaultText">Klik untuk mengedit ...</param>
+  <param name="listView.description.tooltip">Edit fail keterangan</param>
+  <param name="listView.fileNameLabel.pattern">&lt;FILENAME&gt;</param>
+  <param name="listView.label.disabledFileInfoTooltip">Saiz: &lt;FILESIZE&gt;
+Tarikh: &lt;FILEDATE&gt;
+Status: &lt;FILESTATUS&gt;</param>
+  <param name="listView.label.tooltip">Saiz: &lt;FILESIZE&gt;
+Tarikh: &lt;FILEDATE&gt;
+Status: &lt;FILESTATUS&gt;</param>
+  <param name="listView.removeButton.tooltip">Padam fail</param>
+  <param name="listView.textInput.defaultString">Menulis fail komen di sini</param>
+  <param name="listViewButton.tooltip">Paparan senarai</param>
+  <param name="loadingText">&lt;b&gt; Initializing: &lt;PERCENT&gt;% &lt;/b&gt;</param>
+  <param name="messages.disabledType">File dengan jenis sebagai berikut: &lt;FILETYPES&gt; tidak dibenarkan untuk meng-upload! &lt;COUNTINVALIDFILES&gt; gambar-gambar yang diabaikan!</param>
+  <param name="messages.filesCountExceeded">Hanya &lt;MAXFILECOUNT&gt; file dibenarkan untuk meng-upload! &lt;COUNTINVALIDFILES&gt; gambar-gambar yang diabaikan!</param>
+  <param name="messages.filesCountNotEnough">Sila pilih beberapa fail lain. file Minimum terhitung &lt;MINFILECOUNT&gt;</param>
+  <param name="messages.httpError">&lt;center&gt; HTTP Error, '&lt;ERRORCODE&gt;' berlaku. &lt;DESCRIPTION&gt;&lt;br&gt; Sila lihat &lt;font color='#0000FF'&gt; &lt;a title='Error description' target='_blank' href='&lt;W3WLINK&gt;'&gt; &lt;W3WLINK&gt; &lt;/a&gt; &lt;/font&gt; definisi kod kesalahan untuk maklumat lebih lanjut. &lt;/center&gt;</param>
+  <param name="messages.httpError.400">Bad Request. Server tidak dapat memahami permintaan! Sila hubungi pentadbir pelayan anda.</param>
+  <param name="messages.httpError.401">Yang tidak sah. pengesahan pengguna diperlukan!</param>
+  <param name="messages.httpError.402">Pembayaran disyaratkan. Kod Reserved!</param>
+  <param name="messages.httpError.403">Terlarang. Server memahami permintaan tersebut, tetapi menolak untuk memenuhinya!&lt;br&gt;Untuk pelayan apache: Hal ini terjadi kerana anda telah mengaktifkan modul Apache bernama mod_security di pelayan yang blok header dihantar oleh Flash.&lt;br&gt;Untuk IIS dengan pelayan UNK: Masalah ini terjadi jika sebuah header Content-Length hadir dan jika header Content-Length menentukan jumlah data yang lebih besar daripada nilai hotel AspMaxRequestEntityAllowed di metabase IIS.&lt;br&gt;Nilai lalai untuk hotel AspMaxRequestEntityAllowed adalah 204800 byte.</param>
+  <param name="messages.httpError.404">Laman tidak dijumpai. Tidak dapat mencari '&lt;URL&gt;' laman di pelayan!</param>
+  <param name="messages.httpError.405">Post kaedah tidak dibenarkan untuk laman ini &lt;URL&gt;! Sila cuba menukar tetapan pelayan untuk membolehkan kaedah posting untuk menerima script.</param>
+  <param name="messages.httpError.406">Tidak diterima. Ini bermakna pelayan yang tidak dapat menghasilkan respon entiti yang mengandungi ciri-ciri kandungan tidak dapat diterima menurut menerima header dihantar dalam permintaan. Flash menerima header 'text / *'.</param>
+  <param name="messages.httpError.407">Pengesahan Proxy Diperlukan.</param>
+  <param name="messages.httpError.408">Permintaan Timeout.</param>
+  <param name="messages.httpError.409">Konflik.</param>
+  <param name="messages.httpError.410">Gone. Sumber kuasa yang diminta tidak lagi terdapat di pelayan dan tidak ada alamat forwarding diketahui.</param>
+  <param name="messages.httpError.411">Panjang Diperlukan.</param>
+  <param name="messages.httpError.412">Prekondisi Gagal.</param>
+  <param name="messages.httpError.413">Entiti Permintaan Terlalu Besar.&lt;br&gt;Untuk pelayan IIS: 1. Cobalah untuk meningkatkan hotel metabase UploadReadAheadSize.&lt;br&gt;2. Cobalah untuk meningkatkan nilai hotel MaxRequestEntityAllowed di IIS config.&lt;br&gt;Untuk pelayan apache: Cobalah untuk meningkatkan parameter LimitRequestBody di httpd.conf.</param>
+  <param name="messages.httpError.414">Permintaan-URI Too Long.</param>
+  <param name="messages.httpError.415">Tidak disokong Media Type.</param>
+  <param name="messages.httpError.416">Range Diminta Tidak satisfiable.</param>
+  <param name="messages.httpError.417">Harapan Gagal.</param>
+  <param name="messages.httpError.500">Internal Server Error. Biasanya itu bererti bahawa script menerima memiliki kesalahan.</param>
+  <param name="messages.httpError.501">Tidak Penerapan. Server tidak menyokong kaedah POST.</param>
+  <param name="messages.httpError.502">Bad Gateway.</param>
+  <param name="messages.httpError.503">503 Service Unavailable. Server saat ini tidak dapat memenuhi permintaan kerana kelebihan beban sementara atau penyelenggaraan pelayan.</param>
+  <param name="messages.httpError.504">Gateway Timeout.</param>
+  <param name="messages.httpError.505">Versi HTTP Tidak Disokong. Server tidak menyokong HTTP 1.1.</param>
+  <param name="messages.wrongFileType">Hanya fail dengan jenis sebagai berikut: &lt;FILETYPES&gt; dibenarkan untuk meng-upload! &lt;COUNTINVALIDFILES&gt; gambar-gambar yang diabaikan!</param>
+  <param name="messages.zeroSize">&lt;COUNTINVALIDFILES&gt; fail dengan saiz sifar diabaikan!</param>
+  <param name="removeButton.tooltip">Padam fail yang dipilih</param>
+  <param name="retryDialog.caption">Cuba lagi upload?</param>
+  <param name="retryDialog.message">Beberapa fail tidak upload. Adakah anda ingin mencuba untuk meng-upload lagi?</param>
+  <param name="retryDialog.noLabel">Tidak ada</param>
+  <param name="retryDialog.yesLabel">Ya</param>
+  <param name="sortButton.text"></param>
+  <param name="sortButton.tooltip">Sorting order</param>
+  <param name="sortMenu.byDate">Menurut tarikh</param>
+  <param name="sortMenu.byName">Dengan nama</param>
+  <param name="sortMenu.bySize">Dengan saiz</param>
+  <param name="statusLabel.text.generateThumbnails">Menghasilkan gambar thumbnail ... berharap tunggu.</param>
+  <param name="statusLabel.text.loadFile "></param>
+  <param name="statusLabel.text.ready">File Count: &lt;FILESCOUNT&gt; (&lt;TOTALSIZE&gt;)</param>
+  <param name="statusLabel.text.uploadCancelled">Selanjutnya upload file dibatalkan. Tunggu ...</param>
+  <param name="statusLabel.text.uploadComplete">Gambar selesai! &lt;UPLOADEDFILESCOUNT&gt; file (&lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt;), waktu terpakai: &lt;ELAPSEDHOUR&gt;: &lt;ELAPSEDMIN&gt;: &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.uploadProgress">Total: &lt;PERCENT&gt;% (&lt;FILESNUM&gt; / &lt;FILESTOUPLOADCOUNT&gt;) &lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt; (&lt;RATEVALUE&gt; / saat, waktu yang tersisa: &lt;LEFTHOUR&gt;: &lt;LEFTMIN&gt;: &lt;LEFTSEC&gt;)</param>
+  <param name="statusLabel.text.uploadStart">Meng-upload ...</param>
+  <param name="statusLabel.text.uploadStopped">Gambar berhenti. Uploaded bytes: &lt;TOTALUPLOADEDSIZE&gt;, terpakai masa: &lt;ELAPSEDHOUR&gt;: &lt;ELAPSEDMIN&gt;: &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.waitForConnection">Server tidak merespon. Mencoba kembali, sila tunggu.</param>
+  <param name="thumbViewButton.tooltip">Display thumbnail</param>
+  <param name="thumbnail.watermark.text">Elemen-IT</param>
+  <param name="thumbnailView.bottomPanel.labelPattern">&lt;FILENAME&gt;</param>
+  <param name="thumbnailView.cancelCropIcon.tooltip">Undo memotong gambar</param>
+  <param name="thumbnailView.contextMenu.CropLabel">Memotong gambar</param>
+  <param name="thumbnailView.contextMenu.RemoveLabel">Padam</param>
+  <param name="thumbnailView.contextMenu.RotateLeftLabel">Putar ke kiri</param>
+  <param name="thumbnailView.contextMenu.RotateRightLabel">Putar ke kanan</param>
+  <param name="thumbnailView.contextMenu.UndoCropLabel">Undo memotong gambar</param>
+  <param name="thumbnailView.cropIcon.tooltip">Memotong gambar</param>
+  <param name="thumbnailView.editIcon.tooltip">Edit fail keterangan</param>
+  <param name="thumbnailView.infoIcon.disabledFileInfoTooltip">Saiz: &lt;FILESIZE&gt;
+Tarikh: &lt;FILEDATE&gt;
+Status: &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.infoIcon.tooltip">Saiz: &lt;FILESIZE&gt;
+Tarikh: &lt;FILEDATE&gt;
+Status: &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.removeIcon.tooltip">Padam</param>
+  <param name="thumbnailView.rotateLeftIcon.tooltip">Putar ke kiri</param>
+  <param name="thumbnailView.rotateRightIcon.tooltip">Putar ke kanan</param>
+  <param name="uploadButton.text">Unggah</param>
+  <param name="uploadButton.tooltip">Mulai upload</param>
+</MultiPowUpload_parameters>

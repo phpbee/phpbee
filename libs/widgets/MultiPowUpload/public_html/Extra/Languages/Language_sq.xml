@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MultiPowUpload_parameters>
+  <param name="browseButton.text">Browse ...</param>
+  <param name="browseButton.tooltip">Add fotografi për upload</param>
+  <param name="cancelButton.pauseText">Pushim</param>
+  <param name="cancelButton.text">Anuloj</param>
+  <param name="cancelButton.tooltip">operacion Anulo tanishme</param>
+  <param name="clearButton.text">Qartë</param>
+  <param name="clearButton.tooltip">Hequr të gjitha dosjet</param>
+  <param name="constant.bytes">bytes</param>
+  <param name="constant.decimalSeparator">,</param>
+  <param name="constant.gigaBytes">Gb</param>
+  <param name="constant.kiloBytes">Kb</param>
+  <param name="constant.megaBytes">Mb</param>
+  <param name="contextMenu.sortByDate">Rendit sipas Data</param>
+  <param name="contextMenu.sortByName">Rendit sipas emrit</param>
+  <param name="contextMenu.sortBySize">Rendit sipas madhësisë</param>
+  <param name="descriptionWindow.caption">Description për file</param>
+  <param name="descriptionWindow.fileNavigation.fileName.label">&lt;FILENAME&gt;</param>
+  <param name="descriptionWindow.fileNavigation.nextButton.label"></param>
+  <param name="descriptionWindow.fileNavigation.previousButton.label"></param>
+  <param name="exifWindow.caption">&lt;FILENAME&gt; EXIF dhënave</param>
+  <param name="exifWindow.list.nameHeader">Emri</param>
+  <param name="exifWindow.list.valueHeader">Vlera</param>
+  <param name="fileInfoWindow.caption">Informacioni i dokumentit</param>
+  <param name="fileInfoWindow.exifInfo">&lt;b&gt; info Exif &lt;/b&gt;: &lt;a&gt; Kliko për të parë &lt;/a&gt;</param>
+  <param name="fileInfoWindow.fileDate">&lt;b&gt; Data &lt;/b&gt;: &lt;FILEDATE&gt;</param>
+  <param name="fileInfoWindow.fileName">&lt;b&gt; Emri &lt;/b&gt;: &lt;FILENAME&gt;</param>
+  <param name="fileInfoWindow.fileSize">&lt;b&gt; Size &lt;/b&gt;: &lt;FILESIZE&gt;</param>
+  <param name="fileInfoWindow.fileStatus">&lt;b&gt; Statusi &lt;/b&gt;: &lt;FILESTATUS&gt;</param>
+  <param name="fileInfoWindow.imageHeight">&lt;b&gt; lartësi Image &lt;/b&gt;: &lt;IMAGEHEIGHT&gt;</param>
+  <param name="fileInfoWindow.imageWidth">&lt;b&gt; width Image &lt;/b&gt;: &lt;IMAGEWIDTH&gt;</param>
+  <param name="fileStatus.cancelled">Anullohen</param>
+  <param name="fileStatus.complete">Kompletuar</param>
+  <param name="fileStatus.encodeImage">image Encode</param>
+  <param name="fileStatus.error">Gabim ka ndodhur</param>
+  <param name="fileStatus.loadFile">Loading file në kujtesë</param>
+  <param name="fileStatus.loadImage">Loading dhënat image</param>
+  <param name="fileStatus.processing">Ngarkimi</param>
+  <param name="fileStatus.ready">Gati për upload</param>
+  <param name="labelUpload.text">Zgjidhni Files për upload</param>
+  <param name="listView.description.defaultText">Klikoni për të redaktuar ...</param>
+  <param name="listView.description.tooltip">Edit file Përshkrimi</param>
+  <param name="listView.fileNameLabel.pattern">&lt;FILENAME&gt;</param>
+  <param name="listView.label.disabledFileInfoTooltip">Size: &lt;FILESIZE&gt;
+Data: &lt;FILEDATE&gt;
+Statusi: &lt;FILESTATUS&gt;</param>
+  <param name="listView.label.tooltip">Size: &lt;FILESIZE&gt;
+Data: &lt;FILEDATE&gt;
+Statusi: &lt;FILESTATUS&gt;</param>
+  <param name="listView.removeButton.tooltip">Remove file</param>
+  <param name="listView.textInput.defaultString">Shkruaj koment këtu file</param>
+  <param name="listViewButton.tooltip">view Lista</param>
+  <param name="loadingText">&lt;b&gt; nisjes së: &lt;PERCENT&gt;% &lt;/b&gt;</param>
+  <param name="messages.disabledType">File me llojet e mëposhtme: &lt;FILETYPES&gt; nuk janë të lejuar të ngarkoni! &lt;COUNTINVALIDFILES&gt; fotografi janë injoruar!</param>
+  <param name="messages.filesCountExceeded">Vetëm &lt;MAXFILECOUNT&gt; Fotografi të lejuar të ngarkoj! &lt;COUNTINVALIDFILES&gt; fotografi janë injoruar!</param>
+  <param name="messages.filesCountNotEnough">Ju lutem zgjidhni dosjet më shumë. Minimale fotografi akuzë është &lt;MINFILECOUNT&gt;</param>
+  <param name="messages.httpError">&lt;center&gt; HTTP Error, '&lt;ERRORCODE&gt;' ka ndodhur. &lt;DESCRIPTION&gt;&lt;br&gt; Ju lutem shikoni &lt;font color='#0000FF'&gt; &lt;a title='Error description' target='_blank' href='&lt;W3WLINK&gt;'&gt; &lt;W3WLINK&gt; &lt;/a&gt; &lt;/font&gt; përkufizimet kodi i gabimit për më shumë informacion. &lt;/center&gt;</param>
+  <param name="messages.httpError.400">Kërkesë e keqe. Serveri nuk mund ta kuptojnë kërkesën! Ju lutem kontaktoni administratorin e serverit tuaj.</param>
+  <param name="messages.httpError.401">Paautorizuar. User authentication e nevojshme!</param>
+  <param name="messages.httpError.402">Pagesa e kërkuar. Kodi rezervuara!</param>
+  <param name="messages.httpError.403">Ndaluar. Server kuptuar kërkesën, por është refuzuar për të përmbushur atë!&lt;br&gt;Për serverat Apache: Kjo ndodh për shkak se ju kanë bërë të mundur një modul Apache emrin mod_security në serverin cili bllokon headers dërguar nga Flash.&lt;br&gt;Për IIS me servera ASP: Kjo çështje ndodh në qoftë se një kokë Content-Length është i pranishëm dhe në qoftë se header Content-Length specifikon një sasi të të dhënave që është më e madhe se vlera e pasurisë AspMaxRequestEntityAllowed në metabase IIS.&lt;br&gt;Vlera e paracaktuar për pronën AspMaxRequestEntityAllowed është 204.800 bytes.</param>
+  <param name="messages.httpError.404">Faqja nuk u gjet. Nuk mund të gjeni '&lt;URL&gt;' faqe në Server!</param>
+  <param name="messages.httpError.405">Post metodë nuk lejohet për këtë faqe &lt;URL&gt;! Ju lutemi të përpiqet për të ndryshuar parametrat e serverit të lejuar postimi metodë për marrjen e shkrimit.</param>
+  <param name="messages.httpError.406">Jo e pranueshme. Kjo do të thotë që serveri nuk mund të gjenerojnë të subjekteve përgjigje të cilat nuk kanë karakteristikat e përmbajtje të pranueshme në bazë të pranojë headers dërguar në kërkesë. Flash pranoni header është 'text / * ".</param>
+  <param name="messages.httpError.407">Përdor ndërmjetës e kërkuar.</param>
+  <param name="messages.httpError.408">Kërkesë timeout.</param>
+  <param name="messages.httpError.409">Konfliktit.</param>
+  <param name="messages.httpError.410">Gone. Burimeve kërkuar nuk është më në dispozicion në server dhe nuk ka adresë përcjellja është i njohur.</param>
+  <param name="messages.httpError.411">Length e kërkuar.</param>
+  <param name="messages.httpError.412">Parakusht Dështoi.</param>
+  <param name="messages.httpError.413">I kërkuar është shumë e madhe.&lt;br&gt;Për servers IIS: 1. Të përpiqet të rrisë pronën UploadReadAheadSize metabase.&lt;br&gt;2. Mundohuni të rritur vlerën e pronës në MaxRequestEntityAllowed IIS konfigurimi.&lt;br&gt;Për serverat Apache: Mundohuni të rritur parametër LimitRequestBody në httpd.conf.</param>
+  <param name="messages.httpError.414">Kërkesë-URI Too Long.</param>
+  <param name="messages.httpError.415">Pambuluar Media Type.</param>
+  <param name="messages.httpError.416">Range kerkuar Jo Satisfiable.</param>
+  <param name="messages.httpError.417">Pritje Dështoi.</param>
+  <param name="messages.httpError.500">Gabim i Brendshëm Server. Zakonisht kjo do të thotë se skenari i marrjes kanë gabime.</param>
+  <param name="messages.httpError.501">Zbatuar Jo. Server nuk ka mbështetjen e metodë POST.</param>
+  <param name="messages.httpError.502">Gateway Bad.</param>
+  <param name="messages.httpError.503">503 Shërbimi i padisponueshëm. Serveri është aktualisht në gjendje për të trajtuar kërkesën për shkak të një mbingarkesat përkohshëm ose mirëmbajtjen e serverit.</param>
+  <param name="messages.httpError.504">Gateway Timeout.</param>
+  <param name="messages.httpError.505">Version HTTP Nuk është i Përkrahur. Server nuk suporton HTTP 1.1.</param>
+  <param name="messages.wrongFileType">fotografi Vetëm me llojin e mëposhtme: &lt;FILETYPES&gt; lejohet të ngarkoni! &lt;COUNTINVALIDFILES&gt; fotografi janë injoruar!</param>
+  <param name="messages.zeroSize">&lt;COUNTINVALIDFILES&gt; fotografi me zero madhësia janë injoruar!</param>
+  <param name="removeButton.tooltip">Hequr fotografi të zgjedhura</param>
+  <param name="retryDialog.caption">Rigjykuar ngarkoj?</param>
+  <param name="retryDialog.message">Disa fotografi nuk ishin të ngarkuar. A doni të provoni ta ngarkoni përsëri?</param>
+  <param name="retryDialog.noLabel">Nuk ka</param>
+  <param name="retryDialog.yesLabel">Po</param>
+  <param name="sortButton.text"></param>
+  <param name="sortButton.tooltip">Sorting mënyrë</param>
+  <param name="sortMenu.byDate">Nga data e</param>
+  <param name="sortMenu.byName">Sipas emrit</param>
+  <param name="sortMenu.bySize">Sipas madhësisë së</param>
+  <param name="statusLabel.text.generateThumbnails">image thumbnails Gjenerimi ... ju lutem prisni.</param>
+  <param name="statusLabel.text.loadFile "></param>
+  <param name="statusLabel.text.ready">Numërimi i files: &lt;FILESCOUNT&gt; (&lt;TOTALSIZE&gt;)</param>
+  <param name="statusLabel.text.uploadCancelled">fotografi Next upload anuluar. Prisni ...</param>
+  <param name="statusLabel.text.uploadComplete">Upload kompletuar! &lt;UPLOADEDFILESCOUNT&gt; Fotografi (&lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt;), koha që ka kaluar: &lt;ELAPSEDHOUR&gt;: &lt;ELAPSEDMIN&gt;: &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.uploadProgress">Total: &lt;PERCENT&gt;% (&lt;FILESNUM&gt; / &lt;FILESTOUPLOADCOUNT&gt;) &lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt; (&lt;RATEVALUE&gt; / sek, la koha: &lt;LEFTHOUR&gt;: &lt;LEFTMIN&gt;: &lt;LEFTSEC&gt;)</param>
+  <param name="statusLabel.text.uploadStart">Ngarkimi ...</param>
+  <param name="statusLabel.text.uploadStopped">Upload ndalur. bytes Uploaded: &lt;TOTALUPLOADEDSIZE&gt;, kaluar koha: &lt;ELAPSEDHOUR&gt;: &lt;ELAPSEDMIN&gt;: &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.waitForConnection">Serveri nuk përgjigjet. Tentimi reconnect, ju lutem prisni.</param>
+  <param name="thumbViewButton.tooltip">Thumbnails parë</param>
+  <param name="thumbnail.watermark.text">Element-IT</param>
+  <param name="thumbnailView.bottomPanel.labelPattern">&lt;FILENAME&gt;</param>
+  <param name="thumbnailView.cancelCropIcon.tooltip">kulture Undo imazhin</param>
+  <param name="thumbnailView.contextMenu.CropLabel">Pri image</param>
+  <param name="thumbnailView.contextMenu.RemoveLabel">Heq</param>
+  <param name="thumbnailView.contextMenu.RotateLeftLabel">Rotate la</param>
+  <param name="thumbnailView.contextMenu.RotateRightLabel">drejtë Rotate</param>
+  <param name="thumbnailView.contextMenu.UndoCropLabel">kulture Undo imazhin</param>
+  <param name="thumbnailView.cropIcon.tooltip">Pri image</param>
+  <param name="thumbnailView.editIcon.tooltip">Edit file Përshkrimi</param>
+  <param name="thumbnailView.infoIcon.disabledFileInfoTooltip">Size: &lt;FILESIZE&gt;
+Data: &lt;FILEDATE&gt;
+Statusi: &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.infoIcon.tooltip">Size: &lt;FILESIZE&gt;
+Data: &lt;FILEDATE&gt;
+Statusi: &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.removeIcon.tooltip">Heq</param>
+  <param name="thumbnailView.rotateLeftIcon.tooltip">Rotate la</param>
+  <param name="thumbnailView.rotateRightIcon.tooltip">drejtë Rotate</param>
+  <param name="uploadButton.text">Upload</param>
+  <param name="uploadButton.tooltip">Start upload</param>
+</MultiPowUpload_parameters>

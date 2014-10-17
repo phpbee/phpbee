@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MultiPowUpload_parameters>
+  <param name="browseButton.text">Pregledaj ...</param>
+  <param name="browseButton.tooltip">Dodaj datoteke za upload</param>
+  <param name="cancelButton.pauseText">Stanka</param>
+  <param name="cancelButton.text">Otkazati</param>
+  <param name="cancelButton.tooltip">Odustani trenutnu operaciju</param>
+  <param name="clearButton.text">Jasno</param>
+  <param name="clearButton.tooltip">Uklonite sve datoteke</param>
+  <param name="constant.bytes">bytes</param>
+  <param name="constant.decimalSeparator">,</param>
+  <param name="constant.gigaBytes">Gb</param>
+  <param name="constant.kiloBytes">KB</param>
+  <param name="constant.megaBytes">Mb</param>
+  <param name="contextMenu.sortByDate">Poredaj po datumu</param>
+  <param name="contextMenu.sortByName">Poredaj po nazivu</param>
+  <param name="contextMenu.sortBySize">Poredaj po veličini</param>
+  <param name="descriptionWindow.caption">Opis za datoteke</param>
+  <param name="descriptionWindow.fileNavigation.fileName.label">&lt;FILENAME&gt;</param>
+  <param name="descriptionWindow.fileNavigation.nextButton.label"></param>
+  <param name="descriptionWindow.fileNavigation.previousButton.label"></param>
+  <param name="exifWindow.caption">&lt;FILENAME&gt; EXIF podatke</param>
+  <param name="exifWindow.list.nameHeader">Ime</param>
+  <param name="exifWindow.list.valueHeader">Vrijednost</param>
+  <param name="fileInfoWindow.caption">Informacije o datoteci</param>
+  <param name="fileInfoWindow.exifInfo">&lt;b&gt; Exif info &lt;/b&gt;: &lt;a&gt; Kliknite da vidite u &lt;/a&gt;</param>
+  <param name="fileInfoWindow.fileDate">&lt;b&gt; Datum &lt;/b&gt;: &lt;FILEDATE&gt;</param>
+  <param name="fileInfoWindow.fileName">&lt;b&gt; Naziv &lt;/b&gt;: &lt;FILENAME&gt;</param>
+  <param name="fileInfoWindow.fileSize">&lt;b&gt; Veličina &lt;/b&gt;: &lt;FILESIZE&gt;</param>
+  <param name="fileInfoWindow.fileStatus">&lt;b&gt; Status &lt;/b&gt;: &lt;FILESTATUS&gt;</param>
+  <param name="fileInfoWindow.imageHeight">&lt;b&gt; Visina slike &lt;/b&gt;: &lt;IMAGEHEIGHT&gt;</param>
+  <param name="fileInfoWindow.imageWidth">&lt;b&gt; Image širina &lt;/b&gt;: &lt;IMAGEWIDTH&gt;</param>
+  <param name="fileStatus.cancelled">Otkazani</param>
+  <param name="fileStatus.complete">Dovršen</param>
+  <param name="fileStatus.encodeImage">Kodiranje slike</param>
+  <param name="fileStatus.error">Došlo je do pogreške</param>
+  <param name="fileStatus.loadFile">Učitavanje datoteke u memoriju</param>
+  <param name="fileStatus.loadImage">Učitavanje slikovnih podataka</param>
+  <param name="fileStatus.processing">Prijenos</param>
+  <param name="fileStatus.ready">Spreman za prijenos</param>
+  <param name="labelUpload.text">Odaberite datoteke za učitavanje</param>
+  <param name="listView.description.defaultText">Kliknite za uređivanje ...</param>
+  <param name="listView.description.tooltip">Uredi opisom datoteke</param>
+  <param name="listView.fileNameLabel.pattern">&lt;FILENAME&gt;</param>
+  <param name="listView.label.disabledFileInfoTooltip">Veličina: &lt;FILESIZE&gt;
+Datum: &lt;FILEDATE&gt;
+Status: &lt;FILESTATUS&gt;</param>
+  <param name="listView.label.tooltip">Veličina: &lt;FILESIZE&gt;
+Datum: &lt;FILEDATE&gt;
+Status: &lt;FILESTATUS&gt;</param>
+  <param name="listView.removeButton.tooltip">Ukloni datoteku</param>
+  <param name="listView.textInput.defaultString">Napišite komentar datoteke ovdje</param>
+  <param name="listViewButton.tooltip">Prikaz popisa</param>
+  <param name="loadingText">&lt;b&gt; Inicijalizacija: &lt;PERCENT&gt;% &lt;/b&gt;</param>
+  <param name="messages.disabledType">Datoteka sa sljedećih tipova: &lt;FILETYPES&gt; nisu dozvoljeni za upload! &lt;COUNTINVALIDFILES&gt; slika su zanemareni!</param>
+  <param name="messages.filesCountExceeded">Samo &lt;MAXFILECOUNT&gt; datoteke dozvoljeno da upload! &lt;COUNTINVALIDFILES&gt; slika su zanemareni!</param>
+  <param name="messages.filesCountNotEnough">Molimo odaberite joł datoteka. Minimalni broj slika je &lt;MINFILECOUNT&gt;</param>
+  <param name="messages.httpError">&lt;center&gt; HTTP pogreška, "&lt;ERRORCODE&gt;" dogodila. &lt;DESCRIPTION&gt;&lt;br&gt; Molimo pogledajte &lt;font color='#0000FF'&gt; &lt;a title='Error description' target='_blank' href='&lt;W3WLINK&gt;'&gt; &lt;W3WLINK&gt; &lt;/a&gt; &lt;/font&gt; error code definicije za više informacija. &lt;/center&gt;</param>
+  <param name="messages.httpError.400">Neispravan zahtjev. Server ne može razumjeti upit! Molimo obratite se administratoru poslužitelja.</param>
+  <param name="messages.httpError.401">Neovlašteno. Upute za autentifikaciju potrebna!</param>
+  <param name="messages.httpError.402">Zahtijeva plaćanje. Rezervirano kod!</param>
+  <param name="messages.httpError.403">Zabranjeno. Poslužitelj razumio zahtjev, ali odbija da ga ispune!&lt;br&gt;Za Apache poslužitelja: To se događa zato što ste omogućili Apache modul pod nazivom mod_security na server koji blokira zaglavlja poslao Flash.&lt;br&gt;Za IIS serverima sa ASP: Taj se problem pojavljuje ako Content-Length header je prisutan i ako Content-Length header određuje količinu podataka koja je veća od vrijednosti imovine AspMaxRequestEntityAllowed u IIS metabase.&lt;br&gt;Zadana vrijednost za AspMaxRequestEntityAllowed nekretnine je 204.800 bajtova.</param>
+  <param name="messages.httpError.404">Stranica nije pronađena. Ne mogu pronaći '&lt;URL&gt;' stranicu na server!</param>
+  <param name="messages.httpError.405">POST metoda nije dopušteno za ovu stranicu &lt;URL&gt;! Pokušajte promijeniti podešenja poslužitelja kako bi se omogućilo POST metoda za primanje skriptu.</param>
+  <param name="messages.httpError.406">Nije prihvatljiva. To znači da poslužitelj ne može generirati odgovor subjekata koji imaju sadržaj karakteristike nisu prihvatljiva prema prihvatiti zaglavlja poslali u zahtjevu. Flash prihvatiti zaglavlje je 'text / *'.</param>
+  <param name="messages.httpError.407">Proxy provjera autentičnosti Potrebna.</param>
+  <param name="messages.httpError.408">Zahtjev Timeout.</param>
+  <param name="messages.httpError.409">Sukoba.</param>
+  <param name="messages.httpError.410">Gone. Traženi resurs nije više dostupan na poslužitelju i ne prosljeđivanje adresa poznata.</param>
+  <param name="messages.httpError.411">Potrebnu dužinu.</param>
+  <param name="messages.httpError.412">Preduvjet nije uspjelo.</param>
+  <param name="messages.httpError.413">Zahtjev entiteta prevelik.&lt;br&gt;Za IIS poslužiteljima: 1. Pokušajte povećati UploadReadAheadSize metabase imovine.&lt;br&gt;2. Pokušajte povećati MaxRequestEntityAllowed vrijednosti nekretnine u IIS-config.&lt;br&gt;Za Apache poslužitelja: pokušati povećati LimitRequestBody parametar u httpd.conf.</param>
+  <param name="messages.httpError.414">Zahtjev-URI Too Long.</param>
+  <param name="messages.httpError.415">Nepodržana vrstu medija.</param>
+  <param name="messages.httpError.416">Traženi asortimana ne zadovoljiv.</param>
+  <param name="messages.httpError.417">Očekivanje nije uspjelo.</param>
+  <param name="messages.httpError.500">Interna pogreška poslužitelja. Obično to znači da primaju skripta imaju pogreške.</param>
+  <param name="messages.httpError.501">Nije implementiran. Server ne podržava POST metodom.</param>
+  <param name="messages.httpError.502">Bad Gateway.</param>
+  <param name="messages.httpError.503">503 Usluga nedostupna. Poslužitelj trenutno ne može obraditi zahtjev zbog privremenog preopterećenja ili održavanja poslužitelja.</param>
+  <param name="messages.httpError.504">Gateway timeout.</param>
+  <param name="messages.httpError.505">HTTP verzija nije podržana. Server ne podržava HTTP 1.1.</param>
+  <param name="messages.wrongFileType">Samo datoteke s sljedećim tipa: &lt;FILETYPES&gt; dozvoljeni za upload! &lt;COUNTINVALIDFILES&gt; slika su zanemareni!</param>
+  <param name="messages.zeroSize">&lt;COUNTINVALIDFILES&gt; datoteke s veličinom nula su zanemareni!</param>
+  <param name="removeButton.tooltip">Ukloni odabrane datoteke</param>
+  <param name="retryDialog.caption">Pokušaj ponovo uploadati?</param>
+  <param name="retryDialog.message">Neke datoteke nisu učitana. Želite li pokušati ponovo učitati?</param>
+  <param name="retryDialog.noLabel">Ne</param>
+  <param name="retryDialog.yesLabel">Da</param>
+  <param name="sortButton.text"></param>
+  <param name="sortButton.tooltip">Sortiranje</param>
+  <param name="sortMenu.byDate">Po datumu</param>
+  <param name="sortMenu.byName">Imenom</param>
+  <param name="sortMenu.bySize">Po veličini</param>
+  <param name="statusLabel.text.generateThumbnails">Generiranje slike minijature ... molimo pričekajte.</param>
+  <param name="statusLabel.text.loadFile "></param>
+  <param name="statusLabel.text.ready">Tačka datoteka: &lt;FILESCOUNT&gt; (&lt;TOTALSIZE&gt;)</param>
+  <param name="statusLabel.text.uploadCancelled">Sljedeća slika upload otkazan. Čekaj ...</param>
+  <param name="statusLabel.text.uploadComplete">Upload završen! &lt;UPLOADEDFILESCOUNT&gt; datoteke (&lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt;), proteklo vrijeme: &lt;ELAPSEDHOUR&gt;: &lt;ELAPSEDMIN&gt;: &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.uploadProgress">Ukupno: &lt;PERCENT&gt;% (&lt;FILESNUM&gt; / &lt;FILESTOUPLOADCOUNT&gt;) &lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt; (&lt;RATEVALUE&gt; / sec, preostalo vrijeme: &lt;LEFTHOUR&gt;: &lt;LEFTMIN&gt;: &lt;LEFTSEC&gt;)</param>
+  <param name="statusLabel.text.uploadStart">Učitavanje ...</param>
+  <param name="statusLabel.text.uploadStopped">Upload zaustavljen. Uploaded bytes: &lt;TOTALUPLOADEDSIZE&gt;, proteklo vrijeme: &lt;ELAPSEDHOUR&gt;: &lt;ELAPSEDMIN&gt;: &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.waitForConnection">Server ne reagiraju. Pokušaj ponovno, molim pričekajte.</param>
+  <param name="thumbViewButton.tooltip">Thumbnails pogled</param>
+  <param name="thumbnail.watermark.text">Element-IT</param>
+  <param name="thumbnailView.bottomPanel.labelPattern">&lt;FILENAME&gt;</param>
+  <param name="thumbnailView.cancelCropIcon.tooltip">Poništi obrezivanje slika</param>
+  <param name="thumbnailView.contextMenu.CropLabel">Obrezivanje slike</param>
+  <param name="thumbnailView.contextMenu.RemoveLabel">Ukloniti</param>
+  <param name="thumbnailView.contextMenu.RotateLeftLabel">Zakreni lijevo</param>
+  <param name="thumbnailView.contextMenu.RotateRightLabel">Zakreni desno</param>
+  <param name="thumbnailView.contextMenu.UndoCropLabel">Poništi obrezivanje slika</param>
+  <param name="thumbnailView.cropIcon.tooltip">Obrezivanje slike</param>
+  <param name="thumbnailView.editIcon.tooltip">Uredi opisom datoteke</param>
+  <param name="thumbnailView.infoIcon.disabledFileInfoTooltip">Veličina: &lt;FILESIZE&gt;
+Datum: &lt;FILEDATE&gt;
+Status: &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.infoIcon.tooltip">Veličina: &lt;FILESIZE&gt;
+Datum: &lt;FILEDATE&gt;
+Status: &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.removeIcon.tooltip">Ukloniti</param>
+  <param name="thumbnailView.rotateLeftIcon.tooltip">Zakreni lijevo</param>
+  <param name="thumbnailView.rotateRightIcon.tooltip">Zakreni desno</param>
+  <param name="uploadButton.text">Učitaj</param>
+  <param name="uploadButton.tooltip">Start upload</param>
+</MultiPowUpload_parameters>

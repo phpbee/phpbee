@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MultiPowUpload_parameters>
+  <param name="browseButton.text">Kyk na ...</param>
+  <param name="browseButton.tooltip">Voeg lêers vir oplaai</param>
+  <param name="cancelButton.pauseText">Breek</param>
+  <param name="cancelButton.text">Kanselleer</param>
+  <param name="cancelButton.tooltip">Die styl huidige bedryf</param>
+  <param name="clearButton.text">Duidelik</param>
+  <param name="clearButton.tooltip">Verwyder al die lêers</param>
+  <param name="constant.bytes">grepe</param>
+  <param name="constant.decimalSeparator">,</param>
+  <param name="constant.gigaBytes">Gb</param>
+  <param name="constant.kiloBytes">K</param>
+  <param name="constant.megaBytes">Mb</param>
+  <param name="contextMenu.sortByDate">Sorteer op datum</param>
+  <param name="contextMenu.sortByName">Sorteer volgens naam</param>
+  <param name="contextMenu.sortBySize">Sorteer deur die grootte</param>
+  <param name="descriptionWindow.caption">Beskrywing vir lêer</param>
+  <param name="descriptionWindow.fileNavigation.fileName.label">&lt;FILENAME&gt;</param>
+  <param name="descriptionWindow.fileNavigation.nextButton.label"></param>
+  <param name="descriptionWindow.fileNavigation.previousButton.label"></param>
+  <param name="exifWindow.caption">&lt;FILENAME&gt; EXIF data</param>
+  <param name="exifWindow.list.nameHeader">Naam</param>
+  <param name="exifWindow.list.valueHeader">Waarde</param>
+  <param name="fileInfoWindow.caption">Lêer inligting</param>
+  <param name="fileInfoWindow.exifInfo">&lt;b&gt; Exif info &lt;/b&gt;: &lt;a&gt; Click to view &lt;/a&gt;</param>
+  <param name="fileInfoWindow.fileDate">&lt;b&gt; Datum &lt;/b&gt;: &lt;FILEDATE&gt;</param>
+  <param name="fileInfoWindow.fileName">&lt;b&gt; Naam &lt;/b&gt;: &lt;FILENAME&gt;</param>
+  <param name="fileInfoWindow.fileSize">&lt;b&gt; Grootte &lt;/b&gt;: &lt;FILESIZE&gt;</param>
+  <param name="fileInfoWindow.fileStatus">&lt;b&gt; Status &lt;/b&gt;: &lt;FILESTATUS&gt;</param>
+  <param name="fileInfoWindow.imageHeight">&lt;b&gt; Image hoogte &lt;/b&gt;: &lt;IMAGEHEIGHT&gt;</param>
+  <param name="fileInfoWindow.imageWidth">&lt;b&gt; Image breedte &lt;/b&gt;: &lt;IMAGEWIDTH&gt;</param>
+  <param name="fileStatus.cancelled">Gekanselleerde</param>
+  <param name="fileStatus.complete">Voltooi</param>
+  <param name="fileStatus.encodeImage">Enkodeer image</param>
+  <param name="fileStatus.error">Fout het voorgekom</param>
+  <param name="fileStatus.loadFile">Laai lêer in die geheue</param>
+  <param name="fileStatus.loadImage">Laai beeld data</param>
+  <param name="fileStatus.processing">Oplaai</param>
+  <param name="fileStatus.ready">Gereed vir oplaai</param>
+  <param name="labelUpload.text">Kies lêers te laai</param>
+  <param name="listView.description.defaultText">Kliek om te wysig ...</param>
+  <param name="listView.description.tooltip">Wysig lêer beskrywing</param>
+  <param name="listView.fileNameLabel.pattern">&lt;FILENAME&gt;</param>
+  <param name="listView.label.disabledFileInfoTooltip">Grootte: &lt;FILESIZE&gt;
+Date: &lt;FILEDATE&gt;
+Status: &lt;FILESTATUS&gt;</param>
+  <param name="listView.label.tooltip">Grootte: &lt;FILESIZE&gt;
+Date: &lt;FILEDATE&gt;
+Status: &lt;FILESTATUS&gt;</param>
+  <param name="listView.removeButton.tooltip">Verwyder lêer</param>
+  <param name="listView.textInput.defaultString">Skryf lêer opmerking hier</param>
+  <param name="listViewButton.tooltip">Lys vertoning</param>
+  <param name="loadingText">&lt;b&gt; geïnisialiseer word: &lt;PERCENT&gt;% &lt;/b&gt;</param>
+  <param name="messages.disabledType">Lêer met die volgende tipes: &lt;FILETYPES&gt; word nie toegelaat om te laai! &lt;COUNTINVALIDFILES&gt; lêers is geïgnoreer!</param>
+  <param name="messages.filesCountExceeded">Slegs &lt;MAXFILECOUNT&gt; lêers toegelaat om te laai! &lt;COUNTINVALIDFILES&gt; lêers is geïgnoreer!</param>
+  <param name="messages.filesCountNotEnough">Kies asseblief meer lêers. Minimum lêers telling is &lt;MINFILECOUNT&gt;</param>
+  <param name="messages.httpError">&lt;center&gt; HTTP-fout, "&lt;ERRORCODE&gt; 'plaasgevind het. &lt;DESCRIPTION&gt;&lt;br&gt; Kyk &lt;font color='#0000FF'&gt; &lt;a title='Error description' target='_blank' href='&lt;W3WLINK&gt;'&gt; &lt;W3WLINK&gt; &lt;/a&gt; &lt;/font&gt; fout kode definisies vir meer inligting. &lt;/center&gt;</param>
+  <param name="messages.httpError.400">Bad versoek. Bediener kan nie verstaan die versoek! Tree asseblief met jou bediener administrateur.</param>
+  <param name="messages.httpError.401">Ongemagtigde. Gebruikers verifikasie vereis!</param>
+  <param name="messages.httpError.402">Betaling vereis. Voorbehou code!</param>
+  <param name="messages.httpError.403">Verbied. Die bediener verstaan die versoek, maar het geweier om dit te vervul!&lt;br&gt;Vir apache bedieners: Dit gebeur omdat jy 'n Apache module in staat gestel met die naam mod_security op die bediener wat blokke van die kop gestuur deur Flash.&lt;br&gt;Vir IIS met ASP bedieners: Hierdie probleem tree op as 'n inhoud-Lengte kop teenwoordig is en indien die Content-Lengte kop' n bedrag van data wat groter is as die waarde van die AspMaxRequestEntityAllowed eiendom in die IIS meta base.&lt;br&gt;Die verstek waarde vir die AspMaxRequestEntityAllowed eiendom is 204.800 grepe.</param>
+  <param name="messages.httpError.404">Bladsy nie gevind nie. Kan dit nie vind "&lt;URL&gt;" bladsy op die bediener!</param>
+  <param name="messages.httpError.405">Post metode nie toegelaat om hierdie bladsy &lt;URL&gt;! Probeer bediener verstellings te verander post metode te laat vir die ontvangs van script.</param>
+  <param name="messages.httpError.406">Nie aanvaarbaar nie. Dit beteken dat bediener nie kan genereer reaksie entiteite wat nie aanvaarbaar inhoud eienskappe volgens die aanvaar headers gestuur in die aanvraag. Flash aanvaar kop is 'text / *'.</param>
+  <param name="messages.httpError.407">Proxy Verifikasie vereis.</param>
+  <param name="messages.httpError.408">Versoek Timeout.</param>
+  <param name="messages.httpError.409">Konflik.</param>
+  <param name="messages.httpError.410">Weg. Die versoek hulpbron is nie meer beskikbaar nie op die bediener en geen toekomstige adres is bekend.</param>
+  <param name="messages.httpError.411">Lengte vereis.</param>
+  <param name="messages.httpError.412">Voorwaarde misluk.</param>
+  <param name="messages.httpError.413">Versoek Entiteit te groot.&lt;br&gt;Vir IIS bedieners: 1. Probeer UploadReadAheadSize meta base eiendom te verhoog.&lt;br&gt;2. Probeer MaxRequestEntityAllowed eiendom se waarde in IIS te config verhoog.&lt;br&gt;Vir apache bedieners: Probeer LimitRequestBody parameter te verhoog in httpd.conf.</param>
+  <param name="messages.httpError.414">Versoek-URI te lank.</param>
+  <param name="messages.httpError.415">Onondersteunde Media Type.</param>
+  <param name="messages.httpError.416">Versoek bereik nie.</param>
+  <param name="messages.httpError.417">Verwagting het misluk.</param>
+  <param name="messages.httpError.500">Interne Server Error. Gewoonlik beteken dit dat die ontvangs van script het foute.</param>
+  <param name="messages.httpError.501">Nie geïmplementeer nie. Bediener ondersteun nie POST-metode.</param>
+  <param name="messages.httpError.502">Bad Gateway.</param>
+  <param name="messages.httpError.503">503 Diens nie beskikbaar nie. Die bediener is tans nie die versoek as gevolg van 'n tydelike overbelasting of onderhoud van die bediener te hanteer.</param>
+  <param name="messages.httpError.504">Gateway Timeout.</param>
+  <param name="messages.httpError.505">HTTP weergawe nie ondersteun. Bediener ondersteun nie HTTP 1.1.</param>
+  <param name="messages.wrongFileType">Slegs lêers met die volgende type: &lt;FILETYPES&gt; toegelaat om te laai! &lt;COUNTINVALIDFILES&gt; lêers is geïgnoreer!</param>
+  <param name="messages.zeroSize">&lt;COUNTINVALIDFILES&gt; lêers met 'n nul grootte is geïgnoreer!</param>
+  <param name="removeButton.tooltip">Verwyder geselekteerde lêers</param>
+  <param name="retryDialog.caption">Weer probeer oplaai?</param>
+  <param name="retryDialog.message">Sommige lêers is nie opgelaai. Doen wat jy wil om te probeer om weer te laai?</param>
+  <param name="retryDialog.noLabel">Geen</param>
+  <param name="retryDialog.yesLabel">Ja</param>
+  <param name="sortButton.text"></param>
+  <param name="sortButton.tooltip">Sorteer orde</param>
+  <param name="sortMenu.byDate">Volgens datum</param>
+  <param name="sortMenu.byName">By die naam</param>
+  <param name="sortMenu.bySize">Deur die grootte</param>
+  <param name="statusLabel.text.generateThumbnails">Genereer beeld op beeld ... wag asb.</param>
+  <param name="statusLabel.text.loadFile "></param>
+  <param name="statusLabel.text.ready">Telling van lêers: &lt;FILESCOUNT&gt; (&lt;TOTALSIZE&gt;)</param>
+  <param name="statusLabel.text.uploadCancelled">Volgende lêers oplaai gekanselleer. Wag ...</param>
+  <param name="statusLabel.text.uploadComplete">Upload voltooi! &lt;UPLOADEDFILESCOUNT&gt; lêers (&lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt;), verloop tyd: &lt;ELAPSEDHOUR&gt;: &lt;ELAPSEDMIN&gt;: &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.uploadProgress">Totaal: &lt;PERCENT&gt;% (&lt;FILESNUM&gt; / &lt;FILESTOUPLOADCOUNT&gt;) &lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt; (&lt;RATEVALUE&gt; / sek, tyd links: &lt;LEFTHOUR&gt;: &lt;LEFTMIN&gt;: &lt;LEFTSEC&gt;)</param>
+  <param name="statusLabel.text.uploadStart">Oplaai ...</param>
+  <param name="statusLabel.text.uploadStopped">Oplaai gestop. Uploaded bytes: &lt;TOTALUPLOADEDSIZE&gt;, verloop tyd: &lt;ELAPSEDHOUR&gt;: &lt;ELAPSEDMIN&gt;: &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.waitForConnection">Bediener nie reageer nie. Probeer weer, wag asseblief.</param>
+  <param name="thumbViewButton.tooltip">Thumbnails oog</param>
+  <param name="thumbnail.watermark.text">Element-IT</param>
+  <param name="thumbnailView.bottomPanel.labelPattern">&lt;FILENAME&gt;</param>
+  <param name="thumbnailView.cancelCropIcon.tooltip">Ongedaan te maak die beeld oes</param>
+  <param name="thumbnailView.contextMenu.CropLabel">Oes van die beeld</param>
+  <param name="thumbnailView.contextMenu.RemoveLabel">Verwyder</param>
+  <param name="thumbnailView.contextMenu.RotateLeftLabel">Draai links</param>
+  <param name="thumbnailView.contextMenu.RotateRightLabel">Draai regs</param>
+  <param name="thumbnailView.contextMenu.UndoCropLabel">Ongedaan te maak die beeld oes</param>
+  <param name="thumbnailView.cropIcon.tooltip">Oes van die beeld</param>
+  <param name="thumbnailView.editIcon.tooltip">Wysig lêer beskrywing</param>
+  <param name="thumbnailView.infoIcon.disabledFileInfoTooltip">Grootte: &lt;FILESIZE&gt;
+Date: &lt;FILEDATE&gt;
+Status: &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.infoIcon.tooltip">Grootte: &lt;FILESIZE&gt;
+Date: &lt;FILEDATE&gt;
+Status: &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.removeIcon.tooltip">Verwyder</param>
+  <param name="thumbnailView.rotateLeftIcon.tooltip">Draai links</param>
+  <param name="thumbnailView.rotateRightIcon.tooltip">Draai regs</param>
+  <param name="uploadButton.text">Foto</param>
+  <param name="uploadButton.tooltip">Begin oplaai</param>
+</MultiPowUpload_parameters>

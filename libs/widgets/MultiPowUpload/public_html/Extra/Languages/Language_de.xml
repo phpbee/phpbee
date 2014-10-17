@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MultiPowUpload_parameters>
+  <param name="browseButton.text">Durchsuchen ...</param>
+  <param name="browseButton.tooltip">Hinzufügen von Dateien zum Upload</param>
+  <param name="cancelButton.pauseText">Pause</param>
+  <param name="cancelButton.text">Abbrechen</param>
+  <param name="cancelButton.tooltip">Abbrechen laufenden Betrieb</param>
+  <param name="clearButton.text">Clear</param>
+  <param name="clearButton.tooltip">Entfernen Sie alle Dateien</param>
+  <param name="constant.bytes">bytes</param>
+  <param name="constant.decimalSeparator">,</param>
+  <param name="constant.gigaBytes">Gb</param>
+  <param name="constant.kiloBytes">Kb</param>
+  <param name="constant.megaBytes">Mb</param>
+  <param name="contextMenu.sortByDate">Sortiert nach Datum</param>
+  <param name="contextMenu.sortByName">Nach Namen sortieren</param>
+  <param name="contextMenu.sortBySize">Sortiert nach Größe</param>
+  <param name="descriptionWindow.caption">Beschreibung für die Datei</param>
+  <param name="descriptionWindow.fileNavigation.fileName.label">&lt;FILENAME&gt;</param>
+  <param name="descriptionWindow.fileNavigation.nextButton.label"></param>
+  <param name="descriptionWindow.fileNavigation.previousButton.label"></param>
+  <param name="exifWindow.caption">&lt;FILENAME&gt; EXIF-Daten</param>
+  <param name="exifWindow.list.nameHeader">Name</param>
+  <param name="exifWindow.list.valueHeader">Preis</param>
+  <param name="fileInfoWindow.caption">Datei-Information</param>
+  <param name="fileInfoWindow.exifInfo">&lt;b&gt; Exif-Daten &lt;/b&gt;: &lt;a&gt; Klicken zum Anzeigen &lt;/a&gt;</param>
+  <param name="fileInfoWindow.fileDate">&lt;b&gt; Datum &lt;/b&gt;: &lt;FILEDATE&gt;</param>
+  <param name="fileInfoWindow.fileName">&lt;b&gt; Name &lt;/b&gt;: &lt;FILENAME&gt;</param>
+  <param name="fileInfoWindow.fileSize">&lt;b&gt; Größe &lt;/b&gt;: &lt;FILESIZE&gt;</param>
+  <param name="fileInfoWindow.fileStatus">&lt;b&gt; Status &lt;/b&gt;: &lt;FILESTATUS&gt;</param>
+  <param name="fileInfoWindow.imageHeight">&lt;b&gt; Bildhöhe &lt;/b&gt;: &lt;IMAGEHEIGHT&gt;</param>
+  <param name="fileInfoWindow.imageWidth">&lt;b&gt; Bildbreite &lt;/b&gt;: &lt;IMAGEWIDTH&gt;</param>
+  <param name="fileStatus.cancelled">Abgesagt</param>
+  <param name="fileStatus.complete">Fertiggestellt</param>
+  <param name="fileStatus.encodeImage">Encode Bild</param>
+  <param name="fileStatus.error">Fehler aufgetreten</param>
+  <param name="fileStatus.loadFile">Datei in den Speicher geladen</param>
+  <param name="fileStatus.loadImage">Lade Bild Daten</param>
+  <param name="fileStatus.processing">Hochladen</param>
+  <param name="fileStatus.ready">Bereit für den Upload</param>
+  <param name="labelUpload.text">Wählen Sie Dateien hochladen</param>
+  <param name="listView.description.defaultText">Zum Bearbeiten klicken ...</param>
+  <param name="listView.description.tooltip">Bearbeiten von Datei-Beschreibung</param>
+  <param name="listView.fileNameLabel.pattern">&lt;FILENAME&gt;</param>
+  <param name="listView.label.disabledFileInfoTooltip">Größe: &lt;FILESIZE&gt;
+Datum: &lt;FILEDATE&gt;
+Status: &lt;FILESTATUS&gt;</param>
+  <param name="listView.label.tooltip">Größe: &lt;FILESIZE&gt;
+Datum: &lt;FILEDATE&gt;
+Status: &lt;FILESTATUS&gt;</param>
+  <param name="listView.removeButton.tooltip">Datei entfernen</param>
+  <param name="listView.textInput.defaultString">Datei schreiben Kommentar</param>
+  <param name="listViewButton.tooltip">Listenansicht</param>
+  <param name="loadingText">&lt;b&gt; INITIALIZING: &lt;PERCENT&gt;% &lt;/b&gt;</param>
+  <param name="messages.disabledType">Datei mit folgenden Typen: &lt;FILETYPES&gt; dürfen nicht hochladen! &lt;COUNTINVALIDFILES&gt; Dateien wurden ignoriert!</param>
+  <param name="messages.filesCountExceeded">Nur &lt;MAXFILECOUNT&gt; Dateien hochladen darf! &lt;COUNTINVALIDFILES&gt; Dateien wurden ignoriert!</param>
+  <param name="messages.filesCountNotEnough">Bitte wählen Sie weitere Dateien. Minimale Anzahl von Dateien ist &lt;MINFILECOUNT&gt;</param>
+  <param name="messages.httpError">&lt;center&gt; HTTP-Fehler "&lt;ERRORCODE&gt;" aufgetreten. &lt;DESCRIPTION&gt;&lt;br&gt; Bitte sehen &lt;font color='#0000FF'&gt; &lt;a title='Error description' target='_blank' href='&lt;W3WLINK&gt;'&gt; &lt;W3WLINK&gt; &lt;/a&gt; &lt;/font&gt; Fehlercode Definitionen für weitere Informationen. &lt;/center&gt;</param>
+  <param name="messages.httpError.400">Bad Request. Server kann die Anfrage nicht verarbeiten! Bitte wenden Sie sich an Ihren Serveradministrator.</param>
+  <param name="messages.httpError.401">Unauthorized. Benutzer-Authentifizierung erforderlich!</param>
+  <param name="messages.httpError.402">Zahlung erforderlich. Reserviert Code!</param>
+  <param name="messages.httpError.403">Forbidden. Der Server versteht die Anfrage, aber sich weigert, sie zu erfüllen!&lt;br&gt;Für Apache-Server: Dies geschieht, weil Sie einen Apache-Modul namens mod_security auf dem Server, welche Blöcke die Kopfzeilen von Flash gesendet aktiviert haben.&lt;br&gt;Für IIS mit ASP-Servern: Dieses Problem tritt auf, wenn ein Content-Length-Header vorhanden ist und wenn der Content-Length-Header gibt eine Menge von Daten, die größer als der Wert der Immobilie in AspMaxRequestEntityAllowed der IIS-Metabasis ist.&lt;br&gt;Der Standardwert für die Eigenschaft AspMaxRequestEntityAllowed ist 204800 bytes.</param>
+  <param name="messages.httpError.404">Seite nicht gefunden. Kann nicht finden "&lt;URL&gt; 'Seite auf dem Server!</param>
+  <param name="messages.httpError.405">Post-Methode nicht für diese Seite &lt;URL&gt; erlaubt! Bitte versuchen Sie Server-Einstellungen ändern, um POST-Methode für den Empfang von Skript zu ermöglichen.</param>
+  <param name="messages.httpError.406">Nicht akzeptabel. Dies bedeutet, dass Server kann keine Antwort Einheiten, die Inhalte Merkmale nicht akzeptabel nach dem akzeptieren Header in der Anfrage gesendet. Flash akzeptieren Header ist 'text / *'.</param>
+  <param name="messages.httpError.407">Proxy-Authentifizierung erforderlich.</param>
+  <param name="messages.httpError.408">Request Timeout.</param>
+  <param name="messages.httpError.409">Conflict.</param>
+  <param name="messages.httpError.410">Gone. Die angeforderte Ressource wird nicht mehr auf dem Server vorhanden ist und keine Weiterleitung Adresse bekannt ist.</param>
+  <param name="messages.httpError.411">Länge erforderlich.</param>
+  <param name="messages.httpError.412">Vorbedingung fehlgeschlagen.</param>
+  <param name="messages.httpError.413">Request Entity Too Large.&lt;br&gt;Für IIS-Server: 1. Versuchen Sie, UploadReadAheadSize Metabasiseigenschaft erhöhen.&lt;br&gt;2. Versuchen Sie, MaxRequestEntityAllowed Eigenschaftswert in IIS config zu erhöhen.&lt;br&gt;Für Apache-Server: Versuchen Sie LimitRequestBody Parameter in der Datei httpd.conf erhöhen.</param>
+  <param name="messages.httpError.414">Request-URI Too Long.</param>
+  <param name="messages.httpError.415">Unterstützte Medientypen.</param>
+  <param name="messages.httpError.416">Nicht autorisiert.</param>
+  <param name="messages.httpError.417">Erwartungen sind nicht eingetroffen.</param>
+  <param name="messages.httpError.500">Internal Server Error. Normalerweise bedeutet dies, dass empfangenden Skript Fehler.</param>
+  <param name="messages.httpError.501">Nicht implementiert. Server unterstützt keine POST-Methode.</param>
+  <param name="messages.httpError.502">Bad Gateway.</param>
+  <param name="messages.httpError.503">503 Service Unavailable. Der Server ist derzeit nicht in der Lage die Anfrage wegen kurzzeitiger Überlastung oder Wartung des Servers zu bewältigen.</param>
+  <param name="messages.httpError.504">Gateway Timeout.</param>
+  <param name="messages.httpError.505">HTTP-Version nicht unterstützt. Server unterstützt keine HTTP 1.1.</param>
+  <param name="messages.wrongFileType">Nur Dateien mit folgenden Typs: &lt;FILETYPES&gt; hochladen darf! &lt;COUNTINVALIDFILES&gt; Dateien wurden ignoriert!</param>
+  <param name="messages.zeroSize">&lt;COUNTINVALIDFILES&gt; Dateien mit Größe Null wurden ignoriert!</param>
+  <param name="removeButton.tooltip">Ausgewählte Dateien entfernen</param>
+  <param name="retryDialog.caption">Wiederholen hochladen?</param>
+  <param name="retryDialog.message">Einige Dateien wurden nicht hochgeladen. Wollen Sie versuchen, wieder hochladen?</param>
+  <param name="retryDialog.noLabel">Nein</param>
+  <param name="retryDialog.yesLabel">Ja</param>
+  <param name="sortButton.text"></param>
+  <param name="sortButton.tooltip">Sortierreihenfolge</param>
+  <param name="sortMenu.byDate">Nach Datum</param>
+  <param name="sortMenu.byName">Mit Namen</param>
+  <param name="sortMenu.bySize">Nach Größe</param>
+  <param name="statusLabel.text.generateThumbnails">Generieren Miniaturansichten ... Bitte warten.</param>
+  <param name="statusLabel.text.loadFile "></param>
+  <param name="statusLabel.text.ready">Graf von Dateien: &lt;FILESCOUNT&gt; (&lt;TOTALSIZE&gt;)</param>
+  <param name="statusLabel.text.uploadCancelled">Weiter Dateien gelöscht hochzuladen. Warten Sie ...</param>
+  <param name="statusLabel.text.uploadComplete">Upload abgeschlossen! &lt;UPLOADEDFILESCOUNT&gt; Dateien (&lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt;), die verstrichene Zeit: &lt;ELAPSEDHOUR&gt;: &lt;ELAPSEDMIN&gt;: &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.uploadProgress">Gesamt: &lt;PERCENT&gt;% (&lt;FILESNUM&gt; / &lt;FILESTOUPLOADCOUNT&gt;) &lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt; (&lt;RATEVALUE&gt; / sec, Restzeit: &lt;LEFTHOUR&gt;: &lt;LEFTMIN&gt;: &lt;LEFTSEC&gt;)</param>
+  <param name="statusLabel.text.uploadStart">Hochladen ...</param>
+  <param name="statusLabel.text.uploadStopped">Upload gestoppt. Hochgeladen Bytes: &lt;TOTALUPLOADEDSIZE&gt;, Restzeit: &lt;ELAPSEDHOUR&gt;: &lt;ELAPSEDMIN&gt;: &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.waitForConnection">Server antwortet nicht. Der Versuch wieder, bitte warten.</param>
+  <param name="thumbViewButton.tooltip">Miniaturansicht</param>
+  <param name="thumbnail.watermark.text">Element-IT</param>
+  <param name="thumbnailView.bottomPanel.labelPattern">&lt;FILENAME&gt;</param>
+  <param name="thumbnailView.cancelCropIcon.tooltip">Rückgängig das Bild zuschneiden</param>
+  <param name="thumbnailView.contextMenu.CropLabel">Schneiden Sie das Bild</param>
+  <param name="thumbnailView.contextMenu.RemoveLabel">Entfernen</param>
+  <param name="thumbnailView.contextMenu.RotateLeftLabel">Nach links drehen</param>
+  <param name="thumbnailView.contextMenu.RotateRightLabel">Nach rechts drehen</param>
+  <param name="thumbnailView.contextMenu.UndoCropLabel">Rückgängig das Bild zuschneiden</param>
+  <param name="thumbnailView.cropIcon.tooltip">Schneiden Sie das Bild</param>
+  <param name="thumbnailView.editIcon.tooltip">Bearbeiten von Datei-Beschreibung</param>
+  <param name="thumbnailView.infoIcon.disabledFileInfoTooltip">Größe: &lt;FILESIZE&gt;
+Datum: &lt;FILEDATE&gt;
+Status: &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.infoIcon.tooltip">Größe: &lt;FILESIZE&gt;
+Datum: &lt;FILEDATE&gt;
+Status: &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.removeIcon.tooltip">Entfernen</param>
+  <param name="thumbnailView.rotateLeftIcon.tooltip">Nach links drehen</param>
+  <param name="thumbnailView.rotateRightIcon.tooltip">Nach rechts drehen</param>
+  <param name="uploadButton.text">Upload</param>
+  <param name="uploadButton.tooltip">Upload starten</param>
+</MultiPowUpload_parameters>

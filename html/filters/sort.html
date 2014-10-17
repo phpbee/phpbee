@@ -1,0 +1,8 @@
+	<label>{$prelabel}
+	<select name="{$keyname}">
+	{foreach from=$values item=item}
+	<option value="{$item}" {if  $current==$item}selected="selected"{/if}>{$item}</option>
+	<option value="{$item}:desc" {if $current=="`$item`:desc"}selected="selected"{/if}>{$item} desc</option>
+	{/foreach}
+	</select>
+	{$label}</label>

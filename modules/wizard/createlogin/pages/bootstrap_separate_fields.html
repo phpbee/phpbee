@@ -1,0 +1,31 @@
+	<form enctype="multipart/form-data" action="" class="form-inline" method="post">
+		<input type=hidden name="root" value="{$pid_id}">
+		<input type=hidden name="gspgid_form" value="{$gspgid_form}">
+
+		{include file="form_error_messages.html"}
+		{$form->set_error_template('<span class="label label-warning">%s</span>')}
+		{$form->set_option_allfields('cssclass','input-small')}
+
+
+		{foreach $form->get_fields() as $field=>$op} 
+			{$form->set_option($field,'placeholder',$form->get_option($field,'verbose_name'))}
+		{/foreach}
+		
+
+
+		{$form->_prepare_inputs()}
+
+		{$form->print_error('FORM_ERROR',true,'<div class="alert">%s</div>')}
+
+		{foreach $form->get_fields() as $field=>$op} 
+			{if $op.verbose_name}
+				{block name="field"}
+					{$form->get_input($field)}
+					{$form->get_error_template($field)}
+				{/block}
+			{/if}
+		{/foreach}
+	
+
+		<input type="submit" class="btn"  value="{$submit_title|default:"Sign in"}" />
+	</form>

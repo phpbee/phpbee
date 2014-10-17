@@ -1,0 +1,23 @@
+	<form enctype="multipart/form-data" action="" method="post">
+		<input type=hidden name="gspgid_form" value="{$gspgid_form}">
+
+		{include file="form_error_messages.html"}
+	{%foreach $fields as $f%}
+		{$form->set_option('{%$f->name%}','placeholder','{%$f->verbose_name%}')}
+	{%/foreach%}
+	
+	{%foreach $fields as $f%} 
+		{$form->set_error_template('<div class="form_error" id="err" style="display: block; "><i></i>%s</div>')}
+
+		{$form->set_option_allfields('cssclass','field3')}
+
+		{$form->_prepare_inputs()}
+
+	{$form->print_error('FORM_ERROR')}
+		<label>{%$f->verbose_name%} {$form->get_input('{%$f->name%}')} </label>
+		{$form->print_error('{%$f->name%}')}
+		</br>
+	{%/foreach%}
+
+		<input type=submit>
+	</form>

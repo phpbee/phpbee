@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MultiPowUpload_parameters>
+  <param name="browseButton.text">Araştır ...</param>
+  <param name="browseButton.tooltip">Yüklemek için dosya ekleme</param>
+  <param name="cancelButton.pauseText">Duraklatmak</param>
+  <param name="cancelButton.text">Iptal</param>
+  <param name="cancelButton.tooltip">Iptal geçerli işlem</param>
+  <param name="clearButton.text">Açık</param>
+  <param name="clearButton.tooltip">tüm dosyalar kaldırılsın</param>
+  <param name="constant.bytes">bayt</param>
+  <param name="constant.decimalSeparator">,</param>
+  <param name="constant.gigaBytes">Gb</param>
+  <param name="constant.kiloBytes">Kb</param>
+  <param name="constant.megaBytes">Mb</param>
+  <param name="contextMenu.sortByDate">tarihine göre sırala</param>
+  <param name="contextMenu.sortByName">adına göre sırala</param>
+  <param name="contextMenu.sortBySize">büyüklüğüne göre sırala</param>
+  <param name="descriptionWindow.caption">dosya için Açıklama</param>
+  <param name="descriptionWindow.fileNavigation.fileName.label">&lt;FILENAME&gt;</param>
+  <param name="descriptionWindow.fileNavigation.nextButton.label"></param>
+  <param name="descriptionWindow.fileNavigation.previousButton.label"></param>
+  <param name="exifWindow.caption">&lt;FILENAME&gt; EXIF verilerini</param>
+  <param name="exifWindow.list.nameHeader">Adı</param>
+  <param name="exifWindow.list.valueHeader">Değer</param>
+  <param name="fileInfoWindow.caption">Dosya bilgileri</param>
+  <param name="fileInfoWindow.exifInfo">&lt;b&gt; Exif bilgisi &lt;/b&gt;: &lt;a&gt; görmek için tıklayın &lt;/a&gt;</param>
+  <param name="fileInfoWindow.fileDate">&lt;b&gt; Tarih &lt;/b&gt;: &lt;FILEDATE&gt;</param>
+  <param name="fileInfoWindow.fileName">&lt;b&gt; Ad &lt;/b&gt;: &lt;FILENAME&gt;</param>
+  <param name="fileInfoWindow.fileSize">&lt;b&gt; Boyut &lt;/b&gt;: &lt;FILESIZE&gt;</param>
+  <param name="fileInfoWindow.fileStatus">&lt;b&gt; Durum &lt;/b&gt;: &lt;FILESTATUS&gt;</param>
+  <param name="fileInfoWindow.imageHeight">&lt;b&gt; Görüntü yükseklik &lt;/b&gt;: &lt;IMAGEHEIGHT&gt;</param>
+  <param name="fileInfoWindow.imageWidth">&lt;b&gt; Resim genişliği &lt;/b&gt;: &lt;IMAGEWIDTH&gt;</param>
+  <param name="fileStatus.cancelled">İptal edildi</param>
+  <param name="fileStatus.complete">Tamamlandı</param>
+  <param name="fileStatus.encodeImage">Kodlamak görüntü</param>
+  <param name="fileStatus.error">Hata oluştu</param>
+  <param name="fileStatus.loadFile">belleğe dosya yükleme</param>
+  <param name="fileStatus.loadImage">görüntü verisi yükleniyor</param>
+  <param name="fileStatus.processing">Yükleme</param>
+  <param name="fileStatus.ready">Yüklemek için hazır</param>
+  <param name="labelUpload.text">Seçmek Dosyaları yüklemek için</param>
+  <param name="listView.description.defaultText">düzenlemek için tıklayın ...</param>
+  <param name="listView.description.tooltip">açıklama dosyası düzenle</param>
+  <param name="listView.fileNameLabel.pattern">&lt;FILENAME&gt;</param>
+  <param name="listView.label.disabledFileInfoTooltip">Boyutu: &lt;FILESIZE&gt;
+Tarih: &lt;FILEDATE&gt;
+Durum: &lt;FILESTATUS&gt;</param>
+  <param name="listView.label.tooltip">Boyutu: &lt;FILESIZE&gt;
+Tarih: &lt;FILEDATE&gt;
+Durum: &lt;FILESTATUS&gt;</param>
+  <param name="listView.removeButton.tooltip">dosyayı kaldır</param>
+  <param name="listView.textInput.defaultString">burada yorum dosya yaz</param>
+  <param name="listViewButton.tooltip">Liste görünümü</param>
+  <param name="loadingText">&lt;b&gt; INITIALIZING: &lt;PERCENT&gt;% &lt;/b&gt;</param>
+  <param name="messages.disabledType">aşağıdaki türden Dosya: &lt;FILETYPES&gt; yüklemek için izin verilmiyor! &lt;COUNTINVALIDFILES&gt; dosyaları yok oldu!</param>
+  <param name="messages.filesCountExceeded">Sadece &lt;MAXFILECOUNT&gt; yüklemek için izin dosyaları! &lt;COUNTINVALIDFILES&gt; dosyaları yok oldu!</param>
+  <param name="messages.filesCountNotEnough">daha fazla dosya seçin. Minimum dosyalar sayısı &lt;MINFILECOUNT&gt;</param>
+  <param name="messages.httpError">&lt;center&gt; HTTP Hatası, '&lt;ERRORCODE&gt;' oluştu. &lt;DESCRIPTION&gt;&lt;br&gt; &lt;font color='#0000FF'&gt; Daha fazla bilgi için &lt;a title='Error description' target='_blank' href='&lt;W3WLINK&gt;'&gt; &lt;W3WLINK&gt; &lt;/a&gt; &lt;/font&gt; hata kodu tanımlarını bakınız. &lt;/center&gt;</param>
+  <param name="messages.httpError.400">Kötü isteyin. Sunucu isteği anlayamıyorum! sunucu yöneticinize başvurun.</param>
+  <param name="messages.httpError.401">Yetkisiz. Kullanıcı kimlik doğrulaması gerekli!</param>
+  <param name="messages.httpError.402">Ödeme Gerekli. Ayrılmış kod!</param>
+  <param name="messages.httpError.403">Yasak. Sunucu, ancak talep anladım onu yerine getirmek için reddediyor!&lt;br&gt;Apache sunucular için: blok başlıklarını Flash tarafından gönderilen sunucu üzerinde mod_security adlı bir Apache modülü etkin olması nedeni olur.&lt;br&gt;ASP ile IIS sunucuları için: Bu sorun bir Content-Length başlığı ve varsa Content-Length başlığı IIS metatabanı içinde AspMaxRequestEntityAllowed özelliğinin değeri daha büyük bir veri miktarını belirtir oluşur.&lt;br&gt;AspMaxRequestEntityAllowed özelliğinin varsayılan değeri 204.800 bayttır.</param>
+  <param name="messages.httpError.404">Sayfa bulunamadı. sunucuda '&lt;URL&gt;' sayfası bulunamıyor!</param>
+  <param name="messages.httpError.405">Post metodu bu sayfayı &lt;URL&gt; için izin verilmiyor! komut almak için yazılan yöntem sağlamak için sunucu ayarlarını değiştirmek için deneyin.</param>
+  <param name="messages.httpError.406">Değil kabul edilebilir. Bu bu sunucu isteğinde gönderilen başlıklarını kabul göre kabul edilebilir içerik özellikleriyle değil yanıt varlıklar üretemez demek. Flash başlığı '/ * metin' olduğunu kabul ediyoruz.</param>
+  <param name="messages.httpError.407">Proxy Kimlik Denetimi Gerekiyor.</param>
+  <param name="messages.httpError.408">Talep Zaman Aşımı.</param>
+  <param name="messages.httpError.409">Çatışma.</param>
+  <param name="messages.httpError.410">Gitmiş. İstenen kaynak ve sunucuda artık mevcut değil hiçbir yönlendirme adresi biliniyor.</param>
+  <param name="messages.httpError.411">Uzunluk Gerekli.</param>
+  <param name="messages.httpError.412">Önkoşul Başarısız.</param>
+  <param name="messages.httpError.413">İstek varlığı çok büyük.&lt;br&gt;1: IIS sunucuları için. UploadReadAheadSize metatabanı özelliği artırmak için çalışın.&lt;br&gt;2. config IIS MaxRequestEntityAllowed özellik değerini artırmak için çalışın.&lt;br&gt;Apache sunucuları için: httpd.conf LimitRequestBody parametre artırmak için çalışın.</param>
+  <param name="messages.httpError.414">Istek-Too Long URI.</param>
+  <param name="messages.httpError.415">Desteklenmeyen Medya Türü.</param>
+  <param name="messages.httpError.416">İstenen aralık karşılanabilir değil.</param>
+  <param name="messages.httpError.417">Beklenti Başarısız.</param>
+  <param name="messages.httpError.500">Internal Server Error. Genellikle o alan komut dosyası hataları var demektir.</param>
+  <param name="messages.httpError.501">Uygulanan değil. Sunucu POST yöntemi desteklemiyor.</param>
+  <param name="messages.httpError.502">Kötü Gateway.</param>
+  <param name="messages.httpError.503">Ulaşılamıyor 503 Servisi. Sunucu şu anda isteğe geçici aşırı yüklenme veya sunucunun bakımı nedeniyle idare edemiyor.</param>
+  <param name="messages.httpError.504">Ağ geçidi zaman aşımı.</param>
+  <param name="messages.httpError.505">HTTP sürümü desteklenmiyor. Sunucu HTTP 1.1 desteklemiyor.</param>
+  <param name="messages.wrongFileType">Aşağıdaki tip Sadece dosyaları: &lt;FILETYPES&gt; yüklemek için izin! &lt;COUNTINVALIDFILES&gt; dosyaları yok oldu!</param>
+  <param name="messages.zeroSize">boyutu sıfır &lt;COUNTINVALIDFILES&gt; dosyaları yok oldu!</param>
+  <param name="removeButton.tooltip">Seçilen dosyaları kaldırın</param>
+  <param name="retryDialog.caption">Yeniden deneme upload?</param>
+  <param name="retryDialog.message">Bazı dosyaları yükledi değildi. tekrar yüklemek denemek ister misiniz?</param>
+  <param name="retryDialog.noLabel">Yok</param>
+  <param name="retryDialog.yesLabel">Evet</param>
+  <param name="sortButton.text"></param>
+  <param name="sortButton.tooltip">sipariş Sıralama</param>
+  <param name="sortMenu.byDate">Tarihe göre</param>
+  <param name="sortMenu.byName">İsme göre</param>
+  <param name="sortMenu.bySize">büyüklüğüne göre</param>
+  <param name="statusLabel.text.generateThumbnails">Üreten küçük resimleri ... lütfen bekleyin.</param>
+  <param name="statusLabel.text.loadFile "></param>
+  <param name="statusLabel.text.ready">Dosya Sayısı: &lt;FILESCOUNT&gt; (&lt;TOTALSIZE&gt;)</param>
+  <param name="statusLabel.text.uploadCancelled">Sonraki dosyaları iptal yükleyin. Bekleyin ...</param>
+  <param name="statusLabel.text.uploadComplete">Upload tamamlandı! &lt;UPLOADEDFILESCOUNT&gt; dosyaları (&lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt;), Geçen süre: &lt;ELAPSEDHOUR&gt;: &lt;ELAPSEDMIN&gt;: &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.uploadProgress">Toplam: &lt;PERCENT&gt;% (&lt;FILESNUM&gt; / &lt;FILESTOUPLOADCOUNT&gt;) &lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt; (&lt;RATEVALUE&gt; / saniye, zaman sol: &lt;LEFTHOUR&gt;: &lt;LEFTMIN&gt;: &lt;LEFTSEC&gt;)</param>
+  <param name="statusLabel.text.uploadStart">Yükleyerek ...</param>
+  <param name="statusLabel.text.uploadStopped">Upload durdu. Yüklenen byte: &lt;TOTALUPLOADEDSIZE&gt;, zaman Geçen: &lt;ELAPSEDHOUR&gt;: &lt;ELAPSEDMIN&gt;: &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.waitForConnection">Sunucu yanıt vermiyor. yeniden denemek, lütfen bekleyin.</param>
+  <param name="thumbViewButton.tooltip">Küçük görmek</param>
+  <param name="thumbnail.watermark.text">Element-IT</param>
+  <param name="thumbnailView.bottomPanel.labelPattern">&lt;FILENAME&gt;</param>
+  <param name="thumbnailView.cancelCropIcon.tooltip">Geri kırpmak görüntü</param>
+  <param name="thumbnailView.contextMenu.CropLabel">Kırpmak görüntü</param>
+  <param name="thumbnailView.contextMenu.RemoveLabel">Kaldırmak</param>
+  <param name="thumbnailView.contextMenu.RotateLeftLabel">Döndürmek bıraktı</param>
+  <param name="thumbnailView.contextMenu.RotateRightLabel">Döndürmek doğru</param>
+  <param name="thumbnailView.contextMenu.UndoCropLabel">Geri kırpmak görüntü</param>
+  <param name="thumbnailView.cropIcon.tooltip">Kırpmak görüntü</param>
+  <param name="thumbnailView.editIcon.tooltip">açıklama dosyası düzenle</param>
+  <param name="thumbnailView.infoIcon.disabledFileInfoTooltip">Boyutu: &lt;FILESIZE&gt;
+Tarih: &lt;FILEDATE&gt;
+Durum: &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.infoIcon.tooltip">Boyutu: &lt;FILESIZE&gt;
+Tarih: &lt;FILEDATE&gt;
+Durum: &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.removeIcon.tooltip">Kaldırmak</param>
+  <param name="thumbnailView.rotateLeftIcon.tooltip">Döndürmek bıraktı</param>
+  <param name="thumbnailView.rotateRightIcon.tooltip">Döndürmek doğru</param>
+  <param name="uploadButton.text">Upload</param>
+  <param name="uploadButton.tooltip">upload Başlat</param>
+</MultiPowUpload_parameters>

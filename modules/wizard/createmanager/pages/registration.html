@@ -1,0 +1,17 @@
+{extends file="manager_page.html"}
+
+{block name="title"}
+	{%$rs.title%}
+{/block}
+
+{block name="login"}
+
+
+	<h4>{%$rs.title%} - {'Registration'|gsdict}</h4>
+
+	<div>
+
+		{handler gspgid="/{%$module%}/{%$prefix%}/form/{%$rs.name%}/edit/" {%$manager_link%}}
+	</div>
+
+{/block}

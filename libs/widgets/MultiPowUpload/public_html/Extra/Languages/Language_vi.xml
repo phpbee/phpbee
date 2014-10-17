@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MultiPowUpload_parameters>
+  <param name="browseButton.text">Trình duyệt ...</param>
+  <param name="browseButton.tooltip">Thêm các tập tin để tải lên</param>
+  <param name="cancelButton.pauseText">Tạm dừng</param>
+  <param name="cancelButton.text">Huỷ</param>
+  <param name="cancelButton.tooltip">Hủy hiện hoạt động</param>
+  <param name="clearButton.text">Rõ ràng</param>
+  <param name="clearButton.tooltip">Hủy bỏ tất cả các file</param>
+  <param name="constant.bytes">byte</param>
+  <param name="constant.decimalSeparator">,</param>
+  <param name="constant.gigaBytes">Gb</param>
+  <param name="constant.kiloBytes">Kb</param>
+  <param name="constant.megaBytes">Mb</param>
+  <param name="contextMenu.sortByDate">Sắp xếp theo ngày</param>
+  <param name="contextMenu.sortByName">Phân loại theo tên</param>
+  <param name="contextMenu.sortBySize">Phân loại theo kích cỡ</param>
+  <param name="descriptionWindow.caption">Mô tả cho tập tin</param>
+  <param name="descriptionWindow.fileNavigation.fileName.label">&lt;FILENAME&gt;</param>
+  <param name="descriptionWindow.fileNavigation.nextButton.label"></param>
+  <param name="descriptionWindow.fileNavigation.previousButton.label"></param>
+  <param name="exifWindow.caption">&lt;FILENAME&gt; dữ liệu EXIF</param>
+  <param name="exifWindow.list.nameHeader">Tên</param>
+  <param name="exifWindow.list.valueHeader">Giá trị</param>
+  <param name="fileInfoWindow.caption">Tập tin thông tin</param>
+  <param name="fileInfoWindow.exifInfo">&lt;b&gt; Exif thông tin &lt;/b&gt;: &lt;a&gt; Nhấn vào đây để xem &lt;/a&gt;</param>
+  <param name="fileInfoWindow.fileDate">&lt;b&gt; Ngày &lt;/b&gt;: &lt;FILEDATE&gt;</param>
+  <param name="fileInfoWindow.fileName">&lt;b&gt; Tên &lt;/b&gt;: &lt;FILENAME&gt;</param>
+  <param name="fileInfoWindow.fileSize">&lt;b&gt; Kích thước &lt;/b&gt;: &lt;FILESIZE&gt;</param>
+  <param name="fileInfoWindow.fileStatus">&lt;b&gt; Tình trạng &lt;/b&gt;: &lt;FILESTATUS&gt;</param>
+  <param name="fileInfoWindow.imageHeight">&lt;b&gt; Ảnh cao &lt;/b&gt;: &lt;IMAGEHEIGHT&gt;</param>
+  <param name="fileInfoWindow.imageWidth">&lt;b&gt; Hình ảnh chiều rộng &lt;/b&gt;: &lt;IMAGEWIDTH&gt;</param>
+  <param name="fileStatus.cancelled">Bị hủy bỏ</param>
+  <param name="fileStatus.complete">Hoàn thành</param>
+  <param name="fileStatus.encodeImage">Mã hóa hình ảnh</param>
+  <param name="fileStatus.error">Lỗi xảy ra</param>
+  <param name="fileStatus.loadFile">Tải tập tin vào bộ nhớ</param>
+  <param name="fileStatus.loadImage">Đang tải dữ liệu hình ảnh</param>
+  <param name="fileStatus.processing">Tải lên</param>
+  <param name="fileStatus.ready">Sẵn sàng để tải lên</param>
+  <param name="labelUpload.text">Chọn tập tin để tải lên</param>
+  <param name="listView.description.defaultText">Nhấn vào đây để chỉnh sửa ...</param>
+  <param name="listView.description.tooltip">Chỉnh sửa tập tin mô tả</param>
+  <param name="listView.fileNameLabel.pattern">&lt;FILENAME&gt;</param>
+  <param name="listView.label.disabledFileInfoTooltip">Kích thước: &lt;FILESIZE&gt;
+Ngày: &lt;FILEDATE&gt;
+Tình trạng: &lt;FILESTATUS&gt;</param>
+  <param name="listView.label.tooltip">Kích thước: &lt;FILESIZE&gt;
+Ngày: &lt;FILEDATE&gt;
+Tình trạng: &lt;FILESTATUS&gt;</param>
+  <param name="listView.removeButton.tooltip">Hủy bỏ tập tin</param>
+  <param name="listView.textInput.defaultString">Viết bình luận ở đây tập tin</param>
+  <param name="listViewButton.tooltip">Xem danh sách</param>
+  <param name="loadingText">&lt;b&gt; khởi tạo: &lt;PERCENT&gt;% &lt;/b&gt;</param>
+  <param name="messages.disabledType">Tập tin với các loại sau đây: &lt;FILETYPES&gt; không được phép tải lên! &lt;COUNTINVALIDFILES&gt; các tập tin đã được bỏ qua!</param>
+  <param name="messages.filesCountExceeded">Chỉ có &lt;MAXFILECOUNT&gt; các tập tin được phép tải lên! &lt;COUNTINVALIDFILES&gt; các tập tin đã được bỏ qua!</param>
+  <param name="messages.filesCountNotEnough">Hãy chọn các tập tin nhiều hơn nữa. Số lượng tập tin tối thiểu là &lt;MINFILECOUNT&gt;</param>
+  <param name="messages.httpError">&lt;center&gt; HTTP lỗi, "&lt;ERRORCODE&gt;" xảy ra. &lt;DESCRIPTION&gt;&lt;br&gt; Xin xem &lt;font color='#0000FF'&gt; &lt;a title='Error description' target='_blank' href='&lt;W3WLINK&gt;'&gt; &lt;W3WLINK&gt; &lt;/a&gt; &lt;/font&gt; định nghĩa mã lỗi cho biết thêm thông tin. &lt;/center&gt;</param>
+  <param name="messages.httpError.400">Bad Request. Server không thể hiểu được yêu cầu! Xin vui lòng liên hệ với quản trị viên máy chủ của bạn.</param>
+  <param name="messages.httpError.401">Trái phép. Xác thực người dùng yêu cầu!</param>
+  <param name="messages.httpError.402">Thanh toán bắt buộc. Dành mã!</param>
+  <param name="messages.httpError.403">Cấm. Các máy chủ đã hiểu được yêu cầu, nhưng từ chối thực hiện nó!&lt;br&gt;Đối với các máy chủ apache: Điều này xảy ra bởi vì bạn đã kích hoạt một module có tên Apache mod_security trên máy chủ mà khối các tiêu đề gửi qua Flash.&lt;br&gt;Đối với các máy chủ IIS với ASP: Vấn đề này xảy ra nếu một header Content-Length là hiện tại và nếu các tiêu đề Content-Length xác định một số lượng dữ liệu lớn hơn giá trị tài sản AspMaxRequestEntityAllowed trong IIS metabase.&lt;br&gt;Giá trị mặc định cho các tài sản AspMaxRequestEntityAllowed là 204.800 byte.</param>
+  <param name="messages.httpError.404">Trang không tìm thấy. Không thể tìm thấy '&lt;URL&gt;' trang trên máy chủ!</param>
+  <param name="messages.httpError.405">Post phương pháp không được phép cho trang này &lt;URL&gt;! Hãy cố gắng để thay đổi cài đặt máy chủ cho phép các phương pháp sau để nhận kịch bản.</param>
+  <param name="messages.httpError.406">Không thể chấp nhận được. Điều này có nghĩa là máy chủ không thể tạo ra các thực thể phản ứng đó có những đặc điểm nội dung không được chấp nhận theo tiêu đề gửi chấp nhận trong yêu cầu. Flash chấp nhận tiêu đề là 'text / *'.</param>
+  <param name="messages.httpError.407">Proxy Authentication Required.</param>
+  <param name="messages.httpError.408">Hết thời gian yêu cầu.</param>
+  <param name="messages.httpError.409">Xung đột.</param>
+  <param name="messages.httpError.410">Gone. Các nguồn lực yêu cầu không còn có sẵn tại máy chủ và không có địa chỉ chuyển tiếp được biết đến.</param>
+  <param name="messages.httpError.411">Chiều dài cần thiết.</param>
+  <param name="messages.httpError.412">Không điều kiện tiên quyết.</param>
+  <param name="messages.httpError.413">Yêu cầu thực thể quá lớn.&lt;br&gt;Đối với các máy chủ IIS: 1. Hãy cố gắng tăng sản metabase UploadReadAheadSize.&lt;br&gt;2. Hãy thử để tăng giá trị tài sản MaxRequestEntityAllowed trong IIS config.&lt;br&gt;Đối với các máy chủ Apache: Cố gắng tăng LimitRequestBody tham số trong httpd.conf.</param>
+  <param name="messages.httpError.414">Yêu cầu-URI Too Long.</param>
+  <param name="messages.httpError.415">Không được hỗ trợ Media Type.</param>
+  <param name="messages.httpError.416">Phạm vi được yêu cầu không Satisfiable.</param>
+  <param name="messages.httpError.417">Không kỳ vọng.</param>
+  <param name="messages.httpError.500">Internal Server Error. Thông thường nó có nghĩa là kịch bản tiếp nhận có sai sót.</param>
+  <param name="messages.httpError.501">Không thực hiện. Server không hỗ trợ phương thức POST.</param>
+  <param name="messages.httpError.502">Bad Gateway.</param>
+  <param name="messages.httpError.503">Không có sẵn dịch vụ 503. Máy chủ hiện không thể xử lý các yêu cầu do quá tải tạm thời hoặc bảo trì máy chủ.</param>
+  <param name="messages.httpError.504">Gateway Timeout.</param>
+  <param name="messages.httpError.505">Phiên bản HTTP không được hỗ trợ. Server không hỗ trợ HTTP 1.1.</param>
+  <param name="messages.wrongFileType">Chỉ với loại tập tin sau đây: &lt;FILETYPES&gt; được phép tải lên! &lt;COUNTINVALIDFILES&gt; các tập tin đã được bỏ qua!</param>
+  <param name="messages.zeroSize">&lt;COUNTINVALIDFILES&gt; tập tin với kích thước không được bỏ qua!</param>
+  <param name="removeButton.tooltip">Hủy bỏ các tập tin được lựa chọn</param>
+  <param name="retryDialog.caption">Thử tải lên?</param>
+  <param name="retryDialog.message">Một số tập tin không được tải lên. Bạn có muốn thử tải lên một lần nữa?</param>
+  <param name="retryDialog.noLabel">Không có</param>
+  <param name="retryDialog.yesLabel">Có</param>
+  <param name="sortButton.text"></param>
+  <param name="sortButton.tooltip">Thứ tự sắp xếp</param>
+  <param name="sortMenu.byDate">Theo ngày</param>
+  <param name="sortMenu.byName">Theo tên</param>
+  <param name="sortMenu.bySize">Bằng kích thước</param>
+  <param name="statusLabel.text.generateThumbnails">Tạo hình ảnh thu nhỏ ... xin vui lòng chờ đợi.</param>
+  <param name="statusLabel.text.loadFile "></param>
+  <param name="statusLabel.text.ready">Tính của các tập tin: &lt;FILESCOUNT&gt; (&lt;TOTALSIZE&gt;)</param>
+  <param name="statusLabel.text.uploadCancelled">Kế tiếp các tập tin tải lên hủy bỏ. Chờ ...</param>
+  <param name="statusLabel.text.uploadComplete">Tải lên hoàn thành! &lt;UPLOADEDFILESCOUNT&gt; tập tin (&lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt;), đã qua thời gian: &lt;ELAPSEDHOUR&gt;: &lt;ELAPSEDMIN&gt;: &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.uploadProgress">Tổng số: &lt;PERCENT&gt;% (&lt;FILESNUM&gt; / &lt;FILESTOUPLOADCOUNT&gt;) &lt;TOTALUPLOADEDSIZE&gt; / &lt;TOTALUPLOADSIZE&gt; (&lt;RATEVALUE&gt; / giây, thời gian còn lại: &lt;LEFTHOUR&gt;: &lt;LEFTMIN&gt;: &lt;LEFTSEC&gt;)</param>
+  <param name="statusLabel.text.uploadStart">Tải lên ...</param>
+  <param name="statusLabel.text.uploadStopped">Tải lên dừng lại. Tải lên byte: &lt;TOTALUPLOADEDSIZE&gt;, Thời gian đã qua: &lt;ELAPSEDHOUR&gt;: &lt;ELAPSEDMIN&gt;: &lt;ELAPSEDSEC&gt;</param>
+  <param name="statusLabel.text.waitForConnection">Server không trả lời. Đang cố gắng kết nối lại, xin vui lòng chờ đợi.</param>
+  <param name="thumbViewButton.tooltip">Thumbnail xem</param>
+  <param name="thumbnail.watermark.text">Phần tử-CNTT</param>
+  <param name="thumbnailView.bottomPanel.labelPattern">&lt;FILENAME&gt;</param>
+  <param name="thumbnailView.cancelCropIcon.tooltip">Hoàn tác vụ hình ảnh</param>
+  <param name="thumbnailView.contextMenu.CropLabel">Cắt hình ảnh</param>
+  <param name="thumbnailView.contextMenu.RemoveLabel">Hủy bỏ</param>
+  <param name="thumbnailView.contextMenu.RotateLeftLabel">Xoay trái</param>
+  <param name="thumbnailView.contextMenu.RotateRightLabel">Xoay phải</param>
+  <param name="thumbnailView.contextMenu.UndoCropLabel">Hoàn tác vụ hình ảnh</param>
+  <param name="thumbnailView.cropIcon.tooltip">Cắt hình ảnh</param>
+  <param name="thumbnailView.editIcon.tooltip">Chỉnh sửa tập tin mô tả</param>
+  <param name="thumbnailView.infoIcon.disabledFileInfoTooltip">Kích thước: &lt;FILESIZE&gt;
+Ngày: &lt;FILEDATE&gt;
+Tình trạng: &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.infoIcon.tooltip">Kích thước: &lt;FILESIZE&gt;
+Ngày: &lt;FILEDATE&gt;
+Tình trạng: &lt;FILESTATUS&gt;</param>
+  <param name="thumbnailView.removeIcon.tooltip">Hủy bỏ</param>
+  <param name="thumbnailView.rotateLeftIcon.tooltip">Xoay trái</param>
+  <param name="thumbnailView.rotateRightIcon.tooltip">Xoay phải</param>
+  <param name="uploadButton.text">Tải lên</param>
+  <param name="uploadButton.tooltip">Bắt đầu tải lên</param>
+</MultiPowUpload_parameters>

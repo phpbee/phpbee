@@ -1,0 +1,119 @@
+{extends file="admin_page.html"}
+
+{block name="title"}
+	orders
+{/block}
+
+{block name="main"}
+
+
+	<h4>orders</h4>
+
+
+
+			{handler gspgid="/filter/" class="select_by_links" link="orders.Status:id" name="Status" urltype=get }
+			
+		{handler gspgid="/filter/" class="like" name="search" fields="invoice, orderdate, price" urltype=get }
+		{handler gspgid="/filter/" class="calendar" name="calendar" fields="_ctime,_mtime," urltype=get }
+		{handler gspgid="/filter/" class="sort" name="sort" fields="sortkey,invoice, orderdate, price" urltype=get }
+		{handler gspgid="/filter/" class="limit" name="limit" urltype=session values='20,50,100,500' default_value=20}
+		{handler gspgid="/filter/" class="offset"  name="offset" urltype=get limit='limit'}
+
+
+
+		{controller _class="orders" _assign="orders" _filters="search,calendar,sort,limit,offset,Status,"}
+
+
+				{handler gspgid="/sortkey" sortkey_id="orders" recordset_name="orders"}
+		
+	<table class="tb sortkey-table" sortkey_id="orders">
+	<thead>
+	<tr class="filters"><td colspan="100">
+	<table>
+			<tr><td>Status:</td><td>{handler gspgid="/filter/show" name="Status"  recordset=$orders tpl="links_line.html"  }</td></tr>
+			<tr><td>Find:</td><td>
+			<form class="filterform" method="get">
+			{handler gspgid="/filter/show" name="search"  recordset=$orders tpl="like.html"  }
+			{handler gspgid="/filter/show" name="calendar"  recordset=$orders tpl="calendar.html" prelabel="date:"  }
+			{handler gspgid="/filter/show" name="sort"  recordset=$orders tpl="sort.html" prelabel="sort by:"  }
+			<input type="submit" value="search">
+			</form>
+		</td></tr>
+	</table>
+	</td> </tr>
+	<tr class="pager"><td colspan="100">
+		{handler gspgid="/filter/show" name="offset" tpl="offset_pages.html" page_title='Page' page_prev='previous' page_next='next' page_between='from' pages_count=21 recordset=$orders}
+		{handler gspgid="/filter/show" name="limit" tpl="limit_select.html" prelabel='show by' label='records'}
+	</td></tr>
+	<tr><th>#</th>
+		<th>
+		{field_name name="invoice" type="fString" key="invoice" id="41"}
+	</th>
+		<th>
+		{field_name name="orderdate" type="fTimestamp" key="orderdate" id="15"}
+	</th>
+		<th>
+		{field_name name="price" type="fString" key="price" id="19"}
+	</th>
+			<th>Status</th>
+		<th>Currency</th>
+			<th></th>
+		<th>Payments</th>
+		<th>Items</th>
+		<th></th>
+	<th></th>
+	<th></th>
+	</tr>
+	</thead>
+	
+	{foreach from=$orders item="e"}
+	<tr class="{cycle values='odd,even'}" record_id="{$e->get_id()}">
+			<td><span>{$e->get_id()}</span></td>
+						<td class="frm_fString">
+                <span>
+									<a href="{gl rec_edit=$e}">{field_formatter value=$e.invoice type="fString"}</a>
+						
+                </span>
+			</td>
+						<td class="frm_fTimestamp">
+                <span>
+						
+					{field_formatter value=$e.orderdate type="fTimestamp"}
+						
+                </span>
+			</td>
+						<td class="frm_fString">
+                <span>
+						
+					{field_formatter value=$e.price type="fString"}
+						
+                </span>
+			</td>
+									<td><span>{$e.Status}</span></td>
+						<td><span>{$e.Currency}</span></td>
+									<td><span><a href="/admin/Payments/customer?={$e->get_id()}"> ({$e._Customer_count})</a></span></td>
+						<td><span><a href="/admin/Payments/payments?Order={$e->get_id()}">Payments ({$e._Payments_count})</a></span></td>
+						<td><span><a href="/admin/Payments/item?={$e->get_id()}">Items ({$e._Items_count})</a></span></td>
+						<td class="cnt"><a href="{gl rec_edit=$e}"><img src="/i/admin/ico_edit.png" alt="Редактировать" title="Редактировать"></a></td>
+			<td class="cnt"><a href="{gl rec_copy=$e}"><img src="/i/admin/ico_copy.png" alt="Копировать" title="Копировать"></a></td>
+			<td class="cnt"><a href="{gl rec_delete=$e}" onclick="return confirm('Вы точно хотите удалить запись ?');"><img src="/i/admin/ico_delete.png" alt="Удалить" title="Удалить"></a></td>
+	</tr>
+	{/foreach}
+	<tr class="pager"><td colspan="100">
+	<a name="form"></a>
+		{handler gspgid="/filter/show" name="offset" tpl="offset_pages.html" page_title='Page' page_prev='previous' page_next='next' page_between='from' pages_count=21 recordset=$orders}
+		{handler gspgid="/filter/show" name="limit" tpl="limit_select.html" prelabel='show by' label='records'}
+	</td></tr>
+	</table>
+
+	<h5>Редактировать/<a href="{gl rec_create=0}">создать</a>:</h5>
+	{if $_gsdata.gspgid_va.0=='modify'}
+	<hr><br>
+		{$default_value=""}
+			{if gs_filters_handler::value('Status')}
+			{$default_value="{$default_value},Status_id={gs_filters_handler::value('Status')}"}
+		{/if} 
+		{handler gspgid="/admin/form/orders/edit/`$_gsdata.gspgid_va.1`" _default=trim($default_value,',') }
+	{/if}
+
+{/block}
