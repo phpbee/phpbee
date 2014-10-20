@@ -827,7 +827,7 @@ class gs_filter_select_by_links extends gs_filter {
 			$l['href']=$link;
 			unset($l['va']);
 			$links[$key]=$l;
-			if (in_array($l['key'],$this->value)) $current_names[]=$l;
+			if (is_array($this->value) && in_array($l['key'],$this->value)) $current_names[]=$l;
 		}
 		$link_all_array=array('name'=>'all','key'=>'all','href'=>$link_all,'count'=>$count_all, 'va'=>null,'rec'=>null);
 		$tpl=gs_tpl::get_instance();
