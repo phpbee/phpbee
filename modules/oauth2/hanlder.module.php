@@ -3,6 +3,14 @@
 /*
 oauth2_handler.login:classname:photographers:login_field:login:return:not_false:first_name_field:name:full_name_field:fullname
 */
+
+interface oauth2_profile {
+		function authorize($callback);
+		function token($data);
+		function profile($token);
+		function friends($token);
+}
+
 class oauth2_handler extends gs_handler {
 	function startlogin($ret) {
 		$classname=$this->data['gspgid_va'][0];
@@ -10,14 +18,23 @@ class oauth2_handler extends gs_handler {
 		if (!class_exists($classname)) throw new gs_exception('oauth2_handler:startlogin no class found '.$classname);
 		$config=record_by_field('class',$classname,'oauth2_config');
 		if (!$config) throw new gs_exception('oauth2_handler:startlogin can not find config for '.$classname);
-	
+
 		$url=isset($this->data['url']) ? $this->data['url'] : current_url();
 		$d=parse_url($url);
-		parse_str($d['query'],$get_vars);
+		parse_str(isset($d['query']) ? $d['query'] : '' ,$get_vars);
 		$this->data['data']['oa2c']=$classname;
 		$d['query']=http_build_query(array_merge($get_vars,$this->data['data']));
 		$callback=http_build_url($d);
 		$oauth=new $classname($config);
+		if (isset($this->params['callback'])) {
+			$dc=array (
+				'scheme' => 'http',
+				'host' => $_SERVER['HTTP_HOST'],
+				'path' => $this->params['callback'],
+				'query' => 'oa2c=oauth2_vk',
+			);
+			$callback=http_build_url($dc);
+		}
 		gs_session::save($callback,'oauth2_callback');
 		$url=$oauth->authorize($callback);
 		header('Location: '.$url);
@@ -34,7 +51,9 @@ class oauth2_handler extends gs_handler {
 		$oauth=new $classname($config);
 		$token=$oauth->token($data);
 		if(!$token) return true;
+
 		$profile=$oauth->profile($token);
+		$profile=explode_data(array_filter($profile));
 
 		gs_session::save($profile,'oauth2_profile');
 		if (!$profile['uid']) return true;
@@ -43,21 +62,31 @@ class oauth2_handler extends gs_handler {
 		$options=array(
 			$this->params['login_field']=>$profile['uid']
 			);
-		//if (isset($profile['email']) && $profile['email']) $options[$this->params['login_field']]=$profile['email'];
 		$rec=$rs->find_records($options)->first();
+
+
 		if (!$rec) {
 			$rec=$rs->find_records($options)->first(true);
-
-			$rec->fill_values($profile);
-
 			foreach ($rs->structure['fields'] as $k=>$f) {
 				if ($f['type']=='password') $rec->$k=md5(rand());
 			}
-			if (isset($this->params['first_name_field'])) $rec->{$this->params['first_name_field']}=$profile['first_name'];
-			if (isset($this->params['last_name_field'])) $rec->{$this->params['last_name_field']}=$profile['last_name'];
-			if (isset($this->params['full_name_field'])) $rec->{$this->params['full_name_field']}=$profile['first_name'].' '.$profile['last_name'];
-			if (isset($this->params['email_name_field'])) $rec->{$this->params['email_name_field']}=$profile['email'];
+			$rec->ip=$_SERVER['REMOTE_ADDR'];
+
+
+			$geoip=$this->geoip_city();
+			$rec->fill_values($geoip);
+
+			$rec->fill_values($profile);
+
+			$friends=$oauth->friends($token);
+			if ($friends) {
+				 $rec->fill_values(array('Friends'=>$friends));
+				 $rec->_Friends_count=count($friends);
+			 }
+
 			$rec->commit();
+
+
 		}
 		foreach ($this->data['handler_params'] as $n=>$v) {
 			if (isset($rs->structure['fields'][$n])) $options[$n]=$v;
@@ -66,26 +95,76 @@ class oauth2_handler extends gs_handler {
 		if (!$rec) return false;
 
 
-		$rec->fill_values(array_filter($profile));
-		if ($profile && isset($profile['friends']) && ($friends=$profile['friends'])) {
-			 $rec->fill_values(array('Friends'=>$friends));
-			 $rec->_Friends_count=count($friends);
-		 }
-
+		//$rec->fill_values($profile);
+		$rec->oauth2_profile=serialize($profile);
+		
 
 		$rec->token=$token['access_token'];
 		$rec->commit();
 		gs_session::save($rec->get_id(),'login_'.$this->params['classname']);
-        if(function_exists('person') && isset($this->params['role'])) person()->add_role($this->params['role'],$rec);
-		return $rec;
+		if(function_exists('person') && isset($this->params['role'])) person()->add_role($this->params['role'],$rec);
+			return $rec;
+		}
+	function fill_values($rec,$values) {
+		$langs=languages();
+		$default_lang=key($langs);
+
+		foreach ($values as $k=>$v) {
+			if ($k!='Lang') $rec->$k=$v;
+		}
+		if (is_array($values['Lang'])) foreach ($values['Lang'] as $lang=>$w) {
+			if (is_array($w)) foreach ($w as $k=>$v) {
+				if (!$v) continue;
+				if ($lang==$default_lang) {
+					$rec->$k=$v;
+				} else {
+					$rec->Lang[$lang]->$k=$v;
+				}
+			}
+		}
 	}
 	function pushtoken($d) {
 		$token=array('access_token'=>$this->data['access_token'],'user_id'=>$this->data['user_id']);
 		gs_session::save($token,'oauth2_token_'.$this->params['name']);
 		html_redirect(gs_session::load('oauth2_callback'));
 	}
+	function geoip_city() {
+		$key="AIzaSyCz02EZ8sXEpW0Rfejf8P2AAI09HOuz_A0";
+
+
+		$addr=array('Lang'=>array());
+
+
+		$baseurl="https://maps.googleapis.com/maps/api/geocode/json?key=%s&latlng=%s,%s&language=%s&result_type=locality|country";
+
+		$langs=languages();
+		$default_lang=gs_var_storage::load('multilanguage_lang');
+		if(!$default_lang) $default_lang=key($langs);
+
+		foreach ($langs as $l=>$v) {
+			$url=sprintf($baseurl,$key,$_SERVER['GEOIP_LATITUDE'],$_SERVER['GEOIP_LONGITUDE'],$l);
+			$ret=json_decode(html_fetch($url),1);
+			if (!is_array($ret)) continue;
+
+			$ai=array();
+			foreach ($ret['results'][0]['address_components'] as $a) {
+				if (in_array('locality',$a['types'])) {
+					$ai['city']=$a['long_name'];
+				}
+				if (in_array('country',$a['types'])) {
+					$ai['country']=$a['long_name'];
+				}
+			}
+			if ($l==$default_lang) $addr=array_merge($addr,$ai);
+			$addr['Lang'][$l]=$ai;
+		}
+	
+
+		return $addr;
+
+	}
 }
-class oauth2_twitter{
+class oauth2_twitter implements oauth2_profile {
 	/*
 	http://habrahabr.ru/post/114955/
 	*/
@@ -117,23 +196,17 @@ class oauth2_twitter{
 		list($ret['first_name'],$ret['last_name'])=array_map(trim,explode(' ',$d->name,2));
 		return $ret;
 	}
+	function friends($token) {
+		return array();
+	}
 }
 
-class oauth2_vk_app extends oauth2_vk {
-	function authorize($callback) {
-		$url=sprintf("http://api.vk.com/oauth/authorize?client_id=%s&redirect_uri=http://api.vk.com/blank.html&scope=%s&display=page&response_type=token",$this->config->APP_ID,$this->config->SCOPE);
-		return $url;
-	}
-	function token($data) {
-		return gs_session::load('oauth2_token_vk_app');
-	}
 
-}
-
-class oauth2_vk {
+class oauth2_vk  implements oauth2_profile {
+	var $fields="first_name,last_name,nickname,screen_name,sex,country,bdate,city,photo_medium,photo,photo_big";
 	function __construct($config) {
 		$this->config=$config;
-		$this->fields="first_name,last_name,nickname,screen_name,sex,country,bdate,city,photo_medium,photo,photo_big";
+		if ($config->SCOPE) $this->fields=$config->SCOPE;
 	}
 	function authorize($callback) {
 		gs_session::save($callback,'oauth2_vk_request');
@@ -157,32 +230,77 @@ class oauth2_vk {
 	}
 	function profile($token) {
 		$ret=array('uid'=>null,'first_name'=>null,'last_name'=>null,'type'=>'vk','email'=>null);
-		$url=sprintf("https://api.vk.com/method/getProfiles?uid=%d&access_token=%s&fields=%s",$token['user_id'],$token['access_token'],$this->fields);
+		$langs=languages();
+		$default_lang=gs_var_storage::load('multilanguage_lang');
+		if(!$default_lang) $default_lang=key($langs);
+
+		$ret=$this->profile_lang($token,$default_lang);
+		foreach ($langs as $l=>$v) {
+			$ret['Lang'][$l]=$this->profile_lang($token,$l);
+		}
+		return $ret;
+	}
+	function friends($token) {
+		$fields="uid,first_name,last_name,nickname,sex,bdate,city,country,timezone,photo,photo_medium,photo_big,domain,has_mobile,rate,contacts,education";
+
+		$friends=array();
+		$url=sprintf("https://api.vk.com/method/friends.get?lang=%s&access_token=%s&fields=%s",$lang,$token['access_token'],$fields);
+		$d=html_fetch($url);
+		$d=json_decode($d,1);
+		if (isset($d['response'])) {
+			foreach ($d['response'] as $f) {
+				$friend=array_merge($f,array('uid'=>$f['uid'],'user_uid'=>$uid,'name'=>$f['first_name'].' '.$f['last_name']));
+				$friends[$f['uid']]=$friend;
+			}
+		}
+		return $friends;
+	}
+	protected function profile_lang($token,$lang,$friends=false) {
+		$ret=array('uid'=>null,'first_name'=>null,'last_name'=>null,'type'=>'vk','email'=>null);
+		$url=sprintf("https://api.vk.com/method/getProfiles?lang=%s&uid=%d&access_token=%s&fields=%s",$lang,$token['user_id'],$token['access_token'],$this->fields);
 		$d=json_decode(html_fetch($url));
 		if (!$d) return $ret;
 		$d=reset($d->response);
 		if (!$d->uid) return $ret;
 		$uid=$d->uid;
 		$ret=array_merge($ret,get_object_vars($d));
+		$ret['oauth2_type']='VK';
+		$ret['oauth2_uid']=$d->uid;
 		$ret['uid']='vk-'.$d->uid;
 		$ret['name']=implode(' ',array($ret['first_name'],$ret['last_name']));
 		$ret['username']=$ret['screen_name'];
 		if ($ret['sex']==2) $ret['gender']='male';
 		if ($ret['sex']==1) $ret['gender']='female';
+		$ret['photo']=$ret['photo_big'];
 		$ret['locale']=$ret['country'];
+		$ret['age']=gs_date_to($ret['bdate'],'%y');
 
-		$url=sprintf("https://api.vk.com/method/friends.get?access_token=%s&fields=%s",$token['access_token'],$this->fields);
-		$d=html_fetch($url);
-		$d=json_decode($d,1);
-		if (isset($d['response'])) {
-			$friends=array();
-			foreach ($d['response'] as $f) {
-				$friend=array_merge($f,array('uid'=>$f['uid'],'user_uid'=>$uid,'name'=>$f['first_name'].' '.$f['last_name']));
-				$friends[$f['uid']]=$friend;
+		if(isset($ret['first_name'])) $ret['firstname']=$ret['first_name'];
+		if(isset($ret['last_name'])) $ret['lastname']=$ret['last_name'];
+
+
+		if (isset($ret['city'])) {
+			$ret['city_id']=$ret['city'];
+			$city=json_decode(html_fetch("https://api.vk.com/method/database.getCitiesById?lang=".$lang."&city_ids=".$ret['city_id']),1);
+			if (isset($city['response'])) foreach ($city['response'] as $c) {
+				if ($c['cid']==$ret['city_id']) {
+					$ret['city']=$c['name'];
+					break;
+				}
 			}
-			$ret['friends']=$friends;
-			$ret['friends_count']=count($ret['friends']);
 		}
+
+		if (isset($ret['country'])) {
+			$ret['country_id']=$ret['country'];
+			$country=json_decode(html_fetch("https://api.vk.com/method/database.getCountriesById?lang=".$lang."&country_ids=".$ret['country_id']),1);
+			if (isset($country['response'])) foreach ($country['response'] as $c) {
+				if ($c['cid']==$ret['country_id']) {
+					$ret['country']=$c['name'];
+					break;
+				}
+			}
+		}
+
 		return $ret;
 	}
 
@@ -197,10 +315,19 @@ class oauth2_vk {
 		return $d;
 
 	}
-
+}
+class oauth2_vk_app extends oauth2_vk {
+	function authorize($callback) {
+		$url=sprintf("http://api.vk.com/oauth/authorize?client_id=%s&redirect_uri=http://api.vk.com/blank.html&scope=%s&display=page&response_type=token",$this->config->APP_ID,$this->config->SCOPE);
+		return $url;
+	}
+	function token($data) {
+		return gs_session::load('oauth2_token_vk_app');
+	}
 
 }
-class oauth2_google{
+
+class oauth2_google  implements oauth2_profile {
 	/*
 	https://developers.google.com/accounts/docs/OAuth2Login?hl=ru
 	https://developers.google.com/accounts/docs/OAuth2WebServer
@@ -241,14 +368,18 @@ class oauth2_google{
 		$url=sprintf("https://www.googleapis.com/oauth2/v1/userinfo?access_token=%s",$token['access_token']);
 		$d=json_decode(html_fetch($url));
 		if (!$d || !$d->id) return $ret;
+		$ret['oauth2_type']='GOOGLE';
 		$ret['uid']='google-'.$d->id;
 		$ret['first_name']=$d->given_name;
 		$ret['last_name']=$d->family_name;
 		if (isset($d->email) && $d->email) $ret['email']=$d->email; 
 		return $ret;
 	}
+	function friends($token) {
+		return array();
+	}
 }
-class oauth2_facebook{
+class oauth2_facebook  implements oauth2_profile {
 	/*
 	http://developers.facebook.com/docs/authentication/server-side/
 	*/
@@ -280,30 +411,88 @@ class oauth2_facebook{
 		return $d;
 	}
 	function profile($token) {
+		$ret=array('uid'=>null,'first_name'=>null,'last_name'=>null,'type'=>'vk','email'=>null);
+		$langs=languages();
+		$default_lang=key($langs);
+		$ret=$this->profile_lang($token,$default_lang);
+		foreach ($langs as $l=>$v) {
+			$ret['Lang'][$l]=$this->profile_lang($token,$l);
+		}
+		/*
+		*/
+		$this->profile=$ret;
+		return $ret;
+	}
+	protected function profile_lang($token,$lang) {
+		// CONSUMER_KEY=id,name,first_name,last_name,link,gender,location,email,picture,hometown
+
+
 		$ret=array('uid'=>null,'first_name'=>null,'last_name'=>null,'type'=>'facebook','email'=>null);
-		$url=sprintf("https://graph.facebook.com/me?fields=%s&access_token=%s",$this->config->CONSUMER_KEY,$token['access_token']);
+		$url=sprintf("https://graph.facebook.com/v2.0/me?fields=%s&access_token=%s",$this->config->CONSUMER_KEY,$token['access_token'],$lang);
 		$d=html_fetch($url);
 		$d=json_decode($d,1);
+
 		if (!$d || !$d['id']) return $ret;
+
+
 		$ret=array_merge($ret,$d);
+		$ret['oauth2_type']='FB';
+		$ret['oauth2_uid']=$d['id'];
 		$ret['uid']='fb-'.$d['id'];
 
-		$url=sprintf("https://graph.facebook.com/me/friends/?access_token=%s",$token['access_token']);
+		if ($ret['gender']=='female') $ret['sex']=1;
+		if ($ret['gender']=='male') $ret['sex']=2;
+
+
+		if(isset($ret['first_name'])) $ret['firstname']=$ret['first_name'];
+		if(isset($ret['last_name'])) $ret['lastname']=$ret['last_name'];
+
+		if (isset($ret['age_range']['min'])) $ret['age']=$ret['age_range']['min'];
+		if (isset($ret['birthday'])) $ret['age']=gs_date_to($ret['birthday'],'%y');
+
+		if(isset($d['picture'])) $ret['photo']=$d['picture']['data']['url'];
+
+		if (isset($d['location']['name'])) list($ret['city'],$ret['country'])=explode(',',$d['location']['name'],2);
+
+
+		$fql=sprintf("SELECT current_location, hometown_location FROM user WHERE uid=%d",$ret['oauth2_uid']);
+		$url=sprintf("https://api.facebook.com/method/fql.query?query=%s&format=json&access_token=%s&locale=%s",urlencode($fql),$token['access_token'],$lang);
+		$d=html_fetch($url);
+		$d=json_decode($d,1);
+		if ($d) {
+			if (($l=$d[0]['hometown_location'])) {
+				$ret['country']=$l['country'];
+				$ret['city']=$l['city'];
+			}
+			if (($l=$d[0]['current_location'])) {
+				$ret['country']=$l['country'];
+				$ret['city']=$l['city'];
+			}
+		}
+
+		return $ret;
+	}
+	function friends($token) {
+		/*
+		https://developers.facebook.com/docs/graph-api/reference/v2.0/user/friends
+		This will only return any friends who have used (via Facebook Login) the app making the request.
+		If a friend of the person declines the user_friends permission, that friend will not show up in the friend list for this person.
+
+
+
+		*/
+		$friends=array();
+		//$url=sprintf("https://graph.facebook.com/%s/friends/?access_token=%s",$this->profile['oauth2_uid'],$token['access_token']);
+		$url=sprintf("https://graph.facebook.com/%s/friends/?access_token=%s",'me',$token['access_token']);
 		$d=html_fetch($url);
 		$d=json_decode($d,1);
 		if (isset($d['data'])) {
-			$friends=array();
 			foreach ($d['data'] as $f) {
 				$friends[$f['id']]=array('uid'=>$f['id'],'name'=>$f['name']);
 			}
 			$ret['friends']=$friends;
 			$ret['friends_count']=count($ret['friends']);
 		}
-		/*
-		$ret['first_name']=$d['first_name'];
-		$ret['last_name']=$d['last_name'];
-		if ($d['email']) $ret['email']=$d['email'];
-		*/
-		return $ret;
+		return $friends;
 	}
 }
