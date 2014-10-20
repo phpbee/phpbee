@@ -972,7 +972,7 @@ function hpar($data,$name='hkey',$default=null) {
     }
     function post_logout($data) {
         $h=new handler_registry;
-        $rec=$this->check_login();
+        $rec=$this->check_login($data);
         if($rec) $h->before_logout($rec);
         //gs_session::clear('login_'.$this->params['classname']);
         gs_session::save(NULL,'login_'.$this->params['classname']);
