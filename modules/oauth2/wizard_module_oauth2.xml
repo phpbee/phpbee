@@ -17,7 +17,7 @@
                         <helper_text/>
                         <type>fSelect</type>
                         <multilang>0</multilang>
-                        <options>oauth2_vk,oauth2_google,oauth2_facebook,oauth2_twitter</options>
+                        <options>oauth2_vk,oauth2_google,oauth2_facebook,oauth2_twitter,oauth2_instagram</options>
                         <extra_options/>
                         <widget>select</widget>
                         <default_value/>
@@ -26,7 +26,7 @@
                         <is_unique>0</is_unique>
                         <Recordset_id>37</Recordset_id>
                         <_ctime>2014-05-23 15:11:27</_ctime>
-                        <_mtime>2014-05-23 15:11:27</_mtime>
+                        <_mtime>2014-10-20 17:41:03</_mtime>
                         <sortkey>160</sortkey>
                       </values>
                     </record>

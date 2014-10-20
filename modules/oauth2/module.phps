@@ -125,7 +125,7 @@ class oauth2_config extends gs_recordset_short {
     public $orderby = "id";
     function __construct($init_opts = false) {
         parent::__construct(array(
-            'class' => 'fSelect verbose_name="class"  widget="select"   options="oauth2_vk,oauth2_google,oauth2_facebook,oauth2_twitter"  required=true        ',
+            'class' => 'fSelect verbose_name="class"  widget="select"   options="oauth2_vk,oauth2_google,oauth2_facebook,oauth2_twitter,oauth2_instagram"  required=true        ',
             'APP_ID' => 'fString verbose_name="APP_ID"     required=true        ',
             'APP_SECRET' => 'fString verbose_name="APP_SECRET"     required=false        ',
             'SCOPE' => 'fString verbose_name="SCOPE"     required=false        ',
