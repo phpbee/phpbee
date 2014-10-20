@@ -58,12 +58,13 @@ class oauth2_handler extends gs_handler {
 		gs_session::save($profile,'oauth2_profile');
 		if (!$profile['uid']) return true;
 
-		$rs=new $this->params['classname'];
+
+		$rs=new oauth2_users;
 		$options=array(
-			$this->params['login_field']=>$profile['uid']
+			'oauth2_uid'=>$profile['oauth2_uid'],
+			'Config_id'=>$config->get_id(),
 			);
 		$rec=$rs->find_records($options)->first();
-
 
 		if (!$rec) {
 			$rec=$rs->find_records($options)->first(true);
@@ -78,21 +79,35 @@ class oauth2_handler extends gs_handler {
 
 			$rec->fill_values($profile);
 
+
+
+			$person=$rec->Person->new_record($options);
+			$person->ip=$_SERVER['REMOTE_ADDR'];
+			$person->fill_values($geoip);
+			$person->fill_values($profile);
+			foreach ($person->get_recordset()->structure['fields'] as $k=>$f) {
+				if ($f['type']=='password') $rec->$k=md5(rand());
+			}
+
+
 			$friends=$oauth->friends($token);
 			if ($friends) {
-				 $rec->fill_values(array('Friends'=>$friends));
-				 $rec->_Friends_count=count($friends);
-			 }
+				 $person->fill_values(array('Friends'=>$friends));
+				 $person->_Friends_count=count($friends);
+			}
+
 
 			$rec->commit();
 
+		}
 
-		}
+		$person=$rec->Person->f();
+		$options=array($person->get_recordset()->get_id_field_name()=>$rec->Person_id);
 		foreach ($this->data['handler_params'] as $n=>$v) {
-			if (isset($rs->structure['fields'][$n])) $options[$n]=$v;
+			if (isset($person->get_recordset()->structure['fields'][$n])) $options[$n]=$v;
 		}
-		$rec=$rs->find_records($options)->first();
-		if (!$rec) return false;
+		$person=$person->get_recordset()->find_records($options)->first();
+		if (!$person) return false;
 
 
 		//$rec->fill_values($profile);
@@ -101,8 +116,8 @@ class oauth2_handler extends gs_handler {
 
 		$rec->token=$token['access_token'];
 		$rec->commit();
-		gs_session::save($rec->get_id(),'login_'.$this->params['classname']);
-		if(function_exists('person') && isset($this->params['role'])) person()->add_role($this->params['role'],$rec);
+		gs_session::save($person->get_id(),'login_'.$this->params['classname']);
+		if(function_exists('person') && isset($this->params['role'])) person()->add_role($this->params['role'],$person);
 			return $rec;
 		}
 	function fill_values($rec,$values) {

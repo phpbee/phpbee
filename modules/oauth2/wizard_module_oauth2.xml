@@ -540,6 +540,48 @@
                         <sortkey>254</sortkey>
                       </values>
                     </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>oauth2_profile</name>
+                        <verbose_name/>
+                        <helper_text/>
+                        <type>fText</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value/>
+                        <make_index>0</make_index>
+                        <required>0</required>
+                        <is_unique>0</is_unique>
+                        <Recordset_id>58</Recordset_id>
+                        <_ctime>2014-10-20 17:01:18</_ctime>
+                        <_mtime>2014-10-20 17:01:18</_mtime>
+                        <sortkey>255</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>token</name>
+                        <verbose_name/>
+                        <helper_text/>
+                        <type>fString</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value/>
+                        <make_index>0</make_index>
+                        <required>0</required>
+                        <is_unique>0</is_unique>
+                        <Recordset_id>58</Recordset_id>
+                        <_ctime>2014-10-20 17:01:39</_ctime>
+                        <_mtime>2014-10-20 17:01:39</_mtime>
+                        <sortkey>256</sortkey>
+                      </values>
+                    </record>
                   </recordset>
                 </Fields>
                 <Resizes>
@@ -579,12 +621,12 @@
                         <extra_options/>
                         <widget/>
                         <required>1</required>
-                        <fkey_on_delete>NONE</fkey_on_delete>
-                        <fkey_on_update>NONE</fkey_on_update>
+                        <fkey_on_delete>CASCADE</fkey_on_delete>
+                        <fkey_on_update>CASCADE</fkey_on_update>
                         <fkey_name/>
                         <Recordset_id>58</Recordset_id>
                         <_ctime>2014-10-20 16:41:57</_ctime>
-                        <_mtime>2014-10-20 16:41:57</_mtime>
+                        <_mtime>2014-10-20 17:20:34</_mtime>
                       </values>
                     </record>
                   </recordset>
@@ -603,11 +645,11 @@
                 <database>0</database>
                 <extends/>
                 <Module_id>10</Module_id>
-                <_Fields_count>3</_Fields_count>
-                <_Resizes_count>3</_Resizes_count>
-                <_Links_count>3</_Links_count>
-                <_Triggers_count>3</_Triggers_count>
-                <_Submodules_count>3</_Submodules_count>
+                <_Fields_count>5</_Fields_count>
+                <_Resizes_count>5</_Resizes_count>
+                <_Links_count>5</_Links_count>
+                <_Triggers_count>5</_Triggers_count>
+                <_Submodules_count>5</_Submodules_count>
                 <showadmin>0</showadmin>
                 <no_urlkey>1</no_urlkey>
                 <no_ctime>0</no_ctime>
@@ -616,7 +658,7 @@
                 <orderby>id</orderby>
                 <id_field_name>id</id_field_name>
                 <_ctime>2014-10-20 16:39:46</_ctime>
-                <_mtime>2014-10-20 16:41:57</_mtime>
+                <_mtime>2014-10-20 17:01:39</_mtime>
                 <sortkey>58</sortkey>
               </values>
             </record>

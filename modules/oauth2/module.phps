@@ -216,10 +216,18 @@ class oauth2_users extends gs_recordset_short {
     function __construct($init_opts = false) {
         parent::__construct(array(
             'oauth2_uid' => 'fString     required=true  index=true      ',
+            'oauth2_profile' => 'fText     required=false        ',
+            'token' => 'fString     required=false        ',
             'Config' => 'lOne2One oauth2_config    required=false    ',
             'Person' => 'lOne2One girls    required=true    ',
         ) , $init_opts);
-        $this->structure['fkeys'] = array();
+        $this->structure['fkeys'] = array(
+            array(
+                'link' => 'Person',
+                'on_delete' => 'CASCADE',
+                'on_update' => 'CASCADE'
+            ) ,
+        );
     }
 }
 ?>
