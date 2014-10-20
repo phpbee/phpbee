@@ -14,241 +14,241 @@ class module_wizard extends gs_base_module implements gs_module {
 			$this->$r->install();
 		}
 	}
-	
+
 	function get_menu() {
-		if(strpos($_SERVER['REQUEST_URI'],'/admin/wizard')===0) {
-		$ret[1]='<a href="/admin/wizard/install">Install</a>';
-		$ret[2]='<a href="/admin/wizard/newurl">New page</a>';
-		$ret[3][]='<a href="/admin/wizard/">Modules</a>';
-		$modules=new wz_modules();
-		$modules->find_records(array());
-		foreach($modules as $m) {
-			$ret[3][]='<a href="/admin/wizard/module/'.$m->id.'">'.$m->title.'</a>';
-		}
-		return $ret;
+		if(!cfg('admin_hide_wizard') || strpos($_SERVER['REQUEST_URI'],'/admin/wizard')===0) {
+			$ret[1]='<a href="/admin/wizard/install">Install</a>';
+			$ret[2]='<a href="/admin/wizard/newurl">New page</a>';
+			$ret[3][]='<a href="/admin/wizard/">Modules</a>';
+			$modules=new wz_modules();
+			$modules->find_records(array());
+			foreach($modules as $m) {
+				$ret[3][]='<a href="/admin/wizard/module/'.$m->id.'">'.$m->title.'</a>';
+			}
+			return $ret;
 		}
 	}
-	
+
 	static function get_handlers() {
 		$data=array(
-		'handler'=>array(
-			'/admin/form/wz_modules_import'=>array(
-				'gs_wizard_handler.module_xml_import:{name:admin_form.html:form_class:form_modules_import:return:true}',
-				'gs_base_handler.redirect:href:admin/wizard',
-			),
-
-			'/admin/form/wz_modules'=>array(
-				'gs_base_handler.post:{name:admin_form.html:classname:wz_modules:form_class:g_forms_table}',
-				'gs_base_handler.redirect',
-			),
-			'/admin/form/wz_recordsets'=>array(
-				'gs_base_handler.post:{name:admin_form.html:classname:wz_recordsets:form_class:g_forms_table}',
-				'gs_base_handler.redirect_up:level:2',
-			),
-			'/admin/form/wz_recordset_links'=>array(
-				'gs_base_handler.redirect_if:gl:save_cancel:return:true',
-				'gs_base_handler.post:{name:admin_form.html:classname:wz_recordset_links:form_class:g_forms_table}',
-				'gs_base_handler.redirect_if:gl:save_continue:return:true',
-				'gs_base_handler.redirect_up:level:1',
-			),
-			'/admin/form/wz_recordset_triggers'=>array(
-				'gs_base_handler.redirect_if:gl:save_cancel:return:true',
-				'gs_base_handler.post:{name:admin_form.html:classname:wz_recordset_triggers:form_class:g_forms_table}',
-				'gs_base_handler.redirect_if:gl:save_continue:return:true',
-				'gs_base_handler.redirect_up:level:1',
-			),
-			'/admin/form/wz_recordset_fields'=>array(
-				'gs_base_handler.redirect_if:gl:save_cancel:return:true',
-				'gs_base_handler.post:{name:admin_form.html:classname:wz_recordset_fields:form_class:g_forms_table}',
-				'gs_base_handler.redirect_if:gl:save_continue:return:true',
-				'gs_base_handler.redirect_up:level:1',
-			),
-			'/admin/form/wz_recordset_resizes'=>array(
-				'gs_base_handler.redirect_if:gl:save_cancel:return:true',
-				'gs_base_handler.post:{name:admin_form.html:classname:wz_recordset_resizes:form_class:g_forms_table}',
-				'gs_base_handler.redirect_if:gl:save_continue:return:true',
-				'gs_base_handler.redirect_up:level:1',
-			),
-			'/admin/form/wz_recordset_submodules'=>array(
-				'gs_base_handler.post:{name:admin_form.html:classname:wz_recordset_submodules:form_class:g_forms_table}',
-				'gs_base_handler.redirect_up',
-			),
-			'/admin/form/wz_urls'=>array(
-				'gs_base_handler.redirect_if:gl:save_cancel:return:true',
-				'gs_base_handler.post:{name:admin_form.html:classname:wz_urls:form_class:g_forms_table}',
-				'gs_base_handler.redirect_if:gl:save_continue:return:true',
-				'gs_base_handler.redirect_up',
-			),
-			'/admin/form/wz_urls_inline'=>array(
-				'gs_base_handler.post:{name:inline_form.html:classname:wz_urls:form_class:g_forms_table}',
-				'gs_base_handler.redirect',
-			),
-			'/admin/form/wz_handlers'=>array(
-				'gs_base_handler.post:{name:admin_form.html:classname:wz_handlers:form_class:g_forms_table}',
-				'gs_base_handler.redirect_up',
-			),
-			'/admin/wizard/templates'=>array(
-				'gs_wizard_handler.templates',
-			),
-			'/admin/form/templates'=>array(
-				'gs_base_handler.redirect_if:gl:save_cancel:return:true',
-				'gs_wizard_handler.templatespost:return:true:name:admin_form.html:form_class:gs_wizard_template_form',
-				'gs_base_handler.redirect_if:gl:save_continue:return:true',
-				'gs_base_handler.redirect_up',
-			),
-			'/admin/form/wz_forms'=>array(
-				'gs_base_handler.redirect_if:gl:save_cancel:return:true',
-				'gs_base_handler.post:{name:admin_form.html:classname:wz_forms:form_class:gs_wizard_forms_form}',
-				'gs_base_handler.redirect_if:gl:save_continue:return:true',
-				'gs_base_handler.redirect_up',
-			),
-			'/admin/form/wz_form_fields'=>array(
-				'gs_base_handler.redirect_if:gl:save_cancel:return:true',
-				'gs_base_handler.post:{name:admin_form.html:classname:wz_form_fields:form_class:gs_wizard_form_fields_form}',
-				'gs_base_handler.redirect_if:gl:save_continue:return:true',
-				'gs_base_handler.redirect_up',
-			),
-			'/admin/form/wz_form_fields_validators'=>array(
-				'gs_base_handler.redirect_if:gl:save_cancel:return:true',
-				'gs_base_handler.post:{name:admin_form.html:classname:wz_form_fields_validators:form_class:gs_wizard_form_fields_validators_form}',
-				'gs_base_handler.redirect_if:gl:save_continue:return:true',
-				'gs_base_handler.redirect_up',
-			),
-			'/admin/wizard/formmacros'=>array(
-				'wz_handler_mc.post:name:form_submit.html',
+				'handler'=>array(
+					'/admin/form/wz_modules_import'=>array(
+						'gs_wizard_handler.module_xml_import:{name:admin_form.html:form_class:form_modules_import:return:true}',
+						'gs_base_handler.redirect:href:admin/wizard',
 						),
-			'/admin/wizard/choosetpl'=>array(
-				'gs_wizard_handler.choosetpl:name:form_submit.html:form_class:form_choosetpl:return:true',
-				'gs_base_handler.redirect_up',
-				),
-			'/admin/wizard/macros/list'=>array(
-				'gs_wizard_handler.macros_list:name:macros_list.html',
-				),
-			'/admin/form/strategy'=>array(
-				'gs_wizard_handler.strategy:return:true:name:form_submit.html:form_class:gs_wizard_strategy_form',
-			),
-			'/admin/wizard/form/templates/copy'=>array(
-				'gs_base_handler.redirect_if:gl:save_cancel:return:true',
-				'gs_wizard_handler.templatescopy:{name:admin_form.html:form_class:gs_wizard_form_templates_copy}',
-				'gs_base_handler.redirect_if:gl:save_continue:return:true',
-				'gs_base_handler.redirect_up',
-				),
-		),
-		'post'=>array(
-			'/admin/wizard/iddqdblocksubmit'=>array(
-						'gs_wizard_handler.iddqdblocksubmit:return:true',
-						'gs_base_handler.redirect_gl:gl:iddqdblocksubmit',
-						),
-			'/admin/wizard/clone_urls'=>array(
-				'gs_wizard_handler.clone_urls:return:true',
-				'gs_base_handler.redirect_gl:gl:clone_urls',
-			),
 
-		),
-		'get'=>array(
-			'/admin/wizard'=>'gs_base_handler.show',
-			'/admin/wizard/install'=>'gs_base_handler.show',
-			'/admin/wizard/iddqd'=>'gs_wizard_handler.iddqd',
-			'/admin/wizard/iddqdblock'=>array(
-						'gs_wizard_handler.iddqdblock:return:true',
-						'gs_base_handler.show',
+					'/admin/form/wz_modules'=>array(
+						'gs_base_handler.post:{name:admin_form.html:classname:wz_modules:form_class:g_forms_table}',
+						'gs_base_handler.redirect',
 						),
-			'/admin/wizard/module'=>'gs_base_handler.show',
-			'/admin/wizard/commit'=>array(
-					'gs_base_handler.xml_export:{classname:wz_modules:return:notfalse}',
-					'gs_wizard_handler.xml_save_file_to_module_dir:return:notfalse',
-					'gs_wizard_handler.commit:return:true',
-					'gs_base_handler.redirect',
-					),
-			'/admin/wizard/recordsets'=>'gs_base_handler.show',
-			'/admin/wizard/recordset_fields'=>'gs_base_handler.show',
-			'/admin/wizard/recordset_resizes'=>'gs_base_handler.show',
-			'/admin/wizard/urls'=>'gs_base_handler.show',
-			'/admin/wizard/handlers'=>'gs_base_handler.show',
-			'/admin/wizard/macros'=>'gs_base_handler.show',
-                        '/admin/wizard/xmlexport'=>array(
-					'gs_base_handler.xml_export:{classname:wz_modules:return:notfalse}',
-                                        'gs_base_handler.xml_save_file',
-                                        ),
-                        '/admin/wizard/delete'=>array(
-                                        'gs_base_handler.delete:{classname:wz_modules}',
-                                        'gs_base_handler.redirect',
-                                        ),
-                        '/admin/wizard/recordsets/delete'=>array(
-                                        'gs_base_handler.delete:{classname:wz_recordsets}',
-                                        'gs_base_handler.redirect',
-                                        ),
-			'/admin/wizard/recordsets/clone'=>array(
-					'gs_base_handler.xml_clone:{classname:wz_recordsets}',
-					'gs_base_handler.redirect',
-			),
-                        '/admin/wizard/recordset_fields/delete'=>array(
-                                        'gs_base_handler.delete:{classname:wz_recordset_fields}',
-                                        'gs_base_handler.redirect',
-                                        ),
-                        '/admin/wizard/recordset_fields/copy'=>array(
-                                        'gs_base_handler.copy:{classname:wz_recordset_fields}',
-                                        'gs_base_handler.redirect',
-                                        ),
-                        '/admin/wizard/recordset_links/delete'=>array(
-                                        'gs_base_handler.delete:{classname:wz_recordset_links}',
-                                        'gs_base_handler.redirect',
-                                        ),
-                        '/admin/wizard/recordset_links/copy'=>array(
-                                        'gs_base_handler.copy:{classname:wz_recordset_links}',
-                                        'gs_base_handler.redirect',
-                                        ),
-                        '/admin/wizard/recordset_triggers/delete'=>array(
-                                        'gs_base_handler.delete:{classname:wz_recordset_triggers}',
-                                        'gs_base_handler.redirect',
-                                        ),
-                        '/admin/wizard/recordset_triggers/copy'=>array(
-                                        'gs_base_handler.copy:{classname:wz_recordset_triggers}',
-                                        'gs_base_handler.redirect',
-                                        ),
-                        '/admin/wizard/recordset_submodules/delete'=>array(
-                                        'gs_base_handler.delete:{classname:wz_recordset_submodules}',
-                                        'gs_base_handler.redirect',
-                                        ),
-                        '/admin/wizard/handlers/delete'=>array(
-                                        'gs_base_handler.delete:{classname:wz_handlers}',
-                                        'gs_base_handler.redirect',
-                                        ),
-                        '/admin/wizard/urls/delete'=>array(
-                                        'gs_base_handler.delete:{classname:wz_urls}',
-                                        'gs_base_handler.redirect',
-                                        ),
-			'/admin/wizard/urls/clone'=>array(
-					'gs_base_handler.xml_clone:{classname:wz_urls}',
-					'gs_base_handler.redirect_gl:gl:clone_urls',
-					//'gs_base_handler.redirect',
-			),
-			'/admin/wizard/forms'=>'gs_base_handler.show',
-			'/admin/wizard/form_fields'=>'gs_base_handler.show',
-			'/admin/wizard/form_fields_validators'=>'gs_base_handler.show',
-                        '/admin/wizard/forms/delete'=>array(
-                                        'gs_base_handler.delete:{classname:wz_forms}',
-                                        'gs_base_handler.redirect',
-                                        ),
-                        '/admin/wizard/form_fields/delete'=>array(
-                                        'gs_base_handler.delete:{classname:wz_form_fields}',
-                                        'gs_base_handler.redirect',
-                                        ),
-                        '/admin/wizard/form_fields_validators/delete'=>array(
-                                        'gs_base_handler.delete:{classname:wz_form_fields_validators}',
-                                        'gs_base_handler.redirect',
-                                        ),
-                        '/admin/wizard/templates/delete'=>array(
-                                        'gs_wizard_handler.deletetemplate:return:true',
-                                        'gs_base_handler.redirect',
-                                        ),
-                        '/admin/wizard/templates/copy'=>array(
-                                        'gs_base_handler.show:name:templates_copy.html',
-                                        ),
+					'/admin/form/wz_recordsets'=>array(
+						'gs_base_handler.post:{name:admin_form.html:classname:wz_recordsets:form_class:g_forms_table}',
+						'gs_base_handler.redirect_up:level:2',
+						),
+					'/admin/form/wz_recordset_links'=>array(
+						'gs_base_handler.redirect_if:gl:save_cancel:return:true',
+						'gs_base_handler.post:{name:admin_form.html:classname:wz_recordset_links:form_class:g_forms_table}',
+						'gs_base_handler.redirect_if:gl:save_continue:return:true',
+						'gs_base_handler.redirect_up:level:1',
+						),
+					'/admin/form/wz_recordset_triggers'=>array(
+						'gs_base_handler.redirect_if:gl:save_cancel:return:true',
+						'gs_base_handler.post:{name:admin_form.html:classname:wz_recordset_triggers:form_class:g_forms_table}',
+						'gs_base_handler.redirect_if:gl:save_continue:return:true',
+						'gs_base_handler.redirect_up:level:1',
+						),
+					'/admin/form/wz_recordset_fields'=>array(
+							'gs_base_handler.redirect_if:gl:save_cancel:return:true',
+							'gs_base_handler.post:{name:admin_form.html:classname:wz_recordset_fields:form_class:g_forms_table}',
+							'gs_base_handler.redirect_if:gl:save_continue:return:true',
+							'gs_base_handler.redirect_up:level:1',
+							),
+					'/admin/form/wz_recordset_resizes'=>array(
+							'gs_base_handler.redirect_if:gl:save_cancel:return:true',
+							'gs_base_handler.post:{name:admin_form.html:classname:wz_recordset_resizes:form_class:g_forms_table}',
+							'gs_base_handler.redirect_if:gl:save_continue:return:true',
+							'gs_base_handler.redirect_up:level:1',
+							),
+					'/admin/form/wz_recordset_submodules'=>array(
+							'gs_base_handler.post:{name:admin_form.html:classname:wz_recordset_submodules:form_class:g_forms_table}',
+							'gs_base_handler.redirect_up',
+							),
+					'/admin/form/wz_urls'=>array(
+							'gs_base_handler.redirect_if:gl:save_cancel:return:true',
+							'gs_base_handler.post:{name:admin_form.html:classname:wz_urls:form_class:g_forms_table}',
+							'gs_base_handler.redirect_if:gl:save_continue:return:true',
+							'gs_base_handler.redirect_up',
+							),
+					'/admin/form/wz_urls_inline'=>array(
+							'gs_base_handler.post:{name:inline_form.html:classname:wz_urls:form_class:g_forms_table}',
+							'gs_base_handler.redirect',
+							),
+					'/admin/form/wz_handlers'=>array(
+							'gs_base_handler.post:{name:admin_form.html:classname:wz_handlers:form_class:g_forms_table}',
+							'gs_base_handler.redirect_up',
+							),
+					'/admin/wizard/templates'=>array(
+							'gs_wizard_handler.templates',
+							),
+					'/admin/form/templates'=>array(
+							'gs_base_handler.redirect_if:gl:save_cancel:return:true',
+							'gs_wizard_handler.templatespost:return:true:name:admin_form.html:form_class:gs_wizard_template_form',
+							'gs_base_handler.redirect_if:gl:save_continue:return:true',
+							'gs_base_handler.redirect_up',
+							),
+					'/admin/form/wz_forms'=>array(
+							'gs_base_handler.redirect_if:gl:save_cancel:return:true',
+							'gs_base_handler.post:{name:admin_form.html:classname:wz_forms:form_class:gs_wizard_forms_form}',
+							'gs_base_handler.redirect_if:gl:save_continue:return:true',
+							'gs_base_handler.redirect_up',
+							),
+					'/admin/form/wz_form_fields'=>array(
+							'gs_base_handler.redirect_if:gl:save_cancel:return:true',
+							'gs_base_handler.post:{name:admin_form.html:classname:wz_form_fields:form_class:gs_wizard_form_fields_form}',
+							'gs_base_handler.redirect_if:gl:save_continue:return:true',
+							'gs_base_handler.redirect_up',
+							),
+					'/admin/form/wz_form_fields_validators'=>array(
+							'gs_base_handler.redirect_if:gl:save_cancel:return:true',
+							'gs_base_handler.post:{name:admin_form.html:classname:wz_form_fields_validators:form_class:gs_wizard_form_fields_validators_form}',
+							'gs_base_handler.redirect_if:gl:save_continue:return:true',
+							'gs_base_handler.redirect_up',
+							),
+							'/admin/wizard/formmacros'=>array(
+									'wz_handler_mc.post:name:form_submit.html',
+									),
+							'/admin/wizard/choosetpl'=>array(
+									'gs_wizard_handler.choosetpl:name:form_submit.html:form_class:form_choosetpl:return:true',
+									'gs_base_handler.redirect_up',
+									),
+							'/admin/wizard/macros/list'=>array(
+									'gs_wizard_handler.macros_list:name:macros_list.html',
+									),
+							'/admin/form/strategy'=>array(
+									'gs_wizard_handler.strategy:return:true:name:form_submit.html:form_class:gs_wizard_strategy_form',
+									),
+							'/admin/wizard/form/templates/copy'=>array(
+									'gs_base_handler.redirect_if:gl:save_cancel:return:true',
+									'gs_wizard_handler.templatescopy:{name:admin_form.html:form_class:gs_wizard_form_templates_copy}',
+									'gs_base_handler.redirect_if:gl:save_continue:return:true',
+									'gs_base_handler.redirect_up',
+									),
+							),
+							'post'=>array(
+									'/admin/wizard/iddqdblocksubmit'=>array(
+										'gs_wizard_handler.iddqdblocksubmit:return:true',
+										'gs_base_handler.redirect_gl:gl:iddqdblocksubmit',
+										),
+									'/admin/wizard/clone_urls'=>array(
+										'gs_wizard_handler.clone_urls:return:true',
+										'gs_base_handler.redirect_gl:gl:clone_urls',
+										),
 
-		),
-	);
-	return self::add_subdir($data,dirname(__file__));
+									),
+									'get'=>array(
+											'/admin/wizard'=>'gs_base_handler.show',
+											'/admin/wizard/install'=>'gs_base_handler.show',
+											'/admin/wizard/iddqd'=>'gs_wizard_handler.iddqd',
+											'/admin/wizard/iddqdblock'=>array(
+												'gs_wizard_handler.iddqdblock:return:true',
+												'gs_base_handler.show',
+												),
+											'/admin/wizard/module'=>'gs_base_handler.show',
+											'/admin/wizard/commit'=>array(
+												'gs_base_handler.xml_export:{classname:wz_modules:return:notfalse}',
+												'gs_wizard_handler.xml_save_file_to_module_dir:return:notfalse',
+												'gs_wizard_handler.commit:return:true',
+												'gs_base_handler.redirect',
+												),
+											'/admin/wizard/recordsets'=>'gs_base_handler.show',
+											'/admin/wizard/recordset_fields'=>'gs_base_handler.show',
+											'/admin/wizard/recordset_resizes'=>'gs_base_handler.show',
+											'/admin/wizard/urls'=>'gs_base_handler.show',
+											'/admin/wizard/handlers'=>'gs_base_handler.show',
+											'/admin/wizard/macros'=>'gs_base_handler.show',
+									'/admin/wizard/xmlexport'=>array(
+											'gs_base_handler.xml_export:{classname:wz_modules:return:notfalse}',
+											'gs_base_handler.xml_save_file',
+											),
+									'/admin/wizard/delete'=>array(
+											'gs_base_handler.delete:{classname:wz_modules}',
+											'gs_base_handler.redirect',
+											),
+									'/admin/wizard/recordsets/delete'=>array(
+											'gs_base_handler.delete:{classname:wz_recordsets}',
+											'gs_base_handler.redirect',
+											),
+									'/admin/wizard/recordsets/clone'=>array(
+											'gs_base_handler.xml_clone:{classname:wz_recordsets}',
+											'gs_base_handler.redirect',
+											),
+									'/admin/wizard/recordset_fields/delete'=>array(
+											'gs_base_handler.delete:{classname:wz_recordset_fields}',
+											'gs_base_handler.redirect',
+											),
+									'/admin/wizard/recordset_fields/copy'=>array(
+											'gs_base_handler.copy:{classname:wz_recordset_fields}',
+											'gs_base_handler.redirect',
+											),
+									'/admin/wizard/recordset_links/delete'=>array(
+											'gs_base_handler.delete:{classname:wz_recordset_links}',
+											'gs_base_handler.redirect',
+											),
+									'/admin/wizard/recordset_links/copy'=>array(
+											'gs_base_handler.copy:{classname:wz_recordset_links}',
+											'gs_base_handler.redirect',
+											),
+									'/admin/wizard/recordset_triggers/delete'=>array(
+											'gs_base_handler.delete:{classname:wz_recordset_triggers}',
+											'gs_base_handler.redirect',
+											),
+									'/admin/wizard/recordset_triggers/copy'=>array(
+											'gs_base_handler.copy:{classname:wz_recordset_triggers}',
+											'gs_base_handler.redirect',
+											),
+									'/admin/wizard/recordset_submodules/delete'=>array(
+											'gs_base_handler.delete:{classname:wz_recordset_submodules}',
+											'gs_base_handler.redirect',
+											),
+									'/admin/wizard/handlers/delete'=>array(
+											'gs_base_handler.delete:{classname:wz_handlers}',
+											'gs_base_handler.redirect',
+											),
+									'/admin/wizard/urls/delete'=>array(
+											'gs_base_handler.delete:{classname:wz_urls}',
+											'gs_base_handler.redirect',
+											),
+									'/admin/wizard/urls/clone'=>array(
+											'gs_base_handler.xml_clone:{classname:wz_urls}',
+											'gs_base_handler.redirect_gl:gl:clone_urls',
+											//'gs_base_handler.redirect',
+											),
+									'/admin/wizard/forms'=>'gs_base_handler.show',
+									'/admin/wizard/form_fields'=>'gs_base_handler.show',
+									'/admin/wizard/form_fields_validators'=>'gs_base_handler.show',
+									'/admin/wizard/forms/delete'=>array(
+											'gs_base_handler.delete:{classname:wz_forms}',
+											'gs_base_handler.redirect',
+											),
+									'/admin/wizard/form_fields/delete'=>array(
+											'gs_base_handler.delete:{classname:wz_form_fields}',
+											'gs_base_handler.redirect',
+											),
+									'/admin/wizard/form_fields_validators/delete'=>array(
+											'gs_base_handler.delete:{classname:wz_form_fields_validators}',
+											'gs_base_handler.redirect',
+											),
+									'/admin/wizard/templates/delete'=>array(
+											'gs_wizard_handler.deletetemplate:return:true',
+											'gs_base_handler.redirect',
+											),
+									'/admin/wizard/templates/copy'=>array(
+											'gs_base_handler.show:name:templates_copy.html',
+											),
+
+									),
+									);
+		return self::add_subdir($data,dirname(__file__));
 	}
 	static function gl($name,$record,$data) {
 		switch ($name) {
@@ -259,23 +259,23 @@ class module_wizard extends gs_base_module implements gs_module {
 			case 'clone_urls':
 				//return '/admin/wizard/module/'.$data['module_id'];
 				return '/admin/wizard/handlers/'.$record->get_id();
-			break;
+				break;
 		}
 	}
 }
 
 
 class gs_wizard_handler extends gs_handler {
-    function xml_save_file_to_module_dir($ret) {
+	function xml_save_file_to_module_dir($ret) {
 		$module=record_by_id($this->data['gspgid_va'][0],'wz_modules');
 
-        $x=xml_print($ret['last']->asXML());
+		$x=xml_print($ret['last']->asXML());
 		$dirname=cfg('lib_modules_dir').$module->name.DIRECTORY_SEPARATOR;
 		check_and_create_dir($dirname);
-        $filename='wizard_module_'.$module->name.'.xml';
-        if (!file_put_contents_perm($dirname.$filename,$x)) return false;
+		$filename='wizard_module_'.$module->name.'.xml';
+		if (!file_put_contents_perm($dirname.$filename,$x)) return false;
 		return $x;
-    }
+	}
 	function module_xml_import() {
 		$bh=new gs_base_handler($this->data,$this->params);
 		$f=$bh->validate();
@@ -283,7 +283,7 @@ class gs_wizard_handler extends gs_handler {
 		$d=$f->clean();
 		$xml=!empty($d['xmlfile_data']) ? $d['xmlfile_data'] : $d['xml'];
 		if (!$xml && $d['xmlpath']) $xml=file_get_contents($d['xmlpath']);
-		
+
 		$xml=trim($xml);
 		if(!$xml) throw new gs_exception('empty XML');
 
@@ -295,22 +295,22 @@ class gs_wizard_handler extends gs_handler {
 	function commit($rec=null) {
 
 		if ($rec['last'] && is_a($rec['last'],'gs_record')) $module=$rec['last'];
-			else $module=record_by_id($this->data['gspgid_va'][0],'wz_modules');
+		else $module=record_by_id($this->data['gspgid_va'][0],'wz_modules');
 
 		$dirname=cfg('lib_modules_dir').$module->name.DIRECTORY_SEPARATOR;
 		check_and_create_dir($dirname);
 		check_and_create_dir($dirname.'templates');
 
 		foreach ($module->recordsets as $rs) 
-		  foreach ($rs->Submodules as $sm) {
-			  copy_directory(cfg('lib_distsubmodules_dir').$sm,$dirname.$sm->name);
-			  $files=glob($dirname.$sm->name.DIRECTORY_SEPARATOR.'*.phps');
-			  foreach($files as $fname) {
-				  $txt=file_get_contents($fname);
-				  $txt=str_replace('{%$PARENT_RECORDSET%}',$rs->name,$txt);
-				  file_put_contents($fname,$txt);
-			  }
-		}
+			foreach ($rs->Submodules as $sm) {
+				copy_directory(cfg('lib_distsubmodules_dir').$sm,$dirname.$sm->name);
+				$files=glob($dirname.$sm->name.DIRECTORY_SEPARATOR.'*.phps');
+				foreach($files as $fname) {
+					$txt=file_get_contents($fname);
+					$txt=str_replace('{%$PARENT_RECORDSET%}',$rs->name,$txt);
+					file_put_contents($fname,$txt);
+				}
+			}
 
 		$tpl=new gs_tpl();
 		$tpl=$tpl->init();
@@ -334,36 +334,36 @@ class gs_wizard_handler extends gs_handler {
 
 		$ret=file_put_contents($dirname.'module.phps',$out);
 
-			$init=new gs_init('user');
-			$init->init(LOAD_CORE | LOAD_STORAGE | LOAD_TEMPLATES | LOAD_EXTRAS);
-            $init->load_modules();
-			$init->compile_modules();
-			$init->clear_handlers();
-			$init->save_handlers();
-        
-        return $ret!==FALSE;
+		$init=new gs_init('user');
+		$init->init(LOAD_CORE | LOAD_STORAGE | LOAD_TEMPLATES | LOAD_EXTRAS);
+		$init->load_modules();
+		$init->compile_modules();
+		$init->clear_handlers();
+		$init->save_handlers();
+
+		return $ret!==FALSE;
 
 
 	}
-	
+
 	function clone_urls() {
-		
+
 		$ids=$this->data['manage'];
 		$m_id=$this->data['module_id'];
 		$urls=new wz_urls;
 		$urls_new=new wz_urls;
 		$r_urls=$urls->find_records(array('id'=>array_keys($ids)));
 		foreach ($r_urls as $rec) {
-				$values=$rec->get_values();
-				if (isset($rec->get_recordset()->id_field_name)) unset($values[$rec->get_recordset()->id_field_name]);
-				$values['Module_id']=$m_id;
-				$r=$urls_new->new_record($values);
-				$r_handlers=$rec->Handlers->find(array());
-				foreach ($r_handlers as $rec_h) {
-					$values=$rec_h->get_values();
-					unset($values[$rec_h->get_recordset()->id_field_name]);
-					$r->Handlers->new_record($values);
-				}
+			$values=$rec->get_values();
+			if (isset($rec->get_recordset()->id_field_name)) unset($values[$rec->get_recordset()->id_field_name]);
+			$values['Module_id']=$m_id;
+			$r=$urls_new->new_record($values);
+			$r_handlers=$rec->Handlers->find(array());
+			foreach ($r_handlers as $rec_h) {
+				$values=$rec_h->get_values();
+				unset($values[$rec_h->get_recordset()->id_field_name]);
+				$r->Handlers->new_record($values);
+			}
 		}
 		$urls_new->commit();
 		return true;
@@ -402,7 +402,7 @@ class gs_wizard_handler extends gs_handler {
 	function iddqdblocksubmit() {
 		$module=record_by_id($this->data['gspgid_va'][0],'wz_modules');
 		$filename=cfg('lib_modules_dir').$module->name.DIRECTORY_SEPARATOR.'templates'.DIRECTORY_SEPARATOR.$this->data['gspgid_va'][1];
-	
+
 		$template=$this->data['block_content'];
 		if (isset($this->data['gspgid_va'][2])) {
 			$template=file_get_contents($filename);
@@ -457,10 +457,10 @@ class gs_wizard_handler extends gs_handler {
 		if (empty($d['url'])) return true;	
 
 		$template=array(
-			"get"=>array(
-				$d['url']=>array("gs_base_handler.show:name:".$d['template_name']),
-				),
-		);
+				"get"=>array(
+					$d['url']=>array("gs_base_handler.show:name:".$d['template_name']),
+					),
+				);
 
 		foreach ($template as $type=>$urls) {
 			foreach ($urls as $url=>$handlers) {
@@ -497,9 +497,9 @@ class gs_wizard_handler extends gs_handler {
 
 		$module=record_by_id($d['Module_id'],'wz_modules');
 		$filename=cfg('lib_modules_dir').$module->name.DIRECTORY_SEPARATOR.'templates'.DIRECTORY_SEPARATOR.basename($d['name']);
-		
+
 		return copy($from_filename,$filename);
-		
+
 	}
 	function choosetpl() {
 		$bh=new gs_base_handler($this->data,$this->params);
@@ -544,13 +544,13 @@ class form_choosetpl extends g_forms_inline{
 		$extends=array_map(basename,glob($dirname."*"));
 		//array_unshift($extends,'');
 		$hh=array(
-		    'template_name' => Array
-			(
-			    'type' => 'select_enter',
-			    'validate' => 'dummyValid',
-			    'options' => array_combine($extends,$extends),
-			),
-		);
+				'template_name' => Array
+				(
+				 'type' => 'select_enter',
+				 'validate' => 'dummyValid',
+				 'options' => array_combine($extends,$extends),
+				),
+				);
 		return parent::__construct($hh,$params,$data);
 	}
 
@@ -561,24 +561,24 @@ class gs_wizard_template_form extends g_forms_table{
 		$extends=array_map(basename,glob(cfg('tpl_data_dir')."*"));
 		array_unshift($extends,'');
 		$hh=array(
-		    'extends' => Array
-			(
-			    'type' => 'select',
-			    'validate' => 'dummyValid',
-			    'options' => array_combine($extends,$extends),
-			),
-		    'template_name' => Array
-			(
-			    'type' => 'input',
-			    'validate' => 'notEmpty',
-			),
-		    'url' => Array
-			(
-			    'type' => 'input',
-			    'validate' => 'dummyValid',
-			),
+				'extends' => Array
+				(
+				 'type' => 'select',
+				 'validate' => 'dummyValid',
+				 'options' => array_combine($extends,$extends),
+				),
+				'template_name' => Array
+				(
+				 'type' => 'input',
+				 'validate' => 'notEmpty',
+				),
+				'url' => Array
+				(
+				 'type' => 'input',
+				 'validate' => 'dummyValid',
+				),
 
-		);
+				);
 		return parent::__construct($hh,$params,$data);
 	}
 
@@ -587,27 +587,27 @@ class gs_wizard_strategy_form extends g_forms_inline{
 	function __construct($hh,$params=array(),$data=array()) {
 		$module=record_by_id($data['handler_params']['Module_id'],'wz_modules');
 
-				$rs=new wz_recordsets();
-				$rsets=$rs->find_records(array())->recordset_as_string_array();
+		$rs=new wz_recordsets();
+		$rsets=$rs->find_records(array())->recordset_as_string_array();
 
-				$rsets=array(
-					'module'=>$module->recordsets->recordset_as_string_array(),
-					'wizard'=>$rsets,
-					//'all'=>class_members('gs_recordset_short'),
-					);
+		$rsets=array(
+				'module'=>$module->recordsets->recordset_as_string_array(),
+				'wizard'=>$rsets,
+				//'all'=>class_members('gs_recordset_short'),
+				);
 		$hh=array(
-		    'recordset' => Array
-			(
-			    'type' => 'select',
-			    'options'=>$rsets,
-			),
-		    'strategy' => Array
-			(
-			    'type' => 'select',
-			    'options' => class_members('gs_wizard_strategy_module'),
-			),
+				'recordset' => Array
+				(
+				 'type' => 'select',
+				 'options'=>$rsets,
+				),
+				'strategy' => Array
+				(
+				 'type' => 'select',
+				 'options' => class_members('gs_wizard_strategy_module'),
+				),
 
-		);
+				);
 		return parent::__construct($hh,$params,$data);
 	}
 
@@ -646,24 +646,24 @@ class gs_wizard_form_templates_copy extends g_forms_table {
 		$modules=new wz_modules;
 		$modules->find_records(array());
 		$hh=array(
-			'Module_id'=>array(
-				'widget'=>'radio',
-				'options'=>$modules->recordset_as_string_array(),
-				'default'=>$default['Module_id'],
-				),
-			'name'=>array(
-				'widget'=>'input',
-				'default'=>$default['name'],
-				) ,
-			'from_Module_id'=>array(
-				'widget'=>'hidden',
-				'default'=>$data['handler_params']['from_Module_id'],
-				) ,
-			'from_name'=>array(
-				'widget'=>'hidden',
-				'default'=>$data['handler_params']['from_name'],
-				) ,
-		);
+				'Module_id'=>array(
+					'widget'=>'radio',
+					'options'=>$modules->recordset_as_string_array(),
+					'default'=>$default['Module_id'],
+					),
+				'name'=>array(
+					'widget'=>'input',
+					'default'=>$default['name'],
+					) ,
+				'from_Module_id'=>array(
+					'widget'=>'hidden',
+					'default'=>$data['handler_params']['from_Module_id'],
+					) ,
+				'from_name'=>array(
+					'widget'=>'hidden',
+					'default'=>$data['handler_params']['from_name'],
+					) ,
+				);
 		return parent::__construct($hh,$params,$data);
 	}
 }
@@ -675,8 +675,8 @@ class wz_handler_mc extends gs_handler {
 		$bh=new gs_base_handler($this->data,$this->params);
 		$f=$bh->validate();
 		if (!is_object($f) || !is_a($f,'g_forms')) return $f;
-	
-		
+
+
 		$tpl=gs_tpl::get_instance();
 		$tpl->assign('macros',json_encode($f->macros()));
 		return $tpl->fetch('macros_insert_close.html');
@@ -692,24 +692,24 @@ class form_modules_import  extends g_forms_table{
 
 
 		$hh=array(
-		    'xmlfile' => Array
-			(
-			    'type' => 'file',
-				'validate' => 'dummyValid',
-			),
-		    'xmlpath' => Array
-			(
-			    'type' => 'select',
-				'verbose_name'=>'xml filename',
-				'validate' => 'dummyValid',
-				'options'=> array_combine($xmlfiles,$xmlfiles),
-			),
-		    'xml' => Array
-			(
-			    'type' => 'text',
-				'validate' => 'dummyValid',
-			),
-		);
+				'xmlfile' => Array
+				(
+				 'type' => 'file',
+				 'validate' => 'dummyValid',
+				),
+				'xmlpath' => Array
+				(
+				 'type' => 'select',
+				 'verbose_name'=>'xml filename',
+				 'validate' => 'dummyValid',
+				 'options'=> array_combine($xmlfiles,$xmlfiles),
+				),
+				'xml' => Array
+				(
+				 'type' => 'text',
+				 'validate' => 'dummyValid',
+				),
+				);
 		return parent::__construct($hh,$params,$data);
 	}
 }
