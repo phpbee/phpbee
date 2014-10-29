@@ -109,7 +109,6 @@ class gs_base_handler extends gs_handler {
     function show404($ret) {
         header("HTTP/1.0 404 Not Found");
         return $this->show($ret);
-        return false;
     }
 
     function flush($str) {
@@ -121,7 +120,6 @@ class gs_base_handler extends gs_handler {
 
     function show($ret) {
 
-	//gs_session::save(current_url(),'current_url');    
 
         if (isset($this->params['gl'])) {
             if ($this->validate_gl()!==TRUE) {
@@ -166,7 +164,6 @@ class gs_base_handler extends gs_handler {
             }
         }
         $txt=ob_get_contents();
-        //ob_end_clean();
         mlog($tplname);
         $html=$tpl->fetch($tplname);
         echo $html;
