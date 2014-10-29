@@ -481,11 +481,20 @@ function cfg($name) {
 	return NULL ;
 }
 function mlog($data,$debug_level=255) {
+
+
     gs_logger::udplog($data);
 
 	if (defined('DEBUG') && DEBUG && ($debug_level & DEBUG_LEVEL)) {
 		$log=gs_logger::get_instance();
 		$txt=$log->log($data);
+
+		/*
+		$trace=debug_backtrace();
+		$caller=$trace[0];
+		$caller_file=basename($caller['file']);
+		$log->log_to_file($data,$caller_file);
+		*/
 		return $txt;
     }
 	return $data;
@@ -525,7 +534,7 @@ class gs_logger {
 			fclose($fp);
 		}
 	}
-	function log($data) {
+	function log($data,$prefix='') {
 		$backtrace = debug_backtrace();
 		foreach ($backtrace as $trace) {
 			if (isset($trace['file']) && $trace['file']!==__FILE__ && isset($trace['class'])) break;
@@ -562,14 +571,18 @@ class gs_logger {
         self::udplog($txt);
 		return $txt;
 	}
-	private function log_to_file($data) {
+	function log_to_file($data,$prefix='') {
 		if (cfg('log_file')) {
 			check_and_create_dir(cfg('log_dir'));
 			ob_start();
 			print_r($data);
 			$txt=ob_get_contents();
 			ob_end_clean();
-			file_put_contents_perm(cfg('log_dir').cfg('log_file'),$txt."\n\n",FILE_APPEND);
+			
+			$prefix=basename($prefix);
+			if ($prefix) $prefix=$prefix.'.';
+
+			file_put_contents_perm(cfg('log_dir').$prefix.cfg('log_file'),$txt."\n\n",FILE_APPEND);
 		}
 	}
 	function show() {

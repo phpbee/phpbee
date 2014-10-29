@@ -361,7 +361,7 @@ abstract class gs_recordset_base extends gs_iterator {
         }
 
 		$this->get_connector()->select($this,$options,$fields);
-        mlog(sprintf("_fields=\"%s\"",implode(',',$this->load_records_fields)));
+        //mlog(sprintf("_fields=\"%s\"",implode(',',$this->load_records_fields)));
 
 		$ret=NULL;
 		$records=$this->state==RS_STATE_LOADED ? $this->array : array();

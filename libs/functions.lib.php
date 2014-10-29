@@ -220,6 +220,7 @@ function html_fetch($url,$data=array(),$scheme='GET') {
 				throw new gs_exception(sprintf("html_fetch (%s) : CURL ERROR: %s : %s",$url,curl_errno($ch),curl_error($ch)));
 		}
 		curl_close($ch);
+		mlog($result);
 		return $result;
 
 }
