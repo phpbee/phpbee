@@ -9,7 +9,7 @@ class oauth2_vk  implements oauth2_profile {
 	function authorize($callback) {
 		gs_session::save($callback,'oauth2_vk_request');
 		$callback=urlencode($callback);
-		$url="http://oauth.vk.com/authorize?client_id=".$this->config->APP_ID."&scope=".$this->config->SCOPE."&redirect_uri=$callback&response_type=code";
+		$url="http://oauth.vk.com/authorize?client_id=".$this->config->APP_ID."&scope=".$this->config->SCOPE."&redirect_uri=$callback&response_type=code&v=5.25";
 		#$url=sprintf("http://api.vk.com/oauth/authorize?client_id=%s&redirect_uri=http://api.vk.com/blank.html&scope=%s&display=page&response_type=token",$this->config->APP_ID,$this->config->SCOPE);
 		return $url;
 	}
@@ -55,6 +55,7 @@ class oauth2_vk  implements oauth2_profile {
 	}
 	protected function profile_lang($token,$lang,$friends=false) {
 		$ret=array('uid'=>null,'first_name'=>null,'last_name'=>null,'type'=>'vk','email'=>null);
+		if (!$token || !is_array($token) || !isset($token['access_token'])) return $ret;
 		$url=sprintf("https://api.vk.com/method/getProfiles?lang=%s&uid=%d&access_token=%s&fields=%s",$lang,$token['user_id'],$token['access_token'],$this->fields);
 		$d=json_decode(html_fetch($url));
 		if (!$d) return $ret;
