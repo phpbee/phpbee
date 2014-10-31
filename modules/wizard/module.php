@@ -605,6 +605,7 @@ class gs_wizard_strategy_form extends g_forms_inline{
 				(
 				 'type' => 'select',
 				 'options' => class_members('gs_wizard_strategy_module'),
+					'default'=>'module_wizard_manager',
 				),
 
 				);
