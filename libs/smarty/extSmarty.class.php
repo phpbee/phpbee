@@ -53,7 +53,7 @@ class gs_Smarty extends Smarty {
     function addTemplateDir($dir) {
                 $tpldir=$this->getTemplateDir();
                 if (!is_array($tpldir)) $tpldir=array($tpldir);
-                array_push($tpldir, $dir);
+                array_unshift($tpldir, $dir);
                 $this->setTemplateDir($tpldir);
     }
 

@@ -13,8 +13,39 @@ abstract class gs_handler {
 	function va($i) {
 		return $this->data['gspgid_va'][$i];
 	}
+	private $set_module_tpldir=0;
+	protected function set_module_tpldir($tpl) {
+		if ($this->set_module_tpldir++) return;
+        if (! isset($this->params['module_name'])) return;
+
+		$classes=gs_cacher::load('classes','config');
+		if (! isset($classes[$this->params['module_name']])) return;
+
+		$filename=$classes[$this->params['module_name']];
+		$subdir=trim(str_replace(cfg('lib_modules_dir'),'',dirname($filename).'/'),'/');
+		$www_subdir=trim(cfg('www_dir').$subdir.'/','/');
+		$www_subdir=$www_subdir ? "/$www_subdir/" : '/';
+		$subdir=$subdir ? "/$subdir/" : '';
+
+
+		$td=cfg('tpl_data_dir').'modules'.$subdir;
+		$tpl->addTemplateDir($td);
+
+		$this->tpl_dir=dirname($filename).DIRECTORY_SEPARATOR.'templates';
+		$tpl->addTemplateDir($this->tpl_dir);
+
+        $this->subdir=$subdir;
+        $this->www_subdir=$www_subdir;
+        $tpl->assign('_module_subdir',$subdir);
+        $tpl->assign('subdir',$subdir);
+        $tpl->assign('www_subdir',$www_subdir);
+
+	}
 }
 class gs_base_handler extends gs_handler {
+	var $subdir='';
+	var $www_subdir='';
+
     public function __construct($data=null,$params=null) {
         parent::__construct($data,$params);
 		$tpl=gs_tpl::get_instance();
@@ -24,29 +55,8 @@ class gs_base_handler extends gs_handler {
         $tpl->assign('_gssession',gs_session::load());
         $tpl->assign('root_dir',cfg('root_dir'));
 
-        if (isset($this->params['module_name'])) {
-            $classes=gs_cacher::load('classes','config');
-            if (isset($classes[$this->params['module_name']])) {
-                $filename=$classes[$this->params['module_name']];
-                $subdir=trim(str_replace(cfg('lib_modules_dir'),'',dirname($filename).'/'),'/');
-                $www_subdir=trim(cfg('www_dir').$subdir.'/','/');
-                $www_subdir=$www_subdir ? "/$www_subdir/" : '/';
-                $subdir=$subdir ? "/$subdir/" : '';
 
 
-				$td=cfg('tpl_data_dir').'modules'.$subdir;
-				$tpl->addTemplateDir($td);
-
-                $this->tpl_dir=dirname($filename).DIRECTORY_SEPARATOR.'templates';
-                $tpl->addTemplateDir($this->tpl_dir);
-
-            }
-        $this->subdir=$subdir;
-        $this->www_subdir=$www_subdir;
-        $tpl->assign('_module_subdir',$subdir);
-        $tpl->assign('subdir',$subdir);
-        $tpl->assign('www_subdir',$www_subdir);
-        }
 
 
 
@@ -82,8 +92,9 @@ class gs_base_handler extends gs_handler {
     }
     function fetch($data) {
         if (empty($this->params['name'])) throw new gs_exception('gs_base_handler.fetch: empty params[name]');
-        $tplname=file_exists($this->tpl_dir.DIRECTORY_SEPARATOR.$this->params['name']) ? $this->tpl_dir.DIRECTORY_SEPARATOR.$this->params['name'] : $this->params['name'];
         $tpl=gs_tpl::get_instance();
+		$this->set_module_tpldir($tpl);
+        $tplname=file_exists($this->tpl_dir.DIRECTORY_SEPARATOR.$this->params['name']) ? $this->tpl_dir.DIRECTORY_SEPARATOR.$this->params['name'] : $this->params['name'];
         $tpl->assign('_gsdata',$this->data);
         $tpl->assign('_gsparams',$this->params);
         $tpl->assign('_gsstack',$data);
@@ -130,6 +141,8 @@ class gs_base_handler extends gs_handler {
         }
 
         $tpl=gs_tpl::get_instance();
+		$this->set_module_tpldir($tpl);
+
 
         if (empty($this->params['name'])) {
             $this->params['name']=basename($this->data['handler_key']).'.html';
@@ -137,10 +150,14 @@ class gs_base_handler extends gs_handler {
         
         $this->params['name']=trim($this->params['name']);
 
-        $tplname=false;
-        if (!$tplname && file_exists($this->tpl_dir.DIRECTORY_SEPARATOR.$this->params['name'])) $tplname=$this->tpl_dir.DIRECTORY_SEPARATOR.$this->params['name'];
-        if (!$tplname && file_exists(cfg('tpl_data_dir').DIRECTORY_SEPARATOR.$this->params['name'])) $tplname=cfg('tpl_data_dir').DIRECTORY_SEPARATOR.$this->params['name'];
-        if (!$tplname) $tplname=$this->params['name'];
+		$tplname=$this->params['name'];
+		foreach($tpl->getTemplateDir() as $tpldir) {
+			$testtplname=$tpldir.DIRECTORY_SEPARATOR.$tplname;
+			if (file_exists($testtplname)) {
+				$tplname=$tpl->multilang(realpath($testtplname));
+				break ;
+			}
+		}
 
         mlog($tplname);
         $tplname=$tpl->multilang($tplname);
@@ -372,6 +389,7 @@ class gs_base_handler extends gs_handler {
 
     function showform($f=null) {
         $tpl=gs_tpl::get_instance();
+		$this->set_module_tpldir(gs_tpl::get_instance());
         if (!$f) $f=$this->get_form();
         $tpl->assign('formfields',$f->show());
         $tpl->assign('handler_params',$this->data['handler_params']);
@@ -449,9 +467,11 @@ class gs_base_handler extends gs_handler {
     }
 
     function postform() {
+
         if ($this->data['gspgtype']==GS_DATA_GET) return $this->showform();
 
         $tpl=gs_tpl::get_instance();
+		$this->set_module_tpldir($tpl);
         $f=$this->get_form();
         $validate=$f->validate();
         if ($validate['STATUS']===true) {
@@ -482,6 +502,7 @@ class gs_base_handler extends gs_handler {
         echo $this->postform();
     }
     function deleteform() {
+		$this->set_module_tpldir(gs_tpl::get_instance());
 
         if ($this->data['gspgtype']==GS_DATA_GET) return $this->showform();
         $f=$this->get_form();
