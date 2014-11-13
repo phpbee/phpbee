@@ -48,6 +48,9 @@ class module{%$MODULE_NAME%} extends gs_base_module implements gs_module {
                 '' => array(
                     'oauth2_handler.startlogin',
                 ) ,
+                'instagram/redirect_uri' => array(
+                    'oauth2_instagram_handler.redirect_uri',
+                ) ,
                 '/admin/oauth2/oauth2_config' => array(
                     'gs_base_handler.show:name:adm_oauth2_config.html',
                 ) ,

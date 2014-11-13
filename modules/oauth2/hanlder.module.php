@@ -25,7 +25,6 @@ class oauth2_handler extends gs_handler {
 		$this->data['data']['oa2c']=$classname;
 		$d['query']=http_build_query(array_merge($get_vars,$this->data['data']));
 		$callback=http_build_url($d);
-		$oauth=new $classname($config);
 		if (isset($this->params['callback'])) {
 			$dc=array (
 				'scheme' => 'http',
@@ -35,6 +34,7 @@ class oauth2_handler extends gs_handler {
 			);
 			$callback=http_build_url($dc);
 		}
+		$oauth=new $classname($config);
 		gs_session::save($callback,'oauth2_callback');
 		$url=$oauth->authorize($callback);
 		header('Location: '.$url);
@@ -54,6 +54,7 @@ class oauth2_handler extends gs_handler {
 		if(!$token) return true;
 
 		$profile=$oauth->profile($token);
+		if (!$profile) return true;
 		$profile=explode_data(array_filter($profile));
 
 		gs_session::save($profile,'oauth2_profile');
@@ -62,6 +63,7 @@ class oauth2_handler extends gs_handler {
 
 		$old_person=null;
 		if(function_exists('person') && isset($this->params['role'])) $old_person=person($this->params['role']);
+
 
 
 		$rs=new oauth2_users;
@@ -103,8 +105,6 @@ class oauth2_handler extends gs_handler {
 			}
 
 
-			$rec->commit();
-
 		}
 
 		if ($old_person)  {
@@ -128,6 +128,7 @@ class oauth2_handler extends gs_handler {
 
 		$rec->token=$token['access_token'];
 		$rec->commit();
+
 		gs_session::save($person->get_id(),'login_'.$this->params['classname']);
 		if(function_exists('person') && isset($this->params['role'])) person()->add_role($this->params['role'],$person);
 			return $rec;
