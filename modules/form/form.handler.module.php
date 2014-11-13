@@ -19,6 +19,8 @@ class form_handler extends gs_handler  {
 
 
 		$this->tpl=gs_tpl::get_instance();
+		$this->set_module_tpldir($this->tpl);
+
 		$this->tpl->assign('form',$this->form);
 		$this->tpl->assign('params',$this->params);
 
