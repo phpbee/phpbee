@@ -149,7 +149,7 @@ class payment_cart {
     }
 	function get_item_record($num) {
 		$items=$this->get_items();
-		if (!isset($items[$num])) return null;
+		if (!isset($items[$num])) return new gs_null(GS_NULL_XML);
 		$item=$items[$num];
 		$rec=record_by_id($item['id'],$item['class']);
 		$rec->cart_item=$item;

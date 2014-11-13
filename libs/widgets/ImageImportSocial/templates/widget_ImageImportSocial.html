@@ -1,18 +1,5 @@
-{*
-{handler gspgid="widgets/ImageImportSocial/action" recordset=$params.recordset hash=$params.hash foreign_field_name=$params.foreign_field_name rid=$params.rid}
-{foreach $params as $k=>$v}
-	<input type=hidden name="{$k}" value="{$v|htmlentities}">
-{/foreach}
-<script type="text/javascript">
-	{foreach $params as $k=>$v}
-	var {$k}={$v|json_encode};
-	{/foreach}
-</script>
-*}
-
-<p>
 <div>
-<button class="btn" onClick="return ImageImportSocial($(this).siblings('.ImageImportSocial').show());">{ml('Импортировать из VK','Import from VK')}</button>
+<button class="importVK_butoon" onClick="return ImageImportSocial($(this).siblings('.ImageImportSocial').show());">{ml('Импортировать из VK','Import from VK')}</button>
 
 <div class="ImageImportSocial" style="display:none;">
 	<script type="text/javascript" src="/libs/widgets/ImageImportSocial/widget.js"></script>
@@ -29,7 +16,6 @@
 
 </div>
 </div>
-</p>
 
 
 
