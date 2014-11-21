@@ -67,11 +67,21 @@ class oauth2_instagram implements oauth2_profile {
 
 
 
+
 		$access_token=$token['access_token'];
 		$uid=$token['user']['id'];
 		$names=explode(' ',$token['user']['full_name'],2);
 		$photo=$token['user']['profile_picture'];
-		$ret=array('uid'=>'ing_'.$uid,'oauth2_type'=>'ING','oauth2_uid'=>$uid,'first_name'=>reset($names),'last_name'=>end($names),'type'=>'ING','email'=>null,'photo'=>$photo);
+		$ret=array('uid'=>'ing_'.$uid,
+					'oauth2_type'=>'ING',
+					'oauth2_uid'=>$uid,
+					'username'=>$token['user']['username'],
+					'first_name'=>reset($names),
+					'last_name'=>end($names),
+					'type'=>'ING',
+					'email'=>null,
+					'photo'=>$photo,
+					);
 
 
 
