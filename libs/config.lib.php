@@ -77,7 +77,7 @@ class gs_config {
 		$this->referer= isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '';
 		$this->referer_path= isset($_SERVER['HTTP_REFERER']) ?  preg_replace("|^$this->www_dir|",'',parse_url($_SERVER['HTTP_REFERER'], PHP_URL_PATH)) : '';
 		$this->lib_dir=strpos(__FILE__,'phar://')==0  ? pathinfo(__FILE__,PATHINFO_DIRNAME).'/' : $this->root_dir.'libs/';
-		$this->var_dir=$this->root_dir.'var/';
+		$this->var_dir=dirname($this->root_dir).'/var/';
 		$this->img_dir=$this->root_dir.$this->www_image_dir;
 		$this->log_dir=$this->var_dir.'log/';
 		$this->log_file=NULL;//'gs.log';
@@ -754,7 +754,7 @@ function __class_filename($class_name) {
 
 function __gs_autoload($class_name) {
 	$filename=__class_filename($class_name);
-	if($filename && strpos($class_name,'_smarty')!==0) load_file($filename);
+	if($filename && strpos($class_name,'_smarty')!==0 && strpos($class_name,'PHP_')!==0) load_file($filename);
 	//if (!class_exists($class_name)) gs_logger::udplog(new exception( "$class_name not loaded"));
 }
 

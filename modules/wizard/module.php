@@ -157,8 +157,8 @@ class module_wizard extends gs_base_module implements gs_module {
 											'/admin/wizard/commit'=>array(
 												'gs_base_handler.xml_export:{classname:wz_modules:return:notfalse}',
 												'gs_wizard_handler.xml_save_file_to_module_dir:return:notfalse',
-												'gs_wizard_handler.commit:return:true',
-												'gs_base_handler.redirect',
+												'gs_wizard_handler.commit:return:notfalse',
+												'gs_base_handler.redirect_gl:gl:module_show',
 												),
 											'/admin/wizard/recordsets'=>'gs_base_handler.show',
 											'/admin/wizard/recordset_fields'=>'gs_base_handler.show',
@@ -342,7 +342,6 @@ class gs_wizard_handler extends gs_handler {
 		$init->save_handlers();
 
 		return $ret!==FALSE;
-
 
 	}
 

@@ -114,6 +114,7 @@ function html_redirect($gspgid=null,$data=array(),$type='302', $clean_get=false,
 						} else {
 							$ret=sprintf('Location: %s%s',$url,$datastr);
 							header($ret);
+							echo sprintf('<META http-equiv="refresh" content="0;URL=%s%s">',$url,$datastr);
 						}
 						break;
 		}
@@ -424,14 +425,23 @@ function copy_directory($src,$dst) {
 
 function class_members($classname=null) {
 		$classes=gs_cacher::load('classes','config');
-		if (!$classname) return $classes;
-		$func=create_function('$a','return  is_subclass_of($a,"'.$classname.'");');
-		$classes=array_filter(array_keys($classes),$func);
+		if (!$classname) return $array();
+		$subclasses= array(); 
+		foreach (array_keys($classes) as $c) {
+			if (!is_subclass_of($c,$classname)) continue;
+			$subclasses[$c]=method_exists($c,'_desc') ? call_user_func(array($c,'_desc')) : $c;
+		}
+		return $subclasses;
+		/*
+
+		//$func=create_function('$a','return  is_subclass_of($a,"'.$classname.'");');
+		//$classes=array_filter(array_keys($classes),$func);
 		$names=array();
-		foreach ($classes as $c) {
+		foreach ($subclasses as $c) {
 				$names[]=method_exists($c,'_desc') ? call_user_func(array($c,'_desc')) : $c;
 		}
 		return array_combine($classes,$names);
+		*/
 }
 
 function filter($name) {
