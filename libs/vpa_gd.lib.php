@@ -91,6 +91,9 @@ class vpa_gd {
 			case 'watermark':
 				$this->watermark();
 			break;
+			case 'blurred':
+				$this->make_blurred();
+			break;
 		}
 	}
 	function resize($width,$height,$type)
@@ -143,7 +146,7 @@ class vpa_gd {
 
 			$this->rotate_right();
 		}
-
+	
 	}
 	function rotate_right() {
 		$this->old_img=imagerotate($this->old_img,270,0);
@@ -164,6 +167,24 @@ class vpa_gd {
 		//ImageCopyResampled($this->old_img,$wm->old_img,0, 0, 0, 0, $this->old_width, $this->old_height, $wm->old_width, $wm->old_height);
 
 		ImageCopyResampled($this->old_img,$wm->new_img,0, $this->old_height-$wm->new_height, 0, 0, $wm->new_width, $wm->new_height, $wm->new_width, $wm->new_height);
+	}
+	
+	function make_blurred() {
+		$nw1 = $this->old_width * 0.05;
+		$nh1 = $this->old_height * 0.05;
+		$n1 = imagecreatetruecolor($nw1, $nh1);
+		imagecopyresized($n1, $this->old_img, 0, 0, 0, 0, $nw1, $nh1, $this->old_width, $this->old_height);
+		imagefilter($n1, IMG_FILTER_GAUSSIAN_BLUR);
+
+		$nw2 = $this->old_width * 0.25;
+		$nh2 = $this->old_height * 0.25;
+		$n2 = imagecreatetruecolor($nw2, $nh2);
+		imagecopyresized($n2, $n1, 0, 0, 0, 0, $nw2, $nh2, $nw1, $nh1);
+		imagefilter($n2, IMG_FILTER_GAUSSIAN_BLUR);
+
+		imagecopyresized($this->old_img, $n2, 0, 0, 0, 0, $this->old_width, $this->old_height, $nw2, $nh2);
+		imagefilter($this->old_img, IMG_FILTER_GAUSSIAN_BLUR);
+		
 	}
 	
 	function make_width()
