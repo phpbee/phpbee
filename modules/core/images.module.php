@@ -381,7 +381,7 @@ class img_resizes_cfg extends gs_recordset_short {
             'height'=> "fInt 'Высота'",
             'method'=>"fSelect 'Метод' values='use_width,use_height,use_box,use_space,use_fields,use_crop,copy'",
             'bgcolor'=> "fString 'Цвет фона R,G,B' default='0,0,0'",
-            'modifier'=>"fSelect 'Модификатор' values=',check_and_rotate_left,check_and_rotate_right,watermark' required=false",
+            'modifier'=>"fSelect 'Модификатор' values=',check_and_rotate_left,check_and_rotate_right,watermark,blurred' required=false",
         ) , $init_opts);
         $this->structure['fkeys'] = array();
     }
