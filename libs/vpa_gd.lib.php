@@ -177,7 +177,7 @@ class vpa_gd {
 			$b = ob_get_clean();
 			$i = new Imagick();
 			$i->readImageBlob($b);
-			$i->blurImage(0,8);
+			$i->blurImage(0,32);
 			$this->old_img = imagecreatefromstring($i->getImageBlob());
 		} else {
 			$nw1 = $this->old_width * 0.05;
