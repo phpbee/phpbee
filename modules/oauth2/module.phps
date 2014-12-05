@@ -48,9 +48,6 @@ class module{%$MODULE_NAME%} extends gs_base_module implements gs_module {
                 '' => array(
                     'oauth2_handler.startlogin',
                 ) ,
-                'instagram/redirect_uri' => array(
-                    'oauth2_instagram_handler.redirect_uri',
-                ) ,
                 '/admin/oauth2/oauth2_config' => array(
                     'gs_base_handler.show:name:adm_oauth2_config.html',
                 ) ,
@@ -134,7 +131,6 @@ class oauth2_config extends gs_recordset_short {
             'SCOPE' => 'fString verbose_name="SCOPE"     required=false        ',
             'CONSUMER_KEY' => 'fString verbose_name="CONSUMER_KEY"     required=false        ',
             'title' => 'fString verbose_name="Title"     required=false        ',
-            'Logo' => 'lMany2One oauth2_config_images:Parent verbose_name="Logo"   widget="gallery"  required=false    ',
         ) , $init_opts);
     }
 }
@@ -147,45 +143,14 @@ class oauth2_config_images extends tw_images {
             'group_key' => 'fString    options="32"  required=false  index=true      ',
             'file_uid' => 'fString    options="64"  required=false  index=true      ',
             'group_key' => 'fString    options="32"  required=false  index=true      ',
-            'Parent' => 'lOne2One oauth2_config    required=false  mode=link  ',
-            'File' => 'lOne2One oauth2_config_images_files verbose_name="File"   widget="include_form"  required=false  hidden=false  ',
-            'Parent' => 'lOne2One oauth2_config    required=false  mode=link  ',
-            'File' => 'lOne2One oauth2_config_images_files verbose_name="File"   widget="include_form"  required=false  hidden=false  ',
         ) , $init_opts);
-        $this->structure['fkeys'] = array(
-            array(
-                'link' => 'oauth2_config.Logo',
-                'on_delete' => 'CASCADE',
-                'on_update' => 'CASCADE'
-            ) ,
-            array(
-                'link' => 'oauth2_config.Logo',
-                'on_delete' => 'CASCADE',
-                'on_update' => 'CASCADE'
-            ) ,
-        );
     }
 }
 class oauth2_config_images_files extends tw_file_images {
     public $no_urlkey = 1;
     public $orderby = "id";
     function __construct($init_opts = false) {
-        parent::__construct(array(
-            'Parent' => 'lOne2One oauth2_config_images    required=false    ',
-            'Parent' => 'lOne2One oauth2_config_images    required=false    ',
-        ) , $init_opts);
-        $this->structure['fkeys'] = array(
-            array(
-                'link' => 'oauth2_config_images.File',
-                'on_delete' => 'CASCADE',
-                'on_update' => 'CASCADE'
-            ) ,
-            array(
-                'link' => 'oauth2_config_images.File',
-                'on_delete' => 'CASCADE',
-                'on_update' => 'CASCADE'
-            ) ,
-        );
+        parent::__construct(array() , $init_opts);
     }
     function config_previews() {
         parent::config_previews();
@@ -221,12 +186,17 @@ class oauth2_users extends gs_recordset_short {
             'oauth2_uid' => 'fString     required=true  index=true      ',
             'oauth2_profile' => 'fText     required=false        ',
             'token' => 'fString     required=false        ',
-            'Config' => 'lOne2One oauth2_config    required=false    ',
             'Person' => 'lOne2One girls    required=true    ',
+            'Config' => 'lOne2One oauth2_config    required=false    ',
         ) , $init_opts);
         $this->structure['fkeys'] = array(
             array(
                 'link' => 'Person',
+                'on_delete' => 'CASCADE',
+                'on_update' => 'CASCADE'
+            ) ,
+            array(
+                'link' => 'Config',
                 'on_delete' => 'CASCADE',
                 'on_update' => 'CASCADE'
             ) ,

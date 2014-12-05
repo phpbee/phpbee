@@ -141,28 +141,7 @@
                   <recordset name="wz_recordset_resizes"/>
                 </Resizes>
                 <Links>
-                  <recordset name="wz_recordset_links">
-                    <record>
-                      <links/>
-                      <values>
-                        <name>Logo</name>
-                        <verbose_name>Logo</verbose_name>
-                        <type>lMany2One</type>
-                        <classname>oauth2_config_images</classname>
-                        <linkname>Parent</linkname>
-                        <options/>
-                        <extra_options/>
-                        <widget>gallery</widget>
-                        <required>0</required>
-                        <fkey_on_delete>CASCADE</fkey_on_delete>
-                        <fkey_on_update>CASCADE</fkey_on_update>
-                        <fkey_name/>
-                        <Recordset_id>37</Recordset_id>
-                        <_ctime>2014-05-23 15:11:27</_ctime>
-                        <_mtime>2014-05-23 15:11:27</_mtime>
-                      </values>
-                    </record>
-                  </recordset>
+                  <recordset name="wz_recordset_links"/>
                 </Links>
                 <Triggers>
                   <recordset name="wz_recordset_triggers"/>
@@ -178,11 +157,11 @@
                 <database/>
                 <extends/>
                 <Module_id>10</Module_id>
-                <_Fields_count>8</_Fields_count>
-                <_Resizes_count>8</_Resizes_count>
-                <_Links_count>8</_Links_count>
-                <_Triggers_count>8</_Triggers_count>
-                <_Submodules_count>8</_Submodules_count>
+                <_Fields_count>14</_Fields_count>
+                <_Resizes_count>14</_Resizes_count>
+                <_Links_count>14</_Links_count>
+                <_Triggers_count>14</_Triggers_count>
+                <_Submodules_count>14</_Submodules_count>
                 <showadmin>1</showadmin>
                 <no_urlkey>1</no_urlkey>
                 <no_ctime>1</no_ctime>
@@ -191,7 +170,7 @@
                 <orderby>id</orderby>
                 <id_field_name>id</id_field_name>
                 <_ctime>2014-05-23 15:11:27</_ctime>
-                <_mtime>2014-05-23 15:11:27</_mtime>
+                <_mtime>2014-11-04 18:50:34</_mtime>
                 <sortkey>37</sortkey>
               </values>
             </record>
@@ -289,88 +268,7 @@
                   <recordset name="wz_recordset_resizes"/>
                 </Resizes>
                 <Links>
-                  <recordset name="wz_recordset_links">
-                    <record>
-                      <links/>
-                      <values>
-                        <name>Parent</name>
-                        <verbose_name/>
-                        <type>lOne2One</type>
-                        <classname>oauth2_config</classname>
-                        <linkname/>
-                        <options/>
-                        <extra_options>mode=link</extra_options>
-                        <widget/>
-                        <required>0</required>
-                        <fkey_on_delete>CASCADE</fkey_on_delete>
-                        <fkey_on_update>CASCADE</fkey_on_update>
-                        <fkey_name>oauth2_config.Logo</fkey_name>
-                        <Recordset_id>38</Recordset_id>
-                        <_ctime>2014-05-23 15:11:28</_ctime>
-                        <_mtime>2014-05-23 15:11:28</_mtime>
-                      </values>
-                    </record>
-                    <record>
-                      <links/>
-                      <values>
-                        <name>File</name>
-                        <verbose_name>File</verbose_name>
-                        <type>lOne2One</type>
-                        <classname>oauth2_config_images_files</classname>
-                        <linkname/>
-                        <options/>
-                        <extra_options>hidden=false</extra_options>
-                        <widget>include_form</widget>
-                        <required>0</required>
-                        <fkey_on_delete>NONE</fkey_on_delete>
-                        <fkey_on_update>NONE</fkey_on_update>
-                        <fkey_name/>
-                        <Recordset_id>38</Recordset_id>
-                        <_ctime>2014-05-23 15:11:28</_ctime>
-                        <_mtime>2014-05-23 15:11:28</_mtime>
-                      </values>
-                    </record>
-                    <record>
-                      <links/>
-                      <values>
-                        <name>Parent</name>
-                        <verbose_name/>
-                        <type>lOne2One</type>
-                        <classname>oauth2_config</classname>
-                        <linkname/>
-                        <options/>
-                        <extra_options>mode=link</extra_options>
-                        <widget/>
-                        <required>0</required>
-                        <fkey_on_delete>CASCADE</fkey_on_delete>
-                        <fkey_on_update>CASCADE</fkey_on_update>
-                        <fkey_name>oauth2_config.Logo</fkey_name>
-                        <Recordset_id>38</Recordset_id>
-                        <_ctime>2014-05-23 15:11:28</_ctime>
-                        <_mtime>2014-05-23 15:11:28</_mtime>
-                      </values>
-                    </record>
-                    <record>
-                      <links/>
-                      <values>
-                        <name>File</name>
-                        <verbose_name>File</verbose_name>
-                        <type>lOne2One</type>
-                        <classname>oauth2_config_images_files</classname>
-                        <linkname/>
-                        <options/>
-                        <extra_options>hidden=false</extra_options>
-                        <widget>include_form</widget>
-                        <required>0</required>
-                        <fkey_on_delete>NONE</fkey_on_delete>
-                        <fkey_on_update>NONE</fkey_on_update>
-                        <fkey_name/>
-                        <Recordset_id>38</Recordset_id>
-                        <_ctime>2014-05-23 15:11:28</_ctime>
-                        <_mtime>2014-05-23 15:11:28</_mtime>
-                      </values>
-                    </record>
-                  </recordset>
+                  <recordset name="wz_recordset_links"/>
                 </Links>
                 <Triggers>
                   <recordset name="wz_recordset_triggers"/>
@@ -386,11 +284,11 @@
                 <database/>
                 <extends>tw_images</extends>
                 <Module_id>10</Module_id>
-                <_Fields_count>0</_Fields_count>
-                <_Resizes_count>0</_Resizes_count>
-                <_Links_count>0</_Links_count>
-                <_Triggers_count>0</_Triggers_count>
-                <_Submodules_count>0</_Submodules_count>
+                <_Fields_count>4</_Fields_count>
+                <_Resizes_count>4</_Resizes_count>
+                <_Links_count>4</_Links_count>
+                <_Triggers_count>4</_Triggers_count>
+                <_Submodules_count>4</_Submodules_count>
                 <showadmin>0</showadmin>
                 <no_urlkey>1</no_urlkey>
                 <no_ctime>0</no_ctime>
@@ -399,7 +297,7 @@
                 <orderby>id</orderby>
                 <id_field_name>id</id_field_name>
                 <_ctime>2014-05-23 15:11:27</_ctime>
-                <_mtime>2014-05-23 15:11:27</_mtime>
+                <_mtime>2014-11-04 18:50:34</_mtime>
                 <sortkey>38</sortkey>
               </values>
             </record>
@@ -441,48 +339,7 @@
                   </recordset>
                 </Resizes>
                 <Links>
-                  <recordset name="wz_recordset_links">
-                    <record>
-                      <links/>
-                      <values>
-                        <name>Parent</name>
-                        <verbose_name/>
-                        <type>lOne2One</type>
-                        <classname>oauth2_config_images</classname>
-                        <linkname/>
-                        <options/>
-                        <extra_options/>
-                        <widget/>
-                        <required>0</required>
-                        <fkey_on_delete>CASCADE</fkey_on_delete>
-                        <fkey_on_update>CASCADE</fkey_on_update>
-                        <fkey_name>oauth2_config_images.File</fkey_name>
-                        <Recordset_id>39</Recordset_id>
-                        <_ctime>2014-05-23 15:11:28</_ctime>
-                        <_mtime>2014-05-23 15:11:28</_mtime>
-                      </values>
-                    </record>
-                    <record>
-                      <links/>
-                      <values>
-                        <name>Parent</name>
-                        <verbose_name/>
-                        <type>lOne2One</type>
-                        <classname>oauth2_config_images</classname>
-                        <linkname/>
-                        <options/>
-                        <extra_options/>
-                        <widget/>
-                        <required>0</required>
-                        <fkey_on_delete>CASCADE</fkey_on_delete>
-                        <fkey_on_update>CASCADE</fkey_on_update>
-                        <fkey_name>oauth2_config_images.File</fkey_name>
-                        <Recordset_id>39</Recordset_id>
-                        <_ctime>2014-05-23 15:11:28</_ctime>
-                        <_mtime>2014-05-23 15:11:28</_mtime>
-                      </values>
-                    </record>
-                  </recordset>
+                  <recordset name="wz_recordset_links"/>
                 </Links>
                 <Triggers>
                   <recordset name="wz_recordset_triggers"/>
@@ -498,11 +355,11 @@
                 <database/>
                 <extends>tw_file_images</extends>
                 <Module_id>10</Module_id>
-                <_Fields_count>2</_Fields_count>
-                <_Resizes_count>2</_Resizes_count>
-                <_Links_count>2</_Links_count>
-                <_Triggers_count>2</_Triggers_count>
-                <_Submodules_count>2</_Submodules_count>
+                <_Fields_count>4</_Fields_count>
+                <_Resizes_count>4</_Resizes_count>
+                <_Links_count>4</_Links_count>
+                <_Triggers_count>4</_Triggers_count>
+                <_Submodules_count>4</_Submodules_count>
                 <showadmin>0</showadmin>
                 <no_urlkey>1</no_urlkey>
                 <no_ctime>0</no_ctime>
@@ -511,7 +368,7 @@
                 <orderby>id</orderby>
                 <id_field_name>id</id_field_name>
                 <_ctime>2014-05-23 15:11:28</_ctime>
-                <_mtime>2014-05-23 15:11:28</_mtime>
+                <_mtime>2014-11-04 18:50:34</_mtime>
                 <sortkey>39</sortkey>
               </values>
             </record>
@@ -592,26 +449,6 @@
                     <record>
                       <links/>
                       <values>
-                        <name>Config</name>
-                        <verbose_name/>
-                        <type>lOne2One</type>
-                        <classname>oauth2_config</classname>
-                        <linkname/>
-                        <options/>
-                        <extra_options/>
-                        <widget/>
-                        <required>0</required>
-                        <fkey_on_delete>NONE</fkey_on_delete>
-                        <fkey_on_update>NONE</fkey_on_update>
-                        <fkey_name/>
-                        <Recordset_id>58</Recordset_id>
-                        <_ctime>2014-10-20 16:40:35</_ctime>
-                        <_mtime>2014-10-20 16:40:35</_mtime>
-                      </values>
-                    </record>
-                    <record>
-                      <links/>
-                      <values>
                         <name>Person</name>
                         <verbose_name/>
                         <type>lOne2One</type>
@@ -627,6 +464,26 @@
                         <Recordset_id>58</Recordset_id>
                         <_ctime>2014-10-20 16:41:57</_ctime>
                         <_mtime>2014-10-20 17:20:34</_mtime>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>Config</name>
+                        <verbose_name/>
+                        <type>lOne2One</type>
+                        <classname>oauth2_config</classname>
+                        <linkname/>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <required>0</required>
+                        <fkey_on_delete>CASCADE</fkey_on_delete>
+                        <fkey_on_update>CASCADE</fkey_on_update>
+                        <fkey_name/>
+                        <Recordset_id>58</Recordset_id>
+                        <_ctime>2014-12-03 18:37:13</_ctime>
+                        <_mtime>2014-12-03 18:37:13</_mtime>
                       </values>
                     </record>
                   </recordset>
@@ -645,11 +502,11 @@
                 <database>0</database>
                 <extends/>
                 <Module_id>10</Module_id>
-                <_Fields_count>5</_Fields_count>
-                <_Resizes_count>5</_Resizes_count>
-                <_Links_count>5</_Links_count>
-                <_Triggers_count>5</_Triggers_count>
-                <_Submodules_count>5</_Submodules_count>
+                <_Fields_count>10</_Fields_count>
+                <_Resizes_count>10</_Resizes_count>
+                <_Links_count>10</_Links_count>
+                <_Triggers_count>10</_Triggers_count>
+                <_Submodules_count>10</_Submodules_count>
                 <showadmin>0</showadmin>
                 <no_urlkey>1</no_urlkey>
                 <no_ctime>0</no_ctime>
@@ -658,7 +515,7 @@
                 <orderby>id</orderby>
                 <id_field_name>id</id_field_name>
                 <_ctime>2014-10-20 16:39:46</_ctime>
-                <_mtime>2014-10-20 17:01:39</_mtime>
+                <_mtime>2014-12-03 18:37:13</_mtime>
                 <sortkey>58</sortkey>
               </values>
             </record>
@@ -690,9 +547,9 @@
                 <gspgid_value/>
                 <type>get</type>
                 <Module_id>10</Module_id>
-                <_Handlers_count>1</_Handlers_count>
+                <_Handlers_count>2</_Handlers_count>
                 <_ctime>2014-05-23 15:11:28</_ctime>
-                <_mtime>2014-05-23 15:11:28</_mtime>
+                <_mtime>2014-11-04 18:50:18</_mtime>
               </values>
             </record>
             <record>
@@ -719,9 +576,9 @@
                 <gspgid_value/>
                 <type>post</type>
                 <Module_id>10</Module_id>
-                <_Handlers_count>0</_Handlers_count>
+                <_Handlers_count>1</_Handlers_count>
                 <_ctime>2014-05-23 15:11:28</_ctime>
-                <_mtime>2014-05-23 15:11:28</_mtime>
+                <_mtime>2014-11-04 18:50:18</_mtime>
               </values>
             </record>
             <record>
@@ -748,9 +605,9 @@
                 <gspgid_value>/admin/oauth2/oauth2_config</gspgid_value>
                 <type>get</type>
                 <Module_id>10</Module_id>
-                <_Handlers_count>0</_Handlers_count>
+                <_Handlers_count>1</_Handlers_count>
                 <_ctime>2014-05-23 15:11:28</_ctime>
-                <_mtime>2014-05-23 15:11:28</_mtime>
+                <_mtime>2014-11-04 18:50:18</_mtime>
               </values>
             </record>
             <record>
@@ -790,9 +647,9 @@
                 <gspgid_value>/admin/oauth2/oauth2_config/delete</gspgid_value>
                 <type>get</type>
                 <Module_id>10</Module_id>
-                <_Handlers_count>0</_Handlers_count>
+                <_Handlers_count>2</_Handlers_count>
                 <_ctime>2014-05-23 15:11:28</_ctime>
-                <_mtime>2014-05-23 15:11:28</_mtime>
+                <_mtime>2014-11-04 18:50:18</_mtime>
               </values>
             </record>
             <record>
@@ -832,9 +689,9 @@
                 <gspgid_value>/admin/oauth2/oauth2_config/copy</gspgid_value>
                 <type>get</type>
                 <Module_id>10</Module_id>
-                <_Handlers_count>0</_Handlers_count>
+                <_Handlers_count>2</_Handlers_count>
                 <_ctime>2014-05-23 15:11:28</_ctime>
-                <_mtime>2014-05-23 15:11:28</_mtime>
+                <_mtime>2014-11-04 18:50:18</_mtime>
               </values>
             </record>
             <record>
@@ -900,9 +757,9 @@
                 <gspgid_value>/admin/form/oauth2_config</gspgid_value>
                 <type>handler</type>
                 <Module_id>10</Module_id>
-                <_Handlers_count>0</_Handlers_count>
+                <_Handlers_count>4</_Handlers_count>
                 <_ctime>2014-05-23 15:11:28</_ctime>
-                <_mtime>2014-05-23 15:11:28</_mtime>
+                <_mtime>2014-11-04 18:50:18</_mtime>
               </values>
             </record>
             <record>
@@ -968,9 +825,9 @@
                 <gspgid_value>/admin/inline_form/oauth2_config</gspgid_value>
                 <type>handler</type>
                 <Module_id>10</Module_id>
-                <_Handlers_count>0</_Handlers_count>
+                <_Handlers_count>4</_Handlers_count>
                 <_ctime>2014-05-23 15:11:28</_ctime>
-                <_mtime>2014-05-23 15:11:28</_mtime>
+                <_mtime>2014-11-04 18:50:18</_mtime>
               </values>
             </record>
             <record>
@@ -1036,9 +893,9 @@
                 <gspgid_value>/admin/form/oauth2_config_images</gspgid_value>
                 <type>handler</type>
                 <Module_id>10</Module_id>
-                <_Handlers_count>0</_Handlers_count>
+                <_Handlers_count>4</_Handlers_count>
                 <_ctime>2014-05-23 15:11:28</_ctime>
-                <_mtime>2014-05-23 15:11:28</_mtime>
+                <_mtime>2014-11-04 18:50:18</_mtime>
               </values>
             </record>
             <record>
@@ -1065,9 +922,9 @@
                 <gspgid_value>loginbuttons</gspgid_value>
                 <type>handler</type>
                 <Module_id>10</Module_id>
-                <_Handlers_count>0</_Handlers_count>
+                <_Handlers_count>1</_Handlers_count>
                 <_ctime>2014-05-23 15:11:28</_ctime>
-                <_mtime>2014-05-23 15:11:28</_mtime>
+                <_mtime>2014-11-04 18:50:18</_mtime>
               </values>
             </record>
           </recordset>
@@ -1079,11 +936,11 @@
       <values>
         <name>oauth2</name>
         <title>oauth2</title>
-        <_recordsets_count>3</_recordsets_count>
-        <_urls_count>3</_urls_count>
-        <_forms_count>3</_forms_count>
+        <_recordsets_count>16</_recordsets_count>
+        <_urls_count>16</_urls_count>
+        <_forms_count>16</_forms_count>
         <_ctime>2014-05-23 15:11:27</_ctime>
-        <_mtime>2014-10-20 16:39:46</_mtime>
+        <_mtime>2014-11-04 18:50:18</_mtime>
       </values>
     </record>
   </recordset>
