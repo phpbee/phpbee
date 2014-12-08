@@ -120,6 +120,7 @@ class form_handler extends gs_handler  {
 
 
 
+		$rec_fields=$this->record->get_recordset()->structure['htmlforms'];
 		foreach($rec_fields as $f) {
 			if ($this->record->$f instanceof gs_rs_links && array_key_exists($f,$clean)) {
 				foreach ($this->record->$f->array_keys() as $k) $this->record->$f->unlink($k);
