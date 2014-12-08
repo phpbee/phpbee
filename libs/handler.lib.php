@@ -1003,12 +1003,14 @@ function hpar($data,$name='hkey',$default=null) {
 
     function post_login($data) {
 
-	$rec=null;
+		$rec=null;
 
-	if (isset($data['last'])) $rec=$data['last'];
-        if (!$rec) $rec=$this->post_find_record($data);
+		if (isset($data['last'])) $rec=$data['last'];
+		if (!$rec) $rec=$this->post_find_record($data);
 
-	if (is_object($rec) && is_a($rec,'g_forms')) return $this->showform($rec);
+
+
+		if (is_object($rec) && is_a($rec,'g_forms')) return $this->showform($rec);
         if (!is_object($rec) || !is_a($rec,'gs_record')) return $rec;
         gs_session::save($rec->get_id(),'login_'.$this->params['classname']);
 
