@@ -12,175 +12,6 @@
                     <record>
                       <links/>
                       <values>
-                        <name>class</name>
-                        <verbose_name>class</verbose_name>
-                        <helper_text/>
-                        <type>fSelect</type>
-                        <multilang>0</multilang>
-                        <options>oauth2_vk,oauth2_google,oauth2_facebook,oauth2_twitter,oauth2_instagram</options>
-                        <extra_options/>
-                        <widget>select</widget>
-                        <default_value/>
-                        <make_index>0</make_index>
-                        <required>1</required>
-                        <is_unique>0</is_unique>
-                        <Recordset_id>37</Recordset_id>
-                        <_ctime>2014-05-23 15:11:27</_ctime>
-                        <_mtime>2014-10-20 17:41:03</_mtime>
-                        <sortkey>160</sortkey>
-                      </values>
-                    </record>
-                    <record>
-                      <links/>
-                      <values>
-                        <name>APP_ID</name>
-                        <verbose_name>APP_ID</verbose_name>
-                        <helper_text/>
-                        <type>fString</type>
-                        <multilang>0</multilang>
-                        <options/>
-                        <extra_options/>
-                        <widget/>
-                        <default_value/>
-                        <make_index>0</make_index>
-                        <required>1</required>
-                        <is_unique>0</is_unique>
-                        <Recordset_id>37</Recordset_id>
-                        <_ctime>2014-05-23 15:11:27</_ctime>
-                        <_mtime>2014-05-23 15:11:27</_mtime>
-                        <sortkey>161</sortkey>
-                      </values>
-                    </record>
-                    <record>
-                      <links/>
-                      <values>
-                        <name>APP_SECRET</name>
-                        <verbose_name>APP_SECRET</verbose_name>
-                        <helper_text/>
-                        <type>fString</type>
-                        <multilang>0</multilang>
-                        <options/>
-                        <extra_options/>
-                        <widget/>
-                        <default_value/>
-                        <make_index>0</make_index>
-                        <required>0</required>
-                        <is_unique>0</is_unique>
-                        <Recordset_id>37</Recordset_id>
-                        <_ctime>2014-05-23 15:11:27</_ctime>
-                        <_mtime>2014-05-23 15:11:27</_mtime>
-                        <sortkey>162</sortkey>
-                      </values>
-                    </record>
-                    <record>
-                      <links/>
-                      <values>
-                        <name>SCOPE</name>
-                        <verbose_name>SCOPE</verbose_name>
-                        <helper_text/>
-                        <type>fString</type>
-                        <multilang>0</multilang>
-                        <options/>
-                        <extra_options/>
-                        <widget/>
-                        <default_value/>
-                        <make_index>0</make_index>
-                        <required>0</required>
-                        <is_unique>0</is_unique>
-                        <Recordset_id>37</Recordset_id>
-                        <_ctime>2014-05-23 15:11:27</_ctime>
-                        <_mtime>2014-05-23 15:11:27</_mtime>
-                        <sortkey>163</sortkey>
-                      </values>
-                    </record>
-                    <record>
-                      <links/>
-                      <values>
-                        <name>CONSUMER_KEY</name>
-                        <verbose_name>CONSUMER_KEY</verbose_name>
-                        <helper_text/>
-                        <type>fString</type>
-                        <multilang>0</multilang>
-                        <options/>
-                        <extra_options/>
-                        <widget/>
-                        <default_value/>
-                        <make_index>0</make_index>
-                        <required>0</required>
-                        <is_unique>0</is_unique>
-                        <Recordset_id>37</Recordset_id>
-                        <_ctime>2014-05-23 15:11:27</_ctime>
-                        <_mtime>2014-05-23 15:11:27</_mtime>
-                        <sortkey>164</sortkey>
-                      </values>
-                    </record>
-                    <record>
-                      <links/>
-                      <values>
-                        <name>title</name>
-                        <verbose_name>Title</verbose_name>
-                        <helper_text/>
-                        <type>fString</type>
-                        <multilang>0</multilang>
-                        <options/>
-                        <extra_options/>
-                        <widget/>
-                        <default_value/>
-                        <make_index>0</make_index>
-                        <required>0</required>
-                        <is_unique>0</is_unique>
-                        <Recordset_id>37</Recordset_id>
-                        <_ctime>2014-05-23 15:11:27</_ctime>
-                        <_mtime>2014-05-23 15:11:27</_mtime>
-                        <sortkey>165</sortkey>
-                      </values>
-                    </record>
-                  </recordset>
-                </Fields>
-                <Resizes>
-                  <recordset name="wz_recordset_resizes"/>
-                </Resizes>
-                <Links>
-                  <recordset name="wz_recordset_links"/>
-                </Links>
-                <Triggers>
-                  <recordset name="wz_recordset_triggers"/>
-                </Triggers>
-                <Submodules>
-                  <recordset name="wz_recordset_submodules"/>
-                </Submodules>
-              </links>
-              <values>
-                <name>oauth2_config</name>
-                <title>oauth2_config</title>
-                <table_name/>
-                <database/>
-                <extends/>
-                <Module_id>10</Module_id>
-                <_Fields_count>14</_Fields_count>
-                <_Resizes_count>14</_Resizes_count>
-                <_Links_count>14</_Links_count>
-                <_Triggers_count>14</_Triggers_count>
-                <_Submodules_count>14</_Submodules_count>
-                <showadmin>1</showadmin>
-                <no_urlkey>1</no_urlkey>
-                <no_ctime>1</no_ctime>
-                <use_sortkey>0</use_sortkey>
-                <install>1</install>
-                <orderby>id</orderby>
-                <id_field_name>id</id_field_name>
-                <_ctime>2014-05-23 15:11:27</_ctime>
-                <_mtime>2014-11-04 18:50:34</_mtime>
-                <sortkey>37</sortkey>
-              </values>
-            </record>
-            <record>
-              <links>
-                <Fields>
-                  <recordset name="wz_recordset_fields">
-                    <record>
-                      <links/>
-                      <values>
                         <name>file_uid</name>
                         <verbose_name/>
                         <helper_text/>
@@ -193,9 +24,9 @@
                         <make_index>1</make_index>
                         <required>0</required>
                         <is_unique>0</is_unique>
-                        <Recordset_id>38</Recordset_id>
-                        <_ctime>2014-05-23 15:11:28</_ctime>
-                        <_mtime>2014-05-23 15:11:28</_mtime>
+                        <Recordset_id>68</Recordset_id>
+                        <_ctime>2014-12-08 17:12:12</_ctime>
+                        <_mtime>2014-12-08 17:12:12</_mtime>
                         <sortkey>166</sortkey>
                       </values>
                     </record>
@@ -214,9 +45,9 @@
                         <make_index>1</make_index>
                         <required>0</required>
                         <is_unique>0</is_unique>
-                        <Recordset_id>38</Recordset_id>
-                        <_ctime>2014-05-23 15:11:28</_ctime>
-                        <_mtime>2014-05-23 15:11:28</_mtime>
+                        <Recordset_id>68</Recordset_id>
+                        <_ctime>2014-12-08 17:12:12</_ctime>
+                        <_mtime>2014-12-08 17:12:12</_mtime>
                         <sortkey>167</sortkey>
                       </values>
                     </record>
@@ -235,9 +66,9 @@
                         <make_index>1</make_index>
                         <required>0</required>
                         <is_unique>0</is_unique>
-                        <Recordset_id>38</Recordset_id>
-                        <_ctime>2014-05-23 15:11:28</_ctime>
-                        <_mtime>2014-05-23 15:11:28</_mtime>
+                        <Recordset_id>68</Recordset_id>
+                        <_ctime>2014-12-08 17:12:12</_ctime>
+                        <_mtime>2014-12-08 17:12:12</_mtime>
                         <sortkey>168</sortkey>
                       </values>
                     </record>
@@ -256,9 +87,9 @@
                         <make_index>1</make_index>
                         <required>0</required>
                         <is_unique>0</is_unique>
-                        <Recordset_id>38</Recordset_id>
-                        <_ctime>2014-05-23 15:11:28</_ctime>
-                        <_mtime>2014-05-23 15:11:28</_mtime>
+                        <Recordset_id>68</Recordset_id>
+                        <_ctime>2014-12-08 17:12:12</_ctime>
+                        <_mtime>2014-12-08 17:12:12</_mtime>
                         <sortkey>169</sortkey>
                       </values>
                     </record>
@@ -283,7 +114,7 @@
                 <table_name/>
                 <database/>
                 <extends>tw_images</extends>
-                <Module_id>10</Module_id>
+                <Module_id>22</Module_id>
                 <_Fields_count>4</_Fields_count>
                 <_Resizes_count>4</_Resizes_count>
                 <_Links_count>4</_Links_count>
@@ -296,9 +127,178 @@
                 <install>1</install>
                 <orderby>id</orderby>
                 <id_field_name>id</id_field_name>
-                <_ctime>2014-05-23 15:11:27</_ctime>
-                <_mtime>2014-11-04 18:50:34</_mtime>
+                <_ctime>2014-12-08 17:12:12</_ctime>
+                <_mtime>2014-12-08 17:12:12</_mtime>
                 <sortkey>38</sortkey>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Fields>
+                  <recordset name="wz_recordset_fields">
+                    <record>
+                      <links/>
+                      <values>
+                        <name>class</name>
+                        <verbose_name>class</verbose_name>
+                        <helper_text/>
+                        <type>fSelect</type>
+                        <multilang>0</multilang>
+                        <options>oauth2_vk,oauth2_google,oauth2_facebook,oauth2_twitter,oauth2_instagram</options>
+                        <extra_options/>
+                        <widget>select</widget>
+                        <default_value/>
+                        <make_index>0</make_index>
+                        <required>1</required>
+                        <is_unique>0</is_unique>
+                        <Recordset_id>67</Recordset_id>
+                        <_ctime>2014-12-08 17:12:12</_ctime>
+                        <_mtime>2014-12-08 17:12:12</_mtime>
+                        <sortkey>160</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>APP_ID</name>
+                        <verbose_name>APP_ID</verbose_name>
+                        <helper_text/>
+                        <type>fString</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value/>
+                        <make_index>0</make_index>
+                        <required>1</required>
+                        <is_unique>0</is_unique>
+                        <Recordset_id>67</Recordset_id>
+                        <_ctime>2014-12-08 17:12:12</_ctime>
+                        <_mtime>2014-12-08 17:12:12</_mtime>
+                        <sortkey>161</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>APP_SECRET</name>
+                        <verbose_name>APP_SECRET</verbose_name>
+                        <helper_text/>
+                        <type>fString</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value/>
+                        <make_index>0</make_index>
+                        <required>0</required>
+                        <is_unique>0</is_unique>
+                        <Recordset_id>67</Recordset_id>
+                        <_ctime>2014-12-08 17:12:12</_ctime>
+                        <_mtime>2014-12-08 17:12:12</_mtime>
+                        <sortkey>162</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>SCOPE</name>
+                        <verbose_name>SCOPE</verbose_name>
+                        <helper_text/>
+                        <type>fString</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value/>
+                        <make_index>0</make_index>
+                        <required>0</required>
+                        <is_unique>0</is_unique>
+                        <Recordset_id>67</Recordset_id>
+                        <_ctime>2014-12-08 17:12:12</_ctime>
+                        <_mtime>2014-12-08 17:12:12</_mtime>
+                        <sortkey>163</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>CONSUMER_KEY</name>
+                        <verbose_name>CONSUMER_KEY</verbose_name>
+                        <helper_text/>
+                        <type>fString</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value/>
+                        <make_index>0</make_index>
+                        <required>0</required>
+                        <is_unique>0</is_unique>
+                        <Recordset_id>67</Recordset_id>
+                        <_ctime>2014-12-08 17:12:12</_ctime>
+                        <_mtime>2014-12-08 17:12:12</_mtime>
+                        <sortkey>164</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <name>title</name>
+                        <verbose_name>Title</verbose_name>
+                        <helper_text/>
+                        <type>fString</type>
+                        <multilang>0</multilang>
+                        <options/>
+                        <extra_options/>
+                        <widget/>
+                        <default_value/>
+                        <make_index>0</make_index>
+                        <required>0</required>
+                        <is_unique>0</is_unique>
+                        <Recordset_id>67</Recordset_id>
+                        <_ctime>2014-12-08 17:12:12</_ctime>
+                        <_mtime>2014-12-08 17:12:12</_mtime>
+                        <sortkey>165</sortkey>
+                      </values>
+                    </record>
+                  </recordset>
+                </Fields>
+                <Resizes>
+                  <recordset name="wz_recordset_resizes"/>
+                </Resizes>
+                <Links>
+                  <recordset name="wz_recordset_links"/>
+                </Links>
+                <Triggers>
+                  <recordset name="wz_recordset_triggers"/>
+                </Triggers>
+                <Submodules>
+                  <recordset name="wz_recordset_submodules"/>
+                </Submodules>
+              </links>
+              <values>
+                <name>oauth2_config</name>
+                <title>oauth2_config</title>
+                <table_name/>
+                <database/>
+                <extends/>
+                <Module_id>22</Module_id>
+                <_Fields_count>14</_Fields_count>
+                <_Resizes_count>14</_Resizes_count>
+                <_Links_count>14</_Links_count>
+                <_Triggers_count>14</_Triggers_count>
+                <_Submodules_count>14</_Submodules_count>
+                <showadmin>1</showadmin>
+                <no_urlkey>1</no_urlkey>
+                <no_ctime>1</no_ctime>
+                <use_sortkey>0</use_sortkey>
+                <install>1</install>
+                <orderby>id</orderby>
+                <id_field_name>id</id_field_name>
+                <_ctime>2014-12-08 17:12:12</_ctime>
+                <_mtime>2014-12-08 17:12:12</_mtime>
+                <sortkey>37</sortkey>
               </values>
             </record>
             <record>
@@ -317,9 +317,9 @@
                         <method>use_height</method>
                         <bgcolor>0,0,0</bgcolor>
                         <modifier/>
-                        <Recordset_id>39</Recordset_id>
-                        <_ctime>2014-05-23 15:11:28</_ctime>
-                        <_mtime>2014-05-23 15:11:28</_mtime>
+                        <Recordset_id>69</Recordset_id>
+                        <_ctime>2014-12-08 17:12:12</_ctime>
+                        <_mtime>2014-12-08 17:12:12</_mtime>
                       </values>
                     </record>
                     <record>
@@ -331,9 +331,9 @@
                         <method>copy</method>
                         <bgcolor>0,0,0</bgcolor>
                         <modifier/>
-                        <Recordset_id>39</Recordset_id>
-                        <_ctime>2014-05-23 15:11:28</_ctime>
-                        <_mtime>2014-05-23 15:11:28</_mtime>
+                        <Recordset_id>69</Recordset_id>
+                        <_ctime>2014-12-08 17:12:12</_ctime>
+                        <_mtime>2014-12-08 17:12:12</_mtime>
                       </values>
                     </record>
                   </recordset>
@@ -354,7 +354,7 @@
                 <table_name/>
                 <database/>
                 <extends>tw_file_images</extends>
-                <Module_id>10</Module_id>
+                <Module_id>22</Module_id>
                 <_Fields_count>4</_Fields_count>
                 <_Resizes_count>4</_Resizes_count>
                 <_Links_count>4</_Links_count>
@@ -367,8 +367,8 @@
                 <install>1</install>
                 <orderby>id</orderby>
                 <id_field_name>id</id_field_name>
-                <_ctime>2014-05-23 15:11:28</_ctime>
-                <_mtime>2014-11-04 18:50:34</_mtime>
+                <_ctime>2014-12-08 17:12:12</_ctime>
+                <_mtime>2014-12-08 17:12:12</_mtime>
                 <sortkey>39</sortkey>
               </values>
             </record>
@@ -391,9 +391,9 @@
                         <make_index>1</make_index>
                         <required>1</required>
                         <is_unique>0</is_unique>
-                        <Recordset_id>58</Recordset_id>
-                        <_ctime>2014-10-20 16:41:07</_ctime>
-                        <_mtime>2014-10-20 16:41:07</_mtime>
+                        <Recordset_id>70</Recordset_id>
+                        <_ctime>2014-12-08 17:12:12</_ctime>
+                        <_mtime>2014-12-08 17:12:12</_mtime>
                         <sortkey>254</sortkey>
                       </values>
                     </record>
@@ -412,9 +412,9 @@
                         <make_index>0</make_index>
                         <required>0</required>
                         <is_unique>0</is_unique>
-                        <Recordset_id>58</Recordset_id>
-                        <_ctime>2014-10-20 17:01:18</_ctime>
-                        <_mtime>2014-10-20 17:01:18</_mtime>
+                        <Recordset_id>70</Recordset_id>
+                        <_ctime>2014-12-08 17:12:12</_ctime>
+                        <_mtime>2014-12-08 17:12:12</_mtime>
                         <sortkey>255</sortkey>
                       </values>
                     </record>
@@ -433,9 +433,9 @@
                         <make_index>0</make_index>
                         <required>0</required>
                         <is_unique>0</is_unique>
-                        <Recordset_id>58</Recordset_id>
-                        <_ctime>2014-10-20 17:01:39</_ctime>
-                        <_mtime>2014-10-20 17:01:39</_mtime>
+                        <Recordset_id>70</Recordset_id>
+                        <_ctime>2014-12-08 17:12:12</_ctime>
+                        <_mtime>2014-12-08 17:12:12</_mtime>
                         <sortkey>256</sortkey>
                       </values>
                     </record>
@@ -461,9 +461,9 @@
                         <fkey_on_delete>CASCADE</fkey_on_delete>
                         <fkey_on_update>CASCADE</fkey_on_update>
                         <fkey_name/>
-                        <Recordset_id>58</Recordset_id>
-                        <_ctime>2014-10-20 16:41:57</_ctime>
-                        <_mtime>2014-10-20 17:20:34</_mtime>
+                        <Recordset_id>70</Recordset_id>
+                        <_ctime>2014-12-08 17:12:12</_ctime>
+                        <_mtime>2014-12-08 17:12:12</_mtime>
                       </values>
                     </record>
                     <record>
@@ -481,9 +481,9 @@
                         <fkey_on_delete>CASCADE</fkey_on_delete>
                         <fkey_on_update>CASCADE</fkey_on_update>
                         <fkey_name/>
-                        <Recordset_id>58</Recordset_id>
-                        <_ctime>2014-12-03 18:37:13</_ctime>
-                        <_mtime>2014-12-03 18:37:13</_mtime>
+                        <Recordset_id>70</Recordset_id>
+                        <_ctime>2014-12-08 17:12:12</_ctime>
+                        <_mtime>2014-12-08 17:12:12</_mtime>
                       </values>
                     </record>
                   </recordset>
@@ -501,7 +501,7 @@
                 <table_name/>
                 <database>0</database>
                 <extends/>
-                <Module_id>10</Module_id>
+                <Module_id>22</Module_id>
                 <_Fields_count>10</_Fields_count>
                 <_Resizes_count>10</_Resizes_count>
                 <_Links_count>10</_Links_count>
@@ -514,8 +514,8 @@
                 <install>1</install>
                 <orderby>id</orderby>
                 <id_field_name>id</id_field_name>
-                <_ctime>2014-10-20 16:39:46</_ctime>
-                <_mtime>2014-12-03 18:37:13</_mtime>
+                <_ctime>2014-12-08 17:12:12</_ctime>
+                <_mtime>2014-12-08 17:12:12</_mtime>
                 <sortkey>58</sortkey>
               </values>
             </record>
@@ -533,23 +533,23 @@
                         <cnt>10</cnt>
                         <handler_keyname/>
                         <handler_template/>
-                        <handler_value>oauth2_handler.startlogin</handler_value>
-                        <Url_id>230</Url_id>
-                        <_ctime>2014-05-23 15:11:28</_ctime>
-                        <_mtime>2014-05-23 15:11:28</_mtime>
-                        <sortkey>530</sortkey>
+                        <handler_value>admin_handler.show:name:loginbuttons.html</handler_value>
+                        <Url_id>394</Url_id>
+                        <_ctime>2014-12-08 17:12:12</_ctime>
+                        <_mtime>2014-12-08 17:12:12</_mtime>
+                        <sortkey>549</sortkey>
                       </values>
                     </record>
                   </recordset>
                 </Handlers>
               </links>
               <values>
-                <gspgid_value/>
-                <type>get</type>
-                <Module_id>10</Module_id>
-                <_Handlers_count>2</_Handlers_count>
-                <_ctime>2014-05-23 15:11:28</_ctime>
-                <_mtime>2014-11-04 18:50:18</_mtime>
+                <gspgid_value>loginbuttons</gspgid_value>
+                <type>handler</type>
+                <Module_id>22</Module_id>
+                <_Handlers_count>1</_Handlers_count>
+                <_ctime>2014-12-08 17:12:12</_ctime>
+                <_mtime>2014-12-08 17:12:12</_mtime>
               </values>
             </record>
             <record>
@@ -563,9 +563,9 @@
                         <handler_keyname/>
                         <handler_template/>
                         <handler_value>oauth2_handler.startlogin</handler_value>
-                        <Url_id>231</Url_id>
-                        <_ctime>2014-05-23 15:11:28</_ctime>
-                        <_mtime>2014-05-23 15:11:28</_mtime>
+                        <Url_id>387</Url_id>
+                        <_ctime>2014-12-08 17:12:12</_ctime>
+                        <_mtime>2014-12-08 17:12:12</_mtime>
                         <sortkey>531</sortkey>
                       </values>
                     </record>
@@ -575,10 +575,327 @@
               <values>
                 <gspgid_value/>
                 <type>post</type>
-                <Module_id>10</Module_id>
+                <Module_id>22</Module_id>
                 <_Handlers_count>1</_Handlers_count>
-                <_ctime>2014-05-23 15:11:28</_ctime>
-                <_mtime>2014-11-04 18:50:18</_mtime>
+                <_ctime>2014-12-08 17:12:12</_ctime>
+                <_mtime>2014-12-08 17:12:12</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>10</cnt>
+                        <handler_keyname/>
+                        <handler_template/>
+                        <handler_value>oauth2_instagram_handler.redirect_uri</handler_value>
+                        <Url_id>395</Url_id>
+                        <_ctime>2014-12-08 17:13:35</_ctime>
+                        <_mtime>2014-12-08 17:13:35</_mtime>
+                        <sortkey>845</sortkey>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>instagram/redirect_uri</gspgid_value>
+                <type>get</type>
+                <Module_id>22</Module_id>
+                <_Handlers_count>0</_Handlers_count>
+                <_ctime>2014-12-08 17:13:35</_ctime>
+                <_mtime>2014-12-08 17:13:35</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>2</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect</handler_value>
+                        <Url_id>393</Url_id>
+                        <_ctime>2014-12-08 17:12:12</_ctime>
+                        <_mtime>2014-12-08 17:12:12</_mtime>
+                        <sortkey>546</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>1</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.post:{name:admin_form.html:classname:oauth2_config_images:form_class:g_forms_table:return:gs_record}</handler_value>
+                        <Url_id>393</Url_id>
+                        <_ctime>2014-12-08 17:12:12</_ctime>
+                        <_mtime>2014-12-08 17:12:12</_mtime>
+                        <sortkey>545</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>1</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.post:{name:admin_form.html:classname:oauth2_config_images:form_class:g_forms_table:return:gs_record}</handler_value>
+                        <Url_id>393</Url_id>
+                        <_ctime>2014-12-08 17:12:12</_ctime>
+                        <_mtime>2014-12-08 17:12:12</_mtime>
+                        <sortkey>547</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>2</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect</handler_value>
+                        <Url_id>393</Url_id>
+                        <_ctime>2014-12-08 17:12:12</_ctime>
+                        <_mtime>2014-12-08 17:12:12</_mtime>
+                        <sortkey>548</sortkey>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/admin/form/oauth2_config_images</gspgid_value>
+                <type>handler</type>
+                <Module_id>22</Module_id>
+                <_Handlers_count>4</_Handlers_count>
+                <_ctime>2014-12-08 17:12:12</_ctime>
+                <_mtime>2014-12-08 17:12:12</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>4</cnt>
+                        <handler_keyname>3</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect_if:gl:save_return:return:true</handler_value>
+                        <Url_id>392</Url_id>
+                        <_ctime>2014-12-08 17:12:12</_ctime>
+                        <_mtime>2014-12-08 17:12:12</_mtime>
+                        <sortkey>544</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>3</cnt>
+                        <handler_keyname>2</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect_if:gl:save_continue:return:true</handler_value>
+                        <Url_id>392</Url_id>
+                        <_ctime>2014-12-08 17:12:12</_ctime>
+                        <_mtime>2014-12-08 17:12:12</_mtime>
+                        <sortkey>543</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>2</cnt>
+                        <handler_keyname>1</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.post:{name:inline_form.html:classname:oauth2_config}</handler_value>
+                        <Url_id>392</Url_id>
+                        <_ctime>2014-12-08 17:12:12</_ctime>
+                        <_mtime>2014-12-08 17:12:12</_mtime>
+                        <sortkey>542</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>1</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect_if:gl:save_cancel:return:true</handler_value>
+                        <Url_id>392</Url_id>
+                        <_ctime>2014-12-08 17:12:12</_ctime>
+                        <_mtime>2014-12-08 17:12:12</_mtime>
+                        <sortkey>541</sortkey>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/admin/inline_form/oauth2_config</gspgid_value>
+                <type>handler</type>
+                <Module_id>22</Module_id>
+                <_Handlers_count>4</_Handlers_count>
+                <_ctime>2014-12-08 17:12:12</_ctime>
+                <_mtime>2014-12-08 17:12:12</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>4</cnt>
+                        <handler_keyname>3</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect_if:gl:save_return:return:true</handler_value>
+                        <Url_id>391</Url_id>
+                        <_ctime>2014-12-08 17:12:12</_ctime>
+                        <_mtime>2014-12-08 17:12:12</_mtime>
+                        <sortkey>540</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>3</cnt>
+                        <handler_keyname>2</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect_if:gl:save_continue:return:true</handler_value>
+                        <Url_id>391</Url_id>
+                        <_ctime>2014-12-08 17:12:12</_ctime>
+                        <_mtime>2014-12-08 17:12:12</_mtime>
+                        <sortkey>539</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>2</cnt>
+                        <handler_keyname>1</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.post:{name:admin_form.html:classname:oauth2_config:form_class:g_forms_table}</handler_value>
+                        <Url_id>391</Url_id>
+                        <_ctime>2014-12-08 17:12:12</_ctime>
+                        <_mtime>2014-12-08 17:12:12</_mtime>
+                        <sortkey>538</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>1</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect_if:gl:save_cancel:return:true</handler_value>
+                        <Url_id>391</Url_id>
+                        <_ctime>2014-12-08 17:12:12</_ctime>
+                        <_mtime>2014-12-08 17:12:12</_mtime>
+                        <sortkey>537</sortkey>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/admin/form/oauth2_config</gspgid_value>
+                <type>handler</type>
+                <Module_id>22</Module_id>
+                <_Handlers_count>4</_Handlers_count>
+                <_ctime>2014-12-08 17:12:12</_ctime>
+                <_mtime>2014-12-08 17:12:12</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>2</cnt>
+                        <handler_keyname>1</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect</handler_value>
+                        <Url_id>390</Url_id>
+                        <_ctime>2014-12-08 17:12:12</_ctime>
+                        <_mtime>2014-12-08 17:12:12</_mtime>
+                        <sortkey>536</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>1</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.copy:{classname:oauth2_config}</handler_value>
+                        <Url_id>390</Url_id>
+                        <_ctime>2014-12-08 17:12:12</_ctime>
+                        <_mtime>2014-12-08 17:12:12</_mtime>
+                        <sortkey>535</sortkey>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/admin/oauth2/oauth2_config/copy</gspgid_value>
+                <type>get</type>
+                <Module_id>22</Module_id>
+                <_Handlers_count>2</_Handlers_count>
+                <_ctime>2014-12-08 17:12:12</_ctime>
+                <_mtime>2014-12-08 17:12:12</_mtime>
+              </values>
+            </record>
+            <record>
+              <links>
+                <Handlers>
+                  <recordset name="wz_handlers">
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>2</cnt>
+                        <handler_keyname>1</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.redirect</handler_value>
+                        <Url_id>389</Url_id>
+                        <_ctime>2014-12-08 17:12:12</_ctime>
+                        <_mtime>2014-12-08 17:12:12</_mtime>
+                        <sortkey>534</sortkey>
+                      </values>
+                    </record>
+                    <record>
+                      <links/>
+                      <values>
+                        <cnt>1</cnt>
+                        <handler_keyname>0</handler_keyname>
+                        <handler_template/>
+                        <handler_value>gs_base_handler.delete:{classname:oauth2_config}</handler_value>
+                        <Url_id>389</Url_id>
+                        <_ctime>2014-12-08 17:12:12</_ctime>
+                        <_mtime>2014-12-08 17:12:12</_mtime>
+                        <sortkey>533</sortkey>
+                      </values>
+                    </record>
+                  </recordset>
+                </Handlers>
+              </links>
+              <values>
+                <gspgid_value>/admin/oauth2/oauth2_config/delete</gspgid_value>
+                <type>get</type>
+                <Module_id>22</Module_id>
+                <_Handlers_count>2</_Handlers_count>
+                <_ctime>2014-12-08 17:12:12</_ctime>
+                <_mtime>2014-12-08 17:12:12</_mtime>
               </values>
             </record>
             <record>
@@ -592,9 +909,9 @@
                         <handler_keyname>0</handler_keyname>
                         <handler_template/>
                         <handler_value>gs_base_handler.show:name:adm_oauth2_config.html</handler_value>
-                        <Url_id>232</Url_id>
-                        <_ctime>2014-05-23 15:11:28</_ctime>
-                        <_mtime>2014-05-23 15:11:28</_mtime>
+                        <Url_id>388</Url_id>
+                        <_ctime>2014-12-08 17:12:12</_ctime>
+                        <_mtime>2014-12-08 17:12:12</_mtime>
                         <sortkey>532</sortkey>
                       </values>
                     </record>
@@ -604,298 +921,10 @@
               <values>
                 <gspgid_value>/admin/oauth2/oauth2_config</gspgid_value>
                 <type>get</type>
-                <Module_id>10</Module_id>
+                <Module_id>22</Module_id>
                 <_Handlers_count>1</_Handlers_count>
-                <_ctime>2014-05-23 15:11:28</_ctime>
-                <_mtime>2014-11-04 18:50:18</_mtime>
-              </values>
-            </record>
-            <record>
-              <links>
-                <Handlers>
-                  <recordset name="wz_handlers">
-                    <record>
-                      <links/>
-                      <values>
-                        <cnt>1</cnt>
-                        <handler_keyname>0</handler_keyname>
-                        <handler_template/>
-                        <handler_value>gs_base_handler.delete:{classname:oauth2_config}</handler_value>
-                        <Url_id>233</Url_id>
-                        <_ctime>2014-05-23 15:11:28</_ctime>
-                        <_mtime>2014-05-23 15:11:28</_mtime>
-                        <sortkey>533</sortkey>
-                      </values>
-                    </record>
-                    <record>
-                      <links/>
-                      <values>
-                        <cnt>2</cnt>
-                        <handler_keyname>1</handler_keyname>
-                        <handler_template/>
-                        <handler_value>gs_base_handler.redirect</handler_value>
-                        <Url_id>233</Url_id>
-                        <_ctime>2014-05-23 15:11:28</_ctime>
-                        <_mtime>2014-05-23 15:11:28</_mtime>
-                        <sortkey>534</sortkey>
-                      </values>
-                    </record>
-                  </recordset>
-                </Handlers>
-              </links>
-              <values>
-                <gspgid_value>/admin/oauth2/oauth2_config/delete</gspgid_value>
-                <type>get</type>
-                <Module_id>10</Module_id>
-                <_Handlers_count>2</_Handlers_count>
-                <_ctime>2014-05-23 15:11:28</_ctime>
-                <_mtime>2014-11-04 18:50:18</_mtime>
-              </values>
-            </record>
-            <record>
-              <links>
-                <Handlers>
-                  <recordset name="wz_handlers">
-                    <record>
-                      <links/>
-                      <values>
-                        <cnt>1</cnt>
-                        <handler_keyname>0</handler_keyname>
-                        <handler_template/>
-                        <handler_value>gs_base_handler.copy:{classname:oauth2_config}</handler_value>
-                        <Url_id>234</Url_id>
-                        <_ctime>2014-05-23 15:11:28</_ctime>
-                        <_mtime>2014-05-23 15:11:28</_mtime>
-                        <sortkey>535</sortkey>
-                      </values>
-                    </record>
-                    <record>
-                      <links/>
-                      <values>
-                        <cnt>2</cnt>
-                        <handler_keyname>1</handler_keyname>
-                        <handler_template/>
-                        <handler_value>gs_base_handler.redirect</handler_value>
-                        <Url_id>234</Url_id>
-                        <_ctime>2014-05-23 15:11:28</_ctime>
-                        <_mtime>2014-05-23 15:11:28</_mtime>
-                        <sortkey>536</sortkey>
-                      </values>
-                    </record>
-                  </recordset>
-                </Handlers>
-              </links>
-              <values>
-                <gspgid_value>/admin/oauth2/oauth2_config/copy</gspgid_value>
-                <type>get</type>
-                <Module_id>10</Module_id>
-                <_Handlers_count>2</_Handlers_count>
-                <_ctime>2014-05-23 15:11:28</_ctime>
-                <_mtime>2014-11-04 18:50:18</_mtime>
-              </values>
-            </record>
-            <record>
-              <links>
-                <Handlers>
-                  <recordset name="wz_handlers">
-                    <record>
-                      <links/>
-                      <values>
-                        <cnt>1</cnt>
-                        <handler_keyname>0</handler_keyname>
-                        <handler_template/>
-                        <handler_value>gs_base_handler.redirect_if:gl:save_cancel:return:true</handler_value>
-                        <Url_id>235</Url_id>
-                        <_ctime>2014-05-23 15:11:28</_ctime>
-                        <_mtime>2014-05-23 15:11:28</_mtime>
-                        <sortkey>537</sortkey>
-                      </values>
-                    </record>
-                    <record>
-                      <links/>
-                      <values>
-                        <cnt>2</cnt>
-                        <handler_keyname>1</handler_keyname>
-                        <handler_template/>
-                        <handler_value>gs_base_handler.post:{name:admin_form.html:classname:oauth2_config:form_class:g_forms_table}</handler_value>
-                        <Url_id>235</Url_id>
-                        <_ctime>2014-05-23 15:11:28</_ctime>
-                        <_mtime>2014-05-23 15:11:28</_mtime>
-                        <sortkey>538</sortkey>
-                      </values>
-                    </record>
-                    <record>
-                      <links/>
-                      <values>
-                        <cnt>3</cnt>
-                        <handler_keyname>2</handler_keyname>
-                        <handler_template/>
-                        <handler_value>gs_base_handler.redirect_if:gl:save_continue:return:true</handler_value>
-                        <Url_id>235</Url_id>
-                        <_ctime>2014-05-23 15:11:28</_ctime>
-                        <_mtime>2014-05-23 15:11:28</_mtime>
-                        <sortkey>539</sortkey>
-                      </values>
-                    </record>
-                    <record>
-                      <links/>
-                      <values>
-                        <cnt>4</cnt>
-                        <handler_keyname>3</handler_keyname>
-                        <handler_template/>
-                        <handler_value>gs_base_handler.redirect_if:gl:save_return:return:true</handler_value>
-                        <Url_id>235</Url_id>
-                        <_ctime>2014-05-23 15:11:28</_ctime>
-                        <_mtime>2014-05-23 15:11:28</_mtime>
-                        <sortkey>540</sortkey>
-                      </values>
-                    </record>
-                  </recordset>
-                </Handlers>
-              </links>
-              <values>
-                <gspgid_value>/admin/form/oauth2_config</gspgid_value>
-                <type>handler</type>
-                <Module_id>10</Module_id>
-                <_Handlers_count>4</_Handlers_count>
-                <_ctime>2014-05-23 15:11:28</_ctime>
-                <_mtime>2014-11-04 18:50:18</_mtime>
-              </values>
-            </record>
-            <record>
-              <links>
-                <Handlers>
-                  <recordset name="wz_handlers">
-                    <record>
-                      <links/>
-                      <values>
-                        <cnt>1</cnt>
-                        <handler_keyname>0</handler_keyname>
-                        <handler_template/>
-                        <handler_value>gs_base_handler.redirect_if:gl:save_cancel:return:true</handler_value>
-                        <Url_id>236</Url_id>
-                        <_ctime>2014-05-23 15:11:28</_ctime>
-                        <_mtime>2014-05-23 15:11:28</_mtime>
-                        <sortkey>541</sortkey>
-                      </values>
-                    </record>
-                    <record>
-                      <links/>
-                      <values>
-                        <cnt>2</cnt>
-                        <handler_keyname>1</handler_keyname>
-                        <handler_template/>
-                        <handler_value>gs_base_handler.post:{name:inline_form.html:classname:oauth2_config}</handler_value>
-                        <Url_id>236</Url_id>
-                        <_ctime>2014-05-23 15:11:28</_ctime>
-                        <_mtime>2014-05-23 15:11:28</_mtime>
-                        <sortkey>542</sortkey>
-                      </values>
-                    </record>
-                    <record>
-                      <links/>
-                      <values>
-                        <cnt>3</cnt>
-                        <handler_keyname>2</handler_keyname>
-                        <handler_template/>
-                        <handler_value>gs_base_handler.redirect_if:gl:save_continue:return:true</handler_value>
-                        <Url_id>236</Url_id>
-                        <_ctime>2014-05-23 15:11:28</_ctime>
-                        <_mtime>2014-05-23 15:11:28</_mtime>
-                        <sortkey>543</sortkey>
-                      </values>
-                    </record>
-                    <record>
-                      <links/>
-                      <values>
-                        <cnt>4</cnt>
-                        <handler_keyname>3</handler_keyname>
-                        <handler_template/>
-                        <handler_value>gs_base_handler.redirect_if:gl:save_return:return:true</handler_value>
-                        <Url_id>236</Url_id>
-                        <_ctime>2014-05-23 15:11:28</_ctime>
-                        <_mtime>2014-05-23 15:11:28</_mtime>
-                        <sortkey>544</sortkey>
-                      </values>
-                    </record>
-                  </recordset>
-                </Handlers>
-              </links>
-              <values>
-                <gspgid_value>/admin/inline_form/oauth2_config</gspgid_value>
-                <type>handler</type>
-                <Module_id>10</Module_id>
-                <_Handlers_count>4</_Handlers_count>
-                <_ctime>2014-05-23 15:11:28</_ctime>
-                <_mtime>2014-11-04 18:50:18</_mtime>
-              </values>
-            </record>
-            <record>
-              <links>
-                <Handlers>
-                  <recordset name="wz_handlers">
-                    <record>
-                      <links/>
-                      <values>
-                        <cnt>1</cnt>
-                        <handler_keyname>0</handler_keyname>
-                        <handler_template/>
-                        <handler_value>gs_base_handler.post:{name:admin_form.html:classname:oauth2_config_images:form_class:g_forms_table:return:gs_record}</handler_value>
-                        <Url_id>237</Url_id>
-                        <_ctime>2014-05-23 15:11:28</_ctime>
-                        <_mtime>2014-05-23 15:11:28</_mtime>
-                        <sortkey>545</sortkey>
-                      </values>
-                    </record>
-                    <record>
-                      <links/>
-                      <values>
-                        <cnt>2</cnt>
-                        <handler_keyname>0</handler_keyname>
-                        <handler_template/>
-                        <handler_value>gs_base_handler.redirect</handler_value>
-                        <Url_id>237</Url_id>
-                        <_ctime>2014-05-23 15:11:28</_ctime>
-                        <_mtime>2014-05-23 15:11:28</_mtime>
-                        <sortkey>546</sortkey>
-                      </values>
-                    </record>
-                    <record>
-                      <links/>
-                      <values>
-                        <cnt>1</cnt>
-                        <handler_keyname>0</handler_keyname>
-                        <handler_template/>
-                        <handler_value>gs_base_handler.post:{name:admin_form.html:classname:oauth2_config_images:form_class:g_forms_table:return:gs_record}</handler_value>
-                        <Url_id>237</Url_id>
-                        <_ctime>2014-05-23 15:11:28</_ctime>
-                        <_mtime>2014-05-23 15:11:28</_mtime>
-                        <sortkey>547</sortkey>
-                      </values>
-                    </record>
-                    <record>
-                      <links/>
-                      <values>
-                        <cnt>2</cnt>
-                        <handler_keyname>0</handler_keyname>
-                        <handler_template/>
-                        <handler_value>gs_base_handler.redirect</handler_value>
-                        <Url_id>237</Url_id>
-                        <_ctime>2014-05-23 15:11:28</_ctime>
-                        <_mtime>2014-05-23 15:11:28</_mtime>
-                        <sortkey>548</sortkey>
-                      </values>
-                    </record>
-                  </recordset>
-                </Handlers>
-              </links>
-              <values>
-                <gspgid_value>/admin/form/oauth2_config_images</gspgid_value>
-                <type>handler</type>
-                <Module_id>10</Module_id>
-                <_Handlers_count>4</_Handlers_count>
-                <_ctime>2014-05-23 15:11:28</_ctime>
-                <_mtime>2014-11-04 18:50:18</_mtime>
+                <_ctime>2014-12-08 17:12:12</_ctime>
+                <_mtime>2014-12-08 17:12:12</_mtime>
               </values>
             </record>
             <record>
@@ -908,23 +937,23 @@
                         <cnt>10</cnt>
                         <handler_keyname/>
                         <handler_template/>
-                        <handler_value>admin_handler.show:name:loginbuttons.html</handler_value>
-                        <Url_id>238</Url_id>
-                        <_ctime>2014-05-23 15:11:28</_ctime>
-                        <_mtime>2014-05-23 15:11:28</_mtime>
-                        <sortkey>549</sortkey>
+                        <handler_value>oauth2_handler.startlogin</handler_value>
+                        <Url_id>386</Url_id>
+                        <_ctime>2014-12-08 17:12:12</_ctime>
+                        <_mtime>2014-12-08 17:12:12</_mtime>
+                        <sortkey>530</sortkey>
                       </values>
                     </record>
                   </recordset>
                 </Handlers>
               </links>
               <values>
-                <gspgid_value>loginbuttons</gspgid_value>
-                <type>handler</type>
-                <Module_id>10</Module_id>
-                <_Handlers_count>1</_Handlers_count>
-                <_ctime>2014-05-23 15:11:28</_ctime>
-                <_mtime>2014-11-04 18:50:18</_mtime>
+                <gspgid_value/>
+                <type>get</type>
+                <Module_id>22</Module_id>
+                <_Handlers_count>2</_Handlers_count>
+                <_ctime>2014-12-08 17:12:12</_ctime>
+                <_mtime>2014-12-08 17:12:12</_mtime>
               </values>
             </record>
           </recordset>
@@ -939,8 +968,8 @@
         <_recordsets_count>16</_recordsets_count>
         <_urls_count>16</_urls_count>
         <_forms_count>16</_forms_count>
-        <_ctime>2014-05-23 15:11:27</_ctime>
-        <_mtime>2014-11-04 18:50:18</_mtime>
+        <_ctime>2014-12-08 17:12:12</_ctime>
+        <_mtime>2014-12-08 17:12:12</_mtime>
       </values>
     </record>
   </recordset>

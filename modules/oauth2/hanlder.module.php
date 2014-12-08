@@ -93,18 +93,19 @@ class oauth2_handler extends gs_handler {
 				$person->fill_values($geoip);
 				$person->fill_values($profile);
 				foreach ($person->get_recordset()->structure['fields'] as $k=>$f) {
-					if ($f['type']=='password') $rec->$k=md5(rand());
+					if ($f['type']=='password') $person->$k=md5(rand());
 				}
+				$person->commit();
+				$rec->Person_id=$person->get_id();
 
 
 				$friends=$oauth->friends($token);
 				if ($friends) {
 					 $person->fill_values(array('Friends'=>$friends));
 					 $person->_Friends_count=count($friends);
+					 $person->commit();
 				}
 			}
-
-
 		}
 
 		if ($old_person)  {

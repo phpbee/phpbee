@@ -25,8 +25,8 @@ class module{%$MODULE_NAME%} extends gs_base_module implements gs_module {
     }
     function install() {
         foreach (array(
-            'oauth2_config',
             'oauth2_config_images',
+            'oauth2_config',
             'oauth2_config_images_files',
             'oauth2_users',
         ) as $r) {
@@ -44,39 +44,9 @@ class module{%$MODULE_NAME%} extends gs_base_module implements gs_module {
     }
     static function get_handlers() {
         $data = array(
-            'get' => array(
-                '' => array(
-                    'oauth2_handler.startlogin',
-                ) ,
-                '/admin/oauth2/oauth2_config' => array(
-                    'gs_base_handler.show:name:adm_oauth2_config.html',
-                ) ,
-                '/admin/oauth2/oauth2_config/delete' => array(
-                    'gs_base_handler.delete:{classname:oauth2_config}',
-                    'gs_base_handler.redirect',
-                ) ,
-                '/admin/oauth2/oauth2_config/copy' => array(
-                    'gs_base_handler.copy:{classname:oauth2_config}',
-                    'gs_base_handler.redirect',
-                ) ,
-            ) ,
-            'post' => array(
-                '' => array(
-                    'oauth2_handler.startlogin',
-                ) ,
-            ) ,
             'handler' => array(
-                '/admin/form/oauth2_config' => array(
-                    'gs_base_handler.redirect_if:gl:save_cancel:return:true',
-                    'gs_base_handler.post:{name:admin_form.html:classname:oauth2_config:form_class:g_forms_table}',
-                    'gs_base_handler.redirect_if:gl:save_continue:return:true',
-                    'gs_base_handler.redirect_if:gl:save_return:return:true',
-                ) ,
-                '/admin/inline_form/oauth2_config' => array(
-                    'gs_base_handler.redirect_if:gl:save_cancel:return:true',
-                    'gs_base_handler.post:{name:inline_form.html:classname:oauth2_config}',
-                    'gs_base_handler.redirect_if:gl:save_continue:return:true',
-                    'gs_base_handler.redirect_if:gl:save_return:return:true',
+                'loginbuttons' => array(
+                    'admin_handler.show:name:loginbuttons.html',
                 ) ,
                 '/admin/form/oauth2_config_images' => array(
                     'gs_base_handler.post:{name:admin_form.html:classname:oauth2_config_images:form_class:g_forms_table:return:gs_record}',
@@ -84,8 +54,41 @@ class module{%$MODULE_NAME%} extends gs_base_module implements gs_module {
                     'gs_base_handler.post:{name:admin_form.html:classname:oauth2_config_images:form_class:g_forms_table:return:gs_record}',
                     'gs_base_handler.redirect',
                 ) ,
-                'loginbuttons' => array(
-                    'admin_handler.show:name:loginbuttons.html',
+                '/admin/inline_form/oauth2_config' => array(
+                    'gs_base_handler.redirect_if:gl:save_cancel:return:true',
+                    'gs_base_handler.post:{name:inline_form.html:classname:oauth2_config}',
+                    'gs_base_handler.redirect_if:gl:save_continue:return:true',
+                    'gs_base_handler.redirect_if:gl:save_return:return:true',
+                ) ,
+                '/admin/form/oauth2_config' => array(
+                    'gs_base_handler.redirect_if:gl:save_cancel:return:true',
+                    'gs_base_handler.post:{name:admin_form.html:classname:oauth2_config:form_class:g_forms_table}',
+                    'gs_base_handler.redirect_if:gl:save_continue:return:true',
+                    'gs_base_handler.redirect_if:gl:save_return:return:true',
+                ) ,
+            ) ,
+            'post' => array(
+                '' => array(
+                    'oauth2_handler.startlogin',
+                ) ,
+            ) ,
+            'get' => array(
+                'instagram/redirect_uri' => array(
+                    'oauth2_instagram_handler.redirect_uri',
+                ) ,
+                '/admin/oauth2/oauth2_config/copy' => array(
+                    'gs_base_handler.copy:{classname:oauth2_config}',
+                    'gs_base_handler.redirect',
+                ) ,
+                '/admin/oauth2/oauth2_config/delete' => array(
+                    'gs_base_handler.delete:{classname:oauth2_config}',
+                    'gs_base_handler.redirect',
+                ) ,
+                '/admin/oauth2/oauth2_config' => array(
+                    'gs_base_handler.show:name:adm_oauth2_config.html',
+                ) ,
+                '' => array(
+                    'oauth2_handler.startlogin',
                 ) ,
             ) ,
         );
@@ -119,6 +122,18 @@ class module{%$MODULE_NAME%} extends gs_base_module implements gs_module {
 class handler{%$MODULE_NAME%} extends gs_base_handler {
 }
 */
+class oauth2_config_images extends tw_images {
+    public $no_urlkey = 1;
+    public $orderby = "id";
+    function __construct($init_opts = false) {
+        parent::__construct(array(
+            'file_uid' => 'fString    options="64"  required=false  index=true      ',
+            'group_key' => 'fString    options="32"  required=false  index=true      ',
+            'file_uid' => 'fString    options="64"  required=false  index=true      ',
+            'group_key' => 'fString    options="32"  required=false  index=true      ',
+        ) , $init_opts);
+    }
+}
 class oauth2_config extends gs_recordset_short {
     public $no_urlkey = 1;
     public $no_ctime = true;
@@ -131,18 +146,6 @@ class oauth2_config extends gs_recordset_short {
             'SCOPE' => 'fString verbose_name="SCOPE"     required=false        ',
             'CONSUMER_KEY' => 'fString verbose_name="CONSUMER_KEY"     required=false        ',
             'title' => 'fString verbose_name="Title"     required=false        ',
-        ) , $init_opts);
-    }
-}
-class oauth2_config_images extends tw_images {
-    public $no_urlkey = 1;
-    public $orderby = "id";
-    function __construct($init_opts = false) {
-        parent::__construct(array(
-            'file_uid' => 'fString    options="64"  required=false  index=true      ',
-            'group_key' => 'fString    options="32"  required=false  index=true      ',
-            'file_uid' => 'fString    options="64"  required=false  index=true      ',
-            'group_key' => 'fString    options="32"  required=false  index=true      ',
         ) , $init_opts);
     }
 }
