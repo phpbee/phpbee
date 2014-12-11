@@ -238,12 +238,19 @@ if (!function_exists('pmail')) {
 						}
 				}
 				$recipients=array_filter($pr_recipients);
-
-				$params["host"] = cfg('mail_smtp_host');
-				$params["port"] = cfg('mail_smtp_port');
-				$params["auth"] = cfg('mail_smtp_auth');
-				$params["username"] = cfg('mail_smtp_username');
-				$params["password"] = cfg('mail_smtp_password');
+				
+				$params=array();
+				if ('sendmail'==cfg('mail_type')) {
+					if (cfg('mail_sendmail_path')) $params['sendmail_path']=cfg('mail_sendmail_path');
+					if (cfg('mail_sendmail_args')) $params['sendmail_args']=cfg('mail_sendmail_args');
+				}
+				if ('smtp'==cfg('mail_type')) {
+					$params["host"] = cfg('mail_smtp_host');
+					$params["port"] = cfg('mail_smtp_port');
+					$params["auth"] = cfg('mail_smtp_auth');
+					$params["username"] = cfg('mail_smtp_username');
+					$params["password"] = cfg('mail_smtp_password');
+				}
 				if ($debug) $params["debug"]=1;
 
 
