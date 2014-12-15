@@ -342,7 +342,7 @@ class gs_widget_select extends gs_widget {
 		*/
 
 		$sel=false;
-		if(trim($this->value)==$v) $sel=TRUE;
+		if (!is_array($this->value) && trim($this->value)==$v) $sel=TRUE;
 		if (is_array($this->value) && in_array($v,array_keys($this->value))) $sel=TRUE;
 		if ($this->value instanceof gs_recordset && in_array($v,$this->value->array_keys())) $sel=TRUE;
 
@@ -392,6 +392,13 @@ class gs_widget_select_chosen extends gs_widget_select {
 	function __construct($fieldname,$data,$params=array(),$form=null) {
 		parent::__construct($fieldname,$data,$params,$form);
 		$this->params['cssclass'].=' chosen';
+	}
+}
+class gs_widget_multiselect_chosen_add extends gs_widget_multiselect {
+	function __construct($fieldname,$data,$params=array(),$form=null) {
+		parent::__construct($fieldname,$data,$params,$form);
+		if (!isset($this->params['cssclass'])) $this->params['cssclass']='';
+		$this->params['cssclass'].=' chzn-select chosen-add';
 	}
 }
 
@@ -528,7 +535,10 @@ class gs_data_widget_lMany2Many {
 	}
 }
 
+class gs_widget_lMany2Many_chosen_add extends gs_widget_multiselect_chosen_add {}
 class gs_widget_lMany2Many_chosen extends gs_widget_multiselect_chosen {}
+
+class gs_data_widget_lMany2Many_chosen_add extends gs_data_widget_lMany2Many {}
 class gs_data_widget_lMany2Many_chosen extends gs_data_widget_lMany2Many {}
 
 class gs_widget_lOne2One extends gs_widget {
