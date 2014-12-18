@@ -27,12 +27,9 @@ final class gs_tpl {
 		}
 		return $instance;
 	}
-	function __destruct() {
-		$msg = $_SERVER['SERVER_ADDR'].' | http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
-		//gs_logger::udplog($msg);
-	}
 
-	function multilang($tplanme) {
+
+	function multilang($tplname) {
 		mlog($tplname);
 		$language=false;
 		if (!$language) $language=gs_var_storage::load('multilanguage_lang');

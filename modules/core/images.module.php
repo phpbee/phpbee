@@ -3,10 +3,10 @@ require_fullpath(__FiLE__,'module.php');
 abstract class tw_images extends gs_recordset_handler {
 	var $no_urlkey=1;
 	function src1($params,$record=null) {
-		return trim(reset($this->src($params,$record)));
+		return trim(current($this->src($params,$record)));
 	}
 	function img1($params,$record=null) {
-		return trim(reset($this->img($params,$record)));
+		return trim(current($this->img($params,$record)));
 	}
 	function src($params,$record=null) {
 		$records=$record ? array($record) : $this;
