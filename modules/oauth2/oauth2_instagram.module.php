@@ -102,7 +102,7 @@ class oauth2_instagram implements oauth2_profile {
 
 		if (isset($d['data'])) {
 			foreach ($d['data'] as $f) {
-				$friends[$f['id']]=array('uid'=>$f['id'],'name'=>$f['full_name'],'photo'=>$f['profile_picture']);
+				$friends[$f['id']]=array('uid'=>$f['id'],'name'=>$f['full_name'],'photo'=>$f['profile_picture'],'oauth2_type'=>'ING');
 			}
 			$ret['friends']=$friends;
 			$ret['friends_count']=count($ret['friends']);

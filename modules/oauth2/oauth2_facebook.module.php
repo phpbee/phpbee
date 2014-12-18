@@ -108,7 +108,7 @@ class oauth2_facebook  implements oauth2_profile {
 		$d=json_decode($d,1);
 		if (isset($d['data'])) {
 			foreach ($d['data'] as $f) {
-				$friends[$f['id']]=array('uid'=>$f['id'],'name'=>$f['name']);
+				$friends[$f['id']]=array('uid'=>$f['id'],'name'=>$f['name'],'oauth2_type'=>'FB');
 			}
 			$ret['friends']=$friends;
 			$ret['friends_count']=count($ret['friends']);

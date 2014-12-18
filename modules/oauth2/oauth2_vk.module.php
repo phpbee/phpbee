@@ -47,7 +47,7 @@ class oauth2_vk  implements oauth2_profile {
 		$d=json_decode($d,1);
 		if (isset($d['response'])) {
 			foreach ($d['response'] as $f) {
-				$friend=array_merge($f,array('uid'=>$f['uid'],'user_uid'=>$uid,'name'=>$f['first_name'].' '.$f['last_name']));
+				$friend=array_merge($f,array('uid'=>$f['uid'],'user_uid'=>$uid,'name'=>$f['first_name'].' '.$f['last_name'],'oauth2_type'=>'VK'));
 				$friends[$f['uid']]=$friend;
 			}
 		}
