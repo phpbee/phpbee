@@ -253,7 +253,7 @@ class wz_urls extends gs_recordset_short {
 			array('link'=>'Module','on_delete'=>'CASCADE','on_update'=>'CASCADE'),
 		);
 	}
-        function check_unique($field,$value,$params,$record=null,$data=null) {
+        function check_unique($field, $value, $params, $record = NULL, $data = NULL) {
 		$recs=$this->find_records(array($field=>$value,'type'=>$data['type'],'Module_id'=>$data['Module_id']));
 		if ($recs->count()==0) return true;
 		return $recs->first()->get_id()===$params['rec_id'];
@@ -289,7 +289,7 @@ class wz_forms extends gs_recordset_short {
 		'Fields'=>"lMany2One wz_form_fields:Form",
 		),$init_opts);
 	}
-        function check_unique($field,$value,$params,$record=null) {
+        function check_unique($field, $value, $params, $record = NULL, $data = NULL) {
 		$recs=$this->find_records(array($field=>$value));
 		if ($recs->count()==0) return true;
 		return $recs->first()->get_id()===$params['rec_id'];

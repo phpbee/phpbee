@@ -58,7 +58,7 @@ class module{%$MODULE_NAME%} extends gs_base_module implements gs_module {
 		return self::add_subdir($data,dirname(__file__));
 	}
 
-	static function gl($alias,$rec) {
+	static function gl($alias,$rec,$data) {
 		$fname=dirname(__FILE__).DIRECTORY_SEPARATOR.'gl.php';
 		if (file_exists($fname)) {
 			$x=include($fname);
@@ -66,27 +66,7 @@ class module{%$MODULE_NAME%} extends gs_base_module implements gs_module {
 		}
 	}
 
-	/*
-	static function gl($alias,$rec) {
-		if(!is_object($rec)) {
-			$obj=new tw{%$MODULE_NAME%};
-			$rec=$obj->get_by_id(intval($rec));
-		}
-		switch ($alias) {
-			case '___show____':
-				return sprintf('/{%$MODULE%}/show/%s/%d.html',
-						date('Y/m',strtotime($rec->date)),
-						$rec->get_id());
-			break;
-		}
-	}
-	*/
 }
-/*
-class handler{%$MODULE_NAME%} extends gs_base_handler {
-}
-*/
-
 
 class sys_languages extends gs_recordset_short {
 		public $orderby="id"; 
