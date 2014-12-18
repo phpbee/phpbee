@@ -409,7 +409,6 @@ class gs_rs_links extends gs_recordset{
 		$this->rs1_name=$rs1;
 		$this->rs2_name=$rs2;
 		$this->rs_link=$rs_link;
-		reset(cfg('gs_connectors'));
 		$this->gs_connector_id=key(cfg('gs_connectors'));
 
 		$f1=$rs1.'_id';

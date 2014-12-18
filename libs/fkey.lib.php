@@ -2,7 +2,7 @@
 class gs_fkey {
 	
 
-	function get_instance() {
+	static function get_instance() {
 		static $instance;
 		if (!isset($instance)) $instance = new gs_fkey();
 		/*

@@ -607,11 +607,11 @@ function base_domain() {
 		$protocol = 'http';
 		if ($_SERVER['SERVER_PORT'] == 443 || (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on')) {
 				$protocol = 'https';
-				$protocol_port = $_SERVER['SERVER_PORT'];
+				$protocol_port = 443;
 		} else {
 				$protocol_port = 80;
 		}
-		$host = $_SERVER['HTTP_HOST'];
+		$host = parse_url($_SERVER['HTTP_HOST'],PHP_URL_HOST);
 		$port = $_SERVER['SERVER_PORT'];
 		$toret = $protocol . '://' . $host . ($port == $protocol_port ? '' : ':' . $port);
 		return $toret;
