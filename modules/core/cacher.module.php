@@ -36,7 +36,7 @@ class cacher_listener {
         $r->options=serialize($rset->query_options);
         $r->commit();
     }
-    function cache_clean($rec) {
+    static function cache_clean($rec) {
         $rset_name=$rec->get_recordset_name();
         if (in_array($rset_name, array('cacher_depends','cacher_cache'))) return;
         $dep=new cacher_depends;

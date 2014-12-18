@@ -38,7 +38,7 @@ class person {
             if(strtotime($this->rec->_atime)!=strtotime($this->atime)) $this->rec->_atime=$this->atime;
         }
 	}
-	function get_instance() {
+	static function get_instance() {
 		static $instance;
 		if (!isset($instance)) $instance = new person();
 		return $instance;

@@ -66,7 +66,7 @@ class form_handler extends gs_handler  {
 		$this->add_fields();
 		$this->form->set_values($this->default_values);
 
-		$rec_fields=array_map(function($a){return end(explode(':',$a));},$this->fields);
+		$rec_fields=array_map(function($a){$d=explode(':',$a); return end($d);},$this->fields);
 
 
 		$this->form->set_values($this->record->get_values($rec_fields));
