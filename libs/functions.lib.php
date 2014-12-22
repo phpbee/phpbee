@@ -612,6 +612,7 @@ function base_domain() {
 				$protocol_port = 80;
 		}
 		$host = parse_url($_SERVER['HTTP_HOST'],PHP_URL_HOST);
+		if (!$host) $host = $_SERVER['HTTP_HOST'];
 		$port = $_SERVER['SERVER_PORT'];
 		$toret = $protocol . '://' . $host . ($port == $protocol_port ? '' : ':' . $port);
 		return $toret;
