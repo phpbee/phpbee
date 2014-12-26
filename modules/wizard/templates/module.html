@@ -6,6 +6,7 @@
 		<a href="/admin/wizard/module/{$module.id}">{$module.name} / {$module.title}</a>
 
 		<a href="/admin/wizard/commit/{$module.id}">commit</a>
+		<a href="/admin/wizard/update/{$module.id}">update</a>
 	</h3>	
 
 
@@ -21,7 +22,7 @@
 		{handler gspgid="/admin/wizard/templates/{$module.id}"}
 		</div>
 
-		<h3><a href="/admin/wizard/urls/{$module.id}">urls</a> <input type="text" name="find_urls" id="urls-filter"> save <input type="checkbox" name="save_search" id="save-urls-filter"></h3>
+		<h3><a href="/admin/wizard/urls/{$module.id}">urls</a> <a href="/admin/wizard/newurl?module={$module.id}">new url</a> <input type="text" placeholder="search" name="find_urls" id="urls-filter"> save <input type="checkbox" name="save_search" id="save-urls-filter"></h3>
 		<table class="wz_urls">
 			<col style="width: 5em;"></col>
 			<col></col>

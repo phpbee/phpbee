@@ -154,6 +154,9 @@ class module_wizard extends gs_base_module implements gs_module {
 												'gs_base_handler.show',
 												),
 											'/admin/wizard/module'=>'gs_base_handler.show',
+											'/admin/wizard/update'=>array(
+												'gs_wizard_handler.update:return:notfalse',
+												),
 											'/admin/wizard/commit'=>array(
 												'gs_base_handler.xml_export:{classname:wz_modules:return:notfalse}',
 												'gs_wizard_handler.xml_save_file_to_module_dir:return:notfalse',
@@ -266,16 +269,40 @@ class module_wizard extends gs_base_module implements gs_module {
 
 
 class gs_wizard_handler extends gs_handler {
+	private function get_xml_filename($module)  {
+		$dirname=cfg('lib_modules_dir').$module->name.DIRECTORY_SEPARATOR;
+		check_and_create_dir($dirname);
+		$filename='wizard_module_'.$module->name.'.xml';
+		return $dirname.$filename;
+	}
 	function xml_save_file_to_module_dir($ret) {
 		$module=record_by_id($this->data['gspgid_va'][0],'wz_modules');
 
 		$x=xml_print($ret['last']->asXML());
-		$dirname=cfg('lib_modules_dir').$module->name.DIRECTORY_SEPARATOR;
-		check_and_create_dir($dirname);
-		$filename='wizard_module_'.$module->name.'.xml';
-		if (!file_put_contents_perm($dirname.$filename,$x)) return false;
+		$fname=$this->get_xml_filename($module);
+		if (!file_put_contents_perm($fname,$x)) return false;
 		return $x;
 	}
+	function update() {
+		$module=record_by_id($this->data['gspgid_va'][0],'wz_modules');
+		$fname=$this->get_xml_filename($module);
+		$xml=simplexml_load_string(trim(file_get_contents($fname)));
+		if (!$xml) return false;
+		foreach ($xml as $rs_xml) {
+			if (!$rs_xml || $rs_xml->getName()!='recordset' || $rs_xml['name']!='wz_modules') return false;
+
+			md('===');
+			//md(xml_print($rs_xml->asXML()));
+
+			//$module=new wz_modules;
+
+			$module->get_recordset()->xml_import($rs_xml,TRUE);
+			$module->get_recordset()->md();
+			md(xml_print($module->get_recordset()->xml_export()->asXML()),1);
+			break;
+		}
+	}
+
 	function module_xml_import() {
 		$bh=new gs_base_handler($this->data,$this->params);
 		$f=$bh->validate();
