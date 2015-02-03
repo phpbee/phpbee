@@ -186,8 +186,7 @@ function array_sum_recursive( array &$array1, array &$array2 )
 		return $merged;
 }
 
-
-function html_fetch($url,$data=array(),$scheme='GET') {
+function html_fetch($url,$data=array(),$scheme='GET',$headers=array()) {
 		mlog($url);
 		mlog($data);
 		if (!isset($url)) throw new gs_exception('html_fetch: empty url');
@@ -199,8 +198,8 @@ function html_fetch($url,$data=array(),$scheme='GET') {
 		curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
 		if (strtoupper($scheme)=='POST') {
 				curl_setopt($ch, CURLOPT_POST, 1);
-				//curl_setopt($ch, CURLOPT_POSTFIELDS, is_array($data) ? http_build_query($data) : $data);
-				curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+				curl_setopt($ch, CURLOPT_POSTFIELDS, is_array($data) ? http_build_query($data) : $data);
+				//curl_setopt($ch, CURLOPT_POSTFIELDS, $data); // makes troubles with incorrect enctype header!
 		} else {
 				if($data) {
 						$url.='?'.http_build_query($data);
@@ -210,10 +209,13 @@ function html_fetch($url,$data=array(),$scheme='GET') {
 		curl_setopt($ch, CURLOPT_URL, $url);
 
 
+		curl_setopt($ch, CURLINFO_HEADER_OUT, 1);
+		curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 		curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 180);
 		curl_setopt($ch, CURLOPT_FOLLOWLOCATION, TRUE);
 		curl_setopt($ch, CURLOPT_MAXREDIRS,5);
+
 
 
 		$result=curl_exec($ch);
@@ -225,6 +227,8 @@ function html_fetch($url,$data=array(),$scheme='GET') {
 		return $result;
 
 }
+
+
 if (!function_exists('pmail')) {
 		function pmail($recipients, $body="",$subject="",$add_headers=false,$from=false,$debug=1) {
 				include_once("Mail.php");
