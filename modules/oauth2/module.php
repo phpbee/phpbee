@@ -20,7 +20,7 @@
 // $Id:$
 
 gs_dict::append(array());
-class module{%$MODULE_NAME%} extends gs_base_module implements gs_module {
+class module_oauth2 extends gs_base_module implements gs_module {
     function __construct() {
     }
     function install() {
@@ -105,12 +105,12 @@ class module{%$MODULE_NAME%} extends gs_base_module implements gs_module {
     /*
     static function gl($alias,$rec) {
     if(!is_object($rec)) {
-    $obj=new tw{%$MODULE_NAME%};
+    $obj=new tw_oauth2;
     $rec=$obj->get_by_id(intval($rec));
     }
     switch ($alias) {
     case '___show____':
-    return sprintf('/{%$MODULE%}/show/%s/%d.html',
+    return sprintf('/oauth2/show/%s/%d.html',
     		date('Y/m',strtotime($rec->date)),
     		$rec->get_id());
     break;
@@ -119,21 +119,9 @@ class module{%$MODULE_NAME%} extends gs_base_module implements gs_module {
     */
 }
 /*
-class handler{%$MODULE_NAME%} extends gs_base_handler {
+class handler_oauth2 extends gs_base_handler {
 }
 */
-class oauth2_config_images extends tw_images {
-    public $no_urlkey = 1;
-    public $orderby = "id";
-    function __construct($init_opts = false) {
-        parent::__construct(array(
-            'file_uid' => 'fString    options="64"  required=false  index=true      ',
-            'group_key' => 'fString    options="32"  required=false  index=true      ',
-            'file_uid' => 'fString    options="64"  required=false  index=true      ',
-            'group_key' => 'fString    options="32"  required=false  index=true      ',
-        ) , $init_opts);
-    }
-}
 class oauth2_config extends gs_recordset_short {
     public $no_urlkey = 1;
     public $no_ctime = true;
@@ -146,14 +134,59 @@ class oauth2_config extends gs_recordset_short {
             'SCOPE' => 'fString verbose_name="SCOPE"     required=false        ',
             'CONSUMER_KEY' => 'fString verbose_name="CONSUMER_KEY"     required=false        ',
             'title' => 'fString verbose_name="Title"     required=false        ',
+            'enabled' => 'fCheckbox verbose_name="enabled"   default="1"   required=false  index=true      ',
+            'Logo' => 'lMany2One oauth2_config_images:Parent verbose_name="Logo"   widget="gallery"  required=false    ',
         ) , $init_opts);
     }
 }
-class oauth2_config_images_files extends tw_file_images {
-    public $no_urlkey = 1;
+class oauth2_config_images extends tw_images {
+    public $no_urlkey = true;
     public $orderby = "id";
     function __construct($init_opts = false) {
-        parent::__construct(array() , $init_opts);
+        parent::__construct(array(
+            'file_uid' => 'fString    options="64"  required=false  index=true      ',
+            'group_key' => 'fString    options="32"  required=false  index=true      ',
+            'file_uid' => 'fString    options="64"  required=false  index=true      ',
+            'group_key' => 'fString    options="32"  required=false  index=true      ',
+            'Parent' => 'lOne2One oauth2_config    required=false  mode=link  ',
+            'File' => 'lOne2One oauth2_config_images_files verbose_name="File"   widget="include_form"  required=false  hidden=false  ',
+            'Parent' => 'lOne2One oauth2_config    required=false  mode=link  ',
+            'File' => 'lOne2One oauth2_config_images_files verbose_name="File"   widget="include_form"  required=false  hidden=false  ',
+        ) , $init_opts);
+        $this->structure['fkeys'] = array(
+            array(
+                'link' => 'oauth2_config.Logo',
+                'on_delete' => 'CASCADE',
+                'on_update' => 'CASCADE'
+            ) ,
+            array(
+                'link' => 'oauth2_config.Logo',
+                'on_delete' => 'CASCADE',
+                'on_update' => 'CASCADE'
+            ) ,
+        );
+    }
+}
+class oauth2_config_images_files extends tw_file_images {
+    public $no_urlkey = true;
+    public $orderby = "id";
+    function __construct($init_opts = false) {
+        parent::__construct(array(
+            'Parent' => 'lOne2One oauth2_config_images    required=false    ',
+            'Parent' => 'lOne2One oauth2_config_images    required=false    ',
+        ) , $init_opts);
+        $this->structure['fkeys'] = array(
+            array(
+                'link' => 'oauth2_config_images.File',
+                'on_delete' => 'CASCADE',
+                'on_update' => 'CASCADE'
+            ) ,
+            array(
+                'link' => 'oauth2_config_images.File',
+                'on_delete' => 'CASCADE',
+                'on_update' => 'CASCADE'
+            ) ,
+        );
     }
     function config_previews() {
         parent::config_previews();
