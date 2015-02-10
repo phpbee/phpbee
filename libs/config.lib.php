@@ -255,7 +255,7 @@ class gs_init {
 		$modified=false;
 		$dir=$this->config->lib_modules_dir;
 		$subdirs=array();
-		if (cfg('modules_priority')) $subdirs=glob($dir.$path.sprintf('{%s}',cfg('modules_priority')),GLOB_BRACE+GLOB_ONLYDIR);
+		if (cfg('modules_priority')) $subdirs=array_unique(array_merge($subdirs,glob($dir.$path.sprintf('{%s}',cfg('modules_priority')),GLOB_BRACE+GLOB_ONLYDIR)));
 		$subdirs=array_unique(array_merge($subdirs,glob($dir.$path.'*',GLOB_ONLYDIR)));
 		$dir=rtrim($dir,DIRECTORY_SEPARATOR).DIRECTORY_SEPARATOR;
 		$path=trim($path,DIRECTORY_SEPARATOR).DIRECTORY_SEPARATOR;
@@ -377,6 +377,15 @@ class gs_init {
 		gs_cacher::clear('urlprefix_cfg','config');
 		rrmdir(cfg('tpl_var_dir'));
 	}
+	private function load_module_files($files) {		
+			$classes=get_declared_classes();
+			foreach ($files as $f) {
+				load_file($f);
+				$nc=array_diff(get_declared_classes(),$classes);
+				foreach($nc as $c) $this->config->class_files[$c]=$f;
+				$classes=get_declared_classes();
+			}
+	}
 
 
 	public function load_modules($mask='*module.{php,xphp}') {
@@ -390,16 +399,24 @@ class gs_init {
         */
 
 		$path=$this->config->lib_modules_dir;
+		if (($files = glob($path.$mask,GLOB_BRACE)) && !empty($files)) {
+			$this->load_module_files($files);
+		}
+
+		$path=$this->config->lib_modules_dir.'core'.DIRECTORY_SEPARATOR;
 		while (($files = glob($path.$mask,GLOB_BRACE)) && !empty($files)) {
-			$classes=get_declared_classes();
-			foreach ($files as $f) {
-				load_file($f);
-				$nc=array_diff(get_declared_classes(),$classes);
-				foreach($nc as $c) $this->config->class_files[$c]=$f;
-				$classes=get_declared_classes();
-			}
+			$this->load_module_files($files);
 			$path.='*'.DIRECTORY_SEPARATOR;
 		}
+
+		$path=$this->config->lib_modules_dir.'*'.DIRECTORY_SEPARATOR;
+		while (($files = glob($path.$mask,GLOB_BRACE)) && !empty($files)) {
+			$this->load_module_files($files);
+			$path.='*'.DIRECTORY_SEPARATOR;
+		}
+
+
+
 		$cfg=gs_config::get_instance();
 		$loaded_classes=get_declared_classes();
 		foreach ($loaded_classes as $classname) {

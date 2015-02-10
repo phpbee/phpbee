@@ -753,8 +753,8 @@ class %s extends gs_recordset_i18n {
 				}
 			}
 			// End block
-			if(isset($st['update_recordset'])) {
-				$prec=new $st['update_recordset'];
+			if(isset($st['update_recordset']) && ($update_rsname=$st['update_recordset']) && class_exists($update_rsname)) {
+				$prec=new $update_rsname;
 				foreach ($prec->structure['recordsets'] as $pl=>$pst) {
 					if (isset($pst['counter_linkname']) && $pst['counter_linkname']==$l) {
 						foreach ($this as $rlink) {
