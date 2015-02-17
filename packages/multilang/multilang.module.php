@@ -2,16 +2,22 @@
 class handler_multilang_base  extends gs_base_handler {
 	function setlocale($ret) {
 		$name=$this->params['name'];
+		$filter_name='filter_'.$name;
 		$value=$this->data[$name];
 		$langs=languages();
+		md($value);
 		if(isset($langs[$value]))  {
 			gs_session::save($value,'multilanguage_lang');
 			if (class_exists('sys_languages')) {
 				$rs=new sys_languages();
 				$r=$rs->find_records(array('lang'=>$value))->first();
 				if ($r) {
-					gs_session::save($r->id,'filter_'.$name);
+					gs_session::save($r->id,$filter_name);
 					//gs_session::save($r->locale,'multilanguage_locale');
+                    if (function_exists('person')) {
+							$person=person();
+							$person->$filter_name=$r->id;
+					} 
 					return $r;
 				}
 			}
@@ -31,7 +37,7 @@ class handler_multilang_base  extends gs_base_handler {
 			self::set_locale($f);
 		}
 	}
-	static function set_locale($f) {
+	static function set_locale(gs_record $f) {
 		gs_var_storage::save('multilanguage_lang',$f->lang);
 		gs_var_storage::save('multilanguage_locale',$f->locale);
 		gs_var_storage::save('multilanguage_date_format',$f->locale_date_format);
