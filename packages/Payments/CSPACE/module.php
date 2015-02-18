@@ -84,6 +84,7 @@ class payments_gw_CSPACE extends payments_gateway {
         mlog($url);
         mlog($params);
 
+
         $ret=html_fetch($url,$params,'POST');
         mlog($ret);
         $ret=explode(':',$ret,3);
@@ -95,6 +96,7 @@ class payments_gw_CSPACE extends payments_gateway {
             $this->validate_result['info']['TRANSACTIONSTATUS']='declined';
             $this->validate_result['info']['TRANSACTIONMESSAGE']=$ret[2];
             $pmnt->details=serialize($this->get_transaction_details());
+            $pmnt->commit();
             return;
         }
 		$this->validate_result['info']['TRANSACTIONID']=$ret[1];
@@ -136,7 +138,7 @@ class payments_gw_CSPACE extends payments_gateway {
             die();
         }
 
-        $this->request_status_from_bank();
+        $this->request_status_from_bank($pmnt);
 
 
     }
@@ -150,6 +152,7 @@ class payments_gw_CSPACE extends payments_gateway {
             "guid"	=>	$this->method->parameter1,
             "pwd"	=>	sha1($this->method->parameter2),
             );
+
 
 
         $ret=html_fetch($url,$params,'POST');

@@ -1,6 +1,6 @@
 <?php
 
-class payments_gw_PP_DENGIONLINE extends payments_gateway {
+class payments_gw_DENGIONLINE_SIMPLE extends payments_gateway {
 
 	function validate() {
 
@@ -39,6 +39,8 @@ class payments_gw_PP_DENGIONLINE extends payments_gateway {
 		
 	}
     function checkstatus() {
+		mlog($this->data,1);
+		mlog($_REQUEST);
         $rec=record_by_id($this->data['userid_extra'],'orders');
         if (!$rec) { 
             $ret['ERROR']='order not found'; 
@@ -46,6 +48,7 @@ class payments_gw_PP_DENGIONLINE extends payments_gateway {
         }
         $ret=$rec->get_values('id');
         $ret['Status']=$rec->Status->first()->name;
+		mlog($ret);
         return $ret;
     }
 	function get_transaction_status() {
@@ -78,7 +81,7 @@ class payments_gw_PP_DENGIONLINE extends payments_gateway {
 		$method=$pmnt->Payment_method->first();
         $order=$pmnt->Order->first();
 		$customer=$order->Customer->first();
-		$url="http://www.onlinedengi.ru/wmpaycheck.php";
+		$url="http://paymentgateway.ru/";
 		$data=array(
 			'project'=>$method->parameter1,
 			'source'=>$method->parameter1,
@@ -92,11 +95,10 @@ class payments_gw_PP_DENGIONLINE extends payments_gateway {
 		return html_redirect($url,$data);
 	}
 
-    function sendResponse($status, $message = ''){
+    function response($ret){
             $response = '<?xml version="1.0" encoding="UTF-8"?>'."\n";
             $response .= '<result>'."\n";
-            $response .= '<code>'.$status.'</code>'."\n";
-            $response .= '<comment>'.$message.'</comment>'."\n";
+            $response .= '<code>'.($ret['id']?'YES':'NO').'</code>'."\n";
             $response .= '</result>';
 
             mlog($response);

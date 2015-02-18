@@ -1,4 +1,4 @@
-<?
+<?php
  /*
  *  AirPay - Payment System
  *  Contact: info@airpay.lv

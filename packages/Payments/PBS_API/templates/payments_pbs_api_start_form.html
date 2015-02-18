@@ -1,0 +1,147 @@
+CREDIT CARD FORM
+
+{$c=person('girls')}
+
+
+<form action="{current_url()}" method="post" enctype="multipart/form-data" class="form-horizontal">
+	<input type=hidden name="gspgid_form" value="{$gspgid_form}">
+
+	{include file="form_error_messages.html"}
+	{$form->set_error_template('<span class="label label-warning">%s</span>')}
+
+	{$form->add_field('cardNo','type=input')}
+	{$form->add_validator('cardNo','notEmpty')}
+	{$form->add_validator('cardNo','isCCNum')}
+	{$form->set_option('cardNo','placeholder','cardNo')}
+
+	{$form->add_field('cardExpireMonth','type=input')}
+	{$form->add_validator('cardExpireMonth','notEmpty')}
+	{$form->set_option('cardExpireMonth','placeholder','cardExpireMonth')}
+
+	{$form->add_field('cardExpireYear','type=input')}
+	{$form->add_validator('cardExpireYear','notEmpty')}
+	{$form->set_option('cardExpireYear','placeholder','cardExpireYear')}
+
+	{$form->add_field('cardSecurityCode','type=input')}
+	{$form->add_validator('cardSecurityCode','notEmpty')}
+	{$form->set_option('cardSecurityCode','placeholder','cardSecurityCode')}
+
+	{$form->add_field('firstName','type=input')}
+	{$form->add_validator('firstName','notEmpty')}
+	{$form->set_option('firstName','placeholder','firstName')}
+
+	{$form->add_field('lastName','type=input')}
+	{$form->add_validator('lastName','notEmpty')}
+	{$form->set_option('lastName','placeholder','lastName')}
+
+	{$form->add_field('email','type=email')}
+	{$form->add_validator('email','notEmpty')}
+	{$form->add_validator('email','isEmail')}
+	{$form->set_option('email','placeholder','email')}
+	{$form->set_option('email','widget','email')}
+
+	{$form->add_field('phone','type=input')}
+	{$form->add_validator('phone','notEmpty')}
+	{$form->set_option('phone','placeholder','phone')}
+
+	{$form->add_field('country','type=input')}
+	{$form->add_validator('country','notEmpty')}
+	{$form->set_option('country','placeholder','country')}
+
+	{$form->add_field('state','type=input')}
+	{$form->add_validator('state','notEmpty')}
+	{$form->set_option('state','placeholder','state')}
+
+	{$form->add_field('city','type=input')}
+	{$form->add_validator('city','notEmpty')}
+	{$form->set_option('city','placeholder','city')}
+
+	{$form->add_field('address','type=input')}
+	{$form->add_validator('address','notEmpty')}
+	{$form->set_option('address','placeholder','address')}
+
+	{$form->add_field('zip','type=input')}
+	{$form->add_validator('zip','notEmpty')}
+	{$form->set_option('zip','placeholder','zip')}
+
+
+
+	{$form->set_default_value('firstName',$c->firstname)}
+	{$form->set_default_value('lastName',$c->lastname)}
+	{$form->set_default_value('email',$c->email)}
+
+
+
+	{$form->_prepare_inputs()}
+
+
+	{$form->print_error('FORM_ERROR')}
+
+<br>
+<label>cardNo
+	{$form->get_input('cardNo')} {$form->print_error('cardNo')}
+</label>
+
+<br>
+<label>cardExpireMonth
+	{$form->get_input('cardExpireMonth')} {$form->print_error('cardExpireMonth')}
+</label>
+
+<br>
+<label>cardExpireYear
+	{$form->get_input('cardExpireYear')} {$form->print_error('cardExpireYear')}
+</label>
+
+<br>
+<label>cardSecurityCode
+	{$form->get_input('cardSecurityCode')} {$form->print_error('cardSecurityCode')}
+</label>
+
+<br>
+<label>firstName
+	{$form->get_input('firstName')} {$form->print_error('firstName')}
+</label>
+
+<br>
+<label>lastName
+	{$form->get_input('lastName')} {$form->print_error('lastName')}
+</label>
+
+<br>
+<label>email
+	{$form->get_input('email')} {$form->print_error('email')}
+</label>
+
+<br>
+<label>phone
+	{$form->get_input('phone')} {$form->print_error('phone')}
+</label>
+
+<br>
+<label>country
+	{$form->get_input('country')} {$form->print_error('country')}
+</label>
+
+<br>
+<label>state
+	{$form->get_input('state')} {$form->print_error('state')}
+</label>
+
+<br>
+<label>city
+	{$form->get_input('city')} {$form->print_error('city')}
+</label>
+
+<br>
+<label>address
+	{$form->get_input('address')} {$form->print_error('address')}
+</label>
+
+<br>
+<label>zip
+	{$form->get_input('zip')} {$form->print_error('zip')}
+</label>
+
+<br><br>
+	<input type="submit" class="btn btn-primary" name="save_return" value="Pay">
+</form>	

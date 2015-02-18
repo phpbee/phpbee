@@ -12,6 +12,9 @@ class payments_gw_cash extends payments_gateway {
 		return 0;
 
 	}
+    function get_transaction_details() {
+        return array();
+    }
 	function get_transaction_message() {
 		return NULL;
 	}

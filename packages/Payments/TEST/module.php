@@ -31,7 +31,8 @@ class payments_gw_TEST extends payments_gateway {
 	function start($pmnt) {
         gs_session::save($pmnt,'payments_gw_test_payment');
         $tpl=gs_tpl::get_instance();
-        $tpl->addTemplateDir(dirname(__FILE__).DIRECTORY_SEPARATOR.'templates');
+		$dir=dirname(__FILE__).DIRECTORY_SEPARATOR.'templates';
+        $tpl->addTemplateDir($dir);
         $tpl->assign('gw',$this);
         $bh=new gs_base_handler(array(),array('name'=>'payments_gw_test_start.html'));
         return $bh->show(array());

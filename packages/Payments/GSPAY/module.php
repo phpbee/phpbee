@@ -1,6 +1,6 @@
 <?php
 
-class payments_gw_gspay extends payments_gateway {
+class payments_gw_GSPAY extends payments_gateway {
 
 	function validate() {
 		$this->validate_result=$this->checkGspayOrder($this->data['transactionTransactionID']);
@@ -27,6 +27,10 @@ class payments_gw_gspay extends payments_gateway {
 	function get_transaction_amount() {
 		return sprintf("%.02f",$this->validate_result['info']['TRANSACTIONAMOUNT']);
 	}
+
+    function get_transaction_details() {
+        return $this->validate_result['info'];
+    }
 
 	function checkGspayOrder($transactionTransactionID) {
 

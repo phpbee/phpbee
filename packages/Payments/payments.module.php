@@ -98,8 +98,14 @@ class payments_handler extends gs_handler {
     }
 
 	function payment_callback($ret) {
-		$classname="payments_gw_".$this->data['gspgid_va'][0];
-		$gateway=new $classname($this->data,$this->params);
+		$method=record_by_urlkey($this->data['gspgid_va'][0],'payment_method');
+		if ($method) {
+			$classname="payments_gw_".$method->type;
+			$gateway=new $classname($this->data,$this->params,$method);
+		} else {
+			$classname="payments_gw_".$this->data['gspgid_va'][0];
+			$gateway=new $classname($this->data,$this->params);
+		}
 		$result=$gateway->validate();
 
         $pmnt_id=$gateway->get_payment_id();
@@ -133,8 +139,8 @@ class payments_handler extends gs_handler {
         } else {
             $ret['Status']=$order->payment_status;
         }
-        $ret=json_encode($ret);
-        die($ret);
+		$gateway->print_callback_result($ret);
+
 	}
 	function process_payment($ret) {
         $pmnt=record_by_id($this->data['gspgid_va'][0],'payments');
@@ -148,9 +154,14 @@ class payments_handler extends gs_handler {
 
 	function payment_completed($ret) {
 
-
-		$classname="payments_gw_".$this->data['gspgid_va'][0];
-		$gateway=new $classname($this->data,$this->params);
+		$method=record_by_urlkey($this->data['gspgid_va'][0],'payment_method');
+		if ($method) {
+			$classname="payments_gw_".$method->type;
+			$gateway=new $classname($this->data,$this->params,$method);
+		} else {
+			$classname="payments_gw_".$this->data['gspgid_va'][0];
+			$gateway=new $classname($this->data,$this->params);
+		}
 		$result=$gateway->validate();
 
         $pmnt_id=$gateway->get_payment_id();
@@ -208,7 +219,6 @@ class payments_handler extends gs_handler {
 
 		gs_eventer::send('order_created',$order);
 
-
         return $order;
     }
 
@@ -224,13 +234,11 @@ class payments_handler extends gs_handler {
     }
 
 	function start_payment($ret) {
-
-
-		$customer=person($this->CUSTOMERNAME);
-
-	
 		//$order=gs_session::load($this->data['gspgid_va'][0]);
-		$order=$customer->Orders[$this->data['gspgid_va'][0]];
+		$o=new orders;
+		$o->find_records(array('id'=>$this->data['gspgid_va'][0]));
+		$order=$o->f();
+		
 		$method=$order->Payment_method->first();
 		if (isset($this->data['gspgid_va'][1])) {
                 $method = is_int($this->data['gspgid_va'][1]) ?
@@ -284,6 +292,15 @@ class payments_handler extends gs_handler {
 		return $result;
 		
 	}
+	
+	function get_email($d) {
+		$g=record_by_id($d['last']['anonymous'],'girls');
+		if ($d['last']['email']) {
+			$g->email=$d['last']['email'];
+			$g->commit();
+		}
+		return $g->email;
+	}
 
 }
 
@@ -296,6 +313,7 @@ interface i_payments_gateway {
     public function get_transaction_message();
     public function get_transaction_status();
     public function get_transaction_details();
+	public function print_callback_result($ret);
 
 }
 
@@ -324,6 +342,11 @@ abstract class payments_gateway implements i_payments_gateway {
     }
 	function response($ret) {
 		return json_encode($ret);
+	}
+
+	function print_callback_result($ret) {
+        $ret=json_encode($ret);
+        die($ret);
 	}
 
 

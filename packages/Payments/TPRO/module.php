@@ -1,8 +1,9 @@
 <?php
 
-class payments_gw_PP_DENGIONLINE extends payments_gateway {
+class payments_gw_TPRO extends payments_gateway {
 
 	function validate() {
+
 
 		$ret=array();
 		$ret['info']['TRANSACTIONSTATUS']='failed';
@@ -26,8 +27,7 @@ class payments_gw_PP_DENGIONLINE extends payments_gateway {
             $ret['ERROR']='order not found'; 
         } else {
             $ret['info']['TRANSACTIONSTATUS']='declined';
-
-            if ($this->data['paymentid'] && $this->data['amount'] && isset($this->data['key'])) {
+            if ($this->data['paymentid'] && $this->data['amount']) {
                 $ret['info']['TRANSACTIONSTATUS']='approved';
             }
         }
@@ -90,6 +90,11 @@ class payments_gw_PP_DENGIONLINE extends payments_gateway {
             'mode_type'=>34,
             );
 		return html_redirect($url,$data);
+	}
+
+	function payment_form() {
+        echo "aaierukdfhkfd";
+		return "aaaaa";
 	}
 
     function sendResponse($status, $message = ''){
