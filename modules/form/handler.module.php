@@ -16,6 +16,7 @@ class form_handler extends gs_handler  {
 
 		$this->gs_base_handler=new gs_base_handler($this->data,$this->params);
 		$this->form=new g_forms_html();
+		if (isset($this->params['form']) && is_a($this->params['form'],'g_forms')) $this->form=$this->params['form'];
 
 
 		$this->tpl=gs_tpl::get_instance();
@@ -143,7 +144,7 @@ class form_handler extends gs_handler  {
 	}
 	function process_form(){
 		$this->form_html=$this->fetch('template'); //needed to ensure form modifications from template, i.e. $form->add_validator
-		if ($this->data['gspgtype']==GS_DATA_GET) return $this->form_html;
+		if ($this->data['gspgtype']!=GS_DATA_POST) return $this->form_html;
 
 		$this->form->set_values($this->data);
 

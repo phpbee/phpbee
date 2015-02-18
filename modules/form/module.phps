@@ -24,6 +24,9 @@ class module{%$MODULE_NAME%} extends gs_base_module implements gs_module {
 	static function get_handlers() {
 		$data=array(
 'handler'=>array(
+''=>array(
+  'form_handler.process_form', 
+),
 'record/redirect/up'=>array(
   'form_handler.record', 
   'gs_base_handler.redirect_up:level:2', 
