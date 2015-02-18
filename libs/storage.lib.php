@@ -556,7 +556,15 @@ abstract class gs_recordset_base extends gs_iterator {
 					if (isset($this->structure['fields'][$name])) $values[trim($name)]=trim($value);
 				}
 				if ($find && $values) {
-					$rec=$this->find_records($values)->first(true)->fill_values($values);
+					$search=array_filter($values, function($k){ return $k[0]!='_';},ARRAY_FILTER_USE_KEY);
+					$rec=$this->find_records($search)->first(true);
+					$rec->fill_values($values);
+					/*
+
+					md($this->get_recordset_name());
+					md($search);
+					$rec->md();
+					*/
 				} else {
 					$rec=$this->new_record($values);
 				}
