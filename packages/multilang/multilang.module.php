@@ -5,7 +5,7 @@ class handler_multilang_base  extends gs_base_handler {
 		$filter_name='filter_'.$name;
 		$value=$this->data[$name];
 		$langs=languages();
-		md($value);
+//		md($value);
 		if(isset($langs[$value]))  {
 			gs_session::save($value,'multilanguage_lang');
 			if (class_exists('sys_languages')) {
