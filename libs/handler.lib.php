@@ -938,6 +938,9 @@ function hpar($data,$name='hkey',$default=null) {
         }
         // if email incorrect - don`t send letter
         if(empty($to) || strpos($to,'@')===false) return false;
+				
+				if (cfg('disable_email')) return $rec;
+
         $tpl=gs_tpl::get_instance();
         $tpl->assign('rec',$rec);
         $tpltitle= (isset($this->params['template_title']) && $this->params['template_title']) ? $this->params['template_title'] : str_replace(".html","_title.html",$this->params['template']);
@@ -945,7 +948,7 @@ function hpar($data,$name='hkey',$default=null) {
         $txt=$tpl->fetch($this->params['template']);
         //bee_mail($to,$subj,$txt,cfg('support_email_address'));
         //bee_mail($to,$subj,$txt,'info@sevenpay.com');
-        pmail($to,$txt,$subj,$txt);
+        //pmail($to,$txt,$subj,$txt);
         return $rec;
     }
 
