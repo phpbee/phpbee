@@ -247,4 +247,9 @@ class form_handler extends gs_handler  {
 		$this->templates[$name]=$fname;
 	}
 
+    public function redirect_gl($ret) {
+        $bh=new gs_base_handler(array(),array('module_name'=>'module_'.$this->data['gspgid_va'][0],'gl'=>$this->data['gspgid_va'][1]));
+        return $bh->redirect_gl($ret);
+    }
+
 }
