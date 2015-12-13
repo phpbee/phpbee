@@ -1,0 +1,12 @@
+{
+  "name": "phpbee/phpbee",
+  "description": "PhpBee framework",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "PhpBee Studio",
+      "email": "info@phpbee.org"
+    }
+  ]
+}
