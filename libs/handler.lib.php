@@ -14,6 +14,7 @@ abstract class gs_handler {
 		return $this->data['gspgid_va'][$i];
 	}
 	private $set_module_tpldir=0;
+
 	protected function set_module_tpldir($tpl) {
 		if ($this->set_module_tpldir++) return;
         if (! isset($this->params['module_name'])) return;

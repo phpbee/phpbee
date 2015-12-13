@@ -30,9 +30,12 @@ class gs_config
     public $lib_data_drivers_dir;
     public $lib_handlers_dir;
     public $lib_modules_dir;
+    public $modules_dir;
     public $lib_distpackages_dir;
     public $lib_dbdrivers_dir;
     public $tpl_blocks;
+    public $tpl_data_dir;
+    public $tpl_var_dir;
     public $class_files = array();
     private $view;
     private $registered_gs_modules;
@@ -90,6 +93,7 @@ class gs_config
         $this->lib_data_drivers_dir = $this->lib_dir . 'data_drivers/';
         $this->lib_handlers_dir = $this->root_dir . 'handlers/';
         $this->lib_modules_dir = $this->root_dir . 'modules/';
+        $this->modules_dir = getcwd() . '/modules/';
         $this->lib_distpackages_dir = $this->root_dir . 'packages/';
         $this->lib_distsubmodules_dir = $this->root_dir . 'packages/SUBMODULES/';
         $this->lib_dbdrivers_dir = $this->lib_dir . 'dbdrivers/';
@@ -102,13 +106,13 @@ class gs_config
             $this->root_dir . 'config.php',
             dirname($this->root_dir) . DIRECTORY_SEPARATOR . 'config.php',
             $this->lib_modules_dir . 'config.php',
+            $this->modules_dir . 'config.php',
         );
         if ($injectedConfig=realpath('config.php')) {
             array_push($cfgfiles,$injectedConfig);
         }
         foreach ($cfgfiles as $cfg_filename) {
             if (file_exists($cfg_filename)) {
-
                 require_once($cfg_filename);
             }
         }
@@ -383,31 +387,8 @@ class gs_init
 
     public function load_modules($mask = '*module.{php,xphp}')
     {
-        /*
-           if ($this->check_compile_modules()) {
-           $init=new gs_init('user');
-           $init->init(LOAD_CORE | LOAD_STORAGE | LOAD_TEMPLATES | LOAD_EXTRAS);
-           $this->compile_modules();
-           $this->save_handlers();
-           }
-         */
-
-        $path = $this->config->lib_modules_dir;
-        if (($files = glob($path . $mask, GLOB_BRACE)) && !empty($files)) {
-            $this->load_module_files($files);
-        }
-
-        $path = $this->config->lib_modules_dir . 'core' . DIRECTORY_SEPARATOR;
-        while (($files = glob($path . $mask, GLOB_BRACE)) && !empty($files)) {
-            $this->load_module_files($files);
-            $path .= '*' . DIRECTORY_SEPARATOR;
-        }
-
-        $path = $this->config->lib_modules_dir . '*' . DIRECTORY_SEPARATOR;
-        while (($files = glob($path . $mask, GLOB_BRACE)) && !empty($files)) {
-            $this->load_module_files($files);
-            $path .= '*' . DIRECTORY_SEPARATOR;
-        }
+        $this->load_module_folders($this->config->lib_modules_dir, $mask);
+        $this->load_module_folders($this->config->modules_dir, $mask);
 
 
         $cfg = gs_config::get_instance();
@@ -477,6 +458,30 @@ class gs_init
         load_file($this->config->lib_dir . 'newvalidator.lib.php');
         load_file($this->config->lib_dir . 'vpa_gd.lib.php');
         load_file($this->config->lib_dir . 'tpl_static.lib.php');
+    }
+
+    /**
+     * @param $lib_modules_dir
+     * @param $mask
+     */
+    private function load_module_folders($lib_modules_dir, $mask)
+    {
+        $path = $lib_modules_dir;
+        if (($files = glob($path . $mask, GLOB_BRACE)) && !empty($files)) {
+            $this->load_module_files($files);
+        }
+
+        $path = $lib_modules_dir . 'core' . DIRECTORY_SEPARATOR;
+        while (($files = glob($path . $mask, GLOB_BRACE)) && !empty($files)) {
+            $this->load_module_files($files);
+            $path .= '*' . DIRECTORY_SEPARATOR;
+        }
+
+        $path = $lib_modules_dir . '*' . DIRECTORY_SEPARATOR;
+        while (($files = glob($path . $mask, GLOB_BRACE)) && !empty($files)) {
+            $this->load_module_files($files);
+            $path .= '*' . DIRECTORY_SEPARATOR;
+        }
     }
 
 
