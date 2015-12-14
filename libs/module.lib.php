@@ -1,7 +1,11 @@
 <?php
 abstract class gs_base_module {
 	static function add_subdir($data,$dir) {
-		$subdir=trim(str_replace(clean_path(cfg('lib_modules_dir')),'',clean_path($dir).'/'),'/');
+		$dir=clean_path($dir).'/';
+		$dir=str_replace(clean_path(cfg('lib_modules_dir')),'',$dir);
+		$dir=str_replace(clean_path(cfg('modules_dir')),'',$dir);
+		$subdir=trim($dir,'/');
+
 		$d=array();
 		foreach($data as $k=>$a) {
 			foreach($a as $t=>$v) {
@@ -14,6 +18,7 @@ abstract class gs_base_module {
 		}
 		return $d;
 	}
+
 
 	static function admin_auth($data,$params) {
 		if (gs_var_storage::load('check_admin_auth')===FALSE) return true;
