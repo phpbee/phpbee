@@ -1,5 +1,12 @@
 <?php
 abstract class gs_base_module {
+
+	function install() {
+//		foreach(array('tw_news','tw_news_stats') as $r){
+//			$this->$r=new $r;
+//			$this->$r->install();
+//		}
+	}
 	static function add_subdir($data,$dir) {
 		$dir=clean_path($dir).'/';
 		$dir=str_replace(clean_path(cfg('lib_modules_dir')),'',$dir);

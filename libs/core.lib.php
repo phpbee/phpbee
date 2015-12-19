@@ -103,9 +103,7 @@ interface gs_data_driver {
 }
 
 interface gs_module {
-	function install();
 	static function get_handlers();
-	//static function register();
 }
 
 class gs_iterator implements Iterator, arrayaccess {
