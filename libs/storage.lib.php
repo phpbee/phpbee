@@ -16,6 +16,7 @@ abstract class gs_recordset_base extends gs_iterator {
 	public $state=RS_STATE_NULL;
 	public $query_options=array();
 	private $gs_recordset_classname;
+	/** @var gs_connector  */
 	private $gs_connector;
 	private $gs_connector_id;
 	public $id_field_name;
@@ -39,6 +40,10 @@ abstract class gs_recordset_base extends gs_iterator {
 	public function get_id_field_name() {
 		return $this->id_field_name;
 	}
+
+	/**
+	 * @return gs_connector
+	 */
 	public function get_connector() {
 		if (!$this->gs_connector) {
 			$gs_connector_pool=gs_connector_pool::get_instance();
