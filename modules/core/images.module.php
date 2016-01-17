@@ -41,8 +41,10 @@ abstract class tw_images extends gs_recordset_handler
         $ret = array();
         $rel = 'hrefgrp_' . $records->first()->Parent_id;
         foreach ($records as $rec) {
-            $h = reset($rec->File->src($href));
-            $i = reset($rec->File->img($img));
+            $h=$rec->File->src($href);
+            $h = reset($h);
+            $i = $rec->File->img($img);
+            $i = reset($i);
             $ret[] = sprintf('<a class="images_href" href="%s" rel="%s">%s</a>', $h, $rel, $i);
         }
         return $ret;

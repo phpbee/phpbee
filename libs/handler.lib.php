@@ -15,22 +15,31 @@ abstract class gs_handler {
 	}
 	private $set_module_tpldir=0;
 
+    /**
+     * @param $tpl extSmarty
+     */
 	protected function set_module_tpldir($tpl) {
-		if ($this->set_module_tpldir++) return;
+
+
+        if ($this->set_module_tpldir++) return;
         if (! isset($this->params['module_name'])) return;
 
-		$classes=gs_cacher::load('classes','config');
-		if (! isset($classes[$this->params['module_name']])) return;
+        $classes=gs_cacher::load('classes','config');
+        if (! isset($classes[$this->params['module_name']])) return;
 
-		$filename=$classes[$this->params['module_name']];
-		$subdir=trim(str_replace(cfg('lib_modules_dir'),'',dirname($filename).'/'),'/');
-		$www_subdir=trim(cfg('www_dir').$subdir.'/','/');
-		$www_subdir=$www_subdir ? "/$www_subdir/" : '/';
-		$subdir=$subdir ? "/$subdir/" : '';
+        $filename=$classes[$this->params['module_name']];
+        $subdir=dirname($filename);
+        $subdir=str_replace(cfg('modules_dir'),'',$subdir);
+
+        $subdir=str_replace(cfg('lib_modules_dir'),'',$subdir);
+
+        $subdir=trim($subdir.'/','/');
+        $www_subdir=trim(cfg('www_dir').$subdir.'/','/');
+        $www_subdir=$www_subdir ? "/$www_subdir/" : '/';
+        $subdir=$subdir ? "/$subdir/" : '';
 
 
-		$td=cfg('tpl_data_dir').'modules'.$subdir;
-		$tpl->addTemplateDir($td);
+		$tpl->addTemplateDir(cfg('tpl_data_dir').'modules'.$subdir);
 
 		$this->tpl_dir=dirname($filename).DIRECTORY_SEPARATOR.'templates';
 		$tpl->addTemplateDir($this->tpl_dir);
@@ -183,6 +192,7 @@ class gs_base_handler extends gs_handler {
         }
         $txt=ob_get_contents();
         mlog($tplname);
+        $tpl->getTemplateDir();
         $html=$tpl->fetch($tplname);
         echo $html;
         if (function_exists('memory_get_peak_usage')) mlog(sprintf('memory usage: %.4f / %.4f Mb ',memory_get_usage(TRUE)/pow(2,20),memory_get_peak_usage(TRUE)/pow(2,20)));
