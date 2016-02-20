@@ -75,6 +75,9 @@ class gs_config
         $this->referer_path = isset($_SERVER['HTTP_REFERER']) ? preg_replace("|^$this->www_dir|", '', parse_url($_SERVER['HTTP_REFERER'], PHP_URL_PATH)) : '';
         $this->lib_dir = strpos(__FILE__, 'phar://') == 0 ? pathinfo(__FILE__, PATHINFO_DIRNAME) . '/' : $this->root_dir . 'libs/';
         $this->var_dir = getcwd() . '/var/';
+        if (defined('PHPBEE_VAR_DIR')) {
+            $this->var_dir = PHPBEE_VAR_DIR;
+        }
         $this->img_dir = $this->root_dir . $this->www_image_dir;
         $this->log_dir = $this->var_dir . 'log/';
         $this->log_file = NULL;//'gs.log';
@@ -119,9 +122,7 @@ class gs_config
 
         if (!defined('DEBUG')) define('DEBUG', FALSE);
         if (!defined('DEBUG_LEVEL')) define('DEBUG_LEVEL', 65537);
-        if (DEBUG) {
-            set_exception_handler('gs_exception_handler_debug');
-        }
+
 
     }
 
@@ -505,8 +506,6 @@ function cfg($name)
 
 function mlog($data, $debug_level = 255)
 {
-
-
     gs_logger::udplog($data);
 
     if (defined('DEBUG') && DEBUG && ($debug_level & DEBUG_LEVEL)) {
@@ -676,26 +675,6 @@ class gs_logger
     </script>
 TXT;
     }
-}
-
-function gs_exception_handler_debug($ex)
-{
-    //if (in_array('xdebug',get_loaded_extensions())) throw $ex;
-    md('');
-    md("EXCEPTION " . get_class($ex) . " " . $ex->getFile() . ":" . $ex->getLine());
-    md($ex->getMessage());
-    $trace = $ex->getTrace();
-    foreach ($trace as $k => $t) {
-        foreach ($t['args'] as $j => $a) {
-            if (is_a($a, 'gs_record') || is_a($a, 'gs_recordset')) {
-                $trace[$k]['args'][$j] = get_class($a);
-            }
-        }
-        //unset($trace[$k]['args']);
-    }
-
-    md($trace);
-    gs_logger::dump();
 }
 
 function gs_exception_handler($ex)
