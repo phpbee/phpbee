@@ -5,9 +5,11 @@ if (!class_exists('Smarty',FALSE)) load_file($config->lib_tpl_dir.'Smarty.class.
 
 class gs_Smarty extends Smarty {
 
+	public $_display_called = false;
 	public $_validate_processed = false;
 	public $_validate_error = false;
 	public $_validate_error_fields = array();
+
 
 	protected $_tpl_arr = array();
 	function fetch($template = null, $cache_id = null, $compile_id = null, $parent = null, $display = false, $merge_tpl_vars = true, $no_output_filter = false) {
