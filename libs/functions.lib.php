@@ -230,7 +230,7 @@ function html_fetch($url,$data=array(),$scheme='GET',$headers=array()) {
 
 
 if (!function_exists('pmail')) {
-		function pmail($recipients, $body="",$subject="",$add_headers=false,$from=false,$debug=1) {
+		function pmail($recipients, $body="",$subject="",$add_headers=false,$from=false,$debug=false) {
 				include_once("Mail.php");
 				$recipients=is_array($recipients) ? $recipients : array($recipients);
 
