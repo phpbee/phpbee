@@ -4,7 +4,12 @@ $config=gs_config::get_instance();
 if (!class_exists('Smarty',FALSE)) load_file($config->lib_tpl_dir.'Smarty.class.php');
 
 class gs_Smarty extends Smarty {
-    protected $_tpl_arr = array();
+
+	public $_validate_processed = false;
+	public $_validate_error = false;
+	public $_validate_error_fields = array();
+
+	protected $_tpl_arr = array();
 	function fetch($template = null, $cache_id = null, $compile_id = null, $parent = null, $display = false, $merge_tpl_vars = true, $no_output_filter = false) {
 		if(!is_string($template)) return parent::fetch($template, $cache_id , $compile_id , $parent, $display, $merge_tpl_vars, $no_output_filter);
 		$id=md5($template);
