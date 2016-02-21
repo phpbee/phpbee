@@ -26,21 +26,22 @@
  * @version 2.3-dev
  */
 
-function smarty_function_validate($params, &$smarty) {
+function smarty_function_validate($params, &$smarty)
+{
     global $_POST;
-    $formvars=$_POST;
+    $formvars = $_POST;
     if (empty($formvars) || $formvars[_skipvalidate]) return;
 
-    
-	    $url=parse_url($_SERVER[HTTP_REFERER]);
-	    $requrl=parse_url($_SERVER[REQUEST_URI]);
+
+    $url = parse_url($_SERVER[HTTP_REFERER]);
+    $requrl = parse_url($_SERVER[REQUEST_URI]);
 
 
-	    if ($url[path]!=$requrl[path]) {
-		    $smarty->_validate_processed=0;
-		    return;
-	    }
-    
+    if ($url[path] != $requrl[path]) {
+        $smarty->_validate_processed = 0;
+        return;
+    }
+
     if (strlen($params['field']) == 0) {
         $smarty->trigger_error("validate: missing 'field' parameter");
         return;
@@ -49,32 +50,23 @@ function smarty_function_validate($params, &$smarty) {
         $smarty->trigger_error("validate: missing 'criteria' parameter");
         return;
     }
-    if(strlen($params['criteria']) == 0) {        
-            $smarty->trigger_error("validate: parameter 'criteria' missing.");
-            return;                
+    if (strlen($params['criteria']) == 0) {
+        $smarty->trigger_error("validate: parameter 'criteria' missing.");
+        return;
     }
-    //mydump($params);
-    $criteria=$params['criteria'];
+    $criteria = $params['criteria'];
     $_func_name = 'smarty_validate_criteria_' . $criteria;
 
-    if(!function_exists($_func_name)) {
-	$smarty->smarty->include_plugin('validate_criteria',$criteria);
-	/*
-	if($_plugin_file = $smarty->_get_plugin_filepath('validate_criteria', $criteria)) {
-	    include_once($_plugin_file);
-	    } 
-	*/
+    if (!function_exists($_func_name)) {
+        require_once(__DIR__ . DIRECTORY_SEPARATOR . 'validate_criteria.' . $criteria . '.php');
     }
-    $value=$smarty->getTemplateVars($params[field]);
-    $smarty->_validate_processed=1;
+    $value = $smarty->getTemplateVars($params[field]);
+    $smarty->_validate_processed = 1;
     if (!$_func_name($value, $empty, $params, $formvars)) {
-	$smarty->_validate_error=1;
-	$smarty->_validate_error_fields.=$params[field]." | ";
-	return $params[message];
+        $smarty->_validate_error = 1;
+        $smarty->_validate_error_fields .= $params[field] . " | ";
+        return $params[message];
     }
 
-    
-      
-}
 
-?>
+}
