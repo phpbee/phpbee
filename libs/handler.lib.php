@@ -775,7 +775,7 @@ class gs_base_handler extends gs_handler {
     }
 
 
-    function many2one() {
+    function many2one($ret) {
         if (isset($this->data['gspgid_va'][4]) && $this->data['gspgid_va'][4]=='delete') {
             $rid=intval($this->data['gspgid_va'][5]);
             $rs_name=$this->data['gspgid_va'][0];
@@ -798,7 +798,7 @@ class gs_base_handler extends gs_handler {
         $tpl=gs_tpl::get_instance();
         $tpl->assign('url',$url);
         $tpl->assign('params',$params);
-        $this->show();
+        return $this->show($ret);
     }
 
     static function implode_data($data,$prefix='') {
