@@ -262,11 +262,13 @@ if (!function_exists('pmail')) {
 					$headers['From'] = cfg('mail_from');
 				}
 				if ($from) {
-					$headers['From'] = $from;
-					$headers['From'] = (preg_replace_callback('/(.*)(<.+>)/', create_function('$a', 'return str_replace("."," ",$a[1]).$a[2];'), $headers['From']));
-					$headers['Reply-To'] = $headers['From'];
+					$from = (preg_replace_callback('/(.*)(<.+>)/', create_function('$a', 'return str_replace("."," ",$a[1]).$a[2];'),$from));
+					$headers['Reply-To'] = $from;
+					if (!isset($headers['From'])) {
+						$headers['From'] = $from;
+					}
 				}
-
+			
 				$headers['Subject'] = $subject;
 				$headers['Content-Type'] = 'text/plain; charset="UTF-8"';
 
