@@ -257,9 +257,16 @@ if (!function_exists('pmail')) {
 				}
 				if ($debug) $params["debug"]=1;
 
+				if (cfg('mail_from')) {
+					$headers['Sender'] = cfg('mail_from');
+					$headers['From'] = cfg('mail_from');
+				}
+				if ($from) {
+					$headers['From'] = $from;
+					$headers['From'] = (preg_replace_callback('/(.*)(<.+>)/', create_function('$a', 'return str_replace("."," ",$a[1]).$a[2];'), $headers['From']));
+					$headers['Reply-To'] = $headers['From'];
+				}
 
-				$headers['From']    = !empty($from) ? $from : cfg('mail_from');
-				$headers['From'] =  (preg_replace_callback('/(.*)(<.+>)/',create_function('$a','return str_replace("."," ",$a[1]).$a[2];'),$headers['From']));
 				$headers['Subject'] = $subject;
 				$headers['Content-Type'] = 'text/plain; charset="UTF-8"';
 
